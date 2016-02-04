@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DatabaseServer" description="Nombre del servidor donde se hospeda la base de datos de la aplicación. Debe ser el del servidor especificado en la cadena de conexión." defaultValue="" tags="SQL" />
+  <parameter name="DatabaseName" description="Nombre de base de datos de la aplicación. Debe ser el de la base de datos especificada en la cadena de conexión." defaultValue="AUTORIZACIONES_ADMINS" tags="SQL" />
+  <parameter name="DatabaseUserName" description="Nombre de usuario que usará la aplicación para conectarse con la base de datos de la aplicación." defaultValue="" tags="SQL" />
+  <parameter name="DatabaseUserPassword" description="Contraseña correspondiente al nombre de usuario de la base de datos." defaultValue="" tags="SQL,Password,New" />
+  <parameter name="Update web.config connection string" description="" defaultValue="Data Source={DatabaseServer};Database={DatabaseName};uid={DatabaseUserName};Pwd={DatabaseUserPassword};" tags="Hidden">
+    <parameterEntry kind="XmlFile" scope="web.config" match="//connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
+  </parameter>
+  <parameter name="Fin700v60Data" description="Configurar ConnectionString" defaultValue="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700;Password=plv_consultaf700" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="web.config" match="configuration/connectionStrings/add[@name='Fin700v60Data']/@connectionString" />
+  </parameter>
+  <parameter name="Autorizaciones_AdminsData" description="Configurar ConnectionString" defaultValue="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="web.config" match="configuration/connectionStrings/add[@name='Autorizaciones_AdminsData']/@connectionString" />
+  </parameter>
+  <parameter name="AUTORIZACIONES_ADMINS_IisWebApplication" description="Ubicación de contenido de aplicación web IIS" defaultValue="Default Web Site/AUTORIZACIONES_ADMINS" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\cesar\.riutor\\documents\\visual\ studio\ 2012\\Projects\\Autorizaciones2\.0\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\$" />
+  </parameter>
+</parameters>

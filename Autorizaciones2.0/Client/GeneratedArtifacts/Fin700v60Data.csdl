@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="ContratoItem1">
+    <Key>
+      <PropertyRef Name="EmpId" />
+      <PropertyRef Name="Periodo" />
+      <PropertyRef Name="RutTrabajador" />
+      <PropertyRef Name="Contrato" />
+    </Key>
+    <Property Name="EmpId" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Periodo" Type="Edm.Int32" Nullable="false" />
+    <Property Name="RutTrabajador" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="Contrato" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Origen" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TipoContrato" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaVigencia" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="FechaRenovacion" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CargoEmpleado" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Grado" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaGrado" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Categoria" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CalidadJuridica" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CentroCosto" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="DivCodigo" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="UnidadOrganica" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Jornada" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="LugarIntegro" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="LugarTrabajo" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="LugarPago" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FormaPago" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaFiniquito" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="FechaFirma" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CausalLegal" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CausalReal" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="GrupoContabilizacion" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CodigoSucursal" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="MutualAccidentes" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CajaCompensacion" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaAntiguedad" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CodigoCertificado" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TipoControl" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TipoFuero" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaTerminoFuero" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="FechaCompromisoPerm" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="DiasAdiProgresivos" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="MesesReconocidos" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="DiasAdiPactados" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="DiasLegales" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="DiasBaseVacaciones" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaBaseVacaciones" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="EstadoContrato" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="fld_UserCode" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="SeguroCesantia" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="IndCargoSeguroCesantia" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Afp" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Banco" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CuentaBanco" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaActContrato" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="SinMutual" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="PlanPactadoSalud" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaRenovacionII" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CotizaPrev" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="En_Uso" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Years11" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="CtoT_CargoItem">
+    <Key>
+      <PropertyRef Name="Cod_Cargo" />
+    </Key>
+    <Property Name="Cod_Cargo" Type="Edm.Int16" Nullable="false" />
+    <Property Name="Descripcion_Cargo" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Tipo_Cargo" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Nivel_Cargo" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Cargo_Generico" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="Estado_Reg" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Estado_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Ing_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario_Ing_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Ult_Modif_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Funcion_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="CtoT_PersonaItem">
+    <Key>
+      <PropertyRef Name="Rut_Persona" />
+    </Key>
+    <Property Name="Rut_Persona" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="Identificacion1" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Identificacion2" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Identificacion3" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="AP_Paterno" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="AP_Materno" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Nombres" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Nombre_Corto" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Estado_Persona" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Estado" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Sexo" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Profesion" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Nivel_Laboral" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Nivel_Educacional" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Estado_Civil" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Nacimiento" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Comuna_Nacimiento" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Nacionalidad" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Telefono_Particular" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Telefono_Oficina" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Celular" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fax" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Correo_Electronico" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Direccion" Type="Edm.String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_comuna" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Carpeta_Fisica" Type="Edm.String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Origen_Curriculum" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Ind_Recomendado" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Nombre_Recomendado" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Disponibilidad" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cod_Banco" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Cuenta_Banco" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Num_Tarjeta" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Usuario_Sicas" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Foto" Type="Edm.String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Estado_Reg" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Estado_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Ing_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario_Ing_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Ult_Modif_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Funcion_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Id_CtoPersona" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="0" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="dtpropertiesItem">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="c_property" />
+    </Key>
+    <Property Name="id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="c_property" Type="Edm.String" Nullable="false" MaxLength="64" Unicode="false" />
+    <Property Name="value" Type="Edm.String" MaxLength="255" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="uvalue" Type="Edm.String" MaxLength="255" ConcurrencyMode="Fixed" />
+    <Property Name="lvalue" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="version" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="Par_CtoT_EstadoItem">
+    <Key>
+      <PropertyRef Name="Id_Estado" />
+    </Key>
+    <Property Name="Id_Estado" Type="Edm.Decimal" Nullable="false" Precision="9" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cod_Estado" Type="Edm.String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Tipo_Estado" Type="Edm.String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Descripcion_Estado" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Proceso_Negocio" Type="Edm.String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Ind_Seleccion" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Estado_Reg" Type="Edm.String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Estado_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Ing_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario_Ing_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fec_Ult_Modif_Reg" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Usuario_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Id_Funcion_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityContainer Name="Fin700v60DataObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Contrato" EntityType="LightSwitchApplication.ContratoItem1" />
+    <EntitySet Name="CtoT_Cargo" EntityType="LightSwitchApplication.CtoT_CargoItem" />
+    <EntitySet Name="CtoT_Persona" EntityType="LightSwitchApplication.CtoT_PersonaItem" />
+    <EntitySet Name="dtproperties" EntityType="LightSwitchApplication.dtpropertiesItem" />
+    <EntitySet Name="Par_CtoT_Estado" EntityType="LightSwitchApplication.Par_CtoT_EstadoItem" />
+  </EntityContainer>
+</Schema>

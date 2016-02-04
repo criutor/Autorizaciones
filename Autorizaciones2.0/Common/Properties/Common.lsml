@@ -1,0 +1,5344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Module
+    Name="LightSwitchCommonModule">
+    <Module.Attributes>
+      <ModuleNamespace
+        Namespace="LightSwitchApplication" />
+      <AutomaticDisplayName
+        Expression="(\p{Ll})(\p{Lu})|_+"
+        Replacement="$1 $2" />
+    </Module.Attributes>
+  </Module>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData"
+      Name="SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      EntityContainer="Autorizaciones_AdminsData"
+      Name="Autorizaciones_AdminsData" />
+    <EntityContainerGroupProperty
+      EntityContainer="Fin700v60Data"
+      Name="Fin700v60Data" />
+  </EntityContainerGroup>
+  <EntityType
+    Name="PersonaItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Rut_Persona"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="12" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="AP_Paterno"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AP_Materno"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Nombres"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        IsReadOnly="True"
+        Name="NombreCompleto"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Computed />
+          <NotSearchable />
+          <NotSortable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Es_Gerente"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Es_SubGerente"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Es_JefeDirecto"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NombreAD"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Persona_ConvenioColectivo"
+        FromEnd="Persona"
+        Name="ConvenioColectivoItem"
+        ToEnd="ConvenioColectivo" />
+      <NavigationProperty
+        Association="FK_Persona_Division_Area"
+        FromEnd="Persona"
+        Name="Division_AreaItem"
+        ToEnd="Division_Area" />
+      <NavigationProperty
+        Association="FK_SolicitudHeader_Persona"
+        FromEnd="Persona"
+        Name="Solicitud_Header"
+        ToEnd="Solicitud_Header" />
+      <NavigationProperty
+        Association="FK_Superior_Gerente_Persona"
+        FromEnd="Persona"
+        Name="Superior_Gerente"
+        ToEnd="Superior_Gerente" />
+      <NavigationProperty
+        Association="FK_Superior_JefeDirecto_Persona"
+        FromEnd="Persona"
+        Name="Superior_JefeDirecto"
+        ToEnd="Superior_JefeDirecto" />
+      <NavigationProperty
+        Association="FK_Superior_SubGerente_Persona"
+        FromEnd="Persona"
+        Name="Superior_SubGerente"
+        ToEnd="Superior_SubGerente" />
+      <EntityProperty
+        Name="IDGerencia_para_subgerentes"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="Autorizaciones_AdminsData">
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="PersonaItem"
+      Name="Persona" />
+    <SubmitOperation
+      Name="SaveChanges" />
+    <QueryOperation
+      Name="Persona_Single"
+      ReturnType="PersonaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Rut_Persona" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Rut_Persona" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Rut_Persona"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Rut_Persona' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Persona_SingleOrDefault"
+      ReturnType="PersonaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Rut_Persona" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Rut_Persona" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Rut_Persona"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Rut_Persona' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="CargoItem"
+      Name="Cargo" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ContratoItem"
+      Name="Contrato" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ConvenioColectivoItem"
+      Name="ConvenioColectivo" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Division_AreaItem"
+      Name="Division_Area" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Division_GerenciaItem"
+      Name="Division_Gerencia" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Division_SubGerenciaItem"
+      Name="Division_SubGerencia" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Detalle_AdministrativoItem"
+      Name="Solicitud_Detalle_Administrativo" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Detalle_HorasExtrasItem"
+      Name="Solicitud_Detalle_HorasExtras" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Detalle_OtroPermisoItem"
+      Name="Solicitud_Detalle_OtroPermiso" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Detalle_VacacionesItem"
+      Name="Solicitud_Detalle_Vacaciones" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Estados_AdministrativoItem"
+      Name="Solicitud_Estados_Administrativo" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Estados_HorasExtrasItem"
+      Name="Solicitud_Estados_HorasExtras" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Estados_OtroPermisoItem"
+      Name="Solicitud_Estados_OtroPermiso" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_Estados_VacacionesItem"
+      Name="Solicitud_Estados_Vacaciones" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Solicitud_HeaderItem"
+      Name="Solicitud_Header" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Superior_GerenteItem"
+      Name="Superior_Gerente" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Superior_JefeDirectoItem"
+      Name="Superior_JefeDirecto" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Superior_SubGerenteItem"
+      Name="Superior_SubGerente" />
+    <AssociationSet
+      Association="FK_Division_Area_Division_Gerencia"
+      Name="FK_Division_Area_Division_Gerencia">
+      <AssociationSetEnd
+        EntitySet="Division_Gerencia"
+        Name="Division_Gerencia" />
+      <AssociationSetEnd
+        EntitySet="Division_Area"
+        Name="Division_Area" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Division_Area_Division_SubGerencia"
+      Name="FK_Division_Area_Division_SubGerencia">
+      <AssociationSetEnd
+        EntitySet="Division_SubGerencia"
+        Name="Division_SubGerencia" />
+      <AssociationSetEnd
+        EntitySet="Division_Area"
+        Name="Division_Area" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Division_SubGerencia_Division_Gerencia"
+      Name="FK_Division_SubGerencia_Division_Gerencia">
+      <AssociationSetEnd
+        EntitySet="Division_Gerencia"
+        Name="Division_Gerencia" />
+      <AssociationSetEnd
+        EntitySet="Division_SubGerencia"
+        Name="Division_SubGerencia" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Persona_ConvenioColectivo"
+      Name="FK_Persona_ConvenioColectivo">
+      <AssociationSetEnd
+        EntitySet="ConvenioColectivo"
+        Name="ConvenioColectivo" />
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Persona_Division_Area"
+      Name="FK_Persona_Division_Area">
+      <AssociationSetEnd
+        EntitySet="Division_Area"
+        Name="Division_Area" />
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Detalle_Administrativo_Solicitud_Header"
+      Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Header"
+        Name="Solicitud_Header" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_Administrativo"
+        Name="Solicitud_Detalle_Administrativo" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header"
+      Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Header"
+        Name="Solicitud_Header" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_HorasExtras"
+        Name="Solicitud_Detalle_HorasExtras" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header"
+      Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Header"
+        Name="Solicitud_Header" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_OtroPermiso"
+        Name="Solicitud_Detalle_OtroPermiso" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header"
+      Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Header"
+        Name="Solicitud_Header" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_Vacaciones"
+        Name="Solicitud_Detalle_Vacaciones" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra"
+      Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_Administrativo"
+        Name="Solicitud_Detalle_Administrativo" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Estados_Administrativo"
+        Name="Solicitud_Estados_Administrativo" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras"
+      Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_HorasExtras"
+        Name="Solicitud_Detalle_HorasExtras" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Estados_HorasExtras"
+        Name="Solicitud_Estados_HorasExtras" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso"
+      Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_OtroPermiso"
+        Name="Solicitud_Detalle_OtroPermiso" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Estados_OtroPermiso"
+        Name="Solicitud_Estados_OtroPermiso" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones"
+      Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+      <AssociationSetEnd
+        EntitySet="Solicitud_Detalle_Vacaciones"
+        Name="Solicitud_Detalle_Vacaciones" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Estados_Vacaciones"
+        Name="Solicitud_Estados_Vacaciones" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_SolicitudHeader_Persona"
+      Name="FK_SolicitudHeader_Persona">
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+      <AssociationSetEnd
+        EntitySet="Solicitud_Header"
+        Name="Solicitud_Header" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Superior_Gerente_Division_Gerencia"
+      Name="FK_Superior_Gerente_Division_Gerencia">
+      <AssociationSetEnd
+        EntitySet="Division_Gerencia"
+        Name="Division_Gerencia" />
+      <AssociationSetEnd
+        EntitySet="Superior_Gerente"
+        Name="Superior_Gerente" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Superior_Gerente_Persona"
+      Name="FK_Superior_Gerente_Persona">
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+      <AssociationSetEnd
+        EntitySet="Superior_Gerente"
+        Name="Superior_Gerente" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Superior_JefeDirecto_Division_Area"
+      Name="FK_Superior_JefeDirecto_Division_Area">
+      <AssociationSetEnd
+        EntitySet="Division_Area"
+        Name="Division_Area" />
+      <AssociationSetEnd
+        EntitySet="Superior_JefeDirecto"
+        Name="Superior_JefeDirecto" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Superior_JefeDirecto_Persona"
+      Name="FK_Superior_JefeDirecto_Persona">
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+      <AssociationSetEnd
+        EntitySet="Superior_JefeDirecto"
+        Name="Superior_JefeDirecto" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Superior_SubGerente_Division_SubGerencia"
+      Name="FK_Superior_SubGerente_Division_SubGerencia">
+      <AssociationSetEnd
+        EntitySet="Division_SubGerencia"
+        Name="Division_SubGerencia" />
+      <AssociationSetEnd
+        EntitySet="Superior_SubGerente"
+        Name="Superior_SubGerente" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_Superior_SubGerente_Persona"
+      Name="FK_Superior_SubGerente_Persona">
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+      <AssociationSetEnd
+        EntitySet="Superior_SubGerente"
+        Name="Superior_SubGerente" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Cargo_Single"
+      ReturnType="CargoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Cod_Cargo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Cod_Cargo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Cargo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Cod_Cargo"
+        ParameterType=":Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Cod_Cargo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Cargo_SingleOrDefault"
+      ReturnType="CargoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Cod_Cargo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Cod_Cargo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Cargo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Cod_Cargo"
+        ParameterType=":Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Cod_Cargo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Contrato_Single"
+      ReturnType="ContratoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="RutTrabajador" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="RutTrabajador" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Contrato" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Contrato" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Contrato" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Contrato"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Contrato' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="RutTrabajador"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'RutTrabajador' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Contrato_SingleOrDefault"
+      ReturnType="ContratoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="RutTrabajador" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="RutTrabajador" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Contrato" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Contrato" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Contrato" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Contrato"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Contrato' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="RutTrabajador"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'RutTrabajador' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ConvenioColectivo_Single"
+      ReturnType="ConvenioColectivoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Convenio" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Convenio" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConvenioColectivo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Convenio"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Convenio' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ConvenioColectivo_SingleOrDefault"
+      ReturnType="ConvenioColectivoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Convenio" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Convenio" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConvenioColectivo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Convenio"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Convenio' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Division_Area_Single"
+      ReturnType="Division_AreaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Area" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Area" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Division_Area" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Area"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Area' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Division_Area_SingleOrDefault"
+      ReturnType="Division_AreaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Area" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Area" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Division_Area" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Area"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Area' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Division_Gerencia_Single"
+      ReturnType="Division_GerenciaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Gerencia" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Gerencia" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Division_Gerencia" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Gerencia"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Gerencia' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Division_Gerencia_SingleOrDefault"
+      ReturnType="Division_GerenciaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Gerencia" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Gerencia" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Division_Gerencia" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Gerencia"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Gerencia' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Division_SubGerencia_Single"
+      ReturnType="Division_SubGerenciaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_SubGerencia" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_SubGerencia" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Division_SubGerencia" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_SubGerencia"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_SubGerencia' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Division_SubGerencia_SingleOrDefault"
+      ReturnType="Division_SubGerenciaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_SubGerencia" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_SubGerencia" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Division_SubGerencia" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_SubGerencia"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_SubGerencia' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_Administrativo_Single"
+      ReturnType="Solicitud_Detalle_AdministrativoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Administrativo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Administrativo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_Administrativo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Administrativo"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Administrativo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_Administrativo_SingleOrDefault"
+      ReturnType="Solicitud_Detalle_AdministrativoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Administrativo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Administrativo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_Administrativo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Administrativo"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Administrativo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_HorasExtras_Single"
+      ReturnType="Solicitud_Detalle_HorasExtrasItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_HorasExtras" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_HorasExtras" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_HorasExtras" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_HorasExtras"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_HorasExtras' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_HorasExtras_SingleOrDefault"
+      ReturnType="Solicitud_Detalle_HorasExtrasItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_HorasExtras" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_HorasExtras" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_HorasExtras" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_HorasExtras"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_HorasExtras' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_OtroPermiso_Single"
+      ReturnType="Solicitud_Detalle_OtroPermisoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_OtroPermiso" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_OtroPermiso" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_OtroPermiso" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_OtroPermiso"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_OtroPermiso' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_OtroPermiso_SingleOrDefault"
+      ReturnType="Solicitud_Detalle_OtroPermisoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_OtroPermiso" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_OtroPermiso" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_OtroPermiso" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_OtroPermiso"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_OtroPermiso' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_Vacaciones_Single"
+      ReturnType="Solicitud_Detalle_VacacionesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Vacaciones" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Vacaciones" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_Vacaciones" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Vacaciones"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Vacaciones' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Detalle_Vacaciones_SingleOrDefault"
+      ReturnType="Solicitud_Detalle_VacacionesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Vacaciones" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Vacaciones" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Detalle_Vacaciones" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Vacaciones"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Vacaciones' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_Administrativo_Single"
+      ReturnType="Solicitud_Estados_AdministrativoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_Administrativo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_Administrativo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_Administrativo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_Administrativo"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_Administrativo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_Administrativo_SingleOrDefault"
+      ReturnType="Solicitud_Estados_AdministrativoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_Administrativo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_Administrativo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_Administrativo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_Administrativo"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_Administrativo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_HorasExtras_Single"
+      ReturnType="Solicitud_Estados_HorasExtrasItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_HorasExtras" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_HorasExtras" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_HorasExtras" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_HorasExtras"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_HorasExtras' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_HorasExtras_SingleOrDefault"
+      ReturnType="Solicitud_Estados_HorasExtrasItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_HorasExtras" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_HorasExtras" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_HorasExtras" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_HorasExtras"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_HorasExtras' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_OtroPermiso_Single"
+      ReturnType="Solicitud_Estados_OtroPermisoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_OtroPermiso" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_OtroPermiso" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_OtroPermiso" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_OtroPermiso"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_OtroPermiso' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_OtroPermiso_SingleOrDefault"
+      ReturnType="Solicitud_Estados_OtroPermisoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_OtroPermiso" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_OtroPermiso" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_OtroPermiso" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_OtroPermiso"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_OtroPermiso' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_Vacaciones_Single"
+      ReturnType="Solicitud_Estados_VacacionesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_vacaciones" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_vacaciones" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_Vacaciones" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_vacaciones"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_vacaciones' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Estados_Vacaciones_SingleOrDefault"
+      ReturnType="Solicitud_Estados_VacacionesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estados_vacaciones" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estados_vacaciones" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Estados_Vacaciones" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estados_vacaciones"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estados_vacaciones' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Header_Single"
+      ReturnType="Solicitud_HeaderItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_SolicitudHeader" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_SolicitudHeader" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Header" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_SolicitudHeader"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_SolicitudHeader' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Solicitud_Header_SingleOrDefault"
+      ReturnType="Solicitud_HeaderItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_SolicitudHeader" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_SolicitudHeader" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Solicitud_Header" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_SolicitudHeader"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_SolicitudHeader' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Superior_Gerente_Single"
+      ReturnType="Superior_GerenteItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Gerente" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Gerente" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_Gerente" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Gerente"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Gerente' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Superior_Gerente_SingleOrDefault"
+      ReturnType="Superior_GerenteItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Gerente" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Gerente" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_Gerente" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Gerente"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Gerente' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Superior_JefeDirecto_Single"
+      ReturnType="Superior_JefeDirectoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_JefeDirecto" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_JefeDirecto" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_JefeDirecto" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_JefeDirecto"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_JefeDirecto' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Superior_JefeDirecto_SingleOrDefault"
+      ReturnType="Superior_JefeDirectoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_JefeDirecto" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_JefeDirecto" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_JefeDirecto" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_JefeDirecto"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_JefeDirecto' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Superior_SubGerente_Single"
+      ReturnType="Superior_SubGerenteItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_SubGerente" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_SubGerente" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_SubGerente" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_SubGerente"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_SubGerente' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Superior_SubGerente_SingleOrDefault"
+      ReturnType="Superior_SubGerenteItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_SubGerente" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_SubGerente" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_SubGerente" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_SubGerente"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_SubGerente' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <Permission
+    Name="VerConveniosScreen">
+    <Permission.Attributes>
+      <DisplayName
+        Value="Ver Convenios Screen" />
+      <Description
+        Value="Ver Convenios Screen" />
+    </Permission.Attributes>
+  </Permission>
+  <EntityType
+    Name="ContratoItem1">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="EmpId"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Periodo"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="RutTrabajador"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="12" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="Contrato"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Origen"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TipoContrato"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaVigencia"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaRenovacion"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CargoEmpleado"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Grado"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaGrado"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Categoria"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CalidadJuridica"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CentroCosto"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DivCodigo"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="UnidadOrganica"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Jornada"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LugarIntegro"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LugarTrabajo"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="LugarPago"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FormaPago"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaFiniquito"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaFirma"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CausalLegal"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CausalReal"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="GrupoContabilizacion"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CodigoSucursal"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MutualAccidentes"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CajaCompensacion"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaAntiguedad"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CodigoCertificado"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TipoControl"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TipoFuero"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaTerminoFuero"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaCompromisoPerm"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiasAdiProgresivos"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MesesReconocidos"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiasAdiPactados"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiasLegales"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiasBaseVacaciones"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaBaseVacaciones"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EstadoContrato"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="fld_UserCode"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SeguroCesantia"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="IndCargoSeguroCesantia"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Afp"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Banco"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CuentaBanco"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaActContrato"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SinMutual"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PlanPactadoSalud"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaRenovacionII"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CotizaPrev"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="En_Uso"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Years11"
+        PropertyType=":Byte">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="CtoT_CargoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Cod_Cargo"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Descripcion_Cargo"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Tipo_Cargo"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Nivel_Cargo"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Cargo_Generico"
+        PropertyType=":Int16?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Estado_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Estado_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Ing_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario_Ing_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Ult_Modif_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario_Ult_Modif_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Funcion_Ult_Modif_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="16" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="CtoT_PersonaItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Rut_Persona"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="12" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Identificacion1"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Identificacion2"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Identificacion3"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AP_Paterno"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AP_Materno"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Nombres"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Nombre_Corto"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Estado_Persona"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Estado"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Sexo"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Profesion"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Nivel_Laboral"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Nivel_Educacional"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Estado_Civil"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Nacimiento"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Comuna_Nacimiento"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Nacionalidad"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Telefono_Particular"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Telefono_Oficina"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Celular"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fax"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Correo_Electronico"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="60" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Direccion"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_comuna"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Carpeta_Fisica"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="30" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Origen_Curriculum"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ind_Recomendado"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Nombre_Recomendado"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Disponibilidad"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cod_Banco"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Cuenta_Banco"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="15" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Num_Tarjeta"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Usuario_Sicas"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Foto"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Estado_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Estado_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Ing_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario_Ing_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Ult_Modif_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario_Ult_Modif_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Funcion_Ult_Modif_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="16" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        IsReadOnly="True"
+        Name="Id_CtoPersona"
+        PropertyType=":Decimal">
+        <EntityProperty.Attributes>
+          <Hidden />
+          <Required />
+          <DecimalConstraint
+            Precision="9"
+            Scale="0" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="dtpropertiesItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="objectid"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="c_property"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="64" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="value"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="uvalue"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="lvalue"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSortable />
+          <MaxLength />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="version"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Par_CtoT_EstadoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Estado"
+        PropertyType=":Decimal">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <DecimalConstraint
+            Precision="9"
+            Scale="0" />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Cod_Estado"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="4" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Tipo_Estado"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="4" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Descripcion_Estado"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Proceso_Negocio"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="16" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Ind_Seleccion"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Estado_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="1" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Estado_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Ing_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario_Ing_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fec_Ult_Modif_Reg"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Usuario_Ult_Modif_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Id_Funcion_Ult_Modif_Reg"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="16" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="Fin700v60Data">
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ContratoItem1"
+      Name="Contrato" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="CtoT_CargoItem"
+      Name="CtoT_Cargo" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="CtoT_PersonaItem"
+      Name="CtoT_Persona" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="dtpropertiesItem"
+      Name="dtproperties" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Par_CtoT_EstadoItem"
+      Name="Par_CtoT_Estado" />
+    <SubmitOperation
+      Name="SaveChanges" />
+    <QueryOperation
+      Name="Contrato_Single"
+      ReturnType="ContratoItem1">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Contrato" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Contrato" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="RutTrabajador" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="RutTrabajador" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Periodo" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Periodo" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="EmpId" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="EmpId" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Contrato" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="EmpId"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'EmpId' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Periodo"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Periodo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="RutTrabajador"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'RutTrabajador' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Contrato"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Contrato' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Contrato_SingleOrDefault"
+      ReturnType="ContratoItem1">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Contrato" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Contrato" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="RutTrabajador" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="RutTrabajador" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Periodo" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Periodo" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="EmpId" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="EmpId" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Contrato" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="EmpId"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'EmpId' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Periodo"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Periodo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="RutTrabajador"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'RutTrabajador' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="Contrato"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Contrato' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CtoT_Cargo_Single"
+      ReturnType="CtoT_CargoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Cod_Cargo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Cod_Cargo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CtoT_Cargo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Cod_Cargo"
+        ParameterType=":Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Cod_Cargo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CtoT_Cargo_SingleOrDefault"
+      ReturnType="CtoT_CargoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Cod_Cargo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Cod_Cargo" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CtoT_Cargo" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Cod_Cargo"
+        ParameterType=":Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Cod_Cargo' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CtoT_Persona_Single"
+      ReturnType="CtoT_PersonaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Rut_Persona" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Rut_Persona" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CtoT_Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Rut_Persona"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Rut_Persona' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CtoT_Persona_SingleOrDefault"
+      ReturnType="CtoT_PersonaItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Rut_Persona" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Rut_Persona" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CtoT_Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Rut_Persona"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Rut_Persona' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="dtproperties_Single"
+      ReturnType="dtpropertiesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="c_property" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="c_property" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="id" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="id" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="dtproperties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="c_property"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'c_property' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="dtproperties_SingleOrDefault"
+      ReturnType="dtpropertiesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="c_property" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="c_property" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="id" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="id" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="dtproperties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+      <QueryOperationParameter
+        Name="c_property"
+        ParameterType=":String?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'c_property' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Par_CtoT_Estado_Single"
+      ReturnType="Par_CtoT_EstadoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estado" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estado" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Par_CtoT_Estado" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estado"
+        ParameterType=":Decimal?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estado' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Par_CtoT_Estado_SingleOrDefault"
+      ReturnType="Par_CtoT_EstadoItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estado" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estado" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Par_CtoT_Estado" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estado"
+        ParameterType=":Decimal?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estado' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="PersonasContratadas"
+      ReturnType="CtoT_PersonaItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Estado_Persona" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ConstantExpression
+                ResultType=":String"
+                Value="c" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CtoT_Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+    </QueryOperation>
+  </EntityContainer>
+  <EntityType
+    Name="CargoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Cod_Cargo"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Descripcion_Cargo"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ContratoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="Contrato"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <KeyProperty
+        Name="RutTrabajador"
+        PropertyType=":String">
+        <KeyProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="12" />
+          <AnsiConstraint />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="FechaVigencia"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaFiniquito"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CentroCosto"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CargoEmpleado"
+        PropertyType=":Int16">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ConvenioColectivoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Convenio"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Nombre"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Persona_ConvenioColectivo"
+        FromEnd="ConvenioColectivo"
+        Name="Persona"
+        ToEnd="Persona" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Division_AreaItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Area"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Nombre"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Division_Area_Division_Gerencia"
+        FromEnd="Division_Area"
+        Name="Division_GerenciaItem"
+        ToEnd="Division_Gerencia" />
+      <NavigationProperty
+        Association="FK_Division_Area_Division_SubGerencia"
+        FromEnd="Division_Area"
+        Name="Division_SubGerenciaItem"
+        ToEnd="Division_SubGerencia" />
+      <NavigationProperty
+        Association="FK_Persona_Division_Area"
+        FromEnd="Division_Area"
+        Name="Persona"
+        ToEnd="Persona" />
+      <NavigationProperty
+        Association="FK_Superior_JefeDirecto_Division_Area"
+        FromEnd="Division_Area"
+        Name="Superior_JefeDirecto"
+        ToEnd="Superior_JefeDirecto" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Division_GerenciaItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Gerencia"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Nombre"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Division_Area_Division_Gerencia"
+        FromEnd="Division_Gerencia"
+        Name="Division_Area"
+        ToEnd="Division_Area" />
+      <NavigationProperty
+        Association="FK_Division_SubGerencia_Division_Gerencia"
+        FromEnd="Division_Gerencia"
+        Name="Division_SubGerencia"
+        ToEnd="Division_SubGerencia" />
+      <NavigationProperty
+        Association="FK_Superior_Gerente_Division_Gerencia"
+        FromEnd="Division_Gerencia"
+        Name="Superior_Gerente"
+        ToEnd="Superior_Gerente" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Division_SubGerenciaItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_SubGerencia"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Nombre"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Division_Area_Division_SubGerencia"
+        FromEnd="Division_SubGerencia"
+        Name="Division_Area"
+        ToEnd="Division_Area" />
+      <NavigationProperty
+        Association="FK_Division_SubGerencia_Division_Gerencia"
+        FromEnd="Division_SubGerencia"
+        Name="Division_GerenciaItem"
+        ToEnd="Division_Gerencia" />
+      <NavigationProperty
+        Association="FK_Superior_SubGerente_Division_SubGerencia"
+        FromEnd="Division_SubGerencia"
+        Name="Superior_SubGerente"
+        ToEnd="Superior_SubGerente" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Detalle_AdministrativoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Administrativo"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="SaldoDias"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Inicio"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Termino"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NumeroDias"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_Administrativo_Solicitud_Header"
+        FromEnd="Solicitud_Detalle_Administrativo"
+        Name="Solicitud_HeaderItem"
+        ToEnd="Solicitud_Header" />
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra"
+        FromEnd="Solicitud_Detalle_Administrativo"
+        Name="Solicitud_Estados_Administrativo"
+        ToEnd="Solicitud_Estados_Administrativo" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Detalle_HorasExtrasItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_HorasExtras"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="FechaRealizacion"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasAutorizadas"
+        PropertyType=":Double">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasTrabajadas"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Colacion"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Taxi"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header"
+        FromEnd="Solicitud_Detalle_HorasExtras"
+        Name="Solicitud_HeaderItem"
+        ToEnd="Solicitud_Header" />
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras"
+        FromEnd="Solicitud_Detalle_HorasExtras"
+        Name="Solicitud_Estados_HorasExtras"
+        ToEnd="Solicitud_Estados_HorasExtras" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Detalle_OtroPermisoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_OtroPermiso"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="ConDescuento"
+        PropertyType=":Boolean">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Inicio"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Termino"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NumeroDias"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header"
+        FromEnd="Solicitud_Detalle_OtroPermiso"
+        Name="Solicitud_HeaderItem"
+        ToEnd="Solicitud_Header" />
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso"
+        FromEnd="Solicitud_Detalle_OtroPermiso"
+        Name="Solicitud_Estados_OtroPermiso"
+        ToEnd="Solicitud_Estados_OtroPermiso" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Detalle_VacacionesItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Vacaciones"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="SaldoVacaciones"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Inicio"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Termino"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NumeroDias"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header"
+        FromEnd="Solicitud_Detalle_Vacaciones"
+        Name="Solicitud_HeaderItem"
+        ToEnd="Solicitud_Header" />
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones"
+        FromEnd="Solicitud_Detalle_Vacaciones"
+        Name="Solicitud_Estados_Vacaciones"
+        ToEnd="Solicitud_Estados_Vacaciones" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Estados_AdministrativoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Estados_Administrativo"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Observaciones"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra"
+        FromEnd="Solicitud_Estados_Administrativo"
+        Name="Solicitud_Detalle_AdministrativoItem"
+        ToEnd="Solicitud_Detalle_Administrativo" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Estados_HorasExtrasItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Estados_HorasExtras"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Observaciones"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras"
+        FromEnd="Solicitud_Estados_HorasExtras"
+        Name="Solicitud_Detalle_HorasExtrasItem"
+        ToEnd="Solicitud_Detalle_HorasExtras" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Estados_OtroPermisoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Estados_OtroPermiso"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Observaciones"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso"
+        FromEnd="Solicitud_Estados_OtroPermiso"
+        Name="Solicitud_Detalle_OtroPermisoItem"
+        ToEnd="Solicitud_Detalle_OtroPermiso" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_Estados_VacacionesItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Estados_vacaciones"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Observaciones"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones"
+        FromEnd="Solicitud_Estados_Vacaciones"
+        Name="Solicitud_Detalle_VacacionesItem"
+        ToEnd="Solicitud_Detalle_Vacaciones" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Solicitud_HeaderItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_SolicitudHeader"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="FechaSolicitud"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NombreTrabajador"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Fechaingreso"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Gerencia"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Departamento"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_Gerente"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_SubGerente"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_JefeDirecto"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rechazada"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Completada"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_Administrativo_Solicitud_Header"
+        FromEnd="Solicitud_Header"
+        Name="Solicitud_Detalle_Administrativo"
+        ToEnd="Solicitud_Detalle_Administrativo" />
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header"
+        FromEnd="Solicitud_Header"
+        Name="Solicitud_Detalle_HorasExtras"
+        ToEnd="Solicitud_Detalle_HorasExtras" />
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header"
+        FromEnd="Solicitud_Header"
+        Name="Solicitud_Detalle_OtroPermiso"
+        ToEnd="Solicitud_Detalle_OtroPermiso" />
+      <NavigationProperty
+        Association="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header"
+        FromEnd="Solicitud_Header"
+        Name="Solicitud_Detalle_Vacaciones"
+        ToEnd="Solicitud_Detalle_Vacaciones" />
+      <NavigationProperty
+        Association="FK_SolicitudHeader_Persona"
+        FromEnd="Solicitud_Header"
+        Name="PersonaItem1"
+        ToEnd="Persona" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Superior_GerenteItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Gerente"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <NavigationProperty
+        Association="FK_Superior_Gerente_Division_Gerencia"
+        FromEnd="Superior_Gerente"
+        Name="Division_GerenciaItem"
+        ToEnd="Division_Gerencia" />
+      <NavigationProperty
+        Association="FK_Superior_Gerente_Persona"
+        FromEnd="Superior_Gerente"
+        Name="PersonaItem1"
+        ToEnd="Persona" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Superior_JefeDirectoItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_JefeDirecto"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <NavigationProperty
+        Association="FK_Superior_JefeDirecto_Division_Area"
+        FromEnd="Superior_JefeDirecto"
+        Name="Division_AreaItem"
+        ToEnd="Division_Area" />
+      <NavigationProperty
+        Association="FK_Superior_JefeDirecto_Persona"
+        FromEnd="Superior_JefeDirecto"
+        Name="PersonaItem1"
+        ToEnd="Persona" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="Superior_SubGerenteItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_SubGerente"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <NavigationProperty
+        Association="FK_Superior_SubGerente_Division_SubGerencia"
+        FromEnd="Superior_SubGerente"
+        Name="Division_SubGerenciaItem"
+        ToEnd="Division_SubGerencia" />
+      <NavigationProperty
+        Association="FK_Superior_SubGerente_Persona"
+        FromEnd="Superior_SubGerente"
+        Name="PersonaItem1"
+        ToEnd="Persona" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Division_Area_Division_Gerencia">
+    <AssociationEnd
+      EntityType="Division_GerenciaItem"
+      Name="Division_Gerencia">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Division_AreaItem"
+      Multiplicity="Many"
+      Name="Division_Area" />
+  </Association>
+  <Association
+    Name="FK_Division_Area_Division_SubGerencia">
+    <AssociationEnd
+      EntityType="Division_SubGerenciaItem"
+      Name="Division_SubGerencia">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Division_AreaItem"
+      Multiplicity="Many"
+      Name="Division_Area" />
+  </Association>
+  <Association
+    Name="FK_Division_SubGerencia_Division_Gerencia">
+    <AssociationEnd
+      EntityType="Division_GerenciaItem"
+      Multiplicity="One"
+      Name="Division_Gerencia">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Division_SubGerenciaItem"
+      Multiplicity="Many"
+      Name="Division_SubGerencia" />
+  </Association>
+  <Association
+    Name="FK_Persona_ConvenioColectivo">
+    <AssociationEnd
+      EntityType="ConvenioColectivoItem"
+      Name="ConvenioColectivo">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="Many"
+      Name="Persona" />
+  </Association>
+  <Association
+    Name="FK_Persona_Division_Area">
+    <AssociationEnd
+      EntityType="Division_AreaItem"
+      Name="Division_Area">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="Many"
+      Name="Persona" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+    <AssociationEnd
+      EntityType="Solicitud_HeaderItem"
+      Multiplicity="One"
+      Name="Solicitud_Header">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_AdministrativoItem"
+      Multiplicity="Many"
+      Name="Solicitud_Detalle_Administrativo" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+    <AssociationEnd
+      EntityType="Solicitud_HeaderItem"
+      Multiplicity="One"
+      Name="Solicitud_Header">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_HorasExtrasItem"
+      Multiplicity="Many"
+      Name="Solicitud_Detalle_HorasExtras" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+    <AssociationEnd
+      EntityType="Solicitud_HeaderItem"
+      Multiplicity="One"
+      Name="Solicitud_Header">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_OtroPermisoItem"
+      Multiplicity="Many"
+      Name="Solicitud_Detalle_OtroPermiso" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+    <AssociationEnd
+      EntityType="Solicitud_HeaderItem"
+      Multiplicity="One"
+      Name="Solicitud_Header">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_VacacionesItem"
+      Multiplicity="Many"
+      Name="Solicitud_Detalle_Vacaciones" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_AdministrativoItem"
+      Multiplicity="One"
+      Name="Solicitud_Detalle_Administrativo">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Estados_AdministrativoItem"
+      Multiplicity="Many"
+      Name="Solicitud_Estados_Administrativo" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_HorasExtrasItem"
+      Multiplicity="One"
+      Name="Solicitud_Detalle_HorasExtras">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Estados_HorasExtrasItem"
+      Multiplicity="Many"
+      Name="Solicitud_Estados_HorasExtras" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_OtroPermisoItem"
+      Multiplicity="One"
+      Name="Solicitud_Detalle_OtroPermiso">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Estados_OtroPermisoItem"
+      Multiplicity="Many"
+      Name="Solicitud_Estados_OtroPermiso" />
+  </Association>
+  <Association
+    Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+    <AssociationEnd
+      EntityType="Solicitud_Detalle_VacacionesItem"
+      Multiplicity="One"
+      Name="Solicitud_Detalle_Vacaciones">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_Estados_VacacionesItem"
+      Multiplicity="Many"
+      Name="Solicitud_Estados_Vacaciones" />
+  </Association>
+  <Association
+    Name="FK_SolicitudHeader_Persona">
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="One"
+      Name="Persona">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Solicitud_HeaderItem"
+      Multiplicity="Many"
+      Name="Solicitud_Header" />
+  </Association>
+  <Association
+    Name="FK_Superior_Gerente_Division_Gerencia">
+    <AssociationEnd
+      EntityType="Division_GerenciaItem"
+      Multiplicity="One"
+      Name="Division_Gerencia">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Superior_GerenteItem"
+      Multiplicity="Many"
+      Name="Superior_Gerente" />
+  </Association>
+  <Association
+    Name="FK_Superior_Gerente_Persona">
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="One"
+      Name="Persona">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Superior_GerenteItem"
+      Multiplicity="Many"
+      Name="Superior_Gerente" />
+  </Association>
+  <Association
+    Name="FK_Superior_JefeDirecto_Division_Area">
+    <AssociationEnd
+      EntityType="Division_AreaItem"
+      Multiplicity="One"
+      Name="Division_Area">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Superior_JefeDirectoItem"
+      Multiplicity="Many"
+      Name="Superior_JefeDirecto" />
+  </Association>
+  <Association
+    Name="FK_Superior_JefeDirecto_Persona">
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="One"
+      Name="Persona">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Superior_JefeDirectoItem"
+      Multiplicity="Many"
+      Name="Superior_JefeDirecto" />
+  </Association>
+  <Association
+    Name="FK_Superior_SubGerente_Division_SubGerencia">
+    <AssociationEnd
+      EntityType="Division_SubGerenciaItem"
+      Multiplicity="One"
+      Name="Division_SubGerencia">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Superior_SubGerenteItem"
+      Multiplicity="Many"
+      Name="Superior_SubGerente" />
+  </Association>
+  <Association
+    Name="FK_Superior_SubGerente_Persona">
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="One"
+      Name="Persona">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="Superior_SubGerenteItem"
+      Multiplicity="Many"
+      Name="Superior_SubGerente" />
+  </Association>
+</ModelFragment>

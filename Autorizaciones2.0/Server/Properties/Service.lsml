@@ -1,0 +1,1857 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication
+    Name="LightSwitchServiceApplication"
+    Version="1.0.0.0">
+    <ServiceApplication.Attributes>
+      <ModuleNamespace
+        Namespace="LightSwitchApplication" />
+    </ServiceApplication.Attributes>
+  </ServiceApplication>
+  <DataService
+    DataProvider="EntityFrameworkDataProvider"
+    EntityContainer="LightSwitchCommonModule:Fin700v60Data"
+    Name="Fin700v60DataDataService">
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="DataProviderName"
+        Value="91510608-8809-4020-8897-fba057e22d54" />
+      <ConnectionProperty
+        Name="DataSourceName"
+        Value="067ea0d9-ba62-43f7-9106-34930c60c528" />
+      <ConnectionProperty
+        Name="ProviderInvariantName"
+        Value="System.Data.SqlClient" />
+      <ConnectionProperty
+        Name="SafeConnectionString"
+        Value="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700" />
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="98427555-f2a5-484f-ba3a-0d82161b2343" />
+      <ConnectionProperty
+        Name="ProviderManifestToken"
+        Value="2008" />
+    </DataService.ConnectionProperties>
+    <EntitySetMapping
+      EntitySet="Contrato">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Contrato" />
+        <SsdlProperty
+          Name="EmpId"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[EmpId]"
+          Type="int" />
+        <SsdlProperty
+          Name="Periodo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Periodo]"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="12"
+          Name="RutTrabajador"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[RutTrabajador]"
+          Type="char" />
+        <SsdlProperty
+          Name="Contrato"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Contrato]"
+          Type="int" />
+        <SsdlProperty
+          Name="Origen"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Origen]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="TipoContrato"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[TipoContrato]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FechaVigencia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaVigencia]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="FechaRenovacion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaRenovacion]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="CargoEmpleado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CargoEmpleado]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Grado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Grado]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FechaGrado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaGrado]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Categoria"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Categoria]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="CalidadJuridica"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CalidadJuridica]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="CentroCosto"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CentroCosto]"
+          Type="int" />
+        <SsdlProperty
+          Name="DivCodigo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[DivCodigo]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="UnidadOrganica"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[UnidadOrganica]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Jornada"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Jornada]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="LugarIntegro"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[LugarIntegro]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="LugarTrabajo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[LugarTrabajo]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="LugarPago"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[LugarPago]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FormaPago"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FormaPago]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FechaFiniquito"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaFiniquito]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="FechaFirma"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaFirma]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="CausalLegal"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CausalLegal]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="CausalReal"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CausalReal]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="GrupoContabilizacion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[GrupoContabilizacion]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="CodigoSucursal"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CodigoSucursal]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="MutualAccidentes"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[MutualAccidentes]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="CajaCompensacion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CajaCompensacion]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FechaAntiguedad"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaAntiguedad]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="CodigoCertificado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CodigoCertificado]"
+          Type="int" />
+        <SsdlProperty
+          Name="TipoControl"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[TipoControl]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="TipoFuero"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[TipoFuero]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FechaTerminoFuero"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaTerminoFuero]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="FechaCompromisoPerm"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaCompromisoPerm]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="DiasAdiProgresivos"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[DiasAdiProgresivos]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="MesesReconocidos"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[MesesReconocidos]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="DiasAdiPactados"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[DiasAdiPactados]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="DiasLegales"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[DiasLegales]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="DiasBaseVacaciones"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[DiasBaseVacaciones]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="FechaBaseVacaciones"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaBaseVacaciones]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="EstadoContrato"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[EstadoContrato]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="fld_UserCode"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[fld_UserCode]"
+          Type="varchar" />
+        <SsdlProperty
+          Name="SeguroCesantia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[SeguroCesantia]"
+          Type="tinyint" />
+        <SsdlProperty
+          Name="IndCargoSeguroCesantia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[IndCargoSeguroCesantia]"
+          Type="tinyint" />
+        <SsdlProperty
+          Name="Afp"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Afp]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Banco"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Banco]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="CuentaBanco"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CuentaBanco]"
+          Type="char" />
+        <SsdlProperty
+          Name="FechaActContrato"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaActContrato]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="SinMutual"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[SinMutual]"
+          Type="tinyint" />
+        <SsdlProperty
+          Name="PlanPactadoSalud"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[PlanPactadoSalud]"
+          Type="tinyint" />
+        <SsdlProperty
+          Name="FechaRenovacionII"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[FechaRenovacionII]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="CotizaPrev"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[CotizaPrev]"
+          Type="tinyint" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="En_Uso"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[En_Uso]"
+          Type="varchar" />
+        <SsdlProperty
+          Name="Years11"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem1/Properties[Years11]"
+          Type="tinyint" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="CtoT_Cargo">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="CtoT_Cargo" />
+        <SsdlProperty
+          Name="Cod_Cargo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Cod_Cargo]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Descripcion_Cargo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Descripcion_Cargo]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Tipo_Cargo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Tipo_Cargo]"
+          Type="char" />
+        <SsdlProperty
+          Name="Cod_Nivel_Cargo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Cod_Nivel_Cargo]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Cod_Cargo_Generico"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Cod_Cargo_Generico]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Estado_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Estado_Reg]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Estado_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Fec_Estado_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Fec_Ing_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Fec_Ing_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Id_Usuario_Ing_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Id_Usuario_Ing_Reg]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Fec_Ult_Modif_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Id_Usuario_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Id_Usuario_Ult_Modif_Reg]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="16"
+          Name="Id_Funcion_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_CargoItem/Properties[Id_Funcion_Ult_Modif_Reg]"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="CtoT_Persona">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="CtoT_Persona" />
+        <SsdlProperty
+          Name="Id_CtoPersona"
+          Nullable="False"
+          Precision="9"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Id_CtoPersona]"
+          StoreGeneratedPattern="Identity"
+          Type="numeric" />
+        <SsdlProperty
+          MaxLength="12"
+          Name="Rut_Persona"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Rut_Persona]"
+          Type="char" />
+        <SsdlProperty
+          Name="Identificacion1"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Identificacion1]"
+          Type="int" />
+        <SsdlProperty
+          Name="Identificacion2"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Identificacion2]"
+          Type="int" />
+        <SsdlProperty
+          Name="Identificacion3"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Identificacion3]"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="AP_Paterno"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[AP_Paterno]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="AP_Materno"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[AP_Materno]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Nombres"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Nombres]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Nombre_Corto"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Nombre_Corto]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Estado_Persona"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Estado_Persona]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Estado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fec_Estado]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Cod_Sexo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Sexo]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Cod_Profesion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Profesion]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Cod_Nivel_Laboral"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Nivel_Laboral]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Cod_Nivel_Educacional"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Nivel_Educacional]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Cod_Estado_Civil"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Estado_Civil]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Fec_Nacimiento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fec_Nacimiento]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Cod_Comuna_Nacimiento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Comuna_Nacimiento]"
+          Type="int" />
+        <SsdlProperty
+          Name="Cod_Nacionalidad"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Nacionalidad]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Telefono_Particular"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Telefono_Particular]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Telefono_Oficina"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Telefono_Oficina]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Celular"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Celular]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Fax"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fax]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="Correo_Electronico"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Correo_Electronico]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Direccion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Direccion]"
+          Type="char" />
+        <SsdlProperty
+          Name="Cod_comuna"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_comuna]"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Carpeta_Fisica"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Carpeta_Fisica]"
+          Type="char" />
+        <SsdlProperty
+          Name="Cod_Origen_Curriculum"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Origen_Curriculum]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Ind_Recomendado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Ind_Recomendado]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre_Recomendado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Nombre_Recomendado]"
+          Type="char" />
+        <SsdlProperty
+          Name="Cod_Disponibilidad"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Disponibilidad]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Cod_Banco"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cod_Banco]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Cuenta_Banco"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Cuenta_Banco]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Num_Tarjeta"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Num_Tarjeta]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Usuario_Sicas"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Usuario_Sicas]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Foto"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Foto]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Id_Usuario"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Id_Usuario]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Estado_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Estado_Reg]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Estado_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fec_Estado_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Fec_Ing_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fec_Ing_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Id_Usuario_Ing_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Id_Usuario_Ing_Reg]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fec_Ult_Modif_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Id_Usuario_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Id_Usuario_Ult_Modif_Reg]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="16"
+          Name="Id_Funcion_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Id_Funcion_Ult_Modif_Reg]"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="dtproperties">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="dtproperties" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="objectid"
+          Nullable="True"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[objectid]"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="64"
+          Name="property"
+          Nullable="False"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[c_property]"
+          Type="varchar" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="value"
+          Nullable="True"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[value]"
+          Type="varchar" />
+        <SsdlProperty
+          MaxLength="255"
+          Name="uvalue"
+          Nullable="True"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[uvalue]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="lvalue"
+          Nullable="True"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[lvalue]"
+          Type="image" />
+        <SsdlProperty
+          Name="version"
+          Nullable="False"
+          Property="LightSwitchCommonModule:dtpropertiesItem/Properties[version]"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Par_CtoT_Estado">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Par_CtoT_Estado" />
+        <SsdlProperty
+          Name="Id_Estado"
+          Nullable="False"
+          Precision="9"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Id_Estado]"
+          StoreGeneratedPattern="Identity"
+          Type="numeric" />
+        <SsdlProperty
+          MaxLength="4"
+          Name="Cod_Estado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Cod_Estado]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="4"
+          Name="Tipo_Estado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Tipo_Estado]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Descripcion_Estado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Descripcion_Estado]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="16"
+          Name="Id_Proceso_Negocio"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Id_Proceso_Negocio]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Ind_Seleccion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Ind_Seleccion]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="1"
+          Name="Estado_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Estado_Reg]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Estado_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Fec_Estado_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Fec_Ing_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Fec_Ing_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Id_Usuario_Ing_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Id_Usuario_Ing_Reg]"
+          Type="char" />
+        <SsdlProperty
+          Name="Fec_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Fec_Ult_Modif_Reg]"
+          Type="datetime" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Id_Usuario_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Id_Usuario_Ult_Modif_Reg]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="16"
+          Name="Id_Funcion_Ult_Modif_Reg"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Par_CtoT_EstadoItem/Properties[Id_Funcion_Ult_Modif_Reg]"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+  <DataService
+    DataProvider="EntityFrameworkDataProvider"
+    EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData"
+    Name="Autorizaciones_AdminsDataDataService">
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="DataProviderName"
+        Value="91510608-8809-4020-8897-fba057e22d54" />
+      <ConnectionProperty
+        Name="DataSourceName"
+        Value="067ea0d9-ba62-43f7-9106-34930c60c528" />
+      <ConnectionProperty
+        Name="ProviderInvariantName"
+        Value="System.Data.SqlClient" />
+      <ConnectionProperty
+        Name="SafeConnectionString"
+        Value="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" />
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="24703df0-a85f-40b7-8757-ef57da42ebc1" />
+      <ConnectionProperty
+        Name="ProviderManifestToken"
+        Value="2008" />
+    </DataService.ConnectionProperties>
+    <EntitySetMapping
+      EntitySet="Cargo">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Cargo" />
+        <SsdlProperty
+          Name="Cod_Cargo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CargoItem/Properties[Cod_Cargo]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Descripcion_Cargo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CargoItem/Properties[Descripcion_Cargo]"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Contrato">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Contrato" />
+        <SsdlProperty
+          Name="Contrato"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem/Properties[Contrato]"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="12"
+          Name="RutTrabajador"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem/Properties[RutTrabajador]"
+          Type="char" />
+        <SsdlProperty
+          Name="FechaVigencia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem/Properties[FechaVigencia]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="FechaFiniquito"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem/Properties[FechaFiniquito]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="CentroCosto"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem/Properties[CentroCosto]"
+          Type="int" />
+        <SsdlProperty
+          Name="CargoEmpleado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ContratoItem/Properties[CargoEmpleado]"
+          Type="smallint" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="ConvenioColectivo">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ConvenioColectivo" />
+        <SsdlProperty
+          Name="Id_Convenio"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConvenioColectivoItem/Properties[Id_Convenio]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConvenioColectivoItem/Properties[Nombre]"
+          Type="nvarchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Division_Area">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Division_Area" />
+        <SsdlProperty
+          Name="Id_Area"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Division_AreaItem/Properties[Id_Area]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Division_AreaItem/Properties[Nombre]"
+          Type="nvarchar" />
+        <SsdlForeignKeyProperty
+          Name="Gerencia_fk"
+          Nullable="True"
+          PropertyName="Gerencia_fk"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="SubGerencia_fk"
+          Nullable="True"
+          PropertyName="SubGerencia_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Division_Gerencia">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Division_Gerencia" />
+        <SsdlProperty
+          Name="Id_Gerencia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Id_Gerencia]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Nombre]"
+          Type="nvarchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Division_SubGerencia">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Division_SubGerencia" />
+        <SsdlProperty
+          Name="Id_SubGerencia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Division_SubGerenciaItem/Properties[Id_SubGerencia]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Division_SubGerenciaItem/Properties[Nombre]"
+          Type="nvarchar" />
+        <SsdlForeignKeyProperty
+          Name="Gerencia_fk"
+          Nullable="False"
+          PropertyName="Gerencia_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Persona">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Persona" />
+        <SsdlProperty
+          MaxLength="12"
+          Name="Rut_Persona"
+          Nullable="False"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Rut_Persona]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="AP_Paterno"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[AP_Paterno]"
+          Type="varchar" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="AP_Materno"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[AP_Materno]"
+          Type="varchar" />
+        <SsdlProperty
+          MaxLength="30"
+          Name="Nombres"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Nombres]"
+          Type="varchar" />
+        <SsdlProperty
+          Name="Es_Gerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Es_Gerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Es_SubGerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Es_SubGerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Es_JefeDirecto"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Es_JefeDirecto]"
+          Type="bit" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="NombreAD"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[NombreAD]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="IDGerencia_para_subgerentes"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[IDGerencia_para_subgerentes]"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Convenio_fk"
+          Nullable="True"
+          PropertyName="Convenio_fk"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Area_fk"
+          Nullable="True"
+          PropertyName="Area_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Detalle_Administrativo">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Detalle_Administrativo" />
+        <SsdlProperty
+          Name="Id_Administrativo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[Id_Administrativo]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="SaldoDias"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[SaldoDias]"
+          Type="float" />
+        <SsdlProperty
+          Name="Inicio"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[Inicio]"
+          Type="date" />
+        <SsdlProperty
+          Name="Termino"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[Termino]"
+          Type="date" />
+        <SsdlProperty
+          Name="NumeroDias"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[NumeroDias]"
+          Type="float" />
+        <SsdlForeignKeyProperty
+          Name="Solicitud_Header_fk"
+          Nullable="False"
+          PropertyName="Solicitud_Header_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Detalle_HorasExtras">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Detalle_HorasExtras" />
+        <SsdlProperty
+          Name="Id_HorasExtras"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_HorasExtrasItem/Properties[Id_HorasExtras]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="FechaRealizacion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_HorasExtrasItem/Properties[FechaRealizacion]"
+          Type="date" />
+        <SsdlProperty
+          Name="HorasAutorizadas"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_HorasExtrasItem/Properties[HorasAutorizadas]"
+          Type="float" />
+        <SsdlProperty
+          Name="HorasTrabajadas"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_HorasExtrasItem/Properties[HorasTrabajadas]"
+          Type="float" />
+        <SsdlProperty
+          Name="Colacion"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_HorasExtrasItem/Properties[Colacion]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Taxi"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_HorasExtrasItem/Properties[Taxi]"
+          Type="bit" />
+        <SsdlForeignKeyProperty
+          Name="Solicitud_Header_fk"
+          Nullable="False"
+          PropertyName="Solicitud_Header_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Detalle_OtroPermiso">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Detalle_OtroPermiso" />
+        <SsdlProperty
+          Name="Id_OtroPermiso"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_OtroPermisoItem/Properties[Id_OtroPermiso]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="ConDescuento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_OtroPermisoItem/Properties[ConDescuento]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Inicio"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_OtroPermisoItem/Properties[Inicio]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Termino"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_OtroPermisoItem/Properties[Termino]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="NumeroDias"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_OtroPermisoItem/Properties[NumeroDias]"
+          Type="float" />
+        <SsdlForeignKeyProperty
+          Name="Solicitud_Header_fk"
+          Nullable="False"
+          PropertyName="Solicitud_Header_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Detalle_Vacaciones">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Detalle_Vacaciones" />
+        <SsdlProperty
+          Name="Id_Vacaciones"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[Id_Vacaciones]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="SaldoVacaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[SaldoVacaciones]"
+          Type="int" />
+        <SsdlProperty
+          Name="Inicio"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[Inicio]"
+          Type="date" />
+        <SsdlProperty
+          Name="Termino"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[Termino]"
+          Type="date" />
+        <SsdlProperty
+          Name="NumeroDias"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[NumeroDias]"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Solicitud_Header_fk"
+          Nullable="False"
+          PropertyName="Solicitud_Header_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Estados_Administrativo">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Estados_Administrativo" />
+        <SsdlProperty
+          Name="Id_Estados_Administrativo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Id_Estados_Administrativo]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Observaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Observaciones]"
+          Type="nvarchar" />
+        <SsdlForeignKeyProperty
+          Name="DetalleAdministrativo_fk"
+          Nullable="False"
+          PropertyName="DetalleAdministrativo_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Estados_HorasExtras">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Estados_HorasExtras" />
+        <SsdlProperty
+          Name="Id_Estados_HorasExtras"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[Id_Estados_HorasExtras]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Observaciones"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[Observaciones]"
+          Type="nvarchar" />
+        <SsdlForeignKeyProperty
+          Name="DetalleHorasExtras_fk"
+          Nullable="False"
+          PropertyName="DetalleHorasExtras_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Estados_OtroPermiso">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Estados_OtroPermiso" />
+        <SsdlProperty
+          Name="Id_Estados_OtroPermiso"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[Id_Estados_OtroPermiso]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Observaciones"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[Observaciones]"
+          Type="nvarchar" />
+        <SsdlForeignKeyProperty
+          Name="DetalleOtroPermiso_fk"
+          Nullable="False"
+          PropertyName="DetalleOtroPermiso_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Estados_Vacaciones">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Estados_Vacaciones" />
+        <SsdlProperty
+          Name="Id_Estados_vacaciones"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[Id_Estados_vacaciones]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Observaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[Observaciones]"
+          Type="nvarchar" />
+        <SsdlForeignKeyProperty
+          Name="DetalleVacaciones_fk"
+          Nullable="False"
+          PropertyName="DetalleVacaciones_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Solicitud_Header">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Solicitud_Header" />
+        <SsdlProperty
+          Name="Id_SolicitudHeader"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Id_SolicitudHeader]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="FechaSolicitud"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[FechaSolicitud]"
+          Type="date" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="NombreTrabajador"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[NombreTrabajador]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="Fechaingreso"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Fechaingreso]"
+          Type="date" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Gerencia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Gerencia]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Departamento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Departamento]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="VB_Gerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_Gerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="VB_SubGerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_SubGerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="VB_JefeDirecto"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_JefeDirecto]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Rechazada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Rechazada]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Completada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Completada]"
+          Type="bit" />
+        <SsdlForeignKeyProperty
+          MaxLength="12"
+          Name="RutPersona_fk"
+          Nullable="False"
+          PropertyName="RutPersona_fk"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Superior_Gerente">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Superior_Gerente" />
+        <SsdlProperty
+          Name="Id_Gerente"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Superior_GerenteItem/Properties[Id_Gerente]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Gerencia_fk"
+          Nullable="False"
+          PropertyName="Gerencia_fk"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          MaxLength="12"
+          Name="Persona_fk"
+          Nullable="False"
+          PropertyName="Persona_fk"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Superior_JefeDirecto">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Superior_JefeDirecto" />
+        <SsdlProperty
+          Name="Id_JefeDirecto"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Superior_JefeDirectoItem/Properties[Id_JefeDirecto]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Area_fk"
+          Nullable="False"
+          PropertyName="Area_fk"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          MaxLength="12"
+          Name="Persona_fk"
+          Nullable="False"
+          PropertyName="Persona_fk"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Superior_SubGerente">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Superior_SubGerente" />
+        <SsdlProperty
+          Name="Id_SubGerente"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Superior_SubGerenteItem/Properties[Id_SubGerente]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          Name="Subgerencia_fk"
+          Nullable="False"
+          PropertyName="Subgerencia_fk"
+          Type="int" />
+        <SsdlForeignKeyProperty
+          MaxLength="12"
+          Name="Persona_fk"
+          Nullable="False"
+          PropertyName="Persona_fk"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Division_Area_Division_Gerencia">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Division_Area_Division_Gerencia" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Division_Area_Division_Gerencia]/Members[Division_Gerencia]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Gerencia" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Division_Area_Division_Gerencia]/Members[Division_Area]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Gerencia_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Division_Area_Division_SubGerencia">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Division_Area_Division_SubGerencia" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Division_Area_Division_SubGerencia]/Members[Division_SubGerencia]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_SubGerencia" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Division_Area_Division_SubGerencia]/Members[Division_Area]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="SubGerencia_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Division_SubGerencia_Division_Gerencia">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Division_SubGerencia_Division_Gerencia" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Division_SubGerencia_Division_Gerencia]/Members[Division_Gerencia]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Gerencia" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Division_SubGerencia_Division_Gerencia]/Members[Division_SubGerencia]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Gerencia_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Persona_ConvenioColectivo">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Persona_ConvenioColectivo" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Persona_ConvenioColectivo]/Members[ConvenioColectivo]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Convenio" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Persona_ConvenioColectivo]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Convenio_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Persona_Division_Area">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Persona_Division_Area" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Persona_Division_Area]/Members[Division_Area]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Area" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Persona_Division_Area]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Area_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_Administrativo_Solicitud_Header]/Members[Solicitud_Header]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_SolicitudHeader" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_Administrativo_Solicitud_Header]/Members[Solicitud_Detalle_Administrativo]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Solicitud_Header_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_HorasExtras_Solicitud_Header]/Members[Solicitud_Header]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_SolicitudHeader" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_HorasExtras_Solicitud_Header]/Members[Solicitud_Detalle_HorasExtras]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Solicitud_Header_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header]/Members[Solicitud_Header]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_SolicitudHeader" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header]/Members[Solicitud_Detalle_OtroPermiso]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Solicitud_Header_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_Vacaciones_Solicitud_Header]/Members[Solicitud_Header]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_SolicitudHeader" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Detalle_Vacaciones_Solicitud_Header]/Members[Solicitud_Detalle_Vacaciones]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Solicitud_Header_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administrativo" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra]/Members[Solicitud_Detalle_Administrativo]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Administrativo" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra]/Members[Solicitud_Estados_Administrativo]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DetalleAdministrativo_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras]/Members[Solicitud_Detalle_HorasExtras]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_HorasExtras" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras]/Members[Solicitud_Estados_HorasExtras]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DetalleHorasExtras_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso]/Members[Solicitud_Detalle_OtroPermiso]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_OtroPermiso" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso]/Members[Solicitud_Estados_OtroPermiso]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DetalleOtroPermiso_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones]/Members[Solicitud_Detalle_Vacaciones]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Vacaciones" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones]/Members[Solicitud_Estados_Vacaciones]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DetalleVacaciones_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SolicitudHeader_Persona">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SolicitudHeader_Persona" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SolicitudHeader_Persona]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Rut_Persona" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SolicitudHeader_Persona]/Members[Solicitud_Header]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="RutPersona_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Superior_Gerente_Division_Gerencia">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Superior_Gerente_Division_Gerencia" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_Gerente_Division_Gerencia]/Members[Division_Gerencia]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Gerencia" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_Gerente_Division_Gerencia]/Members[Superior_Gerente]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Gerencia_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Superior_Gerente_Persona">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Superior_Gerente_Persona" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_Gerente_Persona]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Rut_Persona" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_Gerente_Persona]/Members[Superior_Gerente]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Persona_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Superior_JefeDirecto_Division_Area">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Superior_JefeDirecto_Division_Area" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_JefeDirecto_Division_Area]/Members[Division_Area]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Area" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_JefeDirecto_Division_Area]/Members[Superior_JefeDirecto]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Area_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Superior_JefeDirecto_Persona">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Superior_JefeDirecto_Persona" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_JefeDirecto_Persona]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Rut_Persona" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_JefeDirecto_Persona]/Members[Superior_JefeDirecto]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Persona_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Superior_SubGerente_Division_SubGerencia">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Superior_SubGerente_Division_SubGerencia" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_SubGerente_Division_SubGerencia]/Members[Division_SubGerencia]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_SubGerencia" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_SubGerente_Division_SubGerencia]/Members[Superior_SubGerente]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Subgerencia_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Superior_SubGerente_Persona">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Superior_SubGerente_Persona" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_SubGerente_Persona]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Rut_Persona" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Superior_SubGerente_Persona]/Members[Superior_SubGerente]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Persona_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ModelFragment>

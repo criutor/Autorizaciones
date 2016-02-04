@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Autorizaciones_AdminsDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Autorizaciones_AdminsDataStore">
+    <EntitySet Name="Persona" EntityType="Autorizaciones_AdminsDataStore.PersonaItem" store:Type="Tables" Schema="dbo" Table="Persona" />
+    <EntitySet Name="Cargo" EntityType="Autorizaciones_AdminsDataStore.CargoItem" store:Type="Tables" Schema="dbo" Table="Cargo" />
+    <EntitySet Name="Contrato" EntityType="Autorizaciones_AdminsDataStore.ContratoItem" store:Type="Tables" Schema="dbo" Table="Contrato" />
+    <EntitySet Name="ConvenioColectivo" EntityType="Autorizaciones_AdminsDataStore.ConvenioColectivoItem" store:Type="Tables" Schema="dbo" Table="ConvenioColectivo" />
+    <EntitySet Name="Division_Area" EntityType="Autorizaciones_AdminsDataStore.Division_AreaItem" store:Type="Tables" Schema="dbo" Table="Division_Area" />
+    <EntitySet Name="Division_Gerencia" EntityType="Autorizaciones_AdminsDataStore.Division_GerenciaItem" store:Type="Tables" Schema="dbo" Table="Division_Gerencia" />
+    <EntitySet Name="Division_SubGerencia" EntityType="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" store:Type="Tables" Schema="dbo" Table="Division_SubGerencia" />
+    <EntitySet Name="Solicitud_Detalle_Administrativo" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Detalle_AdministrativoItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Detalle_Administrativo" />
+    <EntitySet Name="Solicitud_Detalle_HorasExtras" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Detalle_HorasExtrasItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Detalle_HorasExtras" />
+    <EntitySet Name="Solicitud_Detalle_OtroPermiso" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Detalle_OtroPermisoItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Detalle_OtroPermiso" />
+    <EntitySet Name="Solicitud_Detalle_Vacaciones" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Detalle_VacacionesItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Detalle_Vacaciones" />
+    <EntitySet Name="Solicitud_Estados_Administrativo" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Estados_AdministrativoItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Estados_Administrativo" />
+    <EntitySet Name="Solicitud_Estados_HorasExtras" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Estados_HorasExtrasItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Estados_HorasExtras" />
+    <EntitySet Name="Solicitud_Estados_OtroPermiso" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Estados_OtroPermisoItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Estados_OtroPermiso" />
+    <EntitySet Name="Solicitud_Estados_Vacaciones" EntityType="Autorizaciones_AdminsDataStore.Solicitud_Estados_VacacionesItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Estados_Vacaciones" />
+    <EntitySet Name="Solicitud_Header" EntityType="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" store:Type="Tables" Schema="dbo" Table="Solicitud_Header" />
+    <EntitySet Name="Superior_Gerente" EntityType="Autorizaciones_AdminsDataStore.Superior_GerenteItem" store:Type="Tables" Schema="dbo" Table="Superior_Gerente" />
+    <EntitySet Name="Superior_JefeDirecto" EntityType="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" store:Type="Tables" Schema="dbo" Table="Superior_JefeDirecto" />
+    <EntitySet Name="Superior_SubGerente" EntityType="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" store:Type="Tables" Schema="dbo" Table="Superior_SubGerente" />
+    <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
+      <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
+      <End Role="Division_Area" EntitySet="Division_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Division_Area_Division_SubGerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_SubGerencia">
+      <End Role="Division_SubGerencia" EntitySet="Division_SubGerencia" />
+      <End Role="Division_Area" EntitySet="Division_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Division_SubGerencia_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_SubGerencia_Division_Gerencia">
+      <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
+      <End Role="Division_SubGerencia" EntitySet="Division_SubGerencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persona_ConvenioColectivo" Association="Autorizaciones_AdminsDataStore.FK_Persona_ConvenioColectivo">
+      <End Role="ConvenioColectivo" EntitySet="ConvenioColectivo" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persona_Division_Area" Association="Autorizaciones_AdminsDataStore.FK_Persona_Division_Area">
+      <End Role="Division_Area" EntitySet="Division_Area" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_Administrativo" EntitySet="Solicitud_Detalle_Administrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_HorasExtras" EntitySet="Solicitud_Detalle_HorasExtras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_OtroPermiso" EntitySet="Solicitud_Detalle_OtroPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_Vacaciones" EntitySet="Solicitud_Detalle_Vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+      <End Role="Solicitud_Detalle_Administrativo" EntitySet="Solicitud_Detalle_Administrativo" />
+      <End Role="Solicitud_Estados_Administrativo" EntitySet="Solicitud_Estados_Administrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+      <End Role="Solicitud_Detalle_HorasExtras" EntitySet="Solicitud_Detalle_HorasExtras" />
+      <End Role="Solicitud_Estados_HorasExtras" EntitySet="Solicitud_Estados_HorasExtras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+      <End Role="Solicitud_Detalle_OtroPermiso" EntitySet="Solicitud_Detalle_OtroPermiso" />
+      <End Role="Solicitud_Estados_OtroPermiso" EntitySet="Solicitud_Estados_OtroPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" Association="Autorizaciones_AdminsDataStore.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+      <End Role="Solicitud_Detalle_Vacaciones" EntitySet="Solicitud_Detalle_Vacaciones" />
+      <End Role="Solicitud_Estados_Vacaciones" EntitySet="Solicitud_Estados_Vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudHeader_Persona" Association="Autorizaciones_AdminsDataStore.FK_SolicitudHeader_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_Gerente_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Superior_Gerente_Division_Gerencia">
+      <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
+      <End Role="Superior_Gerente" EntitySet="Superior_Gerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_Gerente_Persona" Association="Autorizaciones_AdminsDataStore.FK_Superior_Gerente_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Superior_Gerente" EntitySet="Superior_Gerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_JefeDirecto_Division_Area" Association="Autorizaciones_AdminsDataStore.FK_Superior_JefeDirecto_Division_Area">
+      <End Role="Division_Area" EntitySet="Division_Area" />
+      <End Role="Superior_JefeDirecto" EntitySet="Superior_JefeDirecto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_JefeDirecto_Persona" Association="Autorizaciones_AdminsDataStore.FK_Superior_JefeDirecto_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Superior_JefeDirecto" EntitySet="Superior_JefeDirecto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_SubGerente_Division_SubGerencia" Association="Autorizaciones_AdminsDataStore.FK_Superior_SubGerente_Division_SubGerencia">
+      <End Role="Division_SubGerencia" EntitySet="Division_SubGerencia" />
+      <End Role="Superior_SubGerente" EntitySet="Superior_SubGerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_SubGerente_Persona" Association="Autorizaciones_AdminsDataStore.FK_Superior_SubGerente_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Superior_SubGerente" EntitySet="Superior_SubGerente" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="PersonaItem">
+    <Key>
+      <PropertyRef Name="Rut_Persona" />
+    </Key>
+    <Property Name="Rut_Persona" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="AP_Paterno" Type="varchar" MaxLength="30" />
+    <Property Name="AP_Materno" Type="varchar" MaxLength="30" />
+    <Property Name="Nombres" Type="varchar" MaxLength="30" />
+    <Property Name="Es_Gerente" Type="bit" />
+    <Property Name="Es_SubGerente" Type="bit" />
+    <Property Name="Es_JefeDirecto" Type="bit" />
+    <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
+    <Property Name="IDGerencia_para_subgerentes" Type="int" />
+    <Property Name="Convenio_fk" Type="int" />
+    <Property Name="Area_fk" Type="int" />
+  </EntityType>
+  <EntityType Name="CargoItem">
+    <Key>
+      <PropertyRef Name="Cod_Cargo" />
+    </Key>
+    <Property Name="Cod_Cargo" Type="smallint" Nullable="false" />
+    <Property Name="Descripcion_Cargo" Type="char" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ContratoItem">
+    <Key>
+      <PropertyRef Name="Contrato" />
+      <PropertyRef Name="RutTrabajador" />
+    </Key>
+    <Property Name="Contrato" Type="int" Nullable="false" />
+    <Property Name="RutTrabajador" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="FechaVigencia" Type="datetime" Nullable="false" />
+    <Property Name="FechaFiniquito" Type="datetime" Nullable="false" />
+    <Property Name="CentroCosto" Type="int" Nullable="false" />
+    <Property Name="CargoEmpleado" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConvenioColectivoItem">
+    <Key>
+      <PropertyRef Name="Id_Convenio" />
+    </Key>
+    <Property Name="Id_Convenio" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Division_AreaItem">
+    <Key>
+      <PropertyRef Name="Id_Area" />
+    </Key>
+    <Property Name="Id_Area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gerencia_fk" Type="int" />
+    <Property Name="SubGerencia_fk" Type="int" />
+  </EntityType>
+  <EntityType Name="Division_GerenciaItem">
+    <Key>
+      <PropertyRef Name="Id_Gerencia" />
+    </Key>
+    <Property Name="Id_Gerencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Division_SubGerenciaItem">
+    <Key>
+      <PropertyRef Name="Id_SubGerencia" />
+    </Key>
+    <Property Name="Id_SubGerencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gerencia_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_AdministrativoItem">
+    <Key>
+      <PropertyRef Name="Id_Administrativo" />
+    </Key>
+    <Property Name="Id_Administrativo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SaldoDias" Type="float" Nullable="false" />
+    <Property Name="Inicio" Type="date" Nullable="false" />
+    <Property Name="Termino" Type="date" Nullable="false" />
+    <Property Name="NumeroDias" Type="float" Nullable="false" />
+    <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_HorasExtrasItem">
+    <Key>
+      <PropertyRef Name="Id_HorasExtras" />
+    </Key>
+    <Property Name="Id_HorasExtras" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaRealizacion" Type="date" Nullable="false" />
+    <Property Name="HorasAutorizadas" Type="float" Nullable="false" />
+    <Property Name="HorasTrabajadas" Type="float" />
+    <Property Name="Colacion" Type="bit" />
+    <Property Name="Taxi" Type="bit" />
+    <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_OtroPermisoItem">
+    <Key>
+      <PropertyRef Name="Id_OtroPermiso" />
+    </Key>
+    <Property Name="Id_OtroPermiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ConDescuento" Type="bit" Nullable="false" />
+    <Property Name="Inicio" Type="datetime" Nullable="false" />
+    <Property Name="Termino" Type="datetime" Nullable="false" />
+    <Property Name="NumeroDias" Type="float" />
+    <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_VacacionesItem">
+    <Key>
+      <PropertyRef Name="Id_Vacaciones" />
+    </Key>
+    <Property Name="Id_Vacaciones" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SaldoVacaciones" Type="int" />
+    <Property Name="Inicio" Type="date" Nullable="false" />
+    <Property Name="Termino" Type="date" Nullable="false" />
+    <Property Name="NumeroDias" Type="int" Nullable="false" />
+    <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_AdministrativoItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_Administrativo" />
+    </Key>
+    <Property Name="Id_Estados_Administrativo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="DetalleAdministrativo_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_HorasExtrasItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_HorasExtras" />
+    </Key>
+    <Property Name="Id_Estados_HorasExtras" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DetalleHorasExtras_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_OtroPermisoItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_OtroPermiso" />
+    </Key>
+    <Property Name="Id_Estados_OtroPermiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="DetalleOtroPermiso_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_VacacionesItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_vacaciones" />
+    </Key>
+    <Property Name="Id_Estados_vacaciones" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="DetalleVacaciones_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Solicitud_HeaderItem">
+    <Key>
+      <PropertyRef Name="Id_SolicitudHeader" />
+    </Key>
+    <Property Name="Id_SolicitudHeader" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaSolicitud" Type="date" Nullable="false" />
+    <Property Name="NombreTrabajador" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fechaingreso" Type="date" Nullable="false" />
+    <Property Name="Gerencia" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Departamento" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="VB_Gerente" Type="bit" />
+    <Property Name="VB_SubGerente" Type="bit" />
+    <Property Name="VB_JefeDirecto" Type="bit" />
+    <Property Name="Rechazada" Type="bit" />
+    <Property Name="Completada" Type="bit" />
+    <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="Superior_GerenteItem">
+    <Key>
+      <PropertyRef Name="Id_Gerente" />
+    </Key>
+    <Property Name="Id_Gerente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Gerencia_fk" Type="int" Nullable="false" />
+    <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="Superior_JefeDirectoItem">
+    <Key>
+      <PropertyRef Name="Id_JefeDirecto" />
+    </Key>
+    <Property Name="Id_JefeDirecto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Area_fk" Type="int" Nullable="false" />
+    <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="Superior_SubGerenteItem">
+    <Key>
+      <PropertyRef Name="Id_SubGerente" />
+    </Key>
+    <Property Name="Id_SubGerente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Subgerencia_fk" Type="int" Nullable="false" />
+    <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+  </EntityType>
+  <Association Name="FK_Division_Area_Division_Gerencia">
+    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />
+    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Gerencia">
+        <PropertyRef Name="Id_Gerencia" />
+      </Principal>
+      <Dependent Role="Division_Area">
+        <PropertyRef Name="Gerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Division_Area_Division_SubGerencia">
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="0..1" />
+    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_SubGerencia">
+        <PropertyRef Name="Id_SubGerencia" />
+      </Principal>
+      <Dependent Role="Division_Area">
+        <PropertyRef Name="SubGerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Division_SubGerencia_Division_Gerencia">
+    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1" />
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Gerencia">
+        <PropertyRef Name="Id_Gerencia" />
+      </Principal>
+      <Dependent Role="Division_SubGerencia">
+        <PropertyRef Name="Gerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_ConvenioColectivo">
+    <End Role="ConvenioColectivo" Type="Autorizaciones_AdminsDataStore.ConvenioColectivoItem" Multiplicity="0..1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConvenioColectivo">
+        <PropertyRef Name="Id_Convenio" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Convenio_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_Division_Area">
+    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="0..1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Area">
+        <PropertyRef Name="Id_Area" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Area_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_AdministrativoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_Administrativo">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_HorasExtrasItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_HorasExtras">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_OtroPermisoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_OtroPermiso">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_VacacionesItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_Vacaciones">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+    <End Role="Solicitud_Detalle_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_AdministrativoItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_AdministrativoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_Administrativo">
+        <PropertyRef Name="Id_Administrativo" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_Administrativo">
+        <PropertyRef Name="DetalleAdministrativo_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+    <End Role="Solicitud_Detalle_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_HorasExtrasItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_HorasExtrasItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_HorasExtras">
+        <PropertyRef Name="Id_HorasExtras" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_HorasExtras">
+        <PropertyRef Name="DetalleHorasExtras_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+    <End Role="Solicitud_Detalle_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_OtroPermisoItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_OtroPermisoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_OtroPermiso">
+        <PropertyRef Name="Id_OtroPermiso" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_OtroPermiso">
+        <PropertyRef Name="DetalleOtroPermiso_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+    <End Role="Solicitud_Detalle_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_VacacionesItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_VacacionesItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_Vacaciones">
+        <PropertyRef Name="Id_Vacaciones" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_Vacaciones">
+        <PropertyRef Name="DetalleVacaciones_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudHeader_Persona">
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Solicitud_Header">
+        <PropertyRef Name="RutPersona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_Gerente_Division_Gerencia">
+    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1" />
+    <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Gerencia">
+        <PropertyRef Name="Id_Gerencia" />
+      </Principal>
+      <Dependent Role="Superior_Gerente">
+        <PropertyRef Name="Gerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_Gerente_Persona">
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Superior_Gerente">
+        <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_JefeDirecto_Division_Area">
+    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="1" />
+    <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Area">
+        <PropertyRef Name="Id_Area" />
+      </Principal>
+      <Dependent Role="Superior_JefeDirecto">
+        <PropertyRef Name="Area_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_JefeDirecto_Persona">
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Superior_JefeDirecto">
+        <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_SubGerente_Division_SubGerencia">
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="1" />
+    <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_SubGerencia">
+        <PropertyRef Name="Id_SubGerencia" />
+      </Principal>
+      <Dependent Role="Superior_SubGerente">
+        <PropertyRef Name="Subgerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_SubGerente_Persona">
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Superior_SubGerente">
+        <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

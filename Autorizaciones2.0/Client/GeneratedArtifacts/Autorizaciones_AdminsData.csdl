@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="PersonaItem">
+    <Key>
+      <PropertyRef Name="Rut_Persona" />
+    </Key>
+    <Property Name="Rut_Persona" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="AP_Paterno" Type="Edm.String" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="AP_Materno" Type="Edm.String" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Nombres" Type="Edm.String" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Es_Gerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Es_SubGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Es_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="NombreAD" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="IDGerencia_para_subgerentes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
+    <NavigationProperty Name="Division_AreaItem" Relationship="LightSwitchApplication.FK_Persona_Division_Area" ToRole="Division_Area" FromRole="Persona" />
+    <NavigationProperty Name="Solicitud_Header" Relationship="LightSwitchApplication.FK_SolicitudHeader_Persona" ToRole="Solicitud_Header" FromRole="Persona" />
+    <NavigationProperty Name="Superior_Gerente" Relationship="LightSwitchApplication.FK_Superior_Gerente_Persona" ToRole="Superior_Gerente" FromRole="Persona" />
+    <NavigationProperty Name="Superior_JefeDirecto" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Persona" ToRole="Superior_JefeDirecto" FromRole="Persona" />
+    <NavigationProperty Name="Superior_SubGerente" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Persona" ToRole="Superior_SubGerente" FromRole="Persona" />
+  </EntityType>
+  <EntityType Name="CargoItem">
+    <Key>
+      <PropertyRef Name="Cod_Cargo" />
+    </Key>
+    <Property Name="Cod_Cargo" Type="Edm.Int16" Nullable="false" />
+    <Property Name="Descripcion_Cargo" Type="Edm.String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="ContratoItem">
+    <Key>
+      <PropertyRef Name="Contrato" />
+      <PropertyRef Name="RutTrabajador" />
+    </Key>
+    <Property Name="Contrato" Type="Edm.Int32" Nullable="false" />
+    <Property Name="RutTrabajador" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="FechaVigencia" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="FechaFiniquito" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CentroCosto" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CargoEmpleado" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="ConvenioColectivoItem">
+    <Key>
+      <PropertyRef Name="Id_Convenio" />
+    </Key>
+    <Property Name="Id_Convenio" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Persona" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="Persona" FromRole="ConvenioColectivo" />
+  </EntityType>
+  <EntityType Name="Division_AreaItem">
+    <Key>
+      <PropertyRef Name="Id_Area" />
+    </Key>
+    <Property Name="Id_Area" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Gerencia_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="SubGerencia_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Division_GerenciaItem" Relationship="LightSwitchApplication.FK_Division_Area_Division_Gerencia" ToRole="Division_Gerencia" FromRole="Division_Area" />
+    <NavigationProperty Name="Division_SubGerenciaItem" Relationship="LightSwitchApplication.FK_Division_Area_Division_SubGerencia" ToRole="Division_SubGerencia" FromRole="Division_Area" />
+    <NavigationProperty Name="Persona" Relationship="LightSwitchApplication.FK_Persona_Division_Area" ToRole="Persona" FromRole="Division_Area" />
+    <NavigationProperty Name="Superior_JefeDirecto" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Division_Area" ToRole="Superior_JefeDirecto" FromRole="Division_Area" />
+  </EntityType>
+  <EntityType Name="Division_GerenciaItem">
+    <Key>
+      <PropertyRef Name="Id_Gerencia" />
+    </Key>
+    <Property Name="Id_Gerencia" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Division_Area" Relationship="LightSwitchApplication.FK_Division_Area_Division_Gerencia" ToRole="Division_Area" FromRole="Division_Gerencia" />
+    <NavigationProperty Name="Division_SubGerencia" Relationship="LightSwitchApplication.FK_Division_SubGerencia_Division_Gerencia" ToRole="Division_SubGerencia" FromRole="Division_Gerencia" />
+    <NavigationProperty Name="Superior_Gerente" Relationship="LightSwitchApplication.FK_Superior_Gerente_Division_Gerencia" ToRole="Superior_Gerente" FromRole="Division_Gerencia" />
+  </EntityType>
+  <EntityType Name="Division_SubGerenciaItem">
+    <Key>
+      <PropertyRef Name="Id_SubGerencia" />
+    </Key>
+    <Property Name="Id_SubGerencia" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Gerencia_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Division_Area" Relationship="LightSwitchApplication.FK_Division_Area_Division_SubGerencia" ToRole="Division_Area" FromRole="Division_SubGerencia" />
+    <NavigationProperty Name="Division_GerenciaItem" Relationship="LightSwitchApplication.FK_Division_SubGerencia_Division_Gerencia" ToRole="Division_Gerencia" FromRole="Division_SubGerencia" />
+    <NavigationProperty Name="Superior_SubGerente" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Division_SubGerencia" ToRole="Superior_SubGerente" FromRole="Division_SubGerencia" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_AdministrativoItem">
+    <Key>
+      <PropertyRef Name="Id_Administrativo" />
+    </Key>
+    <Property Name="Id_Administrativo" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaldoDias" Type="Edm.Double" Nullable="false" />
+    <Property Name="Inicio" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Termino" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="NumeroDias" Type="Edm.Double" Nullable="false" />
+    <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Administrativo_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_Administrativo" />
+    <NavigationProperty Name="Solicitud_Estados_Administrativo" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" ToRole="Solicitud_Estados_Administrativo" FromRole="Solicitud_Detalle_Administrativo" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_HorasExtrasItem">
+    <Key>
+      <PropertyRef Name="Id_HorasExtras" />
+    </Key>
+    <Property Name="Id_HorasExtras" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaRealizacion" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="HorasAutorizadas" Type="Edm.Double" Nullable="false" />
+    <Property Name="HorasTrabajadas" Type="Edm.Double" />
+    <Property Name="Colacion" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Taxi" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_HorasExtras" />
+    <NavigationProperty Name="Solicitud_Estados_HorasExtras" Relationship="LightSwitchApplication.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" ToRole="Solicitud_Estados_HorasExtras" FromRole="Solicitud_Detalle_HorasExtras" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_OtroPermisoItem">
+    <Key>
+      <PropertyRef Name="Id_OtroPermiso" />
+    </Key>
+    <Property Name="Id_OtroPermiso" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConDescuento" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Inicio" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Termino" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="NumeroDias" Type="Edm.Double" />
+    <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_OtroPermiso" />
+    <NavigationProperty Name="Solicitud_Estados_OtroPermiso" Relationship="LightSwitchApplication.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" ToRole="Solicitud_Estados_OtroPermiso" FromRole="Solicitud_Detalle_OtroPermiso" />
+  </EntityType>
+  <EntityType Name="Solicitud_Detalle_VacacionesItem">
+    <Key>
+      <PropertyRef Name="Id_Vacaciones" />
+    </Key>
+    <Property Name="Id_Vacaciones" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SaldoVacaciones" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Inicio" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Termino" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="NumeroDias" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_Vacaciones" />
+    <NavigationProperty Name="Solicitud_Estados_Vacaciones" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Estados_Vacaciones" FromRole="Solicitud_Detalle_Vacaciones" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_AdministrativoItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_Administrativo" />
+    </Key>
+    <Property Name="Id_Estados_Administrativo" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="DetalleAdministrativo_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_Detalle_AdministrativoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Estados_Administrativo" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_HorasExtrasItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_HorasExtras" />
+    </Key>
+    <Property Name="Id_Estados_HorasExtras" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="DetalleHorasExtras_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_Detalle_HorasExtrasItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Estados_HorasExtras" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_OtroPermisoItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_OtroPermiso" />
+    </Key>
+    <Property Name="Id_Estados_OtroPermiso" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="DetalleOtroPermiso_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_Detalle_OtroPermisoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" ToRole="Solicitud_Detalle_OtroPermiso" FromRole="Solicitud_Estados_OtroPermiso" />
+  </EntityType>
+  <EntityType Name="Solicitud_Estados_VacacionesItem">
+    <Key>
+      <PropertyRef Name="Id_Estados_vacaciones" />
+    </Key>
+    <Property Name="Id_Estados_vacaciones" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="DetalleVacaciones_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_Detalle_VacacionesItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Detalle_Vacaciones" FromRole="Solicitud_Estados_Vacaciones" />
+  </EntityType>
+  <EntityType Name="Solicitud_HeaderItem">
+    <Key>
+      <PropertyRef Name="Id_SolicitudHeader" />
+    </Key>
+    <Property Name="Id_SolicitudHeader" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaSolicitud" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="NombreTrabajador" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Fechaingreso" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Gerencia" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Departamento" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="VB_Gerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="VB_SubGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="VB_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Rechazada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Completada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Solicitud_Detalle_Administrativo" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Administrativo_Solicitud_Header" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Header" />
+    <NavigationProperty Name="Solicitud_Detalle_HorasExtras" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Header" />
+    <NavigationProperty Name="Solicitud_Detalle_OtroPermiso" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header" ToRole="Solicitud_Detalle_OtroPermiso" FromRole="Solicitud_Header" />
+    <NavigationProperty Name="Solicitud_Detalle_Vacaciones" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" ToRole="Solicitud_Detalle_Vacaciones" FromRole="Solicitud_Header" />
+    <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SolicitudHeader_Persona" ToRole="Persona" FromRole="Solicitud_Header" />
+  </EntityType>
+  <EntityType Name="Superior_GerenteItem">
+    <Key>
+      <PropertyRef Name="Id_Gerente" />
+    </Key>
+    <Property Name="Id_Gerente" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gerencia_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Division_GerenciaItem" Relationship="LightSwitchApplication.FK_Superior_Gerente_Division_Gerencia" ToRole="Division_Gerencia" FromRole="Superior_Gerente" />
+    <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_Gerente_Persona" ToRole="Persona" FromRole="Superior_Gerente" />
+  </EntityType>
+  <EntityType Name="Superior_JefeDirectoItem">
+    <Key>
+      <PropertyRef Name="Id_JefeDirecto" />
+    </Key>
+    <Property Name="Id_JefeDirecto" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Area_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Division_AreaItem" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Division_Area" ToRole="Division_Area" FromRole="Superior_JefeDirecto" />
+    <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Persona" ToRole="Persona" FromRole="Superior_JefeDirecto" />
+  </EntityType>
+  <EntityType Name="Superior_SubGerenteItem">
+    <Key>
+      <PropertyRef Name="Id_SubGerente" />
+    </Key>
+    <Property Name="Id_SubGerente" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subgerencia_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Division_SubGerenciaItem" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Division_SubGerencia" ToRole="Division_SubGerencia" FromRole="Superior_SubGerente" />
+    <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Persona" ToRole="Persona" FromRole="Superior_SubGerente" />
+  </EntityType>
+  <Association Name="FK_Division_Area_Division_Gerencia">
+    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="0..1" />
+    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Gerencia">
+        <PropertyRef Name="Id_Gerencia" />
+      </Principal>
+      <Dependent Role="Division_Area">
+        <PropertyRef Name="Gerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Division_Area_Division_SubGerencia">
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="0..1" />
+    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_SubGerencia">
+        <PropertyRef Name="Id_SubGerencia" />
+      </Principal>
+      <Dependent Role="Division_Area">
+        <PropertyRef Name="SubGerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Division_SubGerencia_Division_Gerencia">
+    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1" />
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Gerencia">
+        <PropertyRef Name="Id_Gerencia" />
+      </Principal>
+      <Dependent Role="Division_SubGerencia">
+        <PropertyRef Name="Gerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_ConvenioColectivo">
+    <End Role="ConvenioColectivo" Type="LightSwitchApplication.ConvenioColectivoItem" Multiplicity="0..1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConvenioColectivo">
+        <PropertyRef Name="Id_Convenio" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Convenio_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_Division_Area">
+    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="0..1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Area">
+        <PropertyRef Name="Id_Area" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="Area_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Administrativo" Type="LightSwitchApplication.Solicitud_Detalle_AdministrativoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_Administrativo">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_HorasExtras" Type="LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_HorasExtras">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_OtroPermiso" Type="LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_OtroPermiso">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Vacaciones" Type="LightSwitchApplication.Solicitud_Detalle_VacacionesItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Header">
+        <PropertyRef Name="Id_SolicitudHeader" />
+      </Principal>
+      <Dependent Role="Solicitud_Detalle_Vacaciones">
+        <PropertyRef Name="Solicitud_Header_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+    <End Role="Solicitud_Detalle_Administrativo" Type="LightSwitchApplication.Solicitud_Detalle_AdministrativoItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_Administrativo" Type="LightSwitchApplication.Solicitud_Estados_AdministrativoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_Administrativo">
+        <PropertyRef Name="Id_Administrativo" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_Administrativo">
+        <PropertyRef Name="DetalleAdministrativo_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+    <End Role="Solicitud_Detalle_HorasExtras" Type="LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_HorasExtras" Type="LightSwitchApplication.Solicitud_Estados_HorasExtrasItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_HorasExtras">
+        <PropertyRef Name="Id_HorasExtras" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_HorasExtras">
+        <PropertyRef Name="DetalleHorasExtras_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+    <End Role="Solicitud_Detalle_OtroPermiso" Type="LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_OtroPermiso" Type="LightSwitchApplication.Solicitud_Estados_OtroPermisoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_OtroPermiso">
+        <PropertyRef Name="Id_OtroPermiso" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_OtroPermiso">
+        <PropertyRef Name="DetalleOtroPermiso_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+    <End Role="Solicitud_Detalle_Vacaciones" Type="LightSwitchApplication.Solicitud_Detalle_VacacionesItem" Multiplicity="1" />
+    <End Role="Solicitud_Estados_Vacaciones" Type="LightSwitchApplication.Solicitud_Estados_VacacionesItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Solicitud_Detalle_Vacaciones">
+        <PropertyRef Name="Id_Vacaciones" />
+      </Principal>
+      <Dependent Role="Solicitud_Estados_Vacaciones">
+        <PropertyRef Name="DetalleVacaciones_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SolicitudHeader_Persona">
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Solicitud_Header">
+        <PropertyRef Name="RutPersona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_Gerente_Division_Gerencia">
+    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1" />
+    <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Gerencia">
+        <PropertyRef Name="Id_Gerencia" />
+      </Principal>
+      <Dependent Role="Superior_Gerente">
+        <PropertyRef Name="Gerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_Gerente_Persona">
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Superior_Gerente">
+        <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_JefeDirecto_Division_Area">
+    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="1" />
+    <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_Area">
+        <PropertyRef Name="Id_Area" />
+      </Principal>
+      <Dependent Role="Superior_JefeDirecto">
+        <PropertyRef Name="Area_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_JefeDirecto_Persona">
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Superior_JefeDirecto">
+        <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_SubGerente_Division_SubGerencia">
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="1" />
+    <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Division_SubGerencia">
+        <PropertyRef Name="Id_SubGerencia" />
+      </Principal>
+      <Dependent Role="Superior_SubGerente">
+        <PropertyRef Name="Subgerencia_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Superior_SubGerente_Persona">
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="Superior_SubGerente">
+        <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Autorizaciones_AdminsDataObjectContext" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="Persona" EntityType="LightSwitchApplication.PersonaItem" />
+    <EntitySet Name="Cargo" EntityType="LightSwitchApplication.CargoItem" />
+    <EntitySet Name="Contrato" EntityType="LightSwitchApplication.ContratoItem" />
+    <EntitySet Name="ConvenioColectivo" EntityType="LightSwitchApplication.ConvenioColectivoItem" />
+    <EntitySet Name="Division_Area" EntityType="LightSwitchApplication.Division_AreaItem" />
+    <EntitySet Name="Division_Gerencia" EntityType="LightSwitchApplication.Division_GerenciaItem" />
+    <EntitySet Name="Division_SubGerencia" EntityType="LightSwitchApplication.Division_SubGerenciaItem" />
+    <EntitySet Name="Solicitud_Detalle_Administrativo" EntityType="LightSwitchApplication.Solicitud_Detalle_AdministrativoItem" />
+    <EntitySet Name="Solicitud_Detalle_HorasExtras" EntityType="LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem" />
+    <EntitySet Name="Solicitud_Detalle_OtroPermiso" EntityType="LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem" />
+    <EntitySet Name="Solicitud_Detalle_Vacaciones" EntityType="LightSwitchApplication.Solicitud_Detalle_VacacionesItem" />
+    <EntitySet Name="Solicitud_Estados_Administrativo" EntityType="LightSwitchApplication.Solicitud_Estados_AdministrativoItem" />
+    <EntitySet Name="Solicitud_Estados_HorasExtras" EntityType="LightSwitchApplication.Solicitud_Estados_HorasExtrasItem" />
+    <EntitySet Name="Solicitud_Estados_OtroPermiso" EntityType="LightSwitchApplication.Solicitud_Estados_OtroPermisoItem" />
+    <EntitySet Name="Solicitud_Estados_Vacaciones" EntityType="LightSwitchApplication.Solicitud_Estados_VacacionesItem" />
+    <EntitySet Name="Solicitud_Header" EntityType="LightSwitchApplication.Solicitud_HeaderItem" />
+    <EntitySet Name="Superior_Gerente" EntityType="LightSwitchApplication.Superior_GerenteItem" />
+    <EntitySet Name="Superior_JefeDirecto" EntityType="LightSwitchApplication.Superior_JefeDirectoItem" />
+    <EntitySet Name="Superior_SubGerente" EntityType="LightSwitchApplication.Superior_SubGerenteItem" />
+    <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
+      <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
+      <End Role="Division_Area" EntitySet="Division_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Division_Area_Division_SubGerencia" Association="LightSwitchApplication.FK_Division_Area_Division_SubGerencia">
+      <End Role="Division_SubGerencia" EntitySet="Division_SubGerencia" />
+      <End Role="Division_Area" EntitySet="Division_Area" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Division_SubGerencia_Division_Gerencia" Association="LightSwitchApplication.FK_Division_SubGerencia_Division_Gerencia">
+      <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
+      <End Role="Division_SubGerencia" EntitySet="Division_SubGerencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persona_ConvenioColectivo" Association="LightSwitchApplication.FK_Persona_ConvenioColectivo">
+      <End Role="ConvenioColectivo" EntitySet="ConvenioColectivo" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Persona_Division_Area" Association="LightSwitchApplication.FK_Persona_Division_Area">
+      <End Role="Division_Area" EntitySet="Division_Area" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header" Association="LightSwitchApplication.FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_Administrativo" EntitySet="Solicitud_Detalle_Administrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" Association="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_HorasExtras" EntitySet="Solicitud_Detalle_HorasExtras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header" Association="LightSwitchApplication.FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_OtroPermiso" EntitySet="Solicitud_Detalle_OtroPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" Association="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+      <End Role="Solicitud_Detalle_Vacaciones" EntitySet="Solicitud_Detalle_Vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" Association="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
+      <End Role="Solicitud_Detalle_Administrativo" EntitySet="Solicitud_Detalle_Administrativo" />
+      <End Role="Solicitud_Estados_Administrativo" EntitySet="Solicitud_Estados_Administrativo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" Association="LightSwitchApplication.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
+      <End Role="Solicitud_Detalle_HorasExtras" EntitySet="Solicitud_Detalle_HorasExtras" />
+      <End Role="Solicitud_Estados_HorasExtras" EntitySet="Solicitud_Estados_HorasExtras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" Association="LightSwitchApplication.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
+      <End Role="Solicitud_Detalle_OtroPermiso" EntitySet="Solicitud_Detalle_OtroPermiso" />
+      <End Role="Solicitud_Estados_OtroPermiso" EntitySet="Solicitud_Estados_OtroPermiso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" Association="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
+      <End Role="Solicitud_Detalle_Vacaciones" EntitySet="Solicitud_Detalle_Vacaciones" />
+      <End Role="Solicitud_Estados_Vacaciones" EntitySet="Solicitud_Estados_Vacaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SolicitudHeader_Persona" Association="LightSwitchApplication.FK_SolicitudHeader_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_Gerente_Division_Gerencia" Association="LightSwitchApplication.FK_Superior_Gerente_Division_Gerencia">
+      <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
+      <End Role="Superior_Gerente" EntitySet="Superior_Gerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_Gerente_Persona" Association="LightSwitchApplication.FK_Superior_Gerente_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Superior_Gerente" EntitySet="Superior_Gerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_JefeDirecto_Division_Area" Association="LightSwitchApplication.FK_Superior_JefeDirecto_Division_Area">
+      <End Role="Division_Area" EntitySet="Division_Area" />
+      <End Role="Superior_JefeDirecto" EntitySet="Superior_JefeDirecto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_JefeDirecto_Persona" Association="LightSwitchApplication.FK_Superior_JefeDirecto_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Superior_JefeDirecto" EntitySet="Superior_JefeDirecto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_SubGerente_Division_SubGerencia" Association="LightSwitchApplication.FK_Superior_SubGerente_Division_SubGerencia">
+      <End Role="Division_SubGerencia" EntitySet="Division_SubGerencia" />
+      <End Role="Superior_SubGerente" EntitySet="Superior_SubGerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Superior_SubGerente_Persona" Association="LightSwitchApplication.FK_Superior_SubGerente_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="Superior_SubGerente" EntitySet="Superior_SubGerente" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

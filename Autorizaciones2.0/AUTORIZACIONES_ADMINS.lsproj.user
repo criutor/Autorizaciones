@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <EnableENC>False</EnableENC>
+    <ProjectView>ProjectFiles</ProjectView>
+    <ServerPort>50104</ServerPort>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635896937364907876</SchemaManagementLastModelWriteTime>
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:VerConveniosScreen</GrantedPermissions>
+    <Name>AUTORIZACIONES_ADMINS.user</Name>
+    <EncryptedPublishConnectionString />
+    <EncryptedPublishSchemaConnectionString />
+    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdbQVOeao3UyJ/i852G2ClwAAAAACAAAAAAADZgAAwAAAABAAAACzXBwk6Lwq6aw2SCsVWeSOAAAAAASAAACgAAAAEAAAAP5iCKyjlJevc6q2VQoeRvq4AAAANyirdX2bPZWMAmTlSEc5dP4bWxRLqq5zT0gVsbT1rLadhVj1lAl99Tc+bl3ScLkMrSePK93rrTqgdVo3D2ZPewx+tPP5Nrntm+bZZ11fqE/Hf4vdInyblgX0PBlzCNSELIm7faCvoFHd3y+56bwa30CyQybYGWzNPDi4EokDUC8KqdI876s/iX8Zjq0CCGjfZtV8RzRekuQQoPGTB+or/9jRkqg2TuAwhU9cuWIAcGFwAPh2T008bhQAAACwVO/PNhNv9kuSFzo/Z3rT7JQS+Q==</EncryptedClientConnectionString>
+    <EncryptedAdministratorPassword />
+    <PublishUserName />
+    <EncryptedPublishUserPassword />
+  </PropertyGroup>
+</Project>

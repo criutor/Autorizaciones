@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="Fin700v60DataObjectContext" StorageEntityContainer="Fin700v60DataStore">
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ContratoItem1)">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+          <ScalarProperty Name="Periodo" ColumnName="Periodo" />
+          <ScalarProperty Name="RutTrabajador" ColumnName="RutTrabajador" />
+          <ScalarProperty Name="Contrato" ColumnName="Contrato" />
+          <ScalarProperty Name="Origen" ColumnName="Origen" />
+          <ScalarProperty Name="TipoContrato" ColumnName="TipoContrato" />
+          <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+          <ScalarProperty Name="FechaRenovacion" ColumnName="FechaRenovacion" />
+          <ScalarProperty Name="CargoEmpleado" ColumnName="CargoEmpleado" />
+          <ScalarProperty Name="Grado" ColumnName="Grado" />
+          <ScalarProperty Name="FechaGrado" ColumnName="FechaGrado" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="CalidadJuridica" ColumnName="CalidadJuridica" />
+          <ScalarProperty Name="CentroCosto" ColumnName="CentroCosto" />
+          <ScalarProperty Name="DivCodigo" ColumnName="DivCodigo" />
+          <ScalarProperty Name="UnidadOrganica" ColumnName="UnidadOrganica" />
+          <ScalarProperty Name="Jornada" ColumnName="Jornada" />
+          <ScalarProperty Name="LugarIntegro" ColumnName="LugarIntegro" />
+          <ScalarProperty Name="LugarTrabajo" ColumnName="LugarTrabajo" />
+          <ScalarProperty Name="LugarPago" ColumnName="LugarPago" />
+          <ScalarProperty Name="FormaPago" ColumnName="FormaPago" />
+          <ScalarProperty Name="FechaFiniquito" ColumnName="FechaFiniquito" />
+          <ScalarProperty Name="FechaFirma" ColumnName="FechaFirma" />
+          <ScalarProperty Name="CausalLegal" ColumnName="CausalLegal" />
+          <ScalarProperty Name="CausalReal" ColumnName="CausalReal" />
+          <ScalarProperty Name="GrupoContabilizacion" ColumnName="GrupoContabilizacion" />
+          <ScalarProperty Name="CodigoSucursal" ColumnName="CodigoSucursal" />
+          <ScalarProperty Name="MutualAccidentes" ColumnName="MutualAccidentes" />
+          <ScalarProperty Name="CajaCompensacion" ColumnName="CajaCompensacion" />
+          <ScalarProperty Name="FechaAntiguedad" ColumnName="FechaAntiguedad" />
+          <ScalarProperty Name="CodigoCertificado" ColumnName="CodigoCertificado" />
+          <ScalarProperty Name="TipoControl" ColumnName="TipoControl" />
+          <ScalarProperty Name="TipoFuero" ColumnName="TipoFuero" />
+          <ScalarProperty Name="FechaTerminoFuero" ColumnName="FechaTerminoFuero" />
+          <ScalarProperty Name="FechaCompromisoPerm" ColumnName="FechaCompromisoPerm" />
+          <ScalarProperty Name="DiasAdiProgresivos" ColumnName="DiasAdiProgresivos" />
+          <ScalarProperty Name="MesesReconocidos" ColumnName="MesesReconocidos" />
+          <ScalarProperty Name="DiasAdiPactados" ColumnName="DiasAdiPactados" />
+          <ScalarProperty Name="DiasLegales" ColumnName="DiasLegales" />
+          <ScalarProperty Name="DiasBaseVacaciones" ColumnName="DiasBaseVacaciones" />
+          <ScalarProperty Name="FechaBaseVacaciones" ColumnName="FechaBaseVacaciones" />
+          <ScalarProperty Name="EstadoContrato" ColumnName="EstadoContrato" />
+          <ScalarProperty Name="fld_UserCode" ColumnName="fld_UserCode" />
+          <ScalarProperty Name="SeguroCesantia" ColumnName="SeguroCesantia" />
+          <ScalarProperty Name="IndCargoSeguroCesantia" ColumnName="IndCargoSeguroCesantia" />
+          <ScalarProperty Name="Afp" ColumnName="Afp" />
+          <ScalarProperty Name="Banco" ColumnName="Banco" />
+          <ScalarProperty Name="CuentaBanco" ColumnName="CuentaBanco" />
+          <ScalarProperty Name="FechaActContrato" ColumnName="FechaActContrato" />
+          <ScalarProperty Name="SinMutual" ColumnName="SinMutual" />
+          <ScalarProperty Name="PlanPactadoSalud" ColumnName="PlanPactadoSalud" />
+          <ScalarProperty Name="FechaRenovacionII" ColumnName="FechaRenovacionII" />
+          <ScalarProperty Name="CotizaPrev" ColumnName="CotizaPrev" />
+          <ScalarProperty Name="En_Uso" ColumnName="En_Uso" />
+          <ScalarProperty Name="Years11" ColumnName="Years11" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtoT_Cargo">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CtoT_CargoItem)">
+        <MappingFragment StoreEntitySet="CtoT_Cargo">
+          <ScalarProperty Name="Cod_Cargo" ColumnName="Cod_Cargo" />
+          <ScalarProperty Name="Descripcion_Cargo" ColumnName="Descripcion_Cargo" />
+          <ScalarProperty Name="Tipo_Cargo" ColumnName="Tipo_Cargo" />
+          <ScalarProperty Name="Cod_Nivel_Cargo" ColumnName="Cod_Nivel_Cargo" />
+          <ScalarProperty Name="Cod_Cargo_Generico" ColumnName="Cod_Cargo_Generico" />
+          <ScalarProperty Name="Estado_Reg" ColumnName="Estado_Reg" />
+          <ScalarProperty Name="Fec_Estado_Reg" ColumnName="Fec_Estado_Reg" />
+          <ScalarProperty Name="Fec_Ing_Reg" ColumnName="Fec_Ing_Reg" />
+          <ScalarProperty Name="Id_Usuario_Ing_Reg" ColumnName="Id_Usuario_Ing_Reg" />
+          <ScalarProperty Name="Fec_Ult_Modif_Reg" ColumnName="Fec_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_Usuario_Ult_Modif_Reg" ColumnName="Id_Usuario_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_Funcion_Ult_Modif_Reg" ColumnName="Id_Funcion_Ult_Modif_Reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CtoT_Persona">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CtoT_PersonaItem)">
+        <MappingFragment StoreEntitySet="CtoT_Persona">
+          <ScalarProperty Name="Rut_Persona" ColumnName="Rut_Persona" />
+          <ScalarProperty Name="Identificacion1" ColumnName="Identificacion1" />
+          <ScalarProperty Name="Identificacion2" ColumnName="Identificacion2" />
+          <ScalarProperty Name="Identificacion3" ColumnName="Identificacion3" />
+          <ScalarProperty Name="AP_Paterno" ColumnName="AP_Paterno" />
+          <ScalarProperty Name="AP_Materno" ColumnName="AP_Materno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Nombre_Corto" ColumnName="Nombre_Corto" />
+          <ScalarProperty Name="Estado_Persona" ColumnName="Estado_Persona" />
+          <ScalarProperty Name="Fec_Estado" ColumnName="Fec_Estado" />
+          <ScalarProperty Name="Cod_Sexo" ColumnName="Cod_Sexo" />
+          <ScalarProperty Name="Cod_Profesion" ColumnName="Cod_Profesion" />
+          <ScalarProperty Name="Cod_Nivel_Laboral" ColumnName="Cod_Nivel_Laboral" />
+          <ScalarProperty Name="Cod_Nivel_Educacional" ColumnName="Cod_Nivel_Educacional" />
+          <ScalarProperty Name="Cod_Estado_Civil" ColumnName="Cod_Estado_Civil" />
+          <ScalarProperty Name="Fec_Nacimiento" ColumnName="Fec_Nacimiento" />
+          <ScalarProperty Name="Cod_Comuna_Nacimiento" ColumnName="Cod_Comuna_Nacimiento" />
+          <ScalarProperty Name="Cod_Nacionalidad" ColumnName="Cod_Nacionalidad" />
+          <ScalarProperty Name="Telefono_Particular" ColumnName="Telefono_Particular" />
+          <ScalarProperty Name="Telefono_Oficina" ColumnName="Telefono_Oficina" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Fax" ColumnName="Fax" />
+          <ScalarProperty Name="Correo_Electronico" ColumnName="Correo_Electronico" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Cod_comuna" ColumnName="Cod_comuna" />
+          <ScalarProperty Name="Carpeta_Fisica" ColumnName="Carpeta_Fisica" />
+          <ScalarProperty Name="Cod_Origen_Curriculum" ColumnName="Cod_Origen_Curriculum" />
+          <ScalarProperty Name="Ind_Recomendado" ColumnName="Ind_Recomendado" />
+          <ScalarProperty Name="Nombre_Recomendado" ColumnName="Nombre_Recomendado" />
+          <ScalarProperty Name="Cod_Disponibilidad" ColumnName="Cod_Disponibilidad" />
+          <ScalarProperty Name="Cod_Banco" ColumnName="Cod_Banco" />
+          <ScalarProperty Name="Cuenta_Banco" ColumnName="Cuenta_Banco" />
+          <ScalarProperty Name="Num_Tarjeta" ColumnName="Num_Tarjeta" />
+          <ScalarProperty Name="Usuario_Sicas" ColumnName="Usuario_Sicas" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Estado_Reg" ColumnName="Estado_Reg" />
+          <ScalarProperty Name="Fec_Estado_Reg" ColumnName="Fec_Estado_Reg" />
+          <ScalarProperty Name="Fec_Ing_Reg" ColumnName="Fec_Ing_Reg" />
+          <ScalarProperty Name="Id_Usuario_Ing_Reg" ColumnName="Id_Usuario_Ing_Reg" />
+          <ScalarProperty Name="Fec_Ult_Modif_Reg" ColumnName="Fec_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_Usuario_Ult_Modif_Reg" ColumnName="Id_Usuario_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_Funcion_Ult_Modif_Reg" ColumnName="Id_Funcion_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_CtoPersona" ColumnName="Id_CtoPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.dtpropertiesItem)">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="c_property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Par_CtoT_Estado">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Par_CtoT_EstadoItem)">
+        <MappingFragment StoreEntitySet="Par_CtoT_Estado">
+          <ScalarProperty Name="Id_Estado" ColumnName="Id_Estado" />
+          <ScalarProperty Name="Cod_Estado" ColumnName="Cod_Estado" />
+          <ScalarProperty Name="Tipo_Estado" ColumnName="Tipo_Estado" />
+          <ScalarProperty Name="Descripcion_Estado" ColumnName="Descripcion_Estado" />
+          <ScalarProperty Name="Id_Proceso_Negocio" ColumnName="Id_Proceso_Negocio" />
+          <ScalarProperty Name="Ind_Seleccion" ColumnName="Ind_Seleccion" />
+          <ScalarProperty Name="Estado_Reg" ColumnName="Estado_Reg" />
+          <ScalarProperty Name="Fec_Estado_Reg" ColumnName="Fec_Estado_Reg" />
+          <ScalarProperty Name="Fec_Ing_Reg" ColumnName="Fec_Ing_Reg" />
+          <ScalarProperty Name="Id_Usuario_Ing_Reg" ColumnName="Id_Usuario_Ing_Reg" />
+          <ScalarProperty Name="Fec_Ult_Modif_Reg" ColumnName="Fec_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_Usuario_Ult_Modif_Reg" ColumnName="Id_Usuario_Ult_Modif_Reg" />
+          <ScalarProperty Name="Id_Funcion_Ult_Modif_Reg" ColumnName="Id_Funcion_Ult_Modif_Reg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

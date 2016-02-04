@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="Autorizaciones_AdminsDataObjectContext" StorageEntityContainer="Autorizaciones_AdminsDataStore">
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.PersonaItem)">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="Rut_Persona" ColumnName="Rut_Persona" />
+          <ScalarProperty Name="AP_Paterno" ColumnName="AP_Paterno" />
+          <ScalarProperty Name="AP_Materno" ColumnName="AP_Materno" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Es_Gerente" ColumnName="Es_Gerente" />
+          <ScalarProperty Name="Es_SubGerente" ColumnName="Es_SubGerente" />
+          <ScalarProperty Name="Es_JefeDirecto" ColumnName="Es_JefeDirecto" />
+          <ScalarProperty Name="NombreAD" ColumnName="NombreAD" />
+          <ScalarProperty Name="Convenio_fk" ColumnName="Convenio_fk" />
+          <ScalarProperty Name="Area_fk" ColumnName="Area_fk" />
+          <ScalarProperty Name="IDGerencia_para_subgerentes" ColumnName="IDGerencia_para_subgerentes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cargo">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CargoItem)">
+        <MappingFragment StoreEntitySet="Cargo">
+          <ScalarProperty Name="Cod_Cargo" ColumnName="Cod_Cargo" />
+          <ScalarProperty Name="Descripcion_Cargo" ColumnName="Descripcion_Cargo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contrato">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ContratoItem)">
+        <MappingFragment StoreEntitySet="Contrato">
+          <ScalarProperty Name="Contrato" ColumnName="Contrato" />
+          <ScalarProperty Name="RutTrabajador" ColumnName="RutTrabajador" />
+          <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+          <ScalarProperty Name="FechaFiniquito" ColumnName="FechaFiniquito" />
+          <ScalarProperty Name="CentroCosto" ColumnName="CentroCosto" />
+          <ScalarProperty Name="CargoEmpleado" ColumnName="CargoEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConvenioColectivo">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ConvenioColectivoItem)">
+        <MappingFragment StoreEntitySet="ConvenioColectivo">
+          <ScalarProperty Name="Id_Convenio" ColumnName="Id_Convenio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Division_Area">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Division_AreaItem)">
+        <MappingFragment StoreEntitySet="Division_Area">
+          <ScalarProperty Name="Id_Area" ColumnName="Id_Area" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Gerencia_fk" ColumnName="Gerencia_fk" />
+          <ScalarProperty Name="SubGerencia_fk" ColumnName="SubGerencia_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Division_Gerencia">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Division_GerenciaItem)">
+        <MappingFragment StoreEntitySet="Division_Gerencia">
+          <ScalarProperty Name="Id_Gerencia" ColumnName="Id_Gerencia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Division_SubGerencia">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Division_SubGerenciaItem)">
+        <MappingFragment StoreEntitySet="Division_SubGerencia">
+          <ScalarProperty Name="Id_SubGerencia" ColumnName="Id_SubGerencia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Gerencia_fk" ColumnName="Gerencia_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Detalle_Administrativo">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Detalle_AdministrativoItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Detalle_Administrativo">
+          <ScalarProperty Name="Id_Administrativo" ColumnName="Id_Administrativo" />
+          <ScalarProperty Name="SaldoDias" ColumnName="SaldoDias" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Termino" ColumnName="Termino" />
+          <ScalarProperty Name="NumeroDias" ColumnName="NumeroDias" />
+          <ScalarProperty Name="Solicitud_Header_fk" ColumnName="Solicitud_Header_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Detalle_HorasExtras">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Detalle_HorasExtras">
+          <ScalarProperty Name="Id_HorasExtras" ColumnName="Id_HorasExtras" />
+          <ScalarProperty Name="FechaRealizacion" ColumnName="FechaRealizacion" />
+          <ScalarProperty Name="HorasAutorizadas" ColumnName="HorasAutorizadas" />
+          <ScalarProperty Name="HorasTrabajadas" ColumnName="HorasTrabajadas" />
+          <ScalarProperty Name="Colacion" ColumnName="Colacion" />
+          <ScalarProperty Name="Taxi" ColumnName="Taxi" />
+          <ScalarProperty Name="Solicitud_Header_fk" ColumnName="Solicitud_Header_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Detalle_OtroPermiso">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Detalle_OtroPermiso">
+          <ScalarProperty Name="Id_OtroPermiso" ColumnName="Id_OtroPermiso" />
+          <ScalarProperty Name="ConDescuento" ColumnName="ConDescuento" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Termino" ColumnName="Termino" />
+          <ScalarProperty Name="NumeroDias" ColumnName="NumeroDias" />
+          <ScalarProperty Name="Solicitud_Header_fk" ColumnName="Solicitud_Header_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Detalle_Vacaciones">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Detalle_VacacionesItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Detalle_Vacaciones">
+          <ScalarProperty Name="Id_Vacaciones" ColumnName="Id_Vacaciones" />
+          <ScalarProperty Name="SaldoVacaciones" ColumnName="SaldoVacaciones" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Termino" ColumnName="Termino" />
+          <ScalarProperty Name="NumeroDias" ColumnName="NumeroDias" />
+          <ScalarProperty Name="Solicitud_Header_fk" ColumnName="Solicitud_Header_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Estados_Administrativo">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Estados_AdministrativoItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Estados_Administrativo">
+          <ScalarProperty Name="Id_Estados_Administrativo" ColumnName="Id_Estados_Administrativo" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="DetalleAdministrativo_fk" ColumnName="DetalleAdministrativo_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Estados_HorasExtras">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Estados_HorasExtrasItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Estados_HorasExtras">
+          <ScalarProperty Name="Id_Estados_HorasExtras" ColumnName="Id_Estados_HorasExtras" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="DetalleHorasExtras_fk" ColumnName="DetalleHorasExtras_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Estados_OtroPermiso">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Estados_OtroPermisoItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Estados_OtroPermiso">
+          <ScalarProperty Name="Id_Estados_OtroPermiso" ColumnName="Id_Estados_OtroPermiso" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="DetalleOtroPermiso_fk" ColumnName="DetalleOtroPermiso_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Estados_Vacaciones">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_Estados_VacacionesItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Estados_Vacaciones">
+          <ScalarProperty Name="Id_Estados_vacaciones" ColumnName="Id_Estados_vacaciones" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="DetalleVacaciones_fk" ColumnName="DetalleVacaciones_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Solicitud_Header">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Solicitud_HeaderItem)">
+        <MappingFragment StoreEntitySet="Solicitud_Header">
+          <ScalarProperty Name="Id_SolicitudHeader" ColumnName="Id_SolicitudHeader" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="NombreTrabajador" ColumnName="NombreTrabajador" />
+          <ScalarProperty Name="Fechaingreso" ColumnName="Fechaingreso" />
+          <ScalarProperty Name="Gerencia" ColumnName="Gerencia" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="VB_Gerente" ColumnName="VB_Gerente" />
+          <ScalarProperty Name="VB_SubGerente" ColumnName="VB_SubGerente" />
+          <ScalarProperty Name="VB_JefeDirecto" ColumnName="VB_JefeDirecto" />
+          <ScalarProperty Name="Rechazada" ColumnName="Rechazada" />
+          <ScalarProperty Name="Completada" ColumnName="Completada" />
+          <ScalarProperty Name="RutPersona_fk" ColumnName="RutPersona_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Superior_Gerente">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Superior_GerenteItem)">
+        <MappingFragment StoreEntitySet="Superior_Gerente">
+          <ScalarProperty Name="Id_Gerente" ColumnName="Id_Gerente" />
+          <ScalarProperty Name="Gerencia_fk" ColumnName="Gerencia_fk" />
+          <ScalarProperty Name="Persona_fk" ColumnName="Persona_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Superior_JefeDirecto">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Superior_JefeDirectoItem)">
+        <MappingFragment StoreEntitySet="Superior_JefeDirecto">
+          <ScalarProperty Name="Id_JefeDirecto" ColumnName="Id_JefeDirecto" />
+          <ScalarProperty Name="Area_fk" ColumnName="Area_fk" />
+          <ScalarProperty Name="Persona_fk" ColumnName="Persona_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Superior_SubGerente">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Superior_SubGerenteItem)">
+        <MappingFragment StoreEntitySet="Superior_SubGerente">
+          <ScalarProperty Name="Id_SubGerente" ColumnName="Id_SubGerente" />
+          <ScalarProperty Name="Subgerencia_fk" ColumnName="Subgerencia_fk" />
+          <ScalarProperty Name="Persona_fk" ColumnName="Persona_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

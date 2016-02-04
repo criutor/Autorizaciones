@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Fin700v60DataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Fin700v60DataStore">
+    <EntitySet Name="Contrato" EntityType="Fin700v60DataStore.ContratoItem1" store:Type="Tables" Schema="dbo" Table="Contrato" />
+    <EntitySet Name="CtoT_Cargo" EntityType="Fin700v60DataStore.CtoT_CargoItem" store:Type="Tables" Schema="dbo" Table="CtoT_Cargo" />
+    <EntitySet Name="CtoT_Persona" EntityType="Fin700v60DataStore.CtoT_PersonaItem" store:Type="Tables" Schema="dbo" Table="CtoT_Persona" />
+    <EntitySet Name="dtproperties" EntityType="Fin700v60DataStore.dtpropertiesItem" store:Type="Tables" Schema="dbo" Table="dtproperties" />
+    <EntitySet Name="Par_CtoT_Estado" EntityType="Fin700v60DataStore.Par_CtoT_EstadoItem" store:Type="Tables" Schema="dbo" Table="Par_CtoT_Estado" />
+  </EntityContainer>
+  <EntityType Name="ContratoItem1">
+    <Key>
+      <PropertyRef Name="EmpId" />
+      <PropertyRef Name="Periodo" />
+      <PropertyRef Name="RutTrabajador" />
+      <PropertyRef Name="Contrato" />
+    </Key>
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="Periodo" Type="int" Nullable="false" />
+    <Property Name="RutTrabajador" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Contrato" Type="int" Nullable="false" />
+    <Property Name="Origen" Type="smallint" Nullable="false" />
+    <Property Name="TipoContrato" Type="smallint" Nullable="false" />
+    <Property Name="FechaVigencia" Type="datetime" Nullable="false" />
+    <Property Name="FechaRenovacion" Type="datetime" Nullable="false" />
+    <Property Name="CargoEmpleado" Type="smallint" Nullable="false" />
+    <Property Name="Grado" Type="smallint" Nullable="false" />
+    <Property Name="FechaGrado" Type="datetime" Nullable="false" />
+    <Property Name="Categoria" Type="smallint" Nullable="false" />
+    <Property Name="CalidadJuridica" Type="smallint" Nullable="false" />
+    <Property Name="CentroCosto" Type="int" Nullable="false" />
+    <Property Name="DivCodigo" Type="smallint" Nullable="false" />
+    <Property Name="UnidadOrganica" Type="smallint" Nullable="false" />
+    <Property Name="Jornada" Type="smallint" Nullable="false" />
+    <Property Name="LugarIntegro" Type="smallint" Nullable="false" />
+    <Property Name="LugarTrabajo" Type="smallint" Nullable="false" />
+    <Property Name="LugarPago" Type="smallint" Nullable="false" />
+    <Property Name="FormaPago" Type="smallint" Nullable="false" />
+    <Property Name="FechaFiniquito" Type="datetime" Nullable="false" />
+    <Property Name="FechaFirma" Type="datetime" Nullable="false" />
+    <Property Name="CausalLegal" Type="smallint" Nullable="false" />
+    <Property Name="CausalReal" Type="smallint" Nullable="false" />
+    <Property Name="GrupoContabilizacion" Type="smallint" Nullable="false" />
+    <Property Name="CodigoSucursal" Type="smallint" Nullable="false" />
+    <Property Name="MutualAccidentes" Type="smallint" Nullable="false" />
+    <Property Name="CajaCompensacion" Type="smallint" Nullable="false" />
+    <Property Name="FechaAntiguedad" Type="datetime" Nullable="false" />
+    <Property Name="CodigoCertificado" Type="int" Nullable="false" />
+    <Property Name="TipoControl" Type="smallint" Nullable="false" />
+    <Property Name="TipoFuero" Type="smallint" Nullable="false" />
+    <Property Name="FechaTerminoFuero" Type="datetime" Nullable="false" />
+    <Property Name="FechaCompromisoPerm" Type="datetime" Nullable="false" />
+    <Property Name="DiasAdiProgresivos" Type="smallint" Nullable="false" />
+    <Property Name="MesesReconocidos" Type="smallint" Nullable="false" />
+    <Property Name="DiasAdiPactados" Type="smallint" Nullable="false" />
+    <Property Name="DiasLegales" Type="smallint" Nullable="false" />
+    <Property Name="DiasBaseVacaciones" Type="smallint" Nullable="false" />
+    <Property Name="FechaBaseVacaciones" Type="datetime" Nullable="false" />
+    <Property Name="EstadoContrato" Type="smallint" Nullable="false" />
+    <Property Name="fld_UserCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SeguroCesantia" Type="tinyint" Nullable="false" />
+    <Property Name="IndCargoSeguroCesantia" Type="tinyint" Nullable="false" />
+    <Property Name="Afp" Type="smallint" Nullable="false" />
+    <Property Name="Banco" Type="smallint" Nullable="false" />
+    <Property Name="CuentaBanco" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="FechaActContrato" Type="datetime" Nullable="false" />
+    <Property Name="SinMutual" Type="tinyint" Nullable="false" />
+    <Property Name="PlanPactadoSalud" Type="tinyint" Nullable="false" />
+    <Property Name="FechaRenovacionII" Type="datetime" Nullable="false" />
+    <Property Name="CotizaPrev" Type="tinyint" Nullable="false" />
+    <Property Name="En_Uso" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Years11" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CtoT_CargoItem">
+    <Key>
+      <PropertyRef Name="Cod_Cargo" />
+    </Key>
+    <Property Name="Cod_Cargo" Type="smallint" Nullable="false" />
+    <Property Name="Descripcion_Cargo" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="Tipo_Cargo" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Cod_Nivel_Cargo" Type="smallint" Nullable="false" />
+    <Property Name="Cod_Cargo_Generico" Type="smallint" />
+    <Property Name="Estado_Reg" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Fec_Estado_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Fec_Ing_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario_Ing_Reg" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Fec_Ult_Modif_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Id_Funcion_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="CtoT_PersonaItem">
+    <Key>
+      <PropertyRef Name="Rut_Persona" />
+    </Key>
+    <Property Name="Rut_Persona" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Identificacion1" Type="int" Nullable="false" />
+    <Property Name="Identificacion2" Type="int" Nullable="false" />
+    <Property Name="Identificacion3" Type="int" Nullable="false" />
+    <Property Name="AP_Paterno" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="AP_Materno" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="Nombres" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="Nombre_Corto" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Estado_Persona" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Fec_Estado" Type="datetime" Nullable="false" />
+    <Property Name="Cod_Sexo" Type="smallint" Nullable="false" />
+    <Property Name="Cod_Profesion" Type="smallint" Nullable="false" />
+    <Property Name="Cod_Nivel_Laboral" Type="smallint" Nullable="false" />
+    <Property Name="Cod_Nivel_Educacional" Type="smallint" Nullable="false" />
+    <Property Name="Cod_Estado_Civil" Type="smallint" Nullable="false" />
+    <Property Name="Fec_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Cod_Comuna_Nacimiento" Type="int" Nullable="false" />
+    <Property Name="Cod_Nacionalidad" Type="smallint" Nullable="false" />
+    <Property Name="Telefono_Particular" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Telefono_Oficina" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Celular" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Fax" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Correo_Electronico" Type="char" Nullable="false" MaxLength="60" />
+    <Property Name="Direccion" Type="char" Nullable="false" MaxLength="100" />
+    <Property Name="Cod_comuna" Type="int" Nullable="false" />
+    <Property Name="Carpeta_Fisica" Type="char" Nullable="false" MaxLength="30" />
+    <Property Name="Cod_Origen_Curriculum" Type="smallint" Nullable="false" />
+    <Property Name="Ind_Recomendado" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Nombre_Recomendado" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="Cod_Disponibilidad" Type="smallint" Nullable="false" />
+    <Property Name="Cod_Banco" Type="smallint" Nullable="false" />
+    <Property Name="Cuenta_Banco" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Num_Tarjeta" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="Usuario_Sicas" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="Foto" Type="char" Nullable="false" MaxLength="100" />
+    <Property Name="Id_Usuario" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="Estado_Reg" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Fec_Estado_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Fec_Ing_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario_Ing_Reg" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Fec_Ult_Modif_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Id_Funcion_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="Id_CtoPersona" Type="numeric" Nullable="false" Precision="9" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="dtpropertiesItem">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="int" />
+    <Property Name="property" Type="varchar" Nullable="false" MaxLength="64" />
+    <Property Name="value" Type="varchar" MaxLength="255" />
+    <Property Name="uvalue" Type="nvarchar" MaxLength="255" />
+    <Property Name="lvalue" Type="image" />
+    <Property Name="version" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Par_CtoT_EstadoItem">
+    <Key>
+      <PropertyRef Name="Id_Estado" />
+    </Key>
+    <Property Name="Id_Estado" Type="numeric" Nullable="false" Precision="9" StoreGeneratedPattern="Identity" />
+    <Property Name="Cod_Estado" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="Tipo_Estado" Type="char" Nullable="false" MaxLength="4" />
+    <Property Name="Descripcion_Estado" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="Id_Proceso_Negocio" Type="char" Nullable="false" MaxLength="16" />
+    <Property Name="Ind_Seleccion" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Estado_Reg" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="Fec_Estado_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Fec_Ing_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario_Ing_Reg" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Fec_Ult_Modif_Reg" Type="datetime" Nullable="false" />
+    <Property Name="Id_Usuario_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="Id_Funcion_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="16" />
+  </EntityType>
+</Schema>
