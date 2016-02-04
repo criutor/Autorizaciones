@@ -3,9 +3,9 @@
   <PropertyGroup>
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
-    <ServerPort>50104</ServerPort>
+    <ServerPort>52869</ServerPort>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635896937364907876</SchemaManagementLastModelWriteTime>
+    <SchemaManagementLastModelWriteTime>635902163776285913</SchemaManagementLastModelWriteTime>
     <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:VerConveniosScreen</GrantedPermissions>
     <Name>AUTORIZACIONES_ADMINS.user</Name>
     <EncryptedPublishConnectionString />

@@ -1789,6 +1789,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Double> SaldoDiasAdmins
+        {
+            get
+            {
+                return _SaldoDiasAdmins;
+            }
+            set
+            {
+                OnSaldoDiasAdminsChanging(value);
+                ReportPropertyChanging("SaldoDiasAdmins");
+                _SaldoDiasAdmins = value;
+                ReportPropertyChanged("SaldoDiasAdmins");
+                OnSaldoDiasAdminsChanged();
+            }
+        }
+        private Nullable<global::System.Double> _SaldoDiasAdmins;
+        partial void OnSaldoDiasAdminsChanging(Nullable<global::System.Double> value);
+        partial void OnSaldoDiasAdminsChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Convenio_fk
         {
             get
@@ -3106,6 +3130,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Titulo
+        {
+            get
+            {
+                return _Titulo;
+            }
+            set
+            {
+                OnTituloChanging(value);
+                ReportPropertyChanging("Titulo");
+                _Titulo = value;
+                ReportPropertyChanged("Titulo");
+                OnTituloChanged();
+            }
+        }
+        private global::System.String _Titulo;
+        partial void OnTituloChanging(global::System.String value);
+        partial void OnTituloChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 DetalleAdministrativo_fk
@@ -3928,6 +3976,102 @@ namespace Autorizaciones_AdminsData.Implementation
         private Nullable<global::System.Boolean> _Completada;
         partial void OnCompletadaChanging(Nullable<global::System.Boolean> value);
         partial void OnCompletadaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Vacaciones
+        {
+            get
+            {
+                return _Vacaciones;
+            }
+            set
+            {
+                OnVacacionesChanging(value);
+                ReportPropertyChanging("Vacaciones");
+                _Vacaciones = value;
+                ReportPropertyChanged("Vacaciones");
+                OnVacacionesChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Vacaciones;
+        partial void OnVacacionesChanging(Nullable<global::System.Boolean> value);
+        partial void OnVacacionesChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Administrativo
+        {
+            get
+            {
+                return _Administrativo;
+            }
+            set
+            {
+                OnAdministrativoChanging(value);
+                ReportPropertyChanging("Administrativo");
+                _Administrativo = value;
+                ReportPropertyChanged("Administrativo");
+                OnAdministrativoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Administrativo;
+        partial void OnAdministrativoChanging(Nullable<global::System.Boolean> value);
+        partial void OnAdministrativoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> HorasExtras
+        {
+            get
+            {
+                return _HorasExtras;
+            }
+            set
+            {
+                OnHorasExtrasChanging(value);
+                ReportPropertyChanging("HorasExtras");
+                _HorasExtras = value;
+                ReportPropertyChanged("HorasExtras");
+                OnHorasExtrasChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _HorasExtras;
+        partial void OnHorasExtrasChanging(Nullable<global::System.Boolean> value);
+        partial void OnHorasExtrasChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> OtroPermiso
+        {
+            get
+            {
+                return _OtroPermiso;
+            }
+            set
+            {
+                OnOtroPermisoChanging(value);
+                ReportPropertyChanging("OtroPermiso");
+                _OtroPermiso = value;
+                ReportPropertyChanged("OtroPermiso");
+                OnOtroPermisoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _OtroPermiso;
+        partial void OnOtroPermisoChanging(Nullable<global::System.Boolean> value);
+        partial void OnOtroPermisoChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

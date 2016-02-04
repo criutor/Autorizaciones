@@ -15,6 +15,7 @@
           <ScalarProperty Name="Convenio_fk" ColumnName="Convenio_fk" />
           <ScalarProperty Name="Area_fk" ColumnName="Area_fk" />
           <ScalarProperty Name="IDGerencia_para_subgerentes" ColumnName="IDGerencia_para_subgerentes" />
+          <ScalarProperty Name="SaldoDiasAdmins" ColumnName="SaldoDiasAdmins" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -128,6 +129,7 @@
           <ScalarProperty Name="Id_Estados_Administrativo" ColumnName="Id_Estados_Administrativo" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleAdministrativo_fk" ColumnName="DetalleAdministrativo_fk" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -173,6 +175,10 @@
           <ScalarProperty Name="Rechazada" ColumnName="Rechazada" />
           <ScalarProperty Name="Completada" ColumnName="Completada" />
           <ScalarProperty Name="RutPersona_fk" ColumnName="RutPersona_fk" />
+          <ScalarProperty Name="Vacaciones" ColumnName="Vacaciones" />
+          <ScalarProperty Name="Administrativo" ColumnName="Administrativo" />
+          <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+          <ScalarProperty Name="OtroPermiso" ColumnName="OtroPermiso" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

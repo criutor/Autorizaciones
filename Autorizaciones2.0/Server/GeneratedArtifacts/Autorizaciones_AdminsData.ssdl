@@ -114,6 +114,7 @@
     <Property Name="Es_JefeDirecto" Type="bit" />
     <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
     <Property Name="IDGerencia_para_subgerentes" Type="int" />
+    <Property Name="SaldoDiasAdmins" Type="float" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
   </EntityType>
@@ -218,6 +219,7 @@
     </Key>
     <Property Name="Id_Estados_Administrativo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleAdministrativo_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_HorasExtrasItem">
@@ -259,6 +261,10 @@
     <Property Name="VB_JefeDirecto" Type="bit" />
     <Property Name="Rechazada" Type="bit" />
     <Property Name="Completada" Type="bit" />
+    <Property Name="Vacaciones" Type="bit" />
+    <Property Name="Administrativo" Type="bit" />
+    <Property Name="HorasExtras" Type="bit" />
+    <Property Name="OtroPermiso" Type="bit" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="Superior_GerenteItem">
@@ -346,7 +352,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_AdministrativoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -358,7 +366,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_HorasExtrasItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -370,7 +380,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_OtroPermisoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -382,7 +394,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_VacacionesItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -394,7 +408,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
-    <End Role="Solicitud_Detalle_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_AdministrativoItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_AdministrativoItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_Administrativo" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_AdministrativoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_Administrativo">
@@ -442,7 +458,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SolicitudHeader_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -466,7 +484,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -490,7 +510,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -514,7 +536,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">

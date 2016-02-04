@@ -1012,6 +1012,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[IDGerencia_para_subgerentes]"
           Type="int" />
+        <SsdlProperty
+          Name="SaldoDiasAdmins"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoDiasAdmins]"
+          Type="float" />
         <SsdlForeignKeyProperty
           Name="Convenio_fk"
           Nullable="True"
@@ -1203,6 +1208,12 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Observaciones]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Titulo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Titulo]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleAdministrativo_fk"
           Nullable="False"
@@ -1349,6 +1360,26 @@
           Name="Completada"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Completada]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Vacaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Vacaciones]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Administrativo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Administrativo]"
+          Type="bit" />
+        <SsdlProperty
+          Name="HorasExtras"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[HorasExtras]"
+          Type="bit" />
+        <SsdlProperty
+          Name="OtroPermiso"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[OtroPermiso]"
           Type="bit" />
         <SsdlForeignKeyProperty
           MaxLength="12"

@@ -13,6 +13,7 @@
     <Property Name="Es_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="NombreAD" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="IDGerencia_para_subgerentes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="SaldoDiasAdmins" Type="Edm.Double" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
@@ -142,6 +143,7 @@
     </Key>
     <Property Name="Id_Estados_Administrativo" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Titulo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleAdministrativo_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_AdministrativoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Estados_Administrativo" />
   </EntityType>
@@ -187,6 +189,10 @@
     <Property Name="VB_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Rechazada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Completada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Vacaciones" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Administrativo" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="HorasExtras" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="OtroPermiso" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_Administrativo" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Administrativo_Solicitud_Header" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Header" />
     <NavigationProperty Name="Solicitud_Detalle_HorasExtras" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Header" />
@@ -285,7 +291,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_Administrativo_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_Administrativo" Type="LightSwitchApplication.Solicitud_Detalle_AdministrativoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -297,7 +305,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_HorasExtras_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_HorasExtras" Type="LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -309,7 +319,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_OtroPermiso" Type="LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -321,7 +333,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Detalle_Vacaciones_Solicitud_Header">
-    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1" />
+    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Detalle_Vacaciones" Type="LightSwitchApplication.Solicitud_Detalle_VacacionesItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Header">
@@ -333,7 +347,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra">
-    <End Role="Solicitud_Detalle_Administrativo" Type="LightSwitchApplication.Solicitud_Detalle_AdministrativoItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Administrativo" Type="LightSwitchApplication.Solicitud_Detalle_AdministrativoItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_Administrativo" Type="LightSwitchApplication.Solicitud_Estados_AdministrativoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_Administrativo">
@@ -381,7 +397,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SolicitudHeader_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -405,7 +423,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -429,7 +449,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -453,7 +475,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">

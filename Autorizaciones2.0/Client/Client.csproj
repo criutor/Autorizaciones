@@ -178,15 +178,17 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\Application.cs" />
-    <Compile Include="UserCode\ConvenioColectivoListDetail.cs" />
-    <Compile Include="UserCode\CreateNewPersonaItem.cs" />
-    <Compile Include="UserCode\Areas_y_Empleados.cs" />
+    <Compile Include="UserCode\Convenios_Colectivos.cs" />
+    <Compile Include="UserCode\Persona_Crear_Nueva.cs" />
+    <Compile Include="UserCode\Master_Areas_y_Empleados.cs" />
+    <Compile Include="UserCode\Dia_Administrativo_Crear_Solicitud.cs" />
     <Compile Include="UserCode\Master_Divisiones.cs" />
-    <Compile Include="UserCode\Master_Empleado.cs" />
+    <Compile Include="UserCode\Master_Empleados.cs" />
     <Compile Include="UserCode\Buscar_empleado.cs" />
     <Compile Include="UserCode\Buscar_Superior.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UserCode\Master_MisSolicitudes.cs" />
     <Compile Include="UserCode\Master_SolicitudesPendientes.cs" />
   </ItemGroup>
   <ItemGroup>

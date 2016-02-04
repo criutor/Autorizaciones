@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 29/01/2016 17:16:54
+// Fecha de generación: 04/02/2016 18:01:54
 namespace LightSwitchApplication.Implementation
 {
     
@@ -789,6 +789,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<int> _IDGerencia_para_subgerentes;
         partial void OnIDGerencia_para_subgerentesChanging(global::System.Nullable<int> value);
         partial void OnIDGerencia_para_subgerentesChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad SaldoDiasAdmins en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<double> SaldoDiasAdmins
+        {
+            get
+            {
+                return this._SaldoDiasAdmins;
+            }
+            set
+            {
+                this.OnSaldoDiasAdminsChanging(value);
+                if (object.Equals(this.SaldoDiasAdmins, value))
+                {
+                    return;
+                }
+                this._SaldoDiasAdmins = value;
+                this.OnSaldoDiasAdminsChanged();
+                this.OnPropertyChanged("SaldoDiasAdmins");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<double> _SaldoDiasAdmins;
+        partial void OnSaldoDiasAdminsChanging(global::System.Nullable<double> value);
+        partial void OnSaldoDiasAdminsChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>
@@ -3174,6 +3200,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnObservacionesChanging(string value);
         partial void OnObservacionesChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad Titulo en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Titulo
+        {
+            get
+            {
+                return this._Titulo;
+            }
+            set
+            {
+                this.OnTituloChanging(value);
+                if (object.Equals(this.Titulo, value))
+                {
+                    return;
+                }
+                this._Titulo = value;
+                this.OnTituloChanged();
+                this.OnPropertyChanged("Titulo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Titulo;
+        partial void OnTituloChanging(string value);
+        partial void OnTituloChanged();
+        /// <summary>
         /// No hay comentarios para la propiedad DetalleAdministrativo_fk en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -4057,6 +4109,110 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<bool> _Completada;
         partial void OnCompletadaChanging(global::System.Nullable<bool> value);
         partial void OnCompletadaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Vacaciones en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> Vacaciones
+        {
+            get
+            {
+                return this._Vacaciones;
+            }
+            set
+            {
+                this.OnVacacionesChanging(value);
+                if (object.Equals(this.Vacaciones, value))
+                {
+                    return;
+                }
+                this._Vacaciones = value;
+                this.OnVacacionesChanged();
+                this.OnPropertyChanged("Vacaciones");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _Vacaciones;
+        partial void OnVacacionesChanging(global::System.Nullable<bool> value);
+        partial void OnVacacionesChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Administrativo en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> Administrativo
+        {
+            get
+            {
+                return this._Administrativo;
+            }
+            set
+            {
+                this.OnAdministrativoChanging(value);
+                if (object.Equals(this.Administrativo, value))
+                {
+                    return;
+                }
+                this._Administrativo = value;
+                this.OnAdministrativoChanged();
+                this.OnPropertyChanged("Administrativo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _Administrativo;
+        partial void OnAdministrativoChanging(global::System.Nullable<bool> value);
+        partial void OnAdministrativoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad HorasExtras en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> HorasExtras
+        {
+            get
+            {
+                return this._HorasExtras;
+            }
+            set
+            {
+                this.OnHorasExtrasChanging(value);
+                if (object.Equals(this.HorasExtras, value))
+                {
+                    return;
+                }
+                this._HorasExtras = value;
+                this.OnHorasExtrasChanged();
+                this.OnPropertyChanged("HorasExtras");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _HorasExtras;
+        partial void OnHorasExtrasChanging(global::System.Nullable<bool> value);
+        partial void OnHorasExtrasChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad OtroPermiso en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> OtroPermiso
+        {
+            get
+            {
+                return this._OtroPermiso;
+            }
+            set
+            {
+                this.OnOtroPermisoChanging(value);
+                if (object.Equals(this.OtroPermiso, value))
+                {
+                    return;
+                }
+                this._OtroPermiso = value;
+                this.OnOtroPermisoChanged();
+                this.OnPropertyChanged("OtroPermiso");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _OtroPermiso;
+        partial void OnOtroPermisoChanging(global::System.Nullable<bool> value);
+        partial void OnOtroPermisoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

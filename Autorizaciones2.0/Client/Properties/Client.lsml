@@ -12,10 +12,10 @@
     </Application.Attributes>
     <Application.Methods>
       <ApplicationMethod
-        Name="ShowMaster_Empleado">
+        Name="ShowMaster_Empleados">
         <ApplicationMethod.Attributes>
           <ShowScreenMethod
-            TargetScreen="Master_Empleado" />
+            TargetScreen="Master_Empleados" />
         </ApplicationMethod.Attributes>
       </ApplicationMethod>
       <ApplicationMethod
@@ -39,17 +39,17 @@
           ParameterType=":Int32" />
       </ApplicationMethod>
       <ApplicationMethod
-        Name="ShowCreateNewPersonaItem">
+        Name="ShowPersona_Crear_Nueva">
         <ApplicationMethod.Attributes>
           <ShowScreenMethod
-            TargetScreen="CreateNewPersonaItem" />
+            TargetScreen="Persona_Crear_Nueva" />
         </ApplicationMethod.Attributes>
       </ApplicationMethod>
       <ApplicationMethod
-        Name="ShowAreas_y_Empleados">
+        Name="ShowMaster_Areas_y_Empleados">
         <ApplicationMethod.Attributes>
           <ShowScreenMethod
-            TargetScreen="Areas_y_Empleados" />
+            TargetScreen="Master_Areas_y_Empleados" />
         </ApplicationMethod.Attributes>
       </ApplicationMethod>
       <ApplicationMethod
@@ -84,11 +84,31 @@
         </ApplicationMethod.Attributes>
       </ApplicationMethod>
       <ApplicationMethod
-        Name="ShowConvenioColectivoListDetail">
+        Name="ShowConvenios_Colectivos">
         <ApplicationMethod.Attributes>
           <ShowScreenMethod
-            TargetScreen="ConvenioColectivoListDetail" />
+            TargetScreen="Convenios_Colectivos" />
         </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowDia_Administrativo_Crear_Solicitud">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="Dia_Administrativo_Crear_Solicitud" />
+        </ApplicationMethod.Attributes>
+        <ApplicationMethodParameter
+          Name="IDPersona"
+          ParameterType=":String" />
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowSolicitud_Estados_AdministrativoListDetail">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="Solicitud_Estados_AdministrativoListDetail" />
+        </ApplicationMethod.Attributes>
+        <ApplicationMethodParameter
+          Name="IDAdministrativo"
+          ParameterType=":Int32" />
       </ApplicationMethod>
     </Application.Methods>
     <Application.NavigationItems>
@@ -106,8 +126,8 @@
           Command="!module/Commands[ScreenCommandShowSolicitud_HeaderListDetail]"
           Name="Solicitud_HeaderListDetail" />
         <ApplicationNavigationLink
-          Command="!module/Commands[ScreenCommandShowConvenioColectivoListDetail]"
-          Name="ConvenioColectivoListDetail" />
+          Command="!module/Commands[ScreenCommandShowConvenios_Colectivos]"
+          Name="Convenios_Colectivos" />
       </ApplicationNavigationGroup>
       <ApplicationNavigationGroup
         Name="group">
@@ -135,11 +155,11 @@
           Command="!module/Commands[ScreenCommandShowMaster_Divisiones]"
           Name="link" />
         <ApplicationNavigationLink
-          Command="!module/Commands[ScreenCommandShowMaster_Empleado]"
-          Name="link1" />
+          Command="!module/Commands[ScreenCommandShowMaster_Empleados]"
+          Name="Master_Empleados" />
         <ApplicationNavigationLink
-          Command="!module/Commands[ScreenCommandShowAreas_y_Empleados]"
-          Name="link2" />
+          Command="!module/Commands[ScreenCommandShowMaster_Areas_y_Empleados]"
+          Name="Master_Areas_y_Empleados" />
       </ApplicationNavigationGroup>
       <ApplicationNavigationGroup
         Name="group1">
@@ -150,17 +170,17 @@
       </ApplicationNavigationGroup>
     </Application.NavigationItems>
     <ApplicationCommand
-      Name="ScreenCommandShowMaster_Empleado"
-      Target="!module/Methods[ShowMaster_Empleado]" />
+      Name="ScreenCommandShowMaster_Empleados"
+      Target="!module/Methods[ShowMaster_Empleados]" />
     <ApplicationCommand
       Name="ScreenCommandShowMaster_Divisiones"
       Target="!module/Methods[ShowMaster_Divisiones]" />
     <ApplicationCommand
-      Name="ScreenCommandShowCreateNewPersonaItem"
-      Target="!module/Methods[ShowCreateNewPersonaItem]" />
+      Name="ScreenCommandShowPersona_Crear_Nueva"
+      Target="!module/Methods[ShowPersona_Crear_Nueva]" />
     <ApplicationCommand
-      Name="ScreenCommandShowAreas_y_Empleados"
-      Target="!module/Methods[ShowAreas_y_Empleados]" />
+      Name="ScreenCommandShowMaster_Areas_y_Empleados"
+      Target="!module/Methods[ShowMaster_Areas_y_Empleados]" />
     <ApplicationCommand
       Name="ScreenCommandShowMaster_SolicitudesPendientes"
       Target="!module/Methods[ShowMaster_SolicitudesPendientes]" />
@@ -171,11 +191,11 @@
       Name="ScreenCommandShowMaster_MisSolicitudes"
       Target="!module/Methods[ShowMaster_MisSolicitudes]" />
     <ApplicationCommand
-      Name="ScreenCommandShowConvenioColectivoListDetail"
-      Target="!module/Methods[ShowConvenioColectivoListDetail]" />
+      Name="ScreenCommandShowConvenios_Colectivos"
+      Target="!module/Methods[ShowConvenios_Colectivos]" />
   </Application>
   <Screen
-    Name="Master_Empleado">
+    Name="Master_Empleados">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
@@ -242,7 +262,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Master_Empleado/Properties[Persona]/Query" />
+              Target="Master_Empleados/Properties[Persona]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -259,7 +279,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="Master_Empleado/Methods[Save]" />
+                    Target="Master_Empleados/Methods[Save]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -271,7 +291,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="Master_Empleado/Methods[Refresh]" />
+                    Target="Master_Empleados/Methods[Refresh]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -283,7 +303,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="Master_Empleado/Methods[Close]" />
+                    Target="Master_Empleados/Methods[Close]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -323,7 +343,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Master_Empleado/Methods[PersonaItemListAddAndEditNew]" />
+                          Target="Master_Empleados/Methods[PersonaItemListAddAndEditNew]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -335,7 +355,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Master_Empleado/Properties[Persona]" />
+                          Member="Master_Empleados/Properties[Persona]" />
                         <CallExpression
                           Target="EditSelected" />
                       </ChainExpression>
@@ -349,7 +369,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Master_Empleado/Properties[Persona]" />
+                          Member="Master_Empleados/Properties[Persona]" />
                         <CallExpression
                           Target="DeleteSelected" />
                       </ChainExpression>
@@ -361,7 +381,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Master_Empleado/Properties[Persona]" />
+                      Member="Master_Empleados/Properties[Persona]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -496,6 +516,19 @@
                       <ChainExpression>
                         <MemberExpression
                           Member="LightSwitchCommonModule:PersonaItem/Properties[NombreAD]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType=":Double?"
+                  Kind="Value"
+                  Name="SaldoDiasAdmins">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[SaldoDiasAdmins]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -1749,7 +1782,7 @@
   </Screen>
   <Screen
     LaunchMode="Multiple"
-    Name="CreateNewPersonaItem">
+    Name="Persona_Crear_Nueva">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
@@ -1801,7 +1834,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="CreateNewPersonaItem/Methods[Save]" />
+                    Target="Persona_Crear_Nueva/Methods[Save]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -1813,7 +1846,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="CreateNewPersonaItem/Methods[Refresh]" />
+                    Target="Persona_Crear_Nueva/Methods[Refresh]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -1843,7 +1876,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="CreateNewPersonaItem/Properties[PersonaItemProperty]" />
+                    Member="Persona_Crear_Nueva/Properties[PersonaItemProperty]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -1981,7 +2014,7 @@
     </Screen.RootContentItem>
   </Screen>
   <Screen
-    Name="Areas_y_Empleados">
+    Name="Master_Areas_y_Empleados">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
@@ -2053,7 +2086,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Areas_y_Empleados/Properties[Division_Area]/Query" />
+              Target="Master_Areas_y_Empleados/Properties[Division_Area]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -2072,7 +2105,7 @@
               <QuerySourceExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="Areas_y_Empleados/Properties[Division_Area]" />
+                    Member="Master_Areas_y_Empleados/Properties[Division_Area]" />
                   <MemberExpression
                     Member="SelectedItem" />
                   <MemberExpression
@@ -2085,7 +2118,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="Areas_y_Empleados/Properties[Persona]/Query" />
+              Target="Master_Areas_y_Empleados/Properties[Persona]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -2102,7 +2135,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="Areas_y_Empleados/Methods[Save]" />
+                    Target="Master_Areas_y_Empleados/Methods[Save]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -2114,7 +2147,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="Areas_y_Empleados/Methods[Refresh]" />
+                    Target="Master_Areas_y_Empleados/Methods[Refresh]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -2126,7 +2159,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="Areas_y_Empleados/Methods[Close]" />
+                    Target="Master_Areas_y_Empleados/Methods[Close]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -2164,7 +2197,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Areas_y_Empleados/Properties[Division_Area]" />
+                          Member="Master_Areas_y_Empleados/Properties[Division_Area]" />
                         <CallExpression
                           Target="AddAndEditNew" />
                       </ChainExpression>
@@ -2178,7 +2211,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Areas_y_Empleados/Properties[Division_Area]" />
+                          Member="Master_Areas_y_Empleados/Properties[Division_Area]" />
                         <CallExpression
                           Target="EditSelected" />
                       </ChainExpression>
@@ -2192,7 +2225,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Areas_y_Empleados/Properties[Division_Area]" />
+                          Member="Master_Areas_y_Empleados/Properties[Division_Area]" />
                         <CallExpression
                           Target="DeleteSelected" />
                       </ChainExpression>
@@ -2204,7 +2237,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Areas_y_Empleados/Properties[Division_Area]" />
+                      Member="Master_Areas_y_Empleados/Properties[Division_Area]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -2320,7 +2353,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Areas_y_Empleados/Methods[PersonaAddAndEditNew1]" />
+                          Target="Master_Areas_y_Empleados/Methods[PersonaAddAndEditNew1]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -2330,7 +2363,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="Areas_y_Empleados/Properties[Persona]" />
+                      Member="Master_Areas_y_Empleados/Properties[Persona]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -3733,7 +3766,8 @@
               <ContentItem
                 DataType="LightSwitchCommonModule:Solicitud_HeaderItem"
                 Kind="Details"
-                Name="RowTemplate">
+                Name="RowTemplate"
+                View=":ColumnsLayout">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
@@ -3753,118 +3787,14 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  DataType=":String"
+                  DataType=":Int32"
                   Kind="Value"
-                  Name="NombreTrabajador">
+                  Name="Id_SolicitudHeader">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[NombreTrabajador]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Date"
-                  Kind="Value"
-                  Name="Fechaingreso">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Fechaingreso]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":String"
-                  Kind="Value"
-                  Name="Gerencia">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Gerencia]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":String"
-                  Kind="Value"
-                  Name="Departamento">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Departamento]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="VB_Gerente">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_Gerente]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="VB_SubGerente">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_SubGerente]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="VB_JefeDirecto">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_JefeDirecto]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="Rechazada">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Rechazada]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="Completada">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Completada]" />
+                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Id_SolicitudHeader]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -4625,7 +4555,7 @@
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
       <DisplayName
-        Value="Solicitar / Revisar" />
+        Value="Solicitar / Consultar" />
     </Screen.Attributes>
     <Screen.Methods>
       <ScreenMethod
@@ -4656,6 +4586,22 @@
           <Generated />
         </ScreenMethod.Attributes>
       </ScreenMethod>
+      <ScreenMethod
+        Name="MENSAJEPersonaNoCreada" />
+      <ScreenMethod
+        Name="MENSAJECuentaNoAsociada" />
+      <ScreenMethod
+        Name="NuevaSolicitud" />
+      <ScreenMethod
+        Name="SolicitarVacaciones" />
+      <ScreenMethod
+        Name="SolicitarHorasExtras" />
+      <ScreenMethod
+        Name="SolicitarDiaAdministrativo" />
+      <ScreenMethod
+        Name="SolicitarOtroPermiso" />
+      <ScreenMethod
+        Name="MasDetallesAdministrativo" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -4749,6 +4695,66 @@
       <ScreenProperty
         Name="FechaSolicitudHasta"
         PropertyType=":Date?" />
+      <ScreenProperty
+        Name="NOMBREAD"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenCollectionProperty
+        Name="Persona"
+        PageSize="45"
+        PropertyType="LightSwitchCommonModule:CollectionView$PersonaItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="PersonaQuery"
+            ReturnType="LightSwitchCommonModule:PersonaItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:PersonaItem/Properties[NombreAD]" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ParameterExpression
+                      Parameter="NombreAD" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="NombreAD"
+                ParameterType=":String?" />
+            </ScreenQueryDefinition.Parameters>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[Persona]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Master_MisSolicitudes/Properties[Persona]/Query">
+              <ArgumentExpression
+                Parameter="NombreAD">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Master_MisSolicitudes/Properties[NOMBREAD]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -4757,24 +4763,40 @@
         <ContentItem.CommandItems>
           <ContentItem
             Kind="Command"
-            Name="Save">
-            <ContentItem.DataSource>
-              <ScreenExpressionTree>
-                <ChainExpression>
-                  <CallExpression
-                    Target="Master_MisSolicitudes/Methods[Save]" />
-                </ChainExpression>
-              </ScreenExpressionTree>
-            </ContentItem.DataSource>
-          </ContentItem>
-          <ContentItem
-            Kind="Command"
             Name="Refresh">
             <ContentItem.DataSource>
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
                     Target="Master_MisSolicitudes/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Command">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="NUEVA SOLICITUD" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Master_MisSolicitudes/Methods[NuevaSolicitud]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Command1">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Master_MisSolicitudes/Methods[Close]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -4790,7 +4812,7 @@
             View=":GroupBox">
             <ContentItem.Attributes>
               <DisplayName
-                Value="Filtros" />
+                Value="Filtros de búsqueda" />
             </ContentItem.Attributes>
             <ContentItem.PropertySources>
               <ControlPropertySource
@@ -4837,51 +4859,11 @@
               DataType="LightSwitchCommonModule:CollectionView$Solicitud_HeaderItem"
               Kind="Collection"
               Name="Solicitud_Header"
-              View=":List">
-              <ContentItem.CommandItems>
-                <ContentItem
-                  Kind="Command"
-                  Name="Solicitud_Header_AddAndEditNew1">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Master_MisSolicitudes/Properties[Solicitud_Header]" />
-                        <CallExpression
-                          Target="AddAndEditNew" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Kind="Command"
-                  Name="Solicitud_Header_EditSelected1">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Master_MisSolicitudes/Properties[Solicitud_Header]" />
-                        <CallExpression
-                          Target="EditSelected" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Kind="Command"
-                  Name="Solicitud_Header_DeleteSelected1">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Master_MisSolicitudes/Properties[Solicitud_Header]" />
-                        <CallExpression
-                          Target="DeleteSelected" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-              </ContentItem.CommandItems>
+              View=":DataGrid">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="TODAS MIS SOLICITUDES:" />
+              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -4890,10 +4872,49 @@
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch:ColumnsLayout/Properties[WeightedColumnWidth]">
+                  <ScreenExpressionTree>
+                    <ConstantExpression
+                      ResultType=":Double"
+                      Value="0.6" />
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
               <ContentItem
                 DataType="LightSwitchCommonModule:Solicitud_HeaderItem"
                 Kind="Details"
-                Name="Solicitud_HeaderTemplate">
+                Name="Solicitud_HeaderTemplate"
+                View=":ColumnsLayout">
+                <ContentItem.CommandItems>
+                  <ContentItem
+                    Kind="Command"
+                    Name="Command2">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Más detalles" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <CallExpression
+                            Target="Master_MisSolicitudes/Methods[MasDetallesAdministrativo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch:RootControl/Properties[HorizontalAlignment]">
+                        <ScreenExpressionTree>
+                          <ConstantExpression
+                            ResultType=":String"
+                            Value="Right" />
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                </ContentItem.CommandItems>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
@@ -4902,7 +4923,8 @@
                 <ContentItem
                   DataType=":Date"
                   Kind="Value"
-                  Name="FechaSolicitud2">
+                  Name="FechaSolicitud2"
+                  View=":DateViewer">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -4911,153 +4933,28 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":String"
-                  Kind="Value"
-                  Name="NombreTrabajador2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[NombreTrabajador]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Date"
-                  Kind="Value"
-                  Name="Fechaingreso2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Fechaingreso]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":String"
-                  Kind="Value"
-                  Name="Gerencia2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Gerencia]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":String"
-                  Kind="Value"
-                  Name="Departamento2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Departamento]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="VB_Gerente2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_Gerente]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="VB_SubGerente2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_SubGerente]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="VB_JefeDirecto2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_JefeDirecto]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="Rechazada2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Rechazada]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":Boolean?"
-                  Kind="Value"
-                  Name="Completada2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Completada]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType="LightSwitchCommonModule:PersonaItem"
-                  Kind="Details"
-                  Name="PersonaItem12">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[PersonaItem1]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    DataType="LightSwitchCommonModule:PersonaItem"
-                    Kind="Details"
-                    Name="PersonaItem">
-                    <ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch:DateViewerBase/Properties[LongDate]">
                       <ScreenExpressionTree>
-                        <ChainExpression />
+                        <ConstantExpression
+                          ResultType=":Boolean"
+                          Value="True" />
                       </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
                 </ContentItem>
               </ContentItem>
             </ContentItem>
             <ContentItem
               DataType="LightSwitchCommonModule:Solicitud_HeaderItem"
               Kind="Details"
-              Name="Solicitud_Header_SelectedItem">
+              Name="Solicitud_Header_SelectedItem"
+              View=":GroupBox">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Detalles de la solicitud" />
+              </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -5071,7 +4968,8 @@
               <ContentItem
                 DataType=":Date"
                 Kind="Value"
-                Name="FechaSolicitud3">
+                Name="FechaSolicitud3"
+                View=":DateViewer">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5080,11 +4978,22 @@
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch:DateViewerBase/Properties[LongDate]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        ResultType=":Boolean"
+                        Value="True" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="NombreTrabajador3">
+                Name="NombreTrabajador3"
+                View=":Label">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5097,7 +5006,8 @@
               <ContentItem
                 DataType=":Date"
                 Kind="Value"
-                Name="Fechaingreso3">
+                Name="Fechaingreso3"
+                View=":DateTimeViewer">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5106,11 +5016,30 @@
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch:DateViewerBase/Properties[LongDate]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        ResultType=":Boolean"
+                        Value="True" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch:DateTimeViewerBase/Properties[ShowTime]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        ResultType=":Boolean"
+                        Value="False" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="Gerencia3">
+                Name="Gerencia3"
+                View=":Label">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5123,7 +5052,8 @@
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="Departamento3">
+                Name="Departamento3"
+                View=":Label">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5136,7 +5066,8 @@
               <ContentItem
                 DataType=":Boolean?"
                 Kind="Value"
-                Name="VB_Gerente3">
+                Name="VB_Gerente3"
+                View=":CheckBox">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5149,7 +5080,8 @@
               <ContentItem
                 DataType=":Boolean?"
                 Kind="Value"
-                Name="VB_SubGerente3">
+                Name="VB_SubGerente3"
+                View=":CheckBox">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -5198,29 +5130,76 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
               </ContentItem>
-              <ContentItem
-                DataType="LightSwitchCommonModule:PersonaItem"
-                Kind="Details"
-                Name="PersonaItem13">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[PersonaItem1]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            IsHidden="True"
+            Kind="Group"
+            Name="SeleccioneTipoDeSolicitud"
+            View=":ModalWindow">
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:ModalWindow/Properties[ShowButton]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    ResultType=":Boolean"
+                    Value="False" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+            <ContentItem
+              Kind="Group"
+              Name="Group2">
+              <ContentItem.CommandItems>
                 <ContentItem
-                  DataType="LightSwitchCommonModule:PersonaItem"
-                  Kind="Details"
-                  Name="PersonaItem2">
+                  Kind="Command"
+                  Name="SolicitarVacaciones">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
-                      <ChainExpression />
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Master_MisSolicitudes/Methods[SolicitarVacaciones]" />
+                      </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
-              </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="SolicitarHorasExtras">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Master_MisSolicitudes/Methods[SolicitarHorasExtras]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="SolicitarDiaAdministrativo">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Master_MisSolicitudes/Methods[SolicitarDiaAdministrativo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="SolicitarOtroPermiso">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Master_MisSolicitudes/Methods[SolicitarOtroPermiso]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem.CommandItems>
             </ContentItem>
           </ContentItem>
         </ContentItem>
@@ -5228,7 +5207,7 @@
     </Screen.RootContentItem>
   </Screen>
   <Screen
-    Name="ConvenioColectivoListDetail">
+    Name="Convenios_Colectivos">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
@@ -5286,7 +5265,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ConvenioColectivoListDetail/Properties[ConvenioColectivo]/Query" />
+              Target="Convenios_Colectivos/Properties[ConvenioColectivo]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -5303,7 +5282,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="ConvenioColectivoListDetail/Methods[Save]" />
+                    Target="Convenios_Colectivos/Methods[Save]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -5315,7 +5294,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="ConvenioColectivoListDetail/Methods[Refresh]" />
+                    Target="Convenios_Colectivos/Methods[Refresh]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -5353,7 +5332,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="ConvenioColectivoListDetail/Properties[ConvenioColectivo]" />
+                          Member="Convenios_Colectivos/Properties[ConvenioColectivo]" />
                         <CallExpression
                           Target="AddAndEditNew" />
                       </ChainExpression>
@@ -5367,7 +5346,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="ConvenioColectivoListDetail/Properties[ConvenioColectivo]" />
+                          Member="Convenios_Colectivos/Properties[ConvenioColectivo]" />
                         <CallExpression
                           Target="EditSelected" />
                       </ChainExpression>
@@ -5381,7 +5360,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="ConvenioColectivoListDetail/Properties[ConvenioColectivo]" />
+                          Member="Convenios_Colectivos/Properties[ConvenioColectivo]" />
                         <CallExpression
                           Target="DeleteSelected" />
                       </ChainExpression>
@@ -5393,7 +5372,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ConvenioColectivoListDetail/Properties[ConvenioColectivo]" />
+                      Member="Convenios_Colectivos/Properties[ConvenioColectivo]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -5481,7 +5460,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ConvenioColectivoListDetail/Properties[ConvenioColectivo]" />
+                      Member="Convenios_Colectivos/Properties[ConvenioColectivo]" />
                     <MemberExpression
                       Member="SelectedItem" />
                   </ChainExpression>
@@ -5511,6 +5490,840 @@
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
+      </ContentItem>
+    </Screen.RootContentItem>
+  </Screen>
+  <Screen
+    LaunchMode="Multiple"
+    Name="Dia_Administrativo_Crear_Solicitud">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
+      <DisplayName
+        Value="Nueva soliciud día administrativo" />
+    </Screen.Attributes>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="Solicitud_Detalle_AdministrativoItemProperty"
+        PropertyType="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem" />
+      <ScreenProperty
+        Name="IDPersona"
+        PropertyType=":String">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="PersonaItem"
+        PropertyType="LightSwitchCommonModule:PersonaItem">
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[Persona_SingleOrDefault]">
+              <ArgumentExpression
+                Parameter="Rut_Persona">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Dia_Administrativo_Crear_Solicitud/Properties[IDPersona]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="Estados_Solicitud"
+        PropertyType="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem" />
+    </Screen.Properties>
+    <Screen.RootContentItem>
+      <ContentItem
+        Kind="Screen"
+        Name="RootContentItem">
+        <ContentItem.CommandItems>
+          <ContentItem
+            Kind="Command"
+            Name="Refresh">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Dia_Administrativo_Crear_Solicitud/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Command1">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="ENVIAR SOLICITUD" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Dia_Administrativo_Crear_Solicitud/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Dia_Administrativo_Crear_Solicitud/Methods[Close]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+        <ContentItem
+          Kind="Group"
+          Name="ScreenLayout">
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property=":ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    ResultType=":Boolean"
+                    Value="True" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+          <ContentItem
+            DataType="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem"
+            Kind="Details"
+            Name="details"
+            View=":GroupBox">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Detalles solicitud de día administrativo" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Dia_Administrativo_Crear_Solicitud/Properties[Solicitud_Detalle_AdministrativoItemProperty]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property=":RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Top" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+            <ContentItem
+              DataType=":Double"
+              Kind="Value"
+              Name="SaldoDias"
+              View=":Label">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[SaldoDias]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch:RootControl/Properties[FontStyle]">
+                  <ScreenExpressionTree>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Strong" />
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem
+              DataType=":Date"
+              Kind="Value"
+              Name="Inicio">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[Inicio]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":Date"
+              Kind="Value"
+              Name="Termino">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[Termino]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":Double"
+              Kind="Value"
+              Name="NumeroDias">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[NumeroDias]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            DataType="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem"
+            Kind="Details"
+            Name="Estados_Solicitud"
+            View=":RowsLayout">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Dia_Administrativo_Crear_Solicitud/Properties[Estados_Solicitud]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    ResultType=":String"
+                    Value="Top" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+            <ContentItem
+              DataType=":String?"
+              Kind="Value"
+              Name="Observaciones">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Observaciones]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+          </ContentItem>
+          <ContentItem
+            DataType="LightSwitchCommonModule:PersonaItem"
+            IsHidden="True"
+            Kind="Details"
+            Name="PersonaItem"
+            View=":RowsLayout">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Persona Item(NO ELIMINAR!!)" />
+              <Description
+                Value="Este elemento permite que cargue el Saldo de días en la solicitud" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Dia_Administrativo_Crear_Solicitud/Properties[PersonaItem]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RowsLayout/Properties[WeightedRowHeight]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    ResultType=":Double"
+                    Value="0.5" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    ResultType=":String"
+                    Value="Top" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+            <ContentItem
+              DataType=":String"
+              Kind="Value"
+              Name="Rut_Persona">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[Rut_Persona]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":String?"
+              Kind="Value"
+              Name="AP_Paterno">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[AP_Paterno]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":String?"
+              Kind="Value"
+              Name="AP_Materno">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[AP_Materno]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":String?"
+              Kind="Value"
+              Name="Nombres">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[Nombres]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":String"
+              Kind="Value"
+              Name="NombreCompleto">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[NombreCompleto]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":Boolean?"
+              Kind="Value"
+              Name="Es_Gerente">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[Es_Gerente]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":Boolean?"
+              Kind="Value"
+              Name="Es_SubGerente">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[Es_SubGerente]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":Boolean?"
+              Kind="Value"
+              Name="Es_JefeDirecto">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[Es_JefeDirecto]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":String?"
+              Kind="Value"
+              Name="NombreAD">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[NombreAD]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType="LightSwitchCommonModule:ConvenioColectivoItem"
+              Kind="Details"
+              Name="ConvenioColectivoItem">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[ConvenioColectivoItem]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                DataType="LightSwitchCommonModule:ConvenioColectivoItem"
+                Kind="Details"
+                Name="ConvenioColectivoItem1">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              DataType="LightSwitchCommonModule:Division_AreaItem"
+              Kind="Details"
+              Name="Division_AreaItem">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                DataType="LightSwitchCommonModule:Division_AreaItem"
+                Kind="Details"
+                Name="Division_AreaItem1">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              DataType=":Int32?"
+              Kind="Value"
+              Name="IDGerencia_para_subgerentes">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[IDGerencia_para_subgerentes]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              DataType=":Double?"
+              Kind="Value"
+              Name="SaldoDiasAdmins">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="LightSwitchCommonModule:PersonaItem/Properties[SaldoDiasAdmins]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+          </ContentItem>
+        </ContentItem>
+      </ContentItem>
+    </Screen.RootContentItem>
+  </Screen>
+  <Screen
+    Name="Solicitud_Estados_AdministrativoListDetail">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
+      <DisplayName
+        Value="HISTORIAL DE ESTADOS" />
+    </Screen.Attributes>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Solicitud_Estados_Administrativo"
+        PageSize="45"
+        PropertyType="LightSwitchCommonModule:CollectionView$Solicitud_Estados_AdministrativoItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Solicitud_Estados_AdministrativoQuery"
+            ReturnType="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Solicitud_Detalle_AdministrativoItem]" />
+                      <MemberExpression
+                        Member="Id_Administrativo" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ParameterExpression
+                      Parameter="Id_Administrativo" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Parameters>
+              <QueryParameter
+                Name="Id_Administrativo"
+                ParameterType=":Int32?" />
+            </ScreenQueryDefinition.Parameters>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[Solicitud_Estados_Administrativo]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Solicitud_Estados_AdministrativoListDetail/Properties[Solicitud_Estados_Administrativo]/Query">
+              <ArgumentExpression
+                Parameter="Id_Administrativo">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Solicitud_Estados_AdministrativoListDetail/Properties[IDAdministrativo]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="IDAdministrativo"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+    </Screen.Properties>
+    <Screen.RootContentItem>
+      <ContentItem
+        Kind="Screen"
+        Name="RootContentItem">
+        <ContentItem.CommandItems>
+          <ContentItem
+            Kind="Command"
+            Name="Save">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Solicitud_Estados_AdministrativoListDetail/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Refresh">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Solicitud_Estados_AdministrativoListDetail/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+        <ContentItem
+          Kind="Group"
+          Name="ScreenLayout"
+          View="Microsoft.LightSwitch:ColumnsLayout">
+          <ContentItem
+            Kind="Group"
+            Name="ListColumn">
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property=":ColumnsLayout/Properties[WeightedColumnWidth]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":Double"
+                      Value="2" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+            <ContentItem
+              DataType="LightSwitchCommonModule:CollectionView$Solicitud_Estados_AdministrativoItem"
+              Kind="Collection"
+              Name="Solicitud_Estados_AdministrativoItemList"
+              View="Microsoft.LightSwitch:List">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="HISTORIAL DE ESTADOS:" />
+              </ContentItem.Attributes>
+              <ContentItem.CommandItems>
+                <ContentItem
+                  Kind="Command"
+                  Name="Solicitud_Estados_Administrativo_AddAndEditNew">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Solicitud_Estados_AdministrativoListDetail/Properties[Solicitud_Estados_Administrativo]" />
+                        <CallExpression
+                          Target="AddAndEditNew" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="Solicitud_Estados_Administrativo_EditSelected">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Solicitud_Estados_AdministrativoListDetail/Properties[Solicitud_Estados_Administrativo]" />
+                        <CallExpression
+                          Target="EditSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="Solicitud_Estados_Administrativo_DeleteSelected">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Solicitud_Estados_AdministrativoListDetail/Properties[Solicitud_Estados_Administrativo]" />
+                        <CallExpression
+                          Target="DeleteSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem.CommandItems>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Solicitud_Estados_AdministrativoListDetail/Properties[Solicitud_Estados_Administrativo]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property=":RootControl/Properties[AttachedLabelPosition]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        ResultType=":String"
+                        Value="Collapsed" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+                <ControlPropertySource
+                  Property=":RootControl/Properties[VerticalAlignment]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        ResultType=":String"
+                        Value="Stretch" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+              <ContentItem
+                DataType="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem"
+                Kind="Details"
+                Name="RowTemplate"
+                View=":ColumnsLayout">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  DataType=":String?"
+                  Kind="Value"
+                  Name="Titulo">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Titulo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":String"
+                          Value="Strong" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  DataType="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem"
+                  Kind="Details"
+                  Name="Solicitud_Detalle_AdministrativoItem"
+                  View=":ColumnsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Solicitud_Detalle_AdministrativoItem]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    DataType="LightSwitchCommonModule:Solicitud_HeaderItem"
+                    Kind="Details"
+                    Name="Solicitud_HeaderItem">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="LightSwitchCommonModule:Solicitud_Detalle_AdministrativoItem/Properties[Solicitud_HeaderItem]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Kind="ScreenContent"
+                  Name="StaticLabel"
+                  View=":StaticLabel">
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch:RootControl/Properties[FontStyle]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":String"
+                          Value="Strong" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch:StaticLabel/Properties[Text]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":String"
+                          Value="OBSERVACIONES:" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  DataType=":String?"
+                  Kind="Value"
+                  Name="Observaciones">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Observaciones]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
               </ContentItem>
             </ContentItem>
           </ContentItem>

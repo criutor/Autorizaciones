@@ -74,6 +74,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("IDGerencia_para_subgerentes");
         }
         
+        partial void OnSaldoDiasAdminsChanged()
+        {
+            this.___OnPropertyChanged("SaldoDiasAdmins");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get
@@ -1131,6 +1136,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Observaciones");
         }
         
+        partial void OnTituloChanged()
+        {
+            this.___OnPropertyChanged("Titulo");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.IImplementation.Solicitud_Detalle_AdministrativoItem
         {
             get
@@ -1406,6 +1416,26 @@ namespace LightSwitchApplication.Implementation
         partial void OnCompletadaChanged()
         {
             this.___OnPropertyChanged("Completada");
+        }
+        
+        partial void OnVacacionesChanged()
+        {
+            this.___OnPropertyChanged("Vacaciones");
+        }
+        
+        partial void OnAdministrativoChanged()
+        {
+            this.___OnPropertyChanged("Administrativo");
+        }
+        
+        partial void OnHorasExtrasChanged()
+        {
+            this.___OnPropertyChanged("HorasExtras");
+        }
+        
+        partial void OnOtroPermisoChanged()
+        {
+            this.___OnPropertyChanged("OtroPermiso");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.IImplementation.Solicitud_Detalle_Administrativo

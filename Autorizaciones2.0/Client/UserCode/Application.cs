@@ -32,7 +32,7 @@ namespace LightSwitchApplication
 
         }
 
-        partial void ConvenioColectivoListDetail_CanRun(ref bool result)
+        partial void Convenios_Colectivos_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
 
