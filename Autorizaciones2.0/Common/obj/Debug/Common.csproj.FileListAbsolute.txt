@@ -68,7 +68,6 @@ C:\Users\cesar.riutor\documents\visual studio 2012\Projects\Autorizaciones2.0\Au
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\obj\Debug\Application.Common.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\obj\Debug\Application.Common.pdb
-C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\LSCommonCodeGeneratorsTask.mcs
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\Application.Common.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\Application.Common.pdb
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\Microsoft.CSharp.dll
@@ -132,3 +131,4 @@ C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\B
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\vi\Microsoft.LightSwitch.resources.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\zh-Hans\Microsoft.LightSwitch.resources.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\zh-Hant\Microsoft.LightSwitch.resources.dll
+C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\LSCommonCodeGeneratorsTask.mcs

@@ -1136,9 +1136,9 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Observaciones");
         }
         
-        partial void OnTituloChanged()
+        partial void OnTituloObservacionChanged()
         {
-            this.___OnPropertyChanged("Titulo");
+            this.___OnPropertyChanged("TituloObservacion");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.IImplementation.Solicitud_Detalle_AdministrativoItem
@@ -1199,6 +1199,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Observaciones");
         }
         
+        partial void OnTituloObservacionChanged()
+        {
+            this.___OnPropertyChanged("TituloObservacion");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.IImplementation.Solicitud_Detalle_HorasExtrasItem
         {
             get
@@ -1257,6 +1262,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Observaciones");
         }
         
+        partial void OnTituloObservacionChanged()
+        {
+            this.___OnPropertyChanged("TituloObservacion");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem.DetailsClass.IImplementation.Solicitud_Detalle_OtroPermisoItem
         {
             get
@@ -1313,6 +1323,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnObservacionesChanged()
         {
             this.___OnPropertyChanged("Observaciones");
+        }
+        
+        partial void OnTituloObservacionChanged()
+        {
+            this.___OnPropertyChanged("TituloObservacion");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_VacacionesItem.DetailsClass.IImplementation.Solicitud_Detalle_VacacionesItem
@@ -1436,6 +1451,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnOtroPermisoChanged()
         {
             this.___OnPropertyChanged("OtroPermiso");
+        }
+        
+        partial void OnTituloChanged()
+        {
+            this.___OnPropertyChanged("Titulo");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.IImplementation.Solicitud_Detalle_Administrativo

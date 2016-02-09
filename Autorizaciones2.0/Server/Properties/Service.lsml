@@ -1210,9 +1210,9 @@
           Type="nvarchar" />
         <SsdlProperty
           MaxLength="50"
-          Name="Titulo"
+          Name="TituloObservacion"
           Nullable="True"
-          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[Titulo]"
+          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[TituloObservacion]"
           Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleAdministrativo_fk"
@@ -1239,6 +1239,12 @@
           Nullable="False"
           Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[Observaciones]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TituloObservacion"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[TituloObservacion]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleHorasExtras_fk"
           Nullable="False"
@@ -1264,6 +1270,12 @@
           Nullable="False"
           Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[Observaciones]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TituloObservacion"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[TituloObservacion]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleOtroPermiso_fk"
           Nullable="False"
@@ -1288,6 +1300,12 @@
           Name="Observaciones"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[Observaciones]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TituloObservacion"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[TituloObservacion]"
           Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleVacaciones_fk"
@@ -1381,6 +1399,12 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[OtroPermiso]"
           Type="bit" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Titulo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Titulo]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

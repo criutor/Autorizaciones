@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="_IntrinsicData-Web.config Connection String" description="_IntrinsicData Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=|SqlExpressInstanceName|;AttachDbFilename=|ApplicationDatabasePath|;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\documents\\visual\ studio\ 2012\\Projects\\Autorizaciones2\.0\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
   </parameter>
   <parameter name="cad046a7-12ef-4870-bcd2-8cd5df16a40c-Web.config Connection String" description="cad046a7-12ef-4870-bcd2-8cd5df16a40c Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\documents\\visual\ studio\ 2012\\Projects\\Autorizaciones2\.0\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='cad046a7-12ef-4870-bcd2-8cd5df16a40c']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='cad046a7-12ef-4870-bcd2-8cd5df16a40c']/@connectionString" />
   </parameter>
   <parameter name="98427555-f2a5-484f-ba3a-0d82161b2343-Web.config Connection String" description="98427555-f2a5-484f-ba3a-0d82161b2343 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700;Password=plv_consultaf700" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\documents\\visual\ studio\ 2012\\Projects\\Autorizaciones2\.0\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='98427555-f2a5-484f-ba3a-0d82161b2343']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='98427555-f2a5-484f-ba3a-0d82161b2343']/@connectionString" />
   </parameter>
   <parameter name="24703df0-a85f-40b7-8757-ef57da42ebc1-Web.config Connection String" description="24703df0-a85f-40b7-8757-ef57da42ebc1 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\documents\\visual\ studio\ 2012\\Projects\\Autorizaciones2\.0\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='24703df0-a85f-40b7-8757-ef57da42ebc1']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\cesar\.riutor\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\Web\.config$" match="/configuration/connectionStrings/add[@name='24703df0-a85f-40b7-8757-ef57da42ebc1']/@connectionString" />
   </parameter>
 </parameters>

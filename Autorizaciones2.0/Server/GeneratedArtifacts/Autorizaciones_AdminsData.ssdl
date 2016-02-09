@@ -219,7 +219,7 @@
     </Key>
     <Property Name="Id_Estados_Administrativo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
-    <Property Name="Titulo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleAdministrativo_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_HorasExtrasItem">
@@ -228,6 +228,7 @@
     </Key>
     <Property Name="Id_Estados_HorasExtras" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleHorasExtras_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_OtroPermisoItem">
@@ -236,6 +237,7 @@
     </Key>
     <Property Name="Id_Estados_OtroPermiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleOtroPermiso_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_VacacionesItem">
@@ -244,6 +246,7 @@
     </Key>
     <Property Name="Id_Estados_vacaciones" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleVacaciones_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_HeaderItem">
@@ -265,6 +268,7 @@
     <Property Name="Administrativo" Type="bit" />
     <Property Name="HorasExtras" Type="bit" />
     <Property Name="OtroPermiso" Type="bit" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="20" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="Superior_GerenteItem">

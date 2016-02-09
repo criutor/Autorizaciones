@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="AUTORIZACIONES_ADMINS.exe" version="1.0.6.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="AUTORIZACIONES_ADMINS.exe" version="1.0.11.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="VslsHost" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="x86" />
@@ -42,26 +42,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bin\Application.Common.dll" size="471040">
-      <assemblyIdentity name="Application.Common" version="1.0.6.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bin\Application.Common.dll" size="477184">
+      <assemblyIdentity name="Application.Common" version="1.0.8.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>aev0MD23ioROrsRyKKV4aBllz+Q=</dsig:DigestValue>
+        <dsig:DigestValue>KJW9t99qolJnfmtbEz2/DO6ihq0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bin\Application.Server.dll" size="348160">
-      <assemblyIdentity name="Application.Server" version="1.0.6.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="bin\Application.Server.dll" size="353280">
+      <assemblyIdentity name="Application.Server" version="1.0.8.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RaD1cNdEFAK2u3Ci+Hf+fNY2iwA=</dsig:DigestValue>
+        <dsig:DigestValue>xb5LWngmiDCloFH8sPBtR7wwfhY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -627,14 +627,14 @@
       <dsig:DigestValue>lJWFCJ8a9N+qT2qQ8N3qZdGyRmc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="web.config" size="9371" />
-  <file name="web\Autorizaciones2.0.Client.xap" size="4252155">
+  <file name="web.config" size="9395" />
+  <file name="web\Autorizaciones2.0.Client.xap" size="4266191">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>e+AKKPJ0Ds7++zUQ5sKe9iB8Ie8=</dsig:DigestValue>
+      <dsig:DigestValue>/Rw/q/Mwdxe7JD6ZqBJULpXc2Sw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

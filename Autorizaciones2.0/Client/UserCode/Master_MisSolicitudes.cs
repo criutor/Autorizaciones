@@ -12,12 +12,49 @@ namespace LightSwitchApplication
     public partial class Master_MisSolicitudes
     {
 
-
-
+        
         partial void Master_MisSolicitudes_Activated()
         {
                 // Escriba el código aquí.
-            NOMBREAD = this.Application.User.FullName;
+
+            //--------------------------------Quitar acentos del nombre de active directory------------------------------
+
+            string NAD = this.Application.User.FullName;
+            int largo = NAD.Length;
+
+            char[] NombreAD = new char[largo];
+            int i = 0;
+
+            foreach (char ch in NAD)
+            {
+                char val = ch;
+
+                switch (val)
+                {
+                    case 'á':
+                    case 'Á':
+                        val = 'A'; break;
+                    case 'é':
+                    case 'É':
+                        val = 'E'; break;
+                    case 'í':
+                    case 'Í':
+                        val = 'I'; break;
+                    case 'ó':
+                    case 'Ó':
+                        val = 'O'; break;
+                    case 'ú':
+                    case 'Ú':
+                        val = 'U'; break;
+                }
+                NombreAD[i] = val;
+                i++;
+            }
+
+            string Nombreaux = new string(NombreAD);
+            // -------------------------------------------------------------------------------------------------------------
+            NOMBREAD = Nombreaux; // ****CAMBIAR POR RUT ****
+           
 
             if (Persona.Count() == 0)
             {
@@ -31,6 +68,8 @@ namespace LightSwitchApplication
 
             }
 
+            RUTPERSONA = this.Persona.First().Rut_Persona; // Para ver solo mis solicitudes
+
         }
 
         partial void NuevaSolicitud_Execute()
@@ -43,7 +82,7 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-            this.Application.ShowDia_Administrativo_Crear_Solicitud(Persona.First().Rut_Persona);
+            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona,1);
         }
 
         partial void MENSAJECuentaNoAsociada_Execute()
@@ -64,11 +103,54 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
 
-            if (this.Solicitud_Header.SelectedItem.Administrativo == true)
-            {
-                this.Application.ShowSolicitud_Estados_AdministrativoListDetail(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Administrativo.First().Id_Administrativo);
+            if (this.Solicitud_Header.SelectedItem.Administrativo == true) {
+                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Administrativo.First().Id_Administrativo, 1, 1);
             }
+            if (this.Solicitud_Header.SelectedItem.Vacaciones == true) {
+                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Vacaciones.First().Id_Vacaciones, 2, 1);
+            }
+            if (this.Solicitud_Header.SelectedItem.HorasExtras == true) {
+                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_HorasExtras.First().Id_HorasExtras, 3, 1);
+            }
+            if (this.Solicitud_Header.SelectedItem.OtroPermiso == true) {
+                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_OtroPermiso.First().Id_OtroPermiso, 4, 1);
+            }
+  
+        }
 
+        partial void SolicitarVacaciones_Execute()
+        {
+            // Escriba el código aquí.
+
+            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 2);
+           
+
+        }
+
+        partial void SolicitarHorasExtras_Execute()
+        {
+            // Escriba el código aquí.
+            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 3);
+
+        }
+
+        partial void SolicitarOtroPermiso_Execute()
+        {
+            // Escriba el código aquí.
+            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 4);
+
+        }
+
+        partial void LimpiarFiltros_Execute()
+        {
+            // Escriba el código aquí.
+            this.FechaSolicitudDesde = null;
+            this.FechaSolicitudHasta = null;
+
+            this.Solicitud_Header.Load();
         }
     }
 }

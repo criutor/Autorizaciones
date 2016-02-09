@@ -16,10 +16,10 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             if (this.Division_Gerencia.SelectedItem.Superior_GerenteQuery.FirstOrDefault() == null)
             {
-                this.Application.ShowBuscar_Superior(1, this.Division_Gerencia.SelectedItem.Id_Gerencia);
+                this.Application.ShowPersona_Buscar_Superior(1, this.Division_Gerencia.SelectedItem.Id_Gerencia);
             }
             else{
-                this.Application.ShowBuscar_Superior(2, this.Division_Gerencia.SelectedItem.Id_Gerencia);
+                this.Application.ShowPersona_Buscar_Superior(2, this.Division_Gerencia.SelectedItem.Id_Gerencia);
                 }
         }
 
@@ -28,11 +28,11 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             if (this.Division_SubGerencia.SelectedItem.Superior_SubGerenteQuery.FirstOrDefault() == null)
             {
-                this.Application.ShowBuscar_Superior(3, this.Division_SubGerencia.SelectedItem.Id_SubGerencia);
+                this.Application.ShowPersona_Buscar_Superior(3, this.Division_SubGerencia.SelectedItem.Id_SubGerencia);
             }
             else
             {
-                this.Application.ShowBuscar_Superior(4, this.Division_SubGerencia.SelectedItem.Id_SubGerencia);
+                this.Application.ShowPersona_Buscar_Superior(4, this.Division_SubGerencia.SelectedItem.Id_SubGerencia);
             }
 
         }
@@ -42,11 +42,11 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             if (this.Division_Area.SelectedItem.Superior_JefeDirectoQuery.FirstOrDefault() == null)
             {
-                this.Application.ShowBuscar_Superior(5, this.Division_Area.SelectedItem.Id_Area);
+                this.Application.ShowPersona_Buscar_Superior(5, this.Division_Area.SelectedItem.Id_Area);
             }
             else
             {
-                this.Application.ShowBuscar_Superior(6, this.Division_Area.SelectedItem.Id_Area);
+                this.Application.ShowPersona_Buscar_Superior(6, this.Division_Area.SelectedItem.Id_Area);
             }
 
         }

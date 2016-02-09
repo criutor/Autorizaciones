@@ -32,11 +32,11 @@ namespace LightSwitchApplication
 
         }
 
-        partial void Convenios_Colectivos_CanRun(ref bool result)
+        partial void Convenios_Colectivos_CrearListar_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
 
-            result = this.User.HasPermission(Permissions.VerConveniosScreen);
+            //result = this.User.HasPermission(Permissions.VerConveniosScreen);
 
         }
     }

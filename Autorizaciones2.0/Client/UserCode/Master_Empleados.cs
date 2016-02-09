@@ -22,6 +22,8 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
 
+            this.ShowMessageBox("Esta opción es para agregar a quienes no están en FIN 700 (Gerentes, Subgerentes o algún caso especial), de lo contrario deben ser seleccionados desde el botón 'Agregar nuevo empleado' en la ventana 'Área' al hacer click en el nombre del área interesada en la ventana 'Admin. Divisiones' el menú 'ADMINISTRATION' ", "NOTA", MessageBoxOption.Ok);
+
             this.Application.ShowPersona_Crear_Nueva();
 
         }

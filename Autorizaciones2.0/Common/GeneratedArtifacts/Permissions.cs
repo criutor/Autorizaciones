@@ -20,10 +20,6 @@ namespace LightSwitchApplication
         /// Permite administrar la seguridad de la aplicación.
         /// </summary>
         public const string SecurityAdministration = global::Microsoft.LightSwitch.Security.ApplicationPermissions.SecurityAdministration;
-        /// <summary>
-        /// Ver Convenios Screen
-        /// </summary>
-        public const string VerConveniosScreen = "LightSwitchApplication:VerConveniosScreen";
 
         /// <summary>
         /// Obtiene todos los permisos definidos para la aplicación. esto incluye los permisos del sistema y definidos por el usuario.

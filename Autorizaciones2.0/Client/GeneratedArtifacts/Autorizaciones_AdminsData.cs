@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 04/02/2016 18:01:54
+// Fecha de generación: 09/02/2016 18:16:29
 namespace LightSwitchApplication.Implementation
 {
     
@@ -3200,31 +3200,31 @@ namespace LightSwitchApplication.Implementation
         partial void OnObservacionesChanging(string value);
         partial void OnObservacionesChanged();
         /// <summary>
-        /// No hay comentarios para la propiedad Titulo en el esquema.
+        /// No hay comentarios para la propiedad TituloObservacion en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Titulo
+        public string TituloObservacion
         {
             get
             {
-                return this._Titulo;
+                return this._TituloObservacion;
             }
             set
             {
-                this.OnTituloChanging(value);
-                if (object.Equals(this.Titulo, value))
+                this.OnTituloObservacionChanging(value);
+                if (object.Equals(this.TituloObservacion, value))
                 {
                     return;
                 }
-                this._Titulo = value;
-                this.OnTituloChanged();
-                this.OnPropertyChanged("Titulo");
+                this._TituloObservacion = value;
+                this.OnTituloObservacionChanged();
+                this.OnPropertyChanged("TituloObservacion");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Titulo;
-        partial void OnTituloChanging(string value);
-        partial void OnTituloChanged();
+        private string _TituloObservacion;
+        partial void OnTituloObservacionChanging(string value);
+        partial void OnTituloObservacionChanged();
         /// <summary>
         /// No hay comentarios para la propiedad DetalleAdministrativo_fk en el esquema.
         /// </summary>
@@ -3387,6 +3387,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnObservacionesChanging(string value);
         partial void OnObservacionesChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad TituloObservacion en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string TituloObservacion
+        {
+            get
+            {
+                return this._TituloObservacion;
+            }
+            set
+            {
+                this.OnTituloObservacionChanging(value);
+                if (object.Equals(this.TituloObservacion, value))
+                {
+                    return;
+                }
+                this._TituloObservacion = value;
+                this.OnTituloObservacionChanged();
+                this.OnPropertyChanged("TituloObservacion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _TituloObservacion;
+        partial void OnTituloObservacionChanging(string value);
+        partial void OnTituloObservacionChanged();
+        /// <summary>
         /// No hay comentarios para la propiedad DetalleHorasExtras_fk en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3548,6 +3574,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnObservacionesChanging(string value);
         partial void OnObservacionesChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad TituloObservacion en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string TituloObservacion
+        {
+            get
+            {
+                return this._TituloObservacion;
+            }
+            set
+            {
+                this.OnTituloObservacionChanging(value);
+                if (object.Equals(this.TituloObservacion, value))
+                {
+                    return;
+                }
+                this._TituloObservacion = value;
+                this.OnTituloObservacionChanged();
+                this.OnPropertyChanged("TituloObservacion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _TituloObservacion;
+        partial void OnTituloObservacionChanging(string value);
+        partial void OnTituloObservacionChanged();
+        /// <summary>
         /// No hay comentarios para la propiedad DetalleOtroPermiso_fk en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3706,6 +3758,32 @@ namespace LightSwitchApplication.Implementation
         private string _Observaciones;
         partial void OnObservacionesChanging(string value);
         partial void OnObservacionesChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad TituloObservacion en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string TituloObservacion
+        {
+            get
+            {
+                return this._TituloObservacion;
+            }
+            set
+            {
+                this.OnTituloObservacionChanging(value);
+                if (object.Equals(this.TituloObservacion, value))
+                {
+                    return;
+                }
+                this._TituloObservacion = value;
+                this.OnTituloObservacionChanged();
+                this.OnPropertyChanged("TituloObservacion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _TituloObservacion;
+        partial void OnTituloObservacionChanging(string value);
+        partial void OnTituloObservacionChanged();
         /// <summary>
         /// No hay comentarios para la propiedad DetalleVacaciones_fk en el esquema.
         /// </summary>
@@ -4213,6 +4291,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<bool> _OtroPermiso;
         partial void OnOtroPermisoChanging(global::System.Nullable<bool> value);
         partial void OnOtroPermisoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Titulo en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Titulo
+        {
+            get
+            {
+                return this._Titulo;
+            }
+            set
+            {
+                this.OnTituloChanging(value);
+                if (object.Equals(this.Titulo, value))
+                {
+                    return;
+                }
+                this._Titulo = value;
+                this.OnTituloChanged();
+                this.OnPropertyChanged("Titulo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Titulo;
+        partial void OnTituloChanging(string value);
+        partial void OnTituloChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

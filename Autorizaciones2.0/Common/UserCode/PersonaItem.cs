@@ -7,6 +7,7 @@ namespace LightSwitchApplication
 {
     public partial class PersonaItem
     {
+        /*
         public static string removerSignosAcentos(String texto)
         {
             string consignos = "áàäéèëíìïóòöúùuÁÀÄÉÈËÍÌÏÓÒÖÚÙÜ";
@@ -37,5 +38,7 @@ namespace LightSwitchApplication
 
             
         }
+        */
+
     }
 }

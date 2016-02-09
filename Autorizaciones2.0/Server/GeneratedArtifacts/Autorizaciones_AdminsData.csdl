@@ -143,7 +143,7 @@
     </Key>
     <Property Name="Id_Estados_Administrativo" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
-    <Property Name="Titulo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleAdministrativo_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_AdministrativoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Estados_Administrativo" />
   </EntityType>
@@ -153,6 +153,7 @@
     </Key>
     <Property Name="Id_Estados_HorasExtras" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleHorasExtras_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_HorasExtrasItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Estados_HorasExtras" />
   </EntityType>
@@ -162,6 +163,7 @@
     </Key>
     <Property Name="Id_Estados_OtroPermiso" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleOtroPermiso_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_OtroPermisoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" ToRole="Solicitud_Detalle_OtroPermiso" FromRole="Solicitud_Estados_OtroPermiso" />
   </EntityType>
@@ -171,6 +173,7 @@
     </Key>
     <Property Name="Id_Estados_vacaciones" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleVacaciones_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_VacacionesItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Detalle_Vacaciones" FromRole="Solicitud_Estados_Vacaciones" />
   </EntityType>
@@ -193,6 +196,7 @@
     <Property Name="Administrativo" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="HorasExtras" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="OtroPermiso" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Titulo" Type="Edm.String" MaxLength="20" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_Administrativo" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Administrativo_Solicitud_Header" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Header" />
     <NavigationProperty Name="Solicitud_Detalle_HorasExtras" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Header" />

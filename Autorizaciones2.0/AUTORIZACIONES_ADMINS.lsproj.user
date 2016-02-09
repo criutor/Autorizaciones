@@ -5,12 +5,12 @@
     <ProjectView>ProjectFiles</ProjectView>
     <ServerPort>52869</ServerPort>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635902163776285913</SchemaManagementLastModelWriteTime>
-    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:VerConveniosScreen</GrantedPermissions>
+    <SchemaManagementLastModelWriteTime>635906437584229549</SchemaManagementLastModelWriteTime>
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration</GrantedPermissions>
     <Name>AUTORIZACIONES_ADMINS.user</Name>
-    <EncryptedPublishConnectionString />
+    <EncryptedPublishConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdbQVOeao3UyJ/i852G2ClwAAAAACAAAAAAADZgAAwAAAABAAAADpW22/+iJBKSN+k0kDBzPfAAAAAASAAACgAAAAEAAAAJCO/Tu77SmvNOnclGBHCkK4AAAAfZOHeQLsBNQPVjGBZrOFMIUDzxxiVi1zBvlbuVLVmgQvwK42sbUW1mNhO+NEac+F9pDhXUC5D2XCFSWjWfWySabS/kTgjL/u9j1xxJmq9CeKJ/SYHyG9j0RSquLuGHkRhYL96uYFnNI7R7MuowFYAwr8fGnOX/Xljpy67BkIyz5iFI6m7GU6JDQAcidvNSIk3K8Eyi6u40A73xg9BKVNYRsqgaHEp7JLjvj04sK/yc0NkEQ/X+IlqxQAAAApFYp3c4WtrkGHiB0+EXRSUBHq7g==</EncryptedPublishConnectionString>
     <EncryptedPublishSchemaConnectionString />
-    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdbQVOeao3UyJ/i852G2ClwAAAAACAAAAAAADZgAAwAAAABAAAACzXBwk6Lwq6aw2SCsVWeSOAAAAAASAAACgAAAAEAAAAP5iCKyjlJevc6q2VQoeRvq4AAAANyirdX2bPZWMAmTlSEc5dP4bWxRLqq5zT0gVsbT1rLadhVj1lAl99Tc+bl3ScLkMrSePK93rrTqgdVo3D2ZPewx+tPP5Nrntm+bZZ11fqE/Hf4vdInyblgX0PBlzCNSELIm7faCvoFHd3y+56bwa30CyQybYGWzNPDi4EokDUC8KqdI876s/iX8Zjq0CCGjfZtV8RzRekuQQoPGTB+or/9jRkqg2TuAwhU9cuWIAcGFwAPh2T008bhQAAACwVO/PNhNv9kuSFzo/Z3rT7JQS+Q==</EncryptedClientConnectionString>
+    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdbQVOeao3UyJ/i852G2ClwAAAAACAAAAAAADZgAAwAAAABAAAAAfHkJMRh4/P+MpA7TwsKzuAAAAAASAAACgAAAAEAAAAEOj3c1ORlQvT8YryzsdPS24AAAAocoS7Y+YzQs4RDlhBld9tEFVMlp0Uh/LCDlf0kqBVtN3St55P570rvcECaFxaLjOnmg7x/aCwcUKiaiPJnVypOYqOJNXAKJ9ik1WwZFYecQMgBR4RD6vtMiSt42tphbeVbTFCmOFY21h9lYGqXr9RyxyL4cbDUfX7Sj36bU19duCO/7FyvrCXIcK86gjOiP0ZNbN0/GXauxy1ST5sApqksnSmmOlilgBJcN67cOBw+nUL9WJmBoPQBQAAAAcb05Sxw/CG4I7nWapfEpyIdzqVQ==</EncryptedClientConnectionString>
     <EncryptedAdministratorPassword />
     <PublishUserName />
     <EncryptedPublishUserPassword />

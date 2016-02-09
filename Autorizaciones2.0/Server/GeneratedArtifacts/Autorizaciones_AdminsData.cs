@@ -3132,24 +3132,24 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Titulo
+        public global::System.String TituloObservacion
         {
             get
             {
-                return _Titulo;
+                return _TituloObservacion;
             }
             set
             {
-                OnTituloChanging(value);
-                ReportPropertyChanging("Titulo");
-                _Titulo = value;
-                ReportPropertyChanged("Titulo");
-                OnTituloChanged();
+                OnTituloObservacionChanging(value);
+                ReportPropertyChanging("TituloObservacion");
+                _TituloObservacion = value;
+                ReportPropertyChanged("TituloObservacion");
+                OnTituloObservacionChanged();
             }
         }
-        private global::System.String _Titulo;
-        partial void OnTituloChanging(global::System.String value);
-        partial void OnTituloChanged();
+        private global::System.String _TituloObservacion;
+        partial void OnTituloObservacionChanging(global::System.String value);
+        partial void OnTituloObservacionChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -3305,6 +3305,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String TituloObservacion
+        {
+            get
+            {
+                return _TituloObservacion;
+            }
+            set
+            {
+                OnTituloObservacionChanging(value);
+                ReportPropertyChanging("TituloObservacion");
+                _TituloObservacion = value;
+                ReportPropertyChanged("TituloObservacion");
+                OnTituloObservacionChanged();
+            }
+        }
+        private global::System.String _TituloObservacion;
+        partial void OnTituloObservacionChanging(global::System.String value);
+        partial void OnTituloObservacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 DetalleHorasExtras_fk
@@ -3456,6 +3480,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String TituloObservacion
+        {
+            get
+            {
+                return _TituloObservacion;
+            }
+            set
+            {
+                OnTituloObservacionChanging(value);
+                ReportPropertyChanging("TituloObservacion");
+                _TituloObservacion = value;
+                ReportPropertyChanged("TituloObservacion");
+                OnTituloObservacionChanged();
+            }
+        }
+        private global::System.String _TituloObservacion;
+        partial void OnTituloObservacionChanging(global::System.String value);
+        partial void OnTituloObservacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 DetalleOtroPermiso_fk
@@ -3601,6 +3649,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Observaciones;
         partial void OnObservacionesChanging(global::System.String value);
         partial void OnObservacionesChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String TituloObservacion
+        {
+            get
+            {
+                return _TituloObservacion;
+            }
+            set
+            {
+                OnTituloObservacionChanging(value);
+                ReportPropertyChanging("TituloObservacion");
+                _TituloObservacion = value;
+                ReportPropertyChanged("TituloObservacion");
+                OnTituloObservacionChanged();
+            }
+        }
+        private global::System.String _TituloObservacion;
+        partial void OnTituloObservacionChanging(global::System.String value);
+        partial void OnTituloObservacionChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -4072,6 +4144,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private Nullable<global::System.Boolean> _OtroPermiso;
         partial void OnOtroPermisoChanging(Nullable<global::System.Boolean> value);
         partial void OnOtroPermisoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Titulo
+        {
+            get
+            {
+                return _Titulo;
+            }
+            set
+            {
+                OnTituloChanging(value);
+                ReportPropertyChanging("Titulo");
+                _Titulo = value;
+                ReportPropertyChanged("Titulo");
+                OnTituloChanged();
+            }
+        }
+        private global::System.String _Titulo;
+        partial void OnTituloChanging(global::System.String value);
+        partial void OnTituloChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

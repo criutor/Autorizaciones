@@ -129,7 +129,7 @@
           <ScalarProperty Name="Id_Estados_Administrativo" ColumnName="Id_Estados_Administrativo" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleAdministrativo_fk" ColumnName="DetalleAdministrativo_fk" />
-          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -139,6 +139,7 @@
           <ScalarProperty Name="Id_Estados_HorasExtras" ColumnName="Id_Estados_HorasExtras" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleHorasExtras_fk" ColumnName="DetalleHorasExtras_fk" />
+          <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -148,6 +149,7 @@
           <ScalarProperty Name="Id_Estados_OtroPermiso" ColumnName="Id_Estados_OtroPermiso" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleOtroPermiso_fk" ColumnName="DetalleOtroPermiso_fk" />
+          <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -157,6 +159,7 @@
           <ScalarProperty Name="Id_Estados_vacaciones" ColumnName="Id_Estados_vacaciones" />
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleVacaciones_fk" ColumnName="DetalleVacaciones_fk" />
+          <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -179,6 +182,7 @@
           <ScalarProperty Name="Administrativo" ColumnName="Administrativo" />
           <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
           <ScalarProperty Name="OtroPermiso" ColumnName="OtroPermiso" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

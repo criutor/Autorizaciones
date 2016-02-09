@@ -80,16 +80,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        IsReadOnly="True"
-        Name="NombreCompleto"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Computed />
-          <NotSearchable />
-          <NotSortable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Es_Gerente"
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
@@ -2059,15 +2049,6 @@
       </QueryOperationParameter>
     </QueryOperation>
   </EntityContainer>
-  <Permission
-    Name="VerConveniosScreen">
-    <Permission.Attributes>
-      <DisplayName
-        Value="Ver Convenios Screen" />
-      <Description
-        Value="Ver Convenios Screen" />
-    </Permission.Attributes>
-  </Permission>
   <EntityType
     Name="ContratoItem1">
     <EntityType.Methods>
@@ -4218,6 +4199,16 @@
   </EntityType>
   <EntityType
     Name="Division_AreaItem">
+    <EntityType.Attributes>
+      <DefaultScreen
+        Value="LightSwitchApplication:Areas_Detalles_Empleados">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Division_AreaItem/Properties[Id_Area]"
+            ScreenParameter="LightSwitchApplication:Areas_Detalles_Empleados/Properties[Division_AreaItemId_Area]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -4706,7 +4697,7 @@
         Name="Solicitud_Detalle_AdministrativoItem"
         ToEnd="Solicitud_Detalle_Administrativo" />
       <EntityProperty
-        Name="Titulo"
+        Name="TituloObservacion"
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
@@ -4750,6 +4741,14 @@
         FromEnd="Solicitud_Estados_HorasExtras"
         Name="Solicitud_Detalle_HorasExtrasItem"
         ToEnd="Solicitud_Detalle_HorasExtras" />
+      <EntityProperty
+        Name="TituloObservacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4787,6 +4786,14 @@
         FromEnd="Solicitud_Estados_OtroPermiso"
         Name="Solicitud_Detalle_OtroPermisoItem"
         ToEnd="Solicitud_Detalle_OtroPermiso" />
+      <EntityProperty
+        Name="TituloObservacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4823,6 +4830,14 @@
         FromEnd="Solicitud_Estados_Vacaciones"
         Name="Solicitud_Detalle_VacacionesItem"
         ToEnd="Solicitud_Detalle_Vacaciones" />
+      <EntityProperty
+        Name="TituloObservacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4983,6 +4998,14 @@
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Titulo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
