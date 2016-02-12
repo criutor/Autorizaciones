@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 09/02/2016 18:16:29
+// Fecha de generación: 11/02/2016 17:53:36
 namespace LightSwitchApplication.Implementation
 {
     
@@ -815,6 +815,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<double> _SaldoDiasAdmins;
         partial void OnSaldoDiasAdminsChanging(global::System.Nullable<double> value);
         partial void OnSaldoDiasAdminsChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad SaldoVacaciones en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<double> SaldoVacaciones
+        {
+            get
+            {
+                return this._SaldoVacaciones;
+            }
+            set
+            {
+                this.OnSaldoVacacionesChanging(value);
+                if (object.Equals(this.SaldoVacaciones, value))
+                {
+                    return;
+                }
+                this._SaldoVacaciones = value;
+                this.OnSaldoVacacionesChanged();
+                this.OnPropertyChanged("SaldoVacaciones");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<double> _SaldoVacaciones;
+        partial void OnSaldoVacacionesChanging(global::System.Nullable<double> value);
+        partial void OnSaldoVacacionesChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>
@@ -3021,6 +3047,32 @@ namespace LightSwitchApplication.Implementation
         private int _NumeroDias;
         partial void OnNumeroDiasChanging(int value);
         partial void OnNumeroDiasChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad SALDO en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<double> SALDO
+        {
+            get
+            {
+                return this._SALDO;
+            }
+            set
+            {
+                this.OnSALDOChanging(value);
+                if (object.Equals(this.SALDO, value))
+                {
+                    return;
+                }
+                this._SALDO = value;
+                this.OnSALDOChanged();
+                this.OnPropertyChanged("SALDO");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<double> _SALDO;
+        partial void OnSALDOChanging(global::System.Nullable<double> value);
+        partial void OnSALDOChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Solicitud_Header_fk en el esquema.
         /// </summary>

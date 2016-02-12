@@ -16,6 +16,7 @@
           <ScalarProperty Name="Area_fk" ColumnName="Area_fk" />
           <ScalarProperty Name="IDGerencia_para_subgerentes" ColumnName="IDGerencia_para_subgerentes" />
           <ScalarProperty Name="SaldoDiasAdmins" ColumnName="SaldoDiasAdmins" />
+          <ScalarProperty Name="SaldoVacaciones" ColumnName="SaldoVacaciones" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -120,6 +121,7 @@
           <ScalarProperty Name="Termino" ColumnName="Termino" />
           <ScalarProperty Name="NumeroDias" ColumnName="NumeroDias" />
           <ScalarProperty Name="Solicitud_Header_fk" ColumnName="Solicitud_Header_fk" />
+          <ScalarProperty Name="SALDO" ColumnName="SALDO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

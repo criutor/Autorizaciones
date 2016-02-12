@@ -11,7 +11,7 @@ namespace LightSwitchApplication
 {
     public partial class Application
     {
-
+        
 
         partial void Master_SolicitudesPendientes_CanRun(ref bool result)
         {

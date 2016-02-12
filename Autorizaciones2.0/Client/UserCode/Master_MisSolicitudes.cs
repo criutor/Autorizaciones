@@ -11,21 +11,13 @@ namespace LightSwitchApplication
 {
     public partial class Master_MisSolicitudes
     {
-
-        
-        partial void Master_MisSolicitudes_Activated()
+        public static string removerSignosAcentos(String conAcentos)//Quitar acentos del nombre de active directory
         {
-                // Escriba el código aquí.
-
-            //--------------------------------Quitar acentos del nombre de active directory------------------------------
-
-            string NAD = this.Application.User.FullName;
-            int largo = NAD.Length;
-
+            int largo = conAcentos.Length;
             char[] NombreAD = new char[largo];
             int i = 0;
 
-            foreach (char ch in NAD)
+            foreach (char ch in conAcentos)
             {
                 char val = ch;
 
@@ -52,10 +44,14 @@ namespace LightSwitchApplication
             }
 
             string Nombreaux = new string(NombreAD);
-            // -------------------------------------------------------------------------------------------------------------
-            NOMBREAD = Nombreaux; // ****CAMBIAR POR RUT ****
-           
 
+            return Nombreaux.ToUpper();
+        }
+
+        partial void Master_MisSolicitudes_Activated()
+        {
+            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
+           
             if (Persona.Count() == 0)
             {
                 this.MENSAJEPersonaNoCreada(); this.Close(true);
@@ -67,9 +63,11 @@ namespace LightSwitchApplication
                 this.MENSAJECuentaNoAsociada(); this.Close(true);
 
             }
+            else
+            {
 
-            RUTPERSONA = this.Persona.First().Rut_Persona; // Para ver solo mis solicitudes
-
+                RUTPERSONA = this.Persona.First().Rut_Persona; // Parametro de query para ver solo mis solicitudes
+            }
         }
 
         partial void NuevaSolicitud_Execute()
@@ -99,7 +97,7 @@ namespace LightSwitchApplication
 
         }
 
-        partial void MasDetallesAdministrativo_Execute()
+        partial void MasDetalles_Execute()
         {
             // Escriba el código aquí.
 
@@ -124,8 +122,15 @@ namespace LightSwitchApplication
 
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
             this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 2);
-           
 
+            /*PersonaItem persona = this.Application.CreateDataWorkspace().Autorizaciones_AdminsData.PersonaPorNombreAD(removerSignosAcentos(this.Application.User.FullName)).First();
+
+            try
+            {
+                ContratoItem1 contrato = this.Application.CreateDataWorkspace().Fin700v60Data.ContratoPorRut(persona.Rut_Persona).First();
+            }
+            catch (Exception e) { throw new Exception("que paso?", e); }
+            */
         }
 
         partial void SolicitarHorasExtras_Execute()

@@ -152,6 +152,13 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="SaldoVacaciones"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -2047,6 +2054,36 @@
             Value="Valor de la propiedad clave 'Id_SubGerente' de la entidad que se va a recuperar." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="PersonaPorNombreAD"
+      ReturnType="PersonaItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="NombreAD" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="NombreAD" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="NombreAD"
+        ParameterType=":String?" />
     </QueryOperation>
   </EntityContainer>
   <EntityType
@@ -4055,6 +4092,36 @@
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
     </QueryOperation>
+    <QueryOperation
+      Name="ContratoPorRut"
+      ReturnType="ContratoItem1*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="RutTrabajador" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="RutTrabajador" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Contrato" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="RutTrabajador"
+        ParameterType=":String?" />
+    </QueryOperation>
   </EntityContainer>
   <EntityType
     Name="CargoItem">
@@ -4660,6 +4727,13 @@
         FromEnd="Solicitud_Detalle_Vacaciones"
         Name="Solicitud_Estados_Vacaciones"
         ToEnd="Solicitud_Estados_Vacaciones" />
+      <EntityProperty
+        Name="SALDO"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType

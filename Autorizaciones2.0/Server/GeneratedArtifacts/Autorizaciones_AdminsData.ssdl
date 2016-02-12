@@ -115,6 +115,7 @@
     <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
     <Property Name="IDGerencia_para_subgerentes" Type="int" />
     <Property Name="SaldoDiasAdmins" Type="float" />
+    <Property Name="SaldoVacaciones" Type="float" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
   </EntityType>
@@ -211,6 +212,7 @@
     <Property Name="Inicio" Type="date" Nullable="false" />
     <Property Name="Termino" Type="date" Nullable="false" />
     <Property Name="NumeroDias" Type="int" Nullable="false" />
+    <Property Name="SALDO" Type="float" />
     <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_AdministrativoItem">

@@ -60,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\PersonaItem.cs" />
     <Compile Include="UserCode\Solicitud_Detalle_AdministrativoItem.cs" />
+    <Compile Include="UserCode\Solicitud_Detalle_VacacionesItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Common.lsml">

@@ -72,7 +72,7 @@ namespace LightSwitchApplication
         partial void AprobarSolicitud_Execute()
         {
             // Escriba el código aquí.
-
+          
         }
 
         partial void RechazarSolicitud_Execute()

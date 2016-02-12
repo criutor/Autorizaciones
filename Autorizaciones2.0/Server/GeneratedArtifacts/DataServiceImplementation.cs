@@ -37,6 +37,15 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> PersonaPorNombreAD(string NombreAD)
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.PersonaItem>("Persona"),
+                (p) => (p.NombreAD.CompareTo(NombreAD) == 0));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -247,6 +256,15 @@ namespace LightSwitchApplication.Implementation
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::Fin700v60Data.Implementation.CtoT_PersonaItem>("CtoT_Persona"),
                 (c) => (c.Estado_Persona.CompareTo("c") == 0));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Fin700v60Data.Implementation.ContratoItem1> ContratoPorRut(string RutTrabajador)
+        {
+            global::System.Linq.IQueryable<global::Fin700v60Data.Implementation.ContratoItem1> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Fin700v60Data.Implementation.ContratoItem1>("Contrato"),
+                (c) => (c.RutTrabajador.CompareTo(RutTrabajador) == 0));
             return query;
         }
     

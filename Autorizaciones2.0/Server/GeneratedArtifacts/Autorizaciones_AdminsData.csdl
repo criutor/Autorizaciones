@@ -14,6 +14,7 @@
     <Property Name="NombreAD" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="IDGerencia_para_subgerentes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="SaldoDiasAdmins" Type="Edm.Double" />
+    <Property Name="SaldoVacaciones" Type="Edm.Double" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
@@ -133,6 +134,7 @@
     <Property Name="Inicio" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="Termino" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="NumeroDias" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="SALDO" Type="Edm.Double" />
     <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_Vacaciones" />
     <NavigationProperty Name="Solicitud_Estados_Vacaciones" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Estados_Vacaciones" FromRole="Solicitud_Detalle_Vacaciones" />

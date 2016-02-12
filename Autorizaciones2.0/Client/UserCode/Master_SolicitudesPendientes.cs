@@ -55,7 +55,7 @@ namespace LightSwitchApplication
                 NombreAD[i] = val;
                 i++;
             }
-
+            
             string Nombreaux = new string(NombreAD);
            // -------------------------------------------------------------------------------------------------------------
             

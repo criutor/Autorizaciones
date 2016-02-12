@@ -756,6 +756,21 @@ namespace LightSwitchApplication
         partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonaPorNombreAD_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonaPorNombreAD_Executing(string NombreAD);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonaPorNombreAD_PreprocessQuery(string NombreAD, ref global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonaPorNombreAD_Executed(string NombreAD, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonaPorNombreAD_ExecuteFailed(string NombreAD, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2228,6 +2243,39 @@ namespace LightSwitchApplication
             {
                 d.SaveChanges_ExecuteFailed(ex);
             }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>
+                __PersonaPorNombreADEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>(
+                    "PersonaPorNombreAD",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_PreprocessQuery);
+            private static bool __PersonaPorNombreAD_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.PersonaPorNombreAD_CanExecute(ref r);
+                return r;
+            }
+            private static void __PersonaPorNombreAD_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PersonaPorNombreAD_Executing((string)args[0]);
+            }
+            private static void __PersonaPorNombreAD_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PersonaPorNombreAD_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem>)args[1]);
+            }
+            private static void __PersonaPorNombreAD_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.PersonaPorNombreAD_ExecuteFailed((string)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __PersonaPorNombreAD_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem>)args[1];
+                d.PersonaPorNombreAD_PreprocessQuery((string)args[0], ref query);
+                return query;
+            }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService>
@@ -2506,6 +2554,21 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void PersonasContratadas_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContratoPorRut_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ContratoPorRut_Executing(string RutTrabajador);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ContratoPorRut_PreprocessQuery(string RutTrabajador, ref global::System.Linq.IQueryable<global::LightSwitchApplication.ContratoItem1> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ContratoPorRut_Executed(string RutTrabajador, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ContratoItem1> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void ContratoPorRut_ExecuteFailed(string RutTrabajador, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -2961,6 +3024,39 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.CtoT_PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.CtoT_PersonaItem>)args[0];
                 d.PersonasContratadas_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Fin700v60DataService, global::LightSwitchApplication.ContratoItem1>
+                __ContratoPorRutEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Fin700v60DataService, global::LightSwitchApplication.ContratoItem1>(
+                    "ContratoPorRut",
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__ContratoPorRut_CanExecute,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__ContratoPorRut_Executing,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__ContratoPorRut_Executed,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__ContratoPorRut_Failed,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__ContratoPorRut_PreprocessQuery);
+            private static bool __ContratoPorRut_CanExecute(global::LightSwitchApplication.Fin700v60DataService d, bool r)
+            {
+                d.ContratoPorRut_CanExecute(ref r);
+                return r;
+            }
+            private static void __ContratoPorRut_Executing(global::LightSwitchApplication.Fin700v60DataService d, object[] args)
+            {
+                d.ContratoPorRut_Executing((string)args[0]);
+            }
+            private static void __ContratoPorRut_Executed(global::LightSwitchApplication.Fin700v60DataService d, object[] args)
+            {
+                d.ContratoPorRut_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ContratoItem1>)args[1]);
+            }
+            private static void __ContratoPorRut_Failed(global::LightSwitchApplication.Fin700v60DataService d, object[] args, global::System.Exception ex)
+            {
+                d.ContratoPorRut_ExecuteFailed((string)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __ContratoPorRut_PreprocessQuery(global::LightSwitchApplication.Fin700v60DataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.ContratoItem1> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.ContratoItem1>)args[1];
+                d.ContratoPorRut_PreprocessQuery((string)args[0], ref query);
                 return query;
             }
     

@@ -1017,6 +1017,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoDiasAdmins]"
           Type="float" />
+        <SsdlProperty
+          Name="SaldoVacaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones]"
+          Type="float" />
         <SsdlForeignKeyProperty
           Name="Convenio_fk"
           Nullable="True"
@@ -1183,6 +1188,11 @@
           Nullable="False"
           Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[NumeroDias]"
           Type="int" />
+        <SsdlProperty
+          Name="SALDO"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[SALDO]"
+          Type="float" />
         <SsdlForeignKeyProperty
           Name="Solicitud_Header_fk"
           Nullable="False"

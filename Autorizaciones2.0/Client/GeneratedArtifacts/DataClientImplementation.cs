@@ -79,6 +79,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("SaldoDiasAdmins");
         }
         
+        partial void OnSaldoVacacionesChanged()
+        {
+            this.___OnPropertyChanged("SaldoVacaciones");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get
@@ -1050,6 +1055,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnNumeroDiasChanged()
         {
             this.___OnPropertyChanged("NumeroDias");
+        }
+        
+        partial void OnSALDOChanged()
+        {
+            this.___OnPropertyChanged("SALDO");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.IImplementation.Solicitud_HeaderItem

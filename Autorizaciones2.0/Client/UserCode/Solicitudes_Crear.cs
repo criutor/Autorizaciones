@@ -8,6 +8,10 @@ using Microsoft.LightSwitch.Framework.Client;
 using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
 
+using System.ComponentModel;
+using Microsoft.LightSwitch.Threading;
+using System.ServiceModel.DomainServices.Client;
+
 namespace LightSwitchApplication
 {
     public partial class Solicitudes_Crear
@@ -19,7 +23,7 @@ namespace LightSwitchApplication
             solicitud.FechaSolicitud = DateTime.Today;
             solicitud.NombreTrabajador = PersonaItem.NombreAD;
             solicitud.Fechaingreso = DateTime.Today; // cambiar por la tabla contrato!!!
-            solicitud.PersonaItem1 = PersonaItem;
+            solicitud.PersonaItem1 = PersonaItem; 
 
             if (PersonaItem.Es_Gerente == true) { solicitud.Departamento = " Gerencia de " + PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre; solicitud.Gerencia = PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre; }
             else
@@ -52,7 +56,7 @@ namespace LightSwitchApplication
 
                 solicitud.Vacaciones = true;
                 solicitud.Titulo = "Vacaciones";
-
+                
                 this.Solicitud_Detalle_Vacaciones = new Solicitud_Detalle_VacacionesItem();
                 this.Solicitud_Detalle_Vacaciones.Solicitud_HeaderItem = solicitud;
                 //this.Solicitud_Detalle_Vacaciones.SaldoVacaciones
@@ -106,25 +110,29 @@ namespace LightSwitchApplication
 
         partial void Solicitudes_Crear_Activated()
         {
-            // Escriba el código aquí.
+            //TimeSpan diferenciaDias = this.Solicitud_Detalle_Vacaciones.Termino - this.Solicitud_Detalle_Vacaciones.Inicio;
+            //this.Solicitud_Detalle_Vacaciones.NumeroDias = diferenciaDias.Days;
+
+            
             if (TIPOSOLICITUD == 1) {
 
                 this.FindControl("Solicitud_Detalle_DiaAdministrativo").IsVisible = true;
                 this.FindControl("Estados_Solicitud_DiaAdministrativo").IsVisible = true; 
-            }
+            }else
 
             if (TIPOSOLICITUD == 2) {
 
                 this.FindControl("Solicitud_Detalle_Vacaciones").IsVisible = true;
-                this.FindControl("Estados_Solicitud_Vacaciones").IsVisible = true; 
-            }
+                this.FindControl("Estados_Solicitud_Vacaciones").IsVisible = true;
+                
+            }else
 
             if (TIPOSOLICITUD == 3)
             {
 
                 this.FindControl("Solicitud_Detalles_HorasExtras").IsVisible = true;
                 this.FindControl("Estados_Solicitud_HorasExtras").IsVisible = true;
-            }
+            }else
 
             if (TIPOSOLICITUD == 4)
             {
@@ -133,5 +141,29 @@ namespace LightSwitchApplication
                 this.FindControl("Estados_Solicitud_OtroPermiso").IsVisible = true;
             }
         }
+
+        partial void Solicitudes_Crear_Created()
+        {
+            // Detecta si se ha hecho algún cambio en la pantalla
+            Dispatchers.Main.BeginInvoke(() =>
+            {
+                ((INotifyPropertyChanged)this.Solicitud_Detalle_Vacaciones).PropertyChanged +=
+                    new PropertyChangedEventHandler(CrearNuevaSolicitud_PropertyChanged);
+            });
+            
+        }
+        //Detecta si se ha hecho algún cambio en el campo Inicio
+        void CrearNuevaSolicitud_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals("Inicio"))
+            {
+                //this.Application.CreateDataWorkspace().Autorizaciones_AdminsData.PersonaPorNombreAD() realizar alguna consulta para activar el procedimiento de almacenado que trae el saldo de vacaciones al servidor.
+                //le ingresamos la fecha que proporciona el usuario a traves de un procedimiento de almacenado que lo guerde en la bd para acceder desde el servidor
+                // Guardamos desde el servidor el valor de la consulta en persona.saldoVacaciones
+                //desplegamos ese valor en this.Solicitud_Detalle_Vacaciones.SALDO
+
+            }
+        }
+
     }
 }

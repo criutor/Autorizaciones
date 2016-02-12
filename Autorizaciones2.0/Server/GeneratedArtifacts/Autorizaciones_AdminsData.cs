@@ -1813,6 +1813,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Double> SaldoVacaciones
+        {
+            get
+            {
+                return _SaldoVacaciones;
+            }
+            set
+            {
+                OnSaldoVacacionesChanging(value);
+                ReportPropertyChanging("SaldoVacaciones");
+                _SaldoVacaciones = value;
+                ReportPropertyChanged("SaldoVacaciones");
+                OnSaldoVacacionesChanged();
+            }
+        }
+        private Nullable<global::System.Double> _SaldoVacaciones;
+        partial void OnSaldoVacacionesChanging(Nullable<global::System.Double> value);
+        partial void OnSaldoVacacionesChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Convenio_fk
         {
             get
@@ -2955,6 +2979,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.Int32 _NumeroDias;
         partial void OnNumeroDiasChanging(global::System.Int32 value);
         partial void OnNumeroDiasChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> SALDO
+        {
+            get
+            {
+                return _SALDO;
+            }
+            set
+            {
+                OnSALDOChanging(value);
+                ReportPropertyChanging("SALDO");
+                _SALDO = value;
+                ReportPropertyChanged("SALDO");
+                OnSALDOChanged();
+            }
+        }
+        private Nullable<global::System.Double> _SALDO;
+        partial void OnSALDOChanging(Nullable<global::System.Double> value);
+        partial void OnSALDOChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

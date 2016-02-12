@@ -851,6 +851,17 @@ namespace LightSwitchApplication
             return this.Details.Methods.Superior_SubGerente_SingleOrDefault.CreateInvocation(Id_SubGerente).Execute();
         }
         
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        /// <param name="NombreAD">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PersonaItem> PersonaPorNombreAD(string NombreAD)
+        {
+            return this.Details.Methods.PersonaPorNombreAD.CreateInvocation(NombreAD).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1200,6 +1211,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.Superior_SubGerente_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Superior_SubGerenteItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaPorNombreAD
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.PersonaPorNombreAD) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>;
                     }
                 }
                 
@@ -1756,6 +1775,16 @@ namespace LightSwitchApplication
                     c(d, ref d._Superior_SubGerente_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    PersonaPorNombreAD = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "PersonaPorNombreAD",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._PersonaPorNombreAD_Stub);
+                private static void _PersonaPorNombreAD_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PersonaPorNombreAD, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2127,6 +2156,9 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Superior_SubGerenteItem>.Data _Superior_SubGerente_SingleOrDefault;
             
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaPorNombreAD;
+            
         }
     
         #endregion
@@ -2364,6 +2396,17 @@ namespace LightSwitchApplication
             return this.Details.Methods.PersonasContratadas.CreateInvocation().Execute();
         }
         
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        /// <param name="RutTrabajador">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.ContratoItem1> ContratoPorRut(string RutTrabajador)
+        {
+            return this.Details.Methods.ContratoPorRut.CreateInvocation(RutTrabajador).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -2497,6 +2540,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties.PersonasContratadas) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.CtoT_PersonaItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1> ContratoPorRut
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties.ContratoPorRut) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>;
                     }
                 }
                 
@@ -2671,6 +2722,16 @@ namespace LightSwitchApplication
                     c(d, ref d._PersonasContratadas, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>.Entry
+                    ContratoPorRut = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>.Entry(
+                        "ContratoPorRut",
+                        global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties._ContratoPorRut_Stub);
+                private static void _ContratoPorRut_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>.Data> c, global::LightSwitchApplication.Fin700v60Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ContratoPorRut, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2778,6 +2839,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.CtoT_PersonaItem>.Data _PersonasContratadas;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>.Data _ContratoPorRut;
             
         }
     
