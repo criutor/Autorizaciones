@@ -30,12 +30,14 @@ namespace LightSwitchApplication
         partial void NumeroDias_Validate(EntityValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
-                TimeSpan diferenciaDias = this.Termino - this.Inicio;
-                //long dif = diferenciaDias.Ticks;
-                int dias = diferenciaDias.Days;
+                
                 if (this.NumeroDias > this.SALDO)
                 {
                     results.AddPropertyError("El número de días a solicitar debe ser menor que tu SALDO DE DÍAS");
+                }
+                if (this.NumeroDias <= 0)
+                {
+                    results.AddPropertyError("El número de días a solicitar debe ser mayor a cero");
                 }
         }
 

@@ -750,5 +750,669 @@ namespace LightSwitchApplication
         #endregion
     }
     
+    /// <summary>
+    /// No hay ninguna descripción modelada
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class Solicitud_Detalle_OtroPermisoItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass>
+    {
+        #region Constructors
+    
+        /// <summary>
+        /// Inicializa una nueva instancia de la entidad Solicitud_Detalle_OtroPermisoItem.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Solicitud_Detalle_OtroPermisoItem()
+            : this(null)
+        {
+        }
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Solicitud_Detalle_OtroPermisoItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem> entitySet)
+            : base(entitySet)
+        {
+            global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.Initialize(this);
+        }
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_Detalle_OtroPermisoItem_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_Detalle_OtroPermisoItem_AllowSaveWithErrors(ref bool result);
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.EntitySet.Details.DataService.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Public Properties
+    
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int Id_OtroPermiso
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Id_OtroPermiso);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_OtroPermiso_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_OtroPermiso_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_OtroPermiso_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool ConDescuento
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.ConDescuento);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.ConDescuento, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConDescuento_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConDescuento_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConDescuento_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime Inicio
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Inicio);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Inicio, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Inicio_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Inicio_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Inicio_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime Termino
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Termino);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Termino, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Termino_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Termino_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Termino_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<double> NumeroDias
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.NumeroDias);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.NumeroDias, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NumeroDias_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NumeroDias_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NumeroDias_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Solicitud_HeaderItem Solicitud_HeaderItem
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_HeaderItem);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_HeaderItem, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_HeaderItem_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_HeaderItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_HeaderItem_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem> Solicitud_Estados_OtroPermiso
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_Estados_OtroPermiso);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem> Solicitud_Estados_OtroPermisoQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.GetQuery(this, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_Estados_OtroPermiso);
+            }
+        }
+
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem,
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass,
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass>>
+        {
+    
+            static DetailsClass()
+            {
+                var initializeEntry = global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Id_OtroPermiso;
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass>.Entry
+                __Solicitud_Detalle_OtroPermisoItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.__Solicitud_Detalle_OtroPermisoItem_CreateNew,
+                    global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.__Solicitud_Detalle_OtroPermisoItem_Created,
+                    global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.__Solicitud_Detalle_OtroPermisoItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem __Solicitud_Detalle_OtroPermisoItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem> es)
+            {
+                return new global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem(es);
+            }
+            private static void __Solicitud_Detalle_OtroPermisoItem_Created(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+            {
+                e.Solicitud_Detalle_OtroPermisoItem_Created();
+            }
+            private static bool __Solicitud_Detalle_OtroPermisoItem_AllowSaveWithErrors(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+            {
+                bool result = false;
+                e.Solicitud_Detalle_OtroPermisoItem_AllowSaveWithErrors(ref result);
+                return result;
+            }
+    
+            public DetailsClass() : base()
+            {
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass> Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass> Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+    
+            public new global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass>
+            {
+    
+                public PropertySet() : base()
+                {
+                }
+    
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, int> Id_OtroPermiso
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Id_OtroPermiso) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, int>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, bool> ConDescuento
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.ConDescuento) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, bool>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime> Inicio
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Inicio) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime> Termino
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Termino) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.Nullable<double>> NumeroDias
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.NumeroDias) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.Nullable<double>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem> Solicitud_HeaderItem
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_HeaderItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem> Solicitud_Estados_OtroPermiso
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_Estados_OtroPermiso) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem>;
+                    }
+                }
+                
+            }
+    
+            #pragma warning disable 109
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
+            {
+                new int Id_OtroPermiso { get; }
+                new bool ConDescuento { get; set; }
+                new global::System.DateTime Inicio { get; set; }
+                new global::System.DateTime Termino { get; set; }
+                new global::System.Nullable<double> NumeroDias { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Solicitud_HeaderItem { get; set; }
+                new global::System.Collections.IEnumerable Solicitud_Estados_OtroPermiso { get; }
+            }
+            #pragma warning restore 109
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal class PropertySetProperties
+            {
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, int>.Entry
+                    Id_OtroPermiso = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, int>.Entry(
+                        "Id_OtroPermiso",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Id_OtroPermiso_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Id_OtroPermiso_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Id_OtroPermiso_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Id_OtroPermiso_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Id_OtroPermiso_OnValueChanged);
+                private static void _Id_OtroPermiso_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Id_OtroPermiso, sf);
+                }
+                private static bool _Id_OtroPermiso_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    bool result = false;
+                    e.Id_OtroPermiso_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Id_OtroPermiso_Validate(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Id_OtroPermiso_Validate(r);
+                }
+                private static int _Id_OtroPermiso_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Id_OtroPermiso;
+                }
+                private static void _Id_OtroPermiso_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    e.Id_OtroPermiso_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, bool>.Entry
+                    ConDescuento = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, bool>.Entry(
+                        "ConDescuento",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._ConDescuento_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._ConDescuento_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._ConDescuento_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._ConDescuento_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._ConDescuento_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._ConDescuento_OnValueChanged);
+                private static void _ConDescuento_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConDescuento, sf);
+                }
+                private static bool _ConDescuento_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    bool result = false;
+                    e.ConDescuento_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ConDescuento_Validate(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ConDescuento_Validate(r);
+                }
+                private static bool _ConDescuento_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ConDescuento;
+                }
+                private static void _ConDescuento_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, bool v)
+                {
+                    d.ImplementationEntity.ConDescuento = v;
+                }
+                private static void _ConDescuento_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    e.ConDescuento_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Entry
+                    Inicio = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Entry(
+                        "Inicio",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Inicio_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Inicio_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Inicio_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Inicio_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Inicio_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Inicio_OnValueChanged);
+                private static void _Inicio_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Inicio, sf);
+                }
+                private static bool _Inicio_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    bool result = false;
+                    e.Inicio_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Inicio_Validate(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Inicio_Validate(r);
+                }
+                private static global::System.DateTime _Inicio_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Inicio;
+                }
+                private static void _Inicio_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, global::System.DateTime v)
+                {
+                    d.ImplementationEntity.Inicio = global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _Inicio_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    e.Inicio_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Entry
+                    Termino = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Entry(
+                        "Termino",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Termino_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Termino_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Termino_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Termino_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Termino_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Termino_OnValueChanged);
+                private static void _Termino_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Termino, sf);
+                }
+                private static bool _Termino_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    bool result = false;
+                    e.Termino_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Termino_Validate(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Termino_Validate(r);
+                }
+                private static global::System.DateTime _Termino_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Termino;
+                }
+                private static void _Termino_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, global::System.DateTime v)
+                {
+                    d.ImplementationEntity.Termino = global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _Termino_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    e.Termino_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.Nullable<double>>.Entry
+                    NumeroDias = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.Nullable<double>>.Entry(
+                        "NumeroDias",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._NumeroDias_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._NumeroDias_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._NumeroDias_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._NumeroDias_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._NumeroDias_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._NumeroDias_OnValueChanged);
+                private static void _NumeroDias_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.Nullable<double>>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NumeroDias, sf);
+                }
+                private static bool _NumeroDias_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    bool result = false;
+                    e.NumeroDias_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _NumeroDias_Validate(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.NumeroDias_Validate(r);
+                }
+                private static global::System.Nullable<double> _NumeroDias_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.NumeroDias;
+                }
+                private static void _NumeroDias_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, global::System.Nullable<double> v)
+                {
+                    d.ImplementationEntity.NumeroDias = v;
+                }
+                private static void _NumeroDias_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    e.NumeroDias_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Entry
+                    Solicitud_HeaderItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Entry(
+                        "Solicitud_HeaderItem",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_Refresh,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_HeaderItem_OnValueChanged);
+                private static void _Solicitud_HeaderItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Solicitud_HeaderItem, sf);
+                }
+                private static bool _Solicitud_HeaderItem_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    bool result = false;
+                    e.Solicitud_HeaderItem_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Solicitud_HeaderItem_Validate(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Solicitud_HeaderItem_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Solicitud_HeaderItem_GetCoreImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Solicitud_HeaderItem;
+                }
+                private static global::LightSwitchApplication.Solicitud_HeaderItem _Solicitud_HeaderItem_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass>(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_HeaderItem, ref d._Solicitud_HeaderItem);
+                }
+                private static void _Solicitud_HeaderItem_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, global::LightSwitchApplication.Solicitud_HeaderItem v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_HeaderItem, ref d._Solicitud_HeaderItem, (i, ev) => i.Solicitud_HeaderItem = ev, v);
+                }
+                private static void _Solicitud_HeaderItem_Refresh(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_HeaderItem, ref d._Solicitud_HeaderItem);
+                }
+                private static void _Solicitud_HeaderItem_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem e)
+                {
+                    e.Solicitud_HeaderItem_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem>.Entry
+                    Solicitud_Estados_OtroPermiso = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem>.Entry(
+                        "Solicitud_Estados_OtroPermiso",
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_Estados_OtroPermiso_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_Estados_OtroPermiso_GetReferencedEntities,
+                        global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties._Solicitud_Estados_OtroPermiso_GetEntityCollection);
+                private static void _Solicitud_Estados_OtroPermiso_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Solicitud_Estados_OtroPermiso, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem> _Solicitud_Estados_OtroPermiso_GetReferencedEntities(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem.DetailsClass>(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass.PropertySetProperties.Solicitud_Estados_OtroPermiso, ref d._Solicitud_Estados_OtroPermiso);
+                }
+                private static global::System.Collections.IEnumerable _Solicitud_Estados_OtroPermiso_GetEntityCollection(global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Solicitud_Estados_OtroPermiso;
+                }
+    
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, int>.Data _Id_OtroPermiso;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, bool>.Data _ConDescuento;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Data _Inicio;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.DateTime>.Data _Termino;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::System.Nullable<double>>.Data _NumeroDias;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Data _Solicitud_HeaderItem;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem, global::LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem>.Data _Solicitud_Estados_OtroPermiso;
+            
+        }
+    
+        #endregion
+    }
+    
     #endregion
 }

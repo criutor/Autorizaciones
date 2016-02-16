@@ -744,6 +744,42 @@ namespace LightSwitchApplication
         partial void Superior_SubGerente_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Superior_SubGerenteItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Inserting(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Inserted(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Updating(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Updated(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Deleting(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Deleted(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Validate(global::LightSwitchApplication.ConsultarSaldoVacacionesItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarSaldoVacaciones_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2215,6 +2251,81 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Superior_SubGerenteItem, bool>> filter = null;
                 d.Superior_SubGerente_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarSaldoVacacionesItem>
+                __ConsultarSaldoVacacionesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarSaldoVacacionesItem>(
+                    "ConsultarSaldoVacaciones",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarSaldoVacaciones_Filter);
+            private static bool __ConsultarSaldoVacaciones_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarSaldoVacaciones_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ConsultarSaldoVacaciones_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarSaldoVacaciones_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ConsultarSaldoVacaciones_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarSaldoVacaciones_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ConsultarSaldoVacaciones_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarSaldoVacaciones_CanRead(ref result);
+                return result;
+            }
+            private static void __ConsultarSaldoVacaciones_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            {
+                d.ConsultarSaldoVacaciones_Inserting(e);
+            }
+            private static void __ConsultarSaldoVacaciones_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            {
+                d.ConsultarSaldoVacaciones_Inserted(e);
+            }
+            private static void __ConsultarSaldoVacaciones_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            {
+                d.ConsultarSaldoVacaciones_Updating(e);
+            }
+            private static void __ConsultarSaldoVacaciones_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            {
+                d.ConsultarSaldoVacaciones_Updated(e);
+            }
+            private static void __ConsultarSaldoVacaciones_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            {
+                d.ConsultarSaldoVacaciones_Deleting(e);
+            }
+            private static void __ConsultarSaldoVacaciones_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            {
+                d.ConsultarSaldoVacaciones_Deleted(e);
+            }
+            private static void __ConsultarSaldoVacaciones_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarSaldoVacacionesItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ConsultarSaldoVacaciones_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, bool>> __ConsultarSaldoVacaciones_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, bool>> filter = null;
+                d.ConsultarSaldoVacaciones_Filter(ref filter);
                 return filter;
             }
             

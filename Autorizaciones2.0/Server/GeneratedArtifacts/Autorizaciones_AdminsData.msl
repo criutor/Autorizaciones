@@ -16,7 +16,6 @@
           <ScalarProperty Name="Area_fk" ColumnName="Area_fk" />
           <ScalarProperty Name="IDGerencia_para_subgerentes" ColumnName="IDGerencia_para_subgerentes" />
           <ScalarProperty Name="SaldoDiasAdmins" ColumnName="SaldoDiasAdmins" />
-          <ScalarProperty Name="SaldoVacaciones" ColumnName="SaldoVacaciones" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -132,6 +131,7 @@
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleAdministrativo_fk" ColumnName="DetalleAdministrativo_fk" />
           <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
+          <ScalarProperty Name="MensajeBy" ColumnName="MensajeBy" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -142,6 +142,7 @@
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleHorasExtras_fk" ColumnName="DetalleHorasExtras_fk" />
           <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
+          <ScalarProperty Name="MensajeBy" ColumnName="MensajeBy" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -152,6 +153,7 @@
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleOtroPermiso_fk" ColumnName="DetalleOtroPermiso_fk" />
           <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
+          <ScalarProperty Name="MensajeBy" ColumnName="MensajeBy" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -162,6 +164,7 @@
           <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
           <ScalarProperty Name="DetalleVacaciones_fk" ColumnName="DetalleVacaciones_fk" />
           <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
+          <ScalarProperty Name="MensajeBy" ColumnName="MensajeBy" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -212,6 +215,17 @@
           <ScalarProperty Name="Id_SubGerente" ColumnName="Id_SubGerente" />
           <ScalarProperty Name="Subgerencia_fk" ColumnName="Subgerencia_fk" />
           <ScalarProperty Name="Persona_fk" ColumnName="Persona_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultarSaldoVacaciones">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ConsultarSaldoVacacionesItem)">
+        <MappingFragment StoreEntitySet="ConsultarSaldoVacaciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Rut" ColumnName="Rut" />
+          <ScalarProperty Name="Contrato" ColumnName="Contrato" />
+          <ScalarProperty Name="Saldo" ColumnName="Saldo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

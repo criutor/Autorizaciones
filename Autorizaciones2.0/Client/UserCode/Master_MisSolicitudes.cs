@@ -50,8 +50,9 @@ namespace LightSwitchApplication
 
         partial void Master_MisSolicitudes_Activated()
         {
-            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
-           
+            this.LimpiarFiltros_Execute();// traer todas las solicitudes
+            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
+            NOMBREAD = "RUBIO FLORES, GUSTAVO";
             if (Persona.Count() == 0)
             {
                 this.MENSAJEPersonaNoCreada(); this.Close(true);
@@ -80,7 +81,7 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona,1);
+            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 1);
         }
 
         partial void MENSAJECuentaNoAsociada_Execute()
@@ -101,19 +102,23 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
 
-            if (this.Solicitud_Header.SelectedItem.Administrativo == true) {
+            if (this.Solicitud_Header.SelectedItem.Administrativo == true)
+            {
                 this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Administrativo.First().Id_Administrativo, 1, 1);
             }
-            if (this.Solicitud_Header.SelectedItem.Vacaciones == true) {
+            if (this.Solicitud_Header.SelectedItem.Vacaciones == true)
+            {
                 this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Vacaciones.First().Id_Vacaciones, 2, 1);
             }
-            if (this.Solicitud_Header.SelectedItem.HorasExtras == true) {
+            if (this.Solicitud_Header.SelectedItem.HorasExtras == true)
+            {
                 this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_HorasExtras.First().Id_HorasExtras, 3, 1);
             }
-            if (this.Solicitud_Header.SelectedItem.OtroPermiso == true) {
+            if (this.Solicitud_Header.SelectedItem.OtroPermiso == true)
+            {
                 this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_OtroPermiso.First().Id_OtroPermiso, 4, 1);
             }
-  
+
         }
 
         partial void SolicitarVacaciones_Execute()
@@ -154,6 +159,12 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             this.FechaSolicitudDesde = null;
             this.FechaSolicitudHasta = null;
+            this.Administrativo = true;
+            this.Vacaciones = true;
+            this.OtroPermiso = true;
+            this.HorasExtras = true;
+            this.Rechazada = true;
+            this.Completada = true;
 
             this.Solicitud_Header.Load();
         }

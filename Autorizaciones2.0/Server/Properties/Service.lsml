@@ -823,6 +823,40 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="ConsultarSaldoVacaciones">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ConsultarSaldoVacaciones" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConsultarSaldoVacacionesItem/Properties[id]"
+          Type="int" />
+        <SsdlProperty
+          Name="Fecha"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConsultarSaldoVacacionesItem/Properties[Fecha]"
+          Type="date" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Rut"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConsultarSaldoVacacionesItem/Properties[Rut]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="Contrato"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConsultarSaldoVacacionesItem/Properties[Contrato]"
+          Type="int" />
+        <SsdlProperty
+          Name="Saldo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarSaldoVacacionesItem/Properties[Saldo]"
+          Type="float" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Contrato">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -1016,11 +1050,6 @@
           Name="SaldoDiasAdmins"
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoDiasAdmins]"
-          Type="float" />
-        <SsdlProperty
-          Name="SaldoVacaciones"
-          Nullable="True"
-          Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones]"
           Type="float" />
         <SsdlForeignKeyProperty
           Name="Convenio_fk"
@@ -1224,6 +1253,12 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[TituloObservacion]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MensajeBy"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[MensajeBy]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleAdministrativo_fk"
           Nullable="False"
@@ -1254,6 +1289,12 @@
           Name="TituloObservacion"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[TituloObservacion]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MensajeBy"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[MensajeBy]"
           Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleHorasExtras_fk"
@@ -1286,6 +1327,12 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[TituloObservacion]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MensajeBy"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[MensajeBy]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleOtroPermiso_fk"
           Nullable="False"
@@ -1316,6 +1363,12 @@
           Name="TituloObservacion"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[TituloObservacion]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MensajeBy"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[MensajeBy]"
           Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="DetalleVacaciones_fk"

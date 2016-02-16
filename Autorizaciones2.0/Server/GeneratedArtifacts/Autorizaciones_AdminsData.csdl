@@ -14,7 +14,6 @@
     <Property Name="NombreAD" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="IDGerencia_para_subgerentes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="SaldoDiasAdmins" Type="Edm.Double" />
-    <Property Name="SaldoVacaciones" Type="Edm.Double" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
@@ -146,6 +145,7 @@
     <Property Name="Id_Estados_Administrativo" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleAdministrativo_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_AdministrativoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Estados_Administrativo" />
   </EntityType>
@@ -156,6 +156,7 @@
     <Property Name="Id_Estados_HorasExtras" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleHorasExtras_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_HorasExtrasItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Estados_HorasExtras" />
   </EntityType>
@@ -166,6 +167,7 @@
     <Property Name="Id_Estados_OtroPermiso" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleOtroPermiso_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_OtroPermisoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" ToRole="Solicitud_Detalle_OtroPermiso" FromRole="Solicitud_Estados_OtroPermiso" />
   </EntityType>
@@ -176,6 +178,7 @@
     <Property Name="Id_Estados_vacaciones" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="DetalleVacaciones_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_VacacionesItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Detalle_Vacaciones" FromRole="Solicitud_Estados_Vacaciones" />
   </EntityType>
@@ -235,6 +238,16 @@
     <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Division_SubGerenciaItem" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Division_SubGerencia" ToRole="Division_SubGerencia" FromRole="Superior_SubGerente" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Persona" ToRole="Persona" FromRole="Superior_SubGerente" />
+  </EntityType>
+  <EntityType Name="ConsultarSaldoVacacionesItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Fecha" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Rut" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Contrato" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Saldo" Type="Edm.Double" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="0..1" />
@@ -367,7 +380,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
-    <End Role="Solicitud_Detalle_HorasExtras" Type="LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_HorasExtras" Type="LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_HorasExtras" Type="LightSwitchApplication.Solicitud_Estados_HorasExtrasItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_HorasExtras">
@@ -379,7 +394,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
-    <End Role="Solicitud_Detalle_OtroPermiso" Type="LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_OtroPermiso" Type="LightSwitchApplication.Solicitud_Detalle_OtroPermisoItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_OtroPermiso" Type="LightSwitchApplication.Solicitud_Estados_OtroPermisoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_OtroPermiso">
@@ -391,7 +408,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
-    <End Role="Solicitud_Detalle_Vacaciones" Type="LightSwitchApplication.Solicitud_Detalle_VacacionesItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Vacaciones" Type="LightSwitchApplication.Solicitud_Detalle_VacacionesItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_Vacaciones" Type="LightSwitchApplication.Solicitud_Estados_VacacionesItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_Vacaciones">
@@ -514,6 +533,7 @@
     <EntitySet Name="Superior_Gerente" EntityType="LightSwitchApplication.Superior_GerenteItem" />
     <EntitySet Name="Superior_JefeDirecto" EntityType="LightSwitchApplication.Superior_JefeDirectoItem" />
     <EntitySet Name="Superior_SubGerente" EntityType="LightSwitchApplication.Superior_SubGerenteItem" />
+    <EntitySet Name="ConsultarSaldoVacaciones" EntityType="LightSwitchApplication.ConsultarSaldoVacacionesItem" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />

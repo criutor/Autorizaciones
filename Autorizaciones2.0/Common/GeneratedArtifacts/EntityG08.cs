@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class Solicitud_Estados_AdministrativoItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass>
+    public sealed partial class Solicitud_Estados_HorasExtrasItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Inicializa una nueva instancia de la entidad Solicitud_Estados_AdministrativoItem.
+        /// Inicializa una nueva instancia de la entidad Solicitud_Estados_HorasExtrasItem.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Solicitud_Estados_AdministrativoItem()
+        public Solicitud_Estados_HorasExtrasItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Solicitud_Estados_AdministrativoItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem> entitySet)
+        public Solicitud_Estados_HorasExtrasItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitud_Estados_AdministrativoItem_Created();
+        partial void Solicitud_Estados_HorasExtrasItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitud_Estados_AdministrativoItem_AllowSaveWithErrors(ref bool result);
+        partial void Solicitud_Estados_HorasExtrasItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,20 +83,20 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Id_Estados_Administrativo
+        public int Id_Estados_HorasExtras
         {
             get
             {
-                return global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Id_Estados_Administrativo);
+                return global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Id_Estados_HorasExtras);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Estados_Administrativo_IsReadOnly(ref bool result);
+        partial void Id_Estados_HorasExtras_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Estados_Administrativo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Id_Estados_HorasExtras_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Estados_Administrativo_Changed();
+        partial void Id_Estados_HorasExtras_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
@@ -107,11 +107,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Observaciones);
+                return global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Observaciones);
             }
             set
             {
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Observaciones, value);
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Observaciones, value);
             }
         }
         
@@ -131,11 +131,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.TituloObservacion);
+                return global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.TituloObservacion);
             }
             set
             {
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.TituloObservacion, value);
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.TituloObservacion, value);
             }
         }
         
@@ -151,24 +151,48 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem Solicitud_Detalle_AdministrativoItem
+        public string MensajeBy
         {
             get
             {
-                return global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_AdministrativoItem);
+                return global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.MensajeBy);
             }
             set
             {
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_AdministrativoItem, value);
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.MensajeBy, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitud_Detalle_AdministrativoItem_IsReadOnly(ref bool result);
+        partial void MensajeBy_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitud_Detalle_AdministrativoItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void MensajeBy_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitud_Detalle_AdministrativoItem_Changed();
+        partial void MensajeBy_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem Solicitud_Detalle_HorasExtrasItem
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_HorasExtrasItem);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_HorasExtrasItem, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_Detalle_HorasExtrasItem_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_Detalle_HorasExtrasItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Solicitud_Detalle_HorasExtrasItem_Changed();
 
         #endregion
     
@@ -179,37 +203,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem,
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass,
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass>>
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem,
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass,
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Id_Estados_Administrativo;
+                var initializeEntry = global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Id_Estados_HorasExtras;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass>.Entry
-                __Solicitud_Estados_AdministrativoItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.__Solicitud_Estados_AdministrativoItem_CreateNew,
-                    global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.__Solicitud_Estados_AdministrativoItem_Created,
-                    global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.__Solicitud_Estados_AdministrativoItem_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem __Solicitud_Estados_AdministrativoItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass>.Entry
+                __Solicitud_Estados_HorasExtrasItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.__Solicitud_Estados_HorasExtrasItem_CreateNew,
+                    global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.__Solicitud_Estados_HorasExtrasItem_Created,
+                    global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.__Solicitud_Estados_HorasExtrasItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem __Solicitud_Estados_HorasExtrasItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem> es)
             {
-                return new global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem(es);
+                return new global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem(es);
             }
-            private static void __Solicitud_Estados_AdministrativoItem_Created(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+            private static void __Solicitud_Estados_HorasExtrasItem_Created(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
             {
-                e.Solicitud_Estados_AdministrativoItem_Created();
+                e.Solicitud_Estados_HorasExtrasItem_Created();
             }
-            private static bool __Solicitud_Estados_AdministrativoItem_AllowSaveWithErrors(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+            private static bool __Solicitud_Estados_HorasExtrasItem_AllowSaveWithErrors(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
             {
                 bool result = false;
-                e.Solicitud_Estados_AdministrativoItem_AllowSaveWithErrors(ref result);
+                e.Solicitud_Estados_HorasExtrasItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -217,7 +241,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass> Commands
             {
                 get
                 {
@@ -225,7 +249,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass> Methods
             {
                 get
                 {
@@ -233,7 +257,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -245,42 +269,50 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, int> Id_Estados_Administrativo
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, int> Id_Estados_HorasExtras
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Id_Estados_Administrativo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Id_Estados_HorasExtras) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string> Observaciones
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string> Observaciones
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Observaciones) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Observaciones) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string> TituloObservacion
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string> TituloObservacion
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.TituloObservacion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.TituloObservacion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem> Solicitud_Detalle_AdministrativoItem
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string> MensajeBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_AdministrativoItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>;
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.MensajeBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem> Solicitud_Detalle_HorasExtrasItem
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_HorasExtrasItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem>;
                     }
                 }
                 
@@ -290,10 +322,11 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int Id_Estados_Administrativo { get; }
+                new int Id_Estados_HorasExtras { get; }
                 new string Observaciones { get; set; }
                 new string TituloObservacion { get; set; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Solicitud_Detalle_AdministrativoItem { get; set; }
+                new string MensajeBy { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Solicitud_Detalle_HorasExtrasItem { get; set; }
             }
             #pragma warning restore 109
     
@@ -304,172 +337,212 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, int>.Entry
-                    Id_Estados_Administrativo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, int>.Entry(
-                        "Id_Estados_Administrativo",
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Id_Estados_Administrativo_Stub,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Id_Estados_Administrativo_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Id_Estados_Administrativo_Validate,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Id_Estados_Administrativo_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, int>.Entry
+                    Id_Estados_HorasExtras = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, int>.Entry(
+                        "Id_Estados_HorasExtras",
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Id_Estados_HorasExtras_Stub,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Id_Estados_HorasExtras_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Id_Estados_HorasExtras_Validate,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Id_Estados_HorasExtras_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Id_Estados_Administrativo_OnValueChanged);
-                private static void _Id_Estados_Administrativo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Id_Estados_HorasExtras_OnValueChanged);
+                private static void _Id_Estados_HorasExtras_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Id_Estados_Administrativo, sf);
+                    c(d, ref d._Id_Estados_HorasExtras, sf);
                 }
-                private static bool _Id_Estados_Administrativo_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static bool _Id_Estados_HorasExtras_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
                     bool result = false;
-                    e.Id_Estados_Administrativo_IsReadOnly(ref result);
+                    e.Id_Estados_HorasExtras_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Id_Estados_Administrativo_Validate(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Id_Estados_HorasExtras_Validate(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Id_Estados_Administrativo_Validate(r);
+                    e.Id_Estados_HorasExtras_Validate(r);
                 }
-                private static int _Id_Estados_Administrativo_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d)
+                private static int _Id_Estados_HorasExtras_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Id_Estados_Administrativo;
+                    return d.ImplementationEntity.Id_Estados_HorasExtras;
                 }
-                private static void _Id_Estados_Administrativo_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static void _Id_Estados_HorasExtras_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
-                    e.Id_Estados_Administrativo_Changed();
+                    e.Id_Estados_HorasExtras_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Entry
-                    Observaciones = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Entry
+                    Observaciones = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Entry(
                         "Observaciones",
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Observaciones_Stub,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Observaciones_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Observaciones_Validate,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Observaciones_GetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Observaciones_SetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Observaciones_OnValueChanged);
-                private static void _Observaciones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Observaciones_Stub,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Observaciones_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Observaciones_Validate,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Observaciones_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Observaciones_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Observaciones_OnValueChanged);
+                private static void _Observaciones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Observaciones, sf);
                 }
-                private static bool _Observaciones_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static bool _Observaciones_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
                     bool result = false;
                     e.Observaciones_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Observaciones_Validate(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Observaciones_Validate(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Observaciones_Validate(r);
                 }
-                private static string _Observaciones_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d)
+                private static string _Observaciones_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Observaciones;
                 }
-                private static void _Observaciones_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, string v)
+                private static void _Observaciones_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.Observaciones = v;
                 }
-                private static void _Observaciones_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static void _Observaciones_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
                     e.Observaciones_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Entry
-                    TituloObservacion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Entry
+                    TituloObservacion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Entry(
                         "TituloObservacion",
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._TituloObservacion_Stub,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._TituloObservacion_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._TituloObservacion_Validate,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._TituloObservacion_GetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._TituloObservacion_SetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._TituloObservacion_OnValueChanged);
-                private static void _TituloObservacion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._TituloObservacion_Stub,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._TituloObservacion_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._TituloObservacion_Validate,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._TituloObservacion_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._TituloObservacion_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._TituloObservacion_OnValueChanged);
+                private static void _TituloObservacion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._TituloObservacion, sf);
                 }
-                private static bool _TituloObservacion_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static bool _TituloObservacion_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
                     bool result = false;
                     e.TituloObservacion_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _TituloObservacion_Validate(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _TituloObservacion_Validate(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.TituloObservacion_Validate(r);
                 }
-                private static string _TituloObservacion_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d)
+                private static string _TituloObservacion_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.TituloObservacion;
                 }
-                private static void _TituloObservacion_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, string v)
+                private static void _TituloObservacion_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.TituloObservacion = v;
                 }
-                private static void _TituloObservacion_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static void _TituloObservacion_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
                     e.TituloObservacion_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Entry
-                    Solicitud_Detalle_AdministrativoItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Entry(
-                        "Solicitud_Detalle_AdministrativoItem",
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_Stub,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_Validate,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_GetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_SetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_Refresh,
-                        global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_AdministrativoItem_OnValueChanged);
-                private static void _Solicitud_Detalle_AdministrativoItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Data> c, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Entry
+                    MensajeBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Entry(
+                        "MensajeBy",
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._MensajeBy_Stub,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._MensajeBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._MensajeBy_Validate,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._MensajeBy_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._MensajeBy_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._MensajeBy_OnValueChanged);
+                private static void _MensajeBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Solicitud_Detalle_AdministrativoItem, sf);
+                    c(d, ref d._MensajeBy, sf);
                 }
-                private static bool _Solicitud_Detalle_AdministrativoItem_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static bool _MensajeBy_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
                     bool result = false;
-                    e.Solicitud_Detalle_AdministrativoItem_IsReadOnly(ref result);
+                    e.MensajeBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Solicitud_Detalle_AdministrativoItem_Validate(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _MensajeBy_Validate(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Solicitud_Detalle_AdministrativoItem_Validate(r);
+                    e.MensajeBy_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Solicitud_Detalle_AdministrativoItem_GetCoreImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d)
+                private static string _MensajeBy_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Solicitud_Detalle_AdministrativoItem;
+                    return d.ImplementationEntity.MensajeBy;
                 }
-                private static global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem _Solicitud_Detalle_AdministrativoItem_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d)
+                private static void _MensajeBy_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, string v)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem.DetailsClass>(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_AdministrativoItem, ref d._Solicitud_Detalle_AdministrativoItem);
+                    d.ImplementationEntity.MensajeBy = v;
                 }
-                private static void _Solicitud_Detalle_AdministrativoItem_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem v)
+                private static void _MensajeBy_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_AdministrativoItem, ref d._Solicitud_Detalle_AdministrativoItem, (i, ev) => i.Solicitud_Detalle_AdministrativoItem = ev, v);
+                    e.MensajeBy_Changed();
                 }
-                private static void _Solicitud_Detalle_AdministrativoItem_Refresh(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass d)
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem>.Entry
+                    Solicitud_Detalle_HorasExtrasItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem>.Entry(
+                        "Solicitud_Detalle_HorasExtrasItem",
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_Stub,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_Validate,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_Refresh,
+                        global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties._Solicitud_Detalle_HorasExtrasItem_OnValueChanged);
+                private static void _Solicitud_Detalle_HorasExtrasItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem>.Data> c, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, object sf)
                 {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_AdministrativoItem, ref d._Solicitud_Detalle_AdministrativoItem);
+                    c(d, ref d._Solicitud_Detalle_HorasExtrasItem, sf);
                 }
-                private static void _Solicitud_Detalle_AdministrativoItem_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem e)
+                private static bool _Solicitud_Detalle_HorasExtrasItem_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
                 {
-                    e.Solicitud_Detalle_AdministrativoItem_Changed();
+                    bool result = false;
+                    e.Solicitud_Detalle_HorasExtrasItem_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Solicitud_Detalle_HorasExtrasItem_Validate(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Solicitud_Detalle_HorasExtrasItem_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Solicitud_Detalle_HorasExtrasItem_GetCoreImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Solicitud_Detalle_HorasExtrasItem;
+                }
+                private static global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem _Solicitud_Detalle_HorasExtrasItem_GetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem.DetailsClass>(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_HorasExtrasItem, ref d._Solicitud_Detalle_HorasExtrasItem);
+                }
+                private static void _Solicitud_Detalle_HorasExtrasItem_SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_HorasExtrasItem, ref d._Solicitud_Detalle_HorasExtrasItem, (i, ev) => i.Solicitud_Detalle_HorasExtrasItem = ev, v);
+                }
+                private static void _Solicitud_Detalle_HorasExtrasItem_Refresh(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_HorasExtrasItem, ref d._Solicitud_Detalle_HorasExtrasItem);
+                }
+                private static void _Solicitud_Detalle_HorasExtrasItem_OnValueChanged(global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem e)
+                {
+                    e.Solicitud_Detalle_HorasExtrasItem_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, int>.Data _Id_Estados_Administrativo;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, int>.Data _Id_Estados_HorasExtras;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Data _Observaciones;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Data _Observaciones;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, string>.Data _TituloObservacion;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Data _TituloObservacion;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem, global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Data _Solicitud_Detalle_AdministrativoItem;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, string>.Data _MensajeBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem, global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_HorasExtrasItem>.Data _Solicitud_Detalle_HorasExtrasItem;
             
         }
     

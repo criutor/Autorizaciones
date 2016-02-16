@@ -152,13 +152,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="SaldoVacaciones"
-        PropertyType=":Double?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -2084,6 +2077,92 @@
       <QueryOperationParameter
         Name="NombreAD"
         ParameterType=":String?" />
+    </QueryOperation>
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ConsultarSaldoVacacionesItem"
+      Name="ConsultarSaldoVacaciones" />
+    <QueryOperation
+      Name="ConsultarSaldoVacaciones_Single"
+      ReturnType="ConsultarSaldoVacacionesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsultarSaldoVacaciones" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ConsultarSaldoVacaciones_SingleOrDefault"
+      ReturnType="ConsultarSaldoVacacionesItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsultarSaldoVacaciones" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
     </QueryOperation>
   </EntityContainer>
   <EntityType
@@ -4778,6 +4857,14 @@
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="MensajeBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4817,6 +4904,14 @@
         ToEnd="Solicitud_Detalle_HorasExtras" />
       <EntityProperty
         Name="TituloObservacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MensajeBy"
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
@@ -4868,6 +4963,14 @@
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="MensajeBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4906,6 +5009,14 @@
         ToEnd="Solicitud_Detalle_Vacaciones" />
       <EntityProperty
         Name="TituloObservacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MensajeBy"
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
@@ -5347,7 +5458,7 @@
       Name="Solicitud_Detalle_HorasExtras">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -5363,7 +5474,7 @@
       Name="Solicitud_Detalle_OtroPermiso">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -5379,7 +5490,7 @@
       Name="Solicitud_Detalle_Vacaciones">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -5499,4 +5610,61 @@
       Multiplicity="Many"
       Name="Superior_SubGerente" />
   </Association>
+  <EntityType
+    Name="ConsultarSaldoVacacionesItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Fecha"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rut"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Contrato"
+        PropertyType=":Int32">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Saldo"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
 </ModelFragment>

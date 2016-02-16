@@ -127,6 +127,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.Superior_SubGerenteItem();
             }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem();
+            }
     
             return base.CreateObject(type);
         }
@@ -217,6 +221,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.Superior_SubGerenteItem))
             {
                 return new global::Autorizaciones_AdminsData.Implementation.Superior_SubGerenteItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ConsultarSaldoVacacionesItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem();
             }
             return null;
         }
@@ -456,6 +464,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.Superior_SubGerenteItem) == definitionType)
             {
                 return typeof(global::Autorizaciones_AdminsData.Implementation.Superior_SubGerenteItem);
+            }
+            if (typeof(global::LightSwitchApplication.ConsultarSaldoVacacionesItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {
@@ -1725,6 +1737,39 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ConsultarSaldoVacacionesItem :
+        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.IImplementation
+    {
+    
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

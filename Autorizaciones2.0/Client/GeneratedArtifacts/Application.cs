@@ -202,18 +202,18 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Ver_Aprobar_Rechazar_CanRun(ref bool result, int IDSolicitudEstados, int TIPOSOLICITUD, int PANTALLA);
+        partial void Solicitudes_Ver_Aprobar_Rechazar_CanRun(ref bool result, int IDSolicitudDetalles, int TIPOSOLICITUD, int PANTALLA);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Ver_Aprobar_Rechazar_Run(ref bool handled, int IDSolicitudEstados, int TIPOSOLICITUD, int PANTALLA);
+        partial void Solicitudes_Ver_Aprobar_Rechazar_Run(ref bool handled, int IDSolicitudDetalles, int TIPOSOLICITUD, int PANTALLA);
     
         /// <summary>
         /// Abre la pantalla ShowSolicitudes_Ver_Aprobar_Rechazar. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSolicitudes_Ver_Aprobar_Rechazar(int IDSolicitudEstados, int TIPOSOLICITUD, int PANTALLA)
+        public void ShowSolicitudes_Ver_Aprobar_Rechazar(int IDSolicitudDetalles, int TIPOSOLICITUD, int PANTALLA)
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSolicitudes_Ver_Aprobar_Rechazar, IDSolicitudEstados, TIPOSOLICITUD, PANTALLA);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSolicitudes_Ver_Aprobar_Rechazar, IDSolicitudDetalles, TIPOSOLICITUD, PANTALLA);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]

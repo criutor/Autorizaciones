@@ -20,6 +20,7 @@
     <EntitySet Name="Superior_Gerente" EntityType="Autorizaciones_AdminsDataStore.Superior_GerenteItem" store:Type="Tables" Schema="dbo" Table="Superior_Gerente" />
     <EntitySet Name="Superior_JefeDirecto" EntityType="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" store:Type="Tables" Schema="dbo" Table="Superior_JefeDirecto" />
     <EntitySet Name="Superior_SubGerente" EntityType="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" store:Type="Tables" Schema="dbo" Table="Superior_SubGerente" />
+    <EntitySet Name="ConsultarSaldoVacaciones" EntityType="Autorizaciones_AdminsDataStore.ConsultarSaldoVacacionesItem" store:Type="Tables" Schema="dbo" Table="ConsultarSaldoVacaciones" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -115,7 +116,6 @@
     <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
     <Property Name="IDGerencia_para_subgerentes" Type="int" />
     <Property Name="SaldoDiasAdmins" Type="float" />
-    <Property Name="SaldoVacaciones" Type="float" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
   </EntityType>
@@ -222,6 +222,7 @@
     <Property Name="Id_Estados_Administrativo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleAdministrativo_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_HorasExtrasItem">
@@ -231,6 +232,7 @@
     <Property Name="Id_Estados_HorasExtras" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleHorasExtras_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_OtroPermisoItem">
@@ -240,6 +242,7 @@
     <Property Name="Id_Estados_OtroPermiso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleOtroPermiso_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_VacacionesItem">
@@ -249,6 +252,7 @@
     <Property Name="Id_Estados_vacaciones" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
     <Property Name="DetalleVacaciones_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_HeaderItem">
@@ -296,6 +300,16 @@
     <Property Name="Id_SubGerente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Subgerencia_fk" Type="int" Nullable="false" />
     <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="ConsultarSaldoVacacionesItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="date" Nullable="false" />
+    <Property Name="Rut" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Contrato" Type="int" Nullable="false" />
+    <Property Name="Saldo" Type="float" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />
@@ -428,7 +442,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras">
-    <End Role="Solicitud_Detalle_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_HorasExtrasItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_HorasExtrasItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_HorasExtras" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_HorasExtrasItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_HorasExtras">
@@ -440,7 +456,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso">
-    <End Role="Solicitud_Detalle_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_OtroPermisoItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_OtroPermisoItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_OtroPermiso" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_OtroPermisoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_OtroPermiso">
@@ -452,7 +470,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
-    <End Role="Solicitud_Detalle_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_VacacionesItem" Multiplicity="1" />
+    <End Role="Solicitud_Detalle_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Detalle_VacacionesItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Solicitud_Estados_Vacaciones" Type="Autorizaciones_AdminsDataStore.Solicitud_Estados_VacacionesItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Solicitud_Detalle_Vacaciones">
