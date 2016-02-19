@@ -19,31 +19,80 @@ namespace LightSwitchApplication
 
         partial void Solicitudes_Crear_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
+            //Instanciar el objeto solicitud header
 
             Solicitud_HeaderItem solicitud = new Solicitud_HeaderItem();
             solicitud.FechaSolicitud = DateTime.Today;
             solicitud.NombreTrabajador = PersonaItem.NombreAD;
             solicitud.Fechaingreso = DateTime.Today; // cambiar por la tabla contrato!!!
             solicitud.PersonaItem1 = PersonaItem;
-            
             solicitud.Rechazada = false;
             solicitud.Completada = false;
-            //solicitud.Administrativo = false;
-            //solicitud.OtroPermiso = false;
-            //solicitud.Vacaciones = false;
-            //solicitud.HorasExtras = false;
-            
-            if (PersonaItem.Es_Gerente == true) { solicitud.Departamento = " Gerencia de " + PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre; solicitud.Gerencia = PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre; }
+   
+            if (PersonaItem.Es_Gerente == true) { 
+                //Agreaga un nombre de departamento
+                solicitud.Departamento = " Gerencia de " + PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                //Agrega un nombre de gerencia
+                solicitud.Gerencia = PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+
+                solicitud.VB_Gerente = true;
+
+                solicitud.VB_SubGerente = true;
+
+                solicitud.VB_JefeDirecto = true;
+            }
             else
-                if (PersonaItem.Es_SubGerente == true) { solicitud.Departamento = " SubGerencia de " + PersonaItem.Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre; solicitud.Gerencia = PersonaItem.Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre; }
-                else
-                {
-                    solicitud.Departamento = PersonaItem.Division_AreaItem.Nombre;
-                    solicitud.Gerencia = PersonaItem.Division_AreaItem.Division_GerenciaItem.Nombre;
+                if (PersonaItem.Es_SubGerente == true) {
+                    //Agreaga un nombre de departamento
+                    solicitud.Departamento = " SubGerencia de " + PersonaItem.Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
+                    //Agrega un nombre de gerencia
+                    solicitud.Gerencia = PersonaItem.Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
+
+                    solicitud.VB_Gerente = false;
+
+                    solicitud.VB_SubGerente = true;
+          
+                    solicitud.VB_JefeDirecto = true;
                 }
+                else
+                    if (PersonaItem.Es_JefeDirecto == true)
+                    {
+                        solicitud.Departamento = PersonaItem.Division_AreaItem.Nombre;
+                        
+                        solicitud.Gerencia = PersonaItem.Division_AreaItem.Division_GerenciaItem.Nombre;
 
+                        solicitud.VB_Gerente = false;
 
+                        if (this.PersonaItem.Division_AreaItem.Division_SubGerenciaItem == null) 
+                        {
+                            solicitud.VB_SubGerente = true; 
+                        }
+                        else { solicitud.VB_SubGerente = false; }
 
+                        solicitud.VB_JefeDirecto = true;
+
+                    }else// Para los empleados que no tienen ningun cargo de supervisión
+                        {   
+                            //Agreaga un nombre de departamento
+                            solicitud.Departamento = PersonaItem.Division_AreaItem.Nombre;
+                            //Agrega un nombre de gerencia
+                            solicitud.Gerencia = PersonaItem.Division_AreaItem.Division_GerenciaItem.Nombre;
+
+                            //Declarar las aprobaciones necesarias de los superiores
+                            solicitud.VB_JefeDirecto = false; // Indica que necesita aprobacion de jefe directo
+
+                            if (this.PersonaItem.Division_AreaItem.Division_SubGerenciaItem == null) // si no pertenece a una subgerencia, indica que no necesita aprobacion de subgerente, de lo contrario, si la necesita
+                            {
+                                // indica que no necesita aprobacion de un subgerente
+                                solicitud.VB_SubGerente = true; // Utilizamos true en vez de null por que el query de solicitudes pendientes no reconoce el filtro por null(no hay problema en si el usuario tiene otro cargo de supervision ya que en este nivel vbJefeDirecto es = false).
+                            }
+                            else { solicitud.VB_SubGerente = false; }// indica que si necesita aprobacion de un subgerente
+
+                                solicitud.VB_Gerente = false; // indica que si necesita aprobacion de un gerente
+
+                        }
+
+            //Instanciar el objeto detalle de solicitud dependiendo del caso
             if (TIPOSOLICITUD == 1)
             {
 
@@ -102,16 +151,13 @@ namespace LightSwitchApplication
                 this.Estados_Solicitud_OtroPermiso.Solicitud_Detalle_OtroPermisoItem = Solicitud_Detalle_OtroPermiso;
                 this.Estados_Solicitud_OtroPermiso.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
 
-
             }
 
         }
 
         partial void Solicitudes_Crear_Activated()
         {
-            
-
-
+            //Activar los controles dependiendo del tipo de solicitud
             if (TIPOSOLICITUD == 1)
             {
 
@@ -145,7 +191,7 @@ namespace LightSwitchApplication
                         }
         }
 
-        /*
+        
         partial void Solicitudes_Crear_Created()
         {
             
@@ -163,19 +209,20 @@ namespace LightSwitchApplication
         //Detecta si se ha hecho algún cambio en el campo Inicio
         void CrearNuevaSolicitud_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            /*
             if (e.PropertyName.Equals("Termino"))
             {
                 TimeSpan diferenciaDias = this.Solicitud_Detalle_Vacaciones.Termino - this.Solicitud_Detalle_Vacaciones.Inicio;
                 this.Solicitud_Detalle_Vacaciones.NumeroDias = diferenciaDias.Days;
 
             }
+             */
             if (e.PropertyName.Equals("Inicio"))
             {
-                TimeSpan diferenciaDias = this.Solicitud_Detalle_Vacaciones.Termino - this.Solicitud_Detalle_Vacaciones.Inicio;
-                this.Solicitud_Detalle_Vacaciones.NumeroDias = diferenciaDias.Days;
 
+                InvocarSaldoVacaciones = true;
             }
-        }*/
+        }
         
 
         partial void Solicitudes_Crear_Saved()
@@ -185,12 +232,13 @@ namespace LightSwitchApplication
  
         }
 
-        partial void ConsultarSaldo_Execute()
+        partial void ConsultarSaldo_Execute()//Se ejecuta en la solicitude de vacaciones
         {
                         /*
             this.PersonaItem.FechaInicioVacaciones = this.Solicitud_Detalle_Vacaciones.Inicio;
             this.Solicitud_Detalle_Vacaciones.ConsultarSaldo = true;
             this.Save();
+            No se puede aplicar por que no se puede calcular la diferencia de dias sin saber los feriados 
             */
 
             DataWorkspace dataWorkspace = new DataWorkspace();
@@ -206,9 +254,17 @@ namespace LightSwitchApplication
 
             this.Solicitud_Detalle_Vacaciones.SALDO = operation.Saldo;
 
-            this.CloseModalWindow("SeleccionarDiaInicio");
+            
 
         }
+
+        partial void Solicitud_Detalle_Vacaciones_Validate(ScreenValidationResultsBuilder results)
+        {
+
+            if (InvocarSaldoVacaciones == true) { this.ConsultarSaldo_Execute(); }
+            InvocarSaldoVacaciones = false;
+        }
+
 
     }
 }

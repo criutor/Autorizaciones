@@ -7,6 +7,11 @@ using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Framework.Client;
 using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
+
+using System.ComponentModel;
+using Microsoft.LightSwitch.Threading;
+using System.ServiceModel.DomainServices.Client;
+
 namespace LightSwitchApplication
 {
     public partial class Master_MisSolicitudes
@@ -50,18 +55,21 @@ namespace LightSwitchApplication
 
         partial void Master_MisSolicitudes_Activated()
         {
-            this.LimpiarFiltros_Execute();// traer todas las solicitudes
+            
             //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
             NOMBREAD = "RUBIO FLORES, GUSTAVO";
             if (Persona.Count() == 0)
             {
-                this.MENSAJEPersonaNoCreada(); this.Close(true);
+                //this.MENSAJEPersonaNoCreada(); this.Close(true);
+                this.MENSAJEPersonaNoCreada_Execute(); this.Close(true);
+                
 
             }
             else if ((Persona.First().Es_Gerente != true) && (Persona.First().Es_JefeDirecto != true) && (Persona.First().Es_SubGerente != true) && Persona.First().Division_AreaItem == null)
             {
 
-                this.MENSAJECuentaNoAsociada(); this.Close(true);
+                //this.MENSAJECuentaNoAsociada(); this.Close(true);
+                this.MENSAJECuentaNoAsociada_Execute(); this.Close(true);
 
             }
             else
@@ -69,6 +77,9 @@ namespace LightSwitchApplication
 
                 RUTPERSONA = this.Persona.First().Rut_Persona; // Parametro de query para ver solo mis solicitudes
             }
+
+            // traer todas las solicitudes por defecto
+            this.TodasLasSolicitudes_Execute(); //Aveces lanza la excepción "The operation has already completed"
         }
 
         partial void NuevaSolicitud_Execute()
@@ -77,12 +88,6 @@ namespace LightSwitchApplication
             this.OpenModalWindow("SeleccioneTipoDeSolicitud");
         }
 
-        partial void SolicitarDiaAdministrativo_Execute()
-        {
-            // Escriba el código aquí.
-            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 1);
-        }
 
         partial void MENSAJECuentaNoAsociada_Execute()
         {
@@ -121,52 +126,65 @@ namespace LightSwitchApplication
 
         }
 
-        partial void SolicitarVacaciones_Execute()
+        partial void SolicitarDiaAdministrativo_Execute()
         {
             // Escriba el código aquí.
+            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+            this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 1);
+        }
 
+
+        partial void SolicitarVacaciones_Execute()
+        {
+            
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
             this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 2);
-
-            /*PersonaItem persona = this.Application.CreateDataWorkspace().Autorizaciones_AdminsData.PersonaPorNombreAD(removerSignosAcentos(this.Application.User.FullName)).First();
-
-            try
-            {
-                ContratoItem1 contrato = this.Application.CreateDataWorkspace().Fin700v60Data.ContratoPorRut(persona.Rut_Persona).First();
-            }
-            catch (Exception e) { throw new Exception("que paso?", e); }
-            */
         }
 
         partial void SolicitarHorasExtras_Execute()
         {
-            // Escriba el código aquí.
+            
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
             this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 3);
-
         }
 
         partial void SolicitarOtroPermiso_Execute()
         {
-            // Escriba el código aquí.
+            
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
             this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 4);
 
         }
 
-        partial void LimpiarFiltros_Execute()
+        partial void TodasLasSolicitudes_Execute()
         {
-            // Escriba el código aquí.
             this.FechaSolicitudDesde = null;
             this.FechaSolicitudHasta = null;
             this.Administrativo = true;
             this.Vacaciones = true;
             this.OtroPermiso = true;
             this.HorasExtras = true;
-            this.Rechazada = true;
-            this.Completada = true;
+
+            //this.Rechazada = true;
+
+            //this.Completada = true;
+
+            this.RechazadaAprobadaAbierta = null;
+            this.FALSAS = false;
+            this.VERDADERAS = true;
 
             this.Solicitud_Header.Load();
         }
+
+        partial void RechazadaAprobadaAbierta_Validate(ScreenValidationResultsBuilder results)
+        {
+            if (RechazadaAprobadaAbierta != null) { this.FALSAS = null; this.VERDADERAS = null; }
+
+            if (RechazadaAprobadaAbierta == "Rechazadas") { this.Rechazada = true; this.Completada = false; }else
+            if (RechazadaAprobadaAbierta == "Aprobadas") { this.Completada = true; this.Rechazada = false; }else
+            if (RechazadaAprobadaAbierta == "Abiertas") { this.Rechazada = false; this.Completada = false; }
+                
+        }
+
     }
 }

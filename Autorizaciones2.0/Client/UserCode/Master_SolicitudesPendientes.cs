@@ -20,8 +20,6 @@ namespace LightSwitchApplication
 
         partial void Master_SolicitudesPendientes_Activated()
         {
-            // Escriba el código aquí.
-
             //--------------------------------Quitar acentos del nombre de active directory------------------------------
 
             string NAD = this.Application.User.FullName;
@@ -61,42 +59,59 @@ namespace LightSwitchApplication
             
             NOMBREAD = Nombreaux.ToUpper(); //****CAMBIAR POR RUT****
 
+            /*
+             * Si yo soy jefe directo, traer todas las solicitudes donde vb jefe directo es null
+             * Si yo soy subgerente, traer todas las solicitudes donde vb jefe directo es true y vb subgerente es null
+             * Si yo soy gerente, traer todas las solicitudes donde vb jefe directo es true y vb subgerente es true y vb gerente es null
+            */
+
             if (Persona.Count == 0) { this.MENSAJEPersonaNoCreada(); this.Close(true); } //Si el usuario(Active directory) no ha sido asociado a un área de trabajo, el query "Persona" retornara 0 personas.   
             else
             {
                 IDUsuario = Persona.First().Rut_Persona; // Filtramos que en las solicitudes no aparezcan las del mismo usuario.
                 
-                                
-                //TipoSolicitud = "Día administrativo";
-
+                
                 if (Persona.First().Es_Gerente == true)
                 {
                     IDGERENCIA = Persona.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
 
+                    VBGERENTE = false;
+                    VBSUBGERENTE = true;
+                    VBJEFEDIRECTO = true;
 
                 }
                 else if (Persona.First().Es_SubGerente == true)
                 {
                     IDSUBGERENCIA = Persona.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
 
+                    VBGERENTE = false;
+                    VBSUBGERENTE = false;
+                    VBJEFEDIRECTO = true;
+
                 }
                 else if (Persona.First().Es_JefeDirecto == true)
                 {
                     IDAREA = Persona.First().Superior_JefeDirectoQuery.First().Division_AreaItem.Id_Area;
 
+                    VBJEFEDIRECTO = false; // Filtrar las solicitudes donde el jefe directo aun no las ha aprobado(visto bueno = false)
+
+                    if (Persona.First().Division_AreaItem.Division_SubGerenciaItem == null)
+                    {
+                        VBSUBGERENTE = true;
+                    }
+                    else { VBSUBGERENTE = false; }
+
+                    VBGERENTE = false;
+                     
                 }
                 else
                 {
                     this.MENSAJE_NoEsUnSuperior(); this.Close(true);
                 }
 
-
             }
 
-
         }
-
-
 
         partial void MENSAJE_NoEsUnSuperior_Execute()
         {

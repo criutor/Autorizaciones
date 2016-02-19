@@ -21,6 +21,7 @@ namespace LightSwitchApplication
             else{
                 this.Application.ShowPersona_Buscar_Superior(2, this.Division_Gerencia.SelectedItem.Id_Gerencia);
                 }
+            
         }
 
         partial void SeleccionarSubGerente_Execute()
@@ -34,7 +35,7 @@ namespace LightSwitchApplication
             {
                 this.Application.ShowPersona_Buscar_Superior(4, this.Division_SubGerencia.SelectedItem.Id_SubGerencia);
             }
-
+            
         }
 
         partial void SeleccionarJefeDirecto_Execute()
@@ -48,7 +49,7 @@ namespace LightSwitchApplication
             {
                 this.Application.ShowPersona_Buscar_Superior(6, this.Division_Area.SelectedItem.Id_Area);
             }
-
+            
         }
        
     }
