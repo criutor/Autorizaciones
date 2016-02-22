@@ -17,6 +17,9 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             this.PersonaItemProperty = new PersonaItem();
             this.PersonaItemProperty.SaldoDiasAdmins = 3.0;
+            this.PersonaItemProperty.Es_Gerente = false;
+            this.PersonaItemProperty.Es_JefeDirecto = false;
+            this.PersonaItemProperty.Es_SubGerente = false;
             //this.PersonaItemProperty.Nombres = ""; // Sin esto lanza un null exception ya que nombres es Null
 
         }

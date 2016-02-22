@@ -32,6 +32,10 @@
   </EntityContainerGroup>
   <EntityType
     Name="PersonaItem">
+    <EntityType.Attributes>
+      <SummaryProperty
+        Property="PersonaItem/Properties[NombreAD]" />
+    </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -4758,13 +4762,6 @@
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
-        Name="SaldoVacaciones"
-        PropertyType=":Int32?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="Inicio"
         PropertyType=":Date">
         <EntityProperty.Attributes>
@@ -4808,6 +4805,13 @@
         ToEnd="Solicitud_Estados_Vacaciones" />
       <EntityProperty
         Name="SALDO"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Prestamo"
         PropertyType=":Double?">
         <EntityProperty.Attributes>
           <NotSearchable />
@@ -4865,6 +4869,17 @@
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="CreadoAt"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -4916,6 +4931,17 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreadoAt"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
@@ -4971,6 +4997,17 @@
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="CreadoAt"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -5021,6 +5058,17 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreadoAt"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
@@ -5191,6 +5239,13 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="20" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_Empleado"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>

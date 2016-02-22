@@ -129,11 +129,11 @@
       <PropertyRef Name="Id_Vacaciones" />
     </Key>
     <Property Name="Id_Vacaciones" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="SaldoVacaciones" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Inicio" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="Termino" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="NumeroDias" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="SALDO" Type="Edm.Double" />
+    <Property Name="Prestamo" Type="Edm.Double" />
     <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_Vacaciones" />
     <NavigationProperty Name="Solicitud_Estados_Vacaciones" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Estados_Vacaciones" FromRole="Solicitud_Detalle_Vacaciones" />
@@ -146,6 +146,7 @@
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CreadoAt" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="DetalleAdministrativo_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_AdministrativoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Administrativo_Solicitud_Detalle_Administra" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Estados_Administrativo" />
   </EntityType>
@@ -157,6 +158,7 @@
     <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CreadoAt" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="DetalleHorasExtras_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_HorasExtrasItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Estados_HorasExtras" />
   </EntityType>
@@ -168,6 +170,7 @@
     <Property Name="Observaciones" Type="Edm.String" Nullable="false" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CreadoAt" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="DetalleOtroPermiso_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_OtroPermisoItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso" ToRole="Solicitud_Detalle_OtroPermiso" FromRole="Solicitud_Estados_OtroPermiso" />
   </EntityType>
@@ -179,6 +182,7 @@
     <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
     <Property Name="TituloObservacion" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="MensajeBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CreadoAt" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="DetalleVacaciones_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_VacacionesItem" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Detalle_Vacaciones" FromRole="Solicitud_Estados_Vacaciones" />
   </EntityType>
@@ -202,6 +206,7 @@
     <Property Name="HorasExtras" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="OtroPermiso" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Titulo" Type="Edm.String" MaxLength="20" ConcurrencyMode="Fixed" />
+    <Property Name="VB_Empleado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_Detalle_Administrativo" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Administrativo_Solicitud_Header" ToRole="Solicitud_Detalle_Administrativo" FromRole="Solicitud_Header" />
     <NavigationProperty Name="Solicitud_Detalle_HorasExtras" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Header" />

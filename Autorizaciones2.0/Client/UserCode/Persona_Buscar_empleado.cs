@@ -27,6 +27,9 @@ namespace LightSwitchApplication
                 persona.AP_Materno = this.PersonasContratadas.SelectedItem.AP_Materno;
                 persona.Division_AreaItem = this.Division_AreaItem;
                 persona.SaldoDiasAdmins = 3.0;
+                persona.Es_Gerente = false;
+                persona.Es_JefeDirecto = false;
+                persona.Es_SubGerente = false;
                 /*
                 string[] porPalabrasNombre = this.PersonasContratadas.SelectedItem.Nombres.Split(new Char[] { ' ' });
                 string[] porPalabrasAPP = this.PersonasContratadas.SelectedItem.AP_Paterno.Split(new Char[] { ' ' });

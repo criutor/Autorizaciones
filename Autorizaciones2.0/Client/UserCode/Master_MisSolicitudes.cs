@@ -56,8 +56,9 @@ namespace LightSwitchApplication
         partial void Master_MisSolicitudes_Activated()
         {
             
-            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
-            NOMBREAD = "RUBIO FLORES, GUSTAVO";
+            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
+            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
+
             if (Persona.Count() == 0)
             {
                 //this.MENSAJEPersonaNoCreada(); this.Close(true);
@@ -79,7 +80,7 @@ namespace LightSwitchApplication
             }
 
             // traer todas las solicitudes por defecto
-            this.TodasLasSolicitudes_Execute(); //Aveces lanza la excepción "The operation has already completed"
+            //this.TodasLasSolicitudes_Execute(); //Aveces lanza la excepción "The operation has already completed"
         }
 
         partial void NuevaSolicitud_Execute()
@@ -105,8 +106,7 @@ namespace LightSwitchApplication
 
         partial void MasDetalles_Execute()
         {
-            // Escriba el código aquí.
-
+           
             if (this.Solicitud_Header.SelectedItem.Administrativo == true)
             {
                 this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Administrativo.First().Id_Administrativo, 1, 1);
@@ -128,7 +128,7 @@ namespace LightSwitchApplication
 
         partial void SolicitarDiaAdministrativo_Execute()
         {
-            // Escriba el código aquí.
+           
             this.CloseModalWindow("SeleccioneTipoDeSolicitud");
             this.Application.ShowSolicitudes_Crear(Persona.First().Rut_Persona, 1);
         }
@@ -158,17 +158,13 @@ namespace LightSwitchApplication
 
         partial void TodasLasSolicitudes_Execute()
         {
+            //Condiciones de filtro para mostrar todas las solicitudes
             this.FechaSolicitudDesde = null;
             this.FechaSolicitudHasta = null;
             this.Administrativo = true;
             this.Vacaciones = true;
             this.OtroPermiso = true;
             this.HorasExtras = true;
-
-            //this.Rechazada = true;
-
-            //this.Completada = true;
-
             this.RechazadaAprobadaAbierta = null;
             this.FALSAS = false;
             this.VERDADERAS = true;
@@ -178,12 +174,25 @@ namespace LightSwitchApplication
 
         partial void RechazadaAprobadaAbierta_Validate(ScreenValidationResultsBuilder results)
         {
-            if (RechazadaAprobadaAbierta != null) { this.FALSAS = null; this.VERDADERAS = null; }
-
+            //Si se escoge alguna de las tres opciones de búsqueda, no aplicar los filtros FALSAS ni VERDADERAS
+            if (RechazadaAprobadaAbierta != null) { this.FALSAS = null; this.VERDADERAS = null; } 
+            //Al cambiar la opción se cambian los filtros
             if (RechazadaAprobadaAbierta == "Rechazadas") { this.Rechazada = true; this.Completada = false; }else
             if (RechazadaAprobadaAbierta == "Aprobadas") { this.Completada = true; this.Rechazada = false; }else
             if (RechazadaAprobadaAbierta == "Abiertas") { this.Rechazada = false; this.Completada = false; }
                 
+        }
+
+        partial void SolicitarHorasExtras_CanExecute(ref bool result)
+        {
+            // Solamente los cargos superiores pueden solicitar horas extras.
+            if (this.Persona.First().Es_Gerente == true || this.Persona.First().Es_JefeDirecto == true || this.Persona.First().Es_SubGerente == true)
+            {
+                result = true;
+            }
+            else { result = false; }
+            
+
         }
 
     }

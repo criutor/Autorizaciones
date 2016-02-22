@@ -17,6 +17,8 @@ namespace LightSwitchApplication
             //--------------------------------Quitar acentos del nombre de active directory------------------------------
 
             string NAD = this.Application.User.FullName;
+            //string NAD = "RUBIO FLORES, GUSTAVO";
+            
             int largo = NAD.Length;
 
             char[] NombreAD = new char[largo];
@@ -56,8 +58,12 @@ namespace LightSwitchApplication
             if (PANTALLA == 1)//Habilita el botón cancelar solicitudes para el usuario en la vista
             {
                 this.FindControl("CancelarSolicitudUsuario").IsVisible = true;
+                if (TIPOSOLICITUD == 3)
+                {
+                    this.FindControl("AceptarSolicitudUsuario").IsVisible = true;
+                }
+            }
 
-            }else
             if (PANTALLA == 2)//Habilita los botones Aprobar y Rechazar solicitud para los cargos de jefatura en la vista
             {
                 this.FindControl("AprobarSolicitud").IsVisible = true;
@@ -85,7 +91,7 @@ namespace LightSwitchApplication
                 this.FindControl("Solicitud_Estados_HorasExtras_SelectedItem").IsVisible = true;
                 this.FindControl("Solicitud_Estados_HorasExtras").IsVisible = true;
                 this.FindControl("HorasExtras").IsVisible = true;
-             
+                             
             }else
 
                 if (TIPOSOLICITUD == 4)//Habitila los elementos de solicitudes de otros permisos en la vista
@@ -93,6 +99,30 @@ namespace LightSwitchApplication
                 this.FindControl("Solicitud_Estados_OtroPermiso_SelectedItem").IsVisible = true;
                 this.FindControl("Solicitud_Estados_OtroPermiso").IsVisible = true;
                 this.FindControl("OtroPermiso").IsVisible = true;
+            }
+        }
+
+
+        partial void AceptarSolicitudUsuario_Execute()
+        {
+            // Escriba el código aquí.
+            if (TIPOSOLICITUD == 3)
+            {
+                this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Empleado = true;
+
+                Solicitud_Estados_HorasExtrasItem NuevoEstado4 = new Solicitud_Estados_HorasExtrasItem();
+
+                NuevoEstado4.TituloObservacion = "LA SOLICITUD HA SIDO ACEPTADA POR:";
+                NuevoEstado4.CreadoAt = DateTime.Now;
+                this.NuevoComentario = " ";
+                NuevoEstado4.Observaciones = NuevoComentario;
+
+                NuevoEstado4.MensajeBy = this.Application.User.FullName;
+
+                NuevoEstado4.Solicitud_Detalle_HorasExtrasItem = this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem;
+
+                
+                this.Save();
             }
         }
 
@@ -169,6 +199,8 @@ namespace LightSwitchApplication
                             NuevoEstado1.TituloObservacion = "LA SOLICITUD HA SIDO CANCELADA POR:";
                         }
 
+                    NuevoEstado1.CreadoAt = DateTime.Now;
+
                     NuevoEstado1.Observaciones = NuevoComentario;
 
                     NuevoEstado1.MensajeBy = this.Application.User.FullName;
@@ -189,6 +221,7 @@ namespace LightSwitchApplication
                             this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Rechazada = true;
 
                             NuevoEstado2.TituloObservacion = "LA SOLICITUD HA SIDO RECHAZADA POR:";
+
                         }else
 
                         if (TipoDeAccion == 2)//Cuando la accion es aprobar una solicitud
@@ -221,6 +254,7 @@ namespace LightSwitchApplication
                                 NuevoEstado2.TituloObservacion = "LA SOLICITUD HA SIDO CANCELADA POR:";
                             }
 
+                        NuevoEstado2.CreadoAt = DateTime.Now;
 
                         NuevoEstado2.Observaciones = NuevoComentario;
 
@@ -257,7 +291,7 @@ namespace LightSwitchApplication
 
                                         if (this.Persona.First().Es_SubGerente == true)
                                         {
-                                            this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_JefeDirecto = true;
+                                            this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_SubGerente = true;
 
                                             NuevoEstado3.TituloObservacion = "LA SOLICITUD HA SIDO APROBADA POR:";
                                         }
@@ -265,7 +299,8 @@ namespace LightSwitchApplication
 
                                             if (this.Persona.First().Es_Gerente == true)
                                             {
-                                                this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_JefeDirecto = true;
+                                                this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Gerente = true;
+                                                this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Completada = true;
 
                                                 NuevoEstado3.TituloObservacion = "LA SOLICITUD HA SIDO APROBADA POR:";
                                             }
@@ -277,6 +312,8 @@ namespace LightSwitchApplication
 
                                         NuevoEstado3.TituloObservacion = "LA SOLICITUD HA SIDO CANCELADA POR:";
                                     }
+
+                            NuevoEstado3.CreadoAt = DateTime.Now;
 
                             NuevoEstado3.Observaciones = NuevoComentario;
 
@@ -334,6 +371,8 @@ namespace LightSwitchApplication
                                             NuevoEstado4.TituloObservacion = "LA SOLICITUD HA SIDO CANCELADA POR:";
                                         }
 
+                                NuevoEstado4.CreadoAt = DateTime.Now;
+
                                 NuevoEstado4.Observaciones = NuevoComentario;
 
                                 NuevoEstado4.MensajeBy = this.Application.User.FullName;
@@ -354,7 +393,6 @@ namespace LightSwitchApplication
             
                 this.Close(true);
             
-
         }
 
         partial void CancelarSolicitudUsuario_CanExecute(ref bool result)
@@ -376,6 +414,10 @@ namespace LightSwitchApplication
             }
             if (TIPOSOLICITUD == 3)
             {
+                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Empleado == true)
+                {
+                    result = false;
+                }
                 if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Rechazada == true)
                 {
                     result = false;
@@ -387,6 +429,29 @@ namespace LightSwitchApplication
                 {
                     result = false;
                 }
+            }
+
+        }
+
+
+        partial void AceptarSolicitudUsuario_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+
+            if (TIPOSOLICITUD == 3)
+            {
+                
+
+                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Rechazada == true)
+                {
+                    result = false;
+                }else
+                    if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Empleado == true)
+                    {
+                        result = false;
+                    }
+                    else { result = true; }
+                
             }
 
         }

@@ -28,8 +28,12 @@ namespace LightSwitchApplication
             solicitud.PersonaItem1 = PersonaItem;
             solicitud.Rechazada = false;
             solicitud.Completada = false;
+            solicitud.VB_Empleado = true;//Por defecto el empleado acepta las solicitudes que el mismo crea, cuando el tipo de solicitud es horas extras entonces necesita aprobación
    
-            if (PersonaItem.Es_Gerente == true) { 
+            if (PersonaItem.Es_Gerente == true) {
+
+                this.IDGERENCIA = this.PersonaItem.Superior_Gerente.First().Division_GerenciaItem.Id_Gerencia;
+
                 //Agreaga un nombre de departamento
                 solicitud.Departamento = " Gerencia de " + PersonaItem.Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 //Agrega un nombre de gerencia
@@ -40,9 +44,12 @@ namespace LightSwitchApplication
                 solicitud.VB_SubGerente = true;
 
                 solicitud.VB_JefeDirecto = true;
+
             }
             else
                 if (PersonaItem.Es_SubGerente == true) {
+
+                    this.IDSUBGERENCIA = this.PersonaItem.Superior_SubGerente.First().Division_SubGerenciaItem.Id_SubGerencia;
                     //Agreaga un nombre de departamento
                     solicitud.Departamento = " SubGerencia de " + PersonaItem.Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
                     //Agrega un nombre de gerencia
@@ -57,6 +64,8 @@ namespace LightSwitchApplication
                 else
                     if (PersonaItem.Es_JefeDirecto == true)
                     {
+                        this.IDAREA = this.PersonaItem.Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
+
                         solicitud.Departamento = PersonaItem.Division_AreaItem.Nombre;
                         
                         solicitud.Gerencia = PersonaItem.Division_AreaItem.Division_GerenciaItem.Nombre;
@@ -106,6 +115,8 @@ namespace LightSwitchApplication
                 this.Estados_Solicitud_DiaAdministrativo = new Solicitud_Estados_AdministrativoItem();
                 this.Estados_Solicitud_DiaAdministrativo.Solicitud_Detalle_AdministrativoItem = Solicitud_Detalle_DiaAdministrativo;
                 this.Estados_Solicitud_DiaAdministrativo.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
+                this.Estados_Solicitud_DiaAdministrativo.CreadoAt = DateTime.Now;
+                
 
             }
             else if (TIPOSOLICITUD == 2)
@@ -121,20 +132,27 @@ namespace LightSwitchApplication
                 this.Estados_Solicitud_Vacaciones.Solicitud_Detalle_VacacionesItem = Solicitud_Detalle_Vacaciones;
                 this.Estados_Solicitud_Vacaciones.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
                 this.Estados_Solicitud_Vacaciones.MensajeBy = this.Application.User.FullName;
+                this.Estados_Solicitud_Vacaciones.CreadoAt = DateTime.Now;
 
             }
             else if (TIPOSOLICITUD == 3)
             {
-
                 solicitud.HorasExtras = true;
                 solicitud.Titulo = "Horas Extras";
-
+                solicitud.VB_Empleado = false;
+                
                 this.Solicitud_Detalles_HorasExtras = new Solicitud_Detalle_HorasExtrasItem();
                 this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem = solicitud;
+                this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.PersonaItem1 = null; //Por defecto la persona es el usuario, pero como este no puede solicitar horas extras para si mismmo, debera escoger un nuevo empleado de una lista
+
+                this.Solicitud_Detalles_HorasExtras.Colacion = this.COLACIÓN; //Se usa una variable intermedia para que el usuario no tenga la opcion de guardar valor null
+                this.Solicitud_Detalles_HorasExtras.Taxi = this.TAXI;   //Se usa una variable intermedia para que el usuario no tenga la opcion de guardar valor null
 
                 this.Estados_Solicitud_HorasExtras = new Solicitud_Estados_HorasExtrasItem();
                 this.Estados_Solicitud_HorasExtras.Solicitud_Detalle_HorasExtrasItem = Solicitud_Detalles_HorasExtras;
                 this.Estados_Solicitud_HorasExtras.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
+                this.Estados_Solicitud_HorasExtras.MensajeBy = this.Application.User.FullName;
+                this.Estados_Solicitud_HorasExtras.CreadoAt = DateTime.Now;
 
             }
             else if (TIPOSOLICITUD == 4)
@@ -150,6 +168,7 @@ namespace LightSwitchApplication
                 this.Estados_Solicitud_OtroPermiso = new Solicitud_Estados_OtroPermisoItem();
                 this.Estados_Solicitud_OtroPermiso.Solicitud_Detalle_OtroPermisoItem = Solicitud_Detalle_OtroPermiso;
                 this.Estados_Solicitud_OtroPermiso.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
+                this.Estados_Solicitud_OtroPermiso.CreadoAt = DateTime.Now;
 
             }
 
@@ -180,6 +199,7 @@ namespace LightSwitchApplication
 
                         this.FindControl("Solicitud_Detalles_HorasExtras").IsVisible = true;
                         this.FindControl("Estados_Solicitud_HorasExtras").IsVisible = true;
+                        
                     }
                     else
 
@@ -194,14 +214,19 @@ namespace LightSwitchApplication
         
         partial void Solicitudes_Crear_Created()
         {
-            
-            // Detecta si se ha hecho algún cambio en la pantalla
-            Dispatchers.Main.BeginInvoke(() =>
-            {
-                ((INotifyPropertyChanged)this.Solicitud_Detalle_Vacaciones).PropertyChanged +=
-                    new PropertyChangedEventHandler(CrearNuevaSolicitud_PropertyChanged);
 
-            });
+            // Detecta si se ha hecho algún cambio en la propiedad Solicitud_Detalle_Vacaciones en la pantalla, si es asi, llama a la funcion CrearNuevaSolicitud_PropertyChanged
+
+            if (TIPOSOLICITUD == 2)// si la solicitude es del tipo vacaciones
+            {
+                Dispatchers.Main.BeginInvoke(() =>
+                {
+                    ((INotifyPropertyChanged)this.Solicitud_Detalle_Vacaciones).PropertyChanged +=
+                        new PropertyChangedEventHandler(CrearNuevaSolicitud_PropertyChanged);
+
+                });
+            }
+          
             
         }
 
@@ -232,7 +257,7 @@ namespace LightSwitchApplication
  
         }
 
-        partial void ConsultarSaldo_Execute()//Se ejecuta en la solicitude de vacaciones
+        partial void ConsultarSaldo_Execute()//Se ejecuta en la solicitud de vacaciones
         {
                         /*
             this.PersonaItem.FechaInicioVacaciones = this.Solicitud_Detalle_Vacaciones.Inicio;
@@ -265,6 +290,85 @@ namespace LightSwitchApplication
             InvocarSaldoVacaciones = false;
         }
 
+        partial void RequierePrestamo_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
 
+            if(this.RequierePrestamo == false){
+
+                try
+                {
+                    this.FindControl("Prestamo").IsEnabled = false;
+
+                }
+                catch{  }
+
+                if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
+                {
+
+                    this.Solicitud_Detalle_Vacaciones.Prestamo = null; //Limpiar el valor del campo prestamo
+                }
+            }
+            else if(this.RequierePrestamo == true){
+
+                try
+                {
+                    this.FindControl("Prestamo").IsEnabled = true;
+
+                    if(this.Solicitud_Detalle_Vacaciones.Prestamo == null)
+                    {
+                        results.AddPropertyError("El préstamo a solicitar no puede ser vacio"); //Si la casilla es verdadera, el campo debe tener algún valor
+                    }
+
+                }
+                catch{  }
+                
+            }
+            
+            
+
+        }
+
+        partial void Solicitud_Detalles_HorasExtras_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+
+            if (TIPOSOLICITUD == 3)// si la solicitud es del tipo horas extras
+            {
+
+                if (this.Solicitud_Detalles_HorasExtras.HorasAutorizadas > 2)
+                {
+
+                    results.AddPropertyError("El máximo de horas extras a trabajar es 2");
+
+                }
+
+                if (this.Solicitud_Detalles_HorasExtras.HorasAutorizadas <= 0)
+                {
+
+                    results.AddPropertyError("Las horas autorizadas deben ser mayor a 0");
+
+                }
+
+                if (this.Solicitud_Detalles_HorasExtras.FechaRealizacion <= DateTime.Today)
+                {
+
+                    results.AddPropertyError("La fecha de realización debe ser después de hoy");
+
+                }
+            }
+
+        }
+
+        partial void SeleccionarEmpleadoHorasExtras_Execute()
+        {
+            // Escriba el código aquí.
+
+            this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.PersonaItem1 = this.EMPLEADOSACARGO.SelectedItem;
+            this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.NombreTrabajador = this.EMPLEADOSACARGO.SelectedItem.NombreAD;
+
+            this.CloseModalWindow("ListaEmpleadosACargo");
+
+        }
     }
 }

@@ -3046,30 +3046,6 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> SaldoVacaciones
-        {
-            get
-            {
-                return _SaldoVacaciones;
-            }
-            set
-            {
-                OnSaldoVacacionesChanging(value);
-                ReportPropertyChanging("SaldoVacaciones");
-                _SaldoVacaciones = value;
-                ReportPropertyChanged("SaldoVacaciones");
-                OnSaldoVacacionesChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _SaldoVacaciones;
-        partial void OnSaldoVacacionesChanging(Nullable<global::System.Int32> value);
-        partial void OnSaldoVacacionesChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.DateTime Inicio
@@ -3162,6 +3138,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private Nullable<global::System.Double> _SALDO;
         partial void OnSALDOChanging(Nullable<global::System.Double> value);
         partial void OnSALDOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> Prestamo
+        {
+            get
+            {
+                return _Prestamo;
+            }
+            set
+            {
+                OnPrestamoChanging(value);
+                ReportPropertyChanging("Prestamo");
+                _Prestamo = value;
+                ReportPropertyChanged("Prestamo");
+                OnPrestamoChanged();
+            }
+        }
+        private Nullable<global::System.Double> _Prestamo;
+        partial void OnPrestamoChanging(Nullable<global::System.Double> value);
+        partial void OnPrestamoChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -3385,6 +3385,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return _CreadoAt;
+            }
+            set
+            {
+                OnCreadoAtChanging(value);
+                ReportPropertyChanging("CreadoAt");
+                _CreadoAt = value;
+                ReportPropertyChanged("CreadoAt");
+                OnCreadoAtChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 DetalleAdministrativo_fk
@@ -3580,6 +3604,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _MensajeBy;
         partial void OnMensajeByChanging(global::System.String value);
         partial void OnMensajeByChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return _CreadoAt;
+            }
+            set
+            {
+                OnCreadoAtChanging(value);
+                ReportPropertyChanging("CreadoAt");
+                _CreadoAt = value;
+                ReportPropertyChanged("CreadoAt");
+                OnCreadoAtChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -3783,6 +3831,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return _CreadoAt;
+            }
+            set
+            {
+                OnCreadoAtChanging(value);
+                ReportPropertyChanging("CreadoAt");
+                _CreadoAt = value;
+                ReportPropertyChanged("CreadoAt");
+                OnCreadoAtChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.Int32 DetalleOtroPermiso_fk
@@ -3976,6 +4048,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _MensajeBy;
         partial void OnMensajeByChanging(global::System.String value);
         partial void OnMensajeByChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return _CreadoAt;
+            }
+            set
+            {
+                OnCreadoAtChanging(value);
+                ReportPropertyChanging("CreadoAt");
+                _CreadoAt = value;
+                ReportPropertyChanged("CreadoAt");
+                OnCreadoAtChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -4471,6 +4567,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Titulo;
         partial void OnTituloChanging(global::System.String value);
         partial void OnTituloChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> VB_Empleado
+        {
+            get
+            {
+                return _VB_Empleado;
+            }
+            set
+            {
+                OnVB_EmpleadoChanging(value);
+                ReportPropertyChanging("VB_Empleado");
+                _VB_Empleado = value;
+                ReportPropertyChanged("VB_Empleado");
+                OnVB_EmpleadoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _VB_Empleado;
+        partial void OnVB_EmpleadoChanging(Nullable<global::System.Boolean> value);
+        partial void OnVB_EmpleadoChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

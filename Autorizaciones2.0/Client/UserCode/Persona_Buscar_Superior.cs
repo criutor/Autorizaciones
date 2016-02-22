@@ -42,7 +42,7 @@ namespace LightSwitchApplication
                 Subgerente.PersonaItem1 = this.Persona.SelectedItem;
                 Subgerente.Division_SubGerenciaItem = this.Division_SubGerenciaItem;
                 this.Persona.SelectedItem.Es_SubGerente = true;
-                this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Id_SubGerencia;
+                this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
                 //IDGerencia_para_subgerentes es utilizado en el Query de Solicitud_Header en la pantalla "Master_SolicitudesPendientes",...
                 //...ya que los subgerentes no pertenecen a ninguna area, si no se guardara el id de la subgerencia, ...
                 //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
@@ -57,7 +57,7 @@ namespace LightSwitchApplication
                 this.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Es_SubGerente = false;
                 this.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1 = this.Persona.SelectedItem;
                 this.Persona.SelectedItem.Es_SubGerente = true;
-                this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Id_SubGerencia;
+                this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
                 this.Persona.SelectedItem.Division_AreaItem = null;
                 this.Save();
                 this.Close(true);

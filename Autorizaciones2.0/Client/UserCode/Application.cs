@@ -39,5 +39,11 @@ namespace LightSwitchApplication
             //result = this.User.HasPermission(Permissions.VerConveniosScreen);
 
         }
+
+        partial void Solicitudes_Crear_CanRun(ref bool result, string IDPersona, int TIPOSOLICITUD)
+        {
+            // Establece el resultado en el valor del campo deseado
+            
+        }
     }
 }

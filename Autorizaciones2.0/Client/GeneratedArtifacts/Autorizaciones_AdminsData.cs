@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 19/02/2016 13:26:03
+// Fecha de generación: 22/02/2016 19:58:25
 namespace LightSwitchApplication.Implementation
 {
     
@@ -2943,32 +2943,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnId_VacacionesChanging(int value);
         partial void OnId_VacacionesChanged();
         /// <summary>
-        /// No hay comentarios para la propiedad SaldoVacaciones en el esquema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> SaldoVacaciones
-        {
-            get
-            {
-                return this._SaldoVacaciones;
-            }
-            set
-            {
-                this.OnSaldoVacacionesChanging(value);
-                if (object.Equals(this.SaldoVacaciones, value))
-                {
-                    return;
-                }
-                this._SaldoVacaciones = value;
-                this.OnSaldoVacacionesChanged();
-                this.OnPropertyChanged("SaldoVacaciones");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _SaldoVacaciones;
-        partial void OnSaldoVacacionesChanging(global::System.Nullable<int> value);
-        partial void OnSaldoVacacionesChanged();
-        /// <summary>
         /// No hay comentarios para la propiedad Inicio en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3072,6 +3046,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<double> _SALDO;
         partial void OnSALDOChanging(global::System.Nullable<double> value);
         partial void OnSALDOChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Prestamo en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<double> Prestamo
+        {
+            get
+            {
+                return this._Prestamo;
+            }
+            set
+            {
+                this.OnPrestamoChanging(value);
+                if (object.Equals(this.Prestamo, value))
+                {
+                    return;
+                }
+                this._Prestamo = value;
+                this.OnPrestamoChanged();
+                this.OnPropertyChanged("Prestamo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<double> _Prestamo;
+        partial void OnPrestamoChanging(global::System.Nullable<double> value);
+        partial void OnPrestamoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Solicitud_Header_fk en el esquema.
         /// </summary>
@@ -3303,6 +3303,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnMensajeByChanging(string value);
         partial void OnMensajeByChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad CreadoAt en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return this._CreadoAt;
+            }
+            set
+            {
+                this.OnCreadoAtChanging(value);
+                if (object.Equals(this.CreadoAt, value))
+                {
+                    return;
+                }
+                this._CreadoAt = value;
+                this.OnCreadoAtChanged();
+                this.OnPropertyChanged("CreadoAt");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
+        /// <summary>
         /// No hay comentarios para la propiedad DetalleAdministrativo_fk en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3515,6 +3541,32 @@ namespace LightSwitchApplication.Implementation
         private string _MensajeBy;
         partial void OnMensajeByChanging(string value);
         partial void OnMensajeByChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad CreadoAt en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return this._CreadoAt;
+            }
+            set
+            {
+                this.OnCreadoAtChanging(value);
+                if (object.Equals(this.CreadoAt, value))
+                {
+                    return;
+                }
+                this._CreadoAt = value;
+                this.OnCreadoAtChanged();
+                this.OnPropertyChanged("CreadoAt");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
         /// <summary>
         /// No hay comentarios para la propiedad DetalleHorasExtras_fk en el esquema.
         /// </summary>
@@ -3729,6 +3781,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnMensajeByChanging(string value);
         partial void OnMensajeByChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad CreadoAt en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return this._CreadoAt;
+            }
+            set
+            {
+                this.OnCreadoAtChanging(value);
+                if (object.Equals(this.CreadoAt, value))
+                {
+                    return;
+                }
+                this._CreadoAt = value;
+                this.OnCreadoAtChanged();
+                this.OnPropertyChanged("CreadoAt");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
+        /// <summary>
         /// No hay comentarios para la propiedad DetalleOtroPermiso_fk en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3939,6 +4017,32 @@ namespace LightSwitchApplication.Implementation
         private string _MensajeBy;
         partial void OnMensajeByChanging(string value);
         partial void OnMensajeByChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad CreadoAt en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> CreadoAt
+        {
+            get
+            {
+                return this._CreadoAt;
+            }
+            set
+            {
+                this.OnCreadoAtChanging(value);
+                if (object.Equals(this.CreadoAt, value))
+                {
+                    return;
+                }
+                this._CreadoAt = value;
+                this.OnCreadoAtChanged();
+                this.OnPropertyChanged("CreadoAt");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _CreadoAt;
+        partial void OnCreadoAtChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnCreadoAtChanged();
         /// <summary>
         /// No hay comentarios para la propiedad DetalleVacaciones_fk en el esquema.
         /// </summary>
@@ -4472,6 +4576,32 @@ namespace LightSwitchApplication.Implementation
         private string _Titulo;
         partial void OnTituloChanging(string value);
         partial void OnTituloChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad VB_Empleado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> VB_Empleado
+        {
+            get
+            {
+                return this._VB_Empleado;
+            }
+            set
+            {
+                this.OnVB_EmpleadoChanging(value);
+                if (object.Equals(this.VB_Empleado, value))
+                {
+                    return;
+                }
+                this._VB_Empleado = value;
+                this.OnVB_EmpleadoChanged();
+                this.OnPropertyChanged("VB_Empleado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _VB_Empleado;
+        partial void OnVB_EmpleadoChanging(global::System.Nullable<bool> value);
+        partial void OnVB_EmpleadoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

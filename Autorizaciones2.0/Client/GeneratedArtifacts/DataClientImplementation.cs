@@ -1032,11 +1032,6 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Id_Vacaciones");
         }
         
-        partial void OnSaldoVacacionesChanged()
-        {
-            this.___OnPropertyChanged("SaldoVacaciones");
-        }
-        
         partial void OnInicioChanged()
         {
             this.___OnPropertyChanged("Inicio");
@@ -1055,6 +1050,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnSALDOChanged()
         {
             this.___OnPropertyChanged("SALDO");
+        }
+        
+        partial void OnPrestamoChanged()
+        {
+            this.___OnPropertyChanged("Prestamo");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.IImplementation.Solicitud_HeaderItem
@@ -1151,6 +1151,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("MensajeBy");
         }
         
+        partial void OnCreadoAtChanged()
+        {
+            this.___OnPropertyChanged("CreadoAt");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_AdministrativoItem.DetailsClass.IImplementation.Solicitud_Detalle_AdministrativoItem
         {
             get
@@ -1217,6 +1222,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnMensajeByChanged()
         {
             this.___OnPropertyChanged("MensajeBy");
+        }
+        
+        partial void OnCreadoAtChanged()
+        {
+            this.___OnPropertyChanged("CreadoAt");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_HorasExtrasItem.DetailsClass.IImplementation.Solicitud_Detalle_HorasExtrasItem
@@ -1287,6 +1297,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("MensajeBy");
         }
         
+        partial void OnCreadoAtChanged()
+        {
+            this.___OnPropertyChanged("CreadoAt");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_OtroPermisoItem.DetailsClass.IImplementation.Solicitud_Detalle_OtroPermisoItem
         {
             get
@@ -1353,6 +1368,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnMensajeByChanged()
         {
             this.___OnPropertyChanged("MensajeBy");
+        }
+        
+        partial void OnCreadoAtChanged()
+        {
+            this.___OnPropertyChanged("CreadoAt");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_Estados_VacacionesItem.DetailsClass.IImplementation.Solicitud_Detalle_VacacionesItem
@@ -1481,6 +1501,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnTituloChanged()
         {
             this.___OnPropertyChanged("Titulo");
+        }
+        
+        partial void OnVB_EmpleadoChanged()
+        {
+            this.___OnPropertyChanged("VB_Empleado");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.IImplementation.Solicitud_Detalle_Administrativo

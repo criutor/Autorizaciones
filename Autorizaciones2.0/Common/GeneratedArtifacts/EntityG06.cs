@@ -103,30 +103,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<int> SaldoVacaciones
-        {
-            get
-            {
-                return global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties.SaldoVacaciones);
-            }
-            set
-            {
-                global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties.SaldoVacaciones, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaldoVacaciones_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaldoVacaciones_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SaldoVacaciones_Changed();
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.DateTime Inicio
         {
             get
@@ -217,6 +193,30 @@ namespace LightSwitchApplication
         partial void SALDO_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SALDO_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<double> Prestamo
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties.Prestamo);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties.Prestamo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Prestamo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Prestamo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Prestamo_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
@@ -355,14 +355,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<int>> SaldoVacaciones
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties.SaldoVacaciones) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<int>>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.DateTime> Inicio
                 {
                     get
@@ -395,6 +387,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>> Prestamo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties.Prestamo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem> Solicitud_HeaderItem
                 {
                     get
@@ -418,11 +418,11 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int Id_Vacaciones { get; }
-                new global::System.Nullable<int> SaldoVacaciones { get; set; }
                 new global::System.DateTime Inicio { get; set; }
                 new global::System.DateTime Termino { get; set; }
                 new int NumeroDias { get; set; }
                 new global::System.Nullable<double> SALDO { get; set; }
+                new global::System.Nullable<double> Prestamo { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Solicitud_HeaderItem { get; set; }
                 new global::System.Collections.IEnumerable Solicitud_Estados_Vacaciones { get; }
             }
@@ -465,43 +465,6 @@ namespace LightSwitchApplication
                 private static void _Id_Vacaciones_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e)
                 {
                     e.Id_Vacaciones_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<int>>.Entry
-                    SaldoVacaciones = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<int>>.Entry(
-                        "SaldoVacaciones",
-                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._SaldoVacaciones_Stub,
-                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._SaldoVacaciones_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._SaldoVacaciones_Validate,
-                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._SaldoVacaciones_GetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._SaldoVacaciones_SetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._SaldoVacaciones_OnValueChanged);
-                private static void _SaldoVacaciones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._SaldoVacaciones, sf);
-                }
-                private static bool _SaldoVacaciones_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e)
-                {
-                    bool result = false;
-                    e.SaldoVacaciones_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _SaldoVacaciones_Validate(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.SaldoVacaciones_Validate(r);
-                }
-                private static global::System.Nullable<int> _SaldoVacaciones_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.SaldoVacaciones;
-                }
-                private static void _SaldoVacaciones_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass d, global::System.Nullable<int> v)
-                {
-                    d.ImplementationEntity.SaldoVacaciones = v;
-                }
-                private static void _SaldoVacaciones_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e)
-                {
-                    e.SaldoVacaciones_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -653,6 +616,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>>.Entry
+                    Prestamo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>>.Entry(
+                        "Prestamo",
+                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._Prestamo_Stub,
+                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._Prestamo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._Prestamo_Validate,
+                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._Prestamo_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._Prestamo_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass.PropertySetProperties._Prestamo_OnValueChanged);
+                private static void _Prestamo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>>.Data> c, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Prestamo, sf);
+                }
+                private static bool _Prestamo_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e)
+                {
+                    bool result = false;
+                    e.Prestamo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Prestamo_Validate(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Prestamo_Validate(r);
+                }
+                private static global::System.Nullable<double> _Prestamo_GetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Prestamo;
+                }
+                private static void _Prestamo_SetImplementationValue(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass d, global::System.Nullable<double> v)
+                {
+                    d.ImplementationEntity.Prestamo = v;
+                }
+                private static void _Prestamo_OnValueChanged(global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem e)
+                {
+                    e.Prestamo_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Entry
                     Solicitud_HeaderItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Entry(
                         "Solicitud_HeaderItem",
@@ -725,9 +725,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, int>.Data _Id_Vacaciones;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<int>>.Data _SaldoVacaciones;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.DateTime>.Data _Inicio;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -738,6 +735,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>>.Data _SALDO;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::System.Nullable<double>>.Data _Prestamo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Data _Solicitud_HeaderItem;

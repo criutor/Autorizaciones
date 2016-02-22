@@ -1198,11 +1198,6 @@
           StoreGeneratedPattern="Identity"
           Type="int" />
         <SsdlProperty
-          Name="SaldoVacaciones"
-          Nullable="True"
-          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[SaldoVacaciones]"
-          Type="int" />
-        <SsdlProperty
           Name="Inicio"
           Nullable="False"
           Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[Inicio]"
@@ -1221,6 +1216,11 @@
           Name="SALDO"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[SALDO]"
+          Type="float" />
+        <SsdlProperty
+          Name="Prestamo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[Prestamo]"
           Type="float" />
         <SsdlForeignKeyProperty
           Name="Solicitud_Header_fk"
@@ -1259,6 +1259,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[MensajeBy]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="CreadoAt"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_AdministrativoItem/Properties[CreadoAt]"
+          Type="datetime" />
         <SsdlForeignKeyProperty
           Name="DetalleAdministrativo_fk"
           Nullable="False"
@@ -1296,6 +1301,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[MensajeBy]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="CreadoAt"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_HorasExtrasItem/Properties[CreadoAt]"
+          Type="datetime" />
         <SsdlForeignKeyProperty
           Name="DetalleHorasExtras_fk"
           Nullable="False"
@@ -1333,6 +1343,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[MensajeBy]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="CreadoAt"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_OtroPermisoItem/Properties[CreadoAt]"
+          Type="datetime" />
         <SsdlForeignKeyProperty
           Name="DetalleOtroPermiso_fk"
           Nullable="False"
@@ -1370,6 +1385,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[MensajeBy]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="CreadoAt"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_Estados_VacacionesItem/Properties[CreadoAt]"
+          Type="datetime" />
         <SsdlForeignKeyProperty
           Name="DetalleVacaciones_fk"
           Nullable="False"
@@ -1468,6 +1488,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Titulo]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="VB_Empleado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_Empleado]"
+          Type="bit" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

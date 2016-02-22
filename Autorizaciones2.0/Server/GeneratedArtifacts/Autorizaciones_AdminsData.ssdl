@@ -208,11 +208,11 @@
       <PropertyRef Name="Id_Vacaciones" />
     </Key>
     <Property Name="Id_Vacaciones" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="SaldoVacaciones" Type="int" />
     <Property Name="Inicio" Type="date" Nullable="false" />
     <Property Name="Termino" Type="date" Nullable="false" />
     <Property Name="NumeroDias" Type="int" Nullable="false" />
     <Property Name="SALDO" Type="float" />
+    <Property Name="Prestamo" Type="float" />
     <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_AdministrativoItem">
@@ -223,6 +223,7 @@
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreadoAt" Type="datetime" />
     <Property Name="DetalleAdministrativo_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_HorasExtrasItem">
@@ -233,6 +234,7 @@
     <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreadoAt" Type="datetime" />
     <Property Name="DetalleHorasExtras_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_OtroPermisoItem">
@@ -243,6 +245,7 @@
     <Property Name="Observaciones" Type="nvarchar" Nullable="false" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreadoAt" Type="datetime" />
     <Property Name="DetalleOtroPermiso_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_VacacionesItem">
@@ -253,6 +256,7 @@
     <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
     <Property Name="TituloObservacion" Type="nvarchar" MaxLength="50" />
     <Property Name="MensajeBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreadoAt" Type="datetime" />
     <Property Name="DetalleVacaciones_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_HeaderItem">
@@ -275,6 +279,7 @@
     <Property Name="HorasExtras" Type="bit" />
     <Property Name="OtroPermiso" Type="bit" />
     <Property Name="Titulo" Type="nvarchar" MaxLength="20" />
+    <Property Name="VB_Empleado" Type="bit" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="Superior_GerenteItem">
