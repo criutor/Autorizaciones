@@ -14,14 +14,18 @@ using System.ServiceModel.DomainServices.Client;
 
 namespace LightSwitchApplication
 {
+
     public partial class Solicitudes_Crear
     {
+
+        
+
 
         partial void Solicitudes_Crear_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             //Instanciar el objeto solicitud header
 
-            Solicitud_HeaderItem solicitud = new Solicitud_HeaderItem();
+            solicitud = new Solicitud_HeaderItem();
             solicitud.FechaSolicitud = DateTime.Today;
             solicitud.NombreTrabajador = PersonaItem.NombreAD;
             solicitud.Fechaingreso = DateTime.Today; // cambiar por la tabla contrato!!!
@@ -29,7 +33,16 @@ namespace LightSwitchApplication
             solicitud.Rechazada = false;
             solicitud.Completada = false;
             solicitud.VB_Empleado = true;//Por defecto el empleado acepta las solicitudes que el mismo crea, cuando el tipo de solicitud es horas extras entonces necesita aprobación
-   
+
+            //Verificar que la fecha de vigencia(ingreso) no sea null
+            if (PersonaItem.FechaVigencia == null)
+            {
+                System.DateTime fecha = new DateTime(1900,01,01);
+                solicitud.Fechaingreso = fecha;
+            }
+            else { solicitud.Fechaingreso = PersonaItem.FechaVigencia.Value; }
+
+
             if (PersonaItem.Es_Gerente == true) {
 
                 this.IDGERENCIA = this.PersonaItem.Superior_Gerente.First().Division_GerenciaItem.Id_Gerencia;
@@ -70,7 +83,7 @@ namespace LightSwitchApplication
                         
                         solicitud.Gerencia = PersonaItem.Division_AreaItem.Division_GerenciaItem.Nombre;
 
-                        solicitud.VB_Gerente = false;
+                        solicitud.VB_Gerente = null;//Gerente solo aprueba solicitudes de horas extras
 
                         if (this.PersonaItem.Division_AreaItem.Division_SubGerenciaItem == null) 
                         {
@@ -97,7 +110,7 @@ namespace LightSwitchApplication
                             }
                             else { solicitud.VB_SubGerente = false; }// indica que si necesita aprobacion de un subgerente
 
-                                solicitud.VB_Gerente = false; // indica que si necesita aprobacion de un gerente
+                            solicitud.VB_Gerente = null;//Gerente solo aprueba solicitudes de horas extras
 
                         }
 
@@ -111,10 +124,11 @@ namespace LightSwitchApplication
                 this.Solicitud_Detalle_DiaAdministrativo = new Solicitud_Detalle_AdministrativoItem();
                 this.Solicitud_Detalle_DiaAdministrativo.Solicitud_HeaderItem = solicitud;
                 this.Solicitud_Detalle_DiaAdministrativo.SaldoDias = this.PersonaItem.SaldoDiasAdmins.Value;
-
+ 
                 this.Estados_Solicitud_DiaAdministrativo = new Solicitud_Estados_AdministrativoItem();
                 this.Estados_Solicitud_DiaAdministrativo.Solicitud_Detalle_AdministrativoItem = Solicitud_Detalle_DiaAdministrativo;
                 this.Estados_Solicitud_DiaAdministrativo.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
+                this.Estados_Solicitud_DiaAdministrativo.MensajeBy = this.Application.User.FullName;
                 this.Estados_Solicitud_DiaAdministrativo.CreadoAt = DateTime.Now;
                 
 
@@ -140,7 +154,8 @@ namespace LightSwitchApplication
                 solicitud.HorasExtras = true;
                 solicitud.Titulo = "Horas Extras";
                 solicitud.VB_Empleado = false;
-                
+                solicitud.VB_Gerente = false; //Gerente siempre debe aprobar solicitudes de horas extras
+
                 this.Solicitud_Detalles_HorasExtras = new Solicitud_Detalle_HorasExtrasItem();
                 this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem = solicitud;
                 this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.PersonaItem1 = null; //Por defecto la persona es el usuario, pero como este no puede solicitar horas extras para si mismmo, debera escoger un nuevo empleado de una lista
@@ -163,11 +178,11 @@ namespace LightSwitchApplication
 
                 this.Solicitud_Detalle_OtroPermiso = new Solicitud_Detalle_OtroPermisoItem();
                 this.Solicitud_Detalle_OtroPermiso.Solicitud_HeaderItem = solicitud;
-
-
+                
                 this.Estados_Solicitud_OtroPermiso = new Solicitud_Estados_OtroPermisoItem();
                 this.Estados_Solicitud_OtroPermiso.Solicitud_Detalle_OtroPermisoItem = Solicitud_Detalle_OtroPermiso;
                 this.Estados_Solicitud_OtroPermiso.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
+                this.Estados_Solicitud_OtroPermiso.MensajeBy = this.Application.User.FullName;
                 this.Estados_Solicitud_OtroPermiso.CreadoAt = DateTime.Now;
 
             }
@@ -252,6 +267,7 @@ namespace LightSwitchApplication
 
         partial void Solicitudes_Crear_Saved()
         {
+            
 
             this.Close(true);
  
@@ -272,22 +288,110 @@ namespace LightSwitchApplication
                 dataWorkspace.Autorizaciones_AdminsData.ConsultarSaldoVacaciones.AddNew();
 
             operation.Fecha = this.Solicitud_Detalle_Vacaciones.Inicio;
+            //operation.Rut = this.PersonaItem.Rut_Persona;
             operation.Rut = "0017511042-9";
+            //operation.Contrato = this.ContratoPorRut.Last().Contrato;
             operation.Contrato = 2063;
 
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
             this.Solicitud_Detalle_Vacaciones.SALDO = operation.Saldo;
+            
 
             
 
         }
 
+        //Calcula los dias laborales entre vacaciones
+        public static int BusinessDaysUntil( DateTime firstDay, DateTime lastDay, params DateTime[] bankHolidays)
+        {
+            firstDay = firstDay.Date;
+            lastDay = lastDay.Date;
+            if (firstDay > lastDay)
+                throw new ArgumentException("Día de Término debe ser mayor al día de Inicio " + lastDay);
+
+            TimeSpan span = lastDay - firstDay;
+            int businessDays = span.Days + 1;
+            int fullWeekCount = businessDays / 7;
+            // find out if there are weekends during the time exceedng the full weeks
+            if (businessDays > fullWeekCount * 7)
+            {
+                // we are here to find out if there is a 1-day or 2-days weekend
+                // in the time interval remaining after subtracting the complete weeks
+                //int firstDayOfWeek = (int)firstDay.DayOfWeek;
+                //int lastDayOfWeek = (int)lastDay.DayOfWeek;
+
+                int firstDayOfWeek = firstDay.DayOfWeek == DayOfWeek.Sunday
+                    ? 7 : (int)firstDay.DayOfWeek;
+                int lastDayOfWeek = lastDay.DayOfWeek == DayOfWeek.Sunday
+                    ? 7 : (int)lastDay.DayOfWeek;
+
+                if (lastDayOfWeek < firstDayOfWeek)
+                    lastDayOfWeek += 7;
+                if (firstDayOfWeek <= 6)
+                {
+                    if (lastDayOfWeek >= 7)// Both Saturday and Sunday are in the remaining time interval
+                        businessDays -= 2;
+                    else if (lastDayOfWeek >= 6)// Only Saturday is in the remaining time interval
+                        businessDays -= 1;
+                }
+                else if (firstDayOfWeek <= 7 && lastDayOfWeek >= 7)// Only Sunday is in the remaining time interval
+                    businessDays -= 1;
+            }
+
+            // subtract the weekends during the full weeks in the interval
+            businessDays -= fullWeekCount + fullWeekCount;
+
+            // subtract the number of bank holidays during the time interval
+            foreach (DateTime bankHoliday in bankHolidays)
+            {
+                DateTime bh = bankHoliday.Date;
+                if (firstDay <= bh && bh <= lastDay && !(bh.DayOfWeek == DayOfWeek.Sunday || bh.DayOfWeek == DayOfWeek.Saturday))
+                    --businessDays;
+            }
+
+            return businessDays;
+        }
+        
+        
+
         partial void Solicitud_Detalle_Vacaciones_Validate(ScreenValidationResultsBuilder results)
         {
+            if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
+            {
 
-            if (InvocarSaldoVacaciones == true) { this.ConsultarSaldo_Execute(); }
-            InvocarSaldoVacaciones = false;
+                if (InvocarSaldoVacaciones == true) { this.ConsultarSaldo_Execute(); }
+                InvocarSaldoVacaciones = false;
+
+                if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
+                {
+                    if (this.Solicitud_Detalle_Vacaciones.Prestamo.HasValue)
+                    {
+                        if (this.Solicitud_Detalle_Vacaciones.Prestamo.Value < 0 || this.Solicitud_Detalle_Vacaciones.Prestamo.Value > 50)
+                        {
+                            results.AddPropertyError("El prestamo debe ser entre 0 y 50");
+                        }
+                    }
+                }
+
+                //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
+
+                DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
+                int dia; int mes; int i = 0;
+
+                foreach( FeriadosItem feriado in this.Feriados ){
+
+                    dia = feriado.Feriado.Day;
+                    mes = feriado.Feriado.Month;
+                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    FERIADOS[i] = DiaAux;
+                
+                    i++;
+            
+                }
+
+                this.Solicitud_Detalle_Vacaciones.NumeroDias = BusinessDaysUntil(this.Solicitud_Detalle_Vacaciones.Inicio,this.Solicitud_Detalle_Vacaciones.Termino,FERIADOS);
+            }
         }
 
         partial void RequierePrestamo_Validate(ScreenValidationResultsBuilder results)
@@ -356,6 +460,10 @@ namespace LightSwitchApplication
                     results.AddPropertyError("La fecha de realización debe ser después de hoy");
 
                 }
+
+                if (COLACIÓN == true) { this.Solicitud_Detalles_HorasExtras.Colacion = true; } else { this.Solicitud_Detalles_HorasExtras.Colacion = false; }
+                if (TAXI == true) { this.Solicitud_Detalles_HorasExtras.Taxi = true;  } else { this.Solicitud_Detalles_HorasExtras.Taxi = false; }
+
             }
 
         }
@@ -367,8 +475,35 @@ namespace LightSwitchApplication
             this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.PersonaItem1 = this.EMPLEADOSACARGO.SelectedItem;
             this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.NombreTrabajador = this.EMPLEADOSACARGO.SelectedItem.NombreAD;
 
+            if (this.EMPLEADOSACARGO.SelectedItem.Es_SubGerente == true) { this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.Departamento = "Subgerencia : " + this.EMPLEADOSACARGO.SelectedItem.Superior_SubGerente.First().Division_SubGerenciaItem.Nombre; }
+            else { this.Solicitud_Detalles_HorasExtras.Solicitud_HeaderItem.Departamento = this.EMPLEADOSACARGO.SelectedItem.Division_AreaItem.Nombre; }
+            
+
             this.CloseModalWindow("ListaEmpleadosACargo");
 
+        }
+
+        partial void Solicitud_Detalle_OtroPermiso_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+
+            if (TIPOSOLICITUD == 4)// si la solicitud es del tipo horas extras
+            {
+
+                if (this.Solicitud_Detalle_OtroPermiso.Inicio.Day <= DateTime.Today.Day)
+                {
+
+                    results.AddPropertyError("La fecha de inicio debe ser después de hoy");
+
+                }
+
+                if (this.Solicitud_Detalle_OtroPermiso.Termino < this.Solicitud_Detalle_OtroPermiso.Inicio)
+                {
+
+                    results.AddPropertyError("La fecha de término debe ser después de la fecha de inicio");
+
+                }
+            }
         }
     }
 }

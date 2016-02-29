@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class Superior_GerenteItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass>
+    public sealed partial class Superior_JefeDirectoItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Inicializa una nueva instancia de la entidad Superior_GerenteItem.
+        /// Inicializa una nueva instancia de la entidad Superior_JefeDirectoItem.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Superior_GerenteItem()
+        public Superior_JefeDirectoItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Superior_GerenteItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Superior_GerenteItem> entitySet)
+        public Superior_JefeDirectoItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Superior_JefeDirectoItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Superior_GerenteItem_Created();
+        partial void Superior_JefeDirectoItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Superior_GerenteItem_AllowSaveWithErrors(ref bool result);
+        partial void Superior_JefeDirectoItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,44 +83,44 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Id_Gerente
+        public int Id_JefeDirecto
         {
             get
             {
-                return global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Id_Gerente);
+                return global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Id_JefeDirecto);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Gerente_IsReadOnly(ref bool result);
+        partial void Id_JefeDirecto_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Gerente_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Id_JefeDirecto_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Gerente_Changed();
+        partial void Id_JefeDirecto_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Division_GerenciaItem Division_GerenciaItem
+        public global::LightSwitchApplication.Division_AreaItem Division_AreaItem
         {
             get
             {
-                return global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Division_GerenciaItem);
+                return global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Division_AreaItem);
             }
             set
             {
-                global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Division_GerenciaItem, value);
+                global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Division_AreaItem, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Division_GerenciaItem_IsReadOnly(ref bool result);
+        partial void Division_AreaItem_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Division_GerenciaItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Division_AreaItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Division_GerenciaItem_Changed();
+        partial void Division_AreaItem_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
@@ -131,11 +131,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.PersonaItem1);
+                return global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.PersonaItem1);
             }
             set
             {
-                global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, value);
+                global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.PersonaItem1, value);
             }
         }
         
@@ -155,37 +155,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Superior_GerenteItem,
-                global::LightSwitchApplication.Superior_GerenteItem.DetailsClass,
-                global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass>>
+                global::LightSwitchApplication.Superior_JefeDirectoItem,
+                global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass,
+                global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Id_Gerente;
+                var initializeEntry = global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Id_JefeDirecto;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass>.Entry
-                __Superior_GerenteItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.__Superior_GerenteItem_CreateNew,
-                    global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.__Superior_GerenteItem_Created,
-                    global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.__Superior_GerenteItem_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Superior_GerenteItem __Superior_GerenteItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Superior_GerenteItem> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass>.Entry
+                __Superior_JefeDirectoItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.__Superior_JefeDirectoItem_CreateNew,
+                    global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.__Superior_JefeDirectoItem_Created,
+                    global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.__Superior_JefeDirectoItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.Superior_JefeDirectoItem __Superior_JefeDirectoItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Superior_JefeDirectoItem> es)
             {
-                return new global::LightSwitchApplication.Superior_GerenteItem(es);
+                return new global::LightSwitchApplication.Superior_JefeDirectoItem(es);
             }
-            private static void __Superior_GerenteItem_Created(global::LightSwitchApplication.Superior_GerenteItem e)
+            private static void __Superior_JefeDirectoItem_Created(global::LightSwitchApplication.Superior_JefeDirectoItem e)
             {
-                e.Superior_GerenteItem_Created();
+                e.Superior_JefeDirectoItem_Created();
             }
-            private static bool __Superior_GerenteItem_AllowSaveWithErrors(global::LightSwitchApplication.Superior_GerenteItem e)
+            private static bool __Superior_JefeDirectoItem_AllowSaveWithErrors(global::LightSwitchApplication.Superior_JefeDirectoItem e)
             {
                 bool result = false;
-                e.Superior_GerenteItem_AllowSaveWithErrors(ref result);
+                e.Superior_JefeDirectoItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -193,7 +193,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass> Commands
             {
                 get
                 {
@@ -201,7 +201,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass> Methods
             {
                 get
                 {
@@ -209,7 +209,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -221,34 +221,34 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, int> Id_Gerente
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, int> Id_JefeDirecto
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Id_Gerente) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Id_JefeDirecto) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem> Division_GerenciaItem
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem> Division_AreaItem
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Division_GerenciaItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem>;
+                        return base.GetItem(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Division_AreaItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaItem1
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaItem1
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.PersonaItem1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>;
+                        return base.GetItem(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.PersonaItem1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>;
                     }
                 }
                 
@@ -258,8 +258,8 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int Id_Gerente { get; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_GerenciaItem { get; set; }
+                new int Id_JefeDirecto { get; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_AreaItem { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation PersonaItem1 { get; set; }
             }
             #pragma warning restore 109
@@ -271,128 +271,128 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, int>.Entry
-                    Id_Gerente = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, int>.Entry(
-                        "Id_Gerente",
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Id_Gerente_Stub,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Id_Gerente_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Id_Gerente_Validate,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Id_Gerente_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, int>.Entry
+                    Id_JefeDirecto = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, int>.Entry(
+                        "Id_JefeDirecto",
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Id_JefeDirecto_Stub,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Id_JefeDirecto_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Id_JefeDirecto_Validate,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Id_JefeDirecto_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Id_Gerente_OnValueChanged);
-                private static void _Id_Gerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Id_JefeDirecto_OnValueChanged);
+                private static void _Id_JefeDirecto_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Id_Gerente, sf);
+                    c(d, ref d._Id_JefeDirecto, sf);
                 }
-                private static bool _Id_Gerente_ComputeIsReadOnly(global::LightSwitchApplication.Superior_GerenteItem e)
+                private static bool _Id_JefeDirecto_ComputeIsReadOnly(global::LightSwitchApplication.Superior_JefeDirectoItem e)
                 {
                     bool result = false;
-                    e.Id_Gerente_IsReadOnly(ref result);
+                    e.Id_JefeDirecto_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Id_Gerente_Validate(global::LightSwitchApplication.Superior_GerenteItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Id_JefeDirecto_Validate(global::LightSwitchApplication.Superior_JefeDirectoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Id_Gerente_Validate(r);
+                    e.Id_JefeDirecto_Validate(r);
                 }
-                private static int _Id_Gerente_GetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static int _Id_JefeDirecto_GetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Id_Gerente;
+                    return d.ImplementationEntity.Id_JefeDirecto;
                 }
-                private static void _Id_Gerente_OnValueChanged(global::LightSwitchApplication.Superior_GerenteItem e)
+                private static void _Id_JefeDirecto_OnValueChanged(global::LightSwitchApplication.Superior_JefeDirectoItem e)
                 {
-                    e.Id_Gerente_Changed();
+                    e.Id_JefeDirecto_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem>.Entry
-                    Division_GerenciaItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem>.Entry(
-                        "Division_GerenciaItem",
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_Stub,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_Validate,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_GetImplementationValue,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_SetImplementationValue,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_Refresh,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._Division_GerenciaItem_OnValueChanged);
-                private static void _Division_GerenciaItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem>.Data> c, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>.Entry
+                    Division_AreaItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>.Entry(
+                        "Division_AreaItem",
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_Stub,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_Validate,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_GetImplementationValue,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_SetImplementationValue,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_Refresh,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._Division_AreaItem_OnValueChanged);
+                private static void _Division_AreaItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>.Data> c, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Division_GerenciaItem, sf);
+                    c(d, ref d._Division_AreaItem, sf);
                 }
-                private static bool _Division_GerenciaItem_ComputeIsReadOnly(global::LightSwitchApplication.Superior_GerenteItem e)
+                private static bool _Division_AreaItem_ComputeIsReadOnly(global::LightSwitchApplication.Superior_JefeDirectoItem e)
                 {
                     bool result = false;
-                    e.Division_GerenciaItem_IsReadOnly(ref result);
+                    e.Division_AreaItem_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Division_GerenciaItem_Validate(global::LightSwitchApplication.Superior_GerenteItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Division_AreaItem_Validate(global::LightSwitchApplication.Superior_JefeDirectoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Division_GerenciaItem_Validate(r);
+                    e.Division_AreaItem_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Division_GerenciaItem_GetCoreImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Division_AreaItem_GetCoreImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Division_GerenciaItem;
+                    return d.ImplementationEntity.Division_AreaItem;
                 }
-                private static global::LightSwitchApplication.Division_GerenciaItem _Division_GerenciaItem_GetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static global::LightSwitchApplication.Division_AreaItem _Division_AreaItem_GetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Division_GerenciaItem, global::LightSwitchApplication.Division_GerenciaItem.DetailsClass>(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Division_GerenciaItem, ref d._Division_GerenciaItem);
+                    return d.GetImplementationValue<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass>(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Division_AreaItem, ref d._Division_AreaItem);
                 }
-                private static void _Division_GerenciaItem_SetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d, global::LightSwitchApplication.Division_GerenciaItem v)
+                private static void _Division_AreaItem_SetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d, global::LightSwitchApplication.Division_AreaItem v)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Division_GerenciaItem, ref d._Division_GerenciaItem, (i, ev) => i.Division_GerenciaItem = ev, v);
+                    d.SetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Division_AreaItem, ref d._Division_AreaItem, (i, ev) => i.Division_AreaItem = ev, v);
                 }
-                private static void _Division_GerenciaItem_Refresh(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static void _Division_AreaItem_Refresh(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.Division_GerenciaItem, ref d._Division_GerenciaItem);
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.Division_AreaItem, ref d._Division_AreaItem);
                 }
-                private static void _Division_GerenciaItem_OnValueChanged(global::LightSwitchApplication.Superior_GerenteItem e)
+                private static void _Division_AreaItem_OnValueChanged(global::LightSwitchApplication.Superior_JefeDirectoItem e)
                 {
-                    e.Division_GerenciaItem_Changed();
+                    e.Division_AreaItem_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    PersonaItem1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    PersonaItem1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
                         "PersonaItem1",
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_Stub,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_Validate,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_GetImplementationValue,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_SetImplementationValue,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_Refresh,
-                        global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_OnValueChanged);
-                private static void _PersonaItem1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_Stub,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_Validate,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_GetImplementationValue,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_SetImplementationValue,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_Refresh,
+                        global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties._PersonaItem1_OnValueChanged);
+                private static void _PersonaItem1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._PersonaItem1, sf);
                 }
-                private static bool _PersonaItem1_ComputeIsReadOnly(global::LightSwitchApplication.Superior_GerenteItem e)
+                private static bool _PersonaItem1_ComputeIsReadOnly(global::LightSwitchApplication.Superior_JefeDirectoItem e)
                 {
                     bool result = false;
                     e.PersonaItem1_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _PersonaItem1_Validate(global::LightSwitchApplication.Superior_GerenteItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _PersonaItem1_Validate(global::LightSwitchApplication.Superior_JefeDirectoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.PersonaItem1_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _PersonaItem1_GetCoreImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _PersonaItem1_GetCoreImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.PersonaItem1;
                 }
-                private static global::LightSwitchApplication.PersonaItem _PersonaItem1_GetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static global::LightSwitchApplication.PersonaItem _PersonaItem1_GetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass>(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
+                    return d.GetImplementationValue<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass>(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
                 }
-                private static void _PersonaItem1_SetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d, global::LightSwitchApplication.PersonaItem v)
+                private static void _PersonaItem1_SetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d, global::LightSwitchApplication.PersonaItem v)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1, (i, ev) => i.PersonaItem1 = ev, v);
+                    d.SetImplementationValue(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1, (i, ev) => i.PersonaItem1 = ev, v);
                 }
-                private static void _PersonaItem1_Refresh(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass d)
+                private static void _PersonaItem1_Refresh(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass d)
                 {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Superior_GerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
                 }
-                private static void _PersonaItem1_OnValueChanged(global::LightSwitchApplication.Superior_GerenteItem e)
+                private static void _PersonaItem1_OnValueChanged(global::LightSwitchApplication.Superior_JefeDirectoItem e)
                 {
                     e.PersonaItem1_Changed();
                 }
@@ -400,13 +400,13 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, int>.Data _Id_Gerente;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, int>.Data _Id_JefeDirecto;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem>.Data _Division_GerenciaItem;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>.Data _Division_AreaItem;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_GerenteItem, global::LightSwitchApplication.Superior_GerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaItem1;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_JefeDirectoItem, global::LightSwitchApplication.Superior_JefeDirectoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaItem1;
             
         }
     

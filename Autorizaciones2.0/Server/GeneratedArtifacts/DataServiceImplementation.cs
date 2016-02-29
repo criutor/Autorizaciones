@@ -131,6 +131,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem();
             }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.FeriadosItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.FeriadosItem();
+            }
     
             return base.CreateObject(type);
         }
@@ -226,6 +230,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.FeriadosItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.FeriadosItem();
+            }
             return null;
         }
     
@@ -261,9 +269,7 @@ namespace LightSwitchApplication.Implementation
         public global::System.Linq.IQueryable<global::Fin700v60Data.Implementation.CtoT_PersonaItem> PersonasContratadas()
         {
             global::System.Linq.IQueryable<global::Fin700v60Data.Implementation.CtoT_PersonaItem> query;
-            query = global::System.Linq.Queryable.Where(
-                this.GetQuery<global::Fin700v60Data.Implementation.CtoT_PersonaItem>("CtoT_Persona"),
-                (c) => (c.Estado_Persona.CompareTo("c") == 0));
+            query = this.GetQuery<global::Fin700v60Data.Implementation.CtoT_PersonaItem>("CtoT_Persona");
             return query;
         }
     
@@ -468,6 +474,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ConsultarSaldoVacacionesItem) == definitionType)
             {
                 return typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarSaldoVacacionesItem);
+            }
+            if (typeof(global::LightSwitchApplication.FeriadosItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.FeriadosItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {
@@ -1768,6 +1778,39 @@ namespace Autorizaciones_AdminsData.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class ConsultarSaldoVacacionesItem :
         global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class FeriadosItem :
+        global::LightSwitchApplication.FeriadosItem.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

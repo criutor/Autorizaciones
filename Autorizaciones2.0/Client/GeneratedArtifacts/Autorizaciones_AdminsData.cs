@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 22/02/2016 19:58:25
+// Fecha de generación: 26/02/2016 17:15:20
 namespace LightSwitchApplication.Implementation
 {
     
@@ -399,6 +399,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<ConsultarSaldoVacacionesItem> _ConsultarSaldoVacaciones;
         /// <summary>
+        /// No hay comentarios para Feriados en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<FeriadosItem> Feriados
+        {
+            get
+            {
+                if ((this._Feriados == null))
+                {
+                    this._Feriados = base.CreateQuery<FeriadosItem>("Feriados");
+                }
+                return this._Feriados;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<FeriadosItem> _Feriados;
+        /// <summary>
         /// No hay comentarios para Persona en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -557,6 +574,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToConsultarSaldoVacaciones(ConsultarSaldoVacacionesItem consultarSaldoVacacionesItem)
         {
             base.AddObject("ConsultarSaldoVacaciones", consultarSaldoVacacionesItem);
+        }
+        /// <summary>
+        /// No hay comentarios para Feriados en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToFeriados(FeriadosItem feriadosItem)
+        {
+            base.AddObject("Feriados", feriadosItem);
         }
     }
     /// <summary>
@@ -840,6 +865,58 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<double> _SaldoDiasAdmins;
         partial void OnSaldoDiasAdminsChanging(global::System.Nullable<double> value);
         partial void OnSaldoDiasAdminsChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Cargo en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Cargo
+        {
+            get
+            {
+                return this._Cargo;
+            }
+            set
+            {
+                this.OnCargoChanging(value);
+                if (object.Equals(this.Cargo, value))
+                {
+                    return;
+                }
+                this._Cargo = value;
+                this.OnCargoChanged();
+                this.OnPropertyChanged("Cargo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Cargo;
+        partial void OnCargoChanging(string value);
+        partial void OnCargoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad FechaVigencia en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> FechaVigencia
+        {
+            get
+            {
+                return this._FechaVigencia;
+            }
+            set
+            {
+                this.OnFechaVigenciaChanging(value);
+                if (object.Equals(this.FechaVigencia, value))
+                {
+                    return;
+                }
+                this._FechaVigencia = value;
+                this.OnFechaVigenciaChanged();
+                this.OnPropertyChanged("FechaVigencia");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _FechaVigencia;
+        partial void OnFechaVigenciaChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnFechaVigenciaChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>
@@ -3050,7 +3127,7 @@ namespace LightSwitchApplication.Implementation
         /// No hay comentarios para la propiedad Prestamo en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<double> Prestamo
+        public global::System.Nullable<int> Prestamo
         {
             get
             {
@@ -3069,8 +3146,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<double> _Prestamo;
-        partial void OnPrestamoChanging(global::System.Nullable<double> value);
+        private global::System.Nullable<int> _Prestamo;
+        partial void OnPrestamoChanging(global::System.Nullable<int> value);
         partial void OnPrestamoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Solicitud_Header_fk en el esquema.
@@ -5543,6 +5620,120 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<double> _Saldo;
         partial void OnSaldoChanging(global::System.Nullable<double> value);
         partial void OnSaldoChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// No hay comentarios para LightSwitchApplication.FeriadosItem en el esquema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Feriados")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class FeriadosItem : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Crear un nuevo objeto FeriadosItem.
+        /// </summary>
+        /// <param name="ID">Valor inicial de Id.</param>
+        /// <param name="feriado">Valor inicial de Feriado.</param>
+        /// <param name="nombre">Valor inicial de Nombre.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static FeriadosItem CreateFeriadosItem(int ID, global::System.DateTime feriado, string nombre)
+        {
+            FeriadosItem feriadosItem = new FeriadosItem();
+            feriadosItem.Id = ID;
+            feriadosItem.Feriado = feriado;
+            feriadosItem.Nombre = nombre;
+            return feriadosItem;
+        }
+        /// <summary>
+        /// No hay comentarios para la propiedad Id en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                if (object.Equals(this.Id, value))
+                {
+                    return;
+                }
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Feriado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime Feriado
+        {
+            get
+            {
+                return this._Feriado;
+            }
+            set
+            {
+                this.OnFeriadoChanging(value);
+                if (object.Equals(this.Feriado, value))
+                {
+                    return;
+                }
+                this._Feriado = value;
+                this.OnFeriadoChanged();
+                this.OnPropertyChanged("Feriado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _Feriado;
+        partial void OnFeriadoChanging(global::System.DateTime value);
+        partial void OnFeriadoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Nombre en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Nombre
+        {
+            get
+            {
+                return this._Nombre;
+            }
+            set
+            {
+                this.OnNombreChanging(value);
+                if (object.Equals(this.Nombre, value))
+                {
+                    return;
+                }
+                this._Nombre = value;
+                this.OnNombreChanged();
+                this.OnPropertyChanged("Nombre");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Nombre;
+        partial void OnNombreChanging(string value);
+        partial void OnNombreChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

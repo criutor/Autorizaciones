@@ -18,18 +18,29 @@ namespace LightSwitchApplication
             
             if (this.Persona.Count() == 0)
             {
+                
+                PersonaItem personaNueva = new PersonaItem();
 
-                PersonaItem persona = new PersonaItem();
+                personaNueva.Rut_Persona = this.PersonasContratadas.SelectedItem.Rut_Persona;
+                personaNueva.Nombres = this.PersonasContratadas.SelectedItem.Nombres;
+                personaNueva.AP_Paterno = this.PersonasContratadas.SelectedItem.AP_Paterno;
+                personaNueva.AP_Materno = this.PersonasContratadas.SelectedItem.AP_Materno;
+                personaNueva.Division_AreaItem = this.Division_AreaItem;
+                personaNueva.SaldoDiasAdmins = 3.0;
+                personaNueva.Es_Gerente = false;
+                personaNueva.Es_JefeDirecto = false;
+                personaNueva.Es_SubGerente = false;
 
-                persona.Rut_Persona = this.PersonasContratadas.SelectedItem.Rut_Persona;
-                persona.Nombres = this.PersonasContratadas.SelectedItem.Nombres;
-                persona.AP_Paterno = this.PersonasContratadas.SelectedItem.AP_Paterno;
-                persona.AP_Materno = this.PersonasContratadas.SelectedItem.AP_Materno;
-                persona.Division_AreaItem = this.Division_AreaItem;
-                persona.SaldoDiasAdmins = 3.0;
-                persona.Es_Gerente = false;
-                persona.Es_JefeDirecto = false;
-                persona.Es_SubGerente = false;
+                try
+                {
+                    CODIGOCARGO = this.ContratoPorRut.Last().CargoEmpleado;
+
+                    personaNueva.Cargo = CtoT_CargoItem.Descripcion_Cargo;
+
+                    personaNueva.FechaVigencia = this.ContratoPorRut.Last().FechaVigencia;
+                }
+                catch { }
+                
                 /*
                 string[] porPalabrasNombre = this.PersonasContratadas.SelectedItem.Nombres.Split(new Char[] { ' ' });
                 string[] porPalabrasAPP = this.PersonasContratadas.SelectedItem.AP_Paterno.Split(new Char[] { ' ' });
@@ -39,6 +50,16 @@ namespace LightSwitchApplication
                 */
             }
             else {
+
+                try
+                {
+                    CODIGOCARGO = this.ContratoPorRut.Last().CargoEmpleado;
+
+                    this.Persona.First().Cargo = CtoT_CargoItem.Descripcion_Cargo;
+
+                    Persona.First().FechaVigencia = this.ContratoPorRut.Last().FechaVigencia;
+                }
+                catch { }
 
                 this.Persona.First().Division_AreaItem = this.Division_AreaItem;
             }

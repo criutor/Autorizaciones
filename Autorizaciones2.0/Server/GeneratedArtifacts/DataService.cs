@@ -780,6 +780,42 @@ namespace LightSwitchApplication
         partial void ConsultarSaldoVacaciones_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Inserting(global::LightSwitchApplication.FeriadosItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Inserted(global::LightSwitchApplication.FeriadosItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Updating(global::LightSwitchApplication.FeriadosItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Updated(global::LightSwitchApplication.FeriadosItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Deleting(global::LightSwitchApplication.FeriadosItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Deleted(global::LightSwitchApplication.FeriadosItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Validate(global::LightSwitchApplication.FeriadosItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Feriados_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.FeriadosItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2326,6 +2362,81 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, bool>> filter = null;
                 d.ConsultarSaldoVacaciones_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.FeriadosItem>
+                __FeriadosEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.FeriadosItem>(
+                    "Feriados",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__Feriados_Filter);
+            private static bool __Feriados_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.Feriados_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Feriados_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.Feriados_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Feriados_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.Feriados_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Feriados_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.Feriados_CanRead(ref result);
+                return result;
+            }
+            private static void __Feriados_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e)
+            {
+                d.Feriados_Inserting(e);
+            }
+            private static void __Feriados_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e)
+            {
+                d.Feriados_Inserted(e);
+            }
+            private static void __Feriados_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e)
+            {
+                d.Feriados_Updating(e);
+            }
+            private static void __Feriados_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e)
+            {
+                d.Feriados_Updated(e);
+            }
+            private static void __Feriados_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e)
+            {
+                d.Feriados_Deleting(e);
+            }
+            private static void __Feriados_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e)
+            {
+                d.Feriados_Deleted(e);
+            }
+            private static void __Feriados_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Feriados_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.FeriadosItem, bool>> __Feriados_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.FeriadosItem, bool>> filter = null;
+                d.Feriados_Filter(ref filter);
                 return filter;
             }
             

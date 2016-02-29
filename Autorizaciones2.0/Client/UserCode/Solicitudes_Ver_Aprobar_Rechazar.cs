@@ -70,6 +70,14 @@ namespace LightSwitchApplication
                 this.FindControl("RechazarSolicitud").IsVisible = true;
             }
 
+            if (PANTALLA == 3)//Deshabilita los botones Aprobar, Rechazar, Cancelar y Aceptar solicitud para la vista desde "solicitudes_Empleados_A_Cargo"
+            {
+                this.FindControl("AprobarSolicitud").IsVisible = false;
+                this.FindControl("RechazarSolicitud").IsVisible = false;
+                this.FindControl("AceptarSolicitudUsuario").IsVisible = false;
+                this.FindControl("CancelarSolicitudUsuario").IsVisible = false;
+            }
+
             if (TIPOSOLICITUD == 1)//Habitila los elementos de solicitudes de días administrativos en la vista
             {
                 this.FindControl("Solicitud_Estados_Administrativo_SelectedItem").IsVisible = true;
@@ -91,6 +99,10 @@ namespace LightSwitchApplication
                 this.FindControl("Solicitud_Estados_HorasExtras_SelectedItem").IsVisible = true;
                 this.FindControl("Solicitud_Estados_HorasExtras").IsVisible = true;
                 this.FindControl("HorasExtras").IsVisible = true;
+
+                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Colacion == true) {  COLACIONSTRING = "Sí"; } else {  COLACIONSTRING = "No"; } //por defecto las etiquetas boolean son en inglés, por eso se deben traducir
+                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Taxi == true) { TAXISTRING = "Sí"; } else { ; TAXISTRING = "No"; }
+
                              
             }else
 
@@ -99,13 +111,16 @@ namespace LightSwitchApplication
                 this.FindControl("Solicitud_Estados_OtroPermiso_SelectedItem").IsVisible = true;
                 this.FindControl("Solicitud_Estados_OtroPermiso").IsVisible = true;
                 this.FindControl("OtroPermiso").IsVisible = true;
+
+                if (this.Solicitud_Estados_OtroPermiso.First().Solicitud_Detalle_OtroPermisoItem.ConDescuento == true) { CONDESCUENTOSTRING = "Sí"; } else { CONDESCUENTOSTRING = "No"; } //por defecto las etiquetas boolean son en inglés, por eso se deben traducir
+
             }
         }
 
 
         partial void AceptarSolicitudUsuario_Execute()
         {
-            // Escriba el código aquí.
+            // Aceptar solicitud de horas extras(el empleado que debe realizar las horas extras)
             if (TIPOSOLICITUD == 3)
             {
                 this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Empleado = true;
@@ -128,7 +143,7 @@ namespace LightSwitchApplication
 
         partial void CancelarSolicitudUsuario_Execute()
         {
-            TipoDeAccion = 3;//Cancelar solicitud 
+            TipoDeAccion = 3;//Cancelar solicitud (el empleado que debe realizar las horas extras)
             this.OpenModalWindow("EnviarRespuestaMW");
         }
 
@@ -185,7 +200,7 @@ namespace LightSwitchApplication
                         {
 
                             this.Solicitud_Estados_Administrativo.First().Solicitud_Detalle_AdministrativoItem.Solicitud_HeaderItem.VB_Gerente = true;
-
+                            this.Solicitud_Estados_Administrativo.First().Solicitud_Detalle_AdministrativoItem.Solicitud_HeaderItem.Completada = true;
                             NuevoEstado1.TituloObservacion = "LA SOLICITUD HA SIDO APROBADA POR:";
 
                         }
@@ -236,6 +251,7 @@ namespace LightSwitchApplication
                             if (this.Persona.First().Es_SubGerente == true)
                             {
                                 this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.VB_SubGerente = true;
+                                this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Completada = true;
 
                                 NuevoEstado2.TituloObservacion = "LA SOLICITUD HA SIDO APROBADA POR:";
                             }else
@@ -243,6 +259,7 @@ namespace LightSwitchApplication
                             if (this.Persona.First().Es_Gerente == true)
                             {
                                 this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.VB_Gerente = true;
+                                this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Completada = true;//Solo para las solicitudes de los subgerentes
 
                                 NuevoEstado2.TituloObservacion = "LA SOLICITUD HA SIDO APROBADA POR:";
                             }
@@ -414,10 +431,10 @@ namespace LightSwitchApplication
             }
             if (TIPOSOLICITUD == 3)
             {
-                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Empleado == true)
-                {
-                    result = false;
-                }
+                //if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.VB_Empleado == true)
+                //{
+                //    result = false;
+                //}
                 if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Rechazada == true)
                 {
                     result = false;
@@ -454,6 +471,75 @@ namespace LightSwitchApplication
                 
             }
 
+        }
+
+        partial void AprobarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (TIPOSOLICITUD == 1)
+            {
+                if (this.Solicitud_Estados_Administrativo.First().Solicitud_Detalle_AdministrativoItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_Administrativo.First().Solicitud_Detalle_AdministrativoItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+            }
+            if (TIPOSOLICITUD == 2)
+            {
+                if (this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+            }
+            if (TIPOSOLICITUD == 3)
+            {
+                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+
+            }
+            if (TIPOSOLICITUD == 4)
+            {
+                if (this.Solicitud_Estados_OtroPermiso.First().Solicitud_Detalle_OtroPermisoItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_OtroPermiso.First().Solicitud_Detalle_OtroPermisoItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+            }
+
+        }
+
+        partial void RechazarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (TIPOSOLICITUD == 1)
+            {
+                if (this.Solicitud_Estados_Administrativo.First().Solicitud_Detalle_AdministrativoItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_Administrativo.First().Solicitud_Detalle_AdministrativoItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+            }
+            if (TIPOSOLICITUD == 2)
+            {
+                if (this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_Vacaciones.First().Solicitud_Detalle_VacacionesItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+            }
+            if (TIPOSOLICITUD == 3)
+            {
+                if (this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_HorasExtras.First().Solicitud_Detalle_HorasExtrasItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+                
+            }
+            if (TIPOSOLICITUD == 4)
+            {
+                if (this.Solicitud_Estados_OtroPermiso.First().Solicitud_Detalle_OtroPermisoItem.Solicitud_HeaderItem.Rechazada == true || this.Solicitud_Estados_OtroPermiso.First().Solicitud_Detalle_OtroPermisoItem.Solicitud_HeaderItem.Completada == true)
+                {
+                    result = false;
+                }
+            }
         }
 
 

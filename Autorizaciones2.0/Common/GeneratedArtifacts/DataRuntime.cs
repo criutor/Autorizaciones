@@ -436,6 +436,19 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Obtiene el conjunto de entidades Feriados. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.FeriadosItem> Feriados
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.Feriados);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -897,6 +910,28 @@ namespace LightSwitchApplication
             return this.Details.Methods.ConsultarSaldoVacaciones_SingleOrDefault.CreateInvocation(id).Execute();
         }
         
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="Id">
+        /// Valor de la propiedad clave 'Id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.FeriadosItem Feriados_Single(global::System.Nullable<int> Id)
+        {
+            return this.Details.Methods.Feriados_Single.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="Id">
+        /// Valor de la propiedad clave 'Id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.FeriadosItem Feriados_SingleOrDefault(global::System.Nullable<int> Id)
+        {
+            return this.Details.Methods.Feriados_SingleOrDefault.CreateInvocation(Id).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1273,6 +1308,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem> Feriados_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.Feriados_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem> Feriados_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.Feriados_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1443,6 +1494,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarSaldoVacaciones) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarSaldoVacacionesItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem> Feriados
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.Feriados) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>;
                     }
                 }
                 
@@ -1864,6 +1923,26 @@ namespace LightSwitchApplication
                     c(d, ref d._ConsultarSaldoVacaciones_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Entry
+                    Feriados_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Entry(
+                        "Feriados_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._Feriados_Single_Stub);
+                private static void _Feriados_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Feriados_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Entry
+                    Feriados_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Entry(
+                        "Feriados_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._Feriados_SingleOrDefault_Stub);
+                private static void _Feriados_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Feriados_SingleOrDefault, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2072,6 +2151,16 @@ namespace LightSwitchApplication
                     c(d, ref d._ConsultarSaldoVacaciones, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Entry
+                    Feriados = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Entry(
+                        "Feriados",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._Feriados_Stub);
+                private static void _Feriados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Feriados, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2133,6 +2222,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarSaldoVacacionesItem>.Data _ConsultarSaldoVacaciones;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data _Feriados;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona_Single;
@@ -2256,6 +2348,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarSaldoVacacionesItem>.Data _ConsultarSaldoVacaciones_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data _Feriados_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data _Feriados_SingleOrDefault;
             
         }
     

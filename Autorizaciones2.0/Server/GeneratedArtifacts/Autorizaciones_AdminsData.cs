@@ -406,6 +406,22 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         private ObjectSet<ConsultarSaldoVacacionesItem> _ConsultarSaldoVacaciones;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<FeriadosItem> Feriados
+        {
+            get
+            {
+                if ((_Feriados == null))
+                {
+                    _Feriados = base.CreateObjectSet<FeriadosItem>("Feriados");
+                }
+                return _Feriados;
+            }
+        }
+        private ObjectSet<FeriadosItem> _Feriados;
 
         #endregion
 
@@ -569,6 +585,14 @@ namespace Autorizaciones_AdminsData.Implementation
         public void AddToConsultarSaldoVacaciones(ConsultarSaldoVacacionesItem consultarSaldoVacacionesItem)
         {
             base.AddObject("ConsultarSaldoVacaciones", consultarSaldoVacacionesItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet Feriados. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToFeriados(FeriadosItem feriadosItem)
+        {
+            base.AddObject("Feriados", feriadosItem);
         }
 
         #endregion
@@ -1726,6 +1750,115 @@ namespace Autorizaciones_AdminsData.Implementation
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="FeriadosItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class FeriadosItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto FeriadosItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad Id.</param>
+        /// <param name="feriado">Valor inicial de la propiedad Feriado.</param>
+        /// <param name="nombre">Valor inicial de la propiedad Nombre.</param>
+        public static FeriadosItem CreateFeriadosItem(global::System.Int32 id, global::System.DateTime feriado, global::System.String nombre)
+        {
+            FeriadosItem feriadosItem = new FeriadosItem();
+            feriadosItem.Id = id;
+            feriadosItem.Feriado = feriado;
+            feriadosItem.Nombre = nombre;
+            return feriadosItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime Feriado
+        {
+            get
+            {
+                return _Feriado;
+            }
+            set
+            {
+                OnFeriadoChanging(value);
+                ReportPropertyChanging("Feriado");
+                _Feriado = value;
+                ReportPropertyChanged("Feriado");
+                OnFeriadoChanged();
+            }
+        }
+        private global::System.DateTime _Feriado;
+        partial void OnFeriadoChanging(global::System.DateTime value);
+        partial void OnFeriadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = value;
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="PersonaItem")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -1990,6 +2123,54 @@ namespace Autorizaciones_AdminsData.Implementation
         private Nullable<global::System.Double> _SaldoDiasAdmins;
         partial void OnSaldoDiasAdminsChanging(Nullable<global::System.Double> value);
         partial void OnSaldoDiasAdminsChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Cargo
+        {
+            get
+            {
+                return _Cargo;
+            }
+            set
+            {
+                OnCargoChanging(value);
+                ReportPropertyChanging("Cargo");
+                _Cargo = value;
+                ReportPropertyChanged("Cargo");
+                OnCargoChanged();
+            }
+        }
+        private global::System.String _Cargo;
+        partial void OnCargoChanging(global::System.String value);
+        partial void OnCargoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaVigencia
+        {
+            get
+            {
+                return _FechaVigencia;
+            }
+            set
+            {
+                OnFechaVigenciaChanging(value);
+                ReportPropertyChanging("FechaVigencia");
+                _FechaVigencia = value;
+                ReportPropertyChanged("FechaVigencia");
+                OnFechaVigenciaChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaVigencia;
+        partial void OnFechaVigenciaChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaVigenciaChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -3144,7 +3325,7 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Double> Prestamo
+        public Nullable<global::System.Int32> Prestamo
         {
             get
             {
@@ -3159,8 +3340,8 @@ namespace Autorizaciones_AdminsData.Implementation
                 OnPrestamoChanged();
             }
         }
-        private Nullable<global::System.Double> _Prestamo;
-        partial void OnPrestamoChanging(Nullable<global::System.Double> value);
+        private Nullable<global::System.Int32> _Prestamo;
+        partial void OnPrestamoChanging(Nullable<global::System.Int32> value);
         partial void OnPrestamoChanged();
     
         /// <summary>

@@ -13,11 +13,16 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq.Expressions;
 
+//using System.DirectoryServices;// active direcotory
+
 namespace LightSwitchApplication
 {
 
     public partial class Autorizaciones_AdminsDataService
     {
+        
+
+
         //Quitar los acentos del nombre para dejar en formato Active Directory
         public static string removerSignosAcentos(String texto)
         {
@@ -90,10 +95,10 @@ namespace LightSwitchApplication
                     }
                 } 
         }*/
-
+        
         partial void ConsultarSaldoVacaciones_Inserting(ConsultarSaldoVacacionesItem entity)
         {
-            PersonaItem persona = PersonaPorNombreAD(removerSignosAcentos("RUBIO FLORES, GUSTAVO")).First();
+            //PersonaItem persona = PersonaPorNombreAD(removerSignosAcentos("RUBIO FLORES, GUSTAVO")).First();
 
             using (SqlConnection connection = new SqlConnection())
             {
@@ -127,7 +132,7 @@ namespace LightSwitchApplication
                 }
             } this.Details.DiscardChanges();
         }
-
+        
 
 
     }

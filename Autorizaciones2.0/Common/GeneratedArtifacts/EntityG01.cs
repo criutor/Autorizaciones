@@ -323,6 +323,54 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Cargo
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Cargo);
+            }
+            set
+            {
+                global::LightSwitchApplication.PersonaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Cargo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Cargo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Cargo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Cargo_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<global::System.DateTime> FechaVigencia
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.FechaVigencia);
+            }
+            set
+            {
+                global::LightSwitchApplication.PersonaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.FechaVigencia, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FechaVigencia_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FechaVigencia_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FechaVigencia_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ConvenioColectivoItem ConvenioColectivoItem
         {
             get
@@ -620,6 +668,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string> Cargo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Cargo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<global::System.DateTime>> FechaVigencia
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.FechaVigencia) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem> ConvenioColectivoItem
                 {
                     get
@@ -684,6 +748,8 @@ namespace LightSwitchApplication
                 new string NombreAD { get; set; }
                 new global::System.Nullable<int> IDGerencia_para_subgerentes { get; set; }
                 new global::System.Nullable<double> SaldoDiasAdmins { get; set; }
+                new string Cargo { get; set; }
+                new global::System.Nullable<global::System.DateTime> FechaVigencia { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ConvenioColectivoItem { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_AreaItem { get; set; }
                 new global::System.Collections.IEnumerable Solicitud_Header { get; }
@@ -1070,6 +1136,80 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry
+                    Cargo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry(
+                        "Cargo",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Cargo_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Cargo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Cargo_Validate,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Cargo_GetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Cargo_SetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Cargo_OnValueChanged);
+                private static void _Cargo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Cargo, sf);
+                }
+                private static bool _Cargo_ComputeIsReadOnly(global::LightSwitchApplication.PersonaItem e)
+                {
+                    bool result = false;
+                    e.Cargo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Cargo_Validate(global::LightSwitchApplication.PersonaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Cargo_Validate(r);
+                }
+                private static string _Cargo_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Cargo;
+                }
+                private static void _Cargo_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Cargo = v;
+                }
+                private static void _Cargo_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
+                {
+                    e.Cargo_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    FechaVigencia = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "FechaVigencia",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._FechaVigencia_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._FechaVigencia_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._FechaVigencia_Validate,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._FechaVigencia_GetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._FechaVigencia_SetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._FechaVigencia_OnValueChanged);
+                private static void _FechaVigencia_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FechaVigencia, sf);
+                }
+                private static bool _FechaVigencia_ComputeIsReadOnly(global::LightSwitchApplication.PersonaItem e)
+                {
+                    bool result = false;
+                    e.FechaVigencia_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _FechaVigencia_Validate(global::LightSwitchApplication.PersonaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.FechaVigencia_Validate(r);
+                }
+                private static global::System.Nullable<global::System.DateTime> _FechaVigencia_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.FechaVigencia;
+                }
+                private static void _FechaVigencia_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                {
+                    d.ImplementationEntity.FechaVigencia = global::LightSwitchApplication.PersonaItem.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _FechaVigencia_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
+                {
+                    e.FechaVigencia_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem>.Entry
                     ConvenioColectivoItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem>.Entry(
                         "ConvenioColectivoItem",
@@ -1274,6 +1414,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>>.Data _SaldoDiasAdmins;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data _Cargo;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _FechaVigencia;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem>.Data _ConvenioColectivoItem;

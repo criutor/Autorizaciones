@@ -79,6 +79,16 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("SaldoDiasAdmins");
         }
         
+        partial void OnCargoChanged()
+        {
+            this.___OnPropertyChanged("Cargo");
+        }
+        
+        partial void OnFechaVigenciaChanged()
+        {
+            this.___OnPropertyChanged("FechaVigencia");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get
@@ -1955,6 +1965,31 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region FeriadosItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class FeriadosItem :
+        global::LightSwitchApplication.FeriadosItem.DetailsClass.IImplementation
+    {
+        partial void OnIdChanged()
+        {
+            this.___OnPropertyChanged("Id");
+        }
+        
+        partial void OnFeriadoChanged()
+        {
+            this.___OnPropertyChanged("Feriado");
+        }
+        
+        partial void OnNombreChanged()
+        {
+            this.___OnPropertyChanged("Nombre");
+        }
+        
+    }
+    #endregion
+    
     #region ContratoItem1
     [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Fin700v60Data.Implementation")]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -2747,6 +2782,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.ConsultarSaldoVacacionesItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.FeriadosItem))
+            {
+                return new global::LightSwitchApplication.Implementation.FeriadosItem();
+            }
             return null;
         }
     }
@@ -2909,6 +2948,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ConsultarSaldoVacacionesItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.ConsultarSaldoVacacionesItem);
+            }
+            if (typeof(global::LightSwitchApplication.FeriadosItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.FeriadosItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {

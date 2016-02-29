@@ -991,6 +991,31 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="Feriados">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Feriados" />
+        <SsdlProperty
+          Name="Id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:FeriadosItem/Properties[Id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          Name="Feriado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:FeriadosItem/Properties[Feriado]"
+          Type="date" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:FeriadosItem/Properties[Nombre]"
+          Type="nvarchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Persona">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -1051,6 +1076,17 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoDiasAdmins]"
           Type="float" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Cargo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Cargo]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FechaVigencia"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[FechaVigencia]"
+          Type="datetime" />
         <SsdlForeignKeyProperty
           Name="Convenio_fk"
           Nullable="True"
@@ -1221,7 +1257,7 @@
           Name="Prestamo"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_Detalle_VacacionesItem/Properties[Prestamo]"
-          Type="float" />
+          Type="int" />
         <SsdlForeignKeyProperty
           Name="Solicitud_Header_fk"
           Nullable="False"

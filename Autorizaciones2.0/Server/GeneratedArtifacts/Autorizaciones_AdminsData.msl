@@ -16,6 +16,8 @@
           <ScalarProperty Name="Area_fk" ColumnName="Area_fk" />
           <ScalarProperty Name="IDGerencia_para_subgerentes" ColumnName="IDGerencia_para_subgerentes" />
           <ScalarProperty Name="SaldoDiasAdmins" ColumnName="SaldoDiasAdmins" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -231,6 +233,15 @@
           <ScalarProperty Name="Rut" ColumnName="Rut" />
           <ScalarProperty Name="Contrato" ColumnName="Contrato" />
           <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feriados">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.FeriadosItem)">
+        <MappingFragment StoreEntitySet="Feriados">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Feriado" ColumnName="Feriado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

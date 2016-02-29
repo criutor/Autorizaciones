@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class ConsultarSaldoVacacionesItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass>
+    public sealed partial class FeriadosItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Inicializa una nueva instancia de la entidad ConsultarSaldoVacacionesItem.
+        /// Inicializa una nueva instancia de la entidad FeriadosItem.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public ConsultarSaldoVacacionesItem()
+        public FeriadosItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public ConsultarSaldoVacacionesItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem> entitySet)
+        public FeriadosItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.FeriadosItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.FeriadosItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarSaldoVacacionesItem_Created();
+        partial void FeriadosItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarSaldoVacacionesItem_AllowSaveWithErrors(ref bool result);
+        partial void FeriadosItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,120 +83,68 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int id
+        public int Id
         {
             get
             {
-                return global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.id);
-            }
-            set
-            {
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.id, value);
+                return global::LightSwitchApplication.FeriadosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Id);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void id_IsReadOnly(ref bool result);
+        partial void Id_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void id_Changed();
+        partial void Id_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime Fecha
+        public global::System.DateTime Feriado
         {
             get
             {
-                return global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Fecha);
+                return global::LightSwitchApplication.FeriadosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Feriado);
             }
             set
             {
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Fecha, value);
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Feriado, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Fecha_IsReadOnly(ref bool result);
+        partial void Feriado_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Fecha_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Feriado_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Fecha_Changed();
+        partial void Feriado_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Rut
+        public string Nombre
         {
             get
             {
-                return global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Rut);
+                return global::LightSwitchApplication.FeriadosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Nombre);
             }
             set
             {
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Rut, value);
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Nombre, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Rut_IsReadOnly(ref bool result);
+        partial void Nombre_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Rut_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Nombre_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Rut_Changed();
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Contrato
-        {
-            get
-            {
-                return global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Contrato);
-            }
-            set
-            {
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Contrato, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Contrato_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Contrato_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Contrato_Changed();
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<double> Saldo
-        {
-            get
-            {
-                return global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Saldo);
-            }
-            set
-            {
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Saldo, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Saldo_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Saldo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Saldo_Changed();
+        partial void Nombre_Changed();
 
         #endregion
     
@@ -207,37 +155,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem,
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass,
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.IImplementation,
-                global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass>>
+                global::LightSwitchApplication.FeriadosItem,
+                global::LightSwitchApplication.FeriadosItem.DetailsClass,
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.id;
+                var initializeEntry = global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Id;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass>.Entry
-                __ConsultarSaldoVacacionesItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass>.Entry(
-                    global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.__ConsultarSaldoVacacionesItem_CreateNew,
-                    global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.__ConsultarSaldoVacacionesItem_Created,
-                    global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.__ConsultarSaldoVacacionesItem_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.ConsultarSaldoVacacionesItem __ConsultarSaldoVacacionesItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>.Entry
+                __FeriadosItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.FeriadosItem.DetailsClass.__FeriadosItem_CreateNew,
+                    global::LightSwitchApplication.FeriadosItem.DetailsClass.__FeriadosItem_Created,
+                    global::LightSwitchApplication.FeriadosItem.DetailsClass.__FeriadosItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.FeriadosItem __FeriadosItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.FeriadosItem> es)
             {
-                return new global::LightSwitchApplication.ConsultarSaldoVacacionesItem(es);
+                return new global::LightSwitchApplication.FeriadosItem(es);
             }
-            private static void __ConsultarSaldoVacacionesItem_Created(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            private static void __FeriadosItem_Created(global::LightSwitchApplication.FeriadosItem e)
             {
-                e.ConsultarSaldoVacacionesItem_Created();
+                e.FeriadosItem_Created();
             }
-            private static bool __ConsultarSaldoVacacionesItem_AllowSaveWithErrors(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+            private static bool __FeriadosItem_AllowSaveWithErrors(global::LightSwitchApplication.FeriadosItem e)
             {
                 bool result = false;
-                e.ConsultarSaldoVacacionesItem_AllowSaveWithErrors(ref result);
+                e.FeriadosItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -245,7 +193,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass> Commands
             {
                 get
                 {
@@ -253,7 +201,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass> Methods
             {
                 get
                 {
@@ -261,7 +209,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -273,50 +221,34 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int> id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int> Id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.DateTime> Fecha
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime> Feriado
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Fecha) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.DateTime>;
+                        return base.GetItem(global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Feriado) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, string> Rut
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string> Nombre
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Rut) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int> Contrato
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Contrato) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.Nullable<double>> Saldo
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties.Saldo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.Nullable<double>>;
+                        return base.GetItem(global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Nombre) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>;
                     }
                 }
                 
@@ -326,11 +258,9 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int id { get; set; }
-                new global::System.DateTime Fecha { get; set; }
-                new string Rut { get; set; }
-                new int Contrato { get; set; }
-                new global::System.Nullable<double> Saldo { get; set; }
+                new int Id { get; }
+                new global::System.DateTime Feriado { get; set; }
+                new string Nombre { get; set; }
             }
             #pragma warning restore 109
     
@@ -341,206 +271,122 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Entry
-                    id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Entry(
-                        "id",
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._id_Stub,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._id_ComputeIsReadOnly,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._id_Validate,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._id_GetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._id_SetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._id_OnValueChanged);
-                private static void _id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Entry
+                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Entry(
+                        "Id",
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_Stub,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_Validate,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_OnValueChanged);
+                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.FeriadosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.FeriadosItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._id, sf);
+                    c(d, ref d._Id, sf);
                 }
-                private static bool _id_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.FeriadosItem e)
                 {
                     bool result = false;
-                    e.id_IsReadOnly(ref result);
+                    e.Id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _id_Validate(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Id_Validate(global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.id_Validate(r);
+                    e.Id_Validate(r);
                 }
-                private static int _id_GetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d)
+                private static int _Id_GetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.id;
+                    return d.ImplementationEntity.Id;
                 }
-                private static void _id_SetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, int v)
+                private static void _Id_OnValueChanged(global::LightSwitchApplication.FeriadosItem e)
                 {
-                    d.ImplementationEntity.id = v;
-                }
-                private static void _id_OnValueChanged(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
-                {
-                    e.id_Changed();
+                    e.Id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.DateTime>.Entry
-                    Fecha = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.DateTime>.Entry(
-                        "Fecha",
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Fecha_Stub,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Fecha_ComputeIsReadOnly,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Fecha_Validate,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Fecha_GetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Fecha_SetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Fecha_OnValueChanged);
-                private static void _Fecha_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Entry
+                    Feriado = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Entry(
+                        "Feriado",
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_Stub,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_ComputeIsReadOnly,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_Validate,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_GetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_SetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_OnValueChanged);
+                private static void _Feriado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.FeriadosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.FeriadosItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Fecha, sf);
+                    c(d, ref d._Feriado, sf);
                 }
-                private static bool _Fecha_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+                private static bool _Feriado_ComputeIsReadOnly(global::LightSwitchApplication.FeriadosItem e)
                 {
                     bool result = false;
-                    e.Fecha_IsReadOnly(ref result);
+                    e.Feriado_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Fecha_Validate(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Feriado_Validate(global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Fecha_Validate(r);
+                    e.Feriado_Validate(r);
                 }
-                private static global::System.DateTime _Fecha_GetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d)
+                private static global::System.DateTime _Feriado_GetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Fecha;
+                    return d.ImplementationEntity.Feriado;
                 }
-                private static void _Fecha_SetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, global::System.DateTime v)
+                private static void _Feriado_SetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d, global::System.DateTime v)
                 {
-                    d.ImplementationEntity.Fecha = global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.TruncateDate(v);
+                    d.ImplementationEntity.Feriado = global::LightSwitchApplication.FeriadosItem.DetailsClass.TruncateDate(v);
                 }
-                private static void _Fecha_OnValueChanged(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+                private static void _Feriado_OnValueChanged(global::LightSwitchApplication.FeriadosItem e)
                 {
-                    e.Fecha_Changed();
+                    e.Feriado_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, string>.Entry
-                    Rut = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, string>.Entry(
-                        "Rut",
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Rut_Stub,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Rut_ComputeIsReadOnly,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Rut_Validate,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Rut_GetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Rut_SetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Rut_OnValueChanged);
-                private static void _Rut_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Entry
+                    Nombre = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Entry(
+                        "Nombre",
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_Stub,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_ComputeIsReadOnly,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_Validate,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_GetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_SetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_OnValueChanged);
+                private static void _Nombre_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.FeriadosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.FeriadosItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Rut, sf);
+                    c(d, ref d._Nombre, sf);
                 }
-                private static bool _Rut_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+                private static bool _Nombre_ComputeIsReadOnly(global::LightSwitchApplication.FeriadosItem e)
                 {
                     bool result = false;
-                    e.Rut_IsReadOnly(ref result);
+                    e.Nombre_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Rut_Validate(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Nombre_Validate(global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Rut_Validate(r);
+                    e.Nombre_Validate(r);
                 }
-                private static string _Rut_GetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d)
+                private static string _Nombre_GetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Rut;
+                    return d.ImplementationEntity.Nombre;
                 }
-                private static void _Rut_SetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, string v)
+                private static void _Nombre_SetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.Rut = v;
+                    d.ImplementationEntity.Nombre = v;
                 }
-                private static void _Rut_OnValueChanged(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
+                private static void _Nombre_OnValueChanged(global::LightSwitchApplication.FeriadosItem e)
                 {
-                    e.Rut_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Entry
-                    Contrato = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Entry(
-                        "Contrato",
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Contrato_Stub,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Contrato_ComputeIsReadOnly,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Contrato_Validate,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Contrato_GetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Contrato_SetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Contrato_OnValueChanged);
-                private static void _Contrato_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Contrato, sf);
-                }
-                private static bool _Contrato_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
-                {
-                    bool result = false;
-                    e.Contrato_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Contrato_Validate(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Contrato_Validate(r);
-                }
-                private static int _Contrato_GetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Contrato;
-                }
-                private static void _Contrato_SetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, int v)
-                {
-                    d.ImplementationEntity.Contrato = v;
-                }
-                private static void _Contrato_OnValueChanged(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
-                {
-                    e.Contrato_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.Nullable<double>>.Entry
-                    Saldo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.Nullable<double>>.Entry(
-                        "Saldo",
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Saldo_Stub,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Saldo_ComputeIsReadOnly,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Saldo_Validate,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Saldo_GetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Saldo_SetImplementationValue,
-                        global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass.PropertySetProperties._Saldo_OnValueChanged);
-                private static void _Saldo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.Nullable<double>>.Data> c, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Saldo, sf);
-                }
-                private static bool _Saldo_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
-                {
-                    bool result = false;
-                    e.Saldo_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Saldo_Validate(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Saldo_Validate(r);
-                }
-                private static global::System.Nullable<double> _Saldo_GetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Saldo;
-                }
-                private static void _Saldo_SetImplementationValue(global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass d, global::System.Nullable<double> v)
-                {
-                    d.ImplementationEntity.Saldo = v;
-                }
-                private static void _Saldo_OnValueChanged(global::LightSwitchApplication.ConsultarSaldoVacacionesItem e)
-                {
-                    e.Saldo_Changed();
+                    e.Nombre_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Data _id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.DateTime>.Data _Fecha;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Data _Feriado;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, string>.Data _Rut;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, int>.Data _Contrato;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarSaldoVacacionesItem, global::LightSwitchApplication.ConsultarSaldoVacacionesItem.DetailsClass, global::System.Nullable<double>>.Data _Saldo;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Data _Nombre;
             
         }
     

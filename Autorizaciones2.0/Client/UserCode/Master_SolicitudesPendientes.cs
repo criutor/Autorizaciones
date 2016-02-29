@@ -55,16 +55,11 @@ namespace LightSwitchApplication
             }
             
             string Nombreaux = new string(NombreAD);
-           // -------------------------------------------------------------------------------------------------------------
+           // ----------------------------------------------------------------------------
             
             NOMBREAD = Nombreaux.ToUpper(); //****CAMBIAR POR RUT****
 
-            /*
-             * Si yo soy jefe directo, traer todas las solicitudes donde vb jefe directo es null
-             * Si yo soy subgerente, traer todas las solicitudes donde vb jefe directo es true y vb subgerente es null
-             * Si yo soy gerente, traer todas las solicitudes donde vb jefe directo es true y vb subgerente es true y vb gerente es null
-            */
-
+      
             if (Persona.Count == 0) { this.MENSAJEPersonaNoCreada(); this.Close(true); } //Si el usuario(Active directory) no ha sido asociado a un área de trabajo, el query "Persona" retornara 0 personas.   
             else
             {
@@ -84,7 +79,8 @@ namespace LightSwitchApplication
                 {
                     IDSUBGERENCIA = Persona.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
 
-                    VBGERENTE = false;
+                    
+                    VBGERENTE = null;
                     VBSUBGERENTE = false;
                     VBJEFEDIRECTO = true;
 
@@ -99,10 +95,14 @@ namespace LightSwitchApplication
                     {
                         VBSUBGERENTE = true;
                     }
-                    else { VBSUBGERENTE = false; }
+                    else {
+
+                        IDSUBGERENCIA = Persona.First().Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia;
+
+                        VBSUBGERENTE = false; }
 
                     VBGERENTE = false;
-                     
+                    //IDSUBGERENCIA
                 }
                 else
                 {

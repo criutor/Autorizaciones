@@ -21,6 +21,7 @@
     <EntitySet Name="Superior_JefeDirecto" EntityType="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" store:Type="Tables" Schema="dbo" Table="Superior_JefeDirecto" />
     <EntitySet Name="Superior_SubGerente" EntityType="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" store:Type="Tables" Schema="dbo" Table="Superior_SubGerente" />
     <EntitySet Name="ConsultarSaldoVacaciones" EntityType="Autorizaciones_AdminsDataStore.ConsultarSaldoVacacionesItem" store:Type="Tables" Schema="dbo" Table="ConsultarSaldoVacaciones" />
+    <EntitySet Name="Feriados" EntityType="Autorizaciones_AdminsDataStore.FeriadosItem" store:Type="Tables" Schema="dbo" Table="Feriados" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -116,6 +117,8 @@
     <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
     <Property Name="IDGerencia_para_subgerentes" Type="int" />
     <Property Name="SaldoDiasAdmins" Type="float" />
+    <Property Name="Cargo" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaVigencia" Type="datetime" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
   </EntityType>
@@ -212,7 +215,7 @@
     <Property Name="Termino" Type="date" Nullable="false" />
     <Property Name="NumeroDias" Type="int" Nullable="false" />
     <Property Name="SALDO" Type="float" />
-    <Property Name="Prestamo" Type="float" />
+    <Property Name="Prestamo" Type="int" />
     <Property Name="Solicitud_Header_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Estados_AdministrativoItem">
@@ -315,6 +318,14 @@
     <Property Name="Rut" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Contrato" Type="int" Nullable="false" />
     <Property Name="Saldo" Type="float" />
+  </EntityType>
+  <EntityType Name="FeriadosItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Feriado" Type="date" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />

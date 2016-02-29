@@ -179,8 +179,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\Application.cs" />
     <Compile Include="UserCode\Convenios_Colectivos_CrearListar.cs" />
-    <Compile Include="UserCode\Areas_Detalles_Empleados.cs" />
-    <Compile Include="UserCode\Persona_Crear_Nueva.cs" />
+    <Compile Include="UserCode\Divisiones_Area_Personal.cs" />
+    <Compile Include="UserCode\Solicitudes_Empleados_A_Cargo.cs" />
+    <Compile Include="UserCode\Persona_Crear.cs" />
     <Compile Include="UserCode\Solicitudes_Crear.cs" />
     <Compile Include="UserCode\Master_Divisiones.cs" />
     <Compile Include="UserCode\Master_Empleados.cs" />

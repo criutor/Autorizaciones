@@ -14,6 +14,8 @@
     <Property Name="NombreAD" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="IDGerencia_para_subgerentes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="SaldoDiasAdmins" Type="Edm.Double" />
+    <Property Name="Cargo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="FechaVigencia" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
@@ -133,7 +135,7 @@
     <Property Name="Termino" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="NumeroDias" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="SALDO" Type="Edm.Double" />
-    <Property Name="Prestamo" Type="Edm.Double" />
+    <Property Name="Prestamo" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Solicitud_Header_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Solicitud_HeaderItem" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" ToRole="Solicitud_Header" FromRole="Solicitud_Detalle_Vacaciones" />
     <NavigationProperty Name="Solicitud_Estados_Vacaciones" Relationship="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" ToRole="Solicitud_Estados_Vacaciones" FromRole="Solicitud_Detalle_Vacaciones" />
@@ -253,6 +255,14 @@
     <Property Name="Rut" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Contrato" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="Saldo" Type="Edm.Double" />
+  </EntityType>
+  <EntityType Name="FeriadosItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Feriado" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="0..1" />
@@ -539,6 +549,7 @@
     <EntitySet Name="Superior_JefeDirecto" EntityType="LightSwitchApplication.Superior_JefeDirectoItem" />
     <EntitySet Name="Superior_SubGerente" EntityType="LightSwitchApplication.Superior_SubGerenteItem" />
     <EntitySet Name="ConsultarSaldoVacaciones" EntityType="LightSwitchApplication.ConsultarSaldoVacacionesItem" />
+    <EntitySet Name="Feriados" EntityType="LightSwitchApplication.FeriadosItem" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />

@@ -16,7 +16,46 @@ namespace LightSwitchApplication
 {
     public partial class Master_MisSolicitudes
     {
-        public static string removerSignosAcentos(String conAcentos)//Quitar acentos del nombre de active directory
+        partial void Master_MisSolicitudes_Activated()
+        {
+            //Mostrar todas las solicitudes por defecto (Parametros de la query)
+            this.FechaSolicitudDesde = null;
+            this.FechaSolicitudHasta = null;
+            this.Administrativo = true;
+            this.Vacaciones = true;
+            this.OtroPermiso = true;
+            this.HorasExtras = true;
+            this.RechazadaAprobadaAbierta = null;
+            this.FALSAS = false;
+            this.VERDADERAS = true;
+            this.Solicitud_Header.Load();
+            
+            //****CAMBIAR POR RUT****
+            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
+            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
+
+            //Verificar que que tipo de usuario esta ingresando a la pantalla.
+            if (Persona.Count() == 0)
+            {
+                this.MENSAJEPersonaNoCreada_Execute(); this.Close(true);
+
+            }
+            else if ((Persona.First().Es_Gerente != true) && (Persona.First().Es_JefeDirecto != true) && (Persona.First().Es_SubGerente != true) && Persona.First().Division_AreaItem == null)
+            {
+
+                this.MENSAJECuentaNoAsociada_Execute(); this.Close(true);
+
+            }
+            else
+            {
+                RUTPERSONA = this.Persona.First().Rut_Persona; // Parametro de query para ver solo mis solicitudes.
+
+            }
+
+        }
+
+        //Quitar acentos del nombre de active directory.
+        public static string removerSignosAcentos(String conAcentos)
         {
             int largo = conAcentos.Length;
             char[] NombreAD = new char[largo];
@@ -51,36 +90,6 @@ namespace LightSwitchApplication
             string Nombreaux = new string(NombreAD);
 
             return Nombreaux.ToUpper();
-        }
-
-        partial void Master_MisSolicitudes_Activated()
-        {
-            
-            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); //****CAMBIAR POR RUT****
-            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
-
-            if (Persona.Count() == 0)
-            {
-                //this.MENSAJEPersonaNoCreada(); this.Close(true);
-                this.MENSAJEPersonaNoCreada_Execute(); this.Close(true);
-                
-
-            }
-            else if ((Persona.First().Es_Gerente != true) && (Persona.First().Es_JefeDirecto != true) && (Persona.First().Es_SubGerente != true) && Persona.First().Division_AreaItem == null)
-            {
-
-                //this.MENSAJECuentaNoAsociada(); this.Close(true);
-                this.MENSAJECuentaNoAsociada_Execute(); this.Close(true);
-
-            }
-            else
-            {
-
-                RUTPERSONA = this.Persona.First().Rut_Persona; // Parametro de query para ver solo mis solicitudes
-            }
-
-            // traer todas las solicitudes por defecto
-            //this.TodasLasSolicitudes_Execute(); //Aveces lanza la excepción "The operation has already completed"
         }
 
         partial void NuevaSolicitud_Execute()
@@ -156,22 +165,6 @@ namespace LightSwitchApplication
 
         }
 
-        partial void TodasLasSolicitudes_Execute()
-        {
-            //Condiciones de filtro para mostrar todas las solicitudes
-            this.FechaSolicitudDesde = null;
-            this.FechaSolicitudHasta = null;
-            this.Administrativo = true;
-            this.Vacaciones = true;
-            this.OtroPermiso = true;
-            this.HorasExtras = true;
-            this.RechazadaAprobadaAbierta = null;
-            this.FALSAS = false;
-            this.VERDADERAS = true;
-
-            this.Solicitud_Header.Load();
-        }
-
         partial void RechazadaAprobadaAbierta_Validate(ScreenValidationResultsBuilder results)
         {
             //Si se escoge alguna de las tres opciones de búsqueda, no aplicar los filtros FALSAS ni VERDADERAS
@@ -179,8 +172,20 @@ namespace LightSwitchApplication
             //Al cambiar la opción se cambian los filtros
             if (RechazadaAprobadaAbierta == "Rechazadas") { this.Rechazada = true; this.Completada = false; }else
             if (RechazadaAprobadaAbierta == "Aprobadas") { this.Completada = true; this.Rechazada = false; }else
-            if (RechazadaAprobadaAbierta == "Abiertas") { this.Rechazada = false; this.Completada = false; }
-                
+            if (RechazadaAprobadaAbierta == "Abiertas") { this.Rechazada = false; this.Completada = false; }else
+            if (RechazadaAprobadaAbierta == "Todos los estados") {
+
+                    this.FechaSolicitudDesde = null;
+                    this.FechaSolicitudHasta = null;
+                    this.Administrativo = true;
+                    this.Vacaciones = true;
+                    this.OtroPermiso = true;
+                    this.HorasExtras = true;
+                    this.RechazadaAprobadaAbierta = null;
+                    this.FALSAS = false;
+                    this.VERDADERAS = true;
+                    this.Solicitud_Header.Load();
+            }
         }
 
         partial void SolicitarHorasExtras_CanExecute(ref bool result)
@@ -191,9 +196,69 @@ namespace LightSwitchApplication
                 result = true;
             }
             else { result = false; }
-            
 
         }
+
+        partial void Solicitud_Header_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            //Cargar los estados de la solicitud.
+
+            if(this.Solicitud_Header.Count > 0)
+            {
+
+                if (this.Solicitud_Header.SelectedItem.Administrativo.HasValue == true)
+                {
+                    if (this.Solicitud_Header.SelectedItem.Administrativo.Value == true)
+                    {
+                        
+                        this.FindControl("EstadosAdministrativo").IsVisible = true;
+                        this.FindControl("EstadosVacaciones").IsVisible = false;
+                        this.FindControl("EstadosHorasExtras").IsVisible = false;
+                        this.FindControl("EstadosOtroPermiso").IsVisible = false;
+                    }
+                }
+                else
+                    if (this.Solicitud_Header.SelectedItem.Vacaciones.HasValue == true)
+                    {
+                        if (this.Solicitud_Header.SelectedItem.Vacaciones.Value == true)
+                        {
+                            
+                            this.FindControl("EstadosAdministrativo").IsVisible = false;
+                            this.FindControl("EstadosVacaciones").IsVisible = true;
+                            this.FindControl("EstadosHorasExtras").IsVisible = false;
+                            this.FindControl("EstadosOtroPermiso").IsVisible = false;
+                        }
+                    }
+                    else
+                        if (this.Solicitud_Header.SelectedItem.HorasExtras.HasValue == true)
+                        {
+                            if (this.Solicitud_Header.SelectedItem.HorasExtras.Value == true)
+                            {
+                                
+
+                                this.FindControl("EstadosAdministrativo").IsVisible = false;
+                                this.FindControl("EstadosVacaciones").IsVisible = false;
+                                this.FindControl("EstadosHorasExtras").IsVisible = true;
+                                this.FindControl("EstadosOtroPermiso").IsVisible = false;
+                            }
+                        }
+                        else
+                            if (this.Solicitud_Header.SelectedItem.OtroPermiso.Value == true)
+                            {
+                                if (this.Solicitud_Header.SelectedItem.OtroPermiso.Value == true)
+                                {
+                                    
+                                    this.FindControl("EstadosAdministrativo").IsVisible = false;
+                                    this.FindControl("EstadosVacaciones").IsVisible = false;
+                                    this.FindControl("EstadosHorasExtras").IsVisible = false;
+                                    this.FindControl("EstadosOtroPermiso").IsVisible = true;
+                                }
+                            }
+            }
+
+        }
+
 
     }
 }
