@@ -180,6 +180,7 @@
     <Compile Include="UserCode\Application.cs" />
     <Compile Include="UserCode\Convenios_Colectivos_CrearListar.cs" />
     <Compile Include="UserCode\Divisiones_Area_Personal.cs" />
+    <Compile Include="UserCode\SOLICITUDES_DETALLES.cs" />
     <Compile Include="UserCode\Solicitudes_Empleados_A_Cargo.cs" />
     <Compile Include="UserCode\Persona_Crear.cs" />
     <Compile Include="UserCode\Solicitudes_Crear.cs" />
@@ -189,8 +190,9 @@
     <Compile Include="UserCode\Persona_Buscar_Superior.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UserCode\Master_MisSolicitudes.cs" />
-    <Compile Include="UserCode\Master_SolicitudesPendientes.cs" />
+    <Compile Include="UserCode\MASTER_MIS_SOLICITUDES.cs" />
+    <Compile Include="UserCode\MASTER_SOLICITUDES_PENDIENTES.cs" />
+    <Compile Include="UserCode\SOLICITUDES_NUEVA.cs" />
     <Compile Include="UserCode\Solicitudes_Ver_Aprobar_Rechazar.cs" />
   </ItemGroup>
   <ItemGroup>

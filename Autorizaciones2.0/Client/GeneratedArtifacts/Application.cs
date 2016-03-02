@@ -112,18 +112,18 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_SolicitudesPendientes_CanRun(ref bool result);
+        partial void MASTER_SOLICITUDES_PENDIENTES_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_SolicitudesPendientes_Run(ref bool handled);
+        partial void MASTER_SOLICITUDES_PENDIENTES_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowMaster_SolicitudesPendientes. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowMASTER_SOLICITUDES_PENDIENTES. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowMaster_SolicitudesPendientes()
+        public void ShowMASTER_SOLICITUDES_PENDIENTES()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMaster_SolicitudesPendientes);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMASTER_SOLICITUDES_PENDIENTES);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -142,18 +142,18 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_MisSolicitudes_CanRun(ref bool result);
+        partial void MASTER_MIS_SOLICITUDES_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_MisSolicitudes_Run(ref bool handled);
+        partial void MASTER_MIS_SOLICITUDES_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowMaster_MisSolicitudes. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowMASTER_MIS_SOLICITUDES. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowMaster_MisSolicitudes()
+        public void ShowMASTER_MIS_SOLICITUDES()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMaster_MisSolicitudes);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMASTER_MIS_SOLICITUDES);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -276,6 +276,36 @@ namespace LightSwitchApplication
             ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowVistaHE);
         }
         
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_NUEVA_CanRun(ref bool result, int TIPOSOLICITUD);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_NUEVA_Run(ref bool handled, int TIPOSOLICITUD);
+    
+        /// <summary>
+        /// Abre una nueva instancia de la pantalla ShowSOLICITUDES_NUEVA.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_NUEVA(int TIPOSOLICITUD)
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_NUEVA, TIPOSOLICITUD);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_DETALLES_CanRun(ref bool result, int SOLICITUDESItemId_Solicitud);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_DETALLES_Run(ref bool handled, int SOLICITUDESItemId_Solicitud);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_DETALLES. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_DETALLES(int SOLICITUDESItemId_Solicitud)
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_DETALLES, SOLICITUDESItemId_Solicitud);
+        }
+        
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -345,12 +375,12 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.Persona_Crear.CreateInstance();
                     case "Persona_Buscar_empleado":
                         return global::LightSwitchApplication.Persona_Buscar_empleado.CreateInstance((int)args[0]);
-                    case "Master_SolicitudesPendientes":
-                        return global::LightSwitchApplication.Master_SolicitudesPendientes.CreateInstance();
+                    case "MASTER_SOLICITUDES_PENDIENTES":
+                        return global::LightSwitchApplication.MASTER_SOLICITUDES_PENDIENTES.CreateInstance();
                     case "Solicitud_Header_Testing":
                         return global::LightSwitchApplication.Solicitud_Header_Testing.CreateInstance();
-                    case "Master_MisSolicitudes":
-                        return global::LightSwitchApplication.Master_MisSolicitudes.CreateInstance();
+                    case "MASTER_MIS_SOLICITUDES":
+                        return global::LightSwitchApplication.MASTER_MIS_SOLICITUDES.CreateInstance();
                     case "Convenios_Colectivos_CrearListar":
                         return global::LightSwitchApplication.Convenios_Colectivos_CrearListar.CreateInstance();
                     case "Solicitudes_Crear":
@@ -367,6 +397,10 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.Vista_RRHH.CreateInstance();
                     case "VistaHE":
                         return global::LightSwitchApplication.VistaHE.CreateInstance();
+                    case "SOLICITUDES_NUEVA":
+                        return global::LightSwitchApplication.SOLICITUDES_NUEVA.CreateInstance((int)args[0]);
+                    case "SOLICITUDES_DETALLES":
+                        return global::LightSwitchApplication.SOLICITUDES_DETALLES.CreateInstance((int)args[0]);
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -415,12 +449,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_SolicitudesPendientes
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMASTER_SOLICITUDES_PENDIENTES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMaster_SolicitudesPendientes);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMASTER_SOLICITUDES_PENDIENTES);
                     }
                 }
 
@@ -433,12 +467,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_MisSolicitudes
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMASTER_MIS_SOLICITUDES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMaster_MisSolicitudes);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMASTER_MIS_SOLICITUDES);
                     }
                 }
 
@@ -541,12 +575,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_SolicitudesPendientes
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMASTER_SOLICITUDES_PENDIENTES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMaster_SolicitudesPendientes);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMASTER_SOLICITUDES_PENDIENTES);
                     }
                 }
 
@@ -559,12 +593,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_MisSolicitudes
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMASTER_MIS_SOLICITUDES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMaster_MisSolicitudes);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMASTER_MIS_SOLICITUDES);
                     }
                 }
 
@@ -640,6 +674,24 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_NUEVA
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_NUEVA);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_DETALLES
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_DETALLES);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -699,17 +751,17 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_SolicitudesPendientes = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_SolicitudesPendientes",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_SolicitudesPendientes_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_SolicitudesPendientes_CreateExecutableObject);
-                private static void _ShowMaster_SolicitudesPendientes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowMASTER_SOLICITUDES_PENDIENTES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowMASTER_SOLICITUDES_PENDIENTES",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMASTER_SOLICITUDES_PENDIENTES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMASTER_SOLICITUDES_PENDIENTES_CreateExecutableObject);
+                private static void _ShowMASTER_SOLICITUDES_PENDIENTES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_SolicitudesPendientesCommand, sf);
+                    c(d, ref d._ShowMASTER_SOLICITUDES_PENDIENTESCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowMaster_SolicitudesPendientes_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowMASTER_SOLICITUDES_PENDIENTES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowMaster_SolicitudesPendientes.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowMASTER_SOLICITUDES_PENDIENTES.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
@@ -727,17 +779,17 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_MisSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_MisSolicitudes",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_MisSolicitudes_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_MisSolicitudes_CreateExecutableObject);
-                private static void _ShowMaster_MisSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowMASTER_MIS_SOLICITUDES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowMASTER_MIS_SOLICITUDES",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMASTER_MIS_SOLICITUDES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMASTER_MIS_SOLICITUDES_CreateExecutableObject);
+                private static void _ShowMASTER_MIS_SOLICITUDES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_MisSolicitudesCommand, sf);
+                    c(d, ref d._ShowMASTER_MIS_SOLICITUDESCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowMaster_MisSolicitudes_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowMASTER_MIS_SOLICITUDES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowMaster_MisSolicitudes.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowMASTER_MIS_SOLICITUDES.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
@@ -949,28 +1001,28 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_SolicitudesPendientes = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_SolicitudesPendientes",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_SolicitudesPendientes_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_SolicitudesPendientes_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_SolicitudesPendientes_InvokeMethod);
-                private static void _ShowMaster_SolicitudesPendientes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowMASTER_SOLICITUDES_PENDIENTES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowMASTER_SOLICITUDES_PENDIENTES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMASTER_SOLICITUDES_PENDIENTES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMASTER_SOLICITUDES_PENDIENTES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMASTER_SOLICITUDES_PENDIENTES_InvokeMethod);
+                private static void _ShowMASTER_SOLICITUDES_PENDIENTES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_SolicitudesPendientesMethod, sf);
+                    c(d, ref d._ShowMASTER_SOLICITUDES_PENDIENTESMethod, sf);
                 }
-                private static global::System.Exception _ShowMaster_SolicitudesPendientes_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowMASTER_SOLICITUDES_PENDIENTES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Master_SolicitudesPendientes_CanRun(ref result);
+                    d.Application.MASTER_SOLICITUDES_PENDIENTES_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowMaster_SolicitudesPendientes_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowMASTER_SOLICITUDES_PENDIENTES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Master_SolicitudesPendientes_Run(ref handled);
+                    d.Application.MASTER_SOLICITUDES_PENDIENTES_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Master_SolicitudesPendientes", () => global::LightSwitchApplication.Master_SolicitudesPendientes.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:MASTER_SOLICITUDES_PENDIENTES", () => global::LightSwitchApplication.MASTER_SOLICITUDES_PENDIENTES.CreateInstance(), args);
                     }
                 }
  
@@ -1001,28 +1053,28 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_MisSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_MisSolicitudes",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_MisSolicitudes_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_MisSolicitudes_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_MisSolicitudes_InvokeMethod);
-                private static void _ShowMaster_MisSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowMASTER_MIS_SOLICITUDES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowMASTER_MIS_SOLICITUDES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMASTER_MIS_SOLICITUDES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMASTER_MIS_SOLICITUDES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMASTER_MIS_SOLICITUDES_InvokeMethod);
+                private static void _ShowMASTER_MIS_SOLICITUDES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_MisSolicitudesMethod, sf);
+                    c(d, ref d._ShowMASTER_MIS_SOLICITUDESMethod, sf);
                 }
-                private static global::System.Exception _ShowMaster_MisSolicitudes_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowMASTER_MIS_SOLICITUDES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Master_MisSolicitudes_CanRun(ref result);
+                    d.Application.MASTER_MIS_SOLICITUDES_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowMaster_MisSolicitudes_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowMASTER_MIS_SOLICITUDES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Master_MisSolicitudes_Run(ref handled);
+                    d.Application.MASTER_MIS_SOLICITUDES_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Master_MisSolicitudes", () => global::LightSwitchApplication.Master_MisSolicitudes.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:MASTER_MIS_SOLICITUDES", () => global::LightSwitchApplication.MASTER_MIS_SOLICITUDES.CreateInstance(), args);
                     }
                 }
  
@@ -1234,6 +1286,58 @@ namespace LightSwitchApplication
                     }
                 }
  
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_NUEVA = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_NUEVA",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_NUEVA_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_NUEVA_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_NUEVA_InvokeMethod);
+                private static void _ShowSOLICITUDES_NUEVA_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_NUEVAMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_NUEVA_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_NUEVA_CanRun(ref result, (int)args[0]);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_NUEVA_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_NUEVA_Run(ref handled, (int)args[0]);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_NUEVA", () => global::LightSwitchApplication.SOLICITUDES_NUEVA.CreateInstance((int)args[0]), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_DETALLES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_DETALLES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_DETALLES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_DETALLES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_DETALLES_InvokeMethod);
+                private static void _ShowSOLICITUDES_DETALLES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_DETALLESMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_DETALLES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_DETALLES_CanRun(ref result, (int)args[0]);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_DETALLES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_DETALLES_Run(ref handled, (int)args[0]);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_DETALLES", () => global::LightSwitchApplication.SOLICITUDES_DETALLES.CreateInstance((int)args[0]), args);
+                    }
+                }
+ 
             }
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_EmpleadosMethod;
@@ -1246,11 +1350,11 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_Buscar_empleadoMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_SolicitudesPendientesMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMASTER_SOLICITUDES_PENDIENTESMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSolicitud_Header_TestingMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_MisSolicitudesMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMASTER_MIS_SOLICITUDESMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowConvenios_Colectivos_CrearListarMethod;
 
@@ -1268,17 +1372,21 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowVistaHEMethod;
 
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_NUEVAMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_DETALLESMethod;
+
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_EmpleadosCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_DivisionesCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_CrearCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_SolicitudesPendientesCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMASTER_SOLICITUDES_PENDIENTESCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSolicitud_Header_TestingCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_MisSolicitudesCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMASTER_MIS_SOLICITUDESCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowConvenios_Colectivos_CrearListarCommand;
 

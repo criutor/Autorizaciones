@@ -245,5 +245,49 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOS">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ESTADOSItem)">
+        <MappingFragment StoreEntitySet="ESTADOS">
+          <ScalarProperty Name="Id_Estado" ColumnName="Id_Estado" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="TituloObservacion" ColumnName="TituloObservacion" />
+          <ScalarProperty Name="MensajeBy" ColumnName="MensajeBy" />
+          <ScalarProperty Name="CreadoAt" ColumnName="CreadoAt" />
+          <ScalarProperty Name="Solicitud_fk" ColumnName="Solicitud_fk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOLICITUDES">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.SOLICITUDESItem)">
+        <MappingFragment StoreEntitySet="SOLICITUDES">
+          <ScalarProperty Name="Id_Solicitud" ColumnName="Id_Solicitud" />
+          <ScalarProperty Name="Gerencia" ColumnName="Gerencia" />
+          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="VB_Gerente" ColumnName="VB_Gerente" />
+          <ScalarProperty Name="VB_SubGerente" ColumnName="VB_SubGerente" />
+          <ScalarProperty Name="VB_JefeDirecto" ColumnName="VB_JefeDirecto" />
+          <ScalarProperty Name="VB_Empleado" ColumnName="VB_Empleado" />
+          <ScalarProperty Name="Vacaciones" ColumnName="Vacaciones" />
+          <ScalarProperty Name="Administrativo" ColumnName="Administrativo" />
+          <ScalarProperty Name="HorasExtras" ColumnName="HorasExtras" />
+          <ScalarProperty Name="OtroPermiso" ColumnName="OtroPermiso" />
+          <ScalarProperty Name="Completada" ColumnName="Completada" />
+          <ScalarProperty Name="Rechazada" ColumnName="Rechazada" />
+          <ScalarProperty Name="SaldoDias" ColumnName="SaldoDias" />
+          <ScalarProperty Name="NumeroDiasTomados" ColumnName="NumeroDiasTomados" />
+          <ScalarProperty Name="HorasAutorizadas" ColumnName="HorasAutorizadas" />
+          <ScalarProperty Name="HorasTrabajadas" ColumnName="HorasTrabajadas" />
+          <ScalarProperty Name="Prestamo" ColumnName="Prestamo" />
+          <ScalarProperty Name="RutPersona_fk" ColumnName="RutPersona_fk" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Termino" ColumnName="Termino" />
+          <ScalarProperty Name="Colacion" ColumnName="Colacion" />
+          <ScalarProperty Name="Taxi" ColumnName="Taxi" />
+          <ScalarProperty Name="ConDescuento" ColumnName="ConDescuento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

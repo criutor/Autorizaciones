@@ -175,6 +175,11 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Association="FK_SOLICITUDES_Persona"
+        FromEnd="Persona"
+        Name="SOLICITUDES"
+        ToEnd="SOLICITUDES" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -2272,6 +2277,586 @@
             Value="Valor de la propiedad clave 'Id' de la entidad que se va a recuperar." />
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ESTADOSItem"
+      Name="ESTADOS" />
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="SOLICITUDESItem"
+      Name="SOLICITUDES" />
+    <AssociationSet
+      Association="FK_ESTADOS_SOLICITUDES"
+      Name="FK_ESTADOS_SOLICITUDES">
+      <AssociationSetEnd
+        EntitySet="SOLICITUDES"
+        Name="SOLICITUDES" />
+      <AssociationSetEnd
+        EntitySet="ESTADOS"
+        Name="ESTADOS" />
+    </AssociationSet>
+    <AssociationSet
+      Association="FK_SOLICITUDES_Persona"
+      Name="FK_SOLICITUDES_Persona">
+      <AssociationSetEnd
+        EntitySet="Persona"
+        Name="Persona" />
+      <AssociationSetEnd
+        EntitySet="SOLICITUDES"
+        Name="SOLICITUDES" />
+    </AssociationSet>
+    <QueryOperation
+      Name="ESTADOS_Single"
+      ReturnType="ESTADOSItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estado" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estado" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ESTADOS" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estado"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estado' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ESTADOS_SingleOrDefault"
+      ReturnType="ESTADOSItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Estado" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Estado" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ESTADOS" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Estado"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Estado' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="SOLICITUDES_Single"
+      ReturnType="SOLICITUDESItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Solicitud" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Solicitud" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SOLICITUDES" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Solicitud"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Solicitud' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="SOLICITUDES_SingleOrDefault"
+      ReturnType="SOLICITUDESItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id_Solicitud" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id_Solicitud" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SOLICITUDES" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Solicitud"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'Id_Solicitud' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="PersonalBajoJefeDeArea"
+      ReturnType="PersonaItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Division_AreaItem" />
+                    <MemberExpression
+                      Member="Id_Area" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Id_Area" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="NotEqual">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Rut_Persona" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="Rut_Persona" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Persona" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Area"
+        ParameterType=":Int32?" />
+      <QueryOperationParameter
+        Name="Rut_Persona"
+        ParameterType=":String?" />
+    </QueryOperation>
+    <QueryOperation
+      Name="SolicitudesAbiertasACargo"
+      ReturnType="SOLICITUDESItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="And">
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="Or">
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="Or">
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="Or">
+                                            <BinaryExpression.Left>
+                                              <BinaryExpression
+                                                NodeType="Or">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="PersonaItem1" />
+                                                        <MemberExpression
+                                                          Member="Division_AreaItem" />
+                                                        <MemberExpression
+                                                          Member="Division_SubGerenciaItem" />
+                                                        <MemberExpression
+                                                          Member="Division_GerenciaItem" />
+                                                        <MemberExpression
+                                                          Member="Id_Gerencia" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="Id_Gerencia" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="PersonaItem1" />
+                                                        <MemberExpression
+                                                          Member="Division_AreaItem" />
+                                                        <MemberExpression
+                                                          Member="Division_GerenciaItem" />
+                                                        <MemberExpression
+                                                          Member="Id_Gerencia" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="Id_Gerencia" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="PersonaItem1" />
+                                                    <MemberExpression
+                                                      Member="Division_AreaItem" />
+                                                    <MemberExpression
+                                                      Member="Division_SubGerenciaItem" />
+                                                    <MemberExpression
+                                                      Member="Id_SubGerencia" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="Id_SubGerencia" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="PersonaItem1" />
+                                                <MemberExpression
+                                                  Member="Division_AreaItem" />
+                                                <MemberExpression
+                                                  Member="Id_Area" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Id_Area" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="And">
+                                        <BinaryExpression.Attributes>
+                                          <ExpressionGroup />
+                                        </BinaryExpression.Attributes>
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="PersonaItem1" />
+                                                <MemberExpression
+                                                  Member="Es_SubGerente" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ConstantExpression
+                                                ResultType=":Boolean?"
+                                                Value="True" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="PersonaItem1" />
+                                                <MemberExpression
+                                                  Member="IDGerencia_para_subgerentes" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Id_Gerencia" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Attributes>
+                                      <ExpressionGroup />
+                                    </BinaryExpression.Attributes>
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="NotEqual">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Completada" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ConstantExpression
+                                            ResultType=":Boolean?"
+                                            Value="True" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="NotEqual">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Rechazada" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ConstantExpression
+                                            ResultType=":Boolean?"
+                                            Value="True" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="NotEqual">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="PersonaItem1" />
+                                    <MemberExpression
+                                      Member="Rut_Persona" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="Rut_Persona" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="VB_Empleado" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ConstantExpression
+                                ResultType=":Boolean?"
+                                Value="True" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="VB_Gerente" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="VB_Gerente" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="VB_JefeDirecto" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="VB_JefeDirecto" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Equal">
+                <BinaryExpression.Left>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="VB_SubGerente" />
+                  </ChainExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <ParameterExpression
+                    Parameter="VB_SubGerente" />
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SOLICITUDES" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Gerencia"
+        ParameterType=":Int32?" />
+      <QueryOperationParameter
+        Name="Id_SubGerencia"
+        ParameterType=":Int32?" />
+      <QueryOperationParameter
+        Name="Id_Area"
+        ParameterType=":Int32?" />
+      <QueryOperationParameter
+        Name="Rut_Persona"
+        ParameterType=":String?" />
+      <QueryOperationParameter
+        Name="VB_Empleado"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="VB_Gerente"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="VB_JefeDirecto"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="VB_SubGerente"
+        ParameterType=":Boolean?" />
     </QueryOperation>
   </EntityContainer>
   <EntityType
@@ -5856,4 +6441,332 @@
       </EntityProperty>
     </EntityType.Properties>
   </EntityType>
+  <EntityType
+    Name="ESTADOSItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Estado"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Observaciones"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="TituloObservacion"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="MensajeBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreadoAt"
+        PropertyType=":DateTime">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_ESTADOS_SOLICITUDES"
+        FromEnd="ESTADOS"
+        Name="SOLICITUDESItem"
+        ToEnd="SOLICITUDES" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="SOLICITUDESItem">
+    <EntityType.Attributes>
+      <DefaultScreen
+        Value="LightSwitchApplication:SOLICITUDES_DETALLES">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="SOLICITUDESItem/Properties[Id_Solicitud]"
+            ScreenParameter="LightSwitchApplication:SOLICITUDES_DETALLES/Properties[SOLICITUDESItemId_Solicitud]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Solicitud"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Gerencia"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Departamento"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaSolicitud"
+        PropertyType=":Date">
+        <EntityProperty.Attributes>
+          <Required />
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Titulo"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="20" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_Gerente"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_SubGerente"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_JefeDirecto"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_Empleado"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Vacaciones"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Administrativo"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasExtras"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="OtroPermiso"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Completada"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rechazada"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SaldoDias"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NumeroDiasTomados"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasAutorizadas"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasTrabajadas"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Prestamo"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Association="FK_ESTADOS_SOLICITUDES"
+        FromEnd="SOLICITUDES"
+        Name="ESTADOS"
+        ToEnd="ESTADOS" />
+      <NavigationProperty
+        Association="FK_SOLICITUDES_Persona"
+        FromEnd="SOLICITUDES"
+        Name="PersonaItem1"
+        ToEnd="Persona" />
+      <EntityProperty
+        Name="Inicio"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Termino"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Colacion"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Taxi"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ConDescuento"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_ESTADOS_SOLICITUDES">
+    <AssociationEnd
+      EntityType="SOLICITUDESItem"
+      Multiplicity="One"
+      Name="SOLICITUDES">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="ESTADOSItem"
+      Multiplicity="Many"
+      Name="ESTADOS" />
+  </Association>
+  <Association
+    Name="FK_SOLICITUDES_Persona">
+    <AssociationEnd
+      EntityType="PersonaItem"
+      Multiplicity="One"
+      Name="Persona">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Unset" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      EntityType="SOLICITUDESItem"
+      Multiplicity="Many"
+      Name="SOLICITUDES" />
+  </Association>
 </ModelFragment>

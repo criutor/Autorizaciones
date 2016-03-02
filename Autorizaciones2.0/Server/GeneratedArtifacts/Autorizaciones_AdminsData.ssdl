@@ -22,6 +22,8 @@
     <EntitySet Name="Superior_SubGerente" EntityType="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" store:Type="Tables" Schema="dbo" Table="Superior_SubGerente" />
     <EntitySet Name="ConsultarSaldoVacaciones" EntityType="Autorizaciones_AdminsDataStore.ConsultarSaldoVacacionesItem" store:Type="Tables" Schema="dbo" Table="ConsultarSaldoVacaciones" />
     <EntitySet Name="Feriados" EntityType="Autorizaciones_AdminsDataStore.FeriadosItem" store:Type="Tables" Schema="dbo" Table="Feriados" />
+    <EntitySet Name="ESTADOS" EntityType="Autorizaciones_AdminsDataStore.ESTADOSItem" store:Type="Tables" Schema="dbo" Table="ESTADOS" />
+    <EntitySet Name="SOLICITUDES" EntityType="Autorizaciones_AdminsDataStore.SOLICITUDESItem" store:Type="Tables" Schema="dbo" Table="SOLICITUDES" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -101,6 +103,14 @@
     <AssociationSet Name="FK_Superior_SubGerente_Persona" Association="Autorizaciones_AdminsDataStore.FK_Superior_SubGerente_Persona">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Superior_SubGerente" EntitySet="Superior_SubGerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTADOS_SOLICITUDES" Association="Autorizaciones_AdminsDataStore.FK_ESTADOS_SOLICITUDES">
+      <End Role="SOLICITUDES" EntitySet="SOLICITUDES" />
+      <End Role="ESTADOS" EntitySet="ESTADOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOLICITUDES_Persona" Association="Autorizaciones_AdminsDataStore.FK_SOLICITUDES_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="SOLICITUDES" EntitySet="SOLICITUDES" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="PersonaItem">
@@ -326,6 +336,48 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Feriado" Type="date" Nullable="false" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ESTADOSItem">
+    <Key>
+      <PropertyRef Name="Id_Estado" />
+    </Key>
+    <Property Name="Id_Estado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="TituloObservacion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="MensajeBy" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreadoAt" Type="datetime" Nullable="false" />
+    <Property Name="Solicitud_fk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SOLICITUDESItem">
+    <Key>
+      <PropertyRef Name="Id_Solicitud" />
+    </Key>
+    <Property Name="Id_Solicitud" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Gerencia" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Departamento" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FechaSolicitud" Type="date" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="VB_Gerente" Type="bit" />
+    <Property Name="VB_SubGerente" Type="bit" />
+    <Property Name="VB_JefeDirecto" Type="bit" />
+    <Property Name="VB_Empleado" Type="bit" />
+    <Property Name="Vacaciones" Type="bit" />
+    <Property Name="Administrativo" Type="bit" />
+    <Property Name="HorasExtras" Type="bit" />
+    <Property Name="OtroPermiso" Type="bit" />
+    <Property Name="Completada" Type="bit" />
+    <Property Name="Rechazada" Type="bit" />
+    <Property Name="SaldoDias" Type="float" />
+    <Property Name="NumeroDiasTomados" Type="float" />
+    <Property Name="HorasAutorizadas" Type="float" />
+    <Property Name="HorasTrabajadas" Type="float" />
+    <Property Name="Prestamo" Type="int" />
+    <Property Name="Inicio" Type="datetime" />
+    <Property Name="Termino" Type="datetime" />
+    <Property Name="Colacion" Type="bit" />
+    <Property Name="Taxi" Type="bit" />
+    <Property Name="ConDescuento" Type="bit" />
+    <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />
@@ -588,6 +640,30 @@
       </Principal>
       <Dependent Role="Superior_SubGerente">
         <PropertyRef Name="Persona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ESTADOS_SOLICITUDES">
+    <End Role="SOLICITUDES" Type="Autorizaciones_AdminsDataStore.SOLICITUDESItem" Multiplicity="1" />
+    <End Role="ESTADOS" Type="Autorizaciones_AdminsDataStore.ESTADOSItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOLICITUDES">
+        <PropertyRef Name="Id_Solicitud" />
+      </Principal>
+      <Dependent Role="ESTADOS">
+        <PropertyRef Name="Solicitud_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOLICITUDES_Persona">
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="SOLICITUDES" Type="Autorizaciones_AdminsDataStore.SOLICITUDESItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="SOLICITUDES">
+        <PropertyRef Name="RutPersona_fk" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

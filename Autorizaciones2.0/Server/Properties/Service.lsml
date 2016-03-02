@@ -991,6 +991,48 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="ESTADOS">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ESTADOS" />
+        <SsdlProperty
+          Name="Id_Estado"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ESTADOSItem/Properties[Id_Estado]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Observaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ESTADOSItem/Properties[Observaciones]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="TituloObservacion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ESTADOSItem/Properties[TituloObservacion]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="MensajeBy"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ESTADOSItem/Properties[MensajeBy]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="CreadoAt"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ESTADOSItem/Properties[CreadoAt]"
+          Type="datetime" />
+        <SsdlForeignKeyProperty
+          Name="Solicitud_fk"
+          Nullable="False"
+          PropertyName="Solicitud_fk"
+          Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Feriados">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -1538,6 +1580,149 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="SOLICITUDES">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="SOLICITUDES" />
+        <SsdlProperty
+          Name="Id_Solicitud"
+          Nullable="False"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Id_Solicitud]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Gerencia"
+          Nullable="False"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Gerencia]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Departamento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Departamento]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FechaSolicitud"
+          Nullable="False"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[FechaSolicitud]"
+          Type="date" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Titulo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Titulo]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="VB_Gerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_Gerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="VB_SubGerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_SubGerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="VB_JefeDirecto"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_JefeDirecto]"
+          Type="bit" />
+        <SsdlProperty
+          Name="VB_Empleado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_Empleado]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Vacaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Vacaciones]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Administrativo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Administrativo]"
+          Type="bit" />
+        <SsdlProperty
+          Name="HorasExtras"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[HorasExtras]"
+          Type="bit" />
+        <SsdlProperty
+          Name="OtroPermiso"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[OtroPermiso]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Completada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Completada]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Rechazada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Rechazada]"
+          Type="bit" />
+        <SsdlProperty
+          Name="SaldoDias"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[SaldoDias]"
+          Type="float" />
+        <SsdlProperty
+          Name="NumeroDiasTomados"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[NumeroDiasTomados]"
+          Type="float" />
+        <SsdlProperty
+          Name="HorasAutorizadas"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[HorasAutorizadas]"
+          Type="float" />
+        <SsdlProperty
+          Name="HorasTrabajadas"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[HorasTrabajadas]"
+          Type="float" />
+        <SsdlProperty
+          Name="Prestamo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Prestamo]"
+          Type="int" />
+        <SsdlProperty
+          Name="Inicio"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Inicio]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Termino"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Termino]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="Colacion"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Colacion]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Taxi"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Taxi]"
+          Type="bit" />
+        <SsdlProperty
+          Name="ConDescuento"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuento]"
+          Type="bit" />
+        <SsdlForeignKeyProperty
+          MaxLength="12"
+          Name="RutPersona_fk"
+          Nullable="False"
+          PropertyName="RutPersona_fk"
+          Type="char" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Superior_Gerente">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -1671,6 +1856,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Gerencia_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_ESTADOS_SOLICITUDES">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_ESTADOS_SOLICITUDES" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_ESTADOS_SOLICITUDES]/Members[SOLICITUDES]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id_Solicitud" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_ESTADOS_SOLICITUDES]/Members[ESTADOS]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Solicitud_fk" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>
@@ -1881,6 +2087,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="DetalleVacaciones_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_SOLICITUDES_Persona">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_SOLICITUDES_Persona" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SOLICITUDES_Persona]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Rut_Persona" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SOLICITUDES_Persona]/Members[SOLICITUDES]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="RutPersona_fk" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

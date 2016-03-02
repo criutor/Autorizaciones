@@ -449,6 +449,32 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Obtiene el conjunto de entidades ESTADOS. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ESTADOSItem> ESTADOS
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ESTADOS);
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el conjunto de entidades SOLICITUDES. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDES
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.SOLICITUDES);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -932,6 +958,96 @@ namespace LightSwitchApplication
             return this.Details.Methods.Feriados_SingleOrDefault.CreateInvocation(Id).Execute();
         }
         
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="Id_Estado">
+        /// Valor de la propiedad clave 'Id_Estado' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.ESTADOSItem ESTADOS_Single(global::System.Nullable<int> Id_Estado)
+        {
+            return this.Details.Methods.ESTADOS_Single.CreateInvocation(Id_Estado).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="Id_Estado">
+        /// Valor de la propiedad clave 'Id_Estado' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.ESTADOSItem ESTADOS_SingleOrDefault(global::System.Nullable<int> Id_Estado)
+        {
+            return this.Details.Methods.ESTADOS_SingleOrDefault.CreateInvocation(Id_Estado).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="Id_Solicitud">
+        /// Valor de la propiedad clave 'Id_Solicitud' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.SOLICITUDESItem SOLICITUDES_Single(global::System.Nullable<int> Id_Solicitud)
+        {
+            return this.Details.Methods.SOLICITUDES_Single.CreateInvocation(Id_Solicitud).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="Id_Solicitud">
+        /// Valor de la propiedad clave 'Id_Solicitud' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.SOLICITUDESItem SOLICITUDES_SingleOrDefault(global::System.Nullable<int> Id_Solicitud)
+        {
+            return this.Details.Methods.SOLICITUDES_SingleOrDefault.CreateInvocation(Id_Solicitud).Execute();
+        }
+        
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        /// <param name="Id_Area">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Rut_Persona">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PersonaItem> PersonalBajoJefeDeArea(global::System.Nullable<int> Id_Area, string Rut_Persona)
+        {
+            return this.Details.Methods.PersonalBajoJefeDeArea.CreateInvocation(Id_Area, Rut_Persona).Execute();
+        }
+        
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        /// <param name="Id_Gerencia">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Id_SubGerencia">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Id_Area">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Rut_Persona">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="VB_Empleado">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="VB_Gerente">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="VB_JefeDirecto">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="VB_SubGerente">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesAbiertasACargo(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente)
+        {
+            return this.Details.Methods.SolicitudesAbiertasACargo.CreateInvocation(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1324,6 +1440,54 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem> ESTADOS_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ESTADOS_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem> ESTADOS_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ESTADOS_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDES_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.SOLICITUDES_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDES_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.SOLICITUDES_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonalBajoJefeDeArea
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.PersonalBajoJefeDeArea) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SolicitudesAbiertasACargo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.SolicitudesAbiertasACargo) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -1502,6 +1666,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.Feriados) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem> ESTADOS
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ESTADOS) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDES
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.SOLICITUDES) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
                     }
                 }
                 
@@ -1943,6 +2123,66 @@ namespace LightSwitchApplication
                     c(d, ref d._Feriados_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    ESTADOS_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                        "ESTADOS_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ESTADOS_Single_Stub);
+                private static void _ESTADOS_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ESTADOS_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    ESTADOS_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                        "ESTADOS_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ESTADOS_SingleOrDefault_Stub);
+                private static void _ESTADOS_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ESTADOS_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SOLICITUDES_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SOLICITUDES_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._SOLICITUDES_Single_Stub);
+                private static void _SOLICITUDES_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SOLICITUDES_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SOLICITUDES_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SOLICITUDES_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._SOLICITUDES_SingleOrDefault_Stub);
+                private static void _SOLICITUDES_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SOLICITUDES_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    PersonalBajoJefeDeArea = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "PersonalBajoJefeDeArea",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._PersonalBajoJefeDeArea_Stub);
+                private static void _PersonalBajoJefeDeArea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PersonalBajoJefeDeArea, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SolicitudesAbiertasACargo = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SolicitudesAbiertasACargo",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._SolicitudesAbiertasACargo_Stub);
+                private static void _SolicitudesAbiertasACargo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SolicitudesAbiertasACargo, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2161,6 +2401,26 @@ namespace LightSwitchApplication
                     c(d, ref d._Feriados, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    ESTADOS = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                        "ESTADOS",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._ESTADOS_Stub);
+                private static void _ESTADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ESTADOS, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SOLICITUDES = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SOLICITUDES",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._SOLICITUDES_Stub);
+                private static void _SOLICITUDES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SOLICITUDES, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2225,6 +2485,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data _Feriados;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _ESTADOS;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SOLICITUDES;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona_Single;
@@ -2354,6 +2620,24 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.FeriadosItem>.Data _Feriados_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _ESTADOS_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _ESTADOS_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SOLICITUDES_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SOLICITUDES_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonalBajoJefeDeArea;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SolicitudesAbiertasACargo;
             
         }
     

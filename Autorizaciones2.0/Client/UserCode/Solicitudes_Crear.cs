@@ -18,9 +18,6 @@ namespace LightSwitchApplication
     public partial class Solicitudes_Crear
     {
 
-        
-
-
         partial void Solicitudes_Crear_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             //Instanciar el objeto solicitud header

@@ -506,6 +506,29 @@ namespace LightSwitchApplication
             }
         }
 
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDES
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SOLICITUDES);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDESQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetQuery(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SOLICITUDES);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -732,6 +755,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDES
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SOLICITUDES) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -756,6 +787,7 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable Superior_Gerente { get; }
                 new global::System.Collections.IEnumerable Superior_JefeDirecto { get; }
                 new global::System.Collections.IEnumerable Superior_SubGerente { get; }
+                new global::System.Collections.IEnumerable SOLICITUDES { get; }
             }
             #pragma warning restore 109
     
@@ -1383,6 +1415,26 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.Superior_SubGerente;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SOLICITUDES = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SOLICITUDES",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SOLICITUDES_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SOLICITUDES_GetReferencedEntities,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SOLICITUDES_GetEntityCollection);
+                private static void _SOLICITUDES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SOLICITUDES, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> _SOLICITUDES_GetReferencedEntities(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass>(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SOLICITUDES, ref d._SOLICITUDES);
+                }
+                private static global::System.Collections.IEnumerable _SOLICITUDES_GetEntityCollection(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SOLICITUDES;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1438,6 +1490,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Superior_SubGerenteItem>.Data _Superior_SubGerente;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SOLICITUDES;
             
         }
     

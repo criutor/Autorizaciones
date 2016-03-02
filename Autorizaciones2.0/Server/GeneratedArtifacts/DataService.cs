@@ -816,6 +816,78 @@ namespace LightSwitchApplication
         partial void Feriados_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.FeriadosItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Inserting(global::LightSwitchApplication.ESTADOSItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Inserted(global::LightSwitchApplication.ESTADOSItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Updating(global::LightSwitchApplication.ESTADOSItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Updated(global::LightSwitchApplication.ESTADOSItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Deleting(global::LightSwitchApplication.ESTADOSItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Deleted(global::LightSwitchApplication.ESTADOSItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Validate(global::LightSwitchApplication.ESTADOSItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOS_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ESTADOSItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Inserting(global::LightSwitchApplication.SOLICITUDESItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Inserted(global::LightSwitchApplication.SOLICITUDESItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Updating(global::LightSwitchApplication.SOLICITUDESItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Updated(global::LightSwitchApplication.SOLICITUDESItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Deleting(global::LightSwitchApplication.SOLICITUDESItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Deleted(global::LightSwitchApplication.SOLICITUDESItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Validate(global::LightSwitchApplication.SOLICITUDESItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SOLICITUDESItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -841,6 +913,36 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void PersonaPorNombreAD_ExecuteFailed(string NombreAD, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonalBajoJefeDeArea_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonalBajoJefeDeArea_Executing(global::System.Nullable<int> Id_Area, string Rut_Persona);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonalBajoJefeDeArea_PreprocessQuery(global::System.Nullable<int> Id_Area, string Rut_Persona, ref global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonalBajoJefeDeArea_Executed(global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonalBajoJefeDeArea_ExecuteFailed(global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SolicitudesAbiertasACargo_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SolicitudesAbiertasACargo_Executing(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SolicitudesAbiertasACargo_PreprocessQuery(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SolicitudesAbiertasACargo_Executed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SolicitudesAbiertasACargo_ExecuteFailed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -2441,6 +2543,156 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ESTADOSItem>
+                __ESTADOSEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ESTADOSItem>(
+                    "ESTADOS",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ESTADOS_Filter);
+            private static bool __ESTADOS_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ESTADOS_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ESTADOS_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ESTADOS_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ESTADOS_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ESTADOS_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ESTADOS_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ESTADOS_CanRead(ref result);
+                return result;
+            }
+            private static void __ESTADOS_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e)
+            {
+                d.ESTADOS_Inserting(e);
+            }
+            private static void __ESTADOS_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e)
+            {
+                d.ESTADOS_Inserted(e);
+            }
+            private static void __ESTADOS_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e)
+            {
+                d.ESTADOS_Updating(e);
+            }
+            private static void __ESTADOS_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e)
+            {
+                d.ESTADOS_Updated(e);
+            }
+            private static void __ESTADOS_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e)
+            {
+                d.ESTADOS_Deleting(e);
+            }
+            private static void __ESTADOS_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e)
+            {
+                d.ESTADOS_Deleted(e);
+            }
+            private static void __ESTADOS_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ESTADOS_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ESTADOSItem, bool>> __ESTADOS_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ESTADOSItem, bool>> filter = null;
+                d.ESTADOS_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __SOLICITUDESEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "SOLICITUDES",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SOLICITUDES_Filter);
+            private static bool __SOLICITUDES_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.SOLICITUDES_CanInsert(ref result);
+                return result;
+            }
+            private static bool __SOLICITUDES_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.SOLICITUDES_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __SOLICITUDES_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.SOLICITUDES_CanDelete(ref result);
+                return result;
+            }
+            private static bool __SOLICITUDES_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.SOLICITUDES_CanRead(ref result);
+                return result;
+            }
+            private static void __SOLICITUDES_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e)
+            {
+                d.SOLICITUDES_Inserting(e);
+            }
+            private static void __SOLICITUDES_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e)
+            {
+                d.SOLICITUDES_Inserted(e);
+            }
+            private static void __SOLICITUDES_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e)
+            {
+                d.SOLICITUDES_Updating(e);
+            }
+            private static void __SOLICITUDES_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e)
+            {
+                d.SOLICITUDES_Updated(e);
+            }
+            private static void __SOLICITUDES_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e)
+            {
+                d.SOLICITUDES_Deleting(e);
+            }
+            private static void __SOLICITUDES_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e)
+            {
+                d.SOLICITUDES_Deleted(e);
+            }
+            private static void __SOLICITUDES_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.SOLICITUDESItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.SOLICITUDES_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SOLICITUDESItem, bool>> __SOLICITUDES_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.SOLICITUDESItem, bool>> filter = null;
+                d.SOLICITUDES_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService>
                 __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService>(
                     "SaveChanges",
@@ -2496,6 +2748,72 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem>)args[1];
                 d.PersonaPorNombreAD_PreprocessQuery((string)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>
+                __PersonalBajoJefeDeAreaEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>(
+                    "PersonalBajoJefeDeArea",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalBajoJefeDeArea_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalBajoJefeDeArea_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalBajoJefeDeArea_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalBajoJefeDeArea_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalBajoJefeDeArea_PreprocessQuery);
+            private static bool __PersonalBajoJefeDeArea_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.PersonalBajoJefeDeArea_CanExecute(ref r);
+                return r;
+            }
+            private static void __PersonalBajoJefeDeArea_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PersonalBajoJefeDeArea_Executing((global::System.Nullable<int>)args[0], (string)args[1]);
+            }
+            private static void __PersonalBajoJefeDeArea_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PersonalBajoJefeDeArea_Executed((global::System.Nullable<int>)args[0], (string)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem>)args[2]);
+            }
+            private static void __PersonalBajoJefeDeArea_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.PersonalBajoJefeDeArea_ExecuteFailed((global::System.Nullable<int>)args[0], (string)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __PersonalBajoJefeDeArea_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem>)args[2];
+                d.PersonalBajoJefeDeArea_PreprocessQuery((global::System.Nullable<int>)args[0], (string)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __SolicitudesAbiertasACargoEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "SolicitudesAbiertasACargo",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesAbiertasACargo_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesAbiertasACargo_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesAbiertasACargo_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesAbiertasACargo_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesAbiertasACargo_PreprocessQuery);
+            private static bool __SolicitudesAbiertasACargo_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.SolicitudesAbiertasACargo_CanExecute(ref r);
+                return r;
+            }
+            private static void __SolicitudesAbiertasACargo_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.SolicitudesAbiertasACargo_Executing((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7]);
+            }
+            private static void __SolicitudesAbiertasACargo_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.SolicitudesAbiertasACargo_Executed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[8]);
+            }
+            private static void __SolicitudesAbiertasACargo_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.SolicitudesAbiertasACargo_ExecuteFailed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], ex);
+            }
+            private static global::System.Linq.IQueryable __SolicitudesAbiertasACargo_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[8];
+                d.SolicitudesAbiertasACargo_PreprocessQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], ref query);
                 return query;
             }
     

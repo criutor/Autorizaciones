@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class Superior_SubGerenteItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass>
+    public sealed partial class FeriadosItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Inicializa una nueva instancia de la entidad Superior_SubGerenteItem.
+        /// Inicializa una nueva instancia de la entidad FeriadosItem.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Superior_SubGerenteItem()
+        public FeriadosItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Superior_SubGerenteItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Superior_SubGerenteItem> entitySet)
+        public FeriadosItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.FeriadosItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.FeriadosItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Superior_SubGerenteItem_Created();
+        partial void FeriadosItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Superior_SubGerenteItem_AllowSaveWithErrors(ref bool result);
+        partial void FeriadosItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,68 +83,68 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Id_SubGerente
+        public int Id
         {
             get
             {
-                return global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Id_SubGerente);
+                return global::LightSwitchApplication.FeriadosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Id);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_SubGerente_IsReadOnly(ref bool result);
+        partial void Id_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_SubGerente_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_SubGerente_Changed();
+        partial void Id_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Division_SubGerenciaItem Division_SubGerenciaItem
+        public global::System.DateTime Feriado
         {
             get
             {
-                return global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Division_SubGerenciaItem);
+                return global::LightSwitchApplication.FeriadosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Feriado);
             }
             set
             {
-                global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Division_SubGerenciaItem, value);
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Feriado, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Division_SubGerenciaItem_IsReadOnly(ref bool result);
+        partial void Feriado_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Division_SubGerenciaItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Feriado_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Division_SubGerenciaItem_Changed();
+        partial void Feriado_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.PersonaItem PersonaItem1
+        public string Nombre
         {
             get
             {
-                return global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.PersonaItem1);
+                return global::LightSwitchApplication.FeriadosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Nombre);
             }
             set
             {
-                global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, value);
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Nombre, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaItem1_IsReadOnly(ref bool result);
+        partial void Nombre_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaItem1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Nombre_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaItem1_Changed();
+        partial void Nombre_Changed();
 
         #endregion
     
@@ -155,37 +155,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Superior_SubGerenteItem,
-                global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass,
-                global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass>>
+                global::LightSwitchApplication.FeriadosItem,
+                global::LightSwitchApplication.FeriadosItem.DetailsClass,
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Id_SubGerente;
+                var initializeEntry = global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Id;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass>.Entry
-                __Superior_SubGerenteItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.__Superior_SubGerenteItem_CreateNew,
-                    global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.__Superior_SubGerenteItem_Created,
-                    global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.__Superior_SubGerenteItem_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Superior_SubGerenteItem __Superior_SubGerenteItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Superior_SubGerenteItem> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>.Entry
+                __FeriadosItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.FeriadosItem.DetailsClass.__FeriadosItem_CreateNew,
+                    global::LightSwitchApplication.FeriadosItem.DetailsClass.__FeriadosItem_Created,
+                    global::LightSwitchApplication.FeriadosItem.DetailsClass.__FeriadosItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.FeriadosItem __FeriadosItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.FeriadosItem> es)
             {
-                return new global::LightSwitchApplication.Superior_SubGerenteItem(es);
+                return new global::LightSwitchApplication.FeriadosItem(es);
             }
-            private static void __Superior_SubGerenteItem_Created(global::LightSwitchApplication.Superior_SubGerenteItem e)
+            private static void __FeriadosItem_Created(global::LightSwitchApplication.FeriadosItem e)
             {
-                e.Superior_SubGerenteItem_Created();
+                e.FeriadosItem_Created();
             }
-            private static bool __Superior_SubGerenteItem_AllowSaveWithErrors(global::LightSwitchApplication.Superior_SubGerenteItem e)
+            private static bool __FeriadosItem_AllowSaveWithErrors(global::LightSwitchApplication.FeriadosItem e)
             {
                 bool result = false;
-                e.Superior_SubGerenteItem_AllowSaveWithErrors(ref result);
+                e.FeriadosItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -193,7 +193,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass> Commands
             {
                 get
                 {
@@ -201,7 +201,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass> Methods
             {
                 get
                 {
@@ -209,7 +209,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -221,34 +221,34 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, int> Id_SubGerente
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int> Id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Id_SubGerente) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem> Division_SubGerenciaItem
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime> Feriado
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Division_SubGerenciaItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>;
+                        return base.GetItem(global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Feriado) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaItem1
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string> Nombre
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.PersonaItem1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>;
+                        return base.GetItem(global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties.Nombre) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>;
                     }
                 }
                 
@@ -258,9 +258,9 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int Id_SubGerente { get; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_SubGerenciaItem { get; set; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation PersonaItem1 { get; set; }
+                new int Id { get; }
+                new global::System.DateTime Feriado { get; set; }
+                new string Nombre { get; set; }
             }
             #pragma warning restore 109
     
@@ -271,142 +271,122 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, int>.Entry
-                    Id_SubGerente = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, int>.Entry(
-                        "Id_SubGerente",
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Id_SubGerente_Stub,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Id_SubGerente_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Id_SubGerente_Validate,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Id_SubGerente_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Entry
+                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Entry(
+                        "Id",
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_Stub,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_Validate,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Id_SubGerente_OnValueChanged);
-                private static void _Id_SubGerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Id_OnValueChanged);
+                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.FeriadosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.FeriadosItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Id_SubGerente, sf);
+                    c(d, ref d._Id, sf);
                 }
-                private static bool _Id_SubGerente_ComputeIsReadOnly(global::LightSwitchApplication.Superior_SubGerenteItem e)
+                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.FeriadosItem e)
                 {
                     bool result = false;
-                    e.Id_SubGerente_IsReadOnly(ref result);
+                    e.Id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Id_SubGerente_Validate(global::LightSwitchApplication.Superior_SubGerenteItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Id_Validate(global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Id_SubGerente_Validate(r);
+                    e.Id_Validate(r);
                 }
-                private static int _Id_SubGerente_GetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
+                private static int _Id_GetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Id_SubGerente;
+                    return d.ImplementationEntity.Id;
                 }
-                private static void _Id_SubGerente_OnValueChanged(global::LightSwitchApplication.Superior_SubGerenteItem e)
+                private static void _Id_OnValueChanged(global::LightSwitchApplication.FeriadosItem e)
                 {
-                    e.Id_SubGerente_Changed();
+                    e.Id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Entry
-                    Division_SubGerenciaItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Entry(
-                        "Division_SubGerenciaItem",
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_Stub,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_Validate,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_GetImplementationValue,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_SetImplementationValue,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_Refresh,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._Division_SubGerenciaItem_OnValueChanged);
-                private static void _Division_SubGerenciaItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Data> c, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Entry
+                    Feriado = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Entry(
+                        "Feriado",
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_Stub,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_ComputeIsReadOnly,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_Validate,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_GetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_SetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Feriado_OnValueChanged);
+                private static void _Feriado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.FeriadosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.FeriadosItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Division_SubGerenciaItem, sf);
+                    c(d, ref d._Feriado, sf);
                 }
-                private static bool _Division_SubGerenciaItem_ComputeIsReadOnly(global::LightSwitchApplication.Superior_SubGerenteItem e)
+                private static bool _Feriado_ComputeIsReadOnly(global::LightSwitchApplication.FeriadosItem e)
                 {
                     bool result = false;
-                    e.Division_SubGerenciaItem_IsReadOnly(ref result);
+                    e.Feriado_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Division_SubGerenciaItem_Validate(global::LightSwitchApplication.Superior_SubGerenteItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Feriado_Validate(global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Division_SubGerenciaItem_Validate(r);
+                    e.Feriado_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Division_SubGerenciaItem_GetCoreImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
+                private static global::System.DateTime _Feriado_GetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Division_SubGerenciaItem;
+                    return d.ImplementationEntity.Feriado;
                 }
-                private static global::LightSwitchApplication.Division_SubGerenciaItem _Division_SubGerenciaItem_GetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
+                private static void _Feriado_SetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d, global::System.DateTime v)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Division_SubGerenciaItem, global::LightSwitchApplication.Division_SubGerenciaItem.DetailsClass>(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Division_SubGerenciaItem, ref d._Division_SubGerenciaItem);
+                    d.ImplementationEntity.Feriado = global::LightSwitchApplication.FeriadosItem.DetailsClass.TruncateDate(v);
                 }
-                private static void _Division_SubGerenciaItem_SetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d, global::LightSwitchApplication.Division_SubGerenciaItem v)
+                private static void _Feriado_OnValueChanged(global::LightSwitchApplication.FeriadosItem e)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Division_SubGerenciaItem, ref d._Division_SubGerenciaItem, (i, ev) => i.Division_SubGerenciaItem = ev, v);
-                }
-                private static void _Division_SubGerenciaItem_Refresh(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.Division_SubGerenciaItem, ref d._Division_SubGerenciaItem);
-                }
-                private static void _Division_SubGerenciaItem_OnValueChanged(global::LightSwitchApplication.Superior_SubGerenteItem e)
-                {
-                    e.Division_SubGerenciaItem_Changed();
+                    e.Feriado_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    PersonaItem1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
-                        "PersonaItem1",
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_Stub,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_Validate,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_GetImplementationValue,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_SetImplementationValue,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_Refresh,
-                        global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties._PersonaItem1_OnValueChanged);
-                private static void _PersonaItem1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Entry
+                    Nombre = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Entry(
+                        "Nombre",
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_Stub,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_ComputeIsReadOnly,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_Validate,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_GetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_SetImplementationValue,
+                        global::LightSwitchApplication.FeriadosItem.DetailsClass.PropertySetProperties._Nombre_OnValueChanged);
+                private static void _Nombre_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.FeriadosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.FeriadosItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._PersonaItem1, sf);
+                    c(d, ref d._Nombre, sf);
                 }
-                private static bool _PersonaItem1_ComputeIsReadOnly(global::LightSwitchApplication.Superior_SubGerenteItem e)
+                private static bool _Nombre_ComputeIsReadOnly(global::LightSwitchApplication.FeriadosItem e)
                 {
                     bool result = false;
-                    e.PersonaItem1_IsReadOnly(ref result);
+                    e.Nombre_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _PersonaItem1_Validate(global::LightSwitchApplication.Superior_SubGerenteItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Nombre_Validate(global::LightSwitchApplication.FeriadosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.PersonaItem1_Validate(r);
+                    e.Nombre_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _PersonaItem1_GetCoreImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
+                private static string _Nombre_GetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.PersonaItem1;
+                    return d.ImplementationEntity.Nombre;
                 }
-                private static global::LightSwitchApplication.PersonaItem _PersonaItem1_GetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
+                private static void _Nombre_SetImplementationValue(global::LightSwitchApplication.FeriadosItem.DetailsClass d, string v)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass>(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
+                    d.ImplementationEntity.Nombre = v;
                 }
-                private static void _PersonaItem1_SetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d, global::LightSwitchApplication.PersonaItem v)
+                private static void _Nombre_OnValueChanged(global::LightSwitchApplication.FeriadosItem e)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1, (i, ev) => i.PersonaItem1 = ev, v);
-                }
-                private static void _PersonaItem1_Refresh(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
-                }
-                private static void _PersonaItem1_OnValueChanged(global::LightSwitchApplication.Superior_SubGerenteItem e)
-                {
-                    e.PersonaItem1_Changed();
+                    e.Nombre_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, int>.Data _Id_SubGerente;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, int>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Data _Division_SubGerenciaItem;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, global::System.DateTime>.Data _Feriado;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Superior_SubGerenteItem, global::LightSwitchApplication.Superior_SubGerenteItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaItem1;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.FeriadosItem, global::LightSwitchApplication.FeriadosItem.DetailsClass, string>.Data _Nombre;
             
         }
     

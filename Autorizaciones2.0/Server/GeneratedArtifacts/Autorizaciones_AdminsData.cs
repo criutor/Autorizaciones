@@ -39,6 +39,8 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_JefeDirecto_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "Superior_JefeDirecto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_JefeDirectoItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_SubGerente_Division_SubGerencia", "Division_SubGerencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.Division_SubGerenciaItem), "Superior_SubGerente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_SubGerenteItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_SubGerente_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "Superior_SubGerente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_SubGerenteItem), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_ESTADOS_SOLICITUDES", "SOLICITUDES", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.SOLICITUDESItem), "ESTADOS", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.ESTADOSItem), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_SOLICITUDES_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "SOLICITUDES", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.SOLICITUDESItem), true)]
 
 #endregion
 
@@ -422,6 +424,38 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         private ObjectSet<FeriadosItem> _Feriados;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<ESTADOSItem> ESTADOS
+        {
+            get
+            {
+                if ((_ESTADOS == null))
+                {
+                    _ESTADOS = base.CreateObjectSet<ESTADOSItem>("ESTADOS");
+                }
+                return _ESTADOS;
+            }
+        }
+        private ObjectSet<ESTADOSItem> _ESTADOS;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<SOLICITUDESItem> SOLICITUDES
+        {
+            get
+            {
+                if ((_SOLICITUDES == null))
+                {
+                    _SOLICITUDES = base.CreateObjectSet<SOLICITUDESItem>("SOLICITUDES");
+                }
+                return _SOLICITUDES;
+            }
+        }
+        private ObjectSet<SOLICITUDESItem> _SOLICITUDES;
 
         #endregion
 
@@ -593,6 +627,22 @@ namespace Autorizaciones_AdminsData.Implementation
         public void AddToFeriados(FeriadosItem feriadosItem)
         {
             base.AddObject("Feriados", feriadosItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet ESTADOS. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToESTADOS(ESTADOSItem eSTADOSItem)
+        {
+            base.AddObject("ESTADOS", eSTADOSItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet SOLICITUDES. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToSOLICITUDES(SOLICITUDESItem sOLICITUDESItem)
+        {
+            base.AddObject("SOLICITUDES", sOLICITUDESItem);
         }
 
         #endregion
@@ -1750,6 +1800,233 @@ namespace Autorizaciones_AdminsData.Implementation
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ESTADOSItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class ESTADOSItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto ESTADOSItem.
+        /// </summary>
+        /// <param name="id_Estado">Valor inicial de la propiedad Id_Estado.</param>
+        /// <param name="tituloObservacion">Valor inicial de la propiedad TituloObservacion.</param>
+        /// <param name="mensajeBy">Valor inicial de la propiedad MensajeBy.</param>
+        /// <param name="creadoAt">Valor inicial de la propiedad CreadoAt.</param>
+        /// <param name="solicitud_fk">Valor inicial de la propiedad Solicitud_fk.</param>
+        public static ESTADOSItem CreateESTADOSItem(global::System.Int32 id_Estado, global::System.String tituloObservacion, global::System.String mensajeBy, global::System.DateTime creadoAt, global::System.Int32 solicitud_fk)
+        {
+            ESTADOSItem eSTADOSItem = new ESTADOSItem();
+            eSTADOSItem.Id_Estado = id_Estado;
+            eSTADOSItem.TituloObservacion = tituloObservacion;
+            eSTADOSItem.MensajeBy = mensajeBy;
+            eSTADOSItem.CreadoAt = creadoAt;
+            eSTADOSItem.Solicitud_fk = solicitud_fk;
+            return eSTADOSItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id_Estado
+        {
+            get
+            {
+                return _Id_Estado;
+            }
+            set
+            {
+                if (_Id_Estado != value)
+                {
+                    OnId_EstadoChanging(value);
+                    ReportPropertyChanging("Id_Estado");
+                    _Id_Estado = value;
+                    ReportPropertyChanged("Id_Estado");
+                    OnId_EstadoChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id_Estado;
+        partial void OnId_EstadoChanging(global::System.Int32 value);
+        partial void OnId_EstadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Observaciones
+        {
+            get
+            {
+                return _Observaciones;
+            }
+            set
+            {
+                OnObservacionesChanging(value);
+                ReportPropertyChanging("Observaciones");
+                _Observaciones = value;
+                ReportPropertyChanged("Observaciones");
+                OnObservacionesChanged();
+            }
+        }
+        private global::System.String _Observaciones;
+        partial void OnObservacionesChanging(global::System.String value);
+        partial void OnObservacionesChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String TituloObservacion
+        {
+            get
+            {
+                return _TituloObservacion;
+            }
+            set
+            {
+                OnTituloObservacionChanging(value);
+                ReportPropertyChanging("TituloObservacion");
+                _TituloObservacion = value;
+                ReportPropertyChanged("TituloObservacion");
+                OnTituloObservacionChanged();
+            }
+        }
+        private global::System.String _TituloObservacion;
+        partial void OnTituloObservacionChanging(global::System.String value);
+        partial void OnTituloObservacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String MensajeBy
+        {
+            get
+            {
+                return _MensajeBy;
+            }
+            set
+            {
+                OnMensajeByChanging(value);
+                ReportPropertyChanging("MensajeBy");
+                _MensajeBy = value;
+                ReportPropertyChanged("MensajeBy");
+                OnMensajeByChanged();
+            }
+        }
+        private global::System.String _MensajeBy;
+        partial void OnMensajeByChanging(global::System.String value);
+        partial void OnMensajeByChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime CreadoAt
+        {
+            get
+            {
+                return _CreadoAt;
+            }
+            set
+            {
+                OnCreadoAtChanging(value);
+                ReportPropertyChanging("CreadoAt");
+                _CreadoAt = value;
+                ReportPropertyChanged("CreadoAt");
+                OnCreadoAtChanged();
+            }
+        }
+        private global::System.DateTime _CreadoAt;
+        partial void OnCreadoAtChanging(global::System.DateTime value);
+        partial void OnCreadoAtChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Solicitud_fk
+        {
+            get
+            {
+                return _Solicitud_fk;
+            }
+            set
+            {
+                OnSolicitud_fkChanging(value);
+                ReportPropertyChanging("Solicitud_fk");
+                _Solicitud_fk = value;
+                ReportPropertyChanged("Solicitud_fk");
+                OnSolicitud_fkChanged();
+            }
+        }
+        private global::System.Int32 _Solicitud_fk;
+        partial void OnSolicitud_fkChanging(global::System.Int32 value);
+        partial void OnSolicitud_fkChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_ESTADOS_SOLICITUDES", "SOLICITUDES")]
+        public SOLICITUDESItem SOLICITUDESItem
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SOLICITUDESItem>("LightSwitchApplication.FK_ESTADOS_SOLICITUDES", "SOLICITUDES").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SOLICITUDESItem>("LightSwitchApplication.FK_ESTADOS_SOLICITUDES", "SOLICITUDES").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<SOLICITUDESItem> SOLICITUDESItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SOLICITUDESItem>("LightSwitchApplication.FK_ESTADOS_SOLICITUDES", "SOLICITUDES");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SOLICITUDESItem>("LightSwitchApplication.FK_ESTADOS_SOLICITUDES", "SOLICITUDES", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="FeriadosItem")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -2385,6 +2662,28 @@ namespace Autorizaciones_AdminsData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Superior_SubGerenteItem>("LightSwitchApplication.FK_Superior_SubGerente_Persona", "Superior_SubGerente", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SOLICITUDES_Persona", "SOLICITUDES")]
+        public EntityCollection<SOLICITUDESItem> SOLICITUDES
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SOLICITUDESItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "SOLICITUDES");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SOLICITUDESItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "SOLICITUDES", value);
                 }
             }
         }
@@ -4924,6 +5223,737 @@ namespace Autorizaciones_AdminsData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonaItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Persona", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="SOLICITUDESItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class SOLICITUDESItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto SOLICITUDESItem.
+        /// </summary>
+        /// <param name="id_Solicitud">Valor inicial de la propiedad Id_Solicitud.</param>
+        /// <param name="gerencia">Valor inicial de la propiedad Gerencia.</param>
+        /// <param name="departamento">Valor inicial de la propiedad Departamento.</param>
+        /// <param name="fechaSolicitud">Valor inicial de la propiedad FechaSolicitud.</param>
+        /// <param name="titulo">Valor inicial de la propiedad Titulo.</param>
+        /// <param name="rutPersona_fk">Valor inicial de la propiedad RutPersona_fk.</param>
+        public static SOLICITUDESItem CreateSOLICITUDESItem(global::System.Int32 id_Solicitud, global::System.String gerencia, global::System.String departamento, global::System.DateTime fechaSolicitud, global::System.String titulo, global::System.String rutPersona_fk)
+        {
+            SOLICITUDESItem sOLICITUDESItem = new SOLICITUDESItem();
+            sOLICITUDESItem.Id_Solicitud = id_Solicitud;
+            sOLICITUDESItem.Gerencia = gerencia;
+            sOLICITUDESItem.Departamento = departamento;
+            sOLICITUDESItem.FechaSolicitud = fechaSolicitud;
+            sOLICITUDESItem.Titulo = titulo;
+            sOLICITUDESItem.RutPersona_fk = rutPersona_fk;
+            return sOLICITUDESItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id_Solicitud
+        {
+            get
+            {
+                return _Id_Solicitud;
+            }
+            set
+            {
+                if (_Id_Solicitud != value)
+                {
+                    OnId_SolicitudChanging(value);
+                    ReportPropertyChanging("Id_Solicitud");
+                    _Id_Solicitud = value;
+                    ReportPropertyChanged("Id_Solicitud");
+                    OnId_SolicitudChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id_Solicitud;
+        partial void OnId_SolicitudChanging(global::System.Int32 value);
+        partial void OnId_SolicitudChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Gerencia
+        {
+            get
+            {
+                return _Gerencia;
+            }
+            set
+            {
+                OnGerenciaChanging(value);
+                ReportPropertyChanging("Gerencia");
+                _Gerencia = value;
+                ReportPropertyChanged("Gerencia");
+                OnGerenciaChanged();
+            }
+        }
+        private global::System.String _Gerencia;
+        partial void OnGerenciaChanging(global::System.String value);
+        partial void OnGerenciaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Departamento
+        {
+            get
+            {
+                return _Departamento;
+            }
+            set
+            {
+                OnDepartamentoChanging(value);
+                ReportPropertyChanging("Departamento");
+                _Departamento = value;
+                ReportPropertyChanged("Departamento");
+                OnDepartamentoChanged();
+            }
+        }
+        private global::System.String _Departamento;
+        partial void OnDepartamentoChanging(global::System.String value);
+        partial void OnDepartamentoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FechaSolicitud
+        {
+            get
+            {
+                return _FechaSolicitud;
+            }
+            set
+            {
+                OnFechaSolicitudChanging(value);
+                ReportPropertyChanging("FechaSolicitud");
+                _FechaSolicitud = value;
+                ReportPropertyChanged("FechaSolicitud");
+                OnFechaSolicitudChanged();
+            }
+        }
+        private global::System.DateTime _FechaSolicitud;
+        partial void OnFechaSolicitudChanging(global::System.DateTime value);
+        partial void OnFechaSolicitudChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Titulo
+        {
+            get
+            {
+                return _Titulo;
+            }
+            set
+            {
+                OnTituloChanging(value);
+                ReportPropertyChanging("Titulo");
+                _Titulo = value;
+                ReportPropertyChanged("Titulo");
+                OnTituloChanged();
+            }
+        }
+        private global::System.String _Titulo;
+        partial void OnTituloChanging(global::System.String value);
+        partial void OnTituloChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> VB_Gerente
+        {
+            get
+            {
+                return _VB_Gerente;
+            }
+            set
+            {
+                OnVB_GerenteChanging(value);
+                ReportPropertyChanging("VB_Gerente");
+                _VB_Gerente = value;
+                ReportPropertyChanged("VB_Gerente");
+                OnVB_GerenteChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _VB_Gerente;
+        partial void OnVB_GerenteChanging(Nullable<global::System.Boolean> value);
+        partial void OnVB_GerenteChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> VB_SubGerente
+        {
+            get
+            {
+                return _VB_SubGerente;
+            }
+            set
+            {
+                OnVB_SubGerenteChanging(value);
+                ReportPropertyChanging("VB_SubGerente");
+                _VB_SubGerente = value;
+                ReportPropertyChanged("VB_SubGerente");
+                OnVB_SubGerenteChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _VB_SubGerente;
+        partial void OnVB_SubGerenteChanging(Nullable<global::System.Boolean> value);
+        partial void OnVB_SubGerenteChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> VB_JefeDirecto
+        {
+            get
+            {
+                return _VB_JefeDirecto;
+            }
+            set
+            {
+                OnVB_JefeDirectoChanging(value);
+                ReportPropertyChanging("VB_JefeDirecto");
+                _VB_JefeDirecto = value;
+                ReportPropertyChanged("VB_JefeDirecto");
+                OnVB_JefeDirectoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _VB_JefeDirecto;
+        partial void OnVB_JefeDirectoChanging(Nullable<global::System.Boolean> value);
+        partial void OnVB_JefeDirectoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> VB_Empleado
+        {
+            get
+            {
+                return _VB_Empleado;
+            }
+            set
+            {
+                OnVB_EmpleadoChanging(value);
+                ReportPropertyChanging("VB_Empleado");
+                _VB_Empleado = value;
+                ReportPropertyChanged("VB_Empleado");
+                OnVB_EmpleadoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _VB_Empleado;
+        partial void OnVB_EmpleadoChanging(Nullable<global::System.Boolean> value);
+        partial void OnVB_EmpleadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Vacaciones
+        {
+            get
+            {
+                return _Vacaciones;
+            }
+            set
+            {
+                OnVacacionesChanging(value);
+                ReportPropertyChanging("Vacaciones");
+                _Vacaciones = value;
+                ReportPropertyChanged("Vacaciones");
+                OnVacacionesChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Vacaciones;
+        partial void OnVacacionesChanging(Nullable<global::System.Boolean> value);
+        partial void OnVacacionesChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Administrativo
+        {
+            get
+            {
+                return _Administrativo;
+            }
+            set
+            {
+                OnAdministrativoChanging(value);
+                ReportPropertyChanging("Administrativo");
+                _Administrativo = value;
+                ReportPropertyChanged("Administrativo");
+                OnAdministrativoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Administrativo;
+        partial void OnAdministrativoChanging(Nullable<global::System.Boolean> value);
+        partial void OnAdministrativoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> HorasExtras
+        {
+            get
+            {
+                return _HorasExtras;
+            }
+            set
+            {
+                OnHorasExtrasChanging(value);
+                ReportPropertyChanging("HorasExtras");
+                _HorasExtras = value;
+                ReportPropertyChanged("HorasExtras");
+                OnHorasExtrasChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _HorasExtras;
+        partial void OnHorasExtrasChanging(Nullable<global::System.Boolean> value);
+        partial void OnHorasExtrasChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> OtroPermiso
+        {
+            get
+            {
+                return _OtroPermiso;
+            }
+            set
+            {
+                OnOtroPermisoChanging(value);
+                ReportPropertyChanging("OtroPermiso");
+                _OtroPermiso = value;
+                ReportPropertyChanged("OtroPermiso");
+                OnOtroPermisoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _OtroPermiso;
+        partial void OnOtroPermisoChanging(Nullable<global::System.Boolean> value);
+        partial void OnOtroPermisoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Completada
+        {
+            get
+            {
+                return _Completada;
+            }
+            set
+            {
+                OnCompletadaChanging(value);
+                ReportPropertyChanging("Completada");
+                _Completada = value;
+                ReportPropertyChanged("Completada");
+                OnCompletadaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Completada;
+        partial void OnCompletadaChanging(Nullable<global::System.Boolean> value);
+        partial void OnCompletadaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Rechazada
+        {
+            get
+            {
+                return _Rechazada;
+            }
+            set
+            {
+                OnRechazadaChanging(value);
+                ReportPropertyChanging("Rechazada");
+                _Rechazada = value;
+                ReportPropertyChanged("Rechazada");
+                OnRechazadaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Rechazada;
+        partial void OnRechazadaChanging(Nullable<global::System.Boolean> value);
+        partial void OnRechazadaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> SaldoDias
+        {
+            get
+            {
+                return _SaldoDias;
+            }
+            set
+            {
+                OnSaldoDiasChanging(value);
+                ReportPropertyChanging("SaldoDias");
+                _SaldoDias = value;
+                ReportPropertyChanged("SaldoDias");
+                OnSaldoDiasChanged();
+            }
+        }
+        private Nullable<global::System.Double> _SaldoDias;
+        partial void OnSaldoDiasChanging(Nullable<global::System.Double> value);
+        partial void OnSaldoDiasChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> NumeroDiasTomados
+        {
+            get
+            {
+                return _NumeroDiasTomados;
+            }
+            set
+            {
+                OnNumeroDiasTomadosChanging(value);
+                ReportPropertyChanging("NumeroDiasTomados");
+                _NumeroDiasTomados = value;
+                ReportPropertyChanged("NumeroDiasTomados");
+                OnNumeroDiasTomadosChanged();
+            }
+        }
+        private Nullable<global::System.Double> _NumeroDiasTomados;
+        partial void OnNumeroDiasTomadosChanging(Nullable<global::System.Double> value);
+        partial void OnNumeroDiasTomadosChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> HorasAutorizadas
+        {
+            get
+            {
+                return _HorasAutorizadas;
+            }
+            set
+            {
+                OnHorasAutorizadasChanging(value);
+                ReportPropertyChanging("HorasAutorizadas");
+                _HorasAutorizadas = value;
+                ReportPropertyChanged("HorasAutorizadas");
+                OnHorasAutorizadasChanged();
+            }
+        }
+        private Nullable<global::System.Double> _HorasAutorizadas;
+        partial void OnHorasAutorizadasChanging(Nullable<global::System.Double> value);
+        partial void OnHorasAutorizadasChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> HorasTrabajadas
+        {
+            get
+            {
+                return _HorasTrabajadas;
+            }
+            set
+            {
+                OnHorasTrabajadasChanging(value);
+                ReportPropertyChanging("HorasTrabajadas");
+                _HorasTrabajadas = value;
+                ReportPropertyChanged("HorasTrabajadas");
+                OnHorasTrabajadasChanged();
+            }
+        }
+        private Nullable<global::System.Double> _HorasTrabajadas;
+        partial void OnHorasTrabajadasChanging(Nullable<global::System.Double> value);
+        partial void OnHorasTrabajadasChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Prestamo
+        {
+            get
+            {
+                return _Prestamo;
+            }
+            set
+            {
+                OnPrestamoChanging(value);
+                ReportPropertyChanging("Prestamo");
+                _Prestamo = value;
+                ReportPropertyChanged("Prestamo");
+                OnPrestamoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Prestamo;
+        partial void OnPrestamoChanging(Nullable<global::System.Int32> value);
+        partial void OnPrestamoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> Inicio
+        {
+            get
+            {
+                return _Inicio;
+            }
+            set
+            {
+                OnInicioChanging(value);
+                ReportPropertyChanging("Inicio");
+                _Inicio = value;
+                ReportPropertyChanged("Inicio");
+                OnInicioChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _Inicio;
+        partial void OnInicioChanging(Nullable<global::System.DateTime> value);
+        partial void OnInicioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> Termino
+        {
+            get
+            {
+                return _Termino;
+            }
+            set
+            {
+                OnTerminoChanging(value);
+                ReportPropertyChanging("Termino");
+                _Termino = value;
+                ReportPropertyChanged("Termino");
+                OnTerminoChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _Termino;
+        partial void OnTerminoChanging(Nullable<global::System.DateTime> value);
+        partial void OnTerminoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Colacion
+        {
+            get
+            {
+                return _Colacion;
+            }
+            set
+            {
+                OnColacionChanging(value);
+                ReportPropertyChanging("Colacion");
+                _Colacion = value;
+                ReportPropertyChanged("Colacion");
+                OnColacionChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Colacion;
+        partial void OnColacionChanging(Nullable<global::System.Boolean> value);
+        partial void OnColacionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Taxi
+        {
+            get
+            {
+                return _Taxi;
+            }
+            set
+            {
+                OnTaxiChanging(value);
+                ReportPropertyChanging("Taxi");
+                _Taxi = value;
+                ReportPropertyChanged("Taxi");
+                OnTaxiChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Taxi;
+        partial void OnTaxiChanging(Nullable<global::System.Boolean> value);
+        partial void OnTaxiChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> ConDescuento
+        {
+            get
+            {
+                return _ConDescuento;
+            }
+            set
+            {
+                OnConDescuentoChanging(value);
+                ReportPropertyChanging("ConDescuento");
+                _ConDescuento = value;
+                ReportPropertyChanged("ConDescuento");
+                OnConDescuentoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _ConDescuento;
+        partial void OnConDescuentoChanging(Nullable<global::System.Boolean> value);
+        partial void OnConDescuentoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RutPersona_fk
+        {
+            get
+            {
+                return _RutPersona_fk;
+            }
+            set
+            {
+                OnRutPersona_fkChanging(value);
+                ReportPropertyChanging("RutPersona_fk");
+                _RutPersona_fk = value;
+                ReportPropertyChanged("RutPersona_fk");
+                OnRutPersona_fkChanged();
+            }
+        }
+        private global::System.String _RutPersona_fk;
+        partial void OnRutPersona_fkChanging(global::System.String value);
+        partial void OnRutPersona_fkChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_ESTADOS_SOLICITUDES", "ESTADOS")]
+        public EntityCollection<ESTADOSItem> ESTADOS
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ESTADOSItem>("LightSwitchApplication.FK_ESTADOS_SOLICITUDES", "ESTADOS");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ESTADOSItem>("LightSwitchApplication.FK_ESTADOS_SOLICITUDES", "ESTADOS", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SOLICITUDES_Persona", "Persona")]
+        public PersonaItem PersonaItem1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonaItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "Persona").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonaItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "Persona").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<PersonaItem> PersonaItem1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonaItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonaItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "Persona", value);
                 }
             }
         }

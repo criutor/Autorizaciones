@@ -257,6 +257,32 @@ namespace LightSwitchApplication.Implementation
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Superior_SubGerenteItem> ___Superior_SubGerente;
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.SOLICITUDES
+        {
+            get
+            {
+                return this.SOLICITUDES;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.SOLICITUDESItem> __SOLICITUDES
+        {
+            get
+            {
+                if (this.___SOLICITUDES == null)
+                {
+                    this.___SOLICITUDES = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.SOLICITUDESItem>(
+                        this,
+                        "SOLICITUDES",
+                        () => this._SOLICITUDES,
+                        e => global::System.Object.Equals(e.RutPersona_fk, this.Rut_Persona));
+                }
+                return this.___SOLICITUDES;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.SOLICITUDESItem> ___SOLICITUDES;
+        
     }
     #endregion
     
@@ -1990,6 +2016,278 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region ESTADOSItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ESTADOSItem :
+        global::LightSwitchApplication.ESTADOSItem.DetailsClass.IImplementation
+    {
+        partial void OnSolicitud_fkChanged()
+        {
+            this.___OnPropertyChanged("Solicitud_fk");
+            this.___OnPropertyChanged("SOLICITUDESItem");
+        }
+        
+        partial void OnId_EstadoChanged()
+        {
+            this.___OnPropertyChanged("Id_Estado");
+        }
+        
+        partial void OnObservacionesChanged()
+        {
+            this.___OnPropertyChanged("Observaciones");
+        }
+        
+        partial void OnTituloObservacionChanged()
+        {
+            this.___OnPropertyChanged("TituloObservacion");
+        }
+        
+        partial void OnMensajeByChanged()
+        {
+            this.___OnPropertyChanged("MensajeBy");
+        }
+        
+        partial void OnCreadoAtChanged()
+        {
+            this.___OnPropertyChanged("CreadoAt");
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ESTADOSItem.DetailsClass.IImplementation.SOLICITUDESItem
+        {
+            get
+            {
+                return this.SOLICITUDESItem;
+            }
+            set
+            {
+                this.SOLICITUDESItem = (global::LightSwitchApplication.Implementation.SOLICITUDESItem)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.SOLICITUDESItem> __SOLICITUDESItem
+        {
+            get
+            {
+                if (this.___SOLICITUDESItem == null)
+                {
+                    this.___SOLICITUDESItem = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.SOLICITUDESItem>(
+                        this,
+                        "SOLICITUDESItem",
+                        new string[] { "Solicitud_fk" },
+                        e => global::System.Object.Equals(e.Id_Solicitud, this.Solicitud_fk),
+                        () => this._SOLICITUDESItem,
+                        e => this._SOLICITUDESItem = e);
+                }
+                return this.___SOLICITUDESItem;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.SOLICITUDESItem> ___SOLICITUDESItem;
+        
+    }
+    #endregion
+    
+    #region SOLICITUDESItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class SOLICITUDESItem :
+        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation
+    {
+        partial void OnRutPersona_fkChanged()
+        {
+            this.___OnPropertyChanged("RutPersona_fk");
+            this.___OnPropertyChanged("PersonaItem1");
+        }
+        
+        partial void OnId_SolicitudChanged()
+        {
+            this.___OnPropertyChanged("Id_Solicitud");
+        }
+        
+        partial void OnGerenciaChanged()
+        {
+            this.___OnPropertyChanged("Gerencia");
+        }
+        
+        partial void OnDepartamentoChanged()
+        {
+            this.___OnPropertyChanged("Departamento");
+        }
+        
+        partial void OnFechaSolicitudChanged()
+        {
+            this.___OnPropertyChanged("FechaSolicitud");
+        }
+        
+        partial void OnTituloChanged()
+        {
+            this.___OnPropertyChanged("Titulo");
+        }
+        
+        partial void OnVB_GerenteChanged()
+        {
+            this.___OnPropertyChanged("VB_Gerente");
+        }
+        
+        partial void OnVB_SubGerenteChanged()
+        {
+            this.___OnPropertyChanged("VB_SubGerente");
+        }
+        
+        partial void OnVB_JefeDirectoChanged()
+        {
+            this.___OnPropertyChanged("VB_JefeDirecto");
+        }
+        
+        partial void OnVB_EmpleadoChanged()
+        {
+            this.___OnPropertyChanged("VB_Empleado");
+        }
+        
+        partial void OnVacacionesChanged()
+        {
+            this.___OnPropertyChanged("Vacaciones");
+        }
+        
+        partial void OnAdministrativoChanged()
+        {
+            this.___OnPropertyChanged("Administrativo");
+        }
+        
+        partial void OnHorasExtrasChanged()
+        {
+            this.___OnPropertyChanged("HorasExtras");
+        }
+        
+        partial void OnOtroPermisoChanged()
+        {
+            this.___OnPropertyChanged("OtroPermiso");
+        }
+        
+        partial void OnCompletadaChanged()
+        {
+            this.___OnPropertyChanged("Completada");
+        }
+        
+        partial void OnRechazadaChanged()
+        {
+            this.___OnPropertyChanged("Rechazada");
+        }
+        
+        partial void OnSaldoDiasChanged()
+        {
+            this.___OnPropertyChanged("SaldoDias");
+        }
+        
+        partial void OnNumeroDiasTomadosChanged()
+        {
+            this.___OnPropertyChanged("NumeroDiasTomados");
+        }
+        
+        partial void OnHorasAutorizadasChanged()
+        {
+            this.___OnPropertyChanged("HorasAutorizadas");
+        }
+        
+        partial void OnHorasTrabajadasChanged()
+        {
+            this.___OnPropertyChanged("HorasTrabajadas");
+        }
+        
+        partial void OnPrestamoChanged()
+        {
+            this.___OnPropertyChanged("Prestamo");
+        }
+        
+        partial void OnInicioChanged()
+        {
+            this.___OnPropertyChanged("Inicio");
+        }
+        
+        partial void OnTerminoChanged()
+        {
+            this.___OnPropertyChanged("Termino");
+        }
+        
+        partial void OnColacionChanged()
+        {
+            this.___OnPropertyChanged("Colacion");
+        }
+        
+        partial void OnTaxiChanged()
+        {
+            this.___OnPropertyChanged("Taxi");
+        }
+        
+        partial void OnConDescuentoChanged()
+        {
+            this.___OnPropertyChanged("ConDescuento");
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS
+        {
+            get
+            {
+                return this.ESTADOS;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ESTADOSItem> __ESTADOS
+        {
+            get
+            {
+                if (this.___ESTADOS == null)
+                {
+                    this.___ESTADOS = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ESTADOSItem>(
+                        this,
+                        "ESTADOS",
+                        () => this._ESTADOS,
+                        e => global::System.Object.Equals(e.Solicitud_fk, this.Id_Solicitud));
+                }
+                return this.___ESTADOS;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ESTADOSItem> ___ESTADOS;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.PersonaItem1
+        {
+            get
+            {
+                return this.PersonaItem1;
+            }
+            set
+            {
+                this.PersonaItem1 = (global::LightSwitchApplication.Implementation.PersonaItem)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PersonaItem> __PersonaItem1
+        {
+            get
+            {
+                if (this.___PersonaItem1 == null)
+                {
+                    this.___PersonaItem1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PersonaItem>(
+                        this,
+                        "PersonaItem1",
+                        new string[] { "RutPersona_fk" },
+                        e => global::System.Object.Equals(e.Rut_Persona, this.RutPersona_fk),
+                        () => this._PersonaItem1,
+                        e => this._PersonaItem1 = e);
+                }
+                return this.___PersonaItem1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PersonaItem> ___PersonaItem1;
+        
+    }
+    #endregion
+    
     #region ContratoItem1
     [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Fin700v60Data.Implementation")]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -2786,6 +3084,14 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.FeriadosItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ESTADOSItem))
+            {
+                return new global::LightSwitchApplication.Implementation.ESTADOSItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.SOLICITUDESItem))
+            {
+                return new global::LightSwitchApplication.Implementation.SOLICITUDESItem();
+            }
             return null;
         }
     }
@@ -2952,6 +3258,14 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.FeriadosItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.FeriadosItem);
+            }
+            if (typeof(global::LightSwitchApplication.ESTADOSItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ESTADOSItem);
+            }
+            if (typeof(global::LightSwitchApplication.SOLICITUDESItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.SOLICITUDESItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {

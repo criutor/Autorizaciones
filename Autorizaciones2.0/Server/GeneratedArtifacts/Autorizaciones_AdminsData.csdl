@@ -24,6 +24,7 @@
     <NavigationProperty Name="Superior_Gerente" Relationship="LightSwitchApplication.FK_Superior_Gerente_Persona" ToRole="Superior_Gerente" FromRole="Persona" />
     <NavigationProperty Name="Superior_JefeDirecto" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Persona" ToRole="Superior_JefeDirecto" FromRole="Persona" />
     <NavigationProperty Name="Superior_SubGerente" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Persona" ToRole="Superior_SubGerente" FromRole="Persona" />
+    <NavigationProperty Name="SOLICITUDES" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="SOLICITUDES" FromRole="Persona" />
   </EntityType>
   <EntityType Name="CargoItem">
     <Key>
@@ -263,6 +264,51 @@
     <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Feriado" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="ESTADOSItem">
+    <Key>
+      <PropertyRef Name="Id_Estado" />
+    </Key>
+    <Property Name="Id_Estado" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Observaciones" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="TituloObservacion" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="MensajeBy" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="CreadoAt" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Solicitud_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="SOLICITUDESItem" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="SOLICITUDES" FromRole="ESTADOS" />
+  </EntityType>
+  <EntityType Name="SOLICITUDESItem">
+    <Key>
+      <PropertyRef Name="Id_Solicitud" />
+    </Key>
+    <Property Name="Id_Solicitud" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Gerencia" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Departamento" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="FechaSolicitud" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Titulo" Type="Edm.String" Nullable="false" MaxLength="20" ConcurrencyMode="Fixed" />
+    <Property Name="VB_Gerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="VB_SubGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="VB_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="VB_Empleado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Vacaciones" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Administrativo" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="HorasExtras" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="OtroPermiso" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Completada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Rechazada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="SaldoDias" Type="Edm.Double" />
+    <Property Name="NumeroDiasTomados" Type="Edm.Double" />
+    <Property Name="HorasAutorizadas" Type="Edm.Double" />
+    <Property Name="HorasTrabajadas" Type="Edm.Double" />
+    <Property Name="Prestamo" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Inicio" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Termino" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Colacion" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Taxi" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="ConDescuento" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
+    <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="0..1" />
@@ -528,6 +574,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_ESTADOS_SOLICITUDES">
+    <End Role="SOLICITUDES" Type="LightSwitchApplication.SOLICITUDESItem" Multiplicity="1" />
+    <End Role="ESTADOS" Type="LightSwitchApplication.ESTADOSItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOLICITUDES">
+        <PropertyRef Name="Id_Solicitud" />
+      </Principal>
+      <Dependent Role="ESTADOS">
+        <PropertyRef Name="Solicitud_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOLICITUDES_Persona">
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="SOLICITUDES" Type="LightSwitchApplication.SOLICITUDESItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Rut_Persona" />
+      </Principal>
+      <Dependent Role="SOLICITUDES">
+        <PropertyRef Name="RutPersona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Autorizaciones_AdminsDataObjectContext" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Persona" EntityType="LightSwitchApplication.PersonaItem" />
     <EntitySet Name="Cargo" EntityType="LightSwitchApplication.CargoItem" />
@@ -550,6 +620,8 @@
     <EntitySet Name="Superior_SubGerente" EntityType="LightSwitchApplication.Superior_SubGerenteItem" />
     <EntitySet Name="ConsultarSaldoVacaciones" EntityType="LightSwitchApplication.ConsultarSaldoVacacionesItem" />
     <EntitySet Name="Feriados" EntityType="LightSwitchApplication.FeriadosItem" />
+    <EntitySet Name="ESTADOS" EntityType="LightSwitchApplication.ESTADOSItem" />
+    <EntitySet Name="SOLICITUDES" EntityType="LightSwitchApplication.SOLICITUDESItem" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -629,6 +701,14 @@
     <AssociationSet Name="FK_Superior_SubGerente_Persona" Association="LightSwitchApplication.FK_Superior_SubGerente_Persona">
       <End Role="Persona" EntitySet="Persona" />
       <End Role="Superior_SubGerente" EntitySet="Superior_SubGerente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ESTADOS_SOLICITUDES" Association="LightSwitchApplication.FK_ESTADOS_SOLICITUDES">
+      <End Role="SOLICITUDES" EntitySet="SOLICITUDES" />
+      <End Role="ESTADOS" EntitySet="ESTADOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOLICITUDES_Persona" Association="LightSwitchApplication.FK_SOLICITUDES_Persona">
+      <End Role="Persona" EntitySet="Persona" />
+      <End Role="SOLICITUDES" EntitySet="SOLICITUDES" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
