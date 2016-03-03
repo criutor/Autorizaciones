@@ -2702,17 +2702,38 @@
                                     </BinaryExpression.Attributes>
                                     <BinaryExpression.Left>
                                       <BinaryExpression
-                                        NodeType="NotEqual">
+                                        NodeType="And">
                                         <BinaryExpression.Left>
-                                          <ChainExpression>
-                                            <MemberExpression
-                                              Member="Completada" />
-                                          </ChainExpression>
+                                          <BinaryExpression
+                                            NodeType="NotEqual">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Completada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ConstantExpression
+                                                ResultType=":Boolean?"
+                                                Value="True" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
-                                          <ConstantExpression
-                                            ResultType=":Boolean?"
-                                            Value="True" />
+                                          <BinaryExpression
+                                            NodeType="NotEqual">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Rechazada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ConstantExpression
+                                                ResultType=":Boolean?"
+                                                Value="True" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
                                         </BinaryExpression.Right>
                                       </BinaryExpression>
                                     </BinaryExpression.Left>
@@ -2722,7 +2743,7 @@
                                         <BinaryExpression.Left>
                                           <ChainExpression>
                                             <MemberExpression
-                                              Member="Rechazada" />
+                                              Member="Cancelada" />
                                           </ChainExpression>
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
@@ -2779,14 +2800,75 @@
                         <BinaryExpression.Left>
                           <ChainExpression>
                             <MemberExpression
-                              Member="VB_Gerente" />
+                              Member="VB_JefeDirecto" />
                           </ChainExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
                           <ParameterExpression
-                            Parameter="VB_Gerente" />
+                            Parameter="VB_JefeDirecto" />
                         </BinaryExpression.Right>
                       </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Or">
+                    <BinaryExpression.Attributes>
+                      <ExpressionGroup />
+                    </BinaryExpression.Attributes>
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="VB_SubGerente" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="VB_SubGerente" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="VB_SubGerente" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="VB_SubGerenteNulo" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Or">
+                <BinaryExpression.Attributes>
+                  <ExpressionGroup />
+                </BinaryExpression.Attributes>
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="VB_Gerente" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="VB_Gerente" />
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Left>
@@ -2796,29 +2878,14 @@
                     <BinaryExpression.Left>
                       <ChainExpression>
                         <MemberExpression
-                          Member="VB_JefeDirecto" />
+                          Member="VB_Gerente" />
                       </ChainExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
                       <ParameterExpression
-                        Parameter="VB_JefeDirecto" />
+                        Parameter="VB_GerenteNulo" />
                     </BinaryExpression.Right>
                   </BinaryExpression>
-                </BinaryExpression.Right>
-              </BinaryExpression>
-            </BinaryExpression.Left>
-            <BinaryExpression.Right>
-              <BinaryExpression
-                NodeType="Equal">
-                <BinaryExpression.Left>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="VB_SubGerente" />
-                  </ChainExpression>
-                </BinaryExpression.Left>
-                <BinaryExpression.Right>
-                  <ParameterExpression
-                    Parameter="VB_SubGerente" />
                 </BinaryExpression.Right>
               </BinaryExpression>
             </BinaryExpression.Right>
@@ -2847,15 +2914,501 @@
         Name="VB_Empleado"
         ParameterType=":Boolean?" />
       <QueryOperationParameter
-        IsOptional="True"
         Name="VB_Gerente"
         ParameterType=":Boolean?" />
       <QueryOperationParameter
         Name="VB_JefeDirecto"
         ParameterType=":Boolean?" />
       <QueryOperationParameter
-        IsOptional="True"
         Name="VB_SubGerente"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="VB_SubGerenteNulo"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="VB_GerenteNulo"
+        ParameterType=":Boolean?" />
+    </QueryOperation>
+    <QueryOperation
+      Name="SolicitudesPorPersona"
+      ReturnType="SOLICITUDESItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="And">
+            <BinaryExpression.Left>
+              <BinaryExpression
+                NodeType="And">
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="And">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="GreaterThanOrEqual">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="FechaSolicitud" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="FechaSolicitudDesde" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="LessThanOrEqual">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="FechaSolicitud" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="FechaSolicitudHasta" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Or">
+                    <BinaryExpression.Attributes>
+                      <ExpressionGroup />
+                    </BinaryExpression.Attributes>
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Or">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="Or">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="Or">
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="And">
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Completada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Completada" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Rechazada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Rechazada" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Cancelada" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="Cancelada" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Attributes>
+                                      <ExpressionGroup />
+                                    </BinaryExpression.Attributes>
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="And">
+                                        <BinaryExpression.Left>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Completada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Falso" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Rechazada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Falso" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Cancelada" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="Falso" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="And">
+                                <BinaryExpression.Attributes>
+                                  <ExpressionGroup />
+                                </BinaryExpression.Attributes>
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="And">
+                                    <BinaryExpression.Left>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Completada" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="Falso" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <BinaryExpression
+                                        NodeType="Equal">
+                                        <BinaryExpression.Left>
+                                          <ChainExpression>
+                                            <MemberExpression
+                                              Member="Rechazada" />
+                                          </ChainExpression>
+                                        </BinaryExpression.Left>
+                                        <BinaryExpression.Right>
+                                          <ParameterExpression
+                                            Parameter="Verdadero" />
+                                        </BinaryExpression.Right>
+                                      </BinaryExpression>
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="Equal">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="Cancelada" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="Falso" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Attributes>
+                              <ExpressionGroup />
+                            </BinaryExpression.Attributes>
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="And">
+                                <BinaryExpression.Left>
+                                  <BinaryExpression
+                                    NodeType="Equal">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="Completada" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="Verdadero" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <BinaryExpression
+                                    NodeType="Equal">
+                                    <BinaryExpression.Left>
+                                      <ChainExpression>
+                                        <MemberExpression
+                                          Member="Cancelada" />
+                                      </ChainExpression>
+                                    </BinaryExpression.Left>
+                                    <BinaryExpression.Right>
+                                      <ParameterExpression
+                                        Parameter="Falso" />
+                                    </BinaryExpression.Right>
+                                  </BinaryExpression>
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Equal">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="Rechazada" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="Falso" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="And">
+                        <BinaryExpression.Attributes>
+                          <ExpressionGroup />
+                        </BinaryExpression.Attributes>
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="And">
+                            <BinaryExpression.Left>
+                              <BinaryExpression
+                                NodeType="Equal">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="Completada" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="Falso" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <BinaryExpression
+                                NodeType="Equal">
+                                <BinaryExpression.Left>
+                                  <ChainExpression>
+                                    <MemberExpression
+                                      Member="Rechazada" />
+                                  </ChainExpression>
+                                </BinaryExpression.Left>
+                                <BinaryExpression.Right>
+                                  <ParameterExpression
+                                    Parameter="Falso" />
+                                </BinaryExpression.Right>
+                              </BinaryExpression>
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Cancelada" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Verdadero" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <BinaryExpression
+                NodeType="Or">
+                <BinaryExpression.Attributes>
+                  <ExpressionGroup />
+                </BinaryExpression.Attributes>
+                <BinaryExpression.Left>
+                  <BinaryExpression
+                    NodeType="Or">
+                    <BinaryExpression.Left>
+                      <BinaryExpression
+                        NodeType="Or">
+                        <BinaryExpression.Left>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="Administrativo" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="Administrativo" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="HorasExtras" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="HorasExtras" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="OtroPermiso" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="OtroPermiso" />
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Left>
+                <BinaryExpression.Right>
+                  <BinaryExpression
+                    NodeType="Equal">
+                    <BinaryExpression.Left>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Vacaciones" />
+                      </ChainExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <ParameterExpression
+                        Parameter="Vacaciones" />
+                    </BinaryExpression.Right>
+                  </BinaryExpression>
+                </BinaryExpression.Right>
+              </BinaryExpression>
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="SOLICITUDES" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="FechaSolicitudDesde"
+        ParameterType=":Date?" />
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="FechaSolicitudHasta"
+        ParameterType=":Date?" />
+      <QueryOperationParameter
+        Name="Completada"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Rechazada"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Falso"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Verdadero"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Administrativo"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="HorasExtras"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="OtroPermiso"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Vacaciones"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Cancelada"
         ParameterType=":Boolean?" />
     </QueryOperation>
   </EntityContainer>
@@ -6735,6 +7288,21 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Cancelada"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Estado"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -6745,7 +7313,7 @@
       Name="SOLICITUDES">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd

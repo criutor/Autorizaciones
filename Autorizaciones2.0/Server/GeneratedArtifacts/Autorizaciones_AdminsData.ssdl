@@ -377,6 +377,8 @@
     <Property Name="Colacion" Type="bit" />
     <Property Name="Taxi" Type="bit" />
     <Property Name="ConDescuento" Type="bit" />
+    <Property Name="Cancelada" Type="bit" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="50" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
@@ -644,7 +646,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ESTADOS_SOLICITUDES">
-    <End Role="SOLICITUDES" Type="Autorizaciones_AdminsDataStore.SOLICITUDESItem" Multiplicity="1" />
+    <End Role="SOLICITUDES" Type="Autorizaciones_AdminsDataStore.SOLICITUDESItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="ESTADOS" Type="Autorizaciones_AdminsDataStore.ESTADOSItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SOLICITUDES">

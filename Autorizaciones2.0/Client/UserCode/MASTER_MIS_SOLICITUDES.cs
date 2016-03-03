@@ -20,8 +20,8 @@ namespace LightSwitchApplication
         {
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
 
-            this.RechazadaAprobadaAbierta = "Todos los estados";
-
+            this.FiltroEstados = "Todos los estados";
+            
             
             //****CAMBIAR POR RUT****
             //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
@@ -165,27 +165,33 @@ namespace LightSwitchApplication
 
         }
 
-        partial void RechazadaAprobadaAbierta_Validate(ScreenValidationResultsBuilder results)
+        partial void FiltroEstados_Validate(ScreenValidationResultsBuilder results)
         {
             //Si se escoge alguna de las tres opciones de búsqueda, no aplicar los filtros FALSAS ni VERDADERAS
-            if (RechazadaAprobadaAbierta != null) { this.FALSAS = null; this.VERDADERAS = null; } 
+            if (FiltroEstados != null) { this.FALSAS = null; this.VERDADERAS = null; } 
             //Al cambiar la opción se cambian los filtros
-            if (RechazadaAprobadaAbierta == "Rechazadas") { this.Rechazada = true; this.Completada = false; }else
-            if (RechazadaAprobadaAbierta == "Aprobadas") { this.Completada = true; this.Rechazada = false; }else
-            if (RechazadaAprobadaAbierta == "Abiertas") { this.Rechazada = false; this.Completada = false; }else
-            if (RechazadaAprobadaAbierta == "Todos los estados") {
+            if (FiltroEstados == "Rechazadas") { this.Rechazada = true; this.Completada = false; this.Cancelada = false; }
+            else
+                if (FiltroEstados == "Aprobadas") { this.Completada = true; this.Rechazada = false; this.Cancelada = false; }
+                else
+                    if (FiltroEstados == "Abiertas") { this.Rechazada = false; this.Completada = false; this.Cancelada = false; }
+                    else
+                        if (FiltroEstados == "Canceladas") { this.Rechazada = false; this.Completada = false; this.Cancelada = true;  }
+                        else
+                            if (FiltroEstados == "Todos los estados")
+                            {
 
-                    this.FechaSolicitudDesde = null;
-                    this.FechaSolicitudHasta = null;
-                    this.Administrativo = true;
-                    this.Vacaciones = true;
-                    this.OtroPermiso = true;
-                    this.HorasExtras = true;
-                    //this.RechazadaAprobadaAbierta = null;
-                    this.FALSAS = false;
-                    this.VERDADERAS = true;
-                    this.Solicitud_Header.Load();
-            }
+                                this.FechaSolicitudDesde = null;
+                                this.FechaSolicitudHasta = null;
+                                this.Administrativo = true;
+                                this.Vacaciones = true;
+                                this.OtroPermiso = true;
+                                this.HorasExtras = true;
+                                this.FiltroEstados = null;
+                                this.FALSAS = false;
+                                this.VERDADERAS = true;
+                                //this.Solicitud_Header.Load();
+                            }
         }
 
         partial void SolicitarHorasExtras_CanExecute(ref bool result)
@@ -289,7 +295,7 @@ namespace LightSwitchApplication
         partial void EnviarRespuestaAceptar_Execute()
         {
             // Escriba el código aquí.
-            if (this.NuevoComentarioAceptar.Length <= 100)
+            if (this.NuevoComentarioAceptar == null || this.NuevoComentarioAceptar.Length <= 100)
             {
 
                 //Instanciar un nuevo estado
@@ -302,7 +308,7 @@ namespace LightSwitchApplication
 
                 this.SOLICITUDES.SelectedItem.VB_Empleado = true;
 
-                this.CloseModalWindow("AprobarSolicitudMW");
+                this.CloseModalWindow("AceptarSolicitudMW");
 
                 this.Save();
                 this.Refresh();
@@ -314,7 +320,7 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             //Ejecutar solo si el largo del comentario es el permitido, de lo contrario creará estados de mas.
-            if (this.NuevoComentarioCancelar.Length <= 100)
+            if (this.NuevoComentarioCancelar == null || this.NuevoComentarioCancelar.Length <= 100)
             {
                 this.NUEVOESTADO = new ESTADOSItem();
                 this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.SelectedItem;
@@ -322,10 +328,13 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
                 this.NUEVOESTADO.CreadoAt = DateTime.Now;
                 this.NUEVOESTADO.Observaciones = this.NuevoComentarioCancelar;
-                this.SOLICITUDES.SelectedItem.Rechazada = true;
+                
+                //this.SOLICITUDES.SelectedItem.Rechazada = true;
+                this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el empleado";
+                this.SOLICITUDES.SelectedItem.Cancelada = true;
                 this.SOLICITUDES.SelectedItem.Completada = false;
 
-                this.CloseModalWindow("RechazarSolicitudMW");
+                this.CloseModalWindow("CancelarSolicitudMW");
 
                 this.Save();
                 this.Refresh();
@@ -337,7 +346,12 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             try
             {
-                if (this.SOLICITUDES.SelectedItem.Rechazada == true )
+                if (this.SOLICITUDES.SelectedItem == null)
+                {
+                    result = false;
+                }
+
+                if (this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true)
                 {
                     result = false;
                 }
@@ -351,6 +365,20 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             try
             {
+                if (this.SOLICITUDES.SelectedItem == null)
+                {
+                    result = false;
+                }
+
+                if (this.SOLICITUDES.SelectedItem.Cancelada == true)
+                {
+                    result = false;
+                }
+                if (this.SOLICITUDES.SelectedItem.Rechazada == true)
+                {
+                    result = false;
+                }
+
                 if (this.SOLICITUDES.SelectedItem.HorasExtras == true && this.SOLICITUDES.SelectedItem.VB_Empleado == false)
                 {
                     result = true;
@@ -360,6 +388,19 @@ namespace LightSwitchApplication
             catch { }
         }
 
-
+        partial void LimpiarFiltros_Execute()
+        {
+            // Escriba el código aquí.
+            this.FiltroEstados = null;
+            this.FechaSolicitudDesde = null;
+            this.FechaSolicitudHasta = null;
+            //this.Administrativo = false;
+            //this.Vacaciones = false;
+            //this.OtroPermiso = false;
+            //this.HorasExtras = false;
+            this.FALSAS = false;
+            this.VERDADERAS = true;
+            this.SOLICITUDES.Load();
+        }
     }
 }

@@ -9,10 +9,10 @@ using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
 namespace LightSwitchApplication
 {
-    public partial class Solicitudes_Empleados_A_Cargo
+    public partial class SOLICITUDES_MIS_EMPLEADOS
     {
 
-        partial void Solicitudes_Empleados_A_Cargo_Activated()
+        partial void SOLICITUDES_MIS_EMPLEADOS_Activated()
         {
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
             this.FECHADESDE = null;
@@ -21,10 +21,10 @@ namespace LightSwitchApplication
             this.VACACIONES = true;
             this.OTROPERMISO = true;
             this.HORASEXTRAS = true;
-            this.RechazadaAprobadaAbierta = null;
+            this.FiltroEstados = null;
             this.FALSAS = false;
             this.VERDADERAS = true;
-            this.Solicitud_Header.Load();
+            //this.Solicitud_Header.Load();
 
             //this.TodasLasSolicitudes_Execute();
 
@@ -40,16 +40,31 @@ namespace LightSwitchApplication
 
                 if (PersonaPorNombreAD.First().Es_Gerente == true)
                 {
+                    /*
+                     * si solicitud es tipo horas extras
+                     * si yo ya las he evaluado(rechazado o aprobado)
+                     */
+
                     IDGERENCIA = PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
+                    VBGERENTE = true;
                 }
                 else if (PersonaPorNombreAD.First().Es_SubGerente == true)
                 {
-                    IDSUBGERENCIA = PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
+                    /*
+                     * si yo ya las he evaluado(rechazado o aprobado)
+                     */
 
+                    IDSUBGERENCIA = PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
+                    VBSUBGERENTE = true;
                 }
                 else if (PersonaPorNombreAD.First().Es_JefeDirecto == true)
                 {
+                    /*
+                     * si yo ya las he evaluado(rechazado o aprobado)
+                     */
+
                     IDAREA = PersonaPorNombreAD.First().Superior_JefeDirectoQuery.First().Division_AreaItem.Id_Area;
+                    VBJEFEAREA = true;
                 }
                 else
                 {
@@ -98,22 +113,45 @@ namespace LightSwitchApplication
             return Nombreaux.ToUpper();
         }
 
-        partial void RechazadaAprobadaAbierta_Validate(ScreenValidationResultsBuilder results)
+        partial void FiltroEstados_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
 
             //Si se escoge alguna de las tres opciones de búsqueda, no aplicar los filtros FALSAS ni VERDADERAS
-            if (RechazadaAprobadaAbierta != null)
+            if (FiltroEstados != null)
             {
                 this.FALSAS = null; this.VERDADERAS = null; //VBGERENTE = null; VBSUBGERENTE = null; VBJEFEDIRECTO = null;
             }
             //Al cambiar la opción se cambian los filtros
-            if (RechazadaAprobadaAbierta == "Rechazadas") { this.Rechazada = true; this.Completada = false; }
+            if (FiltroEstados == "Rechazadas") { 
+                
+                /*
+                 * Por mi o despues que yo las haya aprobado                 
+                 */
+                this.Rechazada = true; this.Completada = false; this.Cancelada = false; }
             else
-                if (RechazadaAprobadaAbierta == "Aprobadas") { this.Completada = true; this.Rechazada = false; }
+                if (FiltroEstados == "Aprobadas") {
+
+               /*
+               * solo si yo participé en la aprobación                 
+               */
+                    this.Completada = true; this.Rechazada = false; this.Cancelada = false;  }
                 else
-                    if (RechazadaAprobadaAbierta == "Abiertas") { this.Rechazada = false; this.Completada = false;  }else
-                        if (RechazadaAprobadaAbierta == "Todos los estados")
+                    if (FiltroEstados == "Abiertas") {
+               /*
+               * solo si yo ya la aprobé                 
+               */
+                        this.Rechazada = false; this.Completada = false; this.Cancelada = false; }
+                    else
+                        if (FiltroEstados == "Canceladas") {
+
+                            /*
+                            * despues que yo las haya aprobado               
+                            */
+
+                            this.Rechazada = false; this.Completada = false; this.Cancelada = true;  }
+                        else
+            if (FiltroEstados == "Todos los estados") 
                         {
                         
                             this.FECHADESDE = null;
@@ -122,10 +160,10 @@ namespace LightSwitchApplication
                             this.VACACIONES = true;
                             this.OTROPERMISO = true;
                             this.HORASEXTRAS = true;
-                            this.RechazadaAprobadaAbierta = null;
+                            this.FiltroEstados = null;
                             this.FALSAS = false;
                             this.VERDADERAS = true;
-                            this.Solicitud_Header.Load();
+                            //this.Solicitud_Header.Load();
                         }
 
             /*else
@@ -163,7 +201,7 @@ namespace LightSwitchApplication
         }
 
 
-
+        /*
         partial void MasDetalles_Execute()
         {
             // Escriba el código aquí.
@@ -185,6 +223,7 @@ namespace LightSwitchApplication
             }
 
         }
+        */
 
         partial void MENSAJE_NoEsUnSuperior_Execute()
         {
@@ -200,6 +239,38 @@ namespace LightSwitchApplication
 
         }
 
+        partial void Persona_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                this.EmpleadoFiltroSolicitudes = this.Persona.SelectedItem.Rut_Persona;
+                this.NombreEmpleadoSeleccionado = this.Persona.SelectedItem.NombreAD;
+            }
+            catch { }
+        }
+
+        partial void SeleccionarEmpleado_Execute()
+        {
+            // Escriba el código aquí.
+            this.CloseModalWindow("Empleados");
+        }
+
+        partial void LimpiarFiltros_Execute()
+        {
+            // Escriba el código aquí.
+            this.FiltroEstados = null;
+            this.FECHADESDE = null;
+            this.FECHAHASTA = null;
+            //this.ADMINISTRATIVO = false;
+            //this.VACACIONES = false;
+            //this.OTROPERMISO = false;
+            //this.HORASEXTRAS = false;
+            this.FALSAS = false;
+            this.VERDADERAS = true;
+            //this.SolicitudesPorPersona.Load();
+
+        }
 
     }
 }

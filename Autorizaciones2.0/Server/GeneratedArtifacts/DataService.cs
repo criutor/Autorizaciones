@@ -933,16 +933,31 @@ namespace LightSwitchApplication
         partial void SolicitudesAbiertasACargo_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void SolicitudesAbiertasACargo_Executing(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente);
+        partial void SolicitudesAbiertasACargo_Executing(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SolicitudesAbiertasACargo_PreprocessQuery(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+        partial void SolicitudesAbiertasACargo_PreprocessQuery(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo, ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void SolicitudesAbiertasACargo_Executed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+        partial void SolicitudesAbiertasACargo_Executed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void SolicitudesAbiertasACargo_ExecuteFailed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Exception exception);
+        partial void SolicitudesAbiertasACargo_ExecuteFailed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SolicitudesPorPersona_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SolicitudesPorPersona_Executing(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Falso, global::System.Nullable<bool> Verdadero, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, global::System.Nullable<bool> Cancelada);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SolicitudesPorPersona_PreprocessQuery(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Falso, global::System.Nullable<bool> Verdadero, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, global::System.Nullable<bool> Cancelada, ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SolicitudesPorPersona_Executed(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Falso, global::System.Nullable<bool> Verdadero, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, global::System.Nullable<bool> Cancelada, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SolicitudesPorPersona_ExecuteFailed(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Falso, global::System.Nullable<bool> Verdadero, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, global::System.Nullable<bool> Cancelada, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -2800,20 +2815,53 @@ namespace LightSwitchApplication
             }
             private static void __SolicitudesAbiertasACargo_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
             {
-                d.SolicitudesAbiertasACargo_Executing((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7]);
+                d.SolicitudesAbiertasACargo_Executing((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9]);
             }
             private static void __SolicitudesAbiertasACargo_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
             {
-                d.SolicitudesAbiertasACargo_Executed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[8]);
+                d.SolicitudesAbiertasACargo_Executed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[10]);
             }
             private static void __SolicitudesAbiertasACargo_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
             {
-                d.SolicitudesAbiertasACargo_ExecuteFailed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], ex);
+                d.SolicitudesAbiertasACargo_ExecuteFailed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], ex);
             }
             private static global::System.Linq.IQueryable __SolicitudesAbiertasACargo_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
             {
-                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[8];
-                d.SolicitudesAbiertasACargo_PreprocessQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], ref query);
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[10];
+                d.SolicitudesAbiertasACargo_PreprocessQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __SolicitudesPorPersonaEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "SolicitudesPorPersona",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesPorPersona_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesPorPersona_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesPorPersona_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesPorPersona_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SolicitudesPorPersona_PreprocessQuery);
+            private static bool __SolicitudesPorPersona_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.SolicitudesPorPersona_CanExecute(ref r);
+                return r;
+            }
+            private static void __SolicitudesPorPersona_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.SolicitudesPorPersona_Executing((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Nullable<bool>)args[2], (global::System.Nullable<bool>)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10]);
+            }
+            private static void __SolicitudesPorPersona_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.SolicitudesPorPersona_Executed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Nullable<bool>)args[2], (global::System.Nullable<bool>)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[11]);
+            }
+            private static void __SolicitudesPorPersona_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.SolicitudesPorPersona_ExecuteFailed((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Nullable<bool>)args[2], (global::System.Nullable<bool>)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10], ex);
+            }
+            private static global::System.Linq.IQueryable __SolicitudesPorPersona_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[11];
+                d.SolicitudesPorPersona_PreprocessQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Nullable<bool>)args[2], (global::System.Nullable<bool>)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10], ref query);
                 return query;
             }
     

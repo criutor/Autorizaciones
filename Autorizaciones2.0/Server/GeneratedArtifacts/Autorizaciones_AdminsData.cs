@@ -5872,6 +5872,54 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Cancelada
+        {
+            get
+            {
+                return _Cancelada;
+            }
+            set
+            {
+                OnCanceladaChanging(value);
+                ReportPropertyChanging("Cancelada");
+                _Cancelada = value;
+                ReportPropertyChanged("Cancelada");
+                OnCanceladaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Cancelada;
+        partial void OnCanceladaChanging(Nullable<global::System.Boolean> value);
+        partial void OnCanceladaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Estado
+        {
+            get
+            {
+                return _Estado;
+            }
+            set
+            {
+                OnEstadoChanging(value);
+                ReportPropertyChanging("Estado");
+                _Estado = value;
+                ReportPropertyChanged("Estado");
+                OnEstadoChanged();
+            }
+        }
+        private global::System.String _Estado;
+        partial void OnEstadoChanging(global::System.String value);
+        partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String RutPersona_fk

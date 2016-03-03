@@ -132,7 +132,8 @@ namespace LightSwitchApplication
                 }
             } this.Details.DiscardChanges();
         }
-        
+
+
 
 
     }

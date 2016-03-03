@@ -69,10 +69,16 @@ namespace LightSwitchApplication
                 if (this.PersonaPorNombreAD.First().Es_Gerente == true)
                 {
                     Id_Gerencia = this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
-
+                    
+                    
                     VB_Gerente = false;
+                    VB_GerenteNulo = false;
+                    
                     VB_SubGerente = true;
+                    VB_SubGerenteNulo = null; 
+                    
                     VB_JefeDirecto = true;
+
                     VB_Empleado = true;
                     
                 }
@@ -81,9 +87,14 @@ namespace LightSwitchApplication
                     Id_SubGerencia = this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
 
                     
-                    //VB_Gerente = null;
+                    VB_Gerente = false;
+                    VB_GerenteNulo = null;
+                    
                     VB_SubGerente = false;
+                    VB_SubGerenteNulo = false; 
+                    
                     VB_JefeDirecto = true;
+
                     VB_Empleado = true;
 
                 }
@@ -91,7 +102,15 @@ namespace LightSwitchApplication
                 {
                     Id_Area = this.PersonaPorNombreAD.First().Superior_JefeDirectoQuery.First().Division_AreaItem.Id_Area;
 
+                    VB_Gerente = false;
+                    VB_GerenteNulo = null;
+
+                    VB_SubGerente = false;
+                    VB_SubGerenteNulo = null;
+
                     VB_JefeDirecto = false; // Filtrar las solicitudes donde el jefe directo aun no las ha aprobado(visto bueno = false)
+                    VB_Empleado = true;
+                    
                     /*
                     if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null)
                     {
@@ -170,7 +189,7 @@ namespace LightSwitchApplication
         partial void EnviarRespuestaAprobar_Execute()
         {
             //Ejecutar solo si el largo del comentario es el permitido, de lo contrario creará estados de mas.
-            if (this.NuevoComentarioAprobar.Length <= 100)
+            if (this.NuevoComentarioAprobar == null || this.NuevoComentarioAprobar.Length <= 100)
             {
             
                 //Instanciar un nuevo estado
@@ -185,6 +204,7 @@ namespace LightSwitchApplication
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
                         this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
                     }
                     else if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
                     {
@@ -194,11 +214,21 @@ namespace LightSwitchApplication
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
                             this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
                         }
                     }
                     else if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;
+
+                        if (this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras != true)//en caso de horas extras debe ser aprobada por el gerente
+                        {
+                            if (this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente == null)//Significa que no tiene subgerente
+                            {
+                                this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                                this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
+                            }
+                        }
                     }
 
                 this.CloseModalWindow("AprobarSolicitudMW");
@@ -212,21 +242,39 @@ namespace LightSwitchApplication
         partial void EnviarRespuestaRechazar_Execute()
         {
             //Ejecutar solo si el largo del comentario es el permitido, de lo contrario creará estados de mas.
-            if (this.NuevoComentarioRechazar.Length <= 100)
-            {
-                this.NUEVOESTADO = new ESTADOSItem();
-                this.NUEVOESTADO.SOLICITUDESItem = this.SolicitudesAbiertasACargo.SelectedItem;
-                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO RECHAZADA POR:";
-                this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
-                this.NUEVOESTADO.CreadoAt = DateTime.Now;
-                this.NUEVOESTADO.Observaciones = this.NuevoComentarioRechazar;
-                this.SolicitudesAbiertasACargo.SelectedItem.Rechazada = true;
+            
+                if (this.NuevoComentarioRechazar == null || this.NuevoComentarioRechazar.Length <= 100)
+                {
+                    this.NUEVOESTADO = new ESTADOSItem();
+                    this.NUEVOESTADO.SOLICITUDESItem = this.SolicitudesAbiertasACargo.SelectedItem;
+                    this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO RECHAZADA POR:";
+                    this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
+                    this.NUEVOESTADO.CreadoAt = DateTime.Now;
+                    this.NUEVOESTADO.Observaciones = this.NuevoComentarioRechazar;
+                    this.SolicitudesAbiertasACargo.SelectedItem.Rechazada = true;
 
-                this.CloseModalWindow("RechazarSolicitudMW");
+                    //Al cambiar VB a true, el filtro de solicitudes a mi cargo mostrara las solicitudes cancelada por el usuario que visita la pantalla.
+                        if (this.PersonaPorNombreAD.First().Es_Gerente == true)
+                        {
+                            this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
+                        }
+                        else if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
+                        {
+                            this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = true;
+                        }
+                        else if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
+                        {
+                            this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;
+                        }
 
-                this.Save();
-                this.Refresh();
-            }
+                    this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por los superiores";
+
+                    this.CloseModalWindow("RechazarSolicitudMW");
+
+                    this.Save();
+                    this.Refresh();
+                }
+            
         }
 
         partial void NuevoComentarioAprobar_Validate(ScreenValidationResultsBuilder results)
@@ -257,6 +305,24 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             this.CloseModalWindow("RechazarSolicitudMW");
+        }
+
+        partial void AprobarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.SolicitudesAbiertasACargo.SelectedItem == null)
+            {
+                result = false;
+            }
+        }
+
+        partial void RechazarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.SolicitudesAbiertasACargo.SelectedItem == null)
+            {
+                result = false;
+            }
         }
 
     }

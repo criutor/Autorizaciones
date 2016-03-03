@@ -1043,9 +1043,56 @@ namespace LightSwitchApplication
         /// <param name="VB_SubGerente">
         /// No hay ninguna descripción modelada
         /// </param>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesAbiertasACargo(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente)
+        /// <param name="VB_SubGerenteNulo">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="VB_GerenteNulo">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesAbiertasACargo(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo)
         {
-            return this.Details.Methods.SolicitudesAbiertasACargo.CreateInvocation(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente).Execute();
+            return this.Details.Methods.SolicitudesAbiertasACargo.CreateInvocation(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente, VB_SubGerenteNulo, VB_GerenteNulo).Execute();
+        }
+        
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        /// <param name="FechaSolicitudDesde">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="FechaSolicitudHasta">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Completada">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Rechazada">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Falso">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Verdadero">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Administrativo">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="HorasExtras">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="OtroPermiso">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Vacaciones">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Cancelada">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesPorPersona(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Falso, global::System.Nullable<bool> Verdadero, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, global::System.Nullable<bool> Cancelada)
+        {
+            return this.Details.Methods.SolicitudesPorPersona.CreateInvocation(FechaSolicitudDesde, FechaSolicitudHasta, Completada, Rechazada, Falso, Verdadero, Administrativo, HorasExtras, OtroPermiso, Vacaciones, Cancelada).Execute();
         }
         
         #endregion
@@ -1485,6 +1532,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.SolicitudesAbiertasACargo) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SolicitudesPorPersona
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.SolicitudesPorPersona) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
                     }
                 }
                 
@@ -2183,6 +2238,16 @@ namespace LightSwitchApplication
                     c(d, ref d._SolicitudesAbiertasACargo, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SolicitudesPorPersona = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SolicitudesPorPersona",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._SolicitudesPorPersona_Stub);
+                private static void _SolicitudesPorPersona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SolicitudesPorPersona, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2638,6 +2703,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SolicitudesAbiertasACargo;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SolicitudesPorPersona;
             
         }
     

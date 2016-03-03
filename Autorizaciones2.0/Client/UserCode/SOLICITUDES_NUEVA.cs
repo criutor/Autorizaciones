@@ -36,6 +36,8 @@ namespace LightSwitchApplication
             
             this.SOLICITUD.Rechazada = false;
             this.SOLICITUD.Completada = false;
+            this.SOLICITUD.Cancelada = false;
+            this.SOLICITUD.Estado = "Siendo procesada";
             //Por defecto el empleado acepta las solicitudes que el mismo crea, las horas extras necesitan aprobación
             this.SOLICITUD.VB_Empleado = true;
 
@@ -53,6 +55,8 @@ namespace LightSwitchApplication
                 this.SOLICITUD.VB_SubGerente = true;
 
                 this.SOLICITUD.VB_JefeDirecto = true;
+
+                this.SOLICITUD.Completada = true;
 
             }
             else
@@ -80,16 +84,12 @@ namespace LightSwitchApplication
 
                         this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
 
-                            if (TIPOSOLICITUD == 3)
-                            { this.SOLICITUD.VB_Gerente = false; }
-                            else
-                            {
-                                this.SOLICITUD.VB_Gerente = true;//Gerente solo aprueba solicitudes de horas extras y estas son solo para los administrativos
-                            }
-
+                        this.SOLICITUD.VB_Gerente = false;
+                           
                         if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null)
                         {
-                            this.SOLICITUD.VB_SubGerente = true;
+                            //this.SOLICITUD.VB_SubGerente = true;
+                            this.SOLICITUD.VB_SubGerente = null;
                         }
                         else { this.SOLICITUD.VB_SubGerente = false; }
 
@@ -109,11 +109,13 @@ namespace LightSwitchApplication
                         if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null) // si no pertenece a una subgerencia, indica que no necesita aprobacion de subgerente, de lo contrario, si la necesita
                         {
                             // indica que no necesita aprobacion de un subgerente
-                            this.SOLICITUD.VB_SubGerente = true; // Utilizamos true en vez de null por que el query de solicitudes pendientes no reconoce el filtro por null(no hay problema en si el usuario tiene otro cargo de supervision ya que en este nivel vbJefeDirecto es = false).
+                            //this.SOLICITUD.VB_SubGerente = true; // Utilizamos true en vez de null por que el query de solicitudes pendientes no reconoce el filtro por null(no hay problema en si el usuario tiene otro cargo de supervision ya que en este nivel vbJefeDirecto es = false).
+                            this.SOLICITUD.VB_SubGerente = null;
                         }
                         else { this.SOLICITUD.VB_SubGerente = false; }// indica que si necesita aprobacion de un subgerente
 
-                        this.SOLICITUD.VB_Gerente = true;//Gerente solo aprueba solicitudes de horas extras
+                        //this.SOLICITUD.VB_Gerente = true;//Gerente solo aprueba solicitudes de horas extras
+                        this.SOLICITUD.VB_Gerente = null;
 
                     }
 
@@ -459,6 +461,23 @@ namespace LightSwitchApplication
             {
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
 
+                //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
+
+                DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
+                int dia; int mes; int i = 0;
+
+                foreach (FeriadosItem feriado in this.Feriados)
+                {
+
+                    dia = feriado.Feriado.Day;
+                    mes = feriado.Feriado.Month;
+                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    FERIADOS[i] = DiaAux;
+
+                    i++;
+
+                }
+
                 if (this.SOLICITUD.Inicio <= DateTime.Today)
                 {
 
@@ -472,7 +491,10 @@ namespace LightSwitchApplication
 
                     results.AddPropertyError("La fecha de término debe ser después de la fecha de inicio");
 
-                }
+                }else
+                    {
+                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                    }
 
             }
 

@@ -217,18 +217,18 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Empleados_A_Cargo_CanRun(ref bool result);
+        partial void SOLICITUDES_MIS_EMPLEADOS_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Empleados_A_Cargo_Run(ref bool handled);
+        partial void SOLICITUDES_MIS_EMPLEADOS_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSolicitudes_Empleados_A_Cargo. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_MIS_EMPLEADOS. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSolicitudes_Empleados_A_Cargo()
+        public void ShowSOLICITUDES_MIS_EMPLEADOS()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSolicitudes_Empleados_A_Cargo);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_MIS_EMPLEADOS);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -389,8 +389,8 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.Solicitudes_Ver_Aprobar_Rechazar.CreateInstance((int)args[0], (int)args[1], (int)args[2]);
                     case "Divisiones_Area_Personal":
                         return global::LightSwitchApplication.Divisiones_Area_Personal.CreateInstance((int)args[0]);
-                    case "Solicitudes_Empleados_A_Cargo":
-                        return global::LightSwitchApplication.Solicitudes_Empleados_A_Cargo.CreateInstance();
+                    case "SOLICITUDES_MIS_EMPLEADOS":
+                        return global::LightSwitchApplication.SOLICITUDES_MIS_EMPLEADOS.CreateInstance();
                     case "Feriados_CrearListar":
                         return global::LightSwitchApplication.Feriados_CrearListar.CreateInstance();
                     case "Vista_RRHH":
@@ -485,12 +485,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSolicitudes_Empleados_A_Cargo
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS_EMPLEADOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSolicitudes_Empleados_A_Cargo);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_MIS_EMPLEADOS);
                     }
                 }
 
@@ -638,12 +638,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSolicitudes_Empleados_A_Cargo
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS_EMPLEADOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSolicitudes_Empleados_A_Cargo);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_MIS_EMPLEADOS);
                     }
                 }
 
@@ -807,17 +807,17 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSolicitudes_Empleados_A_Cargo = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSolicitudes_Empleados_A_Cargo",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSolicitudes_Empleados_A_Cargo_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSolicitudes_Empleados_A_Cargo_CreateExecutableObject);
-                private static void _ShowSolicitudes_Empleados_A_Cargo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_MIS_EMPLEADOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_MIS_EMPLEADOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_MIS_EMPLEADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSolicitudes_Empleados_A_CargoCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_MIS_EMPLEADOSCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSolicitudes_Empleados_A_Cargo_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_MIS_EMPLEADOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSolicitudes_Empleados_A_Cargo.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_MIS_EMPLEADOS.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
@@ -1183,28 +1183,28 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSolicitudes_Empleados_A_Cargo = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSolicitudes_Empleados_A_Cargo",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Empleados_A_Cargo_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Empleados_A_Cargo_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Empleados_A_Cargo_InvokeMethod);
-                private static void _ShowSolicitudes_Empleados_A_Cargo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_MIS_EMPLEADOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_MIS_EMPLEADOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_InvokeMethod);
+                private static void _ShowSOLICITUDES_MIS_EMPLEADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSolicitudes_Empleados_A_CargoMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_MIS_EMPLEADOSMethod, sf);
                 }
-                private static global::System.Exception _ShowSolicitudes_Empleados_A_Cargo_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_MIS_EMPLEADOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Solicitudes_Empleados_A_Cargo_CanRun(ref result);
+                    d.Application.SOLICITUDES_MIS_EMPLEADOS_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSolicitudes_Empleados_A_Cargo_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_MIS_EMPLEADOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Solicitudes_Empleados_A_Cargo_Run(ref handled);
+                    d.Application.SOLICITUDES_MIS_EMPLEADOS_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Solicitudes_Empleados_A_Cargo", () => global::LightSwitchApplication.Solicitudes_Empleados_A_Cargo.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_MIS_EMPLEADOS", () => global::LightSwitchApplication.SOLICITUDES_MIS_EMPLEADOS.CreateInstance(), args);
                     }
                 }
  
@@ -1364,7 +1364,7 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowDivisiones_Area_PersonalMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSolicitudes_Empleados_A_CargoMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MIS_EMPLEADOSMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowFeriados_CrearListarMethod;
 
@@ -1390,7 +1390,7 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowConvenios_Colectivos_CrearListarCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSolicitudes_Empleados_A_CargoCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MIS_EMPLEADOSCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowFeriados_CrearListarCommand;
 

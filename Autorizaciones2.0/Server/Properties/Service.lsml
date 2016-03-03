@@ -1714,6 +1714,17 @@
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuento]"
           Type="bit" />
+        <SsdlProperty
+          Name="Cancelada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Cancelada]"
+          Type="bit" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Estado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Estado]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

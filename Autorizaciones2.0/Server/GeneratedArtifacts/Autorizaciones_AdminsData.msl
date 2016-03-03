@@ -286,6 +286,8 @@
           <ScalarProperty Name="Colacion" ColumnName="Colacion" />
           <ScalarProperty Name="Taxi" ColumnName="Taxi" />
           <ScalarProperty Name="ConDescuento" ColumnName="ConDescuento" />
+          <ScalarProperty Name="Cancelada" ColumnName="Cancelada" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

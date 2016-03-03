@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 01/03/2016 21:16:12
+// Fecha de generación: 03/03/2016 12:56:51
 namespace LightSwitchApplication.Implementation
 {
     
@@ -6738,6 +6738,58 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<bool> _ConDescuento;
         partial void OnConDescuentoChanging(global::System.Nullable<bool> value);
         partial void OnConDescuentoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Cancelada en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> Cancelada
+        {
+            get
+            {
+                return this._Cancelada;
+            }
+            set
+            {
+                this.OnCanceladaChanging(value);
+                if (object.Equals(this.Cancelada, value))
+                {
+                    return;
+                }
+                this._Cancelada = value;
+                this.OnCanceladaChanged();
+                this.OnPropertyChanged("Cancelada");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _Cancelada;
+        partial void OnCanceladaChanging(global::System.Nullable<bool> value);
+        partial void OnCanceladaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Estado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Estado
+        {
+            get
+            {
+                return this._Estado;
+            }
+            set
+            {
+                this.OnEstadoChanging(value);
+                if (object.Equals(this.Estado, value))
+                {
+                    return;
+                }
+                this._Estado = value;
+                this.OnEstadoChanged();
+                this.OnPropertyChanged("Estado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Estado;
+        partial void OnEstadoChanging(string value);
+        partial void OnEstadoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

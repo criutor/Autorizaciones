@@ -2227,6 +2227,16 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("ConDescuento");
         }
         
+        partial void OnCanceladaChanged()
+        {
+            this.___OnPropertyChanged("Cancelada");
+        }
+        
+        partial void OnEstadoChanged()
+        {
+            this.___OnPropertyChanged("Estado");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS
         {
             get

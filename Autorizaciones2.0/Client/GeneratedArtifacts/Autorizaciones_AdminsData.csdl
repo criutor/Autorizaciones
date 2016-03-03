@@ -306,6 +306,8 @@
     <Property Name="Colacion" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Taxi" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="ConDescuento" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Cancelada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Estado" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />
@@ -575,7 +577,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ESTADOS_SOLICITUDES">
-    <End Role="SOLICITUDES" Type="LightSwitchApplication.SOLICITUDESItem" Multiplicity="1" />
+    <End Role="SOLICITUDES" Type="LightSwitchApplication.SOLICITUDESItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="ESTADOS" Type="LightSwitchApplication.ESTADOSItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="SOLICITUDES">
