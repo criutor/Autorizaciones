@@ -20,6 +20,7 @@ namespace LightSwitchApplication
             this.PersonaItemProperty.Es_Gerente = false;
             this.PersonaItemProperty.Es_JefeDirecto = false;
             this.PersonaItemProperty.Es_SubGerente = false;
+            this.EsRolPrivado = false;
             //this.PersonaItemProperty.Nombres = ""; // Sin esto lanza un null exception ya que nombres es Null
 
         }
@@ -29,6 +30,12 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             this.Close(true);
             //Application.Current.ShowDefaultScreen(this.PersonaItemProperty);
+        }
+
+        partial void EsRolPrivado_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            this.PersonaItemProperty.EsRolPrivado = this.EsRolPrivado;
         }
     }
 }

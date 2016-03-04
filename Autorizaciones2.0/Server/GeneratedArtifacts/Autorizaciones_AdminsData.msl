@@ -18,6 +18,7 @@
           <ScalarProperty Name="SaldoDiasAdmins" ColumnName="SaldoDiasAdmins" />
           <ScalarProperty Name="Cargo" ColumnName="Cargo" />
           <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+          <ScalarProperty Name="EsRolPrivado" ColumnName="EsRolPrivado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -263,7 +264,6 @@
           <ScalarProperty Name="Id_Solicitud" ColumnName="Id_Solicitud" />
           <ScalarProperty Name="Gerencia" ColumnName="Gerencia" />
           <ScalarProperty Name="Departamento" ColumnName="Departamento" />
-          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
           <ScalarProperty Name="Titulo" ColumnName="Titulo" />
           <ScalarProperty Name="VB_Gerente" ColumnName="VB_Gerente" />
           <ScalarProperty Name="VB_SubGerente" ColumnName="VB_SubGerente" />
@@ -288,6 +288,9 @@
           <ScalarProperty Name="ConDescuento" ColumnName="ConDescuento" />
           <ScalarProperty Name="Cancelada" ColumnName="Cancelada" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="AdministrativoDesde" ColumnName="AdministrativoDesde" />
+          <ScalarProperty Name="AdministrativoHasta" ColumnName="AdministrativoHasta" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

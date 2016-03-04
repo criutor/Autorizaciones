@@ -2176,3 +2176,4 @@ C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\B
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Debug\AUTORIZACIONES_ADMINS.Client.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Debug\AUTORIZACIONES_ADMINS.Client.pdb
+C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Debug\AUTORIZACIONES_ADMINS.Client.g.resources

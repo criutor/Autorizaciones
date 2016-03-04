@@ -24,6 +24,7 @@ namespace LightSwitchApplication
 
             solicitud = new Solicitud_HeaderItem();
             solicitud.FechaSolicitud = DateTime.Today;
+            
             solicitud.NombreTrabajador = PersonaItem.NombreAD;
             solicitud.Fechaingreso = DateTime.Today; // cambiar por la tabla contrato!!!
             solicitud.PersonaItem1 = PersonaItem;

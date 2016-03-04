@@ -2454,6 +2454,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> EsRolPrivado
+        {
+            get
+            {
+                return _EsRolPrivado;
+            }
+            set
+            {
+                OnEsRolPrivadoChanging(value);
+                ReportPropertyChanging("EsRolPrivado");
+                _EsRolPrivado = value;
+                ReportPropertyChanged("EsRolPrivado");
+                OnEsRolPrivadoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _EsRolPrivado;
+        partial void OnEsRolPrivadoChanging(Nullable<global::System.Boolean> value);
+        partial void OnEsRolPrivadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Convenio_fk
         {
             get
@@ -5247,16 +5271,14 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <param name="id_Solicitud">Valor inicial de la propiedad Id_Solicitud.</param>
         /// <param name="gerencia">Valor inicial de la propiedad Gerencia.</param>
         /// <param name="departamento">Valor inicial de la propiedad Departamento.</param>
-        /// <param name="fechaSolicitud">Valor inicial de la propiedad FechaSolicitud.</param>
         /// <param name="titulo">Valor inicial de la propiedad Titulo.</param>
         /// <param name="rutPersona_fk">Valor inicial de la propiedad RutPersona_fk.</param>
-        public static SOLICITUDESItem CreateSOLICITUDESItem(global::System.Int32 id_Solicitud, global::System.String gerencia, global::System.String departamento, global::System.DateTime fechaSolicitud, global::System.String titulo, global::System.String rutPersona_fk)
+        public static SOLICITUDESItem CreateSOLICITUDESItem(global::System.Int32 id_Solicitud, global::System.String gerencia, global::System.String departamento, global::System.String titulo, global::System.String rutPersona_fk)
         {
             SOLICITUDESItem sOLICITUDESItem = new SOLICITUDESItem();
             sOLICITUDESItem.Id_Solicitud = id_Solicitud;
             sOLICITUDESItem.Gerencia = gerencia;
             sOLICITUDESItem.Departamento = departamento;
-            sOLICITUDESItem.FechaSolicitud = fechaSolicitud;
             sOLICITUDESItem.Titulo = titulo;
             sOLICITUDESItem.RutPersona_fk = rutPersona_fk;
             return sOLICITUDESItem;
@@ -5340,30 +5362,6 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Departamento;
         partial void OnDepartamentoChanging(global::System.String value);
         partial void OnDepartamentoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTime FechaSolicitud
-        {
-            get
-            {
-                return _FechaSolicitud;
-            }
-            set
-            {
-                OnFechaSolicitudChanging(value);
-                ReportPropertyChanging("FechaSolicitud");
-                _FechaSolicitud = value;
-                ReportPropertyChanged("FechaSolicitud");
-                OnFechaSolicitudChanged();
-            }
-        }
-        private global::System.DateTime _FechaSolicitud;
-        partial void OnFechaSolicitudChanging(global::System.DateTime value);
-        partial void OnFechaSolicitudChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -5916,6 +5914,78 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Estado;
         partial void OnEstadoChanging(global::System.String value);
         partial void OnEstadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String AdministrativoDesde
+        {
+            get
+            {
+                return _AdministrativoDesde;
+            }
+            set
+            {
+                OnAdministrativoDesdeChanging(value);
+                ReportPropertyChanging("AdministrativoDesde");
+                _AdministrativoDesde = value;
+                ReportPropertyChanged("AdministrativoDesde");
+                OnAdministrativoDesdeChanged();
+            }
+        }
+        private global::System.String _AdministrativoDesde;
+        partial void OnAdministrativoDesdeChanging(global::System.String value);
+        partial void OnAdministrativoDesdeChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String AdministrativoHasta
+        {
+            get
+            {
+                return _AdministrativoHasta;
+            }
+            set
+            {
+                OnAdministrativoHastaChanging(value);
+                ReportPropertyChanging("AdministrativoHasta");
+                _AdministrativoHasta = value;
+                ReportPropertyChanged("AdministrativoHasta");
+                OnAdministrativoHastaChanged();
+            }
+        }
+        private global::System.String _AdministrativoHasta;
+        partial void OnAdministrativoHastaChanging(global::System.String value);
+        partial void OnAdministrativoHastaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaSolicitud
+        {
+            get
+            {
+                return _FechaSolicitud;
+            }
+            set
+            {
+                OnFechaSolicitudChanging(value);
+                ReportPropertyChanging("FechaSolicitud");
+                _FechaSolicitud = value;
+                ReportPropertyChanged("FechaSolicitud");
+                OnFechaSolicitudChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaSolicitud;
+        partial void OnFechaSolicitudChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaSolicitudChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

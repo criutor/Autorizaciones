@@ -1129,6 +1129,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[FechaVigencia]"
           Type="datetime" />
+        <SsdlProperty
+          Name="EsRolPrivado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[EsRolPrivado]"
+          Type="bit" />
         <SsdlForeignKeyProperty
           Name="Convenio_fk"
           Nullable="True"
@@ -1604,11 +1609,6 @@
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Departamento]"
           Type="nvarchar" />
         <SsdlProperty
-          Name="FechaSolicitud"
-          Nullable="False"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[FechaSolicitud]"
-          Type="date" />
-        <SsdlProperty
           MaxLength="20"
           Name="Titulo"
           Nullable="False"
@@ -1725,6 +1725,23 @@
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Estado]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="AdministrativoDesde"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[AdministrativoDesde]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="AdministrativoHasta"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[AdministrativoHasta]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FechaSolicitud"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[FechaSolicitud]"
+          Type="datetime" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

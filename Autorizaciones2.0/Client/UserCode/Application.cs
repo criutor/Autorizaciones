@@ -13,7 +13,7 @@ namespace LightSwitchApplication
     {
 
 
-        partial void MASTER_SOLICITUDES_PENDIENTES_CanRun(ref bool result)
+        partial void SOLICITUDES_PENDIENTES_CanRun(ref bool result)
         {
             
             // Establece el resultado en el valor del campo deseado

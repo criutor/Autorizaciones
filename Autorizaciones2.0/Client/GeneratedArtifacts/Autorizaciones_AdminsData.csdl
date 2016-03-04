@@ -16,6 +16,7 @@
     <Property Name="SaldoDiasAdmins" Type="Edm.Double" />
     <Property Name="Cargo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="FechaVigencia" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="EsRolPrivado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
@@ -284,7 +285,6 @@
     <Property Name="Id_Solicitud" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Gerencia" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Departamento" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="FechaSolicitud" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="Titulo" Type="Edm.String" Nullable="false" MaxLength="20" ConcurrencyMode="Fixed" />
     <Property Name="VB_Gerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="VB_SubGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
@@ -308,6 +308,9 @@
     <Property Name="ConDescuento" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Cancelada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Estado" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="AdministrativoDesde" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="AdministrativoHasta" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="FechaSolicitud" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />

@@ -129,6 +129,7 @@
     <Property Name="SaldoDiasAdmins" Type="float" />
     <Property Name="Cargo" Type="nvarchar" MaxLength="50" />
     <Property Name="FechaVigencia" Type="datetime" />
+    <Property Name="EsRolPrivado" Type="bit" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
   </EntityType>
@@ -355,7 +356,6 @@
     <Property Name="Id_Solicitud" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Gerencia" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Departamento" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="FechaSolicitud" Type="date" Nullable="false" />
     <Property Name="Titulo" Type="nvarchar" Nullable="false" MaxLength="20" />
     <Property Name="VB_Gerente" Type="bit" />
     <Property Name="VB_SubGerente" Type="bit" />
@@ -379,6 +379,9 @@
     <Property Name="ConDescuento" Type="bit" />
     <Property Name="Cancelada" Type="bit" />
     <Property Name="Estado" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdministrativoDesde" Type="nvarchar" MaxLength="50" />
+    <Property Name="AdministrativoHasta" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaSolicitud" Type="datetime" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">

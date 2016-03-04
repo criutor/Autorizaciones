@@ -21,9 +21,8 @@ namespace LightSwitchApplication
                 gerente.Division_GerenciaItem = this.Division_GerenciaItem;
                 this.Persona.SelectedItem.Es_Gerente = true;
                 this.Persona.SelectedItem.Division_AreaItem = null;
-                this.Save();
-                this.Close(true);
-                
+                this.Persona.SelectedItem.EsRolPrivado = true;
+                                
             }else
 
             if (this.codigo == 2) //Escoger un gerente después de la primera vez
@@ -32,8 +31,7 @@ namespace LightSwitchApplication
                 this.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1 = this.Persona.SelectedItem;
                 this.Persona.SelectedItem.Es_Gerente = true;
                 this.Persona.SelectedItem.Division_AreaItem = null;
-                this.Save();
-                this.Close(true);
+
             }else
 
             if (this.codigo == 3)//Escoger un Subgerente por primera vez
@@ -42,13 +40,12 @@ namespace LightSwitchApplication
                 Subgerente.PersonaItem1 = this.Persona.SelectedItem;
                 Subgerente.Division_SubGerenciaItem = this.Division_SubGerenciaItem;
                 this.Persona.SelectedItem.Es_SubGerente = true;
+                this.Persona.SelectedItem.EsRolPrivado = true;
                 this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
                 //IDGerencia_para_subgerentes es utilizado en el Query de Solicitud_Header en la pantalla "Master_SolicitudesPendientes",...
                 //...ya que los subgerentes no pertenecen a ninguna area, si no se guardara el id de la subgerencia, ...
                 //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
                 this.Persona.SelectedItem.Division_AreaItem = null;
-                this.Save();
-                this.Close(true);
 
             }else
 
@@ -59,8 +56,7 @@ namespace LightSwitchApplication
                 this.Persona.SelectedItem.Es_SubGerente = true;
                 this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
                 this.Persona.SelectedItem.Division_AreaItem = null;
-                this.Save();
-                this.Close(true);
+
             }else
 
             if (this.codigo == 5)//Escoger un jefe directo por primera vez
@@ -70,8 +66,6 @@ namespace LightSwitchApplication
                 JefeDirecto.PersonaItem1.Division_AreaItem = this.Division_AreaItem;
                 JefeDirecto.Division_AreaItem = this.Division_AreaItem;
                 this.Persona.SelectedItem.Es_JefeDirecto = true;
-                this.Save();
-                this.Close(true);
 
             }else
 
@@ -81,11 +75,10 @@ namespace LightSwitchApplication
                 this.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1 = this.Persona.SelectedItem;
                 this.Persona.SelectedItem.Es_JefeDirecto = true;
                 this.Persona.SelectedItem.Division_AreaItem = this.Division_AreaItem;
-                this.Save();
-                this.Close(true);
             }
 
-            
+            this.Save();
+            this.Close(true);
         }
                       
     }

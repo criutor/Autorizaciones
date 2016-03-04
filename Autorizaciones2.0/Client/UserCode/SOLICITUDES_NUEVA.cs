@@ -12,12 +12,17 @@ using System.ComponentModel;
 using Microsoft.LightSwitch.Threading;
 using System.ServiceModel.DomainServices.Client;
 
+using System.Globalization;
+
 namespace LightSwitchApplication
 {
     public partial class SOLICITUDES_NUEVA
     {
         partial void SOLICITUDES_NUEVA_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
         {
+            this.AdministrativoDesde = "La mañana (Todo el día)";
+            this.AdministrativoHasta = "La tarde (Todo el día)"; 
+
             // Parametro de busqueda de la persona
             //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
             NOMBREAD = "RUBIO FLORES, GUSTAVO";
@@ -25,8 +30,8 @@ namespace LightSwitchApplication
             RUTUSUARIO = this.PersonaPorNombreAD.First().Rut_Persona;
             //Instanciar el objeto solicitud 
             this.SOLICITUD = new SOLICITUDESItem();
-            this.SOLICITUD.FechaSolicitud = DateTime.Today;
-
+            this.SOLICITUD.FechaSolicitud = DateTime.Now;
+            
             //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
             if (TIPOSOLICITUD == 3)
             { this.SOLICITUD.PersonaItem1 = null; }
@@ -261,7 +266,6 @@ namespace LightSwitchApplication
 
                 });
             }
-
         }
 
         //Detecta si se ha hecho algún cambio en el campo Inicio
@@ -282,15 +286,9 @@ namespace LightSwitchApplication
             }
         }
 
-        partial void ConsultarSaldo_Execute()//Se ejecuta en la solicitud de vacaciones
+        //Se conecta con el stored procedure que consulta el saldo de vacaciones
+        partial void ConsultarSaldo_Execute()
         {
-                        /*
-            this.PersonaItem.FechaInicioVacaciones = this.Solicitud_Detalle_Vacaciones.Inicio;
-            this.Solicitud_Detalle_Vacaciones.ConsultarSaldo = true;
-            this.Save();
-            No se puede aplicar por que no se puede calcular la diferencia de dias sin saber los feriados 
-            */
-
             DataWorkspace dataWorkspace = new DataWorkspace();
 
             ConsultarSaldoVacacionesItem operation =
@@ -298,17 +296,16 @@ namespace LightSwitchApplication
 
             operation.Fecha = this.SOLICITUD.Inicio.Value;
             //operation.Rut = this.PersonaItem.Rut_Persona;
-            operation.Rut = "0017511042-9";
+            operation.Rut = "0017511042-9"; //Gustavo
             //operation.Contrato = this.ContratoPorRut.Last().Contrato;
-            operation.Contrato = 2063;
+            operation.Contrato = 2063;//Gustavo
 
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
             this.SOLICITUD.SaldoDias = operation.Saldo;
-
         }
 
-        //Calcula los dias laborales entre vacaciones
+        //Calcula los días laborales entre dos fechas descontando los feriados.
         public static int BusinessDaysUntil(DateTime firstDay, DateTime lastDay, params DateTime[] bankHolidays)
         {
             firstDay = firstDay.Date;
@@ -361,8 +358,7 @@ namespace LightSwitchApplication
 
         partial void SOLICITUD_Validate(ScreenValidationResultsBuilder results)
         {
-            // results.AddPropertyError("<Mensaje de error>");
-            
+     
                 if (InvocarSaldoVacaciones == true) { 
                     this.ConsultarSaldo_Execute();
                     InvocarSaldoVacaciones = false;
@@ -398,6 +394,31 @@ namespace LightSwitchApplication
 
                         i++;
 
+                    }
+
+                    //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
+                    foreach (DateTime feriado in FERIADOS)
+                    {
+                        if (this.SOLICITUD.Inicio.Value == feriado)
+                        {
+                            results.AddPropertyError("La fecha de inicio no puede ser un día feriado ");
+                        }
+
+                        if (this.SOLICITUD.Termino.Value == feriado)
+                        {
+
+                            results.AddPropertyError("La fecha de término no puede ser un día feriado ");
+                        }
+                    }
+
+                    if (this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Sunday)
+                    {
+                        results.AddPropertyError("La fecha de inicio no puede ser fin de semana ");
+                    }
+
+                    if (this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Sunday)
+                    {
+                        results.AddPropertyError("La fecha de término no puede ser fin de semana ");
                     }
 
                     if(this.SOLICITUD.Inicio > this.SOLICITUD.Termino){
@@ -478,6 +499,31 @@ namespace LightSwitchApplication
 
                 }
 
+                //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
+                foreach (DateTime feriado in FERIADOS)
+                {
+                    if (this.SOLICITUD.Inicio.Value == feriado)
+                    {
+                        results.AddPropertyError("La fecha de inicio no puede ser un día feriado ");
+                    }
+
+                    if (this.SOLICITUD.Termino.Value == feriado)
+                    {
+
+                        results.AddPropertyError("La fecha de término no puede ser un día feriado ");
+                    }
+                }
+
+                if (this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    results.AddPropertyError("La fecha de inicio no puede ser fin de semana ");
+                }
+
+                if (this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    results.AddPropertyError("La fecha de término no puede ser fin de semana ");
+                }
+
                 if (this.SOLICITUD.Inicio <= DateTime.Today)
                 {
 
@@ -501,10 +547,51 @@ namespace LightSwitchApplication
 
             if (TIPOSOLICITUD == 1)// si la solicitud es del tipo dia administrativo
             {
+                //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
+
+                DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
+                int dia; int mes; int i = 0;
+
+                foreach (FeriadosItem feriado in this.Feriados)
+                {
+
+                    dia = feriado.Feriado.Day;
+                    mes = feriado.Feriado.Month;
+                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    FERIADOS[i] = DiaAux;
+
+                    i++;
+
+                }
+
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
 
-                this.SOLICITUD.NumeroDiasTomados = this.DiasAdministrativosSolicitados;
                 this.SOLICITUD.ConDescuento = this.CONDESCUENTO;
+
+                //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
+                foreach (DateTime feriado in FERIADOS)
+                {
+                    if (this.SOLICITUD.Inicio.Value == feriado)
+                    { 
+                        results.AddPropertyError("La fecha de inicio no puede ser un día feriado "); 
+                    }
+
+                    if (this.SOLICITUD.Termino.Value == feriado)
+                    {
+                        
+                        results.AddPropertyError("La fecha de término no puede ser un día feriado ");
+                    }    
+                }
+
+                if (this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    results.AddPropertyError("La fecha de inicio no puede ser fin de semana ");
+                }
+
+                if (this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    results.AddPropertyError("La fecha de término no puede ser fin de semana ");
+                }
 
                 if (this.SOLICITUD.Inicio <= DateTime.Today)
                 {
@@ -513,48 +600,59 @@ namespace LightSwitchApplication
 
                 }
 
-
                 if (this.SOLICITUD.Termino < this.SOLICITUD.Inicio)
                 {
 
                     results.AddPropertyError("Día de Término debe ser después o igual al día de Inicio ");
 
                 }
+                else
+                {
+                    if (this.AdministrativoDesde == "La tarde (Medio día)" && this.AdministrativoHasta == "La mañana (Medio día)")
+                    {
+                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 1;
+                    }
+                    else if (this.AdministrativoDesde == "La mañana (Todo el día)" && this.AdministrativoHasta == "La tarde (Todo el día)")//ok
+                    {
+                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                    }
+                    else
+                    {
+
+                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 0.5;
+                    }
+                }
 
                 if (this.SOLICITUD.NumeroDiasTomados > this.SOLICITUD.SaldoDias)
                 {
-
-                    results.AddPropertyError("El número de días a solicitar debe ser menor o igual a tu SALDO DE DÍAS ");
-
+                    results.AddPropertyError("El número de días a solicitar debe ser menor o igual a tu saldo de días ");
                 }
 
+                if (this.SOLICITUD.NumeroDiasTomados <= 0)
+                {
+                    results.AddPropertyError("El número de días a solicitar debe ser mayor a 0");
+                }
             }
-
         }
 
+        //Para las solicitudes de vacaciones
         partial void RequierePrestamo_Validate(ScreenValidationResultsBuilder results)
         {
-            // results.AddPropertyError("<Mensaje de error>");
-
             if (this.RequierePrestamo == false)
             {
-
                 try
                 {
                     this.FindControl("SOLICITUDESItemProperty_Prestamo1").IsEnabled = false;
-
                 }
                 catch { }
 
                 if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
                 {
-
                     this.SOLICITUD.Prestamo = null; //Limpiar el valor del campo prestamo
                 }
             }
             else if (this.RequierePrestamo == true)
             {
-
                 try
                 {
                     this.FindControl("SOLICITUDESItemProperty_Prestamo1").IsEnabled = true;
@@ -563,34 +661,37 @@ namespace LightSwitchApplication
                     {
                         results.AddPropertyError("El préstamo a solicitar no puede ser vacio"); //Si la casilla es verdadera, el campo debe tener algún valor
                     }
-
                 }
                 catch { }
-
             }
-
         }
 
+        //Para las solicitudes de horas extras donde es necesario selecciónar un empleado
         partial void SeleccionarPersonal_Execute()
         {
-            // Escriba el código aquí.
-
             this.SOLICITUD.PersonaItem1 = this.PersonalBajoJefeDeArea.SelectedItem;
             this.CloseModalWindow("PersonalArea");
-
         }
 
         partial void OBSERVACIONES_Validate(ScreenValidationResultsBuilder results)
         {
-            // results.AddPropertyError("<Mensaje de error>");
-
-            if (TIPOSOLICITUD == 3 || TIPOSOLICITUD == 4)// horas extras u otra solicitud
+            if (TIPOSOLICITUD == 3 || TIPOSOLICITUD == 4)// horas extras u otra solicitud necesitan ser justificadas
             {
                 if (this.OBSERVACIONES == null) { results.AddPropertyError("La justificación no puede quedar vacia"); }
             }
-
         }
 
+        partial void AdministrativoDesde_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            this.SOLICITUD.AdministrativoDesde = this.AdministrativoDesde;
+        }
+
+        partial void AdministrativoHasta_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            this.SOLICITUD.AdministrativoHasta = this.AdministrativoHasta;
+        }
 
     }
 }

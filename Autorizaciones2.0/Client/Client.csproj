@@ -190,9 +190,10 @@
     <Compile Include="UserCode\Persona_Buscar_Superior.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UserCode\MASTER_MIS_SOLICITUDES.cs" />
-    <Compile Include="UserCode\MASTER_SOLICITUDES_PENDIENTES.cs" />
+    <Compile Include="UserCode\SOLICITUDES_MIS.cs" />
+    <Compile Include="UserCode\SOLICITUDES_PENDIENTES.cs" />
     <Compile Include="UserCode\SOLICITUDES_NUEVA.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REALIZADAS.cs" />
     <Compile Include="UserCode\Solicitudes_Ver_Aprobar_Rechazar.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +209,9 @@
     <Folder Include="DataLogic\" />
     <Folder Include="DataSources\" />
     <Folder Include="Screens\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LogoSAA %282%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />

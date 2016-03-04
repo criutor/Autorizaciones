@@ -89,6 +89,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("FechaVigencia");
         }
         
+        partial void OnEsRolPrivadoChanged()
+        {
+            this.___OnPropertyChanged("EsRolPrivado");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get
@@ -2117,11 +2122,6 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Departamento");
         }
         
-        partial void OnFechaSolicitudChanged()
-        {
-            this.___OnPropertyChanged("FechaSolicitud");
-        }
-        
         partial void OnTituloChanged()
         {
             this.___OnPropertyChanged("Titulo");
@@ -2235,6 +2235,21 @@ namespace LightSwitchApplication.Implementation
         partial void OnEstadoChanged()
         {
             this.___OnPropertyChanged("Estado");
+        }
+        
+        partial void OnAdministrativoDesdeChanged()
+        {
+            this.___OnPropertyChanged("AdministrativoDesde");
+        }
+        
+        partial void OnAdministrativoHastaChanged()
+        {
+            this.___OnPropertyChanged("AdministrativoHasta");
+        }
+        
+        partial void OnFechaSolicitudChanged()
+        {
+            this.___OnPropertyChanged("FechaSolicitud");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS

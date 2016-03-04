@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 03/03/2016 12:56:51
+// Fecha de generación: 04/03/2016 18:14:03
 namespace LightSwitchApplication.Implementation
 {
     
@@ -967,6 +967,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<global::System.DateTime> _FechaVigencia;
         partial void OnFechaVigenciaChanging(global::System.Nullable<global::System.DateTime> value);
         partial void OnFechaVigenciaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad EsRolPrivado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> EsRolPrivado
+        {
+            get
+            {
+                return this._EsRolPrivado;
+            }
+            set
+            {
+                this.OnEsRolPrivadoChanging(value);
+                if (object.Equals(this.EsRolPrivado, value))
+                {
+                    return;
+                }
+                this._EsRolPrivado = value;
+                this.OnEsRolPrivadoChanged();
+                this.OnPropertyChanged("EsRolPrivado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _EsRolPrivado;
+        partial void OnEsRolPrivadoChanging(global::System.Nullable<bool> value);
+        partial void OnEsRolPrivadoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>
@@ -6073,17 +6099,15 @@ namespace LightSwitchApplication.Implementation
         /// <param name="id_Solicitud">Valor inicial de Id_Solicitud.</param>
         /// <param name="gerencia">Valor inicial de Gerencia.</param>
         /// <param name="departamento">Valor inicial de Departamento.</param>
-        /// <param name="fechaSolicitud">Valor inicial de FechaSolicitud.</param>
         /// <param name="titulo">Valor inicial de Titulo.</param>
         /// <param name="rutPersona_fk">Valor inicial de RutPersona_fk.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static SOLICITUDESItem CreateSOLICITUDESItem(int id_Solicitud, string gerencia, string departamento, global::System.DateTime fechaSolicitud, string titulo, string rutPersona_fk)
+        public static SOLICITUDESItem CreateSOLICITUDESItem(int id_Solicitud, string gerencia, string departamento, string titulo, string rutPersona_fk)
         {
             SOLICITUDESItem sOLICITUDESItem = new SOLICITUDESItem();
             sOLICITUDESItem.Id_Solicitud = id_Solicitud;
             sOLICITUDESItem.Gerencia = gerencia;
             sOLICITUDESItem.Departamento = departamento;
-            sOLICITUDESItem.FechaSolicitud = fechaSolicitud;
             sOLICITUDESItem.Titulo = titulo;
             sOLICITUDESItem.RutPersona_fk = rutPersona_fk;
             return sOLICITUDESItem;
@@ -6166,32 +6190,6 @@ namespace LightSwitchApplication.Implementation
         private string _Departamento;
         partial void OnDepartamentoChanging(string value);
         partial void OnDepartamentoChanged();
-        /// <summary>
-        /// No hay comentarios para la propiedad FechaSolicitud en el esquema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.DateTime FechaSolicitud
-        {
-            get
-            {
-                return this._FechaSolicitud;
-            }
-            set
-            {
-                this.OnFechaSolicitudChanging(value);
-                if (object.Equals(this.FechaSolicitud, value))
-                {
-                    return;
-                }
-                this._FechaSolicitud = value;
-                this.OnFechaSolicitudChanged();
-                this.OnPropertyChanged("FechaSolicitud");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.DateTime _FechaSolicitud;
-        partial void OnFechaSolicitudChanging(global::System.DateTime value);
-        partial void OnFechaSolicitudChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Titulo en el esquema.
         /// </summary>
@@ -6790,6 +6788,84 @@ namespace LightSwitchApplication.Implementation
         private string _Estado;
         partial void OnEstadoChanging(string value);
         partial void OnEstadoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad AdministrativoDesde en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string AdministrativoDesde
+        {
+            get
+            {
+                return this._AdministrativoDesde;
+            }
+            set
+            {
+                this.OnAdministrativoDesdeChanging(value);
+                if (object.Equals(this.AdministrativoDesde, value))
+                {
+                    return;
+                }
+                this._AdministrativoDesde = value;
+                this.OnAdministrativoDesdeChanged();
+                this.OnPropertyChanged("AdministrativoDesde");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _AdministrativoDesde;
+        partial void OnAdministrativoDesdeChanging(string value);
+        partial void OnAdministrativoDesdeChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad AdministrativoHasta en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string AdministrativoHasta
+        {
+            get
+            {
+                return this._AdministrativoHasta;
+            }
+            set
+            {
+                this.OnAdministrativoHastaChanging(value);
+                if (object.Equals(this.AdministrativoHasta, value))
+                {
+                    return;
+                }
+                this._AdministrativoHasta = value;
+                this.OnAdministrativoHastaChanged();
+                this.OnPropertyChanged("AdministrativoHasta");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _AdministrativoHasta;
+        partial void OnAdministrativoHastaChanging(string value);
+        partial void OnAdministrativoHastaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad FechaSolicitud en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<global::System.DateTime> FechaSolicitud
+        {
+            get
+            {
+                return this._FechaSolicitud;
+            }
+            set
+            {
+                this.OnFechaSolicitudChanging(value);
+                if (object.Equals(this.FechaSolicitud, value))
+                {
+                    return;
+                }
+                this._FechaSolicitud = value;
+                this.OnFechaSolicitudChanged();
+                this.OnPropertyChanged("FechaSolicitud");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<global::System.DateTime> _FechaSolicitud;
+        partial void OnFechaSolicitudChanging(global::System.Nullable<global::System.DateTime> value);
+        partial void OnFechaSolicitudChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

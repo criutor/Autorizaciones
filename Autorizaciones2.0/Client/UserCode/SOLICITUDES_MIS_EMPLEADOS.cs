@@ -15,6 +15,8 @@ namespace LightSwitchApplication
         partial void SOLICITUDES_MIS_EMPLEADOS_Activated()
         {
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
+
+            this.TodasLasSolicitudes_Execute();
             this.FECHADESDE = null;
             this.FECHAHASTA = null;
             this.ADMINISTRATIVO = true;
@@ -238,7 +240,7 @@ namespace LightSwitchApplication
             this.ShowMessageBox("Lo sentimos, tu perfil no aparece en nuestra base de datos. Contacta al administrador", "USUARIO NO ENCONTRADO!", MessageBoxOption.Ok);
 
         }
-
+        /*
         partial void Persona_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
@@ -249,10 +251,18 @@ namespace LightSwitchApplication
             }
             catch { }
         }
-
+        */
         partial void SeleccionarEmpleado_Execute()
         {
             // Escriba el código aquí.
+
+            try
+            {
+                this.EmpleadoFiltroSolicitudes = this.Persona.SelectedItem.Rut_Persona;
+                this.NombreEmpleadoSeleccionado = this.Persona.SelectedItem.NombreAD;
+            }
+            catch { }
+
             this.CloseModalWindow("Empleados");
         }
 
@@ -269,6 +279,14 @@ namespace LightSwitchApplication
             this.FALSAS = false;
             this.VERDADERAS = true;
             //this.SolicitudesPorPersona.Load();
+
+        }
+
+        partial void TodasLasSolicitudes_Execute()
+        {
+            // Escriba el código aquí.
+            this.EmpleadoFiltroSolicitudes = null;
+            this.NombreEmpleadoSeleccionado = null;
 
         }
 
