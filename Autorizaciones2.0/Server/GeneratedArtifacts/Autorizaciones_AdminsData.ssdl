@@ -24,6 +24,8 @@
     <EntitySet Name="Feriados" EntityType="Autorizaciones_AdminsDataStore.FeriadosItem" store:Type="Tables" Schema="dbo" Table="Feriados" />
     <EntitySet Name="ESTADOS" EntityType="Autorizaciones_AdminsDataStore.ESTADOSItem" store:Type="Tables" Schema="dbo" Table="ESTADOS" />
     <EntitySet Name="SOLICITUDES" EntityType="Autorizaciones_AdminsDataStore.SOLICITUDESItem" store:Type="Tables" Schema="dbo" Table="SOLICITUDES" />
+    <EntitySet Name="CargoRolPrivado" EntityType="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" store:Type="Tables" Schema="dbo" Table="CargoRolPrivado" />
+    <EntitySet Name="ConsultarInfoUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarInfoUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarInfoUsuarioAD" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -112,6 +114,10 @@
       <End Role="Persona" EntitySet="Persona" />
       <End Role="SOLICITUDES" EntitySet="SOLICITUDES" />
     </AssociationSet>
+    <AssociationSet Name="FK_Persona_CargoRolPrivado" Association="Autorizaciones_AdminsDataStore.FK_Persona_CargoRolPrivado">
+      <End Role="CargoRolPrivado" EntitySet="CargoRolPrivado" />
+      <End Role="Persona" EntitySet="Persona" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="PersonaItem">
     <Key>
@@ -132,6 +138,7 @@
     <Property Name="EsRolPrivado" Type="bit" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
+    <Property Name="CargoRolPrivado_fk" Type="int" />
   </EntityType>
   <EntityType Name="CargoItem">
     <Key>
@@ -165,6 +172,7 @@
     </Key>
     <Property Name="Id_Area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="JefeDeArea" Type="nvarchar" MaxLength="50" />
     <Property Name="Gerencia_fk" Type="int" />
     <Property Name="SubGerencia_fk" Type="int" />
   </EntityType>
@@ -174,6 +182,7 @@
     </Key>
     <Property Name="Id_Gerencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gerente" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Division_SubGerenciaItem">
     <Key>
@@ -181,6 +190,7 @@
     </Key>
     <Property Name="Id_SubGerencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SubGerente" Type="nvarchar" MaxLength="50" />
     <Property Name="Gerencia_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Detalle_AdministrativoItem">
@@ -383,6 +393,22 @@
     <Property Name="AdministrativoHasta" Type="nvarchar" MaxLength="50" />
     <Property Name="FechaSolicitud" Type="datetime" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="CargoRolPrivadoItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ConsultarInfoUsuarioADItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RutUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailUsuario" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />
@@ -671,6 +697,18 @@
       </Principal>
       <Dependent Role="SOLICITUDES">
         <PropertyRef Name="RutPersona_fk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Persona_CargoRolPrivado">
+    <End Role="CargoRolPrivado" Type="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" Multiplicity="0..1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CargoRolPrivado">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Persona">
+        <PropertyRef Name="CargoRolPrivado_fk" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

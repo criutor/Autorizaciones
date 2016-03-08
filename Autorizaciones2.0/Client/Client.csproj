@@ -180,6 +180,9 @@
     <Compile Include="UserCode\Application.cs" />
     <Compile Include="UserCode\Convenios_Colectivos_CrearListar.cs" />
     <Compile Include="UserCode\Divisiones_Area_Personal.cs" />
+    <Compile Include="UserCode\Persona_Detalles.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="UserCode\SOLICITUDES_DETALLES.cs" />
     <Compile Include="UserCode\SOLICITUDES_MIS_EMPLEADOS.cs" />
     <Compile Include="UserCode\Persona_Crear.cs" />

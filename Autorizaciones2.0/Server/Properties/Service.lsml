@@ -823,6 +823,58 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="CargoRolPrivado">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="CargoRolPrivado" />
+        <SsdlProperty
+          Name="Id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[Id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[Nombre]"
+          Type="nvarchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="ConsultarInfoUsuarioAD">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ConsultarInfoUsuarioAD" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="RutUsuario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[RutUsuario]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="NombreUsuario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[NombreUsuario]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmailUsuario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[EmailUsuario]"
+          Type="nvarchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="ConsultarSaldoVacaciones">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -933,6 +985,12 @@
           Nullable="False"
           Property="LightSwitchCommonModule:Division_AreaItem/Properties[Nombre]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="JefeDeArea"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Division_AreaItem/Properties[JefeDeArea]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="Gerencia_fk"
           Nullable="True"
@@ -963,6 +1021,12 @@
           Nullable="False"
           Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Nombre]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Gerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Gerente]"
+          Type="nvarchar" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -982,6 +1046,12 @@
           Name="Nombre"
           Nullable="False"
           Property="LightSwitchCommonModule:Division_SubGerenciaItem/Properties[Nombre]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="SubGerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Division_SubGerenciaItem/Properties[SubGerente]"
           Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="Gerencia_fk"
@@ -1134,6 +1204,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[EsRolPrivado]"
           Type="bit" />
+        <SsdlForeignKeyProperty
+          Name="CargoRolPrivado_fk"
+          Nullable="True"
+          PropertyName="CargoRolPrivado_fk"
+          Type="int" />
         <SsdlForeignKeyProperty
           Name="Convenio_fk"
           Nullable="True"
@@ -1905,6 +1980,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="Solicitud_fk" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Persona_CargoRolPrivado">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Persona_CargoRolPrivado" />
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Persona_CargoRolPrivado]/Members[CargoRolPrivado]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_Persona_CargoRolPrivado]/Members[Persona]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="CargoRolPrivado_fk" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

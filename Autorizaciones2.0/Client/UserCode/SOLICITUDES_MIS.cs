@@ -12,12 +12,18 @@ using System.ComponentModel;
 using Microsoft.LightSwitch.Threading;
 using System.ServiceModel.DomainServices.Client;
 
+
+
 namespace LightSwitchApplication
 {
     public partial class SOLICITUDES_MIS
     {
+
         partial void SOLICITUDES_MIS_Activated()
         {
+            this.ConsultarInfoUsuarioAD_Execute();
+
+            //this.Application.User.
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
 
             this.FiltroEstados = "Todos los estados";
@@ -90,7 +96,11 @@ namespace LightSwitchApplication
         partial void NuevaSolicitud_Execute()
         {
             // Escriba el código aquí.
-            this.OpenModalWindow("SeleccioneTipoDeSolicitud");
+            if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
+            {
+                this.OpenModalWindow("SeleccioneTipoDeSolicitud");
+            }
+            else { this.OpenModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras"); }
         }
 
 
@@ -135,24 +145,31 @@ namespace LightSwitchApplication
         {
             //Cuenta si hay solicitudes por días administrativos en espera de aprobación, si es así, no creará una nueva solicitud.
 
-            int ContAdmin = 0;
+            if(this.PersonaPorNombreAD.First().ConvenioColectivoItem == null){
 
-                foreach(SOLICITUDESItem solicitudes in this.SOLICITUDES)
+                this.ShowMessageBox("Lo sentimos, para pedir un día administrativo necesitas estar asociado(a) a un convenio colectivo", "NO TIENES ASOCIADO UN CONVENIO COLECTIVO!", MessageBoxOption.Ok);
+
+            }else{
+
+                int ContAdmin = 0;
+
+                    foreach(SOLICITUDESItem solicitudes in this.SOLICITUDES)
+                    {
+                        //if (solicitudes.Administrativo == true && solicitudes.Estado == "Siendo procesada") { ContAdmin = ContAdmin + 1; }
+                        if (solicitudes.Administrativo == true && solicitudes.Cancelada != true && solicitudes.Rechazada != true && solicitudes.Completada != true) { ContAdmin = ContAdmin + 1; }
+                    }
+
+                if (ContAdmin > 0)
                 {
-                    if (solicitudes.Administrativo == true && solicitudes.Estado == "Siendo procesada") { ContAdmin = ContAdmin + 1; }
+
+                    this.SolicitudAdministrativoEnEspera_Execute(); this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
                 }
-
-            if (ContAdmin > 0)
-            {
-
-                this.SolicitudAdministrativoEnEspera_Execute(); this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-            }
-            else
-            {
-
-                this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-                //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 1);
-                this.Application.ShowSOLICITUDES_NUEVA(1);
+                else
+                {
+                    this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
+                    //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 1);
+                    this.Application.ShowSOLICITUDES_NUEVA(1);
+                }
             }
         }
 
@@ -165,17 +182,18 @@ namespace LightSwitchApplication
 
             foreach (SOLICITUDESItem solicitudes in this.SOLICITUDES)
             {
-                if (solicitudes.Vacaciones == true && solicitudes.Estado == "Siendo procesada") { ContAdmin = ContAdmin + 1; }
+                //if (solicitudes.Vacaciones == true && solicitudes.Estado == "Siendo procesada") { ContAdmin = ContAdmin + 1; }
+                if (solicitudes.Vacaciones == true && solicitudes.Cancelada != true && solicitudes.Rechazada != true && solicitudes.Completada != true) { ContAdmin = ContAdmin + 1; }
             }
 
             if (ContAdmin > 0)
             {
 
-                this.SolicitudVacacionesEnEspera_Execute(); this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                this.SolicitudVacacionesEnEspera_Execute(); this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
             }
             else
             {
-                this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
                 //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 2);
                 this.Application.ShowSOLICITUDES_NUEVA(2);
             }
@@ -191,8 +209,8 @@ namespace LightSwitchApplication
 
         partial void SolicitarOtroPermiso_Execute()
         {
-            
-            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+
+            this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
             //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 4);
             this.Application.ShowSOLICITUDES_NUEVA(4);
 
@@ -301,28 +319,21 @@ namespace LightSwitchApplication
 
         partial void AceptarSolicitud_Execute()
         {
-            // Escriba el código aquí.
             this.OpenModalWindow("AceptarSolicitudMW");
         }
 
         partial void CancelarSolicitud_Execute()
         {
-            // Escriba el código aquí.
             this.OpenModalWindow("CancelarSolicitudMW");
         }
 
         partial void CerrarModalWindowAceptarSolicitud_Execute()
         {
-            // Escriba el código aquí.
-
             this.CloseModalWindow("AceptarSolicitudMW");
-
         }
 
         partial void CerrarModalWindowCancelarSolicitud_Execute()
         {
-            // Escriba el código aquí.
-
             this.CloseModalWindow("CancelarSolicitudMW");
         }
 
@@ -331,7 +342,6 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             if (this.NuevoComentarioAceptar == null || this.NuevoComentarioAceptar.Length <= 100)
             {
-
                 //Instanciar un nuevo estado
                 this.NUEVOESTADO = new ESTADOSItem();
                 this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.SelectedItem;
@@ -341,18 +351,17 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO.Observaciones = this.NuevoComentarioAceptar;
 
                 this.SOLICITUDES.SelectedItem.VB_Empleado = true;
+                this.SOLICITUDES.SelectedItem.Estado = "Aceptada por el empleado";
 
                 this.CloseModalWindow("AceptarSolicitudMW");
 
                 this.Save();
                 this.Refresh();
-
             }
         }
 
         partial void EnviarRespuestaCancelar_Execute()
         {
-            // Escriba el código aquí.
             //Ejecutar solo si el largo del comentario es el permitido, de lo contrario creará estados de mas.
             if (this.NuevoComentarioCancelar == null || this.NuevoComentarioCancelar.Length <= 100)
             {
@@ -362,9 +371,13 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
                 this.NUEVOESTADO.CreadoAt = DateTime.Now;
                 this.NUEVOESTADO.Observaciones = this.NuevoComentarioCancelar;
+
+                if (this.SOLICITUDES.SelectedItem.HorasExtras == true)
+                {
+                    this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el empleado";
+                }
+                else { this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el solicitante"; }
                 
-                //this.SOLICITUDES.SelectedItem.Rechazada = true;
-                this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el empleado";
                 this.SOLICITUDES.SelectedItem.Cancelada = true;
                 this.SOLICITUDES.SelectedItem.Completada = false;
 
@@ -377,7 +390,6 @@ namespace LightSwitchApplication
 
         partial void CancelarSolicitud_CanExecute(ref bool result)
         {
-            // Escriba el código aquí.
             try
             {
                 if (this.SOLICITUDES.SelectedItem == null)
@@ -396,7 +408,6 @@ namespace LightSwitchApplication
 
         partial void AceptarSolicitud_CanExecute(ref bool result)
         {
-            // Escriba el código aquí.
             try
             {
                 if (this.SOLICITUDES.SelectedItem == null)
@@ -424,15 +435,9 @@ namespace LightSwitchApplication
 
         partial void LimpiarFiltros_Execute()
         {
-            // Escriba el código aquí.
             this.FiltroEstados = null;
             this.FechaSolicitudDesde = null;
             this.FechaSolicitudHasta = null;
-            
-            //this.Administrativo = false;
-            //this.Vacaciones = false;
-            //this.OtroPermiso = false;
-            //this.HorasExtras = false;
             this.FALSAS = false;
             this.VERDADERAS = true;
             this.SOLICITUDES.Load();
@@ -440,16 +445,30 @@ namespace LightSwitchApplication
 
         partial void SolicitudAdministrativoEnEspera_Execute()
         {
-            // Escriba el código aquí.
             this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por días administrativos en espera de aprobación", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
-
         }
 
         partial void SolicitudVacacionesEnEspera_Execute()
         {
-            // Escriba el código aquí.
             this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por Vacaciones en espera de aprobación", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
+        }
+
+        partial void ConsultarInfoUsuarioAD_Execute()
+        {
+            DataWorkspace dataWorkspace = new DataWorkspace();
+
+            ConsultarInfoUsuarioADItem operation =
+                dataWorkspace.Autorizaciones_AdminsData.ConsultarInfoUsuarioAD.AddNew();
+
+            operation.NombreUsuario = this.Application.User.FullName;
+
+            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
+
+            this.Email = operation.EmailUsuario;
+
+            this.Rut = operation.RutUsuario;
 
         }
+
     }
 }

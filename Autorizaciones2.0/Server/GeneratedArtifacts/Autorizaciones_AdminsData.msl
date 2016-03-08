@@ -19,6 +19,7 @@
           <ScalarProperty Name="Cargo" ColumnName="Cargo" />
           <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
           <ScalarProperty Name="EsRolPrivado" ColumnName="EsRolPrivado" />
+          <ScalarProperty Name="CargoRolPrivado_fk" ColumnName="CargoRolPrivado_fk" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -57,6 +58,7 @@
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Gerencia_fk" ColumnName="Gerencia_fk" />
           <ScalarProperty Name="SubGerencia_fk" ColumnName="SubGerencia_fk" />
+          <ScalarProperty Name="JefeDeArea" ColumnName="JefeDeArea" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -65,6 +67,7 @@
         <MappingFragment StoreEntitySet="Division_Gerencia">
           <ScalarProperty Name="Id_Gerencia" ColumnName="Id_Gerencia" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Gerente" ColumnName="Gerente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -74,6 +77,7 @@
           <ScalarProperty Name="Id_SubGerencia" ColumnName="Id_SubGerencia" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Gerencia_fk" ColumnName="Gerencia_fk" />
+          <ScalarProperty Name="SubGerente" ColumnName="SubGerente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -291,6 +295,24 @@
           <ScalarProperty Name="AdministrativoDesde" ColumnName="AdministrativoDesde" />
           <ScalarProperty Name="AdministrativoHasta" ColumnName="AdministrativoHasta" />
           <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CargoRolPrivado">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CargoRolPrivadoItem)">
+        <MappingFragment StoreEntitySet="CargoRolPrivado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultarInfoUsuarioAD">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ConsultarInfoUsuarioADItem)">
+        <MappingFragment StoreEntitySet="ConsultarInfoUsuarioAD">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="RutUsuario" ColumnName="RutUsuario" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="EmailUsuario" ColumnName="EmailUsuario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

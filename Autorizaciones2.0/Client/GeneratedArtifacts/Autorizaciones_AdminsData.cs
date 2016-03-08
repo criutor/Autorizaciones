@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 04/03/2016 18:14:03
+// Fecha de generación: 08/03/2016 17:51:06
 namespace LightSwitchApplication.Implementation
 {
     
@@ -450,6 +450,40 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<SOLICITUDESItem> _SOLICITUDES;
         /// <summary>
+        /// No hay comentarios para CargoRolPrivado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<CargoRolPrivadoItem> CargoRolPrivado
+        {
+            get
+            {
+                if ((this._CargoRolPrivado == null))
+                {
+                    this._CargoRolPrivado = base.CreateQuery<CargoRolPrivadoItem>("CargoRolPrivado");
+                }
+                return this._CargoRolPrivado;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<CargoRolPrivadoItem> _CargoRolPrivado;
+        /// <summary>
+        /// No hay comentarios para ConsultarInfoUsuarioAD en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD
+        {
+            get
+            {
+                if ((this._ConsultarInfoUsuarioAD == null))
+                {
+                    this._ConsultarInfoUsuarioAD = base.CreateQuery<ConsultarInfoUsuarioADItem>("ConsultarInfoUsuarioAD");
+                }
+                return this._ConsultarInfoUsuarioAD;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<ConsultarInfoUsuarioADItem> _ConsultarInfoUsuarioAD;
+        /// <summary>
         /// No hay comentarios para Persona en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -632,6 +666,22 @@ namespace LightSwitchApplication.Implementation
         public void AddToSOLICITUDES(SOLICITUDESItem sOLICITUDESItem)
         {
             base.AddObject("SOLICITUDES", sOLICITUDESItem);
+        }
+        /// <summary>
+        /// No hay comentarios para CargoRolPrivado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToCargoRolPrivado(CargoRolPrivadoItem cargoRolPrivadoItem)
+        {
+            base.AddObject("CargoRolPrivado", cargoRolPrivadoItem);
+        }
+        /// <summary>
+        /// No hay comentarios para ConsultarInfoUsuarioAD en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToConsultarInfoUsuarioAD(ConsultarInfoUsuarioADItem consultarInfoUsuarioADItem)
+        {
+            base.AddObject("ConsultarInfoUsuarioAD", consultarInfoUsuarioADItem);
         }
     }
     /// <summary>
@@ -1046,6 +1096,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnArea_fkChanging(global::System.Nullable<int> value);
         partial void OnArea_fkChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad CargoRolPrivado_fk en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> CargoRolPrivado_fk
+        {
+            get
+            {
+                return this._CargoRolPrivado_fk;
+            }
+            set
+            {
+                this.OnCargoRolPrivado_fkChanging(value);
+                if (object.Equals(this.CargoRolPrivado_fk, value))
+                {
+                    return;
+                }
+                this._CargoRolPrivado_fk = value;
+                this.OnCargoRolPrivado_fkChanged();
+                this.OnPropertyChanged("CargoRolPrivado_fk");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _CargoRolPrivado_fk;
+        partial void OnCargoRolPrivado_fkChanging(global::System.Nullable<int> value);
+        partial void OnCargoRolPrivado_fkChanged();
+        /// <summary>
         /// No hay comentarios para ConvenioColectivoItem en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1234,6 +1310,53 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceCollection<SOLICITUDESItem> _SOLICITUDES = new global::System.Data.Services.Client.DataServiceCollection<SOLICITUDESItem>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// No hay comentarios para CargoRolPrivadoItem en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public CargoRolPrivadoItem CargoRolPrivadoItem
+        {
+            get
+            {
+                this.@__CargoRolPrivadoItem.EnsureValueInitialized();
+                return this._CargoRolPrivadoItem;
+            }
+            set
+            {
+                CargoRolPrivadoItem previous = this.CargoRolPrivadoItem;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._CargoRolPrivadoItem = null;
+                    this.@__CargoRolPrivadoItem.OnValueSet();
+                    previous.Persona.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.CargoRolPrivado_fk = value.Id;
+                    }
+                    else
+                    {
+                        this.CargoRolPrivado_fk = default(global::System.Nullable<int>);
+                    }
+                }
+                this._CargoRolPrivadoItem = value;
+                this.@__CargoRolPrivadoItem.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__Persona.Add(this);
+                }
+                this.___OnPropertyChanged("CargoRolPrivadoItem");
+                this.OnPropertyChanged("CargoRolPrivadoItem");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private CargoRolPrivadoItem _CargoRolPrivadoItem;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1711,6 +1834,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnNombreChanging(string value);
         partial void OnNombreChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad JefeDeArea en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string JefeDeArea
+        {
+            get
+            {
+                return this._JefeDeArea;
+            }
+            set
+            {
+                this.OnJefeDeAreaChanging(value);
+                if (object.Equals(this.JefeDeArea, value))
+                {
+                    return;
+                }
+                this._JefeDeArea = value;
+                this.OnJefeDeAreaChanged();
+                this.OnPropertyChanged("JefeDeArea");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _JefeDeArea;
+        partial void OnJefeDeAreaChanging(string value);
+        partial void OnJefeDeAreaChanged();
+        /// <summary>
         /// No hay comentarios para la propiedad Gerencia_fk en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1981,6 +2130,32 @@ namespace LightSwitchApplication.Implementation
         partial void OnNombreChanging(string value);
         partial void OnNombreChanged();
         /// <summary>
+        /// No hay comentarios para la propiedad Gerente en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Gerente
+        {
+            get
+            {
+                return this._Gerente;
+            }
+            set
+            {
+                this.OnGerenteChanging(value);
+                if (object.Equals(this.Gerente, value))
+                {
+                    return;
+                }
+                this._Gerente = value;
+                this.OnGerenteChanged();
+                this.OnPropertyChanged("Gerente");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Gerente;
+        partial void OnGerenteChanging(string value);
+        partial void OnGerenteChanged();
+        /// <summary>
         /// No hay comentarios para Division_Area en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -2125,6 +2300,32 @@ namespace LightSwitchApplication.Implementation
         private string _Nombre;
         partial void OnNombreChanging(string value);
         partial void OnNombreChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad SubGerente en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string SubGerente
+        {
+            get
+            {
+                return this._SubGerente;
+            }
+            set
+            {
+                this.OnSubGerenteChanging(value);
+                if (object.Equals(this.SubGerente, value))
+                {
+                    return;
+                }
+                this._SubGerente = value;
+                this.OnSubGerenteChanged();
+                this.OnPropertyChanged("SubGerente");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _SubGerente;
+        partial void OnSubGerenteChanging(string value);
+        partial void OnSubGerenteChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Gerencia_fk en el esquema.
         /// </summary>
@@ -6958,6 +7159,247 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private PersonaItem _PersonaItem1;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// No hay comentarios para LightSwitchApplication.CargoRolPrivadoItem en el esquema.
+    /// </summary>
+    /// <KeyProperties>
+    /// Id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("CargoRolPrivado")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("Id")]
+    public partial class CargoRolPrivadoItem : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Crear un nuevo objeto CargoRolPrivadoItem.
+        /// </summary>
+        /// <param name="ID">Valor inicial de Id.</param>
+        /// <param name="nombre">Valor inicial de Nombre.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static CargoRolPrivadoItem CreateCargoRolPrivadoItem(int ID, string nombre)
+        {
+            CargoRolPrivadoItem cargoRolPrivadoItem = new CargoRolPrivadoItem();
+            cargoRolPrivadoItem.Id = ID;
+            cargoRolPrivadoItem.Nombre = nombre;
+            return cargoRolPrivadoItem;
+        }
+        /// <summary>
+        /// No hay comentarios para la propiedad Id en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Id
+        {
+            get
+            {
+                return this._Id;
+            }
+            set
+            {
+                this.OnIdChanging(value);
+                if (object.Equals(this.Id, value))
+                {
+                    return;
+                }
+                this._Id = value;
+                this.OnIdChanged();
+                this.OnPropertyChanged("Id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Id;
+        partial void OnIdChanging(int value);
+        partial void OnIdChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Nombre en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Nombre
+        {
+            get
+            {
+                return this._Nombre;
+            }
+            set
+            {
+                this.OnNombreChanging(value);
+                if (object.Equals(this.Nombre, value))
+                {
+                    return;
+                }
+                this._Nombre = value;
+                this.OnNombreChanged();
+                this.OnPropertyChanged("Nombre");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Nombre;
+        partial void OnNombreChanging(string value);
+        partial void OnNombreChanged();
+        /// <summary>
+        /// No hay comentarios para Persona en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<PersonaItem> Persona
+        {
+            get
+            {
+                this.@__Persona.EnsureValueInitialized();
+                return this._Persona;
+            }
+            set
+            {
+                this._Persona = value;
+                this.OnPropertyChanged("Persona");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<PersonaItem> _Persona = new global::System.Data.Services.Client.DataServiceCollection<PersonaItem>(null, global::System.Data.Services.Client.TrackingMode.None);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// No hay comentarios para LightSwitchApplication.ConsultarInfoUsuarioADItem en el esquema.
+    /// </summary>
+    /// <KeyProperties>
+    /// id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ConsultarInfoUsuarioAD")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("id")]
+    public partial class ConsultarInfoUsuarioADItem : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Crear un nuevo objeto ConsultarInfoUsuarioADItem.
+        /// </summary>
+        /// <param name="ID">Valor inicial de id.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ConsultarInfoUsuarioADItem CreateConsultarInfoUsuarioADItem(int ID)
+        {
+            ConsultarInfoUsuarioADItem consultarInfoUsuarioADItem = new ConsultarInfoUsuarioADItem();
+            consultarInfoUsuarioADItem.id = ID;
+            return consultarInfoUsuarioADItem;
+        }
+        /// <summary>
+        /// No hay comentarios para la propiedad id en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                this.OnidChanging(value);
+                if (object.Equals(this.id, value))
+                {
+                    return;
+                }
+                this._id = value;
+                this.OnidChanged();
+                this.OnPropertyChanged("id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _id;
+        partial void OnidChanging(int value);
+        partial void OnidChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad RutUsuario en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string RutUsuario
+        {
+            get
+            {
+                return this._RutUsuario;
+            }
+            set
+            {
+                this.OnRutUsuarioChanging(value);
+                if (object.Equals(this.RutUsuario, value))
+                {
+                    return;
+                }
+                this._RutUsuario = value;
+                this.OnRutUsuarioChanged();
+                this.OnPropertyChanged("RutUsuario");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _RutUsuario;
+        partial void OnRutUsuarioChanging(string value);
+        partial void OnRutUsuarioChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad NombreUsuario en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string NombreUsuario
+        {
+            get
+            {
+                return this._NombreUsuario;
+            }
+            set
+            {
+                this.OnNombreUsuarioChanging(value);
+                if (object.Equals(this.NombreUsuario, value))
+                {
+                    return;
+                }
+                this._NombreUsuario = value;
+                this.OnNombreUsuarioChanged();
+                this.OnPropertyChanged("NombreUsuario");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _NombreUsuario;
+        partial void OnNombreUsuarioChanging(string value);
+        partial void OnNombreUsuarioChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad EmailUsuario en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string EmailUsuario
+        {
+            get
+            {
+                return this._EmailUsuario;
+            }
+            set
+            {
+                this.OnEmailUsuarioChanging(value);
+                if (object.Equals(this.EmailUsuario, value))
+                {
+                    return;
+                }
+                this._EmailUsuario = value;
+                this.OnEmailUsuarioChanged();
+                this.OnPropertyChanged("EmailUsuario");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _EmailUsuario;
+        partial void OnEmailUsuarioChanging(string value);
+        partial void OnEmailUsuarioChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

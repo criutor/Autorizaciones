@@ -20,7 +20,7 @@ namespace LightSwitchApplication
             this.PersonaItemProperty.Es_Gerente = false;
             this.PersonaItemProperty.Es_JefeDirecto = false;
             this.PersonaItemProperty.Es_SubGerente = false;
-            this.EsRolPrivado = false;
+            this.EsRolPrivado = true;
             //this.PersonaItemProperty.Nombres = ""; // Sin esto lanza un null exception ya que nombres es Null
 
         }
@@ -36,6 +36,34 @@ namespace LightSwitchApplication
         {
             // results.AddPropertyError("<Mensaje de error>");
             this.PersonaItemProperty.EsRolPrivado = this.EsRolPrivado;
+
+            if (this.EsRolPrivado == true) { 
+
+                this.FindControl("DatosRolPrivado").IsVisible = true; 
+                this.FindControl("DatosNoRolPrivado").IsVisible = false;
+
+                this.PersonaItemProperty.Division_AreaItem = null;
+
+                if (this.PersonaItemProperty.CargoRolPrivadoItem != null)
+                {
+                    this.PersonaItemProperty.Cargo = this.PersonaItemProperty.CargoRolPrivadoItem.Nombre;
+                }
+
+
+                if (this.PersonaItemProperty.CargoRolPrivadoItem == null)
+                {
+                    results.AddPropertyError("Debe escoger un cargo para rol privado");
+                }
+
+            }
+            else
+            {
+                this.PersonaItemProperty.CargoRolPrivadoItem = null;
+                this.FindControl("DatosRolPrivado").IsVisible = false; 
+                this.FindControl("DatosNoRolPrivado").IsVisible = true; 
+            }
+
+
         }
     }
 }

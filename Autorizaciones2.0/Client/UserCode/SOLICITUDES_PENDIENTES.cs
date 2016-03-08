@@ -204,29 +204,43 @@ namespace LightSwitchApplication
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
                         this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
+
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Gerente";
+
+                        //this.SolicitudesAbiertasACargo.SelectedItem.CodEstadoActual = 3.3;
+                        //this.NUEVOESTADO.NombreCortoEstado = "Aprobada por el Gerente";
                     }
                     else if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
                     {
+                        //this.SolicitudesAbiertasACargo.SelectedItem.CodEstadoActual = 3.2;
+                        //this.NUEVOESTADO.NombreCortoEstado = "Aprobada por el Sub Gerente";
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Sub Gerente";
+
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = true;
 
                         if(this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras != true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
                             this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
+
+                            //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
                         }
                     }
                     else if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;
 
+                        //this.SolicitudesAbiertasACargo.SelectedItem.CodEstadoActual = 3.1;
+                        //this.NUEVOESTADO.NombreCortoEstado = "Aprobada por el Jefe de Área";
+                        
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Jefe de Área";
+
                         if (this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras != true)//en caso de horas extras debe ser aprobada por el gerente
                         {
                             if (this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente == null)//Significa que no tiene subgerente
                             {
-                                this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-                                this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
+                                //this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                                //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
                             }
                         }
                     }
@@ -253,21 +267,24 @@ namespace LightSwitchApplication
                     this.NUEVOESTADO.Observaciones = this.NuevoComentarioRechazar;
                     this.SolicitudesAbiertasACargo.SelectedItem.Rechazada = true;
 
-                    //Al cambiar VB a true, el filtro de solicitudes a mi cargo mostrara las solicitudes cancelada por el usuario que visita la pantalla.
+                    //Al cambiar VB a true, el filtro de solicitudes a mi cargo mostrará las solicitudes canceladas por el usuario que visita la pantalla.
                         if (this.PersonaPorNombreAD.First().Es_Gerente == true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Gerente";
                         }
                         else if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = true;
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Sub Gerente";
                         }
                         else if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Jefe de Área";
                         }
 
-                    this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por los superiores";
+                    //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por los superiores";
 
                     this.CloseModalWindow("RechazarSolicitudMW");
 

@@ -14,7 +14,7 @@ namespace LightSwitchApplication
         partial void SeleccionarPersona_Execute()
         {
 
-            if (this.codigo == 1) //Escoger un gerente por primera vez
+            if (this.codigo == 1) //Escoger un gerente por primera vez E
             {
                 Superior_GerenteItem gerente = new Superior_GerenteItem();
                 gerente.PersonaItem1 = this.Persona.SelectedItem;
@@ -22,16 +22,22 @@ namespace LightSwitchApplication
                 this.Persona.SelectedItem.Es_Gerente = true;
                 this.Persona.SelectedItem.Division_AreaItem = null;
                 this.Persona.SelectedItem.EsRolPrivado = true;
+
+                this.Division_GerenciaItem.Gerente = this.Persona.SelectedItem.NombreAD ;
                                 
             }else
 
             if (this.codigo == 2) //Escoger un gerente después de la primera vez
             {
+                
+
                 this.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Es_Gerente = false;
                 this.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1 = this.Persona.SelectedItem;
                 this.Persona.SelectedItem.Es_Gerente = true;
                 this.Persona.SelectedItem.Division_AreaItem = null;
 
+                this.Division_GerenciaItem.Gerente = this.Persona.SelectedItem.NombreAD;
+                
             }else
 
             if (this.codigo == 3)//Escoger un Subgerente por primera vez
@@ -47,6 +53,8 @@ namespace LightSwitchApplication
                 //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
                 this.Persona.SelectedItem.Division_AreaItem = null;
 
+                this.Division_SubGerenciaItem.SubGerente = this.Persona.SelectedItem.NombreAD;
+
             }else
 
             if (this.codigo == 4)//Escoger un Subgerente después de la primera vez
@@ -56,6 +64,8 @@ namespace LightSwitchApplication
                 this.Persona.SelectedItem.Es_SubGerente = true;
                 this.Persona.SelectedItem.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
                 this.Persona.SelectedItem.Division_AreaItem = null;
+
+                this.Division_SubGerenciaItem.SubGerente = this.Persona.SelectedItem.NombreAD;
 
             }else
 
@@ -67,6 +77,8 @@ namespace LightSwitchApplication
                 JefeDirecto.Division_AreaItem = this.Division_AreaItem;
                 this.Persona.SelectedItem.Es_JefeDirecto = true;
 
+                this.Division_AreaItem.JefeDeArea = this.Persona.SelectedItem.NombreAD;
+
             }else
 
             if (this.codigo == 6)//Escoger un jefe directo después de la primera vez
@@ -75,6 +87,8 @@ namespace LightSwitchApplication
                 this.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1 = this.Persona.SelectedItem;
                 this.Persona.SelectedItem.Es_JefeDirecto = true;
                 this.Persona.SelectedItem.Division_AreaItem = this.Division_AreaItem;
+
+                this.Division_AreaItem.JefeDeArea = this.Persona.SelectedItem.NombreAD;
             }
 
             this.Save();

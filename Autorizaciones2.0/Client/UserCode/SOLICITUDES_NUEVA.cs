@@ -42,7 +42,10 @@ namespace LightSwitchApplication
             this.SOLICITUD.Rechazada = false;
             this.SOLICITUD.Completada = false;
             this.SOLICITUD.Cancelada = false;
+
             this.SOLICITUD.Estado = "Siendo procesada";
+            //this.SOLICITUD.CodEstadoActual = 3;// Siendo procesada
+
             //Por defecto el empleado acepta las solicitudes que el mismo crea, las horas extras necesitan aprobación
             this.SOLICITUD.VB_Empleado = true;
 
@@ -111,16 +114,19 @@ namespace LightSwitchApplication
                         //Declarar las aprobaciones necesarias de los superiores
                         this.SOLICITUD.VB_JefeDirecto = false; // Indica que necesita aprobacion de jefe directo
 
+                        //this.SOLICITUD.VB_Gerente = true;//Gerente solo aprueba solicitudes de horas extras y cuando no hay subgerente
+                        this.SOLICITUD.VB_Gerente = null;
+
                         if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null) // si no pertenece a una subgerencia, indica que no necesita aprobacion de subgerente, de lo contrario, si la necesita
                         {
                             // indica que no necesita aprobacion de un subgerente
                             //this.SOLICITUD.VB_SubGerente = true; // Utilizamos true en vez de null por que el query de solicitudes pendientes no reconoce el filtro por null(no hay problema en si el usuario tiene otro cargo de supervision ya que en este nivel vbJefeDirecto es = false).
                             this.SOLICITUD.VB_SubGerente = null;
+
+                            //si no tiene subgerente, necesita la aprobacion del gerente
+                            this.SOLICITUD.VB_Gerente = false;
                         }
                         else { this.SOLICITUD.VB_SubGerente = false; }// indica que si necesita aprobacion de un subgerente
-
-                        //this.SOLICITUD.VB_Gerente = true;//Gerente solo aprueba solicitudes de horas extras
-                        this.SOLICITUD.VB_Gerente = null;
 
                     }
 
@@ -168,6 +174,7 @@ namespace LightSwitchApplication
             this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
             this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
             this.NUEVOESTADO.CreadoAt = DateTime.Now;
+            //this.NUEVOESTADO.NombreCortoEstado = "Siendo procesada";
             
         }
 

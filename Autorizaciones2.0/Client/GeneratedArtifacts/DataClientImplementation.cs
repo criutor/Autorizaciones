@@ -29,6 +29,12 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Division_AreaItem");
         }
         
+        partial void OnCargoRolPrivado_fkChanged()
+        {
+            this.___OnPropertyChanged("CargoRolPrivado_fk");
+            this.___OnPropertyChanged("CargoRolPrivadoItem");
+        }
+        
         partial void OnRut_PersonaChanged()
         {
             this.___OnPropertyChanged("Rut_Persona");
@@ -288,6 +294,38 @@ namespace LightSwitchApplication.Implementation
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.SOLICITUDESItem> ___SOLICITUDES;
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.CargoRolPrivadoItem
+        {
+            get
+            {
+                return this.CargoRolPrivadoItem;
+            }
+            set
+            {
+                this.CargoRolPrivadoItem = (global::LightSwitchApplication.Implementation.CargoRolPrivadoItem)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.CargoRolPrivadoItem> __CargoRolPrivadoItem
+        {
+            get
+            {
+                if (this.___CargoRolPrivadoItem == null)
+                {
+                    this.___CargoRolPrivadoItem = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.CargoRolPrivadoItem>(
+                        this,
+                        "CargoRolPrivadoItem",
+                        new string[] { "CargoRolPrivado_fk" },
+                        e => global::System.Object.Equals(e.Id, this.CargoRolPrivado_fk),
+                        () => this._CargoRolPrivadoItem,
+                        e => this._CargoRolPrivadoItem = e);
+                }
+                return this.___CargoRolPrivadoItem;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.CargoRolPrivadoItem> ___CargoRolPrivadoItem;
+        
     }
     #endregion
     
@@ -426,6 +464,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Nombre");
         }
         
+        partial void OnJefeDeAreaChanged()
+        {
+            this.___OnPropertyChanged("JefeDeArea");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Division_AreaItem.DetailsClass.IImplementation.Division_GerenciaItem
         {
             get
@@ -562,6 +605,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Nombre");
         }
         
+        partial void OnGerenteChanged()
+        {
+            this.___OnPropertyChanged("Gerente");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.Division_GerenciaItem.DetailsClass.IImplementation.Division_Area
         {
             get
@@ -664,6 +712,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnNombreChanged()
         {
             this.___OnPropertyChanged("Nombre");
+        }
+        
+        partial void OnSubGerenteChanged()
+        {
+            this.___OnPropertyChanged("SubGerente");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Division_SubGerenciaItem.DetailsClass.IImplementation.Division_Area
@@ -2313,6 +2366,82 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region CargoRolPrivadoItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class CargoRolPrivadoItem :
+        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.IImplementation
+    {
+        partial void OnIdChanged()
+        {
+            this.___OnPropertyChanged("Id");
+        }
+        
+        partial void OnNombreChanged()
+        {
+            this.___OnPropertyChanged("Nombre");
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.IImplementation.Persona
+        {
+            get
+            {
+                return this.Persona;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PersonaItem> __Persona
+        {
+            get
+            {
+                if (this.___Persona == null)
+                {
+                    this.___Persona = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PersonaItem>(
+                        this,
+                        "Persona",
+                        () => this._Persona,
+                        e => global::System.Object.Equals(e.CargoRolPrivado_fk, this.Id));
+                }
+                return this.___Persona;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PersonaItem> ___Persona;
+        
+    }
+    #endregion
+    
+    #region ConsultarInfoUsuarioADItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ConsultarInfoUsuarioADItem :
+        global::LightSwitchApplication.ConsultarInfoUsuarioADItem.DetailsClass.IImplementation
+    {
+        partial void OnidChanged()
+        {
+            this.___OnPropertyChanged("id");
+        }
+        
+        partial void OnRutUsuarioChanged()
+        {
+            this.___OnPropertyChanged("RutUsuario");
+        }
+        
+        partial void OnNombreUsuarioChanged()
+        {
+            this.___OnPropertyChanged("NombreUsuario");
+        }
+        
+        partial void OnEmailUsuarioChanged()
+        {
+            this.___OnPropertyChanged("EmailUsuario");
+        }
+        
+    }
+    #endregion
+    
     #region ContratoItem1
     [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Fin700v60Data.Implementation")]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -3117,6 +3246,14 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.SOLICITUDESItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.CargoRolPrivadoItem))
+            {
+                return new global::LightSwitchApplication.Implementation.CargoRolPrivadoItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ConsultarInfoUsuarioADItem))
+            {
+                return new global::LightSwitchApplication.Implementation.ConsultarInfoUsuarioADItem();
+            }
             return null;
         }
     }
@@ -3291,6 +3428,14 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.SOLICITUDESItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.SOLICITUDESItem);
+            }
+            if (typeof(global::LightSwitchApplication.CargoRolPrivadoItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.CargoRolPrivadoItem);
+            }
+            if (typeof(global::LightSwitchApplication.ConsultarInfoUsuarioADItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ConsultarInfoUsuarioADItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {

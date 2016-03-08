@@ -41,6 +41,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_SubGerente_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "Superior_SubGerente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_SubGerenteItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_ESTADOS_SOLICITUDES", "SOLICITUDES", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.SOLICITUDESItem), "ESTADOS", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.ESTADOSItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_SOLICITUDES_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "SOLICITUDES", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.SOLICITUDESItem), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Persona_CargoRolPrivado", "CargoRolPrivado", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Autorizaciones_AdminsData.Implementation.CargoRolPrivadoItem), "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), true)]
 
 #endregion
 
@@ -456,6 +457,38 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         private ObjectSet<SOLICITUDESItem> _SOLICITUDES;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<CargoRolPrivadoItem> CargoRolPrivado
+        {
+            get
+            {
+                if ((_CargoRolPrivado == null))
+                {
+                    _CargoRolPrivado = base.CreateObjectSet<CargoRolPrivadoItem>("CargoRolPrivado");
+                }
+                return _CargoRolPrivado;
+            }
+        }
+        private ObjectSet<CargoRolPrivadoItem> _CargoRolPrivado;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD
+        {
+            get
+            {
+                if ((_ConsultarInfoUsuarioAD == null))
+                {
+                    _ConsultarInfoUsuarioAD = base.CreateObjectSet<ConsultarInfoUsuarioADItem>("ConsultarInfoUsuarioAD");
+                }
+                return _ConsultarInfoUsuarioAD;
+            }
+        }
+        private ObjectSet<ConsultarInfoUsuarioADItem> _ConsultarInfoUsuarioAD;
 
         #endregion
 
@@ -644,6 +677,22 @@ namespace Autorizaciones_AdminsData.Implementation
         {
             base.AddObject("SOLICITUDES", sOLICITUDESItem);
         }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet CargoRolPrivado. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToCargoRolPrivado(CargoRolPrivadoItem cargoRolPrivadoItem)
+        {
+            base.AddObject("CargoRolPrivado", cargoRolPrivadoItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet ConsultarInfoUsuarioAD. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToConsultarInfoUsuarioAD(ConsultarInfoUsuarioADItem consultarInfoUsuarioADItem)
+        {
+            base.AddObject("ConsultarInfoUsuarioAD", consultarInfoUsuarioADItem);
+        }
 
         #endregion
 
@@ -730,6 +779,244 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Descripcion_Cargo;
         partial void OnDescripcion_CargoChanging(global::System.String value);
         partial void OnDescripcion_CargoChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="CargoRolPrivadoItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CargoRolPrivadoItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto CargoRolPrivadoItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad Id.</param>
+        /// <param name="nombre">Valor inicial de la propiedad Nombre.</param>
+        public static CargoRolPrivadoItem CreateCargoRolPrivadoItem(global::System.Int32 id, global::System.String nombre)
+        {
+            CargoRolPrivadoItem cargoRolPrivadoItem = new CargoRolPrivadoItem();
+            cargoRolPrivadoItem.Id = id;
+            cargoRolPrivadoItem.Nombre = nombre;
+            return cargoRolPrivadoItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = value;
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+
+        #endregion
+
+    
+        #region Propiedades de navegación
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Persona_CargoRolPrivado", "Persona")]
+        public EntityCollection<PersonaItem> Persona
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PersonaItem>("LightSwitchApplication.FK_Persona_CargoRolPrivado", "Persona");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PersonaItem>("LightSwitchApplication.FK_Persona_CargoRolPrivado", "Persona", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ConsultarInfoUsuarioADItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class ConsultarInfoUsuarioADItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto ConsultarInfoUsuarioADItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        public static ConsultarInfoUsuarioADItem CreateConsultarInfoUsuarioADItem(global::System.Int32 id)
+        {
+            ConsultarInfoUsuarioADItem consultarInfoUsuarioADItem = new ConsultarInfoUsuarioADItem();
+            consultarInfoUsuarioADItem.id = id;
+            return consultarInfoUsuarioADItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = value;
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String RutUsuario
+        {
+            get
+            {
+                return _RutUsuario;
+            }
+            set
+            {
+                OnRutUsuarioChanging(value);
+                ReportPropertyChanging("RutUsuario");
+                _RutUsuario = value;
+                ReportPropertyChanged("RutUsuario");
+                OnRutUsuarioChanged();
+            }
+        }
+        private global::System.String _RutUsuario;
+        partial void OnRutUsuarioChanging(global::System.String value);
+        partial void OnRutUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String NombreUsuario
+        {
+            get
+            {
+                return _NombreUsuario;
+            }
+            set
+            {
+                OnNombreUsuarioChanging(value);
+                ReportPropertyChanging("NombreUsuario");
+                _NombreUsuario = value;
+                ReportPropertyChanged("NombreUsuario");
+                OnNombreUsuarioChanged();
+            }
+        }
+        private global::System.String _NombreUsuario;
+        partial void OnNombreUsuarioChanging(global::System.String value);
+        partial void OnNombreUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EmailUsuario
+        {
+            get
+            {
+                return _EmailUsuario;
+            }
+            set
+            {
+                OnEmailUsuarioChanging(value);
+                ReportPropertyChanging("EmailUsuario");
+                _EmailUsuario = value;
+                ReportPropertyChanged("EmailUsuario");
+                OnEmailUsuarioChanged();
+            }
+        }
+        private global::System.String _EmailUsuario;
+        partial void OnEmailUsuarioChanging(global::System.String value);
+        partial void OnEmailUsuarioChanged();
 
         #endregion
 
@@ -1277,6 +1564,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public global::System.String JefeDeArea
+        {
+            get
+            {
+                return _JefeDeArea;
+            }
+            set
+            {
+                OnJefeDeAreaChanging(value);
+                ReportPropertyChanging("JefeDeArea");
+                _JefeDeArea = value;
+                ReportPropertyChanged("JefeDeArea");
+                OnJefeDeAreaChanged();
+            }
+        }
+        private global::System.String _JefeDeArea;
+        partial void OnJefeDeAreaChanging(global::System.String value);
+        partial void OnJefeDeAreaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Gerencia_fk
         {
             get
@@ -1526,6 +1837,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Nombre;
         partial void OnNombreChanging(global::System.String value);
         partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Gerente
+        {
+            get
+            {
+                return _Gerente;
+            }
+            set
+            {
+                OnGerenteChanging(value);
+                ReportPropertyChanging("Gerente");
+                _Gerente = value;
+                ReportPropertyChanged("Gerente");
+                OnGerenteChanged();
+            }
+        }
+        private global::System.String _Gerente;
+        partial void OnGerenteChanging(global::System.String value);
+        partial void OnGerenteChanged();
 
         #endregion
 
@@ -1681,6 +2016,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Nombre;
         partial void OnNombreChanging(global::System.String value);
         partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String SubGerente
+        {
+            get
+            {
+                return _SubGerente;
+            }
+            set
+            {
+                OnSubGerenteChanging(value);
+                ReportPropertyChanging("SubGerente");
+                _SubGerente = value;
+                ReportPropertyChanged("SubGerente");
+                OnSubGerenteChanged();
+            }
+        }
+        private global::System.String _SubGerente;
+        partial void OnSubGerenteChanging(global::System.String value);
+        partial void OnSubGerenteChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -2520,6 +2879,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private Nullable<global::System.Int32> _Area_fk;
         partial void OnArea_fkChanging(Nullable<global::System.Int32> value);
         partial void OnArea_fkChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CargoRolPrivado_fk
+        {
+            get
+            {
+                return _CargoRolPrivado_fk;
+            }
+            set
+            {
+                OnCargoRolPrivado_fkChanging(value);
+                ReportPropertyChanging("CargoRolPrivado_fk");
+                _CargoRolPrivado_fk = value;
+                ReportPropertyChanged("CargoRolPrivado_fk");
+                OnCargoRolPrivado_fkChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CargoRolPrivado_fk;
+        partial void OnCargoRolPrivado_fkChanging(Nullable<global::System.Int32> value);
+        partial void OnCargoRolPrivado_fkChanged();
 
         #endregion
 
@@ -2708,6 +3091,44 @@ namespace Autorizaciones_AdminsData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SOLICITUDESItem>("LightSwitchApplication.FK_SOLICITUDES_Persona", "SOLICITUDES", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Persona_CargoRolPrivado", "CargoRolPrivado")]
+        public CargoRolPrivadoItem CargoRolPrivadoItem
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CargoRolPrivadoItem>("LightSwitchApplication.FK_Persona_CargoRolPrivado", "CargoRolPrivado").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CargoRolPrivadoItem>("LightSwitchApplication.FK_Persona_CargoRolPrivado", "CargoRolPrivado").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CargoRolPrivadoItem> CargoRolPrivadoItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CargoRolPrivadoItem>("LightSwitchApplication.FK_Persona_CargoRolPrivado", "CargoRolPrivado");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CargoRolPrivadoItem>("LightSwitchApplication.FK_Persona_CargoRolPrivado", "CargoRolPrivado", value);
                 }
             }
         }
