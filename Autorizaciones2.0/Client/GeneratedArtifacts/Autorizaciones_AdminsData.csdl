@@ -628,7 +628,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Persona_CargoRolPrivado">
-    <End Role="CargoRolPrivado" Type="LightSwitchApplication.CargoRolPrivadoItem" Multiplicity="0..1" />
+    <End Role="CargoRolPrivado" Type="LightSwitchApplication.CargoRolPrivadoItem" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CargoRolPrivado">

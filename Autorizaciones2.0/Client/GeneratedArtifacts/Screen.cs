@@ -120,6 +120,30 @@ namespace LightSwitchApplication
         partial void ActualizarDirectorio_CanExecute(ref bool result);
         partial void ActualizarDirectorio_Execute();
 
+        /// <summary>
+        /// Llama al método de pantalla PersonaItemListDeleteSelected.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void PersonaItemListDeleteSelected()
+        {
+            this.Details.Methods.PersonaItemListDeleteSelected.CreateInvocation().Execute();
+        }
+        partial void PersonaItemListDeleteSelected_CanExecute(ref bool result);
+        partial void PersonaItemListDeleteSelected_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla YesEliminar.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void YesEliminar()
+        {
+            this.Details.Methods.YesEliminar.CreateInvocation().Execute();
+        }
+        partial void YesEliminar_CanExecute(ref bool result);
+        partial void YesEliminar_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -226,10 +250,22 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _ActualizarDirectorioCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _PersonaItemListDeleteSelectedCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _YesEliminarCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _PersonaItemListAddAndEditNewMethod;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _ActualizarDirectorioMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _PersonaItemListDeleteSelectedMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data _YesEliminarMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -271,6 +307,22 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass> PersonaItemListDeleteSelected
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Empleados.DetailsClass.CommandSetProperties.PersonaItemListDeleteSelected);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass> YesEliminar
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Empleados.DetailsClass.CommandSetProperties.YesEliminar);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -293,6 +345,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties.ActualizarDirectorio);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass> PersonaItemListDeleteSelected
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties.PersonaItemListDeleteSelected);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass> YesEliminar
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties.YesEliminar);
                     }
                 }
 
@@ -374,6 +442,34 @@ namespace LightSwitchApplication
                     return ((global::LightSwitchApplication.Master_Empleados.DetailsClass)d).Methods.ActualizarDirectorio.CreateInvocation();
                 }
 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry
+                    PersonaItemListDeleteSelected = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry(
+                        "PersonaItemListDeleteSelected",
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.CommandSetProperties._PersonaItemListDeleteSelected_Stub,
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.CommandSetProperties._PersonaItemListDeleteSelected_CreateExecutableObject);
+                private static void _PersonaItemListDeleteSelected_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Empleados.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Empleados.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PersonaItemListDeleteSelectedCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _PersonaItemListDeleteSelected_CreateExecutableObject(global::LightSwitchApplication.Master_Empleados.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Master_Empleados.DetailsClass)d).Methods.PersonaItemListDeleteSelected.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry
+                    YesEliminar = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry(
+                        "YesEliminar",
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.CommandSetProperties._YesEliminar_Stub,
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.CommandSetProperties._YesEliminar_CreateExecutableObject);
+                private static void _YesEliminar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Empleados.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Empleados.DetailsClass d, object sf)
+                {
+                    c(d, ref d._YesEliminarCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _YesEliminar_CreateExecutableObject(global::LightSwitchApplication.Master_Empleados.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Master_Empleados.DetailsClass)d).Methods.YesEliminar.CreateInvocation();
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -422,6 +518,48 @@ namespace LightSwitchApplication
                 private static void _ActualizarDirectorio_InvokeMethod(global::LightSwitchApplication.Master_Empleados.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.ActualizarDirectorio_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry
+                    PersonaItemListDeleteSelected = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry(
+                        "PersonaItemListDeleteSelected",
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties._PersonaItemListDeleteSelected_Stub,
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties._PersonaItemListDeleteSelected_CanInvoke,
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties._PersonaItemListDeleteSelected_InvokeMethod);
+                private static void _PersonaItemListDeleteSelected_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Empleados.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Empleados.DetailsClass d, object sf)
+                {
+                    c(d, ref d._PersonaItemListDeleteSelectedMethod, sf);
+                }
+                private static global::System.Exception _PersonaItemListDeleteSelected_CanInvoke(global::LightSwitchApplication.Master_Empleados.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.PersonaItemListDeleteSelected_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _PersonaItemListDeleteSelected_InvokeMethod(global::LightSwitchApplication.Master_Empleados.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.PersonaItemListDeleteSelected_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry
+                    YesEliminar = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Entry(
+                        "YesEliminar",
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties._YesEliminar_Stub,
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties._YesEliminar_CanInvoke,
+                        global::LightSwitchApplication.Master_Empleados.DetailsClass.MethodSetProperties._YesEliminar_InvokeMethod);
+                private static void _YesEliminar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Empleados.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Empleados, global::LightSwitchApplication.Master_Empleados.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Empleados.DetailsClass d, object sf)
+                {
+                    c(d, ref d._YesEliminarMethod, sf);
+                }
+                private static global::System.Exception _YesEliminar_CanInvoke(global::LightSwitchApplication.Master_Empleados.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.YesEliminar_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _YesEliminar_InvokeMethod(global::LightSwitchApplication.Master_Empleados.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.YesEliminar_Execute();
                 }
 
             }
@@ -649,16 +787,16 @@ namespace LightSwitchApplication
         partial void SeleccionarSubGerente_Execute();
 
         /// <summary>
-        /// Llama al método de pantalla SeleccionarJefeDirecto.
+        /// Llama al método de pantalla SeleccionarJefeDeÁrea.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void SeleccionarJefeDirecto()
+        public void SeleccionarJefeDeÁrea()
         {
-            this.Details.Methods.SeleccionarJefeDirecto.CreateInvocation().Execute();
+            this.Details.Methods.SeleccionarJefeDeÁrea.CreateInvocation().Execute();
         }
-        partial void SeleccionarJefeDirecto_CanExecute(ref bool result);
-        partial void SeleccionarJefeDirecto_Execute();
+        partial void SeleccionarJefeDeÁrea_CanExecute(ref bool result);
+        partial void SeleccionarJefeDeÁrea_Execute();
 
         /// <summary>
         /// Llama al método de pantalla Method.
@@ -671,6 +809,42 @@ namespace LightSwitchApplication
         }
         partial void Method_CanExecute(ref bool result);
         partial void Method_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla QuitarGerente.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void QuitarGerente()
+        {
+            this.Details.Methods.QuitarGerente.CreateInvocation().Execute();
+        }
+        partial void QuitarGerente_CanExecute(ref bool result);
+        partial void QuitarGerente_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla QuitarSubGerente.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void QuitarSubGerente()
+        {
+            this.Details.Methods.QuitarSubGerente.CreateInvocation().Execute();
+        }
+        partial void QuitarSubGerente_CanExecute(ref bool result);
+        partial void QuitarSubGerente_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla QuitarJefeDeÁrea.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void QuitarJefeDeÁrea()
+        {
+            this.Details.Methods.QuitarJefeDeÁrea.CreateInvocation().Execute();
+        }
+        partial void QuitarJefeDeÁrea_CanExecute(ref bool result);
+        partial void QuitarJefeDeÁrea_Execute();
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -882,10 +1056,19 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarSubGerenteCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarJefeDirectoCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarJefeDeÁreaCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _MethodCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _QuitarGerenteCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _QuitarSubGerenteCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _QuitarJefeDeÁreaCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarGerenteMethod;
@@ -894,10 +1077,19 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarSubGerenteMethod;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarJefeDirectoMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _SeleccionarJefeDeÁreaMethod;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _MethodMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _QuitarGerenteMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _QuitarSubGerenteMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data _QuitarJefeDeÁreaMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -979,11 +1171,11 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> SeleccionarJefeDirecto
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> SeleccionarJefeDeÁrea
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties.SeleccionarJefeDirecto);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties.SeleccionarJefeDeÁrea);
                     }
                 }
 
@@ -992,6 +1184,30 @@ namespace LightSwitchApplication
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties.Method);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> QuitarGerente
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties.QuitarGerente);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> QuitarSubGerente
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties.QuitarSubGerente);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> QuitarJefeDeÁrea
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties.QuitarJefeDeÁrea);
                     }
                 }
 
@@ -1020,11 +1236,11 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> SeleccionarJefeDirecto
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> SeleccionarJefeDeÁrea
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties.SeleccionarJefeDirecto);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties.SeleccionarJefeDeÁrea);
                     }
                 }
 
@@ -1033,6 +1249,30 @@ namespace LightSwitchApplication
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties.Method);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> QuitarGerente
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties.QuitarGerente);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> QuitarSubGerente
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties.QuitarSubGerente);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass> QuitarJefeDeÁrea
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>)base.GetItem(global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties.QuitarJefeDeÁrea);
                     }
                 }
 
@@ -1285,17 +1525,17 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
-                    SeleccionarJefeDirecto = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
-                        "SeleccionarJefeDirecto",
-                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._SeleccionarJefeDirecto_Stub,
-                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._SeleccionarJefeDirecto_CreateExecutableObject);
-                private static void _SeleccionarJefeDirecto_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                    SeleccionarJefeDeÁrea = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "SeleccionarJefeDeÁrea",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._SeleccionarJefeDeÁrea_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._SeleccionarJefeDeÁrea_CreateExecutableObject);
+                private static void _SeleccionarJefeDeÁrea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
                 {
-                    c(d, ref d._SeleccionarJefeDirectoCommand, sf);
+                    c(d, ref d._SeleccionarJefeDeÁreaCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarJefeDirecto_CreateExecutableObject(global::LightSwitchApplication.Master_Divisiones.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarJefeDeÁrea_CreateExecutableObject(global::LightSwitchApplication.Master_Divisiones.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Master_Divisiones.DetailsClass)d).Methods.SeleccionarJefeDirecto.CreateInvocation();
+                    return ((global::LightSwitchApplication.Master_Divisiones.DetailsClass)d).Methods.SeleccionarJefeDeÁrea.CreateInvocation();
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
@@ -1310,6 +1550,48 @@ namespace LightSwitchApplication
                 private static global::Microsoft.LightSwitch.IExecutable _Method_CreateExecutableObject(global::LightSwitchApplication.Master_Divisiones.DetailsClass d)
                 {
                     return ((global::LightSwitchApplication.Master_Divisiones.DetailsClass)d).Methods.Method.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
+                    QuitarGerente = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "QuitarGerente",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._QuitarGerente_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._QuitarGerente_CreateExecutableObject);
+                private static void _QuitarGerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                {
+                    c(d, ref d._QuitarGerenteCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _QuitarGerente_CreateExecutableObject(global::LightSwitchApplication.Master_Divisiones.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Master_Divisiones.DetailsClass)d).Methods.QuitarGerente.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
+                    QuitarSubGerente = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "QuitarSubGerente",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._QuitarSubGerente_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._QuitarSubGerente_CreateExecutableObject);
+                private static void _QuitarSubGerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                {
+                    c(d, ref d._QuitarSubGerenteCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _QuitarSubGerente_CreateExecutableObject(global::LightSwitchApplication.Master_Divisiones.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Master_Divisiones.DetailsClass)d).Methods.QuitarSubGerente.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
+                    QuitarJefeDeÁrea = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "QuitarJefeDeÁrea",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._QuitarJefeDeÁrea_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.CommandSetProperties._QuitarJefeDeÁrea_CreateExecutableObject);
+                private static void _QuitarJefeDeÁrea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                {
+                    c(d, ref d._QuitarJefeDeÁreaCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _QuitarJefeDeÁrea_CreateExecutableObject(global::LightSwitchApplication.Master_Divisiones.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Master_Divisiones.DetailsClass)d).Methods.QuitarJefeDeÁrea.CreateInvocation();
                 }
 
             }
@@ -1363,24 +1645,24 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
-                    SeleccionarJefeDirecto = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
-                        "SeleccionarJefeDirecto",
-                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._SeleccionarJefeDirecto_Stub,
-                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._SeleccionarJefeDirecto_CanInvoke,
-                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._SeleccionarJefeDirecto_InvokeMethod);
-                private static void _SeleccionarJefeDirecto_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                    SeleccionarJefeDeÁrea = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "SeleccionarJefeDeÁrea",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._SeleccionarJefeDeÁrea_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._SeleccionarJefeDeÁrea_CanInvoke,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._SeleccionarJefeDeÁrea_InvokeMethod);
+                private static void _SeleccionarJefeDeÁrea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
                 {
-                    c(d, ref d._SeleccionarJefeDirectoMethod, sf);
+                    c(d, ref d._SeleccionarJefeDeÁreaMethod, sf);
                 }
-                private static global::System.Exception _SeleccionarJefeDirecto_CanInvoke(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _SeleccionarJefeDeÁrea_CanInvoke(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Screen.SeleccionarJefeDirecto_CanExecute(ref result);
+                    d.Screen.SeleccionarJefeDeÁrea_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _SeleccionarJefeDirecto_InvokeMethod(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _SeleccionarJefeDeÁrea_InvokeMethod(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
-                    d.Screen.SeleccionarJefeDirecto_Execute();
+                    d.Screen.SeleccionarJefeDeÁrea_Execute();
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
@@ -1402,6 +1684,69 @@ namespace LightSwitchApplication
                 private static void _Method_InvokeMethod(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.Method_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
+                    QuitarGerente = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "QuitarGerente",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarGerente_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarGerente_CanInvoke,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarGerente_InvokeMethod);
+                private static void _QuitarGerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                {
+                    c(d, ref d._QuitarGerenteMethod, sf);
+                }
+                private static global::System.Exception _QuitarGerente_CanInvoke(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.QuitarGerente_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _QuitarGerente_InvokeMethod(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.QuitarGerente_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
+                    QuitarSubGerente = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "QuitarSubGerente",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarSubGerente_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarSubGerente_CanInvoke,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarSubGerente_InvokeMethod);
+                private static void _QuitarSubGerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                {
+                    c(d, ref d._QuitarSubGerenteMethod, sf);
+                }
+                private static global::System.Exception _QuitarSubGerente_CanInvoke(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.QuitarSubGerente_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _QuitarSubGerente_InvokeMethod(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.QuitarSubGerente_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry
+                    QuitarJefeDeÁrea = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Entry(
+                        "QuitarJefeDeÁrea",
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarJefeDeÁrea_Stub,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarJefeDeÁrea_CanInvoke,
+                        global::LightSwitchApplication.Master_Divisiones.DetailsClass.MethodSetProperties._QuitarJefeDeÁrea_InvokeMethod);
+                private static void _QuitarJefeDeÁrea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Master_Divisiones.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.Master_Divisiones, global::LightSwitchApplication.Master_Divisiones.DetailsClass>.Data> c, global::LightSwitchApplication.Master_Divisiones.DetailsClass d, object sf)
+                {
+                    c(d, ref d._QuitarJefeDeÁreaMethod, sf);
+                }
+                private static global::System.Exception _QuitarJefeDeÁrea_CanInvoke(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.QuitarJefeDeÁrea_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _QuitarJefeDeÁrea_InvokeMethod(global::LightSwitchApplication.Master_Divisiones.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.QuitarJefeDeÁrea_Execute();
                 }
 
             }
@@ -3208,6 +3553,8 @@ namespace LightSwitchApplication
 
         partial void VB_GerenteNulo_Changed();
 
+        partial void VB_JefeDirectoNulo_Changed();
+
         /// <summary>
         /// Obtiene la colección visual Solicitud_Header. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
         /// </summary>
@@ -3589,6 +3936,22 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void VB_GerenteNulo_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> VB_JefeDirectoNulo
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.PropertySetProperties.VB_JefeDirectoNulo);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.PropertySetProperties.VB_JefeDirectoNulo, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void VB_JefeDirectoNulo_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
         /// <summary>
         /// Llama al método de pantalla MENSAJEPersonaNoCreada.
         /// </summary>
@@ -3795,10 +4158,10 @@ namespace LightSwitchApplication
                     "PersonaItem1.Division_AreaItem");
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable SolicitudesAbiertasACargoQuery(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo)
+            private global::Microsoft.LightSwitch.IDataServiceQueryable SolicitudesAbiertasACargoQuery(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_JefeDirectoNulo, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo)
             {
                 return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.SolicitudesPendientes(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente, VB_SubGerenteNulo, VB_GerenteNulo),
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.SolicitudesPendientes(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente, VB_JefeDirectoNulo, VB_SubGerenteNulo, VB_GerenteNulo),
                     "PersonaItem1");
             }
 
@@ -3878,6 +4241,9 @@ namespace LightSwitchApplication
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>>.Data _VB_GerenteNulo;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>>.Data _VB_JefeDirectoNulo;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass>.Data _MENSAJEPersonaNoCreadaCommand;
@@ -4132,6 +4498,14 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>> VB_JefeDirectoNulo
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.PropertySetProperties.VB_JefeDirectoNulo);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -4355,7 +4729,7 @@ namespace LightSwitchApplication
                 }
                 private static global::Microsoft.LightSwitch.IDataServiceQueryable _SolicitudesAbiertasACargo_CreateQuery(global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass d, object[] args)
                 {
-                    return d.SolicitudesAbiertasACargoQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9]);
+                    return d.SolicitudesAbiertasACargoQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10]);
                 }
                 private static void _SolicitudesAbiertasACargo_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_PENDIENTES s)
                 {
@@ -4822,6 +5196,26 @@ namespace LightSwitchApplication
                 private static void _VB_GerenteNulo_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_PENDIENTES s)
                 {
                     s.VB_GerenteNulo_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>>.Entry
+                    VB_JefeDirectoNulo = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "VB_JefeDirectoNulo",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.PropertySetProperties._VB_JefeDirectoNulo_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.PropertySetProperties._VB_JefeDirectoNulo_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass.PropertySetProperties._VB_JefeDirectoNulo_OnValueChanged);
+                private static void _VB_JefeDirectoNulo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_PENDIENTES, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.SOLICITUDES_PENDIENTES.DetailsClass d, object sf)
+                {
+                    c(d, ref d._VB_JefeDirectoNulo, sf);
+                }
+                private static void _VB_JefeDirectoNulo_Validate(global::LightSwitchApplication.SOLICITUDES_PENDIENTES s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.VB_JefeDirectoNulo_Validate(r);
+                }
+                private static void _VB_JefeDirectoNulo_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_PENDIENTES s)
+                {
+                    s.VB_JefeDirectoNulo_Changed();
                 }
 
             }

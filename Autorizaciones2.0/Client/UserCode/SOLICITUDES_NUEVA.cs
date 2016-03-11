@@ -28,106 +28,127 @@ namespace LightSwitchApplication
             NOMBREAD = "RUBIO FLORES, GUSTAVO";
             // Guarda el rut del usuario
             RUTUSUARIO = this.PersonaPorNombreAD.First().Rut_Persona;
+
             //Instanciar el objeto solicitud 
             this.SOLICITUD = new SOLICITUDESItem();
             this.SOLICITUD.FechaSolicitud = DateTime.Now;
-            
-            //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
-            if (TIPOSOLICITUD == 3)
-            { this.SOLICITUD.PersonaItem1 = null; }
-            else { 
-                this.SOLICITUD.PersonaItem1 = this.PersonaPorNombreAD.First(); 
-            }
-            
             this.SOLICITUD.Rechazada = false;
             this.SOLICITUD.Completada = false;
             this.SOLICITUD.Cancelada = false;
-
             this.SOLICITUD.Estado = "Siendo procesada";
-            //this.SOLICITUD.CodEstadoActual = 3;// Siendo procesada
-
-            //Por defecto el empleado acepta las solicitudes que el mismo crea, las horas extras necesitan aprobación
             this.SOLICITUD.VB_Empleado = true;
+            
+            //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
+            if (TIPOSOLICITUD == 3) { this.SOLICITUD.PersonaItem1 = null; }
+                else{this.SOLICITUD.PersonaItem1 = this.PersonaPorNombreAD.First();}
 
             if (this.PersonaPorNombreAD.First().Es_Gerente == true)
             {
                 //this.IDGERENCIA = this.PersonaPorNombreAD.First().Superior_Gerente.First().Division_GerenciaItem.Id_Gerencia;
-
-                //Agreaga un nombre de departamento
                 this.SOLICITUD.Departamento = " Gerencia de " + this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
-                //Agrega un nombre de gerencia
                 this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
 
                 this.SOLICITUD.VB_Gerente = true;
-
-                this.SOLICITUD.VB_SubGerente = true;
-
-                this.SOLICITUD.VB_JefeDirecto = true;
-
+                //this.SOLICITUD.VB_SubGerente = true;
+                //this.SOLICITUD.VB_JefeDirecto = true;
                 this.SOLICITUD.Completada = true;
-
+                this.SOLICITUD.Estado = "Aprobada por el Gerente";
             }
             else
                 if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
                 {
-
                     //this.IDSUBGERENCIA = this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Id_SubGerencia;
-                    //Agreaga un nombre de departamento
                     this.SOLICITUD.Departamento = " SubGerencia de " + this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
-                    //Agrega un nombre de gerencia
                     this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Division_GerenciaItem.Nombre;
 
                     this.SOLICITUD.VB_Gerente = false;
-
                     this.SOLICITUD.VB_SubGerente = true;
+                    //this.SOLICITUD.VB_JefeDirecto = true;
 
-                    this.SOLICITUD.VB_JefeDirecto = true;
+                    if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0) 
+                    {
+                        this.SOLICITUD.Completada = true; //si no hay un gerente
+                        this.SOLICITUD.Estado = "Aprobada por el Sub Gerente";
+                    }
                 }
                 else
                     if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
                     {
                         this.IDAREA = this.PersonaPorNombreAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
-
                         this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
-
                         this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
-
-                        this.SOLICITUD.VB_Gerente = false;
-                           
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null)
-                        {
-                            //this.SOLICITUD.VB_SubGerente = true;
-                            this.SOLICITUD.VB_SubGerente = null;
-                        }
-                        else { this.SOLICITUD.VB_SubGerente = false; }
-
                         this.SOLICITUD.VB_JefeDirecto = true;
+
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                        {
+                            // Si hay subgerencia y subgerente
+                            this.SOLICITUD.VB_SubGerente = false; 
+                        }
+                        else
+                        {
+                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+                            }
+                            else
+                            {
+                                this.SOLICITUD.Completada = true; // si no hay ni subgerente ni gerente 
+                                this.SOLICITUD.Estado = "Aprobada por el Jefe de Área";
+                            }
+
+                        }
 
                     }
                     else// Para los empleados que no tienen ningun cargo de supervisión
                     {
-                        //Agreaga un nombre de departamento
                         this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
-                        //Agrega un nombre de gerencia
                         this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
 
-                        //Declarar las aprobaciones necesarias de los superiores
-                        this.SOLICITUD.VB_JefeDirecto = false; // Indica que necesita aprobacion de jefe directo
-
-                        //this.SOLICITUD.VB_Gerente = true;//Gerente solo aprueba solicitudes de horas extras y cuando no hay subgerente
-                        this.SOLICITUD.VB_Gerente = null;
-
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null) // si no pertenece a una subgerencia, indica que no necesita aprobacion de subgerente, de lo contrario, si la necesita
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
                         {
-                            // indica que no necesita aprobacion de un subgerente
-                            //this.SOLICITUD.VB_SubGerente = true; // Utilizamos true en vez de null por que el query de solicitudes pendientes no reconoce el filtro por null(no hay problema en si el usuario tiene otro cargo de supervision ya que en este nivel vbJefeDirecto es = false).
-                            this.SOLICITUD.VB_SubGerente = null;
-
-                            //si no tiene subgerente, necesita la aprobacion del gerente
-                            this.SOLICITUD.VB_Gerente = false;
+                            this.SOLICITUD.VB_JefeDirecto = false; //si hay jefe de área
                         }
-                        else { this.SOLICITUD.VB_SubGerente = false; }// indica que si necesita aprobacion de un subgerente
+                        else
+                        {
 
+                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                            {
+                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                                {
+                                    this.SOLICITUD.VB_SubGerente = false; // Si hay subgerente
+                                }
+                                else 
+                                {
+                                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                    {
+                                        this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+                                    }
+                                    else
+                                    {
+                                        // si no hay ni subgerente ni gerente ni jefe de área
+                                        this.ShowMessageBox("No hay jefatura asociada a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador","SOLICITUD DENEGADA",MessageBoxOption.Ok);
+                                        this.Close(false);
+                                    }
+                                }
+
+                            }
+                            else
+                            {
+                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                {
+                                    this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+                                }
+                                else
+                                {
+                                    // si no hay ni subgerente ni gerente ni jefe de área
+                                    this.ShowMessageBox("No hay jefatura asociada a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador", "SOLICITUD DENEGADA", MessageBoxOption.Ok);
+
+                                    this.Close(false);
+
+                                }
+
+                            }
+                        }
                     }
 
             //Instanciar el objeto detalle de solicitud dependiendo del caso
@@ -136,38 +157,26 @@ namespace LightSwitchApplication
                 this.SOLICITUD.Administrativo = true;
                 this.SOLICITUD.Titulo = "Día administrativo";
                 this.SOLICITUD.SaldoDias = this.PersonaPorNombreAD.First().SaldoDiasAdmins.Value;
-                this.SOLICITUD.Inicio = DateTime.Today;
-                this.SOLICITUD.Termino = DateTime.Today;
-
             }
             else if (TIPOSOLICITUD == 2)
             {
                 this.SOLICITUD.Vacaciones = true;
                 this.SOLICITUD.Titulo = "Vacaciones";
-                this.SOLICITUD.Inicio = DateTime.Today;
-                this.SOLICITUD.Termino = DateTime.Today;
-
             }
             else if (TIPOSOLICITUD == 3)
             {
-                this.SOLICITUD.Inicio = DateTime.Today;
                 this.SOLICITUD.HorasExtras = true;
                 this.SOLICITUD.Titulo = "Horas Extras";
                 this.SOLICITUD.VB_Empleado = false;
-                //Gerente siempre debe aprobar solicitudes de horas extras
-                this.SOLICITUD.VB_Gerente = false;
-                //El usuario no puede solicitar horas extras para si mismmo, debe escoger un nuevo empleado de una lista
-                //this.SOLICITUDESItemProperty.PersonaItem1 = null;
-
-
             }
             else if (TIPOSOLICITUD == 4)
             {
                 this.SOLICITUD.OtroPermiso = true;
-                this.SOLICITUD.Titulo = "Permiso";
-                this.SOLICITUD.Inicio = DateTime.Today;
-                this.SOLICITUD.Termino = DateTime.Today;
+                this.SOLICITUD.Titulo = "Permiso";   
             }
+
+            this.SOLICITUD.Inicio = DateTime.Today;
+            this.SOLICITUD.Termino = DateTime.Today;
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUD;
@@ -180,39 +189,42 @@ namespace LightSwitchApplication
 
         partial void SOLICITUDES_NUEVA_Activated()
         {
-            //Activar los controles en la vista dependiendo del tipo de solicitud
-            if (TIPOSOLICITUD == 1)//administrativo
+            try
             {
-
-                this.FindControl("ADMINISTRATIVO").IsVisible = true;
-
-            }
-            else
-
-                if (TIPOSOLICITUD == 2)//vacaciones
+                //Activar los controles en la vista dependiendo del tipo de solicitud
+                if (TIPOSOLICITUD == 1)//administrativo
                 {
 
-                    this.FindControl("VACACIONES").IsVisible = true;
-
+                    this.FindControl("ADMINISTRATIVO").IsVisible = true;
 
                 }
                 else
 
-                    if (TIPOSOLICITUD == 3)//horas extras
+                    if (TIPOSOLICITUD == 2)//vacaciones
                     {
 
-                        this.FindControl("HORASEXTRAS").IsVisible = true;
+                        this.FindControl("VACACIONES").IsVisible = true;
+
 
                     }
                     else
 
-                        if (TIPOSOLICITUD == 4)//otro permiso
+                        if (TIPOSOLICITUD == 3)//horas extras
                         {
 
-                            this.FindControl("OTROPERMISO").IsVisible = true;
+                            this.FindControl("HORASEXTRAS").IsVisible = true;
 
                         }
+                        else
 
+                            if (TIPOSOLICITUD == 4)//otro permiso
+                            {
+
+                                this.FindControl("OTROPERMISO").IsVisible = true;
+
+                            }
+            }
+            catch { }
         }
 
         //Quitar acentos del nombre de active directory.

@@ -37,10 +37,14 @@ namespace LightSwitchApplication
             // results.AddPropertyError("<Mensaje de error>");
             this.PersonaItemProperty.EsRolPrivado = this.EsRolPrivado;
 
-            if (this.EsRolPrivado == true) { 
+            if (this.EsRolPrivado == true) {
 
-                this.FindControl("DatosRolPrivado").IsVisible = true; 
-                this.FindControl("DatosNoRolPrivado").IsVisible = false;
+                try
+                {
+                    this.FindControl("DatosRolPrivado").IsVisible = true;
+                    this.FindControl("DatosNoRolPrivado").IsVisible = false;
+                }
+                catch { }
 
                 this.PersonaItemProperty.Division_AreaItem = null;
 

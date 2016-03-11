@@ -333,6 +333,15 @@
       </ScreenMethod>
       <ScreenMethod
         Name="ActualizarDirectorio" />
+      <ScreenMethod
+        Name="PersonaItemListDeleteSelected">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="DeleteSelected" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="YesEliminar" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -449,14 +458,16 @@
                 </ContentItem>
                 <ContentItem
                   Kind="Command"
-                  Name="Persona_DeleteSelected">
+                  Name="PersonaItemListDeleteSelected">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Eliminar" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
-                        <MemberExpression
-                          Member="Master_Empleados/Properties[Persona]" />
                         <CallExpression
-                          Target="DeleteSelected" />
+                          Target="Master_Empleados/Methods[PersonaItemListDeleteSelected]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -671,6 +682,45 @@
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
+                <ContentItem
+                  DataType=":Boolean?"
+                  Kind="Value"
+                  Name="Es_Gerente">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[Es_Gerente]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType=":Boolean?"
+                  Kind="Value"
+                  Name="Es_JefeDirecto">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[Es_JefeDirecto]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType=":Boolean?"
+                  Kind="Value"
+                  Name="Es_SubGerente">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[Es_SubGerente]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
               </ContentItem>
             </ContentItem>
           </ContentItem>
@@ -720,9 +770,15 @@
       <ScreenMethod
         Name="SeleccionarSubGerente" />
       <ScreenMethod
-        Name="SeleccionarJefeDirecto" />
+        Name="SeleccionarJefeDeÁrea" />
       <ScreenMethod
         Name="Method" />
+      <ScreenMethod
+        Name="QuitarGerente" />
+      <ScreenMethod
+        Name="QuitarSubGerente" />
+      <ScreenMethod
+        Name="QuitarJefeDeÁrea" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -1009,6 +1065,10 @@
                 <ContentItem
                   Kind="Command"
                   Name="Command1">
+                  <ContentItem.Attributes>
+                    <Description
+                      Value="Agrega una nueva Gerencia a la base de datos" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1022,21 +1082,11 @@
                 </ContentItem>
                 <ContentItem
                   Kind="Command"
-                  Name="Command2">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Master_Divisiones/Properties[Division_Gerencia]" />
-                        <CallExpression
-                          Target="EditSelected" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Kind="Command"
                   Name="Command3">
+                  <ContentItem.Attributes>
+                    <Description
+                      Value="Eliminar la Gerencia seleccionada" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1044,6 +1094,38 @@
                           Member="Master_Divisiones/Properties[Division_Gerencia]" />
                         <CallExpression
                           Target="DeleteSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="SeleccionarGerente">
+                  <ContentItem.Attributes>
+                    <Description
+                      Value="Seleccionar un nuevo Gerente para la Gerencia seleccionada" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Master_Divisiones/Methods[SeleccionarGerente]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Kind="Command"
+                  Name="QuitarGerente">
+                  <ContentItem.Attributes>
+                    <Description
+                      Value="Desvincular al actual Gerente de la Gerencia seleccionada" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="Master_Divisiones/Methods[QuitarGerente]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -1071,20 +1153,6 @@
                 DataType="LightSwitchCommonModule:Division_GerenciaItem"
                 Kind="Details"
                 Name="Division_GerenciaTemplate">
-                <ContentItem.CommandItems>
-                  <ContentItem
-                    Kind="Command"
-                    Name="Command10">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <CallExpression
-                            Target="Master_Divisiones/Methods[SeleccionarGerente]" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem.CommandItems>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression />
@@ -1094,7 +1162,7 @@
                   DataType=":String"
                   Kind="Value"
                   Name="Nombre"
-                  View=":Label">
+                  View=":TextBox">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -1218,6 +1286,10 @@
                   <ContentItem
                     Kind="Command"
                     Name="Command4">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Agrega una nueva Sub Gerencia a la base de datos" />
+                    </ContentItem.Attributes>
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1231,21 +1303,11 @@
                   </ContentItem>
                   <ContentItem
                     Kind="Command"
-                    Name="Command5">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="Master_Divisiones/Properties[Division_SubGerencia]" />
-                          <CallExpression
-                            Target="EditSelected" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                  <ContentItem
-                    Kind="Command"
                     Name="Command6">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Eliminar la Sub Gerencia seleccionada" />
+                    </ContentItem.Attributes>
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1253,6 +1315,38 @@
                             Member="Master_Divisiones/Properties[Division_SubGerencia]" />
                           <CallExpression
                             Target="DeleteSelected" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Kind="Command"
+                    Name="SeleccionarSubGerente">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Seleccionar un nuevo Sub Gerente para la Sub Gerencia seleccionada" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <CallExpression
+                            Target="Master_Divisiones/Methods[SeleccionarSubGerente]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Kind="Command"
+                    Name="QuitarSubGerente">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Desvincular al actual Sub Gerente de la Sub Gerencia seleccionada" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <CallExpression
+                            Target="Master_Divisiones/Methods[QuitarSubGerente]" />
                         </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
@@ -1280,20 +1374,6 @@
                   DataType="LightSwitchCommonModule:Division_SubGerenciaItem"
                   Kind="Details"
                   Name="Division_SubGerenciaTemplate">
-                  <ContentItem.CommandItems>
-                    <ContentItem
-                      Kind="Command"
-                      Name="Command11">
-                      <ContentItem.DataSource>
-                        <ScreenExpressionTree>
-                          <ChainExpression>
-                            <CallExpression
-                              Target="Master_Divisiones/Methods[SeleccionarSubGerente]" />
-                          </ChainExpression>
-                        </ScreenExpressionTree>
-                      </ContentItem.DataSource>
-                    </ContentItem>
-                  </ContentItem.CommandItems>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression />
@@ -1303,7 +1383,7 @@
                     DataType=":String"
                     Kind="Value"
                     Name="Nombre1"
-                    View=":Label">
+                    View=":TextBox">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1419,21 +1499,19 @@
                 </ScreenExpressionTree>
               </ControlPropertySource>
               <ControlPropertySource
-                Property=":ColumnsLayout/Properties[WeightedColumnWidth]">
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <ConstantExpression
-                      ResultType=":Double"
-                      Value="3" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ControlPropertySource>
-              <ControlPropertySource
                 Property="Microsoft.LightSwitch:RootControl/Properties[VerticalAlignment]">
                 <ScreenExpressionTree>
                   <ConstantExpression
                     ResultType=":String"
                     Value="Stretch" />
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:ColumnsLayout/Properties[WeightedColumnWidth]">
+                <ScreenExpressionTree>
+                  <ConstantExpression
+                    ResultType=":Double"
+                    Value="2" />
                 </ScreenExpressionTree>
               </ControlPropertySource>
             </ContentItem.PropertySources>
@@ -1467,6 +1545,10 @@
                   <ContentItem
                     Kind="Command"
                     Name="Command7">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Agrega una nueva Área a la base de datos" />
+                    </ContentItem.Attributes>
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1480,21 +1562,11 @@
                   </ContentItem>
                   <ContentItem
                     Kind="Command"
-                    Name="Command8">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="Master_Divisiones/Properties[Division_Area]" />
-                          <CallExpression
-                            Target="EditSelected" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                  <ContentItem
-                    Kind="Command"
                     Name="Command9">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Eliminar el área seleccionada" />
+                    </ContentItem.Attributes>
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -1502,6 +1574,40 @@
                             Member="Master_Divisiones/Properties[Division_Area]" />
                           <CallExpression
                             Target="DeleteSelected" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Kind="Command"
+                    Name="SeleccionarJefeDeÁrea">
+                    <ContentItem.Attributes>
+                      <Description
+                        Value="Seleccionar un nuevo Jefe de área para el área seleccionada" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <CallExpression
+                            Target="Master_Divisiones/Methods[SeleccionarJefeDeÁrea]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Kind="Command"
+                    Name="QuitarJefeDeÁrea">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Quitar Jefe De Área" />
+                      <Description
+                        Value="Desvincular al actual Jefe de área del área seleccionada" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <CallExpression
+                            Target="Master_Divisiones/Methods[QuitarJefeDeÁrea]" />
                         </ChainExpression>
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
@@ -1529,24 +1635,6 @@
                   DataType="LightSwitchCommonModule:Division_AreaItem"
                   Kind="Details"
                   Name="Division_AreaTemplate">
-                  <ContentItem.CommandItems>
-                    <ContentItem
-                      Kind="Command"
-                      Name="Command12">
-                      <ContentItem.Attributes>
-                        <DisplayName
-                          Value="Seleccionar Jefe De Área" />
-                      </ContentItem.Attributes>
-                      <ContentItem.DataSource>
-                        <ScreenExpressionTree>
-                          <ChainExpression>
-                            <CallExpression
-                              Target="Master_Divisiones/Methods[SeleccionarJefeDirecto]" />
-                          </ChainExpression>
-                        </ScreenExpressionTree>
-                      </ContentItem.DataSource>
-                    </ContentItem>
-                  </ContentItem.CommandItems>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression />
@@ -3197,6 +3285,13 @@
                     Member="SOLICITUDES_PENDIENTES/Properties[VB_GerenteNulo]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="VB_JefeDirectoNulo">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_PENDIENTES/Properties[VB_JefeDirectoNulo]" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -3301,6 +3396,9 @@
         PropertyType=":Boolean?" />
       <ScreenProperty
         Name="VB_GerenteNulo"
+        PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="VB_JefeDirectoNulo"
         PropertyType=":Boolean?" />
     </Screen.Properties>
     <Screen.RootContentItem>

@@ -2816,16 +2816,39 @@
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
                       <BinaryExpression
-                        NodeType="Equal">
+                        NodeType="Or">
+                        <BinaryExpression.Attributes>
+                          <ExpressionGroup />
+                        </BinaryExpression.Attributes>
                         <BinaryExpression.Left>
-                          <ChainExpression>
-                            <MemberExpression
-                              Member="VB_JefeDirecto" />
-                          </ChainExpression>
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="VB_JefeDirecto" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="VB_JefeDirecto" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
-                          <ParameterExpression
-                            Parameter="VB_JefeDirecto" />
+                          <BinaryExpression
+                            NodeType="Equal">
+                            <BinaryExpression.Left>
+                              <ChainExpression>
+                                <MemberExpression
+                                  Member="VB_JefeDirecto" />
+                              </ChainExpression>
+                            </BinaryExpression.Left>
+                            <BinaryExpression.Right>
+                              <ParameterExpression
+                                Parameter="VB_JefeDirectoNulo" />
+                            </BinaryExpression.Right>
+                          </BinaryExpression>
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Right>
@@ -2941,6 +2964,10 @@
         ParameterType=":Boolean?" />
       <QueryOperationParameter
         Name="VB_SubGerente"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        IsOptional="True"
+        Name="VB_JefeDirectoNulo"
         ParameterType=":Boolean?" />
       <QueryOperationParameter
         IsOptional="True"
@@ -7807,7 +7834,7 @@
       Name="CargoRolPrivado">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd

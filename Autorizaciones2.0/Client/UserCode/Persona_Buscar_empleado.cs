@@ -30,6 +30,7 @@ namespace LightSwitchApplication
                 personaNueva.Es_Gerente = false;
                 personaNueva.Es_JefeDirecto = false;
                 personaNueva.Es_SubGerente = false;
+                personaNueva.EsRolPrivado = false;
 
                 try
                 {

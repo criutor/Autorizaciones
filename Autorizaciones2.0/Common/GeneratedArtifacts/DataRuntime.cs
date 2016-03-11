@@ -1069,15 +1069,18 @@ namespace LightSwitchApplication
         /// <param name="VB_SubGerente">
         /// No hay ninguna descripción modelada
         /// </param>
+        /// <param name="VB_JefeDirectoNulo">
+        /// No hay ninguna descripción modelada
+        /// </param>
         /// <param name="VB_SubGerenteNulo">
         /// No hay ninguna descripción modelada
         /// </param>
         /// <param name="VB_GerenteNulo">
         /// No hay ninguna descripción modelada
         /// </param>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesPendientes(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo)
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesPendientes(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_JefeDirectoNulo, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo)
         {
-            return this.Details.Methods.SolicitudesPendientes.CreateInvocation(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente, VB_SubGerenteNulo, VB_GerenteNulo).Execute();
+            return this.Details.Methods.SolicitudesPendientes.CreateInvocation(Id_Gerencia, Id_SubGerencia, Id_Area, Rut_Persona, VB_Empleado, VB_Gerente, VB_JefeDirecto, VB_SubGerente, VB_JefeDirectoNulo, VB_SubGerenteNulo, VB_GerenteNulo).Execute();
         }
         
         /// <summary>

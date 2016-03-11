@@ -701,7 +701,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Persona_CargoRolPrivado">
-    <End Role="CargoRolPrivado" Type="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" Multiplicity="0..1" />
+    <End Role="CargoRolPrivado" Type="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CargoRolPrivado">

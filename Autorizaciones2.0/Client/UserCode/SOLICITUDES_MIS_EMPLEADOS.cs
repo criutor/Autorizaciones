@@ -231,7 +231,7 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
 
-            this.ShowMessageBox("Lo sentimos, esta sección es para aprobar o rechazar solicitudes y tu nombre no está asociado a un cargo de Jefatura. Contacta al administrador si esto es un error", "NO POSEES UN CARGO DE JEFATURA!", MessageBoxOption.Ok);
+            this.ShowMessageBox("Lo sentimos, esta sección es para revisar solicitudes del personal a tu cargo y tu nombre no está asociado a un cargo de Jefatura. Contacta al administrador si esto es un error", "NO POSEES UN CARGO DE JEFATURA!", MessageBoxOption.Ok);
         }
 
         partial void MENSAJEPersonaNoCreada_Execute()

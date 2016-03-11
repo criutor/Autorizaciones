@@ -11,13 +11,6 @@ namespace LightSwitchApplication
 {
     public partial class SOLICITUDES_PENDIENTES
     {
-
-        partial void SOLICITUDES_PENDIENTES_InitializeDataWorkspace(List<IDataService> saveChangesTo)
-        {
-            // Escriba el código aquí.
-
-        }
-
         partial void SOLICITUDES_PENDIENTES_Activated()
         {
             //--------------------------------Quitar acentos del nombre de active directory------------------------------
@@ -70,7 +63,6 @@ namespace LightSwitchApplication
                 {
                     Id_Gerencia = this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
                     
-                    
                     VB_Gerente = false;
                     VB_GerenteNulo = false;
                     
@@ -78,14 +70,14 @@ namespace LightSwitchApplication
                     VB_SubGerenteNulo = null; 
                     
                     VB_JefeDirecto = true;
-
+                    VB_JefeDirectoNulo = null;
+                    
                     VB_Empleado = true;
                     
                 }
                 else if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
                 {
                     Id_SubGerencia = this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
-
                     
                     VB_Gerente = false;
                     VB_GerenteNulo = null;
@@ -94,6 +86,7 @@ namespace LightSwitchApplication
                     VB_SubGerenteNulo = false; 
                     
                     VB_JefeDirecto = true;
+                    VB_JefeDirectoNulo = null;
 
                     VB_Empleado = true;
 
@@ -108,23 +101,11 @@ namespace LightSwitchApplication
                     VB_SubGerente = false;
                     VB_SubGerenteNulo = null;
 
-                    VB_JefeDirecto = false; // Filtrar las solicitudes donde el jefe directo aun no las ha aprobado(visto bueno = false)
+                    VB_JefeDirecto = false; 
+                    VB_JefeDirectoNulo = false;
+                    
                     VB_Empleado = true;
                     
-                    /*
-                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null)
-                    {
-                        VB_SubGerente = true;
-                    }
-                    else {
-
-                        //Id_SubGerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia;
-
-                        VB_SubGerente = false;
-                    }
-                    */
-                    //VB_Gerente = false;
-                    //IDSUBGERENCIA
                 }
                 else
                 {
@@ -204,45 +185,83 @@ namespace LightSwitchApplication
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
                         this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-
                         this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Gerente";
 
-                        //this.SolicitudesAbiertasACargo.SelectedItem.CodEstadoActual = 3.3;
-                        //this.NUEVOESTADO.NombreCortoEstado = "Aprobada por el Gerente";
+
                     }
                     else if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
                     {
-                        //this.SolicitudesAbiertasACargo.SelectedItem.CodEstadoActual = 3.2;
-                        //this.NUEVOESTADO.NombreCortoEstado = "Aprobada por el Sub Gerente";
                         this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Sub Gerente";
-
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = true;
 
-                        if(this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras != true)
+                        if (this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras == true)
                         {
-                            this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
-                            this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-
-                            //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
+                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = false; // Si hay gerente
+                            }
+                            else
+                            {
+                                // si no hay gerente
+                                this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                            }
                         }
+                        else
+                        {
+                            if (this.SolicitudesAbiertasACargo.SelectedItem.PersonaItem1.Es_JefeDirecto != true)
+                            {
+                                if (this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto == true)
+                                {
+                                    this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                                }
+                                else if (this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto == null)
+                                {
+                                    if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
+                                    {
+                                        this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                                    }
+                                    else { this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = false; }
+                                }
+                            }
+                            else {
+                                    if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
+                                    {
+                                        this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                                    }
+                                    else { this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = false; }
+                                    }
+                        }
+
+
                     }
                     else if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
                     {
-                        this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;
-
-                        //this.SolicitudesAbiertasACargo.SelectedItem.CodEstadoActual = 3.1;
-                        //this.NUEVOESTADO.NombreCortoEstado = "Aprobada por el Jefe de Área";
-                        
+                        this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;        
                         this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Jefe de Área";
 
-                        if (this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras != true)//en caso de horas extras debe ser aprobada por el gerente
+                        
+
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
                         {
-                            if (this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente == null)//Significa que no tiene subgerente
+                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                             {
-                                //this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-                                //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por todos";
+                                this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = false; // Si hay subgerente
                             }
+                            else
+                            {
+                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                {
+                                    this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = false; // Si hay gerente
+                                }
+                                else
+                                {
+                                    // si no hay ni subgerente ni gerente
+                                    this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;       
+                                }
+                            }
+
                         }
+                                      
                     }
 
                 this.CloseModalWindow("AprobarSolicitudMW");
