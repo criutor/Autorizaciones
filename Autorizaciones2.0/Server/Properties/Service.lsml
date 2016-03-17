@@ -1817,6 +1817,21 @@
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[FechaSolicitud]"
           Type="datetime" />
+        <SsdlProperty
+          Name="Caducada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Caducada]"
+          Type="bit" />
+        <SsdlProperty
+          Name="Rebajada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Rebajada]"
+          Type="bit" />
+        <SsdlProperty
+          Name="CodigoEstado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[CodigoEstado]"
+          Type="int" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

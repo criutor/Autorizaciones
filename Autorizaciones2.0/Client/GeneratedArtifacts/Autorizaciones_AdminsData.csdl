@@ -316,6 +316,9 @@
     <Property Name="AdministrativoDesde" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="AdministrativoHasta" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="FechaSolicitud" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Caducada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Rebajada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="CodigoEstado" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />
@@ -616,7 +619,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SOLICITUDES_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="SOLICITUDES" Type="LightSwitchApplication.SOLICITUDESItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -628,9 +633,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Persona_CargoRolPrivado">
-    <End Role="CargoRolPrivado" Type="LightSwitchApplication.CargoRolPrivadoItem" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="CargoRolPrivado" Type="LightSwitchApplication.CargoRolPrivadoItem" Multiplicity="0..1" />
     <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CargoRolPrivado">

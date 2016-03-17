@@ -295,6 +295,9 @@
           <ScalarProperty Name="AdministrativoDesde" ColumnName="AdministrativoDesde" />
           <ScalarProperty Name="AdministrativoHasta" ColumnName="AdministrativoHasta" />
           <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="Caducada" ColumnName="Caducada" />
+          <ScalarProperty Name="Rebajada" ColumnName="Rebajada" />
+          <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

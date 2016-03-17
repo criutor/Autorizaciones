@@ -2305,6 +2305,21 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("FechaSolicitud");
         }
         
+        partial void OnCaducadaChanged()
+        {
+            this.___OnPropertyChanged("Caducada");
+        }
+        
+        partial void OnRebajadaChanged()
+        {
+            this.___OnPropertyChanged("Rebajada");
+        }
+        
+        partial void OnCodigoEstadoChanged()
+        {
+            this.___OnPropertyChanged("CodigoEstado");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS
         {
             get

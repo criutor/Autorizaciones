@@ -177,27 +177,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCode\ADMINISTRAR_CARGOS_ROL_PRIVADO.cs" />
+    <Compile Include="UserCode\ADMINISTRAR_FERIADOS.cs" />
     <Compile Include="UserCode\Application.cs" />
-    <Compile Include="UserCode\Convenios_Colectivos_CrearListar.cs" />
-    <Compile Include="UserCode\Divisiones_Area_Personal.cs" />
-    <Compile Include="UserCode\Persona_Detalles.cs">
+    <Compile Include="UserCode\ADMINISTRAR_CONVENIOS_COLECTIVOS.cs" />
+    <Compile Include="UserCode\DIVISIONES_AREA_DETALLES.cs" />
+    <Compile Include="UserCode\PERSONAL_LISTAR_NOROLPRIVADO.cs" />
+    <Compile Include="UserCode\PERSONAL_DETALLES.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UserCode\SOLICITUDES_REBAJAR_ADMINISTRATIVOS.cs" />
     <Compile Include="UserCode\SOLICITUDES_DETALLES.cs" />
-    <Compile Include="UserCode\SOLICITUDES_MIS_EMPLEADOS.cs" />
-    <Compile Include="UserCode\Persona_Crear.cs" />
-    <Compile Include="UserCode\Solicitudes_Crear.cs" />
-    <Compile Include="UserCode\Master_Divisiones.cs" />
-    <Compile Include="UserCode\Master_Empleados.cs" />
-    <Compile Include="UserCode\Persona_Buscar_empleado.cs" />
-    <Compile Include="UserCode\Persona_Buscar_Superior.cs">
+    <Compile Include="UserCode\SOLICITUDES_A_CARGO.cs" />
+    <Compile Include="UserCode\PERSONAL_CREAR_ROL_PRIVADO.cs" />
+    <Compile Include="UserCode\ADMINISTRAR_DIVISIONES.cs" />
+    <Compile Include="UserCode\ADMINISTRAR_EMPLEADOS.cs" />
+    <Compile Include="UserCode\PERSONAL_BUSCAR_FIN700.cs" />
+    <Compile Include="UserCode\PERSONAL_LISTAR_ROLPRIVADO.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UserCode\SOLICITUDES_MIS.cs" />
-    <Compile Include="UserCode\SOLICITUDES_PENDIENTES.cs" />
+    <Compile Include="UserCode\SOLICITUDES_MIS_SOLICITUDES.cs" />
+    <Compile Include="UserCode\SOLICITUDES_APROBACIÓN.cs" />
     <Compile Include="UserCode\SOLICITUDES_NUEVA.cs" />
-    <Compile Include="UserCode\SOLICITUDES_REALIZADAS.cs" />
-    <Compile Include="UserCode\Solicitudes_Ver_Aprobar_Rechazar.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REBAJAR_HORASEXTRAS.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REBAJAR_PERMISOS.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REBAJAR_VACACIONES.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Client.lsml">

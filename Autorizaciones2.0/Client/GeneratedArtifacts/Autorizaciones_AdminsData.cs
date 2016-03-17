@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 10/03/2016 17:46:57
+// Fecha de generación: 16/03/2016 22:21:29
 namespace LightSwitchApplication.Implementation
 {
     
@@ -7067,6 +7067,84 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<global::System.DateTime> _FechaSolicitud;
         partial void OnFechaSolicitudChanging(global::System.Nullable<global::System.DateTime> value);
         partial void OnFechaSolicitudChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Caducada en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> Caducada
+        {
+            get
+            {
+                return this._Caducada;
+            }
+            set
+            {
+                this.OnCaducadaChanging(value);
+                if (object.Equals(this.Caducada, value))
+                {
+                    return;
+                }
+                this._Caducada = value;
+                this.OnCaducadaChanged();
+                this.OnPropertyChanged("Caducada");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _Caducada;
+        partial void OnCaducadaChanging(global::System.Nullable<bool> value);
+        partial void OnCaducadaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Rebajada en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> Rebajada
+        {
+            get
+            {
+                return this._Rebajada;
+            }
+            set
+            {
+                this.OnRebajadaChanging(value);
+                if (object.Equals(this.Rebajada, value))
+                {
+                    return;
+                }
+                this._Rebajada = value;
+                this.OnRebajadaChanged();
+                this.OnPropertyChanged("Rebajada");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _Rebajada;
+        partial void OnRebajadaChanging(global::System.Nullable<bool> value);
+        partial void OnRebajadaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad CodigoEstado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> CodigoEstado
+        {
+            get
+            {
+                return this._CodigoEstado;
+            }
+            set
+            {
+                this.OnCodigoEstadoChanging(value);
+                if (object.Equals(this.CodigoEstado, value))
+                {
+                    return;
+                }
+                this._CodigoEstado = value;
+                this.OnCodigoEstadoChanged();
+                this.OnPropertyChanged("CodigoEstado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _CodigoEstado;
+        partial void OnCodigoEstadoChanging(global::System.Nullable<int> value);
+        partial void OnCodigoEstadoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

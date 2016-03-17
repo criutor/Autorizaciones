@@ -24,8 +24,8 @@ namespace LightSwitchApplication
             this.AdministrativoHasta = "La tarde (Todo el día)"; 
 
             // Parametro de busqueda de la persona
-            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
-            NOMBREAD = "RUBIO FLORES, GUSTAVO";
+            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
+            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
             // Guarda el rut del usuario
             RUTUSUARIO = this.PersonaPorNombreAD.First().Rut_Persona;
 
@@ -92,8 +92,9 @@ namespace LightSwitchApplication
                             }
                             else
                             {
-                                this.SOLICITUD.Completada = true; // si no hay ni subgerente ni gerente 
-                                this.SOLICITUD.Estado = "Aprobada por el Jefe de Área";
+
+                                this.ShowMessageBox("Debe haber como mínimo 2 superiores asociados a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                                this.Close(false);
                             }
 
                         }
@@ -101,54 +102,78 @@ namespace LightSwitchApplication
                     }
                     else// Para los empleados que no tienen ningun cargo de supervisión
                     {
+                        int contarSuperiores = 0;
+
                         this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
                         this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
 
+
+                        //contar superiores
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
+                        {
+                            contarSuperiores = contarSuperiores + 1;
+                        }
+
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                        {
+                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                            {
+                                contarSuperiores = contarSuperiores + 1;
+                                
+                            }
+
+                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                contarSuperiores = contarSuperiores + 1;
+                            }
+                            else if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                contarSuperiores = contarSuperiores + 1;
+                            }
+                        }
+                                
+                        
+  
+                        
+
+                        //setiar vb's
                         if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
                         {
                             this.SOLICITUD.VB_JefeDirecto = false; //si hay jefe de área
+                            
                         }
                         else
-                        {
 
                             if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
                             {
                                 if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                                 {
                                     this.SOLICITUD.VB_SubGerente = false; // Si hay subgerente
+                                    
                                 }
-                                else 
+                            }
+                            else
+
+                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                                 {
-                                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                    this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+                                    
+                                }
+                                else
+
+                                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                                     {
                                         this.SOLICITUD.VB_Gerente = false; // Si hay gerente
                                     }
-                                    else
-                                    {
-                                        // si no hay ni subgerente ni gerente ni jefe de área
-                                        this.ShowMessageBox("No hay jefatura asociada a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador","SOLICITUD DENEGADA",MessageBoxOption.Ok);
-                                        this.Close(false);
-                                    }
-                                }
 
-                            }
-                            else
-                            {
-                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
-                                {
-                                    this.SOLICITUD.VB_Gerente = false; // Si hay gerente
-                                }
-                                else
-                                {
-                                    // si no hay ni subgerente ni gerente ni jefe de área
-                                    this.ShowMessageBox("No hay jefatura asociada a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador", "SOLICITUD DENEGADA", MessageBoxOption.Ok);
+                        if(contarSuperiores < 2)
+                        {
+                            // debe tener por lo menos 2 superiores para poder crear una solicitud
+                            this.ShowMessageBox("Debe haber como mínimo 2 superiores asociados a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
 
-                                    this.Close(false);
-
-                                }
-
-                            }
+                            this.Close(false);
                         }
+                        contarSuperiores = 0;
                     }
 
             //Instanciar el objeto detalle de solicitud dependiendo del caso
@@ -175,8 +200,14 @@ namespace LightSwitchApplication
                 this.SOLICITUD.Titulo = "Permiso";   
             }
 
+
             this.SOLICITUD.Inicio = DateTime.Today;
             this.SOLICITUD.Termino = DateTime.Today;
+
+            if (TIPOSOLICITUD == 3)
+            {
+                this.SOLICITUD.Termino = null;
+            }
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUD;
@@ -711,6 +742,14 @@ namespace LightSwitchApplication
             // results.AddPropertyError("<Mensaje de error>");
             this.SOLICITUD.AdministrativoHasta = this.AdministrativoHasta;
         }
+
+        partial void CerrarPantalla_Execute()
+        {
+            // Escriba el código aquí.
+            this.Close(false);
+        }
+
+
 
     }
 }

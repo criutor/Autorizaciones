@@ -392,6 +392,9 @@
     <Property Name="AdministrativoDesde" Type="nvarchar" MaxLength="50" />
     <Property Name="AdministrativoHasta" Type="nvarchar" MaxLength="50" />
     <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="Caducada" Type="bit" />
+    <Property Name="Rebajada" Type="bit" />
+    <Property Name="CodigoEstado" Type="int" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">
@@ -689,7 +692,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_SOLICITUDES_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="SOLICITUDES" Type="Autorizaciones_AdminsDataStore.SOLICITUDESItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -701,9 +706,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Persona_CargoRolPrivado">
-    <End Role="CargoRolPrivado" Type="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="CargoRolPrivado" Type="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" Multiplicity="0..1" />
     <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="CargoRolPrivado">

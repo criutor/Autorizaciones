@@ -60,7 +60,7 @@ namespace LightSwitchApplication.Implementation
             global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
-                (s) => (((((((((((Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia)) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (Id_SubGerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Area.HasValue && (s.PersonaItem1.Division_AreaItem.Id_Area == Id_Area))) || ((s.PersonaItem1.Es_SubGerente.HasValue && (s.PersonaItem1.Es_SubGerente == true)) && (s.PersonaItem1.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (s.PersonaItem1.IDGerencia_para_subgerentes == Id_Gerencia))))) && ((((s.Completada.HasValue && (s.Completada == true)) == false) && ((s.Rechazada.HasValue && (s.Rechazada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false))) && ((s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0) == false)) && (s.VB_Empleado.HasValue && (s.VB_Empleado == true))) && ((s.VB_JefeDirecto.HasValue && (VB_JefeDirecto.HasValue && (s.VB_JefeDirecto == VB_JefeDirecto))) || ((VB_JefeDirectoNulo.HasValue == false) || (s.VB_JefeDirecto.HasValue && (VB_JefeDirectoNulo.HasValue && (s.VB_JefeDirecto == VB_JefeDirectoNulo)))))) && ((s.VB_SubGerente.HasValue && (VB_SubGerente.HasValue && (s.VB_SubGerente == VB_SubGerente))) || ((VB_SubGerenteNulo.HasValue == false) || (s.VB_SubGerente.HasValue && (VB_SubGerenteNulo.HasValue && (s.VB_SubGerente == VB_SubGerenteNulo)))))) && ((s.VB_Gerente.HasValue && (VB_Gerente.HasValue && (s.VB_Gerente == VB_Gerente))) || ((VB_GerenteNulo.HasValue == false) || (s.VB_Gerente.HasValue && (VB_GerenteNulo.HasValue && (s.VB_Gerente == VB_GerenteNulo)))))));
+                (s) => (((((((((((Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia)) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (Id_SubGerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Area.HasValue && (s.PersonaItem1.Division_AreaItem.Id_Area == Id_Area))) || ((s.PersonaItem1.Es_SubGerente.HasValue && (s.PersonaItem1.Es_SubGerente == true)) && (s.PersonaItem1.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (s.PersonaItem1.IDGerencia_para_subgerentes == Id_Gerencia))))) && ((((s.Completada.HasValue && (s.Completada == true)) == false) && ((s.Rechazada.HasValue && (s.Rechazada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false))) && ((s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0) == false)) && (s.VB_Empleado.HasValue && (s.VB_Empleado == true))) && ((VB_JefeDirecto.HasValue == false) || (s.VB_JefeDirecto.HasValue && (VB_JefeDirecto.HasValue && (s.VB_JefeDirecto == VB_JefeDirecto))))) && ((VB_SubGerente.HasValue == false) || (s.VB_SubGerente.HasValue && (VB_SubGerente.HasValue && (s.VB_SubGerente == VB_SubGerente))))) && ((VB_Gerente.HasValue == false) || (s.VB_Gerente.HasValue && (VB_Gerente.HasValue && (s.VB_Gerente == VB_Gerente))))));
             return query;
         }
     
@@ -79,6 +79,60 @@ namespace LightSwitchApplication.Implementation
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::Autorizaciones_AdminsData.Implementation.PersonaItem>("Persona"),
                 (p) => ((((((Id_Gerencia.HasValue && (p.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia)) || (Id_Gerencia.HasValue && (p.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || ((p.Es_SubGerente.HasValue && (p.Es_SubGerente == true)) && (p.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (p.IDGerencia_para_subgerentes == Id_Gerencia))))) || (Id_SubGerencia.HasValue && (p.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Area.HasValue && (p.Division_AreaItem.Id_Area == Id_Area))) && ((p.Rut_Persona.CompareTo(Rut_Persona) == 0) == false)));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.Division_SubGerenciaItem> SubgerenciasPorGerenciaID(global::System.Nullable<int> Id_Gerencia)
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.Division_SubGerenciaItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.Division_SubGerenciaItem>("Division_SubGerencia"),
+                (d) => (Id_Gerencia.HasValue && (d.Division_GerenciaItem.Id_Gerencia == Id_Gerencia)));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> PersonalNoRolPrivado()
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.PersonaItem>("Persona"),
+                (p) => (p.EsRolPrivado.HasValue && (p.EsRolPrivado == false)));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> DiasAdministrativosAprobados()
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
+                (s) => (((((s.Administrativo.HasValue && (s.Administrativo == true)) && (s.Completada.HasValue && (s.Completada == true))) && ((s.Caducada.HasValue && (s.Caducada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false)) && ((s.Rebajada.HasValue && (s.Rebajada == true)) == false)));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> VacacionesAprobadas()
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
+                (s) => (((((s.Vacaciones.HasValue && (s.Vacaciones == true)) && (s.Completada.HasValue && (s.Completada == true))) && ((s.Caducada.HasValue && (s.Caducada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false)) && ((s.Rebajada.HasValue && (s.Rebajada == true)) == false)));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> HorasExtrasAprobadas()
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
+                (s) => (((((s.HorasExtras.HasValue && (s.HorasExtras == true)) && (s.Completada.HasValue && (s.Completada == true))) && ((s.Caducada.HasValue && (s.Caducada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false)) && ((s.Rebajada.HasValue && (s.Rebajada == true)) == false)));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> PermisosAprobados()
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
+                (s) => (((((s.OtroPermiso.HasValue && (s.OtroPermiso == true)) && (s.Completada.HasValue && (s.Completada == true))) && ((s.Caducada.HasValue && (s.Caducada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false)) && ((s.Rebajada.HasValue && (s.Rebajada == true)) == false)));
             return query;
         }
     

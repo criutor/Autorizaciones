@@ -1047,6 +1047,96 @@ namespace LightSwitchApplication
         partial void PersonalBajoMiSupervision_ExecuteFailed(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SubgerenciasPorGerenciaID_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SubgerenciasPorGerenciaID_Executing(global::System.Nullable<int> Id_Gerencia);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SubgerenciasPorGerenciaID_PreprocessQuery(global::System.Nullable<int> Id_Gerencia, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Division_SubGerenciaItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SubgerenciasPorGerenciaID_Executed(global::System.Nullable<int> Id_Gerencia, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Division_SubGerenciaItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void SubgerenciasPorGerenciaID_ExecuteFailed(global::System.Nullable<int> Id_Gerencia, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonalNoRolPrivado_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonalNoRolPrivado_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PersonalNoRolPrivado_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonalNoRolPrivado_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PersonalNoRolPrivado_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DiasAdministrativosAprobados_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void DiasAdministrativosAprobados_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DiasAdministrativosAprobados_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void DiasAdministrativosAprobados_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void DiasAdministrativosAprobados_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void VacacionesAprobadas_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void VacacionesAprobadas_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void VacacionesAprobadas_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void VacacionesAprobadas_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void VacacionesAprobadas_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HorasExtrasAprobadas_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void HorasExtrasAprobadas_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HorasExtrasAprobadas_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void HorasExtrasAprobadas_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void HorasExtrasAprobadas_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PermisosAprobados_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PermisosAprobados_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PermisosAprobados_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PermisosAprobados_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void PermisosAprobados_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3132,6 +3222,204 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem>)args[4];
                 d.PersonalBajoMiSupervision_PreprocessQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Nullable<int>)args[2], (string)args[3], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.Division_SubGerenciaItem>
+                __SubgerenciasPorGerenciaIDEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.Division_SubGerenciaItem>(
+                    "SubgerenciasPorGerenciaID",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SubgerenciasPorGerenciaID_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SubgerenciasPorGerenciaID_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SubgerenciasPorGerenciaID_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SubgerenciasPorGerenciaID_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__SubgerenciasPorGerenciaID_PreprocessQuery);
+            private static bool __SubgerenciasPorGerenciaID_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.SubgerenciasPorGerenciaID_CanExecute(ref r);
+                return r;
+            }
+            private static void __SubgerenciasPorGerenciaID_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.SubgerenciasPorGerenciaID_Executing((global::System.Nullable<int>)args[0]);
+            }
+            private static void __SubgerenciasPorGerenciaID_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.SubgerenciasPorGerenciaID_Executed((global::System.Nullable<int>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Division_SubGerenciaItem>)args[1]);
+            }
+            private static void __SubgerenciasPorGerenciaID_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.SubgerenciasPorGerenciaID_ExecuteFailed((global::System.Nullable<int>)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __SubgerenciasPorGerenciaID_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Division_SubGerenciaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Division_SubGerenciaItem>)args[1];
+                d.SubgerenciasPorGerenciaID_PreprocessQuery((global::System.Nullable<int>)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>
+                __PersonalNoRolPrivadoEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>(
+                    "PersonalNoRolPrivado",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalNoRolPrivado_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalNoRolPrivado_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalNoRolPrivado_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalNoRolPrivado_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonalNoRolPrivado_PreprocessQuery);
+            private static bool __PersonalNoRolPrivado_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.PersonalNoRolPrivado_CanExecute(ref r);
+                return r;
+            }
+            private static void __PersonalNoRolPrivado_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PersonalNoRolPrivado_Executing();
+            }
+            private static void __PersonalNoRolPrivado_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PersonalNoRolPrivado_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem>)args[0]);
+            }
+            private static void __PersonalNoRolPrivado_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.PersonalNoRolPrivado_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __PersonalNoRolPrivado_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem>)args[0];
+                d.PersonalNoRolPrivado_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __DiasAdministrativosAprobadosEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "DiasAdministrativosAprobados",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__DiasAdministrativosAprobados_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__DiasAdministrativosAprobados_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__DiasAdministrativosAprobados_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__DiasAdministrativosAprobados_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__DiasAdministrativosAprobados_PreprocessQuery);
+            private static bool __DiasAdministrativosAprobados_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.DiasAdministrativosAprobados_CanExecute(ref r);
+                return r;
+            }
+            private static void __DiasAdministrativosAprobados_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.DiasAdministrativosAprobados_Executing();
+            }
+            private static void __DiasAdministrativosAprobados_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.DiasAdministrativosAprobados_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[0]);
+            }
+            private static void __DiasAdministrativosAprobados_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.DiasAdministrativosAprobados_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __DiasAdministrativosAprobados_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[0];
+                d.DiasAdministrativosAprobados_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __VacacionesAprobadasEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "VacacionesAprobadas",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__VacacionesAprobadas_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__VacacionesAprobadas_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__VacacionesAprobadas_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__VacacionesAprobadas_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__VacacionesAprobadas_PreprocessQuery);
+            private static bool __VacacionesAprobadas_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.VacacionesAprobadas_CanExecute(ref r);
+                return r;
+            }
+            private static void __VacacionesAprobadas_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.VacacionesAprobadas_Executing();
+            }
+            private static void __VacacionesAprobadas_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.VacacionesAprobadas_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[0]);
+            }
+            private static void __VacacionesAprobadas_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.VacacionesAprobadas_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __VacacionesAprobadas_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[0];
+                d.VacacionesAprobadas_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __HorasExtrasAprobadasEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "HorasExtrasAprobadas",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasAprobadas_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasAprobadas_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasAprobadas_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasAprobadas_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasAprobadas_PreprocessQuery);
+            private static bool __HorasExtrasAprobadas_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.HorasExtrasAprobadas_CanExecute(ref r);
+                return r;
+            }
+            private static void __HorasExtrasAprobadas_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.HorasExtrasAprobadas_Executing();
+            }
+            private static void __HorasExtrasAprobadas_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.HorasExtrasAprobadas_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[0]);
+            }
+            private static void __HorasExtrasAprobadas_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.HorasExtrasAprobadas_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __HorasExtrasAprobadas_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[0];
+                d.HorasExtrasAprobadas_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __PermisosAprobadosEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "PermisosAprobados",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PermisosAprobados_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PermisosAprobados_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PermisosAprobados_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PermisosAprobados_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PermisosAprobados_PreprocessQuery);
+            private static bool __PermisosAprobados_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.PermisosAprobados_CanExecute(ref r);
+                return r;
+            }
+            private static void __PermisosAprobados_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PermisosAprobados_Executing();
+            }
+            private static void __PermisosAprobados_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.PermisosAprobados_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[0]);
+            }
+            private static void __PermisosAprobados_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.PermisosAprobados_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __PermisosAprobados_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[0];
+                d.PermisosAprobados_PreprocessQuery(ref query);
                 return query;
             }
     

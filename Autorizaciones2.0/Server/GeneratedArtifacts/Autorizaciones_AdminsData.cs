@@ -6411,6 +6411,78 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Caducada
+        {
+            get
+            {
+                return _Caducada;
+            }
+            set
+            {
+                OnCaducadaChanging(value);
+                ReportPropertyChanging("Caducada");
+                _Caducada = value;
+                ReportPropertyChanged("Caducada");
+                OnCaducadaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Caducada;
+        partial void OnCaducadaChanging(Nullable<global::System.Boolean> value);
+        partial void OnCaducadaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Rebajada
+        {
+            get
+            {
+                return _Rebajada;
+            }
+            set
+            {
+                OnRebajadaChanging(value);
+                ReportPropertyChanging("Rebajada");
+                _Rebajada = value;
+                ReportPropertyChanged("Rebajada");
+                OnRebajadaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Rebajada;
+        partial void OnRebajadaChanging(Nullable<global::System.Boolean> value);
+        partial void OnRebajadaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CodigoEstado
+        {
+            get
+            {
+                return _CodigoEstado;
+            }
+            set
+            {
+                OnCodigoEstadoChanging(value);
+                ReportPropertyChanging("CodigoEstado");
+                _CodigoEstado = value;
+                ReportPropertyChanged("CodigoEstado");
+                OnCodigoEstadoChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CodigoEstado;
+        partial void OnCodigoEstadoChanging(Nullable<global::System.Int32> value);
+        partial void OnCodigoEstadoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String RutPersona_fk

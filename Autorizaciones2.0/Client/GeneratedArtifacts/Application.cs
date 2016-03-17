@@ -37,228 +37,183 @@ namespace LightSwitchApplication
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_Empleados_CanRun(ref bool result);
+        partial void ADMINISTRAR_EMPLEADOS_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_Empleados_Run(ref bool handled);
+        partial void ADMINISTRAR_EMPLEADOS_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowMaster_Empleados. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowADMINISTRAR_EMPLEADOS. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowMaster_Empleados()
+        public void ShowADMINISTRAR_EMPLEADOS()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMaster_Empleados);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowADMINISTRAR_EMPLEADOS);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_Divisiones_CanRun(ref bool result);
+        partial void ADMINISTRAR_DIVISIONES_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Master_Divisiones_Run(ref bool handled);
+        partial void ADMINISTRAR_DIVISIONES_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowMaster_Divisiones. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowADMINISTRAR_DIVISIONES. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowMaster_Divisiones()
+        public void ShowADMINISTRAR_DIVISIONES()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowMaster_Divisiones);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowADMINISTRAR_DIVISIONES);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Buscar_Superior_CanRun(ref bool result, int codigo, int IDs);
+        partial void PERSONAL_LISTAR_ROLPRIVADO_CanRun(ref bool result, int codigo, int IDs);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Buscar_Superior_Run(ref bool handled, int codigo, int IDs);
+        partial void PERSONAL_LISTAR_ROLPRIVADO_Run(ref bool handled, int codigo, int IDs);
     
         /// <summary>
-        /// Abre la pantalla ShowPersona_Buscar_Superior. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowPERSONAL_LISTAR_ROLPRIVADO. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowPersona_Buscar_Superior(int codigo, int IDs)
+        public void ShowPERSONAL_LISTAR_ROLPRIVADO(int codigo, int IDs)
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPersona_Buscar_Superior, codigo, IDs);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_LISTAR_ROLPRIVADO, codigo, IDs);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Crear_CanRun(ref bool result);
+        partial void PERSONAL_CREAR_ROL_PRIVADO_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Crear_Run(ref bool handled);
+        partial void PERSONAL_CREAR_ROL_PRIVADO_Run(ref bool handled);
     
         /// <summary>
-        /// Abre una nueva instancia de la pantalla ShowPersona_Crear.
+        /// Abre una nueva instancia de la pantalla ShowPERSONAL_CREAR_ROL_PRIVADO.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowPersona_Crear()
+        public void ShowPERSONAL_CREAR_ROL_PRIVADO()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPersona_Crear);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_CREAR_ROL_PRIVADO);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Buscar_empleado_CanRun(ref bool result, int IDArea);
+        partial void PERSONAL_BUSCAR_FIN700_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Buscar_empleado_Run(ref bool handled, int IDArea);
+        partial void PERSONAL_BUSCAR_FIN700_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowPersona_Buscar_empleado. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowPERSONAL_BUSCAR_FIN700. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowPersona_Buscar_empleado(int IDArea)
+        public void ShowPERSONAL_BUSCAR_FIN700()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPersona_Buscar_empleado, IDArea);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_BUSCAR_FIN700);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_PENDIENTES_CanRun(ref bool result);
+        partial void SOLICITUDES_APROBACIÓN_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_PENDIENTES_Run(ref bool handled);
+        partial void SOLICITUDES_APROBACIÓN_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_PENDIENTES. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_APROBACIÓN. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_PENDIENTES()
+        public void ShowSOLICITUDES_APROBACIÓN()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_PENDIENTES);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_APROBACIÓN);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_MIS_CanRun(ref bool result);
+        partial void SOLICITUDES_MIS_SOLICITUDES_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_MIS_Run(ref bool handled);
+        partial void SOLICITUDES_MIS_SOLICITUDES_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_MIS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_MIS_SOLICITUDES. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_MIS()
+        public void ShowSOLICITUDES_MIS_SOLICITUDES()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_MIS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_MIS_SOLICITUDES);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Convenios_Colectivos_CrearListar_CanRun(ref bool result);
+        partial void ADMINISTRAR_CONVENIOS_COLECTIVOS_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Convenios_Colectivos_CrearListar_Run(ref bool handled);
+        partial void ADMINISTRAR_CONVENIOS_COLECTIVOS_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowConvenios_Colectivos_CrearListar. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowADMINISTRAR_CONVENIOS_COLECTIVOS. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowConvenios_Colectivos_CrearListar()
+        public void ShowADMINISTRAR_CONVENIOS_COLECTIVOS()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowConvenios_Colectivos_CrearListar);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowADMINISTRAR_CONVENIOS_COLECTIVOS);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Crear_CanRun(ref bool result, string IDPersona, int TIPOSOLICITUD);
+        partial void DIVISIONES_AREA_DETALLES_CanRun(ref bool result, int Division_AreaItemId_Area);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Crear_Run(ref bool handled, string IDPersona, int TIPOSOLICITUD);
+        partial void DIVISIONES_AREA_DETALLES_Run(ref bool handled, int Division_AreaItemId_Area);
     
         /// <summary>
-        /// Abre una nueva instancia de la pantalla ShowSolicitudes_Crear.
+        /// Abre la pantalla ShowDIVISIONES_AREA_DETALLES. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSolicitudes_Crear(string IDPersona, int TIPOSOLICITUD)
+        public void ShowDIVISIONES_AREA_DETALLES(int Division_AreaItemId_Area)
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSolicitudes_Crear, IDPersona, TIPOSOLICITUD);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowDIVISIONES_AREA_DETALLES, Division_AreaItemId_Area);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Ver_Aprobar_Rechazar_CanRun(ref bool result, int IDSolicitudDetalles, int TIPOSOLICITUD, int PANTALLA);
+        partial void SOLICITUDES_A_CARGO_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Solicitudes_Ver_Aprobar_Rechazar_Run(ref bool handled, int IDSolicitudDetalles, int TIPOSOLICITUD, int PANTALLA);
+        partial void SOLICITUDES_A_CARGO_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSolicitudes_Ver_Aprobar_Rechazar. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_A_CARGO. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSolicitudes_Ver_Aprobar_Rechazar(int IDSolicitudDetalles, int TIPOSOLICITUD, int PANTALLA)
+        public void ShowSOLICITUDES_A_CARGO()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSolicitudes_Ver_Aprobar_Rechazar, IDSolicitudDetalles, TIPOSOLICITUD, PANTALLA);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_A_CARGO);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Divisiones_Area_Personal_CanRun(ref bool result, int Division_AreaItemId_Area);
+        partial void ADMINISTRAR_FERIADOS_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Divisiones_Area_Personal_Run(ref bool handled, int Division_AreaItemId_Area);
+        partial void ADMINISTRAR_FERIADOS_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowDivisiones_Area_Personal. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowADMINISTRAR_FERIADOS. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowDivisiones_Area_Personal(int Division_AreaItemId_Area)
+        public void ShowADMINISTRAR_FERIADOS()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowDivisiones_Area_Personal, Division_AreaItemId_Area);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowADMINISTRAR_FERIADOS);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_MIS_EMPLEADOS_CanRun(ref bool result);
+        partial void X_BORRAR_TESTING_VistaHEADERS_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_MIS_EMPLEADOS_Run(ref bool handled);
+        partial void X_BORRAR_TESTING_VistaHEADERS_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_MIS_EMPLEADOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowX_BORRAR_TESTING_VistaHEADERS. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_MIS_EMPLEADOS()
+        public void ShowX_BORRAR_TESTING_VistaHEADERS()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_MIS_EMPLEADOS);
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Feriados_CrearListar_CanRun(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Feriados_CrearListar_Run(ref bool handled);
-    
-        /// <summary>
-        /// Abre la pantalla ShowFeriados_CrearListar. Si la pantalla ya está abierta, se activa y se muestra.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowFeriados_CrearListar()
-        {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowFeriados_CrearListar);
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REALIZADAS_CanRun(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REALIZADAS_Run(ref bool handled);
-    
-        /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_REALIZADAS. Si la pantalla ya está abierta, se activa y se muestra.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_REALIZADAS()
-        {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REALIZADAS);
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void VistaHEADERS_CanRun(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void VistaHEADERS_Run(ref bool handled);
-    
-        /// <summary>
-        /// Abre la pantalla ShowVistaHEADERS. Si la pantalla ya está abierta, se activa y se muestra.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowVistaHEADERS()
-        {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowVistaHEADERS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowX_BORRAR_TESTING_VistaHEADERS);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -292,33 +247,108 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CargoRolPrivado_CrearListar_CanRun(ref bool result);
+        partial void ADMINISTRAR_CARGOS_ROL_PRIVADO_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CargoRolPrivado_CrearListar_Run(ref bool handled);
+        partial void ADMINISTRAR_CARGOS_ROL_PRIVADO_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowCargoRolPrivado_CrearListar. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowADMINISTRAR_CARGOS_ROL_PRIVADO. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowCargoRolPrivado_CrearListar()
+        public void ShowADMINISTRAR_CARGOS_ROL_PRIVADO()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowCargoRolPrivado_CrearListar);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowADMINISTRAR_CARGOS_ROL_PRIVADO);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Detalles_CanRun(ref bool result, string PersonaItemRut_Persona);
+        partial void PERSONAL_DETALLES_CanRun(ref bool result, string PersonaItemRut_Persona);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Persona_Detalles_Run(ref bool handled, string PersonaItemRut_Persona);
+        partial void PERSONAL_DETALLES_Run(ref bool handled, string PersonaItemRut_Persona);
     
         /// <summary>
-        /// Abre la pantalla ShowPersona_Detalles. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowPERSONAL_DETALLES. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowPersona_Detalles(string PersonaItemRut_Persona)
+        public void ShowPERSONAL_DETALLES(string PersonaItemRut_Persona)
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPersona_Detalles, PersonaItemRut_Persona);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_DETALLES, PersonaItemRut_Persona);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_NOROLPRIVADO_CanRun(ref bool result, global::System.Nullable<int> CODIGOPANTALLA, global::System.Nullable<int> IDAREA);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_NOROLPRIVADO_Run(ref bool handled, global::System.Nullable<int> CODIGOPANTALLA, global::System.Nullable<int> IDAREA);
+    
+        /// <summary>
+        /// Abre la pantalla ShowPERSONAL_LISTAR_NOROLPRIVADO. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowPERSONAL_LISTAR_NOROLPRIVADO(global::System.Nullable<int> CODIGOPANTALLA, global::System.Nullable<int> IDAREA)
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_LISTAR_NOROLPRIVADO, CODIGOPANTALLA, IDAREA);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_VACACIONES. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_REBAJAR_VACACIONES()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_VACACIONES);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_HORASEXTRAS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_REBAJAR_HORASEXTRAS()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_HORASEXTRAS);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_PERMISOS_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_PERMISOS_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_PERMISOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_REBAJAR_PERMISOS()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_PERMISOS);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -330,8 +360,8 @@ namespace LightSwitchApplication
 
             static DetailsClass()
             {
-                var initializeCommandEntry = global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMaster_Empleados;
-                var initializeMethodEntry = global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMaster_Empleados;
+                var initializeCommandEntry = global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowADMINISTRAR_EMPLEADOS;
+                var initializeMethodEntry = global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowADMINISTRAR_EMPLEADOS;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -380,44 +410,48 @@ namespace LightSwitchApplication
             {
                 switch (screenName)
                 {
-                    case "Master_Empleados":
-                        return global::LightSwitchApplication.Master_Empleados.CreateInstance();
-                    case "Master_Divisiones":
-                        return global::LightSwitchApplication.Master_Divisiones.CreateInstance();
-                    case "Persona_Buscar_Superior":
-                        return global::LightSwitchApplication.Persona_Buscar_Superior.CreateInstance((int)args[0], (int)args[1]);
-                    case "Persona_Crear":
-                        return global::LightSwitchApplication.Persona_Crear.CreateInstance();
-                    case "Persona_Buscar_empleado":
-                        return global::LightSwitchApplication.Persona_Buscar_empleado.CreateInstance((int)args[0]);
-                    case "SOLICITUDES_PENDIENTES":
-                        return global::LightSwitchApplication.SOLICITUDES_PENDIENTES.CreateInstance();
-                    case "SOLICITUDES_MIS":
-                        return global::LightSwitchApplication.SOLICITUDES_MIS.CreateInstance();
-                    case "Convenios_Colectivos_CrearListar":
-                        return global::LightSwitchApplication.Convenios_Colectivos_CrearListar.CreateInstance();
-                    case "Solicitudes_Crear":
-                        return global::LightSwitchApplication.Solicitudes_Crear.CreateInstance((string)args[0], (int)args[1]);
-                    case "Solicitudes_Ver_Aprobar_Rechazar":
-                        return global::LightSwitchApplication.Solicitudes_Ver_Aprobar_Rechazar.CreateInstance((int)args[0], (int)args[1], (int)args[2]);
-                    case "Divisiones_Area_Personal":
-                        return global::LightSwitchApplication.Divisiones_Area_Personal.CreateInstance((int)args[0]);
-                    case "SOLICITUDES_MIS_EMPLEADOS":
-                        return global::LightSwitchApplication.SOLICITUDES_MIS_EMPLEADOS.CreateInstance();
-                    case "Feriados_CrearListar":
-                        return global::LightSwitchApplication.Feriados_CrearListar.CreateInstance();
-                    case "SOLICITUDES_REALIZADAS":
-                        return global::LightSwitchApplication.SOLICITUDES_REALIZADAS.CreateInstance();
-                    case "VistaHEADERS":
-                        return global::LightSwitchApplication.VistaHEADERS.CreateInstance();
+                    case "ADMINISTRAR_EMPLEADOS":
+                        return global::LightSwitchApplication.ADMINISTRAR_EMPLEADOS.CreateInstance();
+                    case "ADMINISTRAR_DIVISIONES":
+                        return global::LightSwitchApplication.ADMINISTRAR_DIVISIONES.CreateInstance();
+                    case "PERSONAL_LISTAR_ROLPRIVADO":
+                        return global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO.CreateInstance((int)args[0], (int)args[1]);
+                    case "PERSONAL_CREAR_ROL_PRIVADO":
+                        return global::LightSwitchApplication.PERSONAL_CREAR_ROL_PRIVADO.CreateInstance();
+                    case "PERSONAL_BUSCAR_FIN700":
+                        return global::LightSwitchApplication.PERSONAL_BUSCAR_FIN700.CreateInstance();
+                    case "SOLICITUDES_APROBACIÓN":
+                        return global::LightSwitchApplication.SOLICITUDES_APROBACIÓN.CreateInstance();
+                    case "SOLICITUDES_MIS_SOLICITUDES":
+                        return global::LightSwitchApplication.SOLICITUDES_MIS_SOLICITUDES.CreateInstance();
+                    case "ADMINISTRAR_CONVENIOS_COLECTIVOS":
+                        return global::LightSwitchApplication.ADMINISTRAR_CONVENIOS_COLECTIVOS.CreateInstance();
+                    case "DIVISIONES_AREA_DETALLES":
+                        return global::LightSwitchApplication.DIVISIONES_AREA_DETALLES.CreateInstance((int)args[0]);
+                    case "SOLICITUDES_A_CARGO":
+                        return global::LightSwitchApplication.SOLICITUDES_A_CARGO.CreateInstance();
+                    case "ADMINISTRAR_FERIADOS":
+                        return global::LightSwitchApplication.ADMINISTRAR_FERIADOS.CreateInstance();
+                    case "X_BORRAR_TESTING_VistaHEADERS":
+                        return global::LightSwitchApplication.X_BORRAR_TESTING_VistaHEADERS.CreateInstance();
                     case "SOLICITUDES_NUEVA":
                         return global::LightSwitchApplication.SOLICITUDES_NUEVA.CreateInstance((int)args[0]);
                     case "SOLICITUDES_DETALLES":
                         return global::LightSwitchApplication.SOLICITUDES_DETALLES.CreateInstance((int)args[0]);
-                    case "CargoRolPrivado_CrearListar":
-                        return global::LightSwitchApplication.CargoRolPrivado_CrearListar.CreateInstance();
-                    case "Persona_Detalles":
-                        return global::LightSwitchApplication.Persona_Detalles.CreateInstance((string)args[0]);
+                    case "ADMINISTRAR_CARGOS_ROL_PRIVADO":
+                        return global::LightSwitchApplication.ADMINISTRAR_CARGOS_ROL_PRIVADO.CreateInstance();
+                    case "PERSONAL_DETALLES":
+                        return global::LightSwitchApplication.PERSONAL_DETALLES.CreateInstance((string)args[0]);
+                    case "PERSONAL_LISTAR_NOROLPRIVADO":
+                        return global::LightSwitchApplication.PERSONAL_LISTAR_NOROLPRIVADO.CreateInstance((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1]);
+                    case "SOLICITUDES_REBAJAR_VACACIONES":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_ADMINISTRATIVOS":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_HORASEXTRAS":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_PERMISOS":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.CreateInstance();
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -439,102 +473,147 @@ namespace LightSwitchApplication
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ClientApplicationCommandSet<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_Empleados
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_EMPLEADOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMaster_Empleados);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowADMINISTRAR_EMPLEADOS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_Divisiones
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_DIVISIONES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowMaster_Divisiones);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowADMINISTRAR_DIVISIONES);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPersona_Crear
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_CREAR_ROL_PRIVADO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPersona_Crear);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPERSONAL_CREAR_ROL_PRIVADO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_PENDIENTES
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_BUSCAR_FIN700
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_PENDIENTES);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPERSONAL_BUSCAR_FIN700);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_APROBACIÓN
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_MIS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_APROBACIÓN);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowConvenios_Colectivos_CrearListar
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS_SOLICITUDES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowConvenios_Colectivos_CrearListar);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_MIS_SOLICITUDES);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS_EMPLEADOS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_CONVENIOS_COLECTIVOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_MIS_EMPLEADOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowADMINISTRAR_CONVENIOS_COLECTIVOS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowFeriados_CrearListar
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_A_CARGO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowFeriados_CrearListar);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_A_CARGO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REALIZADAS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_FERIADOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REALIZADAS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowADMINISTRAR_FERIADOS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowVistaHEADERS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowX_BORRAR_TESTING_VistaHEADERS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowVistaHEADERS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowX_BORRAR_TESTING_VistaHEADERS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowCargoRolPrivado_CrearListar
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_CARGOS_ROL_PRIVADO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowCargoRolPrivado_CrearListar);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowADMINISTRAR_CARGOS_ROL_PRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_LISTAR_NOROLPRIVADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPERSONAL_LISTAR_NOROLPRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_HORASEXTRAS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_HORASEXTRAS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_PERMISOS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_PERMISOS);
                     }
                 }
 
@@ -547,138 +626,111 @@ namespace LightSwitchApplication
                 : global::Microsoft.LightSwitch.Details.Framework.Client.ClientApplicationMethodSet<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_Empleados
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_EMPLEADOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMaster_Empleados);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowADMINISTRAR_EMPLEADOS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowMaster_Divisiones
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_DIVISIONES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowMaster_Divisiones);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowADMINISTRAR_DIVISIONES);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPersona_Buscar_Superior
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_LISTAR_ROLPRIVADO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPersona_Buscar_Superior);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_LISTAR_ROLPRIVADO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPersona_Crear
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_CREAR_ROL_PRIVADO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPersona_Crear);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_CREAR_ROL_PRIVADO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPersona_Buscar_empleado
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_BUSCAR_FIN700
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPersona_Buscar_empleado);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_BUSCAR_FIN700);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_PENDIENTES
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_APROBACIÓN
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_PENDIENTES);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_APROBACIÓN);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS_SOLICITUDES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_MIS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_MIS_SOLICITUDES);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowConvenios_Colectivos_CrearListar
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_CONVENIOS_COLECTIVOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowConvenios_Colectivos_CrearListar);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowADMINISTRAR_CONVENIOS_COLECTIVOS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSolicitudes_Crear
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowDIVISIONES_AREA_DETALLES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSolicitudes_Crear);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowDIVISIONES_AREA_DETALLES);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSolicitudes_Ver_Aprobar_Rechazar
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_A_CARGO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSolicitudes_Ver_Aprobar_Rechazar);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_A_CARGO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowDivisiones_Area_Personal
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_FERIADOS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowDivisiones_Area_Personal);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowADMINISTRAR_FERIADOS);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_MIS_EMPLEADOS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowX_BORRAR_TESTING_VistaHEADERS
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_MIS_EMPLEADOS);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowFeriados_CrearListar
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowFeriados_CrearListar);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REALIZADAS
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REALIZADAS);
-                    }
-                }
-
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowVistaHEADERS
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowVistaHEADERS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowX_BORRAR_TESTING_VistaHEADERS);
                     }
                 }
 
@@ -700,21 +752,66 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowCargoRolPrivado_CrearListar
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowADMINISTRAR_CARGOS_ROL_PRIVADO
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowCargoRolPrivado_CrearListar);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowADMINISTRAR_CARGOS_ROL_PRIVADO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPersona_Detalles
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_DETALLES
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPersona_Detalles);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_DETALLES);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_LISTAR_NOROLPRIVADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_LISTAR_NOROLPRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_HORASEXTRAS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_HORASEXTRAS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_PERMISOS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_PERMISOS);
                     }
                 }
 
@@ -735,157 +832,227 @@ namespace LightSwitchApplication
             {
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_Empleados = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_Empleados",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_Empleados_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_Empleados_CreateExecutableObject);
-                private static void _ShowMaster_Empleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_EMPLEADOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_EMPLEADOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_EMPLEADOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_EMPLEADOS_CreateExecutableObject);
+                private static void _ShowADMINISTRAR_EMPLEADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_EmpleadosCommand, sf);
+                    c(d, ref d._ShowADMINISTRAR_EMPLEADOSCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowMaster_Empleados_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowADMINISTRAR_EMPLEADOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowMaster_Empleados.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_Divisiones = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_Divisiones",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_Divisiones_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowMaster_Divisiones_CreateExecutableObject);
-                private static void _ShowMaster_Divisiones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowMaster_DivisionesCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowMaster_Divisiones_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowMaster_Divisiones.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowADMINISTRAR_EMPLEADOS.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPersona_Crear = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPersona_Crear",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPersona_Crear_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPersona_Crear_CreateExecutableObject);
-                private static void _ShowPersona_Crear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_DIVISIONES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_DIVISIONES",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_DIVISIONES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_DIVISIONES_CreateExecutableObject);
+                private static void _ShowADMINISTRAR_DIVISIONES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPersona_CrearCommand, sf);
+                    c(d, ref d._ShowADMINISTRAR_DIVISIONESCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowPersona_Crear_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowADMINISTRAR_DIVISIONES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPersona_Crear.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_PENDIENTES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_PENDIENTES",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_PENDIENTES_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_PENDIENTES_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_PENDIENTES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowSOLICITUDES_PENDIENTESCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_PENDIENTES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_PENDIENTES.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowADMINISTRAR_DIVISIONES.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_MIS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_MIS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_MIS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_CREAR_ROL_PRIVADO = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_CREAR_ROL_PRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_CREAR_ROL_PRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_CREAR_ROL_PRIVADO_CreateExecutableObject);
+                private static void _ShowPERSONAL_CREAR_ROL_PRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_MISCommand, sf);
+                    c(d, ref d._ShowPERSONAL_CREAR_ROL_PRIVADOCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_MIS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPERSONAL_CREAR_ROL_PRIVADO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_MIS.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowConvenios_Colectivos_CrearListar = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowConvenios_Colectivos_CrearListar",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowConvenios_Colectivos_CrearListar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowConvenios_Colectivos_CrearListar_CreateExecutableObject);
-                private static void _ShowConvenios_Colectivos_CrearListar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowConvenios_Colectivos_CrearListarCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowConvenios_Colectivos_CrearListar_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowConvenios_Colectivos_CrearListar.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPERSONAL_CREAR_ROL_PRIVADO.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_MIS_EMPLEADOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_MIS_EMPLEADOS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_MIS_EMPLEADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_BUSCAR_FIN700 = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_BUSCAR_FIN700",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_BUSCAR_FIN700_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_BUSCAR_FIN700_CreateExecutableObject);
+                private static void _ShowPERSONAL_BUSCAR_FIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_MIS_EMPLEADOSCommand, sf);
+                    c(d, ref d._ShowPERSONAL_BUSCAR_FIN700Command, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_MIS_EMPLEADOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPERSONAL_BUSCAR_FIN700_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_MIS_EMPLEADOS.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowFeriados_CrearListar = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowFeriados_CrearListar",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowFeriados_CrearListar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowFeriados_CrearListar_CreateExecutableObject);
-                private static void _ShowFeriados_CrearListar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowFeriados_CrearListarCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowFeriados_CrearListar_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowFeriados_CrearListar.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPERSONAL_BUSCAR_FIN700.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REALIZADAS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REALIZADAS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REALIZADAS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REALIZADAS_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_REALIZADAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_APROBACIÓN = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_APROBACIÓN",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_APROBACIÓN_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_APROBACIÓN_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_APROBACIÓN_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REALIZADASCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_APROBACIÓNCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REALIZADAS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_APROBACIÓN_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REALIZADAS.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowVistaHEADERS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowVistaHEADERS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowVistaHEADERS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowVistaHEADERS_CreateExecutableObject);
-                private static void _ShowVistaHEADERS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowVistaHEADERSCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowVistaHEADERS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowVistaHEADERS.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_APROBACIÓN.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowCargoRolPrivado_CrearListar = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowCargoRolPrivado_CrearListar",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowCargoRolPrivado_CrearListar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowCargoRolPrivado_CrearListar_CreateExecutableObject);
-                private static void _ShowCargoRolPrivado_CrearListar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_MIS_SOLICITUDES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_MIS_SOLICITUDES",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_SOLICITUDES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_MIS_SOLICITUDES_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_MIS_SOLICITUDES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowCargoRolPrivado_CrearListarCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_MIS_SOLICITUDESCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowCargoRolPrivado_CrearListar_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_MIS_SOLICITUDES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowCargoRolPrivado_CrearListar.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_MIS_SOLICITUDES.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowADMINISTRAR_CONVENIOS_COLECTIVOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_CONVENIOS_COLECTIVOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_CONVENIOS_COLECTIVOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_CONVENIOS_COLECTIVOS_CreateExecutableObject);
+                private static void _ShowADMINISTRAR_CONVENIOS_COLECTIVOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowADMINISTRAR_CONVENIOS_COLECTIVOSCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowADMINISTRAR_CONVENIOS_COLECTIVOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowADMINISTRAR_CONVENIOS_COLECTIVOS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_A_CARGO = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_A_CARGO",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_A_CARGO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_A_CARGO_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_A_CARGO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_A_CARGOCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_A_CARGO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_A_CARGO.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowADMINISTRAR_FERIADOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_FERIADOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_FERIADOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_FERIADOS_CreateExecutableObject);
+                private static void _ShowADMINISTRAR_FERIADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowADMINISTRAR_FERIADOSCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowADMINISTRAR_FERIADOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowADMINISTRAR_FERIADOS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowX_BORRAR_TESTING_VistaHEADERS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowX_BORRAR_TESTING_VistaHEADERS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_CreateExecutableObject);
+                private static void _ShowX_BORRAR_TESTING_VistaHEADERS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowX_BORRAR_TESTING_VistaHEADERSCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowX_BORRAR_TESTING_VistaHEADERS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowX_BORRAR_TESTING_VistaHEADERS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowADMINISTRAR_CARGOS_ROL_PRIVADO = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_CARGOS_ROL_PRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_CARGOS_ROL_PRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowADMINISTRAR_CARGOS_ROL_PRIVADO_CreateExecutableObject);
+                private static void _ShowADMINISTRAR_CARGOS_ROL_PRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowADMINISTRAR_CARGOS_ROL_PRIVADOCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowADMINISTRAR_CARGOS_ROL_PRIVADO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowADMINISTRAR_CARGOS_ROL_PRIVADO.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPERSONAL_LISTAR_NOROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_LISTAR_NOROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_LISTAR_NOROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_LISTAR_NOROLPRIVADO_CreateExecutableObject);
+                private static void _ShowPERSONAL_LISTAR_NOROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPERSONAL_LISTAR_NOROLPRIVADOCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPERSONAL_LISTAR_NOROLPRIVADO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPERSONAL_LISTAR_NOROLPRIVADO.CreateInvocation(new object[2]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_VACACIONES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_VACACIONES",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONESCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_VACACIONES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_VACACIONES.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_HORASEXTRAS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_HORASEXTRAS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_HORASEXTRASCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_HORASEXTRAS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_PERMISOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_PERMISOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_PERMISOSCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_PERMISOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_PERMISOS.CreateInvocation(new object[0]);
                 }
 
             }
@@ -897,392 +1064,314 @@ namespace LightSwitchApplication
             {
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_Empleados = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_Empleados",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_Empleados_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_Empleados_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_Empleados_InvokeMethod);
-                private static void _ShowMaster_Empleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_EMPLEADOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_EMPLEADOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_EMPLEADOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_EMPLEADOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_EMPLEADOS_InvokeMethod);
+                private static void _ShowADMINISTRAR_EMPLEADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_EmpleadosMethod, sf);
+                    c(d, ref d._ShowADMINISTRAR_EMPLEADOSMethod, sf);
                 }
-                private static global::System.Exception _ShowMaster_Empleados_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowADMINISTRAR_EMPLEADOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Master_Empleados_CanRun(ref result);
+                    d.Application.ADMINISTRAR_EMPLEADOS_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowMaster_Empleados_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowADMINISTRAR_EMPLEADOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Master_Empleados_Run(ref handled);
+                    d.Application.ADMINISTRAR_EMPLEADOS_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Master_Empleados", () => global::LightSwitchApplication.Master_Empleados.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:ADMINISTRAR_EMPLEADOS", () => global::LightSwitchApplication.ADMINISTRAR_EMPLEADOS.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowMaster_Divisiones = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowMaster_Divisiones",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_Divisiones_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_Divisiones_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowMaster_Divisiones_InvokeMethod);
-                private static void _ShowMaster_Divisiones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_DIVISIONES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_DIVISIONES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_DIVISIONES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_DIVISIONES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_DIVISIONES_InvokeMethod);
+                private static void _ShowADMINISTRAR_DIVISIONES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowMaster_DivisionesMethod, sf);
+                    c(d, ref d._ShowADMINISTRAR_DIVISIONESMethod, sf);
                 }
-                private static global::System.Exception _ShowMaster_Divisiones_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowADMINISTRAR_DIVISIONES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Master_Divisiones_CanRun(ref result);
+                    d.Application.ADMINISTRAR_DIVISIONES_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowMaster_Divisiones_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowADMINISTRAR_DIVISIONES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Master_Divisiones_Run(ref handled);
+                    d.Application.ADMINISTRAR_DIVISIONES_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Master_Divisiones", () => global::LightSwitchApplication.Master_Divisiones.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:ADMINISTRAR_DIVISIONES", () => global::LightSwitchApplication.ADMINISTRAR_DIVISIONES.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPersona_Buscar_Superior = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPersona_Buscar_Superior",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Buscar_Superior_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Buscar_Superior_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Buscar_Superior_InvokeMethod);
-                private static void _ShowPersona_Buscar_Superior_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_LISTAR_ROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_LISTAR_ROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_InvokeMethod);
+                private static void _ShowPERSONAL_LISTAR_ROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPersona_Buscar_SuperiorMethod, sf);
+                    c(d, ref d._ShowPERSONAL_LISTAR_ROLPRIVADOMethod, sf);
                 }
-                private static global::System.Exception _ShowPersona_Buscar_Superior_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowPERSONAL_LISTAR_ROLPRIVADO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Persona_Buscar_Superior_CanRun(ref result, (int)args[0], (int)args[1]);
+                    d.Application.PERSONAL_LISTAR_ROLPRIVADO_CanRun(ref result, (int)args[0], (int)args[1]);
                     return result ? null : ex;
                 }
-                private static void _ShowPersona_Buscar_Superior_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowPERSONAL_LISTAR_ROLPRIVADO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Persona_Buscar_Superior_Run(ref handled, (int)args[0], (int)args[1]);
+                    d.Application.PERSONAL_LISTAR_ROLPRIVADO_Run(ref handled, (int)args[0], (int)args[1]);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Persona_Buscar_Superior", () => global::LightSwitchApplication.Persona_Buscar_Superior.CreateInstance((int)args[0], (int)args[1]), args);
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_LISTAR_ROLPRIVADO", () => global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO.CreateInstance((int)args[0], (int)args[1]), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPersona_Crear = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPersona_Crear",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Crear_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Crear_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Crear_InvokeMethod);
-                private static void _ShowPersona_Crear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_CREAR_ROL_PRIVADO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_CREAR_ROL_PRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_CREAR_ROL_PRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_CREAR_ROL_PRIVADO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_CREAR_ROL_PRIVADO_InvokeMethod);
+                private static void _ShowPERSONAL_CREAR_ROL_PRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPersona_CrearMethod, sf);
+                    c(d, ref d._ShowPERSONAL_CREAR_ROL_PRIVADOMethod, sf);
                 }
-                private static global::System.Exception _ShowPersona_Crear_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowPERSONAL_CREAR_ROL_PRIVADO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Persona_Crear_CanRun(ref result);
+                    d.Application.PERSONAL_CREAR_ROL_PRIVADO_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowPersona_Crear_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowPERSONAL_CREAR_ROL_PRIVADO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Persona_Crear_Run(ref handled);
+                    d.Application.PERSONAL_CREAR_ROL_PRIVADO_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Persona_Crear", () => global::LightSwitchApplication.Persona_Crear.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_CREAR_ROL_PRIVADO", () => global::LightSwitchApplication.PERSONAL_CREAR_ROL_PRIVADO.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPersona_Buscar_empleado = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPersona_Buscar_empleado",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Buscar_empleado_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Buscar_empleado_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Buscar_empleado_InvokeMethod);
-                private static void _ShowPersona_Buscar_empleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_BUSCAR_FIN700 = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_BUSCAR_FIN700",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_BUSCAR_FIN700_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_BUSCAR_FIN700_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_BUSCAR_FIN700_InvokeMethod);
+                private static void _ShowPERSONAL_BUSCAR_FIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPersona_Buscar_empleadoMethod, sf);
+                    c(d, ref d._ShowPERSONAL_BUSCAR_FIN700Method, sf);
                 }
-                private static global::System.Exception _ShowPersona_Buscar_empleado_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowPERSONAL_BUSCAR_FIN700_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Persona_Buscar_empleado_CanRun(ref result, (int)args[0]);
+                    d.Application.PERSONAL_BUSCAR_FIN700_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowPersona_Buscar_empleado_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowPERSONAL_BUSCAR_FIN700_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Persona_Buscar_empleado_Run(ref handled, (int)args[0]);
+                    d.Application.PERSONAL_BUSCAR_FIN700_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Persona_Buscar_empleado", () => global::LightSwitchApplication.Persona_Buscar_empleado.CreateInstance((int)args[0]), args);
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_BUSCAR_FIN700", () => global::LightSwitchApplication.PERSONAL_BUSCAR_FIN700.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_PENDIENTES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_PENDIENTES",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_PENDIENTES_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_PENDIENTES_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_PENDIENTES_InvokeMethod);
-                private static void _ShowSOLICITUDES_PENDIENTES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_APROBACIÓN = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_APROBACIÓN",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_APROBACIÓN_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_APROBACIÓN_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_APROBACIÓN_InvokeMethod);
+                private static void _ShowSOLICITUDES_APROBACIÓN_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_PENDIENTESMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_APROBACIÓNMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_PENDIENTES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_APROBACIÓN_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_PENDIENTES_CanRun(ref result);
+                    d.Application.SOLICITUDES_APROBACIÓN_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_PENDIENTES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_APROBACIÓN_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_PENDIENTES_Run(ref handled);
+                    d.Application.SOLICITUDES_APROBACIÓN_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_PENDIENTES", () => global::LightSwitchApplication.SOLICITUDES_PENDIENTES.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_APROBACIÓN", () => global::LightSwitchApplication.SOLICITUDES_APROBACIÓN.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_MIS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_MIS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_InvokeMethod);
-                private static void _ShowSOLICITUDES_MIS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_MIS_SOLICITUDES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_MIS_SOLICITUDES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_SOLICITUDES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_SOLICITUDES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_SOLICITUDES_InvokeMethod);
+                private static void _ShowSOLICITUDES_MIS_SOLICITUDES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_MISMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_MIS_SOLICITUDESMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_MIS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_MIS_SOLICITUDES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_MIS_CanRun(ref result);
+                    d.Application.SOLICITUDES_MIS_SOLICITUDES_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_MIS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_MIS_SOLICITUDES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_MIS_Run(ref handled);
+                    d.Application.SOLICITUDES_MIS_SOLICITUDES_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_MIS", () => global::LightSwitchApplication.SOLICITUDES_MIS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_MIS_SOLICITUDES", () => global::LightSwitchApplication.SOLICITUDES_MIS_SOLICITUDES.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowConvenios_Colectivos_CrearListar = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowConvenios_Colectivos_CrearListar",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowConvenios_Colectivos_CrearListar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowConvenios_Colectivos_CrearListar_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowConvenios_Colectivos_CrearListar_InvokeMethod);
-                private static void _ShowConvenios_Colectivos_CrearListar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_CONVENIOS_COLECTIVOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_CONVENIOS_COLECTIVOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_CONVENIOS_COLECTIVOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_CONVENIOS_COLECTIVOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_CONVENIOS_COLECTIVOS_InvokeMethod);
+                private static void _ShowADMINISTRAR_CONVENIOS_COLECTIVOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowConvenios_Colectivos_CrearListarMethod, sf);
+                    c(d, ref d._ShowADMINISTRAR_CONVENIOS_COLECTIVOSMethod, sf);
                 }
-                private static global::System.Exception _ShowConvenios_Colectivos_CrearListar_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowADMINISTRAR_CONVENIOS_COLECTIVOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Convenios_Colectivos_CrearListar_CanRun(ref result);
+                    d.Application.ADMINISTRAR_CONVENIOS_COLECTIVOS_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowConvenios_Colectivos_CrearListar_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowADMINISTRAR_CONVENIOS_COLECTIVOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Convenios_Colectivos_CrearListar_Run(ref handled);
+                    d.Application.ADMINISTRAR_CONVENIOS_COLECTIVOS_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Convenios_Colectivos_CrearListar", () => global::LightSwitchApplication.Convenios_Colectivos_CrearListar.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:ADMINISTRAR_CONVENIOS_COLECTIVOS", () => global::LightSwitchApplication.ADMINISTRAR_CONVENIOS_COLECTIVOS.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSolicitudes_Crear = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSolicitudes_Crear",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Crear_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Crear_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Crear_InvokeMethod);
-                private static void _ShowSolicitudes_Crear_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowDIVISIONES_AREA_DETALLES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowDIVISIONES_AREA_DETALLES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowDIVISIONES_AREA_DETALLES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowDIVISIONES_AREA_DETALLES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowDIVISIONES_AREA_DETALLES_InvokeMethod);
+                private static void _ShowDIVISIONES_AREA_DETALLES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSolicitudes_CrearMethod, sf);
+                    c(d, ref d._ShowDIVISIONES_AREA_DETALLESMethod, sf);
                 }
-                private static global::System.Exception _ShowSolicitudes_Crear_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowDIVISIONES_AREA_DETALLES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Solicitudes_Crear_CanRun(ref result, (string)args[0], (int)args[1]);
+                    d.Application.DIVISIONES_AREA_DETALLES_CanRun(ref result, (int)args[0]);
                     return result ? null : ex;
                 }
-                private static void _ShowSolicitudes_Crear_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowDIVISIONES_AREA_DETALLES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Solicitudes_Crear_Run(ref handled, (string)args[0], (int)args[1]);
+                    d.Application.DIVISIONES_AREA_DETALLES_Run(ref handled, (int)args[0]);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Solicitudes_Crear", () => global::LightSwitchApplication.Solicitudes_Crear.CreateInstance((string)args[0], (int)args[1]), args);
+                        d.ShowScreen("LightSwitchApplication:DIVISIONES_AREA_DETALLES", () => global::LightSwitchApplication.DIVISIONES_AREA_DETALLES.CreateInstance((int)args[0]), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSolicitudes_Ver_Aprobar_Rechazar = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSolicitudes_Ver_Aprobar_Rechazar",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Ver_Aprobar_Rechazar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Ver_Aprobar_Rechazar_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSolicitudes_Ver_Aprobar_Rechazar_InvokeMethod);
-                private static void _ShowSolicitudes_Ver_Aprobar_Rechazar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_A_CARGO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_A_CARGO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_A_CARGO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_A_CARGO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_A_CARGO_InvokeMethod);
+                private static void _ShowSOLICITUDES_A_CARGO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSolicitudes_Ver_Aprobar_RechazarMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_A_CARGOMethod, sf);
                 }
-                private static global::System.Exception _ShowSolicitudes_Ver_Aprobar_Rechazar_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_A_CARGO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Solicitudes_Ver_Aprobar_Rechazar_CanRun(ref result, (int)args[0], (int)args[1], (int)args[2]);
+                    d.Application.SOLICITUDES_A_CARGO_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSolicitudes_Ver_Aprobar_Rechazar_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_A_CARGO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Solicitudes_Ver_Aprobar_Rechazar_Run(ref handled, (int)args[0], (int)args[1], (int)args[2]);
+                    d.Application.SOLICITUDES_A_CARGO_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Solicitudes_Ver_Aprobar_Rechazar", () => global::LightSwitchApplication.Solicitudes_Ver_Aprobar_Rechazar.CreateInstance((int)args[0], (int)args[1], (int)args[2]), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_A_CARGO", () => global::LightSwitchApplication.SOLICITUDES_A_CARGO.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowDivisiones_Area_Personal = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowDivisiones_Area_Personal",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowDivisiones_Area_Personal_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowDivisiones_Area_Personal_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowDivisiones_Area_Personal_InvokeMethod);
-                private static void _ShowDivisiones_Area_Personal_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_FERIADOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_FERIADOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_FERIADOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_FERIADOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_FERIADOS_InvokeMethod);
+                private static void _ShowADMINISTRAR_FERIADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowDivisiones_Area_PersonalMethod, sf);
+                    c(d, ref d._ShowADMINISTRAR_FERIADOSMethod, sf);
                 }
-                private static global::System.Exception _ShowDivisiones_Area_Personal_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowADMINISTRAR_FERIADOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Divisiones_Area_Personal_CanRun(ref result, (int)args[0]);
+                    d.Application.ADMINISTRAR_FERIADOS_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowDivisiones_Area_Personal_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowADMINISTRAR_FERIADOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Divisiones_Area_Personal_Run(ref handled, (int)args[0]);
+                    d.Application.ADMINISTRAR_FERIADOS_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Divisiones_Area_Personal", () => global::LightSwitchApplication.Divisiones_Area_Personal.CreateInstance((int)args[0]), args);
+                        d.ShowScreen("LightSwitchApplication:ADMINISTRAR_FERIADOS", () => global::LightSwitchApplication.ADMINISTRAR_FERIADOS.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_MIS_EMPLEADOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_MIS_EMPLEADOS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_MIS_EMPLEADOS_InvokeMethod);
-                private static void _ShowSOLICITUDES_MIS_EMPLEADOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowX_BORRAR_TESTING_VistaHEADERS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowX_BORRAR_TESTING_VistaHEADERS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_InvokeMethod);
+                private static void _ShowX_BORRAR_TESTING_VistaHEADERS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_MIS_EMPLEADOSMethod, sf);
+                    c(d, ref d._ShowX_BORRAR_TESTING_VistaHEADERSMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_MIS_EMPLEADOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowX_BORRAR_TESTING_VistaHEADERS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_MIS_EMPLEADOS_CanRun(ref result);
+                    d.Application.X_BORRAR_TESTING_VistaHEADERS_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_MIS_EMPLEADOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowX_BORRAR_TESTING_VistaHEADERS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_MIS_EMPLEADOS_Run(ref handled);
+                    d.Application.X_BORRAR_TESTING_VistaHEADERS_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_MIS_EMPLEADOS", () => global::LightSwitchApplication.SOLICITUDES_MIS_EMPLEADOS.CreateInstance(), args);
-                    }
-                }
- 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowFeriados_CrearListar = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowFeriados_CrearListar",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowFeriados_CrearListar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowFeriados_CrearListar_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowFeriados_CrearListar_InvokeMethod);
-                private static void _ShowFeriados_CrearListar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowFeriados_CrearListarMethod, sf);
-                }
-                private static global::System.Exception _ShowFeriados_CrearListar_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
-                {
-                    bool result = true;
-                    d.Application.Feriados_CrearListar_CanRun(ref result);
-                    return result ? null : ex;
-                }
-                private static void _ShowFeriados_CrearListar_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
-                {
-                    bool handled = false;
-                    d.Application.Feriados_CrearListar_Run(ref handled);
-                    if (!handled)
-                    {
-                        d.ShowScreen("LightSwitchApplication:Feriados_CrearListar", () => global::LightSwitchApplication.Feriados_CrearListar.CreateInstance(), args);
-                    }
-                }
- 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REALIZADAS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REALIZADAS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REALIZADAS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REALIZADAS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REALIZADAS_InvokeMethod);
-                private static void _ShowSOLICITUDES_REALIZADAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowSOLICITUDES_REALIZADASMethod, sf);
-                }
-                private static global::System.Exception _ShowSOLICITUDES_REALIZADAS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
-                {
-                    bool result = true;
-                    d.Application.SOLICITUDES_REALIZADAS_CanRun(ref result);
-                    return result ? null : ex;
-                }
-                private static void _ShowSOLICITUDES_REALIZADAS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
-                {
-                    bool handled = false;
-                    d.Application.SOLICITUDES_REALIZADAS_Run(ref handled);
-                    if (!handled)
-                    {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REALIZADAS", () => global::LightSwitchApplication.SOLICITUDES_REALIZADAS.CreateInstance(), args);
-                    }
-                }
- 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowVistaHEADERS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowVistaHEADERS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowVistaHEADERS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowVistaHEADERS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowVistaHEADERS_InvokeMethod);
-                private static void _ShowVistaHEADERS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowVistaHEADERSMethod, sf);
-                }
-                private static global::System.Exception _ShowVistaHEADERS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
-                {
-                    bool result = true;
-                    d.Application.VistaHEADERS_CanRun(ref result);
-                    return result ? null : ex;
-                }
-                private static void _ShowVistaHEADERS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
-                {
-                    bool handled = false;
-                    d.Application.VistaHEADERS_Run(ref handled);
-                    if (!handled)
-                    {
-                        d.ShowScreen("LightSwitchApplication:VistaHEADERS", () => global::LightSwitchApplication.VistaHEADERS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:X_BORRAR_TESTING_VistaHEADERS", () => global::LightSwitchApplication.X_BORRAR_TESTING_VistaHEADERS.CreateInstance(), args);
                     }
                 }
  
@@ -1339,118 +1428,262 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowCargoRolPrivado_CrearListar = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowCargoRolPrivado_CrearListar",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowCargoRolPrivado_CrearListar_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowCargoRolPrivado_CrearListar_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowCargoRolPrivado_CrearListar_InvokeMethod);
-                private static void _ShowCargoRolPrivado_CrearListar_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowADMINISTRAR_CARGOS_ROL_PRIVADO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowADMINISTRAR_CARGOS_ROL_PRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_CARGOS_ROL_PRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_CARGOS_ROL_PRIVADO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowADMINISTRAR_CARGOS_ROL_PRIVADO_InvokeMethod);
+                private static void _ShowADMINISTRAR_CARGOS_ROL_PRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowCargoRolPrivado_CrearListarMethod, sf);
+                    c(d, ref d._ShowADMINISTRAR_CARGOS_ROL_PRIVADOMethod, sf);
                 }
-                private static global::System.Exception _ShowCargoRolPrivado_CrearListar_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowADMINISTRAR_CARGOS_ROL_PRIVADO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.CargoRolPrivado_CrearListar_CanRun(ref result);
+                    d.Application.ADMINISTRAR_CARGOS_ROL_PRIVADO_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowCargoRolPrivado_CrearListar_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowADMINISTRAR_CARGOS_ROL_PRIVADO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.CargoRolPrivado_CrearListar_Run(ref handled);
+                    d.Application.ADMINISTRAR_CARGOS_ROL_PRIVADO_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:CargoRolPrivado_CrearListar", () => global::LightSwitchApplication.CargoRolPrivado_CrearListar.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:ADMINISTRAR_CARGOS_ROL_PRIVADO", () => global::LightSwitchApplication.ADMINISTRAR_CARGOS_ROL_PRIVADO.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPersona_Detalles = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPersona_Detalles",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Detalles_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Detalles_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPersona_Detalles_InvokeMethod);
-                private static void _ShowPersona_Detalles_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_DETALLES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_DETALLES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_DETALLES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_DETALLES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_DETALLES_InvokeMethod);
+                private static void _ShowPERSONAL_DETALLES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPersona_DetallesMethod, sf);
+                    c(d, ref d._ShowPERSONAL_DETALLESMethod, sf);
                 }
-                private static global::System.Exception _ShowPersona_Detalles_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowPERSONAL_DETALLES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.Persona_Detalles_CanRun(ref result, (string)args[0]);
+                    d.Application.PERSONAL_DETALLES_CanRun(ref result, (string)args[0]);
                     return result ? null : ex;
                 }
-                private static void _ShowPersona_Detalles_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowPERSONAL_DETALLES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.Persona_Detalles_Run(ref handled, (string)args[0]);
+                    d.Application.PERSONAL_DETALLES_Run(ref handled, (string)args[0]);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:Persona_Detalles", () => global::LightSwitchApplication.Persona_Detalles.CreateInstance((string)args[0]), args);
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_DETALLES", () => global::LightSwitchApplication.PERSONAL_DETALLES.CreateInstance((string)args[0]), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPERSONAL_LISTAR_NOROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_LISTAR_NOROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_NOROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_NOROLPRIVADO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_NOROLPRIVADO_InvokeMethod);
+                private static void _ShowPERSONAL_LISTAR_NOROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPERSONAL_LISTAR_NOROLPRIVADOMethod, sf);
+                }
+                private static global::System.Exception _ShowPERSONAL_LISTAR_NOROLPRIVADO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.PERSONAL_LISTAR_NOROLPRIVADO_CanRun(ref result, (global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1]);
+                    return result ? null : ex;
+                }
+                private static void _ShowPERSONAL_LISTAR_NOROLPRIVADO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.PERSONAL_LISTAR_NOROLPRIVADO_Run(ref handled, (global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1]);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_LISTAR_NOROLPRIVADO", () => global::LightSwitchApplication.PERSONAL_LISTAR_NOROLPRIVADO.CreateInstance((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1]), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_VACACIONES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_VACACIONES",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONESMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_VACACIONES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_HORASEXTRAS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_HORASEXTRAS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_HORASEXTRASMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_REBAJAR_HORASEXTRAS_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_REBAJAR_HORASEXTRAS_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_HORASEXTRAS", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_PERMISOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_PERMISOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_PERMISOSMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_PERMISOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_REBAJAR_PERMISOS_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_REBAJAR_PERMISOS_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_PERMISOS", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.CreateInstance(), args);
                     }
                 }
  
             }
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_EmpleadosMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOSMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_DivisionesMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_DIVISIONESMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_Buscar_SuperiorMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_ROLPRIVADOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_CrearMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_CREAR_ROL_PRIVADOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_Buscar_empleadoMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_BUSCAR_FIN700Method;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_PENDIENTESMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_APROBACIÓNMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MISMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MIS_SOLICITUDESMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowConvenios_Colectivos_CrearListarMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_CONVENIOS_COLECTIVOSMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSolicitudes_CrearMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowDIVISIONES_AREA_DETALLESMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSolicitudes_Ver_Aprobar_RechazarMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_A_CARGOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowDivisiones_Area_PersonalMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_FERIADOSMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MIS_EMPLEADOSMethod;
-
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowFeriados_CrearListarMethod;
-
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REALIZADASMethod;
-
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowVistaHEADERSMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowX_BORRAR_TESTING_VistaHEADERSMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_NUEVAMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_DETALLESMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowCargoRolPrivado_CrearListarMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_CARGOS_ROL_PRIVADOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_DetallesMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_DETALLESMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_EmpleadosCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_NOROLPRIVADOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowMaster_DivisionesCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONESMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPersona_CrearCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_PENDIENTESCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRASMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MISCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOSMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowConvenios_Colectivos_CrearListarCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOSCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MIS_EMPLEADOSCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_DIVISIONESCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowFeriados_CrearListarCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_CREAR_ROL_PRIVADOCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REALIZADASCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_BUSCAR_FIN700Command;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowVistaHEADERSCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_APROBACIÓNCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowCargoRolPrivado_CrearListarCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_MIS_SOLICITUDESCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_CONVENIOS_COLECTIVOSCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_A_CARGOCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_FERIADOSCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowX_BORRAR_TESTING_VistaHEADERSCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_CARGOS_ROL_PRIVADOCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_NOROLPRIVADOCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONESCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRASCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOSCommand;
 
         }
     }

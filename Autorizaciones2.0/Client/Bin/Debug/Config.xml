@@ -24,4 +24,4 @@
     <ExtensionAssembly>Microsoft.LightSwitch.Cosmopolitan.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
     <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
   <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Design.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</ExtensionAssembly></ExtensionAssemblies>
-<ApplicationCulture>es</ApplicationCulture><ManifestTimeStamp>131021355523368484</ManifestTimeStamp><ApplicationName>AUTORIZACIONES_ADMINS</ApplicationName><Version>1.0.24.0</Version><RootProjectGuid>7c1bb8e4-500d-401e-9676-c104c8afee3b</RootProjectGuid></Configuration>
+<ApplicationCulture>es</ApplicationCulture><ManifestTimeStamp>131026510301073176</ManifestTimeStamp><ApplicationName>AUTORIZACIONES_ADMINS</ApplicationName><Version>1.0.24.0</Version><RootProjectGuid>7c1bb8e4-500d-401e-9676-c104c8afee3b</RootProjectGuid></Configuration>
