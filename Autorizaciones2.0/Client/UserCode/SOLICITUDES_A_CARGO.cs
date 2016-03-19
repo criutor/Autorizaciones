@@ -153,6 +153,10 @@ namespace LightSwitchApplication
 
                             this.Rechazada = false; this.Completada = false; this.Cancelada = true;  }
                         else
+                            if (FiltroEstados == "Caducadas") { this.Caducada = true; }
+                            else
+                                if (FiltroEstados == "Rebajadas") { this.Rebajada = true; }
+                                else
             if (FiltroEstados == "Todos los estados") 
                         {
                         

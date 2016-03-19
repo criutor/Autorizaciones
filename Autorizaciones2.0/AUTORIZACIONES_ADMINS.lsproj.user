@@ -4,8 +4,8 @@
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
     <ServerPort>49918</ServerPort>
-    <SchemaManagementSchemaBuildState>1</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635937744824696399</SchemaManagementLastModelWriteTime>
+    <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
+    <SchemaManagementLastModelWriteTime>635938505011004760</SchemaManagementLastModelWriteTime>
     <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration</GrantedPermissions>
     <Name>AUTORIZACIONES_ADMINS.user</Name>
     <EncryptedPublishConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzjghx5OH5kqgsYcjCas5LQAAAAACAAAAAAADZgAAwAAAABAAAACvRT9hTkiEoLUCLuMZ7Wq9AAAAAASAAACgAAAAEAAAADwArMYV6MNOfTtk2W9Rtd+4AAAAyVSLpz0hXlXy9edB2i44pZiUz5xox3WgoC3ZFjeJPAB/Zdb93F752taPS+hB5bVCJjCTJLYQl1liYJKUaG53v1MrLbFqt63elO/OLobBUy8vXqmtozUgWpTTehFamS9iOxeq0osySxA75+edcx7r+PWCqVstEsxibs4Vlq8G4e2Gxep74cIRkQFbSruLdUdYS+QNNvVD1d0m+M+k/sFZyfXqLafB7Ghb/9ig/acj3U52GzxTzGunmxQAAABa1W1v0oC4cqSyWug2D+6YJ1EEDQ==</EncryptedPublishConnectionString>

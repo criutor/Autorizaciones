@@ -2974,37 +2974,120 @@
                                 NodeType="Or">
                                 <BinaryExpression.Left>
                                   <BinaryExpression
-                                    NodeType="And">
+                                    NodeType="Or">
                                     <BinaryExpression.Left>
                                       <BinaryExpression
-                                        NodeType="And">
+                                        NodeType="Or">
                                         <BinaryExpression.Left>
                                           <BinaryExpression
-                                            NodeType="Equal">
+                                            NodeType="And">
                                             <BinaryExpression.Left>
-                                              <ChainExpression>
-                                                <MemberExpression
-                                                  Member="Completada" />
-                                              </ChainExpression>
+                                              <BinaryExpression
+                                                NodeType="And">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="Completada" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="Completada" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="Rechazada" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="Rechazada" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
-                                              <ParameterExpression
-                                                Parameter="Completada" />
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="Cancelada" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="Cancelada" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
                                           <BinaryExpression
-                                            NodeType="Equal">
+                                            NodeType="And">
+                                            <BinaryExpression.Attributes>
+                                              <ExpressionGroup />
+                                            </BinaryExpression.Attributes>
                                             <BinaryExpression.Left>
-                                              <ChainExpression>
-                                                <MemberExpression
-                                                  Member="Rechazada" />
-                                              </ChainExpression>
+                                              <BinaryExpression
+                                                NodeType="And">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="Completada" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="Falso" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="Equal">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="Rechazada" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ParameterExpression
+                                                        Parameter="Falso" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
-                                              <ParameterExpression
-                                                Parameter="Rechazada" />
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="Cancelada" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="Falso" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Right>
@@ -3012,16 +3095,59 @@
                                     </BinaryExpression.Left>
                                     <BinaryExpression.Right>
                                       <BinaryExpression
-                                        NodeType="Equal">
+                                        NodeType="And">
+                                        <BinaryExpression.Attributes>
+                                          <ExpressionGroup />
+                                        </BinaryExpression.Attributes>
                                         <BinaryExpression.Left>
-                                          <ChainExpression>
-                                            <MemberExpression
-                                              Member="Cancelada" />
-                                          </ChainExpression>
+                                          <BinaryExpression
+                                            NodeType="And">
+                                            <BinaryExpression.Left>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="Completada" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="Falso" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="Rechazada" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="Verdadero" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
-                                          <ParameterExpression
-                                            Parameter="Cancelada" />
+                                          <BinaryExpression
+                                            NodeType="Equal">
+                                            <BinaryExpression.Left>
+                                              <ChainExpression>
+                                                <MemberExpression
+                                                  Member="Cancelada" />
+                                              </ChainExpression>
+                                            </BinaryExpression.Left>
+                                            <BinaryExpression.Right>
+                                              <ParameterExpression
+                                                Parameter="Falso" />
+                                            </BinaryExpression.Right>
+                                          </BinaryExpression>
                                         </BinaryExpression.Right>
                                       </BinaryExpression>
                                     </BinaryExpression.Right>
@@ -3047,7 +3173,7 @@
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
                                               <ParameterExpression
-                                                Parameter="Falso" />
+                                                Parameter="Verdadero" />
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Left>
@@ -3057,7 +3183,7 @@
                                             <BinaryExpression.Left>
                                               <ChainExpression>
                                                 <MemberExpression
-                                                  Member="Rechazada" />
+                                                  Member="Cancelada" />
                                               </ChainExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
@@ -3074,7 +3200,7 @@
                                         <BinaryExpression.Left>
                                           <ChainExpression>
                                             <MemberExpression
-                                              Member="Cancelada" />
+                                              Member="Rechazada" />
                                           </ChainExpression>
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
@@ -3122,7 +3248,7 @@
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
                                           <ParameterExpression
-                                            Parameter="Verdadero" />
+                                            Parameter="Falso" />
                                         </BinaryExpression.Right>
                                       </BinaryExpression>
                                     </BinaryExpression.Right>
@@ -3139,110 +3265,9 @@
                                     </BinaryExpression.Left>
                                     <BinaryExpression.Right>
                                       <ParameterExpression
-                                        Parameter="Falso" />
-                                    </BinaryExpression.Right>
-                                  </BinaryExpression>
-                                </BinaryExpression.Right>
-                              </BinaryExpression>
-                            </BinaryExpression.Right>
-                          </BinaryExpression>
-                        </BinaryExpression.Left>
-                        <BinaryExpression.Right>
-                          <BinaryExpression
-                            NodeType="And">
-                            <BinaryExpression.Attributes>
-                              <ExpressionGroup />
-                            </BinaryExpression.Attributes>
-                            <BinaryExpression.Left>
-                              <BinaryExpression
-                                NodeType="And">
-                                <BinaryExpression.Left>
-                                  <BinaryExpression
-                                    NodeType="Equal">
-                                    <BinaryExpression.Left>
-                                      <ChainExpression>
-                                        <MemberExpression
-                                          Member="Completada" />
-                                      </ChainExpression>
-                                    </BinaryExpression.Left>
-                                    <BinaryExpression.Right>
-                                      <ParameterExpression
                                         Parameter="Verdadero" />
                                     </BinaryExpression.Right>
                                   </BinaryExpression>
-                                </BinaryExpression.Left>
-                                <BinaryExpression.Right>
-                                  <BinaryExpression
-                                    NodeType="Equal">
-                                    <BinaryExpression.Left>
-                                      <ChainExpression>
-                                        <MemberExpression
-                                          Member="Cancelada" />
-                                      </ChainExpression>
-                                    </BinaryExpression.Left>
-                                    <BinaryExpression.Right>
-                                      <ParameterExpression
-                                        Parameter="Falso" />
-                                    </BinaryExpression.Right>
-                                  </BinaryExpression>
-                                </BinaryExpression.Right>
-                              </BinaryExpression>
-                            </BinaryExpression.Left>
-                            <BinaryExpression.Right>
-                              <BinaryExpression
-                                NodeType="Equal">
-                                <BinaryExpression.Left>
-                                  <ChainExpression>
-                                    <MemberExpression
-                                      Member="Rechazada" />
-                                  </ChainExpression>
-                                </BinaryExpression.Left>
-                                <BinaryExpression.Right>
-                                  <ParameterExpression
-                                    Parameter="Falso" />
-                                </BinaryExpression.Right>
-                              </BinaryExpression>
-                            </BinaryExpression.Right>
-                          </BinaryExpression>
-                        </BinaryExpression.Right>
-                      </BinaryExpression>
-                    </BinaryExpression.Left>
-                    <BinaryExpression.Right>
-                      <BinaryExpression
-                        NodeType="And">
-                        <BinaryExpression.Attributes>
-                          <ExpressionGroup />
-                        </BinaryExpression.Attributes>
-                        <BinaryExpression.Left>
-                          <BinaryExpression
-                            NodeType="And">
-                            <BinaryExpression.Left>
-                              <BinaryExpression
-                                NodeType="Equal">
-                                <BinaryExpression.Left>
-                                  <ChainExpression>
-                                    <MemberExpression
-                                      Member="Completada" />
-                                  </ChainExpression>
-                                </BinaryExpression.Left>
-                                <BinaryExpression.Right>
-                                  <ParameterExpression
-                                    Parameter="Falso" />
-                                </BinaryExpression.Right>
-                              </BinaryExpression>
-                            </BinaryExpression.Left>
-                            <BinaryExpression.Right>
-                              <BinaryExpression
-                                NodeType="Equal">
-                                <BinaryExpression.Left>
-                                  <ChainExpression>
-                                    <MemberExpression
-                                      Member="Rechazada" />
-                                  </ChainExpression>
-                                </BinaryExpression.Left>
-                                <BinaryExpression.Right>
-                                  <ParameterExpression
-                                    Parameter="Falso" />
                                 </BinaryExpression.Right>
                               </BinaryExpression>
                             </BinaryExpression.Right>
@@ -3251,17 +3276,38 @@
                         <BinaryExpression.Right>
                           <BinaryExpression
                             NodeType="Equal">
+                            <BinaryExpression.Attributes>
+                              <ExpressionGroup />
+                            </BinaryExpression.Attributes>
                             <BinaryExpression.Left>
                               <ChainExpression>
                                 <MemberExpression
-                                  Member="Cancelada" />
+                                  Member="Rebajada" />
                               </ChainExpression>
                             </BinaryExpression.Left>
                             <BinaryExpression.Right>
                               <ParameterExpression
-                                Parameter="Verdadero" />
+                                Parameter="Rebajada" />
                             </BinaryExpression.Right>
                           </BinaryExpression>
+                        </BinaryExpression.Right>
+                      </BinaryExpression>
+                    </BinaryExpression.Left>
+                    <BinaryExpression.Right>
+                      <BinaryExpression
+                        NodeType="Equal">
+                        <BinaryExpression.Attributes>
+                          <ExpressionGroup />
+                        </BinaryExpression.Attributes>
+                        <BinaryExpression.Left>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Caducada" />
+                          </ChainExpression>
+                        </BinaryExpression.Left>
+                        <BinaryExpression.Right>
+                          <ParameterExpression
+                            Parameter="Caducada" />
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Right>
@@ -3390,6 +3436,12 @@
         ParameterType=":Boolean?" />
       <QueryOperationParameter
         Name="Cancelada"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Rebajada"
+        ParameterType=":Boolean?" />
+      <QueryOperationParameter
+        Name="Caducada"
         ParameterType=":Boolean?" />
     </QueryOperation>
     <QueryOperation
@@ -4266,6 +4318,22 @@
             Member="SOLICITUDES" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
+    </QueryOperation>
+    <QueryOperation
+      Name="Query1"
+      ReturnType="Superior_JefeDirectoItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree />
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Superior_JefeDirecto" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id_Area"
+        ParameterType=":Int32?" />
     </QueryOperation>
   </EntityContainer>
   <EntityType
@@ -8217,6 +8285,14 @@
         PropertyType=":Int32?">
         <EntityProperty.Attributes>
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailProximoDestinatario"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>

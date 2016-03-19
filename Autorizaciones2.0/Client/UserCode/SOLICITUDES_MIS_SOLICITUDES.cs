@@ -30,7 +30,7 @@ namespace LightSwitchApplication
             
             
             //****CAMBIAR POR RUT****
-            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
+            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
             NOMBREAD = "RUBIO FLORES, GUSTAVO";
 
             this.RutUsuarioFiltroSolicitudes = this.PersonaPorNombreAD.First().Rut_Persona;
@@ -230,6 +230,10 @@ namespace LightSwitchApplication
                     else
                         if (FiltroEstados == "Canceladas") { this.Rechazada = false; this.Completada = false; this.Cancelada = true; }
                         else
+                            if (FiltroEstados == "Caducadas") {  this.Caducada = true; }
+                            else
+                                if (FiltroEstados == "Rebajadas") { this.Rebajada = true; }
+                                else
                             if (FiltroEstados == "Todos los estados")
                             {
 
@@ -398,7 +402,7 @@ namespace LightSwitchApplication
                     result = false;
                 }
 
-                if (this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true)
+                if (this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true)
                 {
                     result = false;
                 }

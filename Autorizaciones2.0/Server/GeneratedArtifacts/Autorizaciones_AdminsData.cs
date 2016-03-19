@@ -6483,6 +6483,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EmailProximoDestinatario
+        {
+            get
+            {
+                return _EmailProximoDestinatario;
+            }
+            set
+            {
+                OnEmailProximoDestinatarioChanging(value);
+                ReportPropertyChanging("EmailProximoDestinatario");
+                _EmailProximoDestinatario = value;
+                ReportPropertyChanged("EmailProximoDestinatario");
+                OnEmailProximoDestinatarioChanged();
+            }
+        }
+        private global::System.String _EmailProximoDestinatario;
+        partial void OnEmailProximoDestinatarioChanging(global::System.String value);
+        partial void OnEmailProximoDestinatarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String RutPersona_fk

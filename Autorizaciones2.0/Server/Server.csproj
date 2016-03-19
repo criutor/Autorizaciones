@@ -165,6 +165,7 @@
     <Compile Include="ActiveDirectoryHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\Autorizaciones_AdminsDataService.cs" />
+    <Compile Include="UserCode\EnviaMail.cs" />
     <Compile Include="UserCode\Fin700v60DataService.cs" />
   </ItemGroup>
   <ItemGroup>

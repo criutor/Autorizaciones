@@ -5645,6 +5645,20 @@
                     Member="SOLICITUDES_MIS_SOLICITUDES/Properties[RutUsuarioFiltroSolicitudes]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Rebajada">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_MIS_SOLICITUDES/Properties[Rebajada]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Caducada">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_MIS_SOLICITUDES/Properties[Caducada]" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -5658,6 +5672,12 @@
       <ScreenProperty
         Name="RutUsuarioFiltroSolicitudes"
         PropertyType=":String?" />
+      <ScreenProperty
+        Name="Caducada"
+        PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="Rebajada"
+        PropertyType=":Boolean?" />
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -8520,6 +8540,20 @@
                     Member="SOLICITUDES_A_CARGO/Properties[VBGERENTE]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Rebajada">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[Rebajada]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Caducada">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[Caducada]" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -8574,6 +8608,12 @@
           <SupportedValue
             DisplayName="Aprobadas por todos"
             Value="Aprobadas" />
+          <SupportedValue
+            DisplayName="Caducadas"
+            Value="Caducadas" />
+          <SupportedValue
+            DisplayName="Rebajadas"
+            Value="Rebajadas" />
           <SupportedValue
             Value="Todos los estados" />
         </ScreenProperty.Attributes>
@@ -8634,6 +8674,12 @@
         PropertyType=":Boolean?" />
       <ScreenProperty
         Name="VBGERENTE"
+        PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="Caducada"
+        PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="Rebajada"
         PropertyType=":Boolean?" />
     </Screen.Properties>
     <Screen.RootContentItem>
@@ -10554,6 +10600,8 @@
         Name="SeleccionarPersonal" />
       <ScreenMethod
         Name="CerrarPantalla" />
+      <ScreenMethod
+        Name="ConsultarEmailUsuarioAD" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
@@ -10760,6 +10808,12 @@
             Value="La tarde (Todo el día)" />
         </ScreenProperty.Attributes>
       </ScreenProperty>
+      <ScreenProperty
+        Name="EmailUsuarioAD"
+        PropertyType=":String?" />
+      <ScreenProperty
+        Name="RutUsuarioAD"
+        PropertyType=":String?" />
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem

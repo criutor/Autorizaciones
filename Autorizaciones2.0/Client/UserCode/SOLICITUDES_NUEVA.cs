@@ -20,12 +20,14 @@ namespace LightSwitchApplication
     {
         partial void SOLICITUDES_NUEVA_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
         {
+            //Valores por defecto 
             this.AdministrativoDesde = "La mañana (Todo el día)";
             this.AdministrativoHasta = "La tarde (Todo el día)"; 
 
             // Parametro de busqueda de la persona
-            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
-            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
+            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
+            NOMBREAD = "RUBIO FLORES, GUSTAVO";
+
             // Guarda el rut del usuario
             RUTUSUARIO = this.PersonaPorNombreAD.First().Rut_Persona;
 
@@ -37,144 +39,257 @@ namespace LightSwitchApplication
             this.SOLICITUD.Cancelada = false;
             this.SOLICITUD.Estado = "Siendo procesada";
             this.SOLICITUD.VB_Empleado = true;
+
+            
             
             //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
             if (TIPOSOLICITUD == 3) { this.SOLICITUD.PersonaItem1 = null; }
                 else{this.SOLICITUD.PersonaItem1 = this.PersonaPorNombreAD.First();}
 
+            //Configura quien sera el primero en aprobar la solicitud
+
             if (this.PersonaPorNombreAD.First().Es_Gerente == true)
-            {
-                //this.IDGERENCIA = this.PersonaPorNombreAD.First().Superior_Gerente.First().Division_GerenciaItem.Id_Gerencia;
+            {   
+                //Si el solicitante es gerente
                 this.SOLICITUD.Departamento = " Gerencia de " + this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
-
                 this.SOLICITUD.VB_Gerente = true;
-                //this.SOLICITUD.VB_SubGerente = true;
-                //this.SOLICITUD.VB_JefeDirecto = true;
                 this.SOLICITUD.Completada = true;
                 this.SOLICITUD.Estado = "Aprobada por el Gerente";
             }
-            else
-                if (this.PersonaPorNombreAD.First().Es_SubGerente == true)
-                {
-                    //this.IDSUBGERENCIA = this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Id_SubGerencia;
+            else 
+                if (this.PersonaPorNombreAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
+                {   
                     this.SOLICITUD.Departamento = " SubGerencia de " + this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
                     this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Division_GerenciaItem.Nombre;
-
-                    this.SOLICITUD.VB_Gerente = false;
                     this.SOLICITUD.VB_SubGerente = true;
-                    //this.SOLICITUD.VB_JefeDirecto = true;
 
-                    if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0) 
+                    //si no hay un gerente, la solicitud queda automaticamente aprobada
+                    if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
                     {
-                        this.SOLICITUD.Completada = true; //si no hay un gerente
+                        this.SOLICITUD.Completada = true;
                         this.SOLICITUD.Estado = "Aprobada por el Sub Gerente";
                     }
-                }
-                else
-                    if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
+                    else 
                     {
-                        this.IDAREA = this.PersonaPorNombreAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
-                        this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
-                        this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
-                        this.SOLICITUD.VB_JefeDirecto = true;
+                        this.SOLICITUD.VB_Gerente = false;
+                        
+                        //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
+                        /*DESCOMENTAR CUANDO AD ESTE POBLADA CON EL RUT
+                         * 
+                        //El campo de consulta es igual al rut del gerente
+                        this.RutUsuarioAD = this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
+                        //Llamar al metodo que trae el email actual del usuario AD
+                        this.ConsultarEmailUsuarioAD_Execute();
+                        //Guarda el correo obtenido 
+                         * 
+                         * ESTE MENSAJE DEBE ENVIARSE DESDE EL SERVIDOR :S
+                        if (this.EmailUsuarioAD == null)
+                        {
+                            this.ShowMessageBox("No hemos podido enviar un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + " , de todas maneras, tu solicitud ha sido registrada en el sistema", "EMAIL NO ENVIADO", MessageBoxOption.Ok);
+                        }
+                        else { 
+
+                            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                            this.ShowMessageBox("Hemos enviado un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD , "EMAIL ENVIADO", MessageBoxOption.Ok);
+                        }
+                        */
+
+                        this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                    }
+                }
+                else 
+                    if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)//Si el solicitante es Jefe de área
+                    {   
+
+                    this.IDAREA = this.PersonaPorNombreAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
+                    this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
+                    this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
+                    this.SOLICITUD.VB_JefeDirecto = true;
+
+                    //Si es solicitud de horas extras
+                    if (TIPOSOLICITUD == 3)
+                    {
+                        
+                        this.SOLICITUD.VB_Empleado = false;
+                        //ENVIAR EMAIL AL EMPLEADO-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                        // la configuracion se realiza desde SeleccionarPersonal_Execute() cuando el Jefe de área escoge un empleado.
+
+                        this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+
+                    }
+                    //Todas las otras solicitudes
+                    else{
+                  
                         if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                         {
                             // Si hay subgerencia y subgerente
-                            this.SOLICITUD.VB_SubGerente = false; 
+                            this.SOLICITUD.VB_SubGerente = false;
+
+                            //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                            /*
+                            //El campo de consulta es igual al rut del subgerente
+                            this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Rut_Persona;
+                            //Llamar al metodo que trae el email actual del usuario AD
+                            this.ConsultarEmailUsuarioAD_Execute();
+                            //Guarda el correo obtenido 
+                            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                            */
+
+                            this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                         }
                         else
-                        {
                             if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                             {
-                                this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+                                // Si hay gerente
+                                this.SOLICITUD.VB_Gerente = false;
+
+                                //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                                /*
+                                //El campo de consulta es igual al rut del gerente
+                                this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
+                                //Llamar al metodo que trae el email actual del usuario AD
+                                this.ConsultarEmailUsuarioAD_Execute();
+                                //Guarda el correo obtenido 
+                                this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                                */
+
+                                this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                             }
                             else
                             {
+                                // debe tener por lo menos 1 superior para poder crear una solicitud
+                                this.ShowMessageBox("Debe haber como mínimo 1 superior asociado a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
 
-                                this.ShowMessageBox("Debe haber como mínimo 2 superiores asociados a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
                                 this.Close(false);
                             }
+                        }
+                    
+                    
+                }
+                else// Para los empleados que no tienen ningun cargo de supervisión
+                {
+                    
+                    int contarSuperiores = 0;
 
+                    this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
+                    this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
+
+                    //Contar superiores
+                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
+                    {
+                        contarSuperiores = contarSuperiores + 1;
+                    }
+
+                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                    {
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                        {
+                            contarSuperiores = contarSuperiores + 1;                               
                         }
 
-                    }
-                    else// Para los empleados que no tienen ningun cargo de supervisión
-                    {
-                        int contarSuperiores = 0;
-
-                        this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
-                        this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
-
-
-                        //contar superiores
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
+                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                         {
                             contarSuperiores = contarSuperiores + 1;
                         }
-
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                        else if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                         {
-                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
-                            {
-                                contarSuperiores = contarSuperiores + 1;
-                                
-                            }
-
-                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
-                            {
-                                contarSuperiores = contarSuperiores + 1;
-                            }
-                            else if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
-                            {
-                                contarSuperiores = contarSuperiores + 1;
-                            }
+                            contarSuperiores = contarSuperiores + 1;
                         }
-                                
-                        
-  
-                        
+                    }
 
-                        //setiar vb's
+                    if (contarSuperiores < 2)
+                    {
+                        // debe tener por lo menos 2 superiores para poder crear una solicitud
+                        this.ShowMessageBox("Debe haber como mínimo 2 superiores asociados a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+
+                        this.Close(false);
+                    }
+                    else
+                    {
+                        //Setiar vb's
                         if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
                         {
                             this.SOLICITUD.VB_JefeDirecto = false; //si hay jefe de área
                             
+                            //ENVIAR EMAIL AL JEFE DE AREA-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                            /*
+                            //El campo de consulta es igual al rut deL JEFE DE AREA
+                            this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.Rut_Persona;
+                            //Llamar al metodo que trae el email actual del usuario AD
+                            this.ConsultarEmailUsuarioAD_Execute();
+                            //Guarda el correo obtenido 
+                            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                            */
+
+                            this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                         }
                         else
-
                             if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
                             {
                                 if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                                 {
                                     this.SOLICITUD.VB_SubGerente = false; // Si hay subgerente
-                                    
+
+                                    //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                                    /*
+                                    //El campo de consulta es igual al rut del subgerente
+                                    this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Rut_Persona;
+                                    //Llamar al metodo que trae el email actual del usuario AD
+                                    this.ConsultarEmailUsuarioAD_Execute();
+                                    //Guarda el correo obtenido 
+                                    this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                                    */
+
+                                    this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                                 }
                             }
                             else
-
                                 if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                                 {
                                     this.SOLICITUD.VB_Gerente = false; // Si hay gerente
-                                    
+
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                                    /*
+                                    //El campo de consulta es igual al rut del gerente
+                                    this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
+                                    //Llamar al metodo que trae el email actual del usuario AD
+                                    this.ConsultarEmailUsuarioAD_Execute();
+                                    //Guarda el correo obtenido 
+                                    this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                                    */
+
+                                    this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                                 }
                                 else
 
                                     if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                                     {
                                         this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+
+                                        //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                                        /*
+                                        //El campo de consulta es igual al rut del gerente
+                                        this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
+                                        //Llamar al metodo que trae el email actual del usuario AD
+                                        this.ConsultarEmailUsuarioAD_Execute();
+                                        //Guarda el correo obtenido 
+                                        this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                                        */
+
+                                        this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                                     }
-
-                        if(contarSuperiores < 2)
-                        {
-                            // debe tener por lo menos 2 superiores para poder crear una solicitud
-                            this.ShowMessageBox("Debe haber como mínimo 2 superiores asociados a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-
-                            this.Close(false);
-                        }
-                        contarSuperiores = 0;
                     }
+
+                    contarSuperiores = 0;
+                }
 
             //Instanciar el objeto detalle de solicitud dependiendo del caso
             if (TIPOSOLICITUD == 1)
@@ -192,7 +307,7 @@ namespace LightSwitchApplication
             {
                 this.SOLICITUD.HorasExtras = true;
                 this.SOLICITUD.Titulo = "Horas Extras";
-                this.SOLICITUD.VB_Empleado = false;
+                //this.SOLICITUD.VB_Empleado = false;
             }
             else if (TIPOSOLICITUD == 4)
             {
@@ -204,7 +319,7 @@ namespace LightSwitchApplication
             this.SOLICITUD.Inicio = DateTime.Today;
             this.SOLICITUD.Termino = DateTime.Today;
 
-            if (TIPOSOLICITUD == 3)
+            if (TIPOSOLICITUD == 3)//Solicitudes de horas extras no tienen fecha de término
             {
                 this.SOLICITUD.Termino = null;
             }
@@ -214,7 +329,6 @@ namespace LightSwitchApplication
             this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
             this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
             this.NUEVOESTADO.CreadoAt = DateTime.Now;
-            //this.NUEVOESTADO.NombreCortoEstado = "Siendo procesada";
             
         }
 
@@ -345,8 +459,10 @@ namespace LightSwitchApplication
                 dataWorkspace.Autorizaciones_AdminsData.ConsultarSaldoVacaciones.AddNew();
 
             operation.Fecha = this.SOLICITUD.Inicio.Value;
+
             //operation.Rut = this.PersonaItem.Rut_Persona;
             operation.Rut = "0017511042-9"; //Gustavo
+
             //operation.Contrato = this.ContratoPorRut.Last().Contrato;
             operation.Contrato = 2063;//Gustavo
 
@@ -360,8 +476,9 @@ namespace LightSwitchApplication
         {
             firstDay = firstDay.Date;
             lastDay = lastDay.Date;
-            if (firstDay > lastDay)
-                throw new ArgumentException("Día de Término debe ser mayor al día de Inicio " + lastDay);
+            
+            //if (firstDay > lastDay)
+            //    throw new ArgumentException("Día de Término debe ser mayor al día de Inicio " + lastDay);
 
             TimeSpan span = lastDay - firstDay;
             int businessDays = span.Days + 1;
@@ -408,88 +525,86 @@ namespace LightSwitchApplication
 
         partial void SOLICITUD_Validate(ScreenValidationResultsBuilder results)
         {
-     
-                if (InvocarSaldoVacaciones == true) { 
-                    this.ConsultarSaldo_Execute();
-                    InvocarSaldoVacaciones = false;
-                }
+            if (InvocarSaldoVacaciones == true) 
+            { 
+                this.ConsultarSaldo_Execute();
+                InvocarSaldoVacaciones = false;
+            }
                 
 
-                if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
+            if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
+            {
+                this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
+
+                //Valida el campo solo si se le ha ingresado un valor
+                if (this.SOLICITUD.Prestamo.HasValue)
                 {
-                    this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
-
-                    if (this.SOLICITUD.Prestamo.HasValue)
+                    if (this.SOLICITUD.Prestamo.Value < 0 || this.SOLICITUD.Prestamo.Value > 50)
                     {
-                        if (this.SOLICITUD.Prestamo.Value < 0 || this.SOLICITUD.Prestamo.Value > 50)
-                        {
-                            results.AddPropertyError("El prestamo debe ser entre 0 y 50");
-                        }
- 
+                        results.AddPropertyError("El prestamo debe ser entre 0 y 50");
                     }
+                }
                 
 
-                    //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
+                //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
 
-                    DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
-                    int dia; int mes; int i = 0;
+                DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
+                int dia; int mes; int i = 0;
 
-                    foreach (FeriadosItem feriado in this.Feriados)
-                    {
+                foreach (FeriadosItem feriado in this.Feriados)
+                {
 
-                        dia = feriado.Feriado.Day;
-                        mes = feriado.Feriado.Month;
-                        DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
-                        FERIADOS[i] = DiaAux;
+                    dia = feriado.Feriado.Day;
+                    mes = feriado.Feriado.Month;
+                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    FERIADOS[i] = DiaAux;
 
-                        i++;
-
-                    }
-
-                    //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
-                    foreach (DateTime feriado in FERIADOS)
-                    {
-                        if (this.SOLICITUD.Inicio.Value == feriado)
-                        {
-                            results.AddPropertyError("La fecha de inicio no puede ser un día feriado ");
-                        }
-
-                        if (this.SOLICITUD.Termino.Value == feriado)
-                        {
-
-                            results.AddPropertyError("La fecha de término no puede ser un día feriado ");
-                        }
-                    }
-
-                    if (this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Sunday)
-                    {
-                        results.AddPropertyError("La fecha de inicio no puede ser fin de semana ");
-                    }
-
-                    if (this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Sunday)
-                    {
-                        results.AddPropertyError("La fecha de término no puede ser fin de semana ");
-                    }
-
-                    if(this.SOLICITUD.Inicio > this.SOLICITUD.Termino){
-                        results.AddPropertyError("Día de Término debe ser después o igual al día de Inicio ");
-                    }else{ 
-                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
-                    }
-
-                    if (this.SOLICITUD.Inicio <= DateTime.Today)
-                    {
-                        results.AddPropertyError("Día de Inicio debe ser después de hoy");
-                    }
-
-                    if (this.SOLICITUD.NumeroDiasTomados > this.SOLICITUD.SaldoDias)
-                    {
-                        results.AddPropertyError("El número de días a solicitar debe ser menor o igual a tu SALDO DE DÍAS");
-                    }
-
-
+                    i++;
 
                 }
+
+                //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
+                foreach (DateTime feriado in FERIADOS)
+                {
+                    if (this.SOLICITUD.Inicio.Value == feriado)
+                    {
+                        results.AddPropertyError("La fecha de inicio no puede ser un día feriado ");
+                    }
+
+                    if (this.SOLICITUD.Termino.Value == feriado)
+                    {
+
+                        results.AddPropertyError("La fecha de término no puede ser un día feriado ");
+                    }
+                }
+
+                if (this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Inicio.Value.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    results.AddPropertyError("La fecha de inicio no puede ser fin de semana ");
+                }
+
+                if (this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Saturday || this.SOLICITUD.Termino.Value.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    results.AddPropertyError("La fecha de término no puede ser fin de semana ");
+                }
+
+                if(this.SOLICITUD.Inicio > this.SOLICITUD.Termino){
+                    results.AddPropertyError("Día de Término debe ser después o igual al día de Inicio ");
+                }else{ 
+                    this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                }
+
+                if (this.SOLICITUD.Inicio <= DateTime.Today)
+                {
+                    results.AddPropertyError("Día de Inicio debe ser después de hoy");
+                }
+
+                if (this.SOLICITUD.NumeroDiasTomados > this.SOLICITUD.SaldoDias)
+                {
+                    results.AddPropertyError("El número de días a solicitar debe ser menor o igual a tu SALDO DE DÍAS");
+                }
+
+            }
             
 
 
@@ -685,7 +800,7 @@ namespace LightSwitchApplication
             }
         }
 
-        //Para las solicitudes de vacaciones
+        //Validaciones para el campo requiere prestamo en las solicitudes de vacaciones
         partial void RequierePrestamo_Validate(ScreenValidationResultsBuilder results)
         {
             if (this.RequierePrestamo == false)
@@ -709,47 +824,77 @@ namespace LightSwitchApplication
 
                     if (this.SOLICITUD.Prestamo == null)
                     {
-                        results.AddPropertyError("El préstamo a solicitar no puede ser vacio"); //Si la casilla es verdadera, el campo debe tener algún valor
+                        //Si la casilla es verdadera, el campo debe tener algún valor
+                        results.AddPropertyError("El préstamo a solicitar no puede ser vacio"); 
                     }
                 }
                 catch { }
             }
         }
 
-        //Para las solicitudes de horas extras donde es necesario selecciónar un empleado
-        partial void SeleccionarPersonal_Execute()
-        {
-            this.SOLICITUD.PersonaItem1 = this.PersonalBajoJefeDeArea.SelectedItem;
-            this.CloseModalWindow("PersonalArea");
-        }
-
+        //Valida que la justificacion(Observaciones) para Horas extras y permiso no sean vacias
         partial void OBSERVACIONES_Validate(ScreenValidationResultsBuilder results)
         {
-            if (TIPOSOLICITUD == 3 || TIPOSOLICITUD == 4)// horas extras u otra solicitud necesitan ser justificadas
+            if (TIPOSOLICITUD == 3 || TIPOSOLICITUD == 4)
             {
                 if (this.OBSERVACIONES == null) { results.AddPropertyError("La justificación no puede quedar vacia"); }
             }
         }
 
+        //Guarda en el campo el valor del choice list de la pantalla
         partial void AdministrativoDesde_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
             this.SOLICITUD.AdministrativoDesde = this.AdministrativoDesde;
         }
 
+        //Guarda en el campo el valor del choice list de la pantalla
         partial void AdministrativoHasta_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
             this.SOLICITUD.AdministrativoHasta = this.AdministrativoHasta;
         }
 
+        //Cierra la pantalla sin preguntar si quiere guardar cambios
         partial void CerrarPantalla_Execute()
         {
-            // Escriba el código aquí.
             this.Close(false);
         }
 
+        //Para las solicitudes de horas extras donde es necesario seleccionar un empleado
+        partial void SeleccionarPersonal_Execute()
+        {
+            this.SOLICITUD.PersonaItem1 = this.PersonalBajoJefeDeArea.SelectedItem;
+            
+            /*DESCOMENTAR CUANDO AD ESTE POBLADA CON EL RUT
+             * 
+            //Rut para consultar el email de AD
+            this.RutUsuarioAD = this.SOLICITUD.PersonaItem1.Rut_Persona;
+            //Busca el email asociado al rut en AD
+            this.ConsultarEmailUsuarioAD_Execute();
+            //Guarda el email obtenido
+            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+            */
 
+            this.CloseModalWindow("PersonalArea");
+        }
 
+        partial void ConsultarEmailUsuarioAD_Execute()
+        {
+            // Escriba el código aquí.
+            DataWorkspace dataWorkspace = new DataWorkspace();
+
+            ConsultarInfoUsuarioADItem operation =
+                dataWorkspace.Autorizaciones_AdminsData.ConsultarInfoUsuarioAD.AddNew();
+
+            //operation.NombreUsuario = this.Application.User.FullName;
+            operation.RutUsuario = this.RutUsuarioAD;
+
+            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
+
+            this.EmailUsuarioAD = operation.EmailUsuario;
+
+        }
+        
     }
 }

@@ -395,6 +395,7 @@
     <Property Name="Caducada" Type="bit" />
     <Property Name="Rebajada" Type="bit" />
     <Property Name="CodigoEstado" Type="int" />
+    <Property Name="EmailProximoDestinatario" Type="nvarchar" MaxLength="50" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">

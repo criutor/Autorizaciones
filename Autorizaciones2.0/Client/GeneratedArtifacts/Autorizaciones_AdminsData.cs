@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 16/03/2016 22:21:29
+// Fecha de generación: 17/03/2016 19:28:30
 namespace LightSwitchApplication.Implementation
 {
     
@@ -7145,6 +7145,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<int> _CodigoEstado;
         partial void OnCodigoEstadoChanging(global::System.Nullable<int> value);
         partial void OnCodigoEstadoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad EmailProximoDestinatario en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string EmailProximoDestinatario
+        {
+            get
+            {
+                return this._EmailProximoDestinatario;
+            }
+            set
+            {
+                this.OnEmailProximoDestinatarioChanging(value);
+                if (object.Equals(this.EmailProximoDestinatario, value))
+                {
+                    return;
+                }
+                this._EmailProximoDestinatario = value;
+                this.OnEmailProximoDestinatarioChanged();
+                this.OnPropertyChanged("EmailProximoDestinatario");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _EmailProximoDestinatario;
+        partial void OnEmailProximoDestinatarioChanging(string value);
+        partial void OnEmailProximoDestinatarioChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

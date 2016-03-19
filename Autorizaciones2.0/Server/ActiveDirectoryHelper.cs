@@ -80,6 +80,23 @@ namespace ActiveDirectoryLookup
             }
         }
 
+        public static IDictionary<string, string> UserPropertyBuscarPorRut(string Rut, string domain, params string[] properties)
+        {
+            try
+            {
+                DirectoryEntry ent = new DirectoryEntry(domain);
+                DirectorySearcher searcher = new DirectorySearcher(ent);
+                searcher.Filter = String.Format("employeeID={0}", Rut);
+                SearchResult result = CreateSearcherFindOne(searcher);
+                return UserProperties(result, properties);
+
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
         /// <summary>
         /// Gets properties for a LDAP user using a GUID of the object and the domain to search.
         /// </summary>

@@ -847,6 +847,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EmailProximoDestinatario
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.EmailProximoDestinatario);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.EmailProximoDestinatario, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmailProximoDestinatario_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmailProximoDestinatario_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmailProximoDestinatario_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.ESTADOSItem> ESTADOS
         {
             get
@@ -1227,6 +1251,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string> EmailProximoDestinatario
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.EmailProximoDestinatario) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem> ESTADOS
                 {
                     get
@@ -1281,6 +1313,7 @@ namespace LightSwitchApplication
                 new global::System.Nullable<bool> Caducada { get; set; }
                 new global::System.Nullable<bool> Rebajada { get; set; }
                 new global::System.Nullable<int> CodigoEstado { get; set; }
+                new string EmailProximoDestinatario { get; set; }
                 new global::System.Collections.IEnumerable ESTADOS { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation PersonaItem1 { get; set; }
             }
@@ -2473,6 +2506,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Entry
+                    EmailProximoDestinatario = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Entry(
+                        "EmailProximoDestinatario",
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._EmailProximoDestinatario_Stub,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._EmailProximoDestinatario_ComputeIsReadOnly,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._EmailProximoDestinatario_Validate,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._EmailProximoDestinatario_GetImplementationValue,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._EmailProximoDestinatario_SetImplementationValue,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._EmailProximoDestinatario_OnValueChanged);
+                private static void _EmailProximoDestinatario_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmailProximoDestinatario, sf);
+                }
+                private static bool _EmailProximoDestinatario_ComputeIsReadOnly(global::LightSwitchApplication.SOLICITUDESItem e)
+                {
+                    bool result = false;
+                    e.EmailProximoDestinatario_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EmailProximoDestinatario_Validate(global::LightSwitchApplication.SOLICITUDESItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EmailProximoDestinatario_Validate(r);
+                }
+                private static string _EmailProximoDestinatario_GetImplementationValue(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EmailProximoDestinatario;
+                }
+                private static void _EmailProximoDestinatario_SetImplementationValue(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.EmailProximoDestinatario = v;
+                }
+                private static void _EmailProximoDestinatario_OnValueChanged(global::LightSwitchApplication.SOLICITUDESItem e)
+                {
+                    e.EmailProximoDestinatario_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
                     ESTADOS = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
                         "ESTADOS",
@@ -2636,6 +2706,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<int>>.Data _CodigoEstado;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Data _EmailProximoDestinatario;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _ESTADOS;

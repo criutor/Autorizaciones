@@ -1832,6 +1832,12 @@
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[CodigoEstado]"
           Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmailProximoDestinatario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[EmailProximoDestinatario]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

@@ -298,6 +298,7 @@
           <ScalarProperty Name="Caducada" ColumnName="Caducada" />
           <ScalarProperty Name="Rebajada" ColumnName="Rebajada" />
           <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
+          <ScalarProperty Name="EmailProximoDestinatario" ColumnName="EmailProximoDestinatario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

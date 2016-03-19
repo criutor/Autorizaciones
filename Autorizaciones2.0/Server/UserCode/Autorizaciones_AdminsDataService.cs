@@ -84,14 +84,55 @@ namespace LightSwitchApplication
         {
             string[] props = {  "displayname","mail","employeeID"};
 
-            var propResults = ActiveDirectoryInfo.UserPropertySearchByName(entity.NombreUsuario, "LDAP://afpplanvital.cl", props);
+            //var propResults = ActiveDirectoryInfo.UserPropertySearchByName(entity.NombreUsuario, "LDAP://afpplanvital.cl", props);
+
+            var propResults = ActiveDirectoryInfo.UserPropertyBuscarPorRut(entity.RutUsuario, "LDAP://afpplanvital.cl", props);
 
             entity.EmailUsuario = propResults["mail"];
-            entity.RutUsuario = propResults["employeeID"];
+            //entity.RutUsuario = propResults["employeeID"];
 
             this.Details.DiscardChanges();
         }
 
+        partial void SOLICITUDES_Inserted(SOLICITUDESItem entity)
+        {
+            string destinatario = entity.EmailProximoDestinatario;
+            string asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
+            
+
+            LightSwitchApplication.UserCode.EnviaMail correo = new UserCode.EnviaMail();
+
+            //Si es de solicitud de horas extras
+            if (entity.HorasExtras == true)
+            {
+                string mensaje = "Usted es administrativo ";
+                correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+            }
+            //todas las otras solicitudes
+            else
+            {
+
+                if (entity.VB_JefeDirecto == false)
+                {
+                    string mensaje = "Usted es jefe de área ";
+                    correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                }
+                else
+                    if (entity.VB_SubGerente == false)
+                    {
+                        string mensaje = "Usted es subgerente ";
+                        correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                    }
+                    else
+                        if (entity.VB_Gerente == false)
+                        {
+                            string mensaje = "Usted es gerente ";
+                            correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                        }
+            }
+
+            entity.EmailProximoDestinatario = null;
+        }
 
     }
 }

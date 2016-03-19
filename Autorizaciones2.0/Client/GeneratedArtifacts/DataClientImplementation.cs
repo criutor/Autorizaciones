@@ -2320,6 +2320,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("CodigoEstado");
         }
         
+        partial void OnEmailProximoDestinatarioChanged()
+        {
+            this.___OnPropertyChanged("EmailProximoDestinatario");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS
         {
             get
