@@ -16,6 +16,7 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             if (this.Division_Gerencia.SelectedItem.Superior_GerenteQuery.FirstOrDefault() == null)
             {
+
                 this.Application.ShowPERSONAL_LISTAR_ROLPRIVADO(1, this.Division_Gerencia.SelectedItem.Id_Gerencia);
                 
             }
@@ -59,6 +60,8 @@ namespace LightSwitchApplication
         partial void QuitarGerente_Execute()
         {
             // Escriba el código aquí.
+            if (this.Division_Gerencia.SelectedItem.Nombre == "GERENCIA GENERAL") { this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Es_GerenteGeneral = false; }
+            
             this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Es_Gerente = false;
 
             this.Division_Gerencia.SelectedItem.Superior_Gerente.First().Delete();
@@ -237,6 +240,27 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             this.CloseModalWindow("NuevaSubgerencia");
             this.NombreDivision = null;
+        }
+
+        partial void Division_GerenciaDeleteSelected_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+
+        }
+
+        partial void Division_GerenciaDeleteSelected_Execute()
+        {
+            // Escriba el código aquí.
+            if (this.Division_Gerencia.SelectedItem.Nombre == "GERENCIA GENERAL")
+            {
+                this.ShowMessageBox("GERENCIA GENERAL no puede ser eliminada");
+            }
+            else
+            {
+                this.Division_Gerencia.SelectedItem.Delete();
+                this.Save();
+                this.Refresh();
+            }
         }
 
 

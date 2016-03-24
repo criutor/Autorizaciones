@@ -24,7 +24,7 @@ namespace LightSwitchApplication
 
             // Escriba el código aquí.
             this.Vacaciones_Aprobadas.SelectedItem.Caducada = true;
-            this.Vacaciones_Aprobadas.SelectedItem.Titulo = "Cancelada por RR.HH";
+            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Cancelada por RR.HH";
 
 
             this.NUEVOESTADO = new ESTADOSItem();
@@ -52,7 +52,7 @@ namespace LightSwitchApplication
 
 
             this.Vacaciones_Aprobadas.SelectedItem.Rebajada = true;
-            this.Vacaciones_Aprobadas.SelectedItem.Titulo = "Rebajada por RR.HH";
+            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
 
                 this.NUEVOESTADO = new ESTADOSItem();
                 this.NUEVOESTADO.SOLICITUDESItem = this.Vacaciones_Aprobadas.SelectedItem;

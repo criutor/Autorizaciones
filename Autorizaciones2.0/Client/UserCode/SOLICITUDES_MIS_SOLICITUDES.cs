@@ -21,7 +21,7 @@ namespace LightSwitchApplication
 
         partial void SOLICITUDES_MIS_SOLICITUDES_Activated()
         {
-            this.ConsultarInfoUsuarioAD_Execute();
+            //this.ConsultarInfoUsuarioAD_Execute();
 
             //this.Application.User.
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
@@ -457,7 +457,7 @@ namespace LightSwitchApplication
         {
             this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por Vacaciones en espera de aprobación", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
         }
-
+        /*
         partial void ConsultarInfoUsuarioAD_Execute()
         {
             DataWorkspace dataWorkspace = new DataWorkspace();
@@ -474,6 +474,7 @@ namespace LightSwitchApplication
             this.RutUsuarioAD = operation.RutUsuario;
 
         }
+        */
 
     }
 }

@@ -20,6 +20,7 @@
           <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
           <ScalarProperty Name="EsRolPrivado" ColumnName="EsRolPrivado" />
           <ScalarProperty Name="CargoRolPrivado_fk" ColumnName="CargoRolPrivado_fk" />
+          <ScalarProperty Name="Es_GerenteGeneral" ColumnName="Es_GerenteGeneral" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -299,6 +300,7 @@
           <ScalarProperty Name="Rebajada" ColumnName="Rebajada" />
           <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
           <ScalarProperty Name="EmailProximoDestinatario" ColumnName="EmailProximoDestinatario" />
+          <ScalarProperty Name="VB_GerenteGeneral" ColumnName="VB_GerenteGeneral" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

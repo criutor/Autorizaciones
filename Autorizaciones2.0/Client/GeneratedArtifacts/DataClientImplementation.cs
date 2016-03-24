@@ -100,6 +100,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("EsRolPrivado");
         }
         
+        partial void OnEs_GerenteGeneralChanged()
+        {
+            this.___OnPropertyChanged("Es_GerenteGeneral");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get
@@ -2323,6 +2328,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnEmailProximoDestinatarioChanged()
         {
             this.___OnPropertyChanged("EmailProximoDestinatario");
+        }
+        
+        partial void OnVB_GerenteGeneralChanged()
+        {
+            this.___OnPropertyChanged("VB_GerenteGeneral");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS

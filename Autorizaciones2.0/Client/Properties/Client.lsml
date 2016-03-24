@@ -769,6 +769,13 @@
         Name="CancelarNuevaGerencia" />
       <ScreenMethod
         Name="CancelarNuevaSubgerencia" />
+      <ScreenMethod
+        Name="Division_GerenciaDeleteSelected">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="DeleteSelected" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -1116,18 +1123,16 @@
                 </ContentItem>
                 <ContentItem
                   Kind="Command"
-                  Name="Command3">
+                  Name="Division_GerenciaDeleteSelected">
                   <ContentItem.Attributes>
-                    <Description
-                      Value="Eliminar la Gerencia seleccionada" />
+                    <DisplayName
+                      Value="Eliminar" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
-                        <MemberExpression
-                          Member="ADMINISTRAR_DIVISIONES/Properties[Division_Gerencia]" />
                         <CallExpression
-                          Target="DeleteSelected" />
+                          Target="ADMINISTRAR_DIVISIONES/Methods[Division_GerenciaDeleteSelected]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -3870,6 +3875,9 @@
       <ScreenProperty
         Name="VB_JefeDirectoNulo"
         PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="IDSOLICITUD"
+        PropertyType=":Int32?" />
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -6039,6 +6047,23 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
+                  DataType=":Boolean?"
+                  Kind="Value"
+                  Name="Completada1">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Aprobación Completa" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[Completada]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   DataType=":DateTime?"
                   Kind="Value"
                   Name="FechaSolicitud">
@@ -8081,41 +8106,85 @@
                                   NodeType="Or">
                                   <BinaryExpression.Left>
                                     <BinaryExpression
-                                      NodeType="Equal">
+                                      NodeType="Or">
                                       <BinaryExpression.Left>
-                                        <ChainExpression>
-                                          <MemberExpression
-                                            Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
-                                          <MemberExpression
-                                            Member="Division_GerenciaItem" />
-                                          <MemberExpression
-                                            Member="Id_Gerencia" />
-                                        </ChainExpression>
+                                        <BinaryExpression
+                                          NodeType="Equal">
+                                          <BinaryExpression.Left>
+                                            <ChainExpression>
+                                              <MemberExpression
+                                                Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
+                                              <MemberExpression
+                                                Member="Division_GerenciaItem" />
+                                              <MemberExpression
+                                                Member="Id_Gerencia" />
+                                            </ChainExpression>
+                                          </BinaryExpression.Left>
+                                          <BinaryExpression.Right>
+                                            <ParameterExpression
+                                              Parameter="Id_Gerencia" />
+                                          </BinaryExpression.Right>
+                                        </BinaryExpression>
                                       </BinaryExpression.Left>
                                       <BinaryExpression.Right>
-                                        <ParameterExpression
-                                          Parameter="Id_Gerencia" />
+                                        <BinaryExpression
+                                          NodeType="Equal">
+                                          <BinaryExpression.Left>
+                                            <ChainExpression>
+                                              <MemberExpression
+                                                Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
+                                              <MemberExpression
+                                                Member="Division_SubGerenciaItem" />
+                                              <MemberExpression
+                                                Member="Division_GerenciaItem" />
+                                              <MemberExpression
+                                                Member="Id_Gerencia" />
+                                            </ChainExpression>
+                                          </BinaryExpression.Left>
+                                          <BinaryExpression.Right>
+                                            <ParameterExpression
+                                              Parameter="Id_Gerencia" />
+                                          </BinaryExpression.Right>
+                                        </BinaryExpression>
                                       </BinaryExpression.Right>
                                     </BinaryExpression>
                                   </BinaryExpression.Left>
                                   <BinaryExpression.Right>
                                     <BinaryExpression
-                                      NodeType="Equal">
+                                      NodeType="And">
+                                      <BinaryExpression.Attributes>
+                                        <ExpressionGroup />
+                                      </BinaryExpression.Attributes>
                                       <BinaryExpression.Left>
-                                        <ChainExpression>
-                                          <MemberExpression
-                                            Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
-                                          <MemberExpression
-                                            Member="Division_SubGerenciaItem" />
-                                          <MemberExpression
-                                            Member="Division_GerenciaItem" />
-                                          <MemberExpression
-                                            Member="Id_Gerencia" />
-                                        </ChainExpression>
+                                        <BinaryExpression
+                                          NodeType="Equal">
+                                          <BinaryExpression.Left>
+                                            <ChainExpression>
+                                              <MemberExpression
+                                                Member="LightSwitchCommonModule:PersonaItem/Properties[Es_SubGerente]" />
+                                            </ChainExpression>
+                                          </BinaryExpression.Left>
+                                          <BinaryExpression.Right>
+                                            <ConstantExpression
+                                              ResultType=":Boolean?"
+                                              Value="True" />
+                                          </BinaryExpression.Right>
+                                        </BinaryExpression>
                                       </BinaryExpression.Left>
                                       <BinaryExpression.Right>
-                                        <ParameterExpression
-                                          Parameter="Id_Gerencia" />
+                                        <BinaryExpression
+                                          NodeType="Equal">
+                                          <BinaryExpression.Left>
+                                            <ChainExpression>
+                                              <MemberExpression
+                                                Member="LightSwitchCommonModule:PersonaItem/Properties[IDGerencia_para_subgerentes]" />
+                                            </ChainExpression>
+                                          </BinaryExpression.Left>
+                                          <BinaryExpression.Right>
+                                            <ParameterExpression
+                                              Parameter="Id_Gerencia" />
+                                          </BinaryExpression.Right>
+                                        </BinaryExpression>
                                       </BinaryExpression.Right>
                                     </BinaryExpression>
                                   </BinaryExpression.Right>
@@ -8123,40 +8192,23 @@
                               </BinaryExpression.Left>
                               <BinaryExpression.Right>
                                 <BinaryExpression
-                                  NodeType="And">
+                                  NodeType="Equal">
                                   <BinaryExpression.Attributes>
                                     <ExpressionGroup />
                                   </BinaryExpression.Attributes>
                                   <BinaryExpression.Left>
-                                    <BinaryExpression
-                                      NodeType="Equal">
-                                      <BinaryExpression.Left>
-                                        <ChainExpression>
-                                          <MemberExpression
-                                            Member="LightSwitchCommonModule:PersonaItem/Properties[Es_SubGerente]" />
-                                        </ChainExpression>
-                                      </BinaryExpression.Left>
-                                      <BinaryExpression.Right>
-                                        <ConstantExpression
-                                          ResultType=":Boolean?"
-                                          Value="True" />
-                                      </BinaryExpression.Right>
-                                    </BinaryExpression>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
+                                      <MemberExpression
+                                        Member="Division_SubGerenciaItem" />
+                                      <MemberExpression
+                                        Member="Id_SubGerencia" />
+                                    </ChainExpression>
                                   </BinaryExpression.Left>
                                   <BinaryExpression.Right>
-                                    <BinaryExpression
-                                      NodeType="Equal">
-                                      <BinaryExpression.Left>
-                                        <ChainExpression>
-                                          <MemberExpression
-                                            Member="LightSwitchCommonModule:PersonaItem/Properties[IDGerencia_para_subgerentes]" />
-                                        </ChainExpression>
-                                      </BinaryExpression.Left>
-                                      <BinaryExpression.Right>
-                                        <ParameterExpression
-                                          Parameter="Id_Gerencia" />
-                                      </BinaryExpression.Right>
-                                    </BinaryExpression>
+                                    <ParameterExpression
+                                      Parameter="Id_SubGerencia" />
                                   </BinaryExpression.Right>
                                 </BinaryExpression>
                               </BinaryExpression.Right>
@@ -8164,23 +8216,40 @@
                           </BinaryExpression.Left>
                           <BinaryExpression.Right>
                             <BinaryExpression
-                              NodeType="Equal">
+                              NodeType="And">
                               <BinaryExpression.Attributes>
                                 <ExpressionGroup />
                               </BinaryExpression.Attributes>
                               <BinaryExpression.Left>
-                                <ChainExpression>
-                                  <MemberExpression
-                                    Member="LightSwitchCommonModule:PersonaItem/Properties[Division_AreaItem]" />
-                                  <MemberExpression
-                                    Member="Division_SubGerenciaItem" />
-                                  <MemberExpression
-                                    Member="Id_SubGerencia" />
-                                </ChainExpression>
+                                <BinaryExpression
+                                  NodeType="Equal">
+                                  <BinaryExpression.Left>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="LightSwitchCommonModule:PersonaItem/Properties[Es_Gerente]" />
+                                    </ChainExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <ConstantExpression
+                                      ResultType=":Boolean?"
+                                      Value="True" />
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
                               </BinaryExpression.Left>
                               <BinaryExpression.Right>
-                                <ParameterExpression
-                                  Parameter="Id_SubGerencia" />
+                                <BinaryExpression
+                                  NodeType="Equal">
+                                  <BinaryExpression.Left>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="LightSwitchCommonModule:PersonaItem/Properties[Rut_Persona]" />
+                                    </ChainExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <ParameterExpression
+                                      Parameter="Rut_Gerente" />
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
                               </BinaryExpression.Right>
                             </BinaryExpression>
                           </BinaryExpression.Right>
@@ -8239,6 +8308,10 @@
               <QueryParameter
                 Name="Rut_Persona"
                 ParameterType=":String?" />
+              <QueryParameter
+                IsOptional="True"
+                Name="Rut_Gerente"
+                ParameterType=":String?" />
             </ScreenQueryDefinition.Parameters>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
@@ -8278,6 +8351,13 @@
                 <ChainExpression>
                   <MemberExpression
                     Member="SOLICITUDES_A_CARGO/Properties[IDUsuario]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Rut_Gerente">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[SWITCHRUTGERENTE]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -8332,18 +8412,101 @@
                   NodeType="And">
                   <BinaryExpression.Left>
                     <BinaryExpression
-                      NodeType="Equal">
+                      NodeType="And">
                       <BinaryExpression.Left>
-                        <ChainExpression>
-                          <MemberExpression
-                            Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[PersonaItem1]" />
-                          <MemberExpression
-                            Member="Rut_Persona" />
-                        </ChainExpression>
+                        <BinaryExpression
+                          NodeType="Equal">
+                          <BinaryExpression.Left>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[PersonaItem1]" />
+                              <MemberExpression
+                                Member="Rut_Persona" />
+                            </ChainExpression>
+                          </BinaryExpression.Left>
+                          <BinaryExpression.Right>
+                            <ParameterExpression
+                              Parameter="Rut_Persona" />
+                          </BinaryExpression.Right>
+                        </BinaryExpression>
                       </BinaryExpression.Left>
                       <BinaryExpression.Right>
-                        <ParameterExpression
-                          Parameter="Rut_Persona" />
+                        <BinaryExpression
+                          NodeType="Or">
+                          <BinaryExpression.Attributes>
+                            <ExpressionGroup />
+                          </BinaryExpression.Attributes>
+                          <BinaryExpression.Left>
+                            <BinaryExpression
+                              NodeType="Or">
+                              <BinaryExpression.Left>
+                                <BinaryExpression
+                                  NodeType="Or">
+                                  <BinaryExpression.Left>
+                                    <BinaryExpression
+                                      NodeType="Equal">
+                                      <BinaryExpression.Left>
+                                        <ChainExpression>
+                                          <MemberExpression
+                                            Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_JefeDirecto]" />
+                                        </ChainExpression>
+                                      </BinaryExpression.Left>
+                                      <BinaryExpression.Right>
+                                        <ParameterExpression
+                                          Parameter="VB_JefeDirecto" />
+                                      </BinaryExpression.Right>
+                                    </BinaryExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <BinaryExpression
+                                      NodeType="Equal">
+                                      <BinaryExpression.Left>
+                                        <ChainExpression>
+                                          <MemberExpression
+                                            Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_SubGerente]" />
+                                        </ChainExpression>
+                                      </BinaryExpression.Left>
+                                      <BinaryExpression.Right>
+                                        <ParameterExpression
+                                          Parameter="VB_SubGerente" />
+                                      </BinaryExpression.Right>
+                                    </BinaryExpression>
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
+                              </BinaryExpression.Left>
+                              <BinaryExpression.Right>
+                                <BinaryExpression
+                                  NodeType="Equal">
+                                  <BinaryExpression.Left>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_Gerente]" />
+                                    </ChainExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <ParameterExpression
+                                      Parameter="VB_Gerente" />
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
+                              </BinaryExpression.Right>
+                            </BinaryExpression>
+                          </BinaryExpression.Left>
+                          <BinaryExpression.Right>
+                            <BinaryExpression
+                              NodeType="Equal">
+                              <BinaryExpression.Left>
+                                <ChainExpression>
+                                  <MemberExpression
+                                    Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_GerenteGeneral]" />
+                                </ChainExpression>
+                              </BinaryExpression.Left>
+                              <BinaryExpression.Right>
+                                <ParameterExpression
+                                  Parameter="VB_GerenteGeneral" />
+                              </BinaryExpression.Right>
+                            </BinaryExpression>
+                          </BinaryExpression.Right>
+                        </BinaryExpression>
                       </BinaryExpression.Right>
                     </BinaryExpression>
                   </BinaryExpression.Left>
@@ -8358,16 +8521,46 @@
                           NodeType="Or">
                           <BinaryExpression.Left>
                             <BinaryExpression
-                              NodeType="Equal">
+                              NodeType="Or">
                               <BinaryExpression.Left>
-                                <ChainExpression>
-                                  <MemberExpression
-                                    Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_JefeDirecto]" />
-                                </ChainExpression>
+                                <BinaryExpression
+                                  NodeType="Equal">
+                                  <BinaryExpression.Left>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[PersonaItem1]" />
+                                      <MemberExpression
+                                        Member="Division_AreaItem" />
+                                      <MemberExpression
+                                        Member="Id_Area" />
+                                    </ChainExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <ParameterExpression
+                                      Parameter="Id_Area" />
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
                               </BinaryExpression.Left>
                               <BinaryExpression.Right>
-                                <ParameterExpression
-                                  Parameter="VB_JefeDirecto" />
+                                <BinaryExpression
+                                  NodeType="Equal">
+                                  <BinaryExpression.Left>
+                                    <ChainExpression>
+                                      <MemberExpression
+                                        Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[PersonaItem1]" />
+                                      <MemberExpression
+                                        Member="Division_AreaItem" />
+                                      <MemberExpression
+                                        Member="Division_SubGerenciaItem" />
+                                      <MemberExpression
+                                        Member="Id_SubGerencia" />
+                                    </ChainExpression>
+                                  </BinaryExpression.Left>
+                                  <BinaryExpression.Right>
+                                    <ParameterExpression
+                                      Parameter="Id_SubGerencia" />
+                                  </BinaryExpression.Right>
+                                </BinaryExpression>
                               </BinaryExpression.Right>
                             </BinaryExpression>
                           </BinaryExpression.Left>
@@ -8377,12 +8570,20 @@
                               <BinaryExpression.Left>
                                 <ChainExpression>
                                   <MemberExpression
-                                    Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_SubGerente]" />
+                                    Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[PersonaItem1]" />
+                                  <MemberExpression
+                                    Member="Division_AreaItem" />
+                                  <MemberExpression
+                                    Member="Division_SubGerenciaItem" />
+                                  <MemberExpression
+                                    Member="Division_GerenciaItem" />
+                                  <MemberExpression
+                                    Member="Id_Gerencia" />
                                 </ChainExpression>
                               </BinaryExpression.Left>
                               <BinaryExpression.Right>
                                 <ParameterExpression
-                                  Parameter="VB_SubGerente" />
+                                  Parameter="Id_Gerencia" />
                               </BinaryExpression.Right>
                             </BinaryExpression>
                           </BinaryExpression.Right>
@@ -8394,12 +8595,18 @@
                           <BinaryExpression.Left>
                             <ChainExpression>
                               <MemberExpression
-                                Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_Gerente]" />
+                                Member="LightSwitchCommonModule:SOLICITUDESItem/Properties[PersonaItem1]" />
+                              <MemberExpression
+                                Member="Division_AreaItem" />
+                              <MemberExpression
+                                Member="Division_GerenciaItem" />
+                              <MemberExpression
+                                Member="Id_Gerencia" />
                             </ChainExpression>
                           </BinaryExpression.Left>
                           <BinaryExpression.Right>
                             <ParameterExpression
-                              Parameter="VB_Gerente" />
+                              Parameter="Id_Gerencia1" />
                           </BinaryExpression.Right>
                         </BinaryExpression>
                       </BinaryExpression.Right>
@@ -8422,6 +8629,21 @@
               <QueryParameter
                 Name="VB_Gerente"
                 ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="VB_GerenteGeneral"
+                ParameterType=":Boolean?" />
+              <QueryParameter
+                Name="Id_Area"
+                ParameterType=":Int32?" />
+              <QueryParameter
+                Name="Id_SubGerencia"
+                ParameterType=":Int32?" />
+              <QueryParameter
+                Name="Id_Gerencia"
+                ParameterType=":Int32?" />
+              <QueryParameter
+                Name="Id_Gerencia1"
+                ParameterType=":Int32?" />
             </ScreenQueryDefinition.Parameters>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
@@ -8554,6 +8776,41 @@
                     Member="SOLICITUDES_A_CARGO/Properties[Caducada]" />
                 </ChainExpression>
               </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="VB_GerenteGeneral">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[VBGERENTEGENERAL]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Id_Area">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[IDAREA]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Id_SubGerencia">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[IDSUBGERENCIA]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Id_Gerencia">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[IDGERENCIA]" />
+                </ChainExpression>
+              </ArgumentExpression>
+              <ArgumentExpression
+                Parameter="Id_Gerencia1">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="SOLICITUDES_A_CARGO/Properties[IDGERENCIA]" />
+                </ChainExpression>
+              </ArgumentExpression>
             </CallExpression>
           </ChainExpression>
         </ScreenExpressionTree>
@@ -8681,6 +8938,12 @@
       <ScreenProperty
         Name="Rebajada"
         PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="VBGERENTEGENERAL"
+        PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="SWITCHRUTGERENTE"
+        PropertyType=":String?" />
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -10814,6 +11077,49 @@
       <ScreenProperty
         Name="RutUsuarioAD"
         PropertyType=":String?" />
+      <ScreenCollectionProperty
+        Name="Superior_GerenteGERENTEGENERAL"
+        PageSize="45"
+        PropertyType="LightSwitchCommonModule:CollectionView$Superior_GerenteItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Superior_GerenteGERENTEGENERALQuery"
+            ReturnType="LightSwitchCommonModule:Superior_GerenteItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Superior_GerenteItem/Properties[Division_GerenciaItem]" />
+                      <MemberExpression
+                        Member="Nombre" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="GERENTE GENERAL" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[Superior_Gerente]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="SOLICITUDES_NUEVA/Properties[Superior_GerenteGERENTEGENERAL]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -12397,6 +12703,10 @@
                 DataType=":Double?"
                 Kind="Value"
                 Name="NumeroDiasTomados2">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="DÍAS SOLICITADOS" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -12410,6 +12720,10 @@
                 DataType=":DateTime?"
                 Kind="Value"
                 Name="Inicio2">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="INICIO" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -12423,6 +12737,10 @@
                 DataType=":DateTime?"
                 Kind="Value"
                 Name="Termino2">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="TÉRMINO" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -12436,6 +12754,10 @@
                 DataType=":Boolean?"
                 Kind="Value"
                 Name="ConDescuento">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="CON DESCUENTO?" />
+                </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

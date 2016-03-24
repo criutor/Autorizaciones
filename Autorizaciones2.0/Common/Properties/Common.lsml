@@ -200,6 +200,13 @@
         FromEnd="Persona"
         Name="CargoRolPrivadoItem"
         ToEnd="CargoRolPrivado" />
+      <EntityProperty
+        Name="Es_GerenteGeneral"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -2581,24 +2588,50 @@
                                                 NodeType="Or">
                                                 <BinaryExpression.Left>
                                                   <BinaryExpression
-                                                    NodeType="Equal">
+                                                    NodeType="Or">
                                                     <BinaryExpression.Left>
-                                                      <ChainExpression>
-                                                        <MemberExpression
-                                                          Member="PersonaItem1" />
-                                                        <MemberExpression
-                                                          Member="Division_AreaItem" />
-                                                        <MemberExpression
-                                                          Member="Division_SubGerenciaItem" />
-                                                        <MemberExpression
-                                                          Member="Division_GerenciaItem" />
-                                                        <MemberExpression
-                                                          Member="Id_Gerencia" />
-                                                      </ChainExpression>
+                                                      <BinaryExpression
+                                                        NodeType="Equal">
+                                                        <BinaryExpression.Left>
+                                                          <ChainExpression>
+                                                            <MemberExpression
+                                                              Member="PersonaItem1" />
+                                                            <MemberExpression
+                                                              Member="Division_AreaItem" />
+                                                            <MemberExpression
+                                                              Member="Division_SubGerenciaItem" />
+                                                            <MemberExpression
+                                                              Member="Division_GerenciaItem" />
+                                                            <MemberExpression
+                                                              Member="Id_Gerencia" />
+                                                          </ChainExpression>
+                                                        </BinaryExpression.Left>
+                                                        <BinaryExpression.Right>
+                                                          <ParameterExpression
+                                                            Parameter="Id_Gerencia" />
+                                                        </BinaryExpression.Right>
+                                                      </BinaryExpression>
                                                     </BinaryExpression.Left>
                                                     <BinaryExpression.Right>
-                                                      <ParameterExpression
-                                                        Parameter="Id_Gerencia" />
+                                                      <BinaryExpression
+                                                        NodeType="Equal">
+                                                        <BinaryExpression.Left>
+                                                          <ChainExpression>
+                                                            <MemberExpression
+                                                              Member="PersonaItem1" />
+                                                            <MemberExpression
+                                                              Member="Division_AreaItem" />
+                                                            <MemberExpression
+                                                              Member="Division_GerenciaItem" />
+                                                            <MemberExpression
+                                                              Member="Id_Gerencia" />
+                                                          </ChainExpression>
+                                                        </BinaryExpression.Left>
+                                                        <BinaryExpression.Right>
+                                                          <ParameterExpression
+                                                            Parameter="Id_Gerencia" />
+                                                        </BinaryExpression.Right>
+                                                      </BinaryExpression>
                                                     </BinaryExpression.Right>
                                                   </BinaryExpression>
                                                 </BinaryExpression.Left>
@@ -2612,14 +2645,14 @@
                                                         <MemberExpression
                                                           Member="Division_AreaItem" />
                                                         <MemberExpression
-                                                          Member="Division_GerenciaItem" />
+                                                          Member="Division_SubGerenciaItem" />
                                                         <MemberExpression
-                                                          Member="Id_Gerencia" />
+                                                          Member="Id_SubGerencia" />
                                                       </ChainExpression>
                                                     </BinaryExpression.Left>
                                                     <BinaryExpression.Right>
                                                       <ParameterExpression
-                                                        Parameter="Id_Gerencia" />
+                                                        Parameter="Id_SubGerencia" />
                                                     </BinaryExpression.Right>
                                                   </BinaryExpression>
                                                 </BinaryExpression.Right>
@@ -2635,14 +2668,12 @@
                                                     <MemberExpression
                                                       Member="Division_AreaItem" />
                                                     <MemberExpression
-                                                      Member="Division_SubGerenciaItem" />
-                                                    <MemberExpression
-                                                      Member="Id_SubGerencia" />
+                                                      Member="Id_Area" />
                                                   </ChainExpression>
                                                 </BinaryExpression.Left>
                                                 <BinaryExpression.Right>
                                                   <ParameterExpression
-                                                    Parameter="Id_SubGerencia" />
+                                                    Parameter="Id_Area" />
                                                 </BinaryExpression.Right>
                                               </BinaryExpression>
                                             </BinaryExpression.Right>
@@ -2650,20 +2681,44 @@
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
                                           <BinaryExpression
-                                            NodeType="Equal">
+                                            NodeType="And">
+                                            <BinaryExpression.Attributes>
+                                              <ExpressionGroup />
+                                            </BinaryExpression.Attributes>
                                             <BinaryExpression.Left>
-                                              <ChainExpression>
-                                                <MemberExpression
-                                                  Member="PersonaItem1" />
-                                                <MemberExpression
-                                                  Member="Division_AreaItem" />
-                                                <MemberExpression
-                                                  Member="Id_Area" />
-                                              </ChainExpression>
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="PersonaItem1" />
+                                                    <MemberExpression
+                                                      Member="Es_SubGerente" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ConstantExpression
+                                                    ResultType=":Boolean?"
+                                                    Value="True" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
-                                              <ParameterExpression
-                                                Parameter="Id_Area" />
+                                              <BinaryExpression
+                                                NodeType="Equal">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="PersonaItem1" />
+                                                    <MemberExpression
+                                                      Member="IDGerencia_para_subgerentes" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ParameterExpression
+                                                    Parameter="Id_Gerencia" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Right>
@@ -2683,7 +2738,7 @@
                                                 <MemberExpression
                                                   Member="PersonaItem1" />
                                                 <MemberExpression
-                                                  Member="Es_SubGerente" />
+                                                  Member="Es_Gerente" />
                                               </ChainExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
@@ -2699,14 +2754,13 @@
                                             <BinaryExpression.Left>
                                               <ChainExpression>
                                                 <MemberExpression
-                                                  Member="PersonaItem1" />
-                                                <MemberExpression
-                                                  Member="IDGerencia_para_subgerentes" />
+                                                  Member="VB_GerenteGeneral" />
                                               </ChainExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
-                                              <ParameterExpression
-                                                Parameter="Id_Gerencia" />
+                                              <ConstantExpression
+                                                ResultType=":Boolean?"
+                                                Value="False" />
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Right>
@@ -8293,6 +8347,13 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="VB_GerenteGeneral"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>

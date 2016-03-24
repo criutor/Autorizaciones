@@ -39,6 +39,18 @@ namespace LightSwitchApplication
             {
                 IDUsuario = PersonaPorNombreAD.First().Rut_Persona; // Filtramos que en las solicitudes no aparezcan las del mismo usuario.
 
+                if (PersonaPorNombreAD.First().Es_GerenteGeneral == true)
+                {
+                    /*
+                     * si solicitud es tipo horas extras
+                     * si yo ya las he evaluado(rechazado o aprobado)
+                     */
+
+                    //IDGERENCIA = PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
+                    VBGERENTEGENERAL = true;
+                    SWITCHRUTGERENTE = null;//Traer a todos los gerentes(es opcional en la query)
+
+                }else
 
                 if (PersonaPorNombreAD.First().Es_Gerente == true)
                 {
@@ -49,6 +61,7 @@ namespace LightSwitchApplication
 
                     IDGERENCIA = PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
                     VBGERENTE = true;
+                    SWITCHRUTGERENTE = "INVALIDAR";// No traerá a otros gerentes, ya que el rut no es valido
                 }
                 else if (PersonaPorNombreAD.First().Es_SubGerente == true)
                 {
@@ -58,15 +71,13 @@ namespace LightSwitchApplication
 
                     IDSUBGERENCIA = PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
                     VBSUBGERENTE = true;
+                    SWITCHRUTGERENTE = "INVALIDAR";
                 }
                 else if (PersonaPorNombreAD.First().Es_JefeDirecto == true)
                 {
-                    /*
-                     * si yo ya las he evaluado(rechazado o aprobado)
-                     */
-
                     IDAREA = PersonaPorNombreAD.First().Superior_JefeDirectoQuery.First().Division_AreaItem.Id_Area;
                     VBJEFEAREA = true;
+                    SWITCHRUTGERENTE = "INVALIDAR";
                 }
                 else
                 {

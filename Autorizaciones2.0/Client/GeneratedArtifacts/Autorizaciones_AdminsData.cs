@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 17/03/2016 19:28:30
+// Fecha de generación: 23/03/2016 19:03:41
 namespace LightSwitchApplication.Implementation
 {
     
@@ -1043,6 +1043,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<bool> _EsRolPrivado;
         partial void OnEsRolPrivadoChanging(global::System.Nullable<bool> value);
         partial void OnEsRolPrivadoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Es_GerenteGeneral en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> Es_GerenteGeneral
+        {
+            get
+            {
+                return this._Es_GerenteGeneral;
+            }
+            set
+            {
+                this.OnEs_GerenteGeneralChanging(value);
+                if (object.Equals(this.Es_GerenteGeneral, value))
+                {
+                    return;
+                }
+                this._Es_GerenteGeneral = value;
+                this.OnEs_GerenteGeneralChanged();
+                this.OnPropertyChanged("Es_GerenteGeneral");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _Es_GerenteGeneral;
+        partial void OnEs_GerenteGeneralChanging(global::System.Nullable<bool> value);
+        partial void OnEs_GerenteGeneralChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>
@@ -7171,6 +7197,32 @@ namespace LightSwitchApplication.Implementation
         private string _EmailProximoDestinatario;
         partial void OnEmailProximoDestinatarioChanging(string value);
         partial void OnEmailProximoDestinatarioChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad VB_GerenteGeneral en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> VB_GerenteGeneral
+        {
+            get
+            {
+                return this._VB_GerenteGeneral;
+            }
+            set
+            {
+                this.OnVB_GerenteGeneralChanging(value);
+                if (object.Equals(this.VB_GerenteGeneral, value))
+                {
+                    return;
+                }
+                this._VB_GerenteGeneral = value;
+                this.OnVB_GerenteGeneralChanged();
+                this.OnPropertyChanged("VB_GerenteGeneral");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _VB_GerenteGeneral;
+        partial void OnVB_GerenteGeneralChanging(global::System.Nullable<bool> value);
+        partial void OnVB_GerenteGeneralChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

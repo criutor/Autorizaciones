@@ -17,6 +17,7 @@
     <Property Name="Cargo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="FechaVigencia" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="EsRolPrivado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Es_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="CargoRolPrivado_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
@@ -320,6 +321,7 @@
     <Property Name="Rebajada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="CodigoEstado" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="EmailProximoDestinatario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="VB_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />

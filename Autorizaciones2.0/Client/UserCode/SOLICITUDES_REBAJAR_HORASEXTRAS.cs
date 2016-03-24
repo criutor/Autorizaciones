@@ -26,7 +26,7 @@ namespace LightSwitchApplication
             if (this.HorasExtrasAprobadas.SelectedItem.HorasTrabajadas > 0)
             {
                 this.HorasExtrasAprobadas.SelectedItem.Rebajada = true;
-                this.HorasExtrasAprobadas.SelectedItem.Titulo = "Rebajada por RR.HH";
+                this.HorasExtrasAprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
 
                 this.NUEVOESTADO = new ESTADOSItem();
                 this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;
@@ -59,7 +59,7 @@ namespace LightSwitchApplication
 
             // Escriba el código aquí.
             this.HorasExtrasAprobadas.SelectedItem.Caducada = true;
-            this.HorasExtrasAprobadas.SelectedItem.Titulo = "Cancelada por RR.HH";
+            this.HorasExtrasAprobadas.SelectedItem.Estado = "Cancelada por RR.HH";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;

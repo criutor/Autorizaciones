@@ -11,6 +11,15 @@ namespace LightSwitchApplication
 {
     public partial class PERSONAL_BUSCAR_FIN700
     {
+        public static string removerCeros(String RutEmpleado)
+        {
+            String[] RutSinCeros = new String[12];
+            
+
+            return RutSinCeros.ToString();
+
+        }
+
         partial void CrearTrabajador_Execute()
         {
             
@@ -23,6 +32,7 @@ namespace LightSwitchApplication
                 PersonaItem personaNueva = new PersonaItem();
 
                 personaNueva.Rut_Persona = this.PersonasContratadas.SelectedItem.Rut_Persona;
+                
                 personaNueva.Nombres = this.PersonasContratadas.SelectedItem.Nombres;
                 personaNueva.AP_Paterno = this.PersonasContratadas.SelectedItem.AP_Paterno;
                 personaNueva.AP_Materno = this.PersonasContratadas.SelectedItem.AP_Materno;

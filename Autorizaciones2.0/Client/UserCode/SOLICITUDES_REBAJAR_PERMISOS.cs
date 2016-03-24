@@ -25,7 +25,7 @@ namespace LightSwitchApplication
 
 
             this.PermisosAprobados.SelectedItem.Rebajada = true;
-            this.PermisosAprobados.SelectedItem.Titulo = "Rebajada por RR.HH";
+            this.PermisosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
@@ -50,7 +50,7 @@ namespace LightSwitchApplication
 
             // Escriba el código aquí.
             this.PermisosAprobados.SelectedItem.Caducada = true;
-            this.PermisosAprobados.SelectedItem.Titulo = "Cancelada por RR.HH";
+            this.PermisosAprobados.SelectedItem.Estado = "Cancelada por RR.HH";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;

@@ -1204,6 +1204,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[EsRolPrivado]"
           Type="bit" />
+        <SsdlProperty
+          Name="Es_GerenteGeneral"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Es_GerenteGeneral]"
+          Type="bit" />
         <SsdlForeignKeyProperty
           Name="CargoRolPrivado_fk"
           Nullable="True"
@@ -1838,6 +1843,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[EmailProximoDestinatario]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="VB_GerenteGeneral"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_GerenteGeneral]"
+          Type="bit" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

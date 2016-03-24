@@ -48,14 +48,40 @@ namespace LightSwitchApplication
 
             //Configura quien sera el primero en aprobar la solicitud
 
+            
             if (this.PersonaPorNombreAD.First().Es_Gerente == true)
             {   
+
                 //Si el solicitante es gerente
                 this.SOLICITUD.Departamento = " Gerencia de " + this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.VB_Gerente = true;
-                this.SOLICITUD.Completada = true;
-                this.SOLICITUD.Estado = "Aprobada por el Gerente";
+                this.SOLICITUD.VB_GerenteGeneral = false;
+
+                //ENVIAR EMAIL AL GERENTE GENERAL-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                /*
+                DESCOMENTAR CUANDO AD ESTE POBLADA CON EL RUT
+                 *
+                //El campo de consulta es igual al rut del gerente
+                this.RutUsuarioAD = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Rut_Persona;
+                //Llamar al metodo que trae el email actual del usuario AD
+                this.ConsultarEmailUsuarioAD_Execute();
+                //Guarda el correo obtenido 
+                 * 
+                 * ESTE MENSAJE DEBE ENVIARSE DESDE EL SERVIDOR :S
+                if (this.EmailUsuarioAD == null)
+                {
+                    this.ShowMessageBox("No hemos podido enviar un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + " , de todas maneras, tu solicitud ha sido registrada en el sistema", "EMAIL NO ENVIADO", MessageBoxOption.Ok);
+                }
+                else { 
+
+                    this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                    this.ShowMessageBox("Hemos enviado un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD , "EMAIL ENVIADO", MessageBoxOption.Ok);
+                }
+                */
+
+                this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+
             }
             else 
                 if (this.PersonaPorNombreAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
@@ -68,7 +94,7 @@ namespace LightSwitchApplication
                     if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
                     {
                         this.SOLICITUD.Completada = true;
-                        this.SOLICITUD.Estado = "Aprobada por el Sub Gerente";
+                        //this.SOLICITUD.Estado = "Aprobada por el Sub Gerente";
                     }
                     else 
                     {
@@ -151,6 +177,24 @@ namespace LightSwitchApplication
                                 /*
                                 //El campo de consulta es igual al rut del gerente
                                 this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
+                                //Llamar al metodo que trae el email actual del usuario AD
+                                this.ConsultarEmailUsuarioAD_Execute();
+                                //Guarda el correo obtenido 
+                                this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                                */
+
+                                this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                            }
+                            else if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                // Si hay gerente
+                                this.SOLICITUD.VB_Gerente = false;
+
+                                //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+
+                                /*
+                                //El campo de consulta es igual al rut del gerente
+                                this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
                                 //Llamar al metodo que trae el email actual del usuario AD
                                 this.ConsultarEmailUsuarioAD_Execute();
                                 //Guarda el correo obtenido 
@@ -633,7 +677,7 @@ namespace LightSwitchApplication
                 if (this.SOLICITUD.Inicio < DateTime.Today)
                 {
 
-                    results.AddPropertyError("La fecha de realización debe ser a partir de hoy");
+                    results.AddPropertyError("La fecha de realización no puede ser antes de hoy");
 
                 }
 
@@ -689,10 +733,10 @@ namespace LightSwitchApplication
                     results.AddPropertyError("La fecha de término no puede ser fin de semana ");
                 }
 
-                if (this.SOLICITUD.Inicio <= DateTime.Today)
+                if (this.SOLICITUD.Inicio < DateTime.Today)
                 {
 
-                    results.AddPropertyError("La fecha de inicio debe ser después de hoy");
+                    results.AddPropertyError("La fecha de inicio no puede ser antes de hoy");
 
                 }
 
@@ -758,10 +802,10 @@ namespace LightSwitchApplication
                     results.AddPropertyError("La fecha de término no puede ser fin de semana ");
                 }
 
-                if (this.SOLICITUD.Inicio <= DateTime.Today)
+                if (this.SOLICITUD.Inicio < DateTime.Today)
                 {
 
-                    results.AddPropertyError("La fecha de inicio debe ser después de hoy");
+                    results.AddPropertyError("La fecha de inicio no puede ser antes de hoy");
 
                 }
 
@@ -893,6 +937,12 @@ namespace LightSwitchApplication
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
             this.EmailUsuarioAD = operation.EmailUsuario;
+
+        }
+
+        partial void SOLICITUDES_NUEVA_Saving(ref bool handled)
+        {
+            // Escriba el código aquí.
 
         }
         

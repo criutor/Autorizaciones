@@ -19,7 +19,6 @@ namespace LightSwitchApplication
 {
     public partial class Autorizaciones_AdminsDataService
     {
-
         //Quitar los acentos del nombre para dejar en formato Active Directory
         public static string removerSignosAcentos(String texto)
         {
@@ -85,15 +84,16 @@ namespace LightSwitchApplication
             string[] props = {  "displayname","mail","employeeID"};
 
             //var propResults = ActiveDirectoryInfo.UserPropertySearchByName(entity.NombreUsuario, "LDAP://afpplanvital.cl", props);
+            //entity.RutUsuario = propResults["employeeID"];
 
             var propResults = ActiveDirectoryInfo.UserPropertyBuscarPorRut(entity.RutUsuario, "LDAP://afpplanvital.cl", props);
 
             entity.EmailUsuario = propResults["mail"];
-            //entity.RutUsuario = propResults["employeeID"];
+            
 
             this.Details.DiscardChanges();
         }
-
+        
         partial void SOLICITUDES_Inserted(SOLICITUDESItem entity)
         {
             string destinatario = entity.EmailProximoDestinatario;
@@ -105,34 +105,115 @@ namespace LightSwitchApplication
             //Si es de solicitud de horas extras
             if (entity.HorasExtras == true)
             {
-                string mensaje = "Usted es administrativo ";
+                string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " en espera de su aceptación. ";
                 correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
             }
             //todas las otras solicitudes
             else
             {
+                if (entity.VB_GerenteGeneral == false)
+                {
+                    string mensaje = "Estimado Gerente General" + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación ";
+                    correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                }
 
                 if (entity.VB_JefeDirecto == false)
                 {
-                    string mensaje = "Usted es jefe de área ";
+                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área";
                     correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
                 }
                 else
                     if (entity.VB_SubGerente == false)
                     {
-                        string mensaje = "Usted es subgerente ";
+                        string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente";
                         correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
                     }
                     else
                         if (entity.VB_Gerente == false)
                         {
-                            string mensaje = "Usted es gerente ";
-                            correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                            if(entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
+                            {
+                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente";
+                                correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                            }
+                            else
+                            {
+                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente";
+                                correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                            }
+          
                         }
             }
 
-            entity.EmailProximoDestinatario = null;
+            //entity.EmailProximoDestinatario = null;
         }
 
+        
+        partial void SOLICITUDES_Updated(SOLICITUDESItem entity)
+        {
+            if(entity.Cancelada != true){
+
+                string destinatario = entity.EmailProximoDestinatario;
+                string asunto;
+
+
+                LightSwitchApplication.UserCode.EnviaMail correo = new UserCode.EnviaMail();
+
+                if (entity.Rechazada == true)
+                {
+                    asunto = "SU SOLICITUD HA SIDO RECHAZADA";
+                    string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado;
+                    correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                }
+                else
+                    if (entity.Rebajada == true)
+                    {
+                        asunto = "SU SOLICITUD HA SIDO REBAJADA";
+                        string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado;
+                        correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                    }
+                    else
+                        if (entity.Completada == true)
+                        {
+                            asunto = "SU SOLICITUD HA SIDO APROBADA POR SUS SUPERIORES ";
+                            string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha completado todas las aprobaciones necesarias";
+                            correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                        }
+                        else
+                            {
+                                if (entity.VB_JefeDirecto == false)
+                                {
+                                    asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
+                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área";
+                                    correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                                }
+                                else
+                                    if (entity.VB_SubGerente == false)
+                                    {
+                                        asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
+                                        string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente";
+                                        correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                                    }
+                                    else
+                                        if (entity.VB_Gerente == false)
+                                        {
+                                            asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
+                                            if (entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
+                                            {
+                                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente";
+                                                correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                                            }
+                                            else
+                                            {
+                                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente";
+                                                correo.Mail("documentos.super@planvital.cl", destinatario, asunto, mensaje);
+                                            }
+                                        }
+                            }
+
+                //entity.EmailProximoDestinatario = null;
+            }
+        
+        }
     }
 }

@@ -30,6 +30,8 @@ namespace LightSwitchApplication
                     
                     this.Division_GerenciaItem.Gerente = this.Persona.SelectedItem.NombreAD;
 
+                    if (this.Division_GerenciaItem.Nombre == "GERENCIA GENERAL") { this.Persona.SelectedItem.Es_GerenteGeneral = true; }
+
                 }
                 else
 

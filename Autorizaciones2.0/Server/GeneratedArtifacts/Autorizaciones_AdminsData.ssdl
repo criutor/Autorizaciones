@@ -136,6 +136,7 @@
     <Property Name="Cargo" Type="nvarchar" MaxLength="50" />
     <Property Name="FechaVigencia" Type="datetime" />
     <Property Name="EsRolPrivado" Type="bit" />
+    <Property Name="Es_GerenteGeneral" Type="bit" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
     <Property Name="CargoRolPrivado_fk" Type="int" />
@@ -396,6 +397,7 @@
     <Property Name="Rebajada" Type="bit" />
     <Property Name="CodigoEstado" Type="int" />
     <Property Name="EmailProximoDestinatario" Type="nvarchar" MaxLength="50" />
+    <Property Name="VB_GerenteGeneral" Type="bit" />
     <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">

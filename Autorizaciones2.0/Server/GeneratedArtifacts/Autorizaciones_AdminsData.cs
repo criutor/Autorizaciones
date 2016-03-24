@@ -2837,6 +2837,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> Es_GerenteGeneral
+        {
+            get
+            {
+                return _Es_GerenteGeneral;
+            }
+            set
+            {
+                OnEs_GerenteGeneralChanging(value);
+                ReportPropertyChanging("Es_GerenteGeneral");
+                _Es_GerenteGeneral = value;
+                ReportPropertyChanged("Es_GerenteGeneral");
+                OnEs_GerenteGeneralChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _Es_GerenteGeneral;
+        partial void OnEs_GerenteGeneralChanging(Nullable<global::System.Boolean> value);
+        partial void OnEs_GerenteGeneralChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Convenio_fk
         {
             get
@@ -6503,6 +6527,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _EmailProximoDestinatario;
         partial void OnEmailProximoDestinatarioChanging(global::System.String value);
         partial void OnEmailProximoDestinatarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> VB_GerenteGeneral
+        {
+            get
+            {
+                return _VB_GerenteGeneral;
+            }
+            set
+            {
+                OnVB_GerenteGeneralChanging(value);
+                ReportPropertyChanging("VB_GerenteGeneral");
+                _VB_GerenteGeneral = value;
+                ReportPropertyChanged("VB_GerenteGeneral");
+                OnVB_GerenteGeneralChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _VB_GerenteGeneral;
+        partial void OnVB_GerenteGeneralChanging(Nullable<global::System.Boolean> value);
+        partial void OnVB_GerenteGeneralChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

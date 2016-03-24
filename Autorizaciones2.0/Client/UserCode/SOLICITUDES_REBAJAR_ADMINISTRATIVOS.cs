@@ -24,7 +24,7 @@ namespace LightSwitchApplication
 
             this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.DiasAdministrativosAprobados.SelectedItem.NumeroDiasTomados;
             this.DiasAdministrativosAprobados.SelectedItem.Rebajada = true;
-            this.DiasAdministrativosAprobados.SelectedItem.Titulo = "Rebajada por RR.HH";
+            this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.DiasAdministrativosAprobados.SelectedItem;
@@ -64,7 +64,7 @@ namespace LightSwitchApplication
 
             // Escriba el código aquí.
             this.DiasAdministrativosAprobados.SelectedItem.Caducada = true;
-            this.DiasAdministrativosAprobados.SelectedItem.Titulo = "Cancelada por RR.HH";
+            this.DiasAdministrativosAprobados.SelectedItem.Estado = "Cancelada por RR.HH";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.DiasAdministrativosAprobados.SelectedItem;
