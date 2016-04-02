@@ -13,7 +13,7 @@
   <parameter name="Autorizaciones_AdminsData" description="Configurar ConnectionString" defaultValue="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="web.config" match="configuration/connectionStrings/add[@name='Autorizaciones_AdminsData']/@connectionString" />
   </parameter>
-  <parameter name="AUTORIZACIONES_ADMINS_IisWebApplication" description="Ubicación de contenido de aplicación web IIS" defaultValue="Default Web Site/AUTORIZACIONES_ADMINS" tags="IisApp">
+  <parameter name="AUTORIZACIONES_ADMINS_IisWebApplication" description="Ubicación de contenido de aplicación web IIS" defaultValue="Default Web Site/AutorizacionesAdministrativas" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\cesar\.riutor\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\$" />
   </parameter>
 </parameters>

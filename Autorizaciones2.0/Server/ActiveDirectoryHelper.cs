@@ -25,7 +25,7 @@ namespace ActiveDirectoryLookup
             public const string GUID = "objectguid";
             public const string LOGONALIAS = "mailnickname";
             public const string REPORTSTO = "manager";
-            public const string VALUENOTFOUND = "Value not found in Active Directory!";
+            public const string VALUENOTFOUND = "Valor no encontrado en Active Directory!";
 
             public const string EMPLOYEEID = "employeeID";
         }

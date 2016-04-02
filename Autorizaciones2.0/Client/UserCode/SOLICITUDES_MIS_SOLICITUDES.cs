@@ -13,42 +13,11 @@ using Microsoft.LightSwitch.Threading;
 using System.ServiceModel.DomainServices.Client;
 
 
-
 namespace LightSwitchApplication
 {
     public partial class SOLICITUDES_MIS_SOLICITUDES
     {
-
-        partial void SOLICITUDES_MIS_SOLICITUDES_Activated()
-        {
-            //this.ConsultarInfoUsuarioAD_Execute();
-
-            //this.Application.User.
-            //Mostrar todas las solicitudes por defecto (Parametros de la query)
-            
-            this.FiltroEstados = "Todos los estados";
-            
-            
-            //****CAMBIAR POR RUT****
-            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
-            NOMBREAD = "RUBIO FLORES, GUSTAVO";
-
-            this.RutUsuarioFiltroSolicitudes = this.PersonaPorNombreAD.First().Rut_Persona;
-
-            //Verificar que que tipo de usuario esta ingresando a la pantalla.
-            if (this.PersonaPorNombreAD.Count() == 0)
-            {
-                this.MENSAJEPersonaNoCreada_Execute(); this.Close(true);
-
-            }
-            else if ((this.PersonaPorNombreAD.First().Es_Gerente != true) && (this.PersonaPorNombreAD.First().Es_JefeDirecto != true) && (this.PersonaPorNombreAD.First().Es_SubGerente != true) && this.PersonaPorNombreAD.First().Division_AreaItem == null)
-            {
-
-                this.MENSAJECuentaNoAsociada_Execute(); this.Close(true);
-
-            }
-        }
-
+        /*
         //Quitar acentos del nombre de active directory.
         public static string removerSignosAcentos(String conAcentos)
         {
@@ -86,60 +55,63 @@ namespace LightSwitchApplication
 
             return Nombreaux.ToUpper();
         }
+        */
+        partial void SOLICITUDES_MIS_SOLICITUDES_Activated()
+        {
+            //guarda en this.RutUsuarioAD el rut del usuario AD
+            this.ConsultarRutUsuarioAD_Execute();
 
+            if (this.RutUsuarioAD == null)
+            {
+                this.ShowMessageBox("Lo sentimos, tu rut no se encuentra en la base de datos de Active Directory, por favor contacta al administrador", "Error en la base de datos", MessageBoxOption.Ok);
+
+                this.Close(true);
+            }
+                        
+            //Mostrar todas las solicitudes por defecto (Parametros de la query)
+            this.FiltroEstados = "Todos los estados";
+                        
+            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
+            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
+
+            try
+            {
+                this.RutUsuarioFiltroSolicitudes = this.PersonaPorRut.First().Rut_Persona;
+            }
+            catch { }
+
+            //Verificar que tipo de usuario esta ingresando a la pantalla.
+            if (this.PersonaPorRut.Count() == 0)
+            {
+                //Cuando no se encuentra ningún empleado asociado al rut de AD
+                this.MENSAJEPersonaNoCreada_Execute(); this.Close(true);
+            }
+            else if ((this.PersonaPorRut.First().Es_Gerente != true) && (this.PersonaPorRut.First().Es_JefeDirecto != true) && (this.PersonaPorRut.First().Es_SubGerente != true) && this.PersonaPorRut.First().Division_AreaItem == null)
+            {
+                //Cuando se encuentra un empleado asociado al rut de AD pero este no ha sido asociado a un cargo de jefatura o área
+                this.MENSAJECuentaNoAsociada_Execute(); this.Close(true);
+            }
+        }
+
+        // Abre la ventana modal correspondiente al tipo de usuario. Rol privado, jefe de área o administrativo.
         partial void NuevaSolicitud_Execute()
         {
-            // Escriba el código aquí.
-            if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)
+            if (this.PersonaPorRut.First().EsRolPrivado == true)
+            {
+                this.OpenModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+            }
+            else if (this.PersonaPorRut.First().Es_JefeDirecto == true)
             {
                 this.OpenModalWindow("SeleccioneTipoDeSolicitud");
             }
             else { this.OpenModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras"); }
         }
 
-
-        partial void MENSAJECuentaNoAsociada_Execute()
-        {
-            // Escriba el código aquí.
-            this.ShowMessageBox("Lo sentimos, tu nombre aún no ha sido asociado a un área de trabajo o cargo de jefatura. Contacta al administrador", "SIN ÁREA DE TRABAJO O CARGO SUPERIOR!", MessageBoxOption.Ok);
-
-        }
-
-        partial void MENSAJEPersonaNoCreada_Execute()
-        {
-            // Escriba el código aquí.
-            this.ShowMessageBox("Lo sentimos, tu perfil no aparece en nuestra base de datos. Contacta al administrador", "USUARIO NO ENCONTRADO!", MessageBoxOption.Ok);
-
-        }
-
-        partial void MasDetalles_Execute()
-        {
-            /*
-            if (this.Solicitud_Header.SelectedItem.Administrativo == true)
-            {
-                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Administrativo.First().Id_Administrativo, 1, 1);
-            }
-            if (this.Solicitud_Header.SelectedItem.Vacaciones == true)
-            {
-                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_Vacaciones.First().Id_Vacaciones, 2, 1);
-            }
-            if (this.Solicitud_Header.SelectedItem.HorasExtras == true)
-            {
-                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_HorasExtras.First().Id_HorasExtras, 3, 1);
-            }
-            if (this.Solicitud_Header.SelectedItem.OtroPermiso == true)
-            {
-                this.Application.ShowSolicitudes_Ver_Aprobar_Rechazar(this.Solicitud_Header.SelectedItem.Solicitud_Detalle_OtroPermiso.First().Id_OtroPermiso, 4, 1);
-            }
-            */
-
-        }
-
         partial void SolicitarDiaAdministrativo_Execute()
         {
             //Cuenta si hay solicitudes por días administrativos en espera de aprobación, si es así, no creará una nueva solicitud.
 
-            if(this.PersonaPorNombreAD.First().ConvenioColectivoItem == null){
+            if(this.PersonaPorRut.First().ConvenioColectivoItem == null){
 
                 this.ShowMessageBox("Lo sentimos, para pedir un día administrativo necesitas estar asociado(a) a un convenio colectivo", "NO TIENES ASOCIADO UN CONVENIO COLECTIVO!", MessageBoxOption.Ok);
 
@@ -158,13 +130,30 @@ namespace LightSwitchApplication
                 if (ContAdmin > 0)
                 {
 
-                    this.SolicitudAdministrativoEnEspera_Execute(); this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
+                    this.SolicitudAdministrativoEnEspera_Execute();
+
+                    if (this.PersonaPorRut.First().EsRolPrivado == true)
+                    {
+                        this.CloseModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+                    }
+                    else if (this.PersonaPorRut.First().Es_JefeDirecto == true)
+                    {
+                        this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                    }
+                    else { this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras"); }  
                 }
                 else
                 {
-                    this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
-                    this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-                    //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 1);
+                    if (this.PersonaPorRut.First().EsRolPrivado == true)
+                    {
+                        this.CloseModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+                    }
+                    else if (this.PersonaPorRut.First().Es_JefeDirecto == true)
+                    {
+                        this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                    }
+                    else { this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras"); }  
+
                     this.Application.ShowSOLICITUDES_NUEVA(1);
                 }
             }
@@ -186,17 +175,39 @@ namespace LightSwitchApplication
             }
 
             if (ContAdmin > 0)
-            {
+            {   
+                this.SolicitudVacacionesEnEspera_Execute();
 
-                this.SolicitudVacacionesEnEspera_Execute(); this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
+                if (this.PersonaPorRut.First().EsRolPrivado == true)
+                {
+                    this.CloseModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+                }
+                else if (this.PersonaPorRut.First().Es_JefeDirecto == true)
+                {
+                    this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                }
+                else { this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras"); }      
+          
             }
             else
             {
-                this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras");
-                this.CloseModalWindow("SeleccioneTipoDeSolicitud");
-                //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 2);
+                if (this.PersonaPorRut.First().EsRolPrivado == true)
+                {
+                    this.CloseModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+                }
+                else if (this.PersonaPorRut.First().Es_JefeDirecto == true)
+                {
+                    this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                }
+                else { this.CloseModalWindow("SeleccioneTipoDeSolicitudSinHorasExtras"); }
+
                 this.Application.ShowSOLICITUDES_NUEVA(2);
+
             }
+
+            
+                
+            
         }
 
         partial void SolicitarHorasExtras_Execute()
@@ -215,6 +226,16 @@ namespace LightSwitchApplication
             //this.Application.ShowSolicitudes_Crear(this.PersonaPorNombreAD.First().Rut_Persona, 4);
             this.Application.ShowSOLICITUDES_NUEVA(4);
 
+        }
+
+        partial void LimpiarFiltros_Execute()
+        {
+            this.FiltroEstados = null;
+            this.FechaSolicitudDesde = null;
+            this.FechaSolicitudHasta = null;
+            this.FALSAS = false;
+            this.VERDADERAS = true;
+            this.SOLICITUDES.Load();
         }
 
         partial void FiltroEstados_Validate(ScreenValidationResultsBuilder results)
@@ -251,77 +272,6 @@ namespace LightSwitchApplication
                             }
         }
 
-        partial void SolicitarHorasExtras_CanExecute(ref bool result)
-        {   
-            // Solamente los Jefes de área pueden solicitar horas extras.
-            if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true )
-            {
-                result = true;
-            }
-            else { result = false; }
-        }
-
-        partial void Solicitud_Header_Validate(ScreenValidationResultsBuilder results)
-        {
-            
-            /*VERSION 1.0
-             
-            if(this.Solicitud_Header.Count > 0)
-            {
-
-                if (this.Solicitud_Header.SelectedItem.Administrativo.HasValue == true)
-                {
-                    if (this.Solicitud_Header.SelectedItem.Administrativo.Value == true)
-                    {
-                        
-                        this.FindControl("EstadosAdministrativo").IsVisible = true;
-                        this.FindControl("EstadosVacaciones").IsVisible = false;
-                        this.FindControl("EstadosHorasExtras").IsVisible = false;
-                        this.FindControl("EstadosOtroPermiso").IsVisible = false;
-                    }
-                }
-                else
-                    if (this.Solicitud_Header.SelectedItem.Vacaciones.HasValue == true)
-                    {
-                        if (this.Solicitud_Header.SelectedItem.Vacaciones.Value == true)
-                        {
-                            
-                            this.FindControl("EstadosAdministrativo").IsVisible = false;
-                            this.FindControl("EstadosVacaciones").IsVisible = true;
-                            this.FindControl("EstadosHorasExtras").IsVisible = false;
-                            this.FindControl("EstadosOtroPermiso").IsVisible = false;
-                        }
-                    }
-                    else
-                        if (this.Solicitud_Header.SelectedItem.HorasExtras.HasValue == true)
-                        {
-                            if (this.Solicitud_Header.SelectedItem.HorasExtras.Value == true)
-                            {
-                                
-
-                                this.FindControl("EstadosAdministrativo").IsVisible = false;
-                                this.FindControl("EstadosVacaciones").IsVisible = false;
-                                this.FindControl("EstadosHorasExtras").IsVisible = true;
-                                this.FindControl("EstadosOtroPermiso").IsVisible = false;
-                            }
-                        }
-                        else
-                            if (this.Solicitud_Header.SelectedItem.OtroPermiso.Value == true)
-                            {
-                                if (this.Solicitud_Header.SelectedItem.OtroPermiso.Value == true)
-                                {
-                                    
-                                    this.FindControl("EstadosAdministrativo").IsVisible = false;
-                                    this.FindControl("EstadosVacaciones").IsVisible = false;
-                                    this.FindControl("EstadosHorasExtras").IsVisible = false;
-                                    this.FindControl("EstadosOtroPermiso").IsVisible = true;
-                                }
-                            }
-            }
-            */
-
-        }
-
         partial void AceptarSolicitud_Execute()
         {
             this.OpenModalWindow("AceptarSolicitudMW");
@@ -351,7 +301,7 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO = new ESTADOSItem();
                 this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.SelectedItem;
                 this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO ACEPTADA POR:";
-                this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
+                this.NUEVOESTADO.MensajeBy = this.PersonaPorRut.First().NombreAD;
                 this.NUEVOESTADO.CreadoAt = DateTime.Now;
                 this.NUEVOESTADO.Observaciones = this.NuevoComentarioAceptar;
 
@@ -373,7 +323,7 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO = new ESTADOSItem();
                 this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.SelectedItem;
                 this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO CANCELADA POR:";
-                this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
+                this.NUEVOESTADO.MensajeBy = this.PersonaPorRut.First().NombreAD;
                 this.NUEVOESTADO.CreadoAt = DateTime.Now;
                 this.NUEVOESTADO.Observaciones = this.NuevoComentarioCancelar;
 
@@ -438,14 +388,17 @@ namespace LightSwitchApplication
             catch { }
         }
 
-        partial void LimpiarFiltros_Execute()
+        partial void MENSAJECuentaNoAsociada_Execute()
         {
-            this.FiltroEstados = null;
-            this.FechaSolicitudDesde = null;
-            this.FechaSolicitudHasta = null;
-            this.FALSAS = false;
-            this.VERDADERAS = true;
-            this.SOLICITUDES.Load();
+            // Escriba el código aquí.
+            this.ShowMessageBox("Lo sentimos, tu nombre aún no ha sido asociado a un área de trabajo o cargo de jefatura. Contacta al administrador", "SIN ÁREA DE TRABAJO O CARGO SUPERIOR!", MessageBoxOption.Ok);
+        }
+
+        partial void MENSAJEPersonaNoCreada_Execute()
+        {
+            // Escriba el código aquí.
+            this.ShowMessageBox("Lo sentimos, tu perfil no aparece en nuestra base de datos. Contacta al administrador", "USUARIO NO ENCONTRADO!", MessageBoxOption.Ok);
+
         }
 
         partial void SolicitudAdministrativoEnEspera_Execute()
@@ -457,24 +410,41 @@ namespace LightSwitchApplication
         {
             this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por Vacaciones en espera de aprobación", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
         }
-        /*
-        partial void ConsultarInfoUsuarioAD_Execute()
+
+        //traer el rut usando el nombre
+        partial void ConsultarRutUsuarioAD_Execute()
         {
+            
             DataWorkspace dataWorkspace = new DataWorkspace();
 
-            ConsultarInfoUsuarioADItem operation =
-                dataWorkspace.Autorizaciones_AdminsData.ConsultarInfoUsuarioAD.AddNew();
+            ConsultarRutUsuarioADItem operation =
+                dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
 
             operation.NombreUsuario = this.Application.User.FullName;
 
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
-            this.EmailUsuarioAD = operation.EmailUsuario;
-
             this.RutUsuarioAD = operation.RutUsuario;
-
+            
+            //this.RutUsuarioAD = "17511042-9";//gustavo
         }
-        */
+        /*
+        // Traer email usando un rut
+        partial void ConsultarEmailUsuarioAD_Execute()
+        {
+            DataWorkspace dataWorkspace = new DataWorkspace();
 
+            ConsultarEmailUsuarioADItem operation =
+                dataWorkspace.Autorizaciones_AdminsData.ConsultarEmailUsuarioAD.AddNew();
+            
+            operation.RutUsuario = this.RutUsuarioAD;
+
+            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
+
+            this.EmailUsuarioAD = operation.EmailUsuario;
+        
+        }
+         
+        */
     }
 }

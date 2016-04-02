@@ -489,15 +489,28 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Obtiene el conjunto de entidades ConsultarInfoUsuarioAD. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// Obtiene el conjunto de entidades ConsultarRutUsuarioAD. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarRutUsuarioADItem> ConsultarRutUsuarioAD
         {
             get
             {
-                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarInfoUsuarioAD);
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarRutUsuarioAD);
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el conjunto de entidades ConsultarEmailUsuarioAD. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarEmailUsuarioADItem> ConsultarEmailUsuarioAD
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarEmailUsuarioAD);
             }
         }
         
@@ -932,12 +945,12 @@ namespace LightSwitchApplication
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
-        /// <param name="NombreAD">
+        /// <param name="Rut_Persona">
         /// No hay ninguna descripción modelada
         /// </param>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PersonaItem> PersonaPorNombreAD(string NombreAD)
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PersonaItem> PersonaPorRut(string Rut_Persona)
         {
-            return this.Details.Methods.PersonaPorNombreAD.CreateInvocation(NombreAD).Execute();
+            return this.Details.Methods.PersonaPorRut.CreateInvocation(Rut_Persona).Execute();
         }
         
         /// <summary>
@@ -1173,28 +1186,6 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
-        /// </summary>
-        /// <param name="id">
-        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
-        /// </param>
-        public global::LightSwitchApplication.ConsultarInfoUsuarioADItem ConsultarInfoUsuarioAD_Single(global::System.Nullable<int> id)
-        {
-            return this.Details.Methods.ConsultarInfoUsuarioAD_Single.CreateInvocation(id).Execute();
-        }
-        
-        /// <summary>
-        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
-        /// </summary>
-        /// <param name="id">
-        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
-        /// </param>
-        public global::LightSwitchApplication.ConsultarInfoUsuarioADItem ConsultarInfoUsuarioAD_SingleOrDefault(global::System.Nullable<int> id)
-        {
-            return this.Details.Methods.ConsultarInfoUsuarioAD_SingleOrDefault.CreateInvocation(id).Execute();
-        }
-        
-        /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         /// <param name="Id_Gerencia">
@@ -1254,6 +1245,50 @@ namespace LightSwitchApplication
         public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Superior_JefeDirectoItem> Query1(global::System.Nullable<int> Id_Area)
         {
             return this.Details.Methods.Query1.CreateInvocation(Id_Area).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.ConsultarRutUsuarioADItem ConsultarRutUsuarioAD_Single(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.ConsultarRutUsuarioAD_Single.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.ConsultarRutUsuarioADItem ConsultarRutUsuarioAD_SingleOrDefault(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.ConsultarRutUsuarioAD_SingleOrDefault.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.ConsultarEmailUsuarioADItem ConsultarEmailUsuarioAD_Single(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.ConsultarEmailUsuarioAD_Single.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.ConsultarEmailUsuarioADItem ConsultarEmailUsuarioAD_SingleOrDefault(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.ConsultarEmailUsuarioAD_SingleOrDefault.CreateInvocation(id).Execute();
         }
         
         #endregion
@@ -1608,11 +1643,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaPorNombreAD
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaPorRut
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.PersonaPorNombreAD) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>;
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.PersonaPorRut) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>;
                     }
                 }
                 
@@ -1728,22 +1763,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD_Single
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ConsultarInfoUsuarioAD_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ConsultarInfoUsuarioAD_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem> SubgerenciasPorGerenciaID
                 {
                     get
@@ -1797,6 +1816,38 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.Query1) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Superior_JefeDirectoItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem> ConsultarRutUsuarioAD_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ConsultarRutUsuarioAD_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem> ConsultarRutUsuarioAD_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ConsultarRutUsuarioAD_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem> ConsultarEmailUsuarioAD_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ConsultarEmailUsuarioAD_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem> ConsultarEmailUsuarioAD_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.ConsultarEmailUsuarioAD_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>;
                     }
                 }
                 
@@ -2005,11 +2056,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem> ConsultarRutUsuarioAD
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarInfoUsuarioAD) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>;
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarRutUsuarioAD) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem> ConsultarEmailUsuarioAD
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.ConsultarEmailUsuarioAD) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>;
                     }
                 }
                 
@@ -2403,12 +2462,12 @@ namespace LightSwitchApplication
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    PersonaPorNombreAD = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
-                        "PersonaPorNombreAD",
-                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._PersonaPorNombreAD_Stub);
-                private static void _PersonaPorNombreAD_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                    PersonaPorRut = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "PersonaPorRut",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._PersonaPorRut_Stub);
+                private static void _PersonaPorRut_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._PersonaPorNombreAD, sf);
+                    c(d, ref d._PersonaPorRut, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2552,26 +2611,6 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Entry
-                    ConsultarInfoUsuarioAD_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Entry(
-                        "ConsultarInfoUsuarioAD_Single",
-                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ConsultarInfoUsuarioAD_Single_Stub);
-                private static void _ConsultarInfoUsuarioAD_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ConsultarInfoUsuarioAD_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Entry
-                    ConsultarInfoUsuarioAD_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Entry(
-                        "ConsultarInfoUsuarioAD_SingleOrDefault",
-                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ConsultarInfoUsuarioAD_SingleOrDefault_Stub);
-                private static void _ConsultarInfoUsuarioAD_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ConsultarInfoUsuarioAD_SingleOrDefault, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Entry
                     SubgerenciasPorGerenciaID = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Entry(
                         "SubgerenciasPorGerenciaID",
@@ -2639,6 +2678,46 @@ namespace LightSwitchApplication
                 private static void _Query1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Superior_JefeDirectoItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
                 {
                     c(d, ref d._Query1, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Entry
+                    ConsultarRutUsuarioAD_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Entry(
+                        "ConsultarRutUsuarioAD_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ConsultarRutUsuarioAD_Single_Stub);
+                private static void _ConsultarRutUsuarioAD_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConsultarRutUsuarioAD_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Entry
+                    ConsultarRutUsuarioAD_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Entry(
+                        "ConsultarRutUsuarioAD_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ConsultarRutUsuarioAD_SingleOrDefault_Stub);
+                private static void _ConsultarRutUsuarioAD_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConsultarRutUsuarioAD_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Entry
+                    ConsultarEmailUsuarioAD_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Entry(
+                        "ConsultarEmailUsuarioAD_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ConsultarEmailUsuarioAD_Single_Stub);
+                private static void _ConsultarEmailUsuarioAD_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConsultarEmailUsuarioAD_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Entry
+                    ConsultarEmailUsuarioAD_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Entry(
+                        "ConsultarEmailUsuarioAD_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._ConsultarEmailUsuarioAD_SingleOrDefault_Stub);
+                private static void _ConsultarEmailUsuarioAD_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConsultarEmailUsuarioAD_SingleOrDefault, sf);
                 }
     
             }
@@ -2890,13 +2969,23 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Entry
-                    ConsultarInfoUsuarioAD = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Entry(
-                        "ConsultarInfoUsuarioAD",
-                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._ConsultarInfoUsuarioAD_Stub);
-                private static void _ConsultarInfoUsuarioAD_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Entry
+                    ConsultarRutUsuarioAD = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Entry(
+                        "ConsultarRutUsuarioAD",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._ConsultarRutUsuarioAD_Stub);
+                private static void _ConsultarRutUsuarioAD_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ConsultarInfoUsuarioAD, sf);
+                    c(d, ref d._ConsultarRutUsuarioAD, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Entry
+                    ConsultarEmailUsuarioAD = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Entry(
+                        "ConsultarEmailUsuarioAD",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._ConsultarEmailUsuarioAD_Stub);
+                private static void _ConsultarEmailUsuarioAD_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConsultarEmailUsuarioAD, sf);
                 }
      
             }
@@ -2974,7 +3063,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.CargoRolPrivadoItem>.Data _CargoRolPrivado;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Data _ConsultarInfoUsuarioAD;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Data _ConsultarRutUsuarioAD;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Data _ConsultarEmailUsuarioAD;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona_Single;
@@ -3091,7 +3183,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Superior_SubGerenteItem>.Data _Superior_SubGerente_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaPorNombreAD;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaPorRut;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarSaldoVacacionesItem>.Data _ConsultarSaldoVacaciones_Single;
@@ -3136,12 +3228,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.CargoRolPrivadoItem>.Data _CargoRolPrivado_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Data _ConsultarInfoUsuarioAD_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>.Data _ConsultarInfoUsuarioAD_SingleOrDefault;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Division_SubGerenciaItem>.Data _SubgerenciasPorGerenciaID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3161,6 +3247,18 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.Superior_JefeDirectoItem>.Data _Query1;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Data _ConsultarRutUsuarioAD_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarRutUsuarioADItem>.Data _ConsultarRutUsuarioAD_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Data _ConsultarEmailUsuarioAD_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>.Data _ConsultarEmailUsuarioAD_SingleOrDefault;
             
         }
     

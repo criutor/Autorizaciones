@@ -843,34 +843,66 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
-      EntitySet="ConsultarInfoUsuarioAD">
+      EntitySet="ConsultarEmailUsuarioAD">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
           Schema="dbo"
-          Table="ConsultarInfoUsuarioAD" />
+          Table="ConsultarEmailUsuarioAD" />
         <SsdlProperty
           Name="id"
           Nullable="False"
-          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[id]"
+          Property="LightSwitchCommonModule:ConsultarEmailUsuarioADItem/Properties[id]"
           StoreGeneratedPattern="Identity"
           Type="int" />
         <SsdlProperty
           MaxLength="50"
           Name="RutUsuario"
           Nullable="True"
-          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[RutUsuario]"
+          Property="LightSwitchCommonModule:ConsultarEmailUsuarioADItem/Properties[RutUsuario]"
           Type="nvarchar" />
         <SsdlProperty
           MaxLength="50"
           Name="NombreUsuario"
           Nullable="True"
-          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[NombreUsuario]"
+          Property="LightSwitchCommonModule:ConsultarEmailUsuarioADItem/Properties[NombreUsuario]"
           Type="nvarchar" />
         <SsdlProperty
           MaxLength="50"
           Name="EmailUsuario"
           Nullable="True"
-          Property="LightSwitchCommonModule:ConsultarInfoUsuarioADItem/Properties[EmailUsuario]"
+          Property="LightSwitchCommonModule:ConsultarEmailUsuarioADItem/Properties[EmailUsuario]"
+          Type="nvarchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="ConsultarRutUsuarioAD">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ConsultarRutUsuarioAD" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ConsultarRutUsuarioADItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="RutUsuario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarRutUsuarioADItem/Properties[RutUsuario]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="NombreUsuario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarRutUsuarioADItem/Properties[NombreUsuario]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EmailUsuario"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ConsultarRutUsuarioADItem/Properties[EmailUsuario]"
           Type="nvarchar" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
@@ -1138,7 +1170,7 @@
           Name="Rut_Persona"
           Nullable="False"
           Property="LightSwitchCommonModule:PersonaItem/Properties[Rut_Persona]"
-          Type="char" />
+          Type="nvarchar" />
         <SsdlProperty
           MaxLength="30"
           Name="AP_Paterno"
@@ -1209,6 +1241,29 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[Es_GerenteGeneral]"
           Type="bit" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Email"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Email]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="AreaDeTrabajo"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[AreaDeTrabajo]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="12"
+          Name="Rut_Persona_ConCeros"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[Rut_Persona_ConCeros]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="SaldoVacaciones"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones]"
+          Type="float" />
         <SsdlForeignKeyProperty
           Name="CargoRolPrivado_fk"
           Nullable="True"
@@ -1626,6 +1681,12 @@
           Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Completada]"
           Type="bit" />
         <SsdlProperty
+          MaxLength="12"
+          Name="RutPersona_fk"
+          Nullable="False"
+          Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[RutPersona_fk]"
+          Type="char" />
+        <SsdlProperty
           Name="Vacaciones"
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[Vacaciones]"
@@ -1656,12 +1717,6 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Solicitud_HeaderItem/Properties[VB_Empleado]"
           Type="bit" />
-        <SsdlForeignKeyProperty
-          MaxLength="12"
-          Name="RutPersona_fk"
-          Nullable="False"
-          PropertyName="RutPersona_fk"
-          Type="char" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -1853,7 +1908,7 @@
           Name="RutPersona_fk"
           Nullable="False"
           PropertyName="RutPersona_fk"
-          Type="char" />
+          Type="nvarchar" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -1878,7 +1933,7 @@
           Name="Persona_fk"
           Nullable="False"
           PropertyName="Persona_fk"
-          Type="char" />
+          Type="nvarchar" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -1903,7 +1958,7 @@
           Name="Persona_fk"
           Nullable="False"
           PropertyName="Persona_fk"
-          Type="char" />
+          Type="nvarchar" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -1928,7 +1983,7 @@
           Name="Persona_fk"
           Nullable="False"
           PropertyName="Persona_fk"
-          Type="char" />
+          Type="nvarchar" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping
@@ -2260,27 +2315,6 @@
         </SsdlAssociationSetEnd>
         <SsdlAssociationSetEnd
           End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SOLICITUDES_Persona]/Members[SOLICITUDES]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="RutPersona_fk" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="FK_SolicitudHeader_Persona">
-      <AssociationSetMapping.Attributes>
-        <SsdlAssociationSet
-          Name="FK_SolicitudHeader_Persona" />
-        <SsdlAssociationSetEnd
-          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SolicitudHeader_Persona]/Members[Persona]">
-          <SsdlAssociationSetEnd.Attributes>
-            <SsdlPropertyRef
-              Name="Rut_Persona" />
-          </SsdlAssociationSetEnd.Attributes>
-        </SsdlAssociationSetEnd>
-        <SsdlAssociationSetEnd
-          End="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[FK_SolicitudHeader_Persona]/Members[Solicitud_Header]">
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="RutPersona_fk" />

@@ -20,16 +20,16 @@ namespace LightSwitchApplication
     {
         partial void SOLICITUDES_NUEVA_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
         {
+            // Guarda el rut del usuario AD en this.RUTUSUARIO
+            this.ConsultarRutUsuarioAD_Execute();
+
             //Valores por defecto 
             this.AdministrativoDesde = "La mañana (Todo el día)";
             this.AdministrativoHasta = "La tarde (Todo el día)"; 
 
             // Parametro de busqueda de la persona
             //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
-            NOMBREAD = "RUBIO FLORES, GUSTAVO";
-
-            // Guarda el rut del usuario
-            RUTUSUARIO = this.PersonaPorNombreAD.First().Rut_Persona;
+            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
 
             //Instanciar el objeto solicitud 
             this.SOLICITUD = new SOLICITUDESItem();
@@ -39,59 +39,56 @@ namespace LightSwitchApplication
             this.SOLICITUD.Cancelada = false;
             this.SOLICITUD.Estado = "Siendo procesada";
             this.SOLICITUD.VB_Empleado = true;
-
-            
-            
+        
             //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
             if (TIPOSOLICITUD == 3) { this.SOLICITUD.PersonaItem1 = null; }
-                else{this.SOLICITUD.PersonaItem1 = this.PersonaPorNombreAD.First();}
+                else{this.SOLICITUD.PersonaItem1 = this.PersonaPorRutAD.First();}
 
             //Configura quien sera el primero en aprobar la solicitud
-
-            
-            if (this.PersonaPorNombreAD.First().Es_Gerente == true)
+        
+            if (this.PersonaPorRutAD.First().Es_Gerente == true)
             {   
 
                 //Si el solicitante es gerente
-                this.SOLICITUD.Departamento = " Gerencia de " + this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
-                this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                this.SOLICITUD.Departamento = " Gerencia de " + this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.VB_Gerente = true;
                 this.SOLICITUD.VB_GerenteGeneral = false;
 
                 //ENVIAR EMAIL AL GERENTE GENERAL-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-                /*
-                DESCOMENTAR CUANDO AD ESTE POBLADA CON EL RUT
-                 *
+                
                 //El campo de consulta es igual al rut del gerente
-                this.RutUsuarioAD = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Rut_Persona;
+                //this.RutUsuarioAD = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Rut_Persona;
                 //Llamar al metodo que trae el email actual del usuario AD
-                this.ConsultarEmailUsuarioAD_Execute();
-                //Guarda el correo obtenido 
-                 * 
-                 * ESTE MENSAJE DEBE ENVIARSE DESDE EL SERVIDOR :S
+                //this.ConsultarEmailUsuarioAD_Execute();
+                //Guarda el correo obtenido moises.arevalo@planvital.cl
+
+                //this.SOLICITUD.EmailProximoDestinatario = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Email;
+
+                this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+
+                /*
                 if (this.EmailUsuarioAD == null)
                 {
-                    this.ShowMessageBox("No hemos podido enviar un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + " , de todas maneras, tu solicitud ha sido registrada en el sistema", "EMAIL NO ENVIADO", MessageBoxOption.Ok);
+                    this.ShowMessageBox("No hemos podido enviar un email de aviso a " + this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + " , de todas maneras, tu solicitud ha sido registrada en el sistema", "EMAIL NO ENVIADO", MessageBoxOption.Ok);
                 }
                 else { 
 
-                    this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                    this.ShowMessageBox("Hemos enviado un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD , "EMAIL ENVIADO", MessageBoxOption.Ok);
+                    //this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
+                    this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                    this.ShowMessageBox("Hemos enviado un email de aviso a " + this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD, "EMAIL ENVIADO", MessageBoxOption.Ok);
                 }
                 */
-
-                this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
-
             }
             else 
-                if (this.PersonaPorNombreAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
+                if (this.PersonaPorRutAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
                 {   
-                    this.SOLICITUD.Departamento = " SubGerencia de " + this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
-                    this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Division_GerenciaItem.Nombre;
+                    this.SOLICITUD.Departamento = " SubGerencia de " + this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
+                    this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Division_GerenciaItem.Nombre;
                     this.SOLICITUD.VB_SubGerente = true;
 
                     //si no hay un gerente, la solicitud queda automaticamente aprobada
-                    if (this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
+                    if (this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
                     {
                         this.SOLICITUD.Completada = true;
                         //this.SOLICITUD.Estado = "Aprobada por el Sub Gerente";
@@ -101,37 +98,18 @@ namespace LightSwitchApplication
                         this.SOLICITUD.VB_Gerente = false;
                         
                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                        //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                        this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
 
-                        /*DESCOMENTAR CUANDO AD ESTE POBLADA CON EL RUT
-                         * 
-                        //El campo de consulta es igual al rut del gerente
-                        this.RutUsuarioAD = this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
-                        //Llamar al metodo que trae el email actual del usuario AD
-                        this.ConsultarEmailUsuarioAD_Execute();
-                        //Guarda el correo obtenido 
-                         * 
-                         * ESTE MENSAJE DEBE ENVIARSE DESDE EL SERVIDOR :S
-                        if (this.EmailUsuarioAD == null)
-                        {
-                            this.ShowMessageBox("No hemos podido enviar un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + " , de todas maneras, tu solicitud ha sido registrada en el sistema", "EMAIL NO ENVIADO", MessageBoxOption.Ok);
-                        }
-                        else { 
-
-                            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                            this.ShowMessageBox("Hemos enviado un email de aviso a " + this.PersonaPorNombreAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD , "EMAIL ENVIADO", MessageBoxOption.Ok);
-                        }
-                        */
-
-                        this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
                     }
                 }
                 else 
-                    if (this.PersonaPorNombreAD.First().Es_JefeDirecto == true)//Si el solicitante es Jefe de área
+                    if (this.PersonaPorRutAD.First().Es_JefeDirecto == true)//Si el solicitante es Jefe de área
                     {   
 
-                    this.IDAREA = this.PersonaPorNombreAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
-                    this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
-                    this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
+                    this.IDAREA = this.PersonaPorRutAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
+                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
+                    this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
                     this.SOLICITUD.VB_JefeDirecto = true;
 
                     //Si es solicitud de horas extras
@@ -143,65 +121,43 @@ namespace LightSwitchApplication
 
                         // la configuracion se realiza desde SeleccionarPersonal_Execute() cuando el Jefe de área escoge un empleado.
 
-                        this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                        
 
                     }
                     //Todas las otras solicitudes
-                    else{
+                    else
+                    {
                   
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                        if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                         {
                             // Si hay subgerencia y subgerente
                             this.SOLICITUD.VB_SubGerente = false;
 
                             //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-                            /*
-                            //El campo de consulta es igual al rut del subgerente
-                            this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Rut_Persona;
-                            //Llamar al metodo que trae el email actual del usuario AD
-                            this.ConsultarEmailUsuarioAD_Execute();
-                            //Guarda el correo obtenido 
-                            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                            */
-
-                            this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                            
+                            //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
+                            this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
                         }
                         else
-                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                             {
                                 // Si hay gerente
                                 this.SOLICITUD.VB_Gerente = false;
 
                                 //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
-                                /*
-                                //El campo de consulta es igual al rut del gerente
-                                this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
-                                //Llamar al metodo que trae el email actual del usuario AD
-                                this.ConsultarEmailUsuarioAD_Execute();
-                                //Guarda el correo obtenido 
-                                this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                                */
-
-                                this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                                //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl"; 
                             }
-                            else if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            else if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                             {
                                 // Si hay gerente
                                 this.SOLICITUD.VB_Gerente = false;
 
                                 //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                                /*
-                                //El campo de consulta es igual al rut del gerente
-                                this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
-                                //Llamar al metodo que trae el email actual del usuario AD
-                                this.ConsultarEmailUsuarioAD_Execute();
-                                //Guarda el correo obtenido 
-                                this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                                */
-
-                                this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+ 
+                                //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
                             }
                             else
                             {
@@ -219,27 +175,27 @@ namespace LightSwitchApplication
                     
                     int contarSuperiores = 0;
 
-                    this.SOLICITUD.Departamento = this.PersonaPorNombreAD.First().Division_AreaItem.Nombre;
-                    this.SOLICITUD.Gerencia = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
+                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
+                    this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
 
                     //Contar superiores
-                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
+                    if (this.PersonaPorRutAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
                     {
                         contarSuperiores = contarSuperiores + 1;
                     }
 
-                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                    if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
                     {
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                        if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                         {
                             contarSuperiores = contarSuperiores + 1;                               
                         }
 
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                        if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                         {
                             contarSuperiores = contarSuperiores + 1;
                         }
-                        else if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                        else if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                         {
                             contarSuperiores = contarSuperiores + 1;
                         }
@@ -255,80 +211,48 @@ namespace LightSwitchApplication
                     else
                     {
                         //Setiar vb's
-                        if (this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
+                        if (this.PersonaPorRutAD.First().Division_AreaItem.Superior_JefeDirecto.Count() != 0)
                         {
                             this.SOLICITUD.VB_JefeDirecto = false; //si hay jefe de área
                             
                             //ENVIAR EMAIL AL JEFE DE AREA-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
-                            /*
-                            //El campo de consulta es igual al rut deL JEFE DE AREA
-                            this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.Rut_Persona;
-                            //Llamar al metodo que trae el email actual del usuario AD
-                            this.ConsultarEmailUsuarioAD_Execute();
-                            //Guarda el correo obtenido 
-                            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                            */
-
-                            this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                            //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.Email;
+                            this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
                         }
                         else
-                            if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
                             {
-                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                                 {
                                     this.SOLICITUD.VB_SubGerente = false; // Si hay subgerente
 
                                     //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
-                                    /*
-                                    //El campo de consulta es igual al rut del subgerente
-                                    this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Rut_Persona;
-                                    //Llamar al metodo que trae el email actual del usuario AD
-                                    this.ConsultarEmailUsuarioAD_Execute();
-                                    //Guarda el correo obtenido 
-                                    this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                                    */
-
-                                    this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                                    //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
+                                    this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
                                 }
                             }
                             else
-                                if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                                 {
                                     this.SOLICITUD.VB_Gerente = false; // Si hay gerente
 
                                     //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
-                                    /*
-                                    //El campo de consulta es igual al rut del gerente
-                                    this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
-                                    //Llamar al metodo que trae el email actual del usuario AD
-                                    this.ConsultarEmailUsuarioAD_Execute();
-                                    //Guarda el correo obtenido 
-                                    this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                                    */
-
-                                    this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                                    //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                    this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
                                 }
                                 else
 
-                                    if (this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                    if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                                     {
                                         this.SOLICITUD.VB_Gerente = false; // Si hay gerente
 
                                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
-                                        /*
-                                        //El campo de consulta es igual al rut del gerente
-                                        this.RutUsuarioAD = this.PersonaPorNombreAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Rut_Persona;
-                                        //Llamar al metodo que trae el email actual del usuario AD
-                                        this.ConsultarEmailUsuarioAD_Execute();
-                                        //Guarda el correo obtenido 
-                                        this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                                        */
-
-                                        this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
+                                        //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                        this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
                                     }
                     }
 
@@ -340,7 +264,7 @@ namespace LightSwitchApplication
             {
                 this.SOLICITUD.Administrativo = true;
                 this.SOLICITUD.Titulo = "Día administrativo";
-                this.SOLICITUD.SaldoDias = this.PersonaPorNombreAD.First().SaldoDiasAdmins.Value;
+                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoDiasAdmins.Value;
             }
             else if (TIPOSOLICITUD == 2)
             {
@@ -371,46 +295,36 @@ namespace LightSwitchApplication
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUD;
             this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
-            this.NUEVOESTADO.MensajeBy = this.PersonaPorNombreAD.First().NombreAD;
+            this.NUEVOESTADO.MensajeBy = this.PersonaPorRutAD.First().NombreAD;
             this.NUEVOESTADO.CreadoAt = DateTime.Now;
             
         }
 
         partial void SOLICITUDES_NUEVA_Activated()
         {
+            this.ConsultarRutUsuarioAD_Execute();
+
             try
             {
                 //Activar los controles en la vista dependiendo del tipo de solicitud
                 if (TIPOSOLICITUD == 1)//administrativo
                 {
-
                     this.FindControl("ADMINISTRATIVO").IsVisible = true;
-
                 }
                 else
-
                     if (TIPOSOLICITUD == 2)//vacaciones
                     {
-
                         this.FindControl("VACACIONES").IsVisible = true;
-
-
                     }
                     else
-
                         if (TIPOSOLICITUD == 3)//horas extras
                         {
-
                             this.FindControl("HORASEXTRAS").IsVisible = true;
-
                         }
                         else
-
                             if (TIPOSOLICITUD == 4)//otro permiso
                             {
-
                                 this.FindControl("OTROPERMISO").IsVisible = true;
-
                             }
             }
             catch { }
@@ -497,22 +411,31 @@ namespace LightSwitchApplication
         //Se conecta con el stored procedure que consulta el saldo de vacaciones
         partial void ConsultarSaldo_Execute()
         {
-            DataWorkspace dataWorkspace = new DataWorkspace();
+            if (this.PersonaPorRutAD.First().EsRolPrivado == true)
+            {
+                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones;
+            }
+            else
+            {
+                DataWorkspace dataWorkspace = new DataWorkspace();
 
-            ConsultarSaldoVacacionesItem operation =
-                dataWorkspace.Autorizaciones_AdminsData.ConsultarSaldoVacaciones.AddNew();
+                ConsultarSaldoVacacionesItem operation =
+                    dataWorkspace.Autorizaciones_AdminsData.ConsultarSaldoVacaciones.AddNew();
 
-            operation.Fecha = this.SOLICITUD.Inicio.Value;
+                operation.Fecha = this.SOLICITUD.Inicio.Value;
+ 
+                operation.Rut = this.PersonaPorRutAD.First().Rut_Persona_ConCeros;
+                RUTUSUARIOPARACONTRATO = this.PersonaPorRutAD.First().Rut_Persona_ConCeros;
+                 
+                //operation.Rut = "0017511042-9"; //Gustavo
 
-            //operation.Rut = this.PersonaItem.Rut_Persona;
-            operation.Rut = "0017511042-9"; //Gustavo
+                operation.Contrato = this.ContratoPorRut.Last().Contrato;
+                //operation.Contrato = 2063;//Gustavo
 
-            //operation.Contrato = this.ContratoPorRut.Last().Contrato;
-            operation.Contrato = 2063;//Gustavo
+                dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
-            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
-
-            this.SOLICITUD.SaldoDias = operation.Saldo;
+                this.SOLICITUD.SaldoDias = operation.Saldo;
+            }
         }
 
         //Calcula los días laborales entre dos fechas descontando los feriados.
@@ -909,41 +832,28 @@ namespace LightSwitchApplication
         partial void SeleccionarPersonal_Execute()
         {
             this.SOLICITUD.PersonaItem1 = this.PersonalBajoJefeDeArea.SelectedItem;
-            
-            /*DESCOMENTAR CUANDO AD ESTE POBLADA CON EL RUT
-             * 
-            //Rut para consultar el email de AD
-            this.RutUsuarioAD = this.SOLICITUD.PersonaItem1.Rut_Persona;
-            //Busca el email asociado al rut en AD
-            this.ConsultarEmailUsuarioAD_Execute();
-            //Guarda el email obtenido
-            this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-            */
 
+            //this.SOLICITUD.EmailProximoDestinatario = this.PersonalBajoJefeDeArea.SelectedItem.Email;
+            this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
             this.CloseModalWindow("PersonalArea");
         }
 
-        partial void ConsultarEmailUsuarioAD_Execute()
+        partial void ConsultarRutUsuarioAD_Execute()
         {
+            
             // Escriba el código aquí.
             DataWorkspace dataWorkspace = new DataWorkspace();
 
-            ConsultarInfoUsuarioADItem operation =
-                dataWorkspace.Autorizaciones_AdminsData.ConsultarInfoUsuarioAD.AddNew();
+            ConsultarRutUsuarioADItem operation =
+                dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
 
-            //operation.NombreUsuario = this.Application.User.FullName;
-            operation.RutUsuario = this.RutUsuarioAD;
+            operation.NombreUsuario = this.Application.User.FullName;
 
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
-            this.EmailUsuarioAD = operation.EmailUsuario;
-
-        }
-
-        partial void SOLICITUDES_NUEVA_Saving(ref bool handled)
-        {
-            // Escriba el código aquí.
-
+            this.RutUsuarioAD = operation.RutUsuario;
+            
+            //this.RutUsuarioAD = "17511042-9";//gustavo
         }
         
     }

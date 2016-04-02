@@ -5,8 +5,5 @@ using System.Text;
 using Microsoft.LightSwitch;
 namespace LightSwitchApplication
 {
-    public partial class PersonaItem
-    {
-  
-    }
+
 }

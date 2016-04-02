@@ -19,7 +19,7 @@ namespace LightSwitchApplication
             else
             {
 
-                if (this.codigo == 1) //Escoger un gerente por primera vez E
+                if (this.codigo == 1) //Escoger un gerente por primera vez 
                 {
                     Superior_GerenteItem gerente = new Superior_GerenteItem();
                     gerente.PersonaItem1 = this.Persona.SelectedItem;
@@ -27,6 +27,7 @@ namespace LightSwitchApplication
                     this.Persona.SelectedItem.Es_Gerente = true;
                     this.Persona.SelectedItem.Division_AreaItem = null;
                     this.Persona.SelectedItem.EsRolPrivado = true;
+                    this.Persona.SelectedItem.AreaDeTrabajo = this.Division_GerenciaItem.Nombre;
                     
                     this.Division_GerenciaItem.Gerente = this.Persona.SelectedItem.NombreAD;
 
@@ -61,6 +62,7 @@ namespace LightSwitchApplication
                             //...ya que los subgerentes no pertenecen a ninguna area, si no se guardara el id de la subgerencia, ...
                             //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
                             this.Persona.SelectedItem.Division_AreaItem = null;
+                            this.Persona.SelectedItem.AreaDeTrabajo = this.Division_SubGerenciaItem.Nombre;
 
                             this.Division_SubGerenciaItem.SubGerente = this.Persona.SelectedItem.NombreAD;
 
@@ -87,6 +89,8 @@ namespace LightSwitchApplication
                                     JefeDirecto.PersonaItem1.Division_AreaItem = this.Division_AreaItem;
                                     JefeDirecto.Division_AreaItem = this.Division_AreaItem;
                                     this.Persona.SelectedItem.Es_JefeDirecto = true;
+
+                                    this.Persona.SelectedItem.AreaDeTrabajo = this.Division_AreaItem.Nombre;
 
                                     this.Division_AreaItem.JefeDeArea = this.Persona.SelectedItem.NombreAD;
 

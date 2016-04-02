@@ -924,40 +924,76 @@ namespace LightSwitchApplication
         partial void CargoRolPrivado_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.CargoRolPrivadoItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_CanInsert(ref bool result);
+        partial void ConsultarRutUsuarioAD_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_CanUpdate(ref bool result);
+        partial void ConsultarRutUsuarioAD_CanUpdate(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_CanDelete(ref bool result);
+        partial void ConsultarRutUsuarioAD_CanDelete(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_CanRead(ref bool result);
+        partial void ConsultarRutUsuarioAD_CanRead(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Inserting(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity);
+        partial void ConsultarRutUsuarioAD_Inserting(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Inserted(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity);
+        partial void ConsultarRutUsuarioAD_Inserted(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Updating(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity);
+        partial void ConsultarRutUsuarioAD_Updating(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Updated(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity);
+        partial void ConsultarRutUsuarioAD_Updated(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Deleting(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity);
+        partial void ConsultarRutUsuarioAD_Deleting(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Deleted(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity);
+        partial void ConsultarRutUsuarioAD_Deleted(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Validate(global::LightSwitchApplication.ConsultarInfoUsuarioADItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+        partial void ConsultarRutUsuarioAD_Validate(global::LightSwitchApplication.ConsultarRutUsuarioADItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConsultarInfoUsuarioAD_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarInfoUsuarioADItem, bool>> filter);
+        partial void ConsultarRutUsuarioAD_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarRutUsuarioADItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Inserting(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Inserted(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Updating(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Updated(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Deleting(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Deleted(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Validate(global::LightSwitchApplication.ConsultarEmailUsuarioADItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConsultarEmailUsuarioAD_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarEmailUsuarioADItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
@@ -972,19 +1008,19 @@ namespace LightSwitchApplication
         partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaPorNombreAD_CanExecute(ref bool result);
+        partial void PersonaPorRut_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonaPorNombreAD_Executing(string NombreAD);
+        partial void PersonaPorRut_Executing(string Rut_Persona);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaPorNombreAD_PreprocessQuery(string NombreAD, ref global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query);
+        partial void PersonaPorRut_PreprocessQuery(string Rut_Persona, ref global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonaPorNombreAD_Executed(string NombreAD, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem> result);
+        partial void PersonaPorRut_Executed(string Rut_Persona, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem> result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        partial void PersonaPorNombreAD_ExecuteFailed(string NombreAD, global::System.Exception exception);
+        partial void PersonaPorRut_ExecuteFailed(string Rut_Persona, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PersonalBajoJefeDeArea_CanExecute(ref bool result);
@@ -2975,77 +3011,152 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>
-                __ConsultarInfoUsuarioADEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarInfoUsuarioADItem>(
-                    "ConsultarInfoUsuarioAD",
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_CanInsert,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_CanUpdate,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_CanDelete,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_CanRead,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Inserting,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Inserted,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Updating,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Updated,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Deleting,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Deleted,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Validate,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarInfoUsuarioAD_Filter);
-            private static bool __ConsultarInfoUsuarioAD_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarRutUsuarioADItem>
+                __ConsultarRutUsuarioADEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarRutUsuarioADItem>(
+                    "ConsultarRutUsuarioAD",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarRutUsuarioAD_Filter);
+            private static bool __ConsultarRutUsuarioAD_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
             {
                 bool result = true;
-                d.ConsultarInfoUsuarioAD_CanInsert(ref result);
+                d.ConsultarRutUsuarioAD_CanInsert(ref result);
                 return result;
             }
-            private static bool __ConsultarInfoUsuarioAD_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            private static bool __ConsultarRutUsuarioAD_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
             {
                 bool result = true;
-                d.ConsultarInfoUsuarioAD_CanUpdate(ref result);
+                d.ConsultarRutUsuarioAD_CanUpdate(ref result);
                 return result;
             }
-            private static bool __ConsultarInfoUsuarioAD_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            private static bool __ConsultarRutUsuarioAD_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
             {
                 bool result = true;
-                d.ConsultarInfoUsuarioAD_CanDelete(ref result);
+                d.ConsultarRutUsuarioAD_CanDelete(ref result);
                 return result;
             }
-            private static bool __ConsultarInfoUsuarioAD_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            private static bool __ConsultarRutUsuarioAD_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
             {
                 bool result = true;
-                d.ConsultarInfoUsuarioAD_CanRead(ref result);
+                d.ConsultarRutUsuarioAD_CanRead(ref result);
                 return result;
             }
-            private static void __ConsultarInfoUsuarioAD_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e)
+            private static void __ConsultarRutUsuarioAD_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                d.ConsultarInfoUsuarioAD_Inserting(e);
+                d.ConsultarRutUsuarioAD_Inserting(e);
             }
-            private static void __ConsultarInfoUsuarioAD_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e)
+            private static void __ConsultarRutUsuarioAD_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                d.ConsultarInfoUsuarioAD_Inserted(e);
+                d.ConsultarRutUsuarioAD_Inserted(e);
             }
-            private static void __ConsultarInfoUsuarioAD_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e)
+            private static void __ConsultarRutUsuarioAD_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                d.ConsultarInfoUsuarioAD_Updating(e);
+                d.ConsultarRutUsuarioAD_Updating(e);
             }
-            private static void __ConsultarInfoUsuarioAD_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e)
+            private static void __ConsultarRutUsuarioAD_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                d.ConsultarInfoUsuarioAD_Updated(e);
+                d.ConsultarRutUsuarioAD_Updated(e);
             }
-            private static void __ConsultarInfoUsuarioAD_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e)
+            private static void __ConsultarRutUsuarioAD_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                d.ConsultarInfoUsuarioAD_Deleting(e);
+                d.ConsultarRutUsuarioAD_Deleting(e);
             }
-            private static void __ConsultarInfoUsuarioAD_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e)
+            private static void __ConsultarRutUsuarioAD_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                d.ConsultarInfoUsuarioAD_Deleted(e);
+                d.ConsultarRutUsuarioAD_Deleted(e);
             }
-            private static void __ConsultarInfoUsuarioAD_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarInfoUsuarioADItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            private static void __ConsultarRutUsuarioAD_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarRutUsuarioADItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
-                d.ConsultarInfoUsuarioAD_Validate(e, r);
+                d.ConsultarRutUsuarioAD_Validate(e, r);
             }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarInfoUsuarioADItem, bool>> __ConsultarInfoUsuarioAD_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarRutUsuarioADItem, bool>> __ConsultarRutUsuarioAD_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
             {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarInfoUsuarioADItem, bool>> filter = null;
-                d.ConsultarInfoUsuarioAD_Filter(ref filter);
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarRutUsuarioADItem, bool>> filter = null;
+                d.ConsultarRutUsuarioAD_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>
+                __ConsultarEmailUsuarioADEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ConsultarEmailUsuarioADItem>(
+                    "ConsultarEmailUsuarioAD",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ConsultarEmailUsuarioAD_Filter);
+            private static bool __ConsultarEmailUsuarioAD_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarEmailUsuarioAD_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ConsultarEmailUsuarioAD_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarEmailUsuarioAD_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ConsultarEmailUsuarioAD_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarEmailUsuarioAD_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ConsultarEmailUsuarioAD_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ConsultarEmailUsuarioAD_CanRead(ref result);
+                return result;
+            }
+            private static void __ConsultarEmailUsuarioAD_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e)
+            {
+                d.ConsultarEmailUsuarioAD_Inserting(e);
+            }
+            private static void __ConsultarEmailUsuarioAD_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e)
+            {
+                d.ConsultarEmailUsuarioAD_Inserted(e);
+            }
+            private static void __ConsultarEmailUsuarioAD_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e)
+            {
+                d.ConsultarEmailUsuarioAD_Updating(e);
+            }
+            private static void __ConsultarEmailUsuarioAD_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e)
+            {
+                d.ConsultarEmailUsuarioAD_Updated(e);
+            }
+            private static void __ConsultarEmailUsuarioAD_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e)
+            {
+                d.ConsultarEmailUsuarioAD_Deleting(e);
+            }
+            private static void __ConsultarEmailUsuarioAD_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e)
+            {
+                d.ConsultarEmailUsuarioAD_Deleted(e);
+            }
+            private static void __ConsultarEmailUsuarioAD_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ConsultarEmailUsuarioADItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ConsultarEmailUsuarioAD_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarEmailUsuarioADItem, bool>> __ConsultarEmailUsuarioAD_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ConsultarEmailUsuarioADItem, bool>> filter = null;
+                d.ConsultarEmailUsuarioAD_Filter(ref filter);
                 return filter;
             }
             
@@ -3077,34 +3188,34 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>
-                __PersonaPorNombreADEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>(
-                    "PersonaPorNombreAD",
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_CanExecute,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_Executing,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_Executed,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_Failed,
-                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorNombreAD_PreprocessQuery);
-            private static bool __PersonaPorNombreAD_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+                __PersonaPorRutEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.PersonaItem>(
+                    "PersonaPorRut",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorRut_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorRut_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorRut_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorRut_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__PersonaPorRut_PreprocessQuery);
+            private static bool __PersonaPorRut_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
             {
-                d.PersonaPorNombreAD_CanExecute(ref r);
+                d.PersonaPorRut_CanExecute(ref r);
                 return r;
             }
-            private static void __PersonaPorNombreAD_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            private static void __PersonaPorRut_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
             {
-                d.PersonaPorNombreAD_Executing((string)args[0]);
+                d.PersonaPorRut_Executing((string)args[0]);
             }
-            private static void __PersonaPorNombreAD_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            private static void __PersonaPorRut_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
             {
-                d.PersonaPorNombreAD_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem>)args[1]);
+                d.PersonaPorRut_Executed((string)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem>)args[1]);
             }
-            private static void __PersonaPorNombreAD_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            private static void __PersonaPorRut_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
             {
-                d.PersonaPorNombreAD_ExecuteFailed((string)args[0], ex);
+                d.PersonaPorRut_ExecuteFailed((string)args[0], ex);
             }
-            private static global::System.Linq.IQueryable __PersonaPorNombreAD_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            private static global::System.Linq.IQueryable __PersonaPorRut_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.PersonaItem>)args[1];
-                d.PersonaPorNombreAD_PreprocessQuery((string)args[0], ref query);
+                d.PersonaPorRut_PreprocessQuery((string)args[0], ref query);
                 return query;
             }
             

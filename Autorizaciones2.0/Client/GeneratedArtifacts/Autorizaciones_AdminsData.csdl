@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="Rut_Persona" />
     </Key>
-    <Property Name="Rut_Persona" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="Rut_Persona" Type="Edm.String" Nullable="false" MaxLength="12" />
     <Property Name="AP_Paterno" Type="Edm.String" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="AP_Materno" Type="Edm.String" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Nombres" Type="Edm.String" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
@@ -18,12 +18,15 @@
     <Property Name="FechaVigencia" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="EsRolPrivado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Es_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Email" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="AreaDeTrabajo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Rut_Persona_ConCeros" Type="Edm.String" MaxLength="12" ConcurrencyMode="Fixed" />
+    <Property Name="SaldoVacaciones" Type="Edm.Double" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="CargoRolPrivado_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ConvenioColectivoItem" Relationship="LightSwitchApplication.FK_Persona_ConvenioColectivo" ToRole="ConvenioColectivo" FromRole="Persona" />
     <NavigationProperty Name="Division_AreaItem" Relationship="LightSwitchApplication.FK_Persona_Division_Area" ToRole="Division_Area" FromRole="Persona" />
-    <NavigationProperty Name="Solicitud_Header" Relationship="LightSwitchApplication.FK_SolicitudHeader_Persona" ToRole="Solicitud_Header" FromRole="Persona" />
     <NavigationProperty Name="Superior_Gerente" Relationship="LightSwitchApplication.FK_Superior_Gerente_Persona" ToRole="Superior_Gerente" FromRole="Persona" />
     <NavigationProperty Name="Superior_JefeDirecto" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Persona" ToRole="Superior_JefeDirecto" FromRole="Persona" />
     <NavigationProperty Name="Superior_SubGerente" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Persona" ToRole="Superior_SubGerente" FromRole="Persona" />
@@ -222,7 +225,6 @@
     <NavigationProperty Name="Solicitud_Detalle_HorasExtras" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_HorasExtras_Solicitud_Header" ToRole="Solicitud_Detalle_HorasExtras" FromRole="Solicitud_Header" />
     <NavigationProperty Name="Solicitud_Detalle_OtroPermiso" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_OtroPermiso_Solicitud_Header" ToRole="Solicitud_Detalle_OtroPermiso" FromRole="Solicitud_Header" />
     <NavigationProperty Name="Solicitud_Detalle_Vacaciones" Relationship="LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header" ToRole="Solicitud_Detalle_Vacaciones" FromRole="Solicitud_Header" />
-    <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SolicitudHeader_Persona" ToRole="Persona" FromRole="Solicitud_Header" />
   </EntityType>
   <EntityType Name="Superior_GerenteItem">
     <Key>
@@ -230,7 +232,7 @@
     </Key>
     <Property Name="Id_Gerente" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Gerencia_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Division_GerenciaItem" Relationship="LightSwitchApplication.FK_Superior_Gerente_Division_Gerencia" ToRole="Division_Gerencia" FromRole="Superior_Gerente" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_Gerente_Persona" ToRole="Persona" FromRole="Superior_Gerente" />
   </EntityType>
@@ -240,7 +242,7 @@
     </Key>
     <Property Name="Id_JefeDirecto" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Area_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Division_AreaItem" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Division_Area" ToRole="Division_Area" FromRole="Superior_JefeDirecto" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_JefeDirecto_Persona" ToRole="Persona" FromRole="Superior_JefeDirecto" />
   </EntityType>
@@ -250,7 +252,7 @@
     </Key>
     <Property Name="Id_SubGerente" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Subgerencia_fk" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Persona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Division_SubGerenciaItem" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Division_SubGerencia" ToRole="Division_SubGerencia" FromRole="Superior_SubGerente" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_Superior_SubGerente_Persona" ToRole="Persona" FromRole="Superior_SubGerente" />
   </EntityType>
@@ -322,7 +324,7 @@
     <Property Name="CodigoEstado" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="EmailProximoDestinatario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="VB_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />
   </EntityType>
@@ -334,7 +336,16 @@
     <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Persona" Relationship="LightSwitchApplication.FK_Persona_CargoRolPrivado" ToRole="Persona" FromRole="CargoRolPrivado" />
   </EntityType>
-  <EntityType Name="ConsultarInfoUsuarioADItem">
+  <EntityType Name="ConsultarRutUsuarioADItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RutUsuario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="NombreUsuario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="EmailUsuario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="ConsultarEmailUsuarioADItem">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -515,20 +526,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SolicitudHeader_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Solicitud_Header" Type="LightSwitchApplication.Solicitud_HeaderItem" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="Rut_Persona" />
-      </Principal>
-      <Dependent Role="Solicitud_Header">
-        <PropertyRef Name="RutPersona_fk" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Superior_Gerente_Division_Gerencia">
     <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1" />
     <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
@@ -542,9 +539,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
     <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -568,9 +563,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
     <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -594,9 +587,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
     <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -672,7 +663,8 @@
     <EntitySet Name="ESTADOS" EntityType="LightSwitchApplication.ESTADOSItem" />
     <EntitySet Name="SOLICITUDES" EntityType="LightSwitchApplication.SOLICITUDESItem" />
     <EntitySet Name="CargoRolPrivado" EntityType="LightSwitchApplication.CargoRolPrivadoItem" />
-    <EntitySet Name="ConsultarInfoUsuarioAD" EntityType="LightSwitchApplication.ConsultarInfoUsuarioADItem" />
+    <EntitySet Name="ConsultarRutUsuarioAD" EntityType="LightSwitchApplication.ConsultarRutUsuarioADItem" />
+    <EntitySet Name="ConsultarEmailUsuarioAD" EntityType="LightSwitchApplication.ConsultarEmailUsuarioADItem" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -724,10 +716,6 @@
     <AssociationSet Name="FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones" Association="LightSwitchApplication.FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones">
       <End Role="Solicitud_Detalle_Vacaciones" EntitySet="Solicitud_Detalle_Vacaciones" />
       <End Role="Solicitud_Estados_Vacaciones" EntitySet="Solicitud_Estados_Vacaciones" />
-    </AssociationSet>
-    <AssociationSet Name="FK_SolicitudHeader_Persona" Association="LightSwitchApplication.FK_SolicitudHeader_Persona">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
     </AssociationSet>
     <AssociationSet Name="FK_Superior_Gerente_Division_Gerencia" Association="LightSwitchApplication.FK_Superior_Gerente_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />

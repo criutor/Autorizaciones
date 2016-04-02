@@ -28,6 +28,9 @@ namespace LightSwitchApplication
                     JefeDirecto.Division_AreaItem = this.Division_AreaItem;
                     this.PersonalNoRolPrivado.SelectedItem.Division_AreaItem = this.Division_AreaItem;
                     this.Division_AreaItem.JefeDeArea = this.PersonalNoRolPrivado.SelectedItem.NombreAD;
+
+                    this.PersonalNoRolPrivado.SelectedItem.AreaDeTrabajo = this.Division_AreaItem.Nombre;
+
                     this.PersonalNoRolPrivado.SelectedItem.Es_JefeDirecto = true; 
                 }
 
@@ -41,6 +44,8 @@ namespace LightSwitchApplication
                 else 
                 {
                     this.PersonalNoRolPrivado.SelectedItem.Division_AreaItem = this.Division_AreaItem;
+
+                    this.PersonalNoRolPrivado.SelectedItem.AreaDeTrabajo = this.Division_AreaItem.Nombre;
                 }
                 
             }

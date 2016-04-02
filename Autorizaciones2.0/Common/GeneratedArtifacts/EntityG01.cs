@@ -419,6 +419,102 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Email
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Email);
+            }
+            set
+            {
+                global::LightSwitchApplication.PersonaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Email, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Email_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Email_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Email_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string AreaDeTrabajo
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.AreaDeTrabajo);
+            }
+            set
+            {
+                global::LightSwitchApplication.PersonaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.AreaDeTrabajo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AreaDeTrabajo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AreaDeTrabajo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AreaDeTrabajo_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Rut_Persona_ConCeros
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Rut_Persona_ConCeros);
+            }
+            set
+            {
+                global::LightSwitchApplication.PersonaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Rut_Persona_ConCeros, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Rut_Persona_ConCeros_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Rut_Persona_ConCeros_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Rut_Persona_ConCeros_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<double> SaldoVacaciones
+        {
+            get
+            {
+                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SaldoVacaciones);
+            }
+            set
+            {
+                global::LightSwitchApplication.PersonaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SaldoVacaciones, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaldoVacaciones_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaldoVacaciones_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaldoVacaciones_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.ConvenioColectivoItem ConvenioColectivoItem
         {
             get
@@ -461,29 +557,6 @@ namespace LightSwitchApplication
         partial void Division_AreaItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Division_AreaItem_Changed();
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Solicitud_HeaderItem> Solicitud_Header
-        {
-            get
-            {
-                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Solicitud_Header);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Solicitud_HeaderItem> Solicitud_HeaderQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.PersonaItem.DetailsClass.GetQuery(this, global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Solicitud_Header);
-            }
-        }
 
         /// <summary>
         /// No hay ninguna descripción modelada
@@ -795,6 +868,38 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string> Email
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Email) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string> AreaDeTrabajo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.AreaDeTrabajo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string> Rut_Persona_ConCeros
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Rut_Persona_ConCeros) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>> SaldoVacaciones
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.SaldoVacaciones) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem> ConvenioColectivoItem
                 {
                     get
@@ -808,14 +913,6 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Division_AreaItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem> Solicitud_Header
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Solicitud_Header) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>;
                     }
                 }
                 
@@ -879,9 +976,12 @@ namespace LightSwitchApplication
                 new global::System.Nullable<global::System.DateTime> FechaVigencia { get; set; }
                 new global::System.Nullable<bool> EsRolPrivado { get; set; }
                 new global::System.Nullable<bool> Es_GerenteGeneral { get; set; }
+                new string Email { get; set; }
+                new string AreaDeTrabajo { get; set; }
+                new string Rut_Persona_ConCeros { get; set; }
+                new global::System.Nullable<double> SaldoVacaciones { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation ConvenioColectivoItem { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_AreaItem { get; set; }
-                new global::System.Collections.IEnumerable Solicitud_Header { get; }
                 new global::System.Collections.IEnumerable Superior_Gerente { get; }
                 new global::System.Collections.IEnumerable Superior_JefeDirecto { get; }
                 new global::System.Collections.IEnumerable Superior_SubGerente { get; }
@@ -1415,6 +1515,154 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry
+                    Email = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry(
+                        "Email",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Email_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Email_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Email_Validate,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Email_GetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Email_SetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Email_OnValueChanged);
+                private static void _Email_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Email, sf);
+                }
+                private static bool _Email_ComputeIsReadOnly(global::LightSwitchApplication.PersonaItem e)
+                {
+                    bool result = false;
+                    e.Email_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Email_Validate(global::LightSwitchApplication.PersonaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Email_Validate(r);
+                }
+                private static string _Email_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Email;
+                }
+                private static void _Email_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Email = v;
+                }
+                private static void _Email_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
+                {
+                    e.Email_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry
+                    AreaDeTrabajo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry(
+                        "AreaDeTrabajo",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._AreaDeTrabajo_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._AreaDeTrabajo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._AreaDeTrabajo_Validate,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._AreaDeTrabajo_GetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._AreaDeTrabajo_SetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._AreaDeTrabajo_OnValueChanged);
+                private static void _AreaDeTrabajo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AreaDeTrabajo, sf);
+                }
+                private static bool _AreaDeTrabajo_ComputeIsReadOnly(global::LightSwitchApplication.PersonaItem e)
+                {
+                    bool result = false;
+                    e.AreaDeTrabajo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _AreaDeTrabajo_Validate(global::LightSwitchApplication.PersonaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.AreaDeTrabajo_Validate(r);
+                }
+                private static string _AreaDeTrabajo_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.AreaDeTrabajo;
+                }
+                private static void _AreaDeTrabajo_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.AreaDeTrabajo = v;
+                }
+                private static void _AreaDeTrabajo_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
+                {
+                    e.AreaDeTrabajo_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry
+                    Rut_Persona_ConCeros = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Entry(
+                        "Rut_Persona_ConCeros",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Rut_Persona_ConCeros_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Rut_Persona_ConCeros_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Rut_Persona_ConCeros_Validate,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Rut_Persona_ConCeros_GetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Rut_Persona_ConCeros_SetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Rut_Persona_ConCeros_OnValueChanged);
+                private static void _Rut_Persona_ConCeros_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Rut_Persona_ConCeros, sf);
+                }
+                private static bool _Rut_Persona_ConCeros_ComputeIsReadOnly(global::LightSwitchApplication.PersonaItem e)
+                {
+                    bool result = false;
+                    e.Rut_Persona_ConCeros_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Rut_Persona_ConCeros_Validate(global::LightSwitchApplication.PersonaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Rut_Persona_ConCeros_Validate(r);
+                }
+                private static string _Rut_Persona_ConCeros_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Rut_Persona_ConCeros;
+                }
+                private static void _Rut_Persona_ConCeros_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Rut_Persona_ConCeros = v;
+                }
+                private static void _Rut_Persona_ConCeros_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
+                {
+                    e.Rut_Persona_ConCeros_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>>.Entry
+                    SaldoVacaciones = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>>.Entry(
+                        "SaldoVacaciones",
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SaldoVacaciones_Stub,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SaldoVacaciones_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SaldoVacaciones_Validate,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SaldoVacaciones_GetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SaldoVacaciones_SetImplementationValue,
+                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._SaldoVacaciones_OnValueChanged);
+                private static void _SaldoVacaciones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SaldoVacaciones, sf);
+                }
+                private static bool _SaldoVacaciones_ComputeIsReadOnly(global::LightSwitchApplication.PersonaItem e)
+                {
+                    bool result = false;
+                    e.SaldoVacaciones_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _SaldoVacaciones_Validate(global::LightSwitchApplication.PersonaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.SaldoVacaciones_Validate(r);
+                }
+                private static global::System.Nullable<double> _SaldoVacaciones_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SaldoVacaciones;
+                }
+                private static void _SaldoVacaciones_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, global::System.Nullable<double> v)
+                {
+                    d.ImplementationEntity.SaldoVacaciones = v;
+                }
+                private static void _SaldoVacaciones_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
+                {
+                    e.SaldoVacaciones_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem>.Entry
                     ConvenioColectivoItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem>.Entry(
                         "ConvenioColectivoItem",
@@ -1506,26 +1754,6 @@ namespace LightSwitchApplication
                 private static void _Division_AreaItem_OnValueChanged(global::LightSwitchApplication.PersonaItem e)
                 {
                     e.Division_AreaItem_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Entry
-                    Solicitud_Header = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Entry(
-                        "Solicitud_Header",
-                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Solicitud_Header_Stub,
-                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Solicitud_Header_GetReferencedEntities,
-                        global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Solicitud_Header_GetEntityCollection);
-                private static void _Solicitud_Header_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Solicitud_Header, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Solicitud_HeaderItem> _Solicitud_Header_GetReferencedEntities(global::LightSwitchApplication.PersonaItem.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass>(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Solicitud_Header, ref d._Solicitud_Header);
-                }
-                private static global::System.Collections.IEnumerable _Solicitud_Header_GetEntityCollection(global::LightSwitchApplication.PersonaItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Solicitud_Header;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1700,13 +1928,22 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>.Data _Es_GerenteGeneral;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data _Email;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data _AreaDeTrabajo;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data _Rut_Persona_ConCeros;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<double>>.Data _SaldoVacaciones;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.ConvenioColectivoItem>.Data _ConvenioColectivoItem;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Division_AreaItem>.Data _Division_AreaItem;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Solicitud_HeaderItem>.Data _Solicitud_Header;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::LightSwitchApplication.Superior_GerenteItem>.Data _Superior_Gerente;

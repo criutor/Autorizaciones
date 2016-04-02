@@ -393,5 +393,614 @@ namespace LightSwitchApplication
         #endregion
     }
     
+    /// <summary>
+    /// No hay ninguna descripción modelada
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class ESTADOSItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass>
+    {
+        #region Constructors
+    
+        /// <summary>
+        /// Inicializa una nueva instancia de la entidad ESTADOSItem.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ESTADOSItem()
+            : this(null)
+        {
+        }
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ESTADOSItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ESTADOSItem> entitySet)
+            : base(entitySet)
+        {
+            global::LightSwitchApplication.ESTADOSItem.DetailsClass.Initialize(this);
+        }
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOSItem_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ESTADOSItem_AllowSaveWithErrors(ref bool result);
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.EntitySet.Details.DataService.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Public Properties
+    
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int Id_Estado
+        {
+            get
+            {
+                return global::LightSwitchApplication.ESTADOSItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.Id_Estado);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_Estado_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_Estado_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Id_Estado_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Observaciones
+        {
+            get
+            {
+                return global::LightSwitchApplication.ESTADOSItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.Observaciones);
+            }
+            set
+            {
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.Observaciones, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Observaciones_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Observaciones_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Observaciones_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string TituloObservacion
+        {
+            get
+            {
+                return global::LightSwitchApplication.ESTADOSItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.TituloObservacion);
+            }
+            set
+            {
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.TituloObservacion, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TituloObservacion_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TituloObservacion_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TituloObservacion_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string MensajeBy
+        {
+            get
+            {
+                return global::LightSwitchApplication.ESTADOSItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.MensajeBy);
+            }
+            set
+            {
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.MensajeBy, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void MensajeBy_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void MensajeBy_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void MensajeBy_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime CreadoAt
+        {
+            get
+            {
+                return global::LightSwitchApplication.ESTADOSItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.CreadoAt);
+            }
+            set
+            {
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.CreadoAt, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreadoAt_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreadoAt_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CreadoAt_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.SOLICITUDESItem SOLICITUDESItem
+        {
+            get
+            {
+                return global::LightSwitchApplication.ESTADOSItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.SOLICITUDESItem);
+            }
+            set
+            {
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.SOLICITUDESItem, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDESItem_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDESItem_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDESItem_Changed();
+
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
+                global::LightSwitchApplication.ESTADOSItem,
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass,
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass>>
+        {
+    
+            static DetailsClass()
+            {
+                var initializeEntry = global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.Id_Estado;
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass>.Entry
+                __ESTADOSItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.ESTADOSItem.DetailsClass.__ESTADOSItem_CreateNew,
+                    global::LightSwitchApplication.ESTADOSItem.DetailsClass.__ESTADOSItem_Created,
+                    global::LightSwitchApplication.ESTADOSItem.DetailsClass.__ESTADOSItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.ESTADOSItem __ESTADOSItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ESTADOSItem> es)
+            {
+                return new global::LightSwitchApplication.ESTADOSItem(es);
+            }
+            private static void __ESTADOSItem_Created(global::LightSwitchApplication.ESTADOSItem e)
+            {
+                e.ESTADOSItem_Created();
+            }
+            private static bool __ESTADOSItem_AllowSaveWithErrors(global::LightSwitchApplication.ESTADOSItem e)
+            {
+                bool result = false;
+                e.ESTADOSItem_AllowSaveWithErrors(ref result);
+                return result;
+            }
+    
+            public DetailsClass() : base()
+            {
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass> Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass> Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+    
+            public new global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass>
+            {
+    
+                public PropertySet() : base()
+                {
+                }
+    
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, int> Id_Estado
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.Id_Estado) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, int>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string> Observaciones
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.Observaciones) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string> TituloObservacion
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.TituloObservacion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string> MensajeBy
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.MensajeBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::System.DateTime> CreadoAt
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.CreadoAt) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::System.DateTime>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> SOLICITUDESItem
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.SOLICITUDESItem) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>;
+                    }
+                }
+                
+            }
+    
+            #pragma warning disable 109
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
+            {
+                new int Id_Estado { get; }
+                new string Observaciones { get; set; }
+                new string TituloObservacion { get; set; }
+                new string MensajeBy { get; set; }
+                new global::System.DateTime CreadoAt { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation SOLICITUDESItem { get; set; }
+            }
+            #pragma warning restore 109
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal class PropertySetProperties
+            {
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, int>.Entry
+                    Id_Estado = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, int>.Entry(
+                        "Id_Estado",
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Id_Estado_Stub,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Id_Estado_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Id_Estado_Validate,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Id_Estado_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Id_Estado_OnValueChanged);
+                private static void _Id_Estado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.ESTADOSItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Id_Estado, sf);
+                }
+                private static bool _Id_Estado_ComputeIsReadOnly(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    bool result = false;
+                    e.Id_Estado_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Id_Estado_Validate(global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Id_Estado_Validate(r);
+                }
+                private static int _Id_Estado_GetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Id_Estado;
+                }
+                private static void _Id_Estado_OnValueChanged(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    e.Id_Estado_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Entry
+                    Observaciones = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Entry(
+                        "Observaciones",
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Observaciones_Stub,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Observaciones_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Observaciones_Validate,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Observaciones_GetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Observaciones_SetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._Observaciones_OnValueChanged);
+                private static void _Observaciones_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ESTADOSItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Observaciones, sf);
+                }
+                private static bool _Observaciones_ComputeIsReadOnly(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    bool result = false;
+                    e.Observaciones_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Observaciones_Validate(global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Observaciones_Validate(r);
+                }
+                private static string _Observaciones_GetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Observaciones;
+                }
+                private static void _Observaciones_SetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Observaciones = v;
+                }
+                private static void _Observaciones_OnValueChanged(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    e.Observaciones_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Entry
+                    TituloObservacion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Entry(
+                        "TituloObservacion",
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._TituloObservacion_Stub,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._TituloObservacion_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._TituloObservacion_Validate,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._TituloObservacion_GetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._TituloObservacion_SetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._TituloObservacion_OnValueChanged);
+                private static void _TituloObservacion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ESTADOSItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TituloObservacion, sf);
+                }
+                private static bool _TituloObservacion_ComputeIsReadOnly(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    bool result = false;
+                    e.TituloObservacion_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _TituloObservacion_Validate(global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.TituloObservacion_Validate(r);
+                }
+                private static string _TituloObservacion_GetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.TituloObservacion;
+                }
+                private static void _TituloObservacion_SetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.TituloObservacion = v;
+                }
+                private static void _TituloObservacion_OnValueChanged(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    e.TituloObservacion_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Entry
+                    MensajeBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Entry(
+                        "MensajeBy",
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._MensajeBy_Stub,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._MensajeBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._MensajeBy_Validate,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._MensajeBy_GetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._MensajeBy_SetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._MensajeBy_OnValueChanged);
+                private static void _MensajeBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ESTADOSItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._MensajeBy, sf);
+                }
+                private static bool _MensajeBy_ComputeIsReadOnly(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    bool result = false;
+                    e.MensajeBy_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _MensajeBy_Validate(global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.MensajeBy_Validate(r);
+                }
+                private static string _MensajeBy_GetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.MensajeBy;
+                }
+                private static void _MensajeBy_SetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.MensajeBy = v;
+                }
+                private static void _MensajeBy_OnValueChanged(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    e.MensajeBy_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::System.DateTime>.Entry
+                    CreadoAt = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::System.DateTime>.Entry(
+                        "CreadoAt",
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._CreadoAt_Stub,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._CreadoAt_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._CreadoAt_Validate,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._CreadoAt_GetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._CreadoAt_SetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._CreadoAt_OnValueChanged);
+                private static void _CreadoAt_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.ESTADOSItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._CreadoAt, sf);
+                }
+                private static bool _CreadoAt_ComputeIsReadOnly(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    bool result = false;
+                    e.CreadoAt_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _CreadoAt_Validate(global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.CreadoAt_Validate(r);
+                }
+                private static global::System.DateTime _CreadoAt_GetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.CreadoAt;
+                }
+                private static void _CreadoAt_SetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d, global::System.DateTime v)
+                {
+                    d.ImplementationEntity.CreadoAt = global::LightSwitchApplication.ESTADOSItem.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _CreadoAt_OnValueChanged(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    e.CreadoAt_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    SOLICITUDESItem = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "SOLICITUDESItem",
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_Stub,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_Validate,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_GetCoreImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_GetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_SetImplementationValue,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_Refresh,
+                        global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties._SOLICITUDESItem_OnValueChanged);
+                private static void _SOLICITUDESItem_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.ESTADOSItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SOLICITUDESItem, sf);
+                }
+                private static bool _SOLICITUDESItem_ComputeIsReadOnly(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    bool result = false;
+                    e.SOLICITUDESItem_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _SOLICITUDESItem_Validate(global::LightSwitchApplication.ESTADOSItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.SOLICITUDESItem_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _SOLICITUDESItem_GetCoreImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SOLICITUDESItem;
+                }
+                private static global::LightSwitchApplication.SOLICITUDESItem _SOLICITUDESItem_GetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass>(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.SOLICITUDESItem, ref d._SOLICITUDESItem);
+                }
+                private static void _SOLICITUDESItem_SetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass d, global::LightSwitchApplication.SOLICITUDESItem v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.SOLICITUDESItem, ref d._SOLICITUDESItem, (i, ev) => i.SOLICITUDESItem = ev, v);
+                }
+                private static void _SOLICITUDESItem_Refresh(global::LightSwitchApplication.ESTADOSItem.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.ESTADOSItem.DetailsClass.PropertySetProperties.SOLICITUDESItem, ref d._SOLICITUDESItem);
+                }
+                private static void _SOLICITUDESItem_OnValueChanged(global::LightSwitchApplication.ESTADOSItem e)
+                {
+                    e.SOLICITUDESItem_Changed();
+                }
+    
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, int>.Data _Id_Estado;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Data _Observaciones;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Data _TituloObservacion;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, string>.Data _MensajeBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::System.DateTime>.Data _CreadoAt;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ESTADOSItem, global::LightSwitchApplication.ESTADOSItem.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _SOLICITUDESItem;
+            
+        }
+    
+        #endregion
+    }
+    
     #endregion
 }

@@ -186,13 +186,14 @@
     <Compile Include="UserCode\PERSONAL_DETALLES.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UserCode\PROCESOS_PERIODICOS.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_ADMINISTRATIVOS.cs" />
     <Compile Include="UserCode\SOLICITUDES_DETALLES.cs" />
     <Compile Include="UserCode\SOLICITUDES_A_CARGO.cs" />
     <Compile Include="UserCode\PERSONAL_CREAR_ROL_PRIVADO.cs" />
     <Compile Include="UserCode\ADMINISTRAR_DIVISIONES.cs" />
     <Compile Include="UserCode\ADMINISTRAR_EMPLEADOS.cs" />
-    <Compile Include="UserCode\PERSONAL_BUSCAR_FIN700.cs" />
+    <Compile Include="UserCode\PERSONAL_CREAR_DESDE_FIN700.cs" />
     <Compile Include="UserCode\PERSONAL_LISTAR_ROLPRIVADO.cs">
       <SubType>Code</SubType>
     </Compile>

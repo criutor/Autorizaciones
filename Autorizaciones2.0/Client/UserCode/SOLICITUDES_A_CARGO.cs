@@ -14,6 +14,7 @@ namespace LightSwitchApplication
 
         partial void SOLICITUDES_A_CARGO_Activated()
         {
+            this.ConsultarRutUsuarioAD_Execute();
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
 
             this.TodasLasSolicitudes_Execute();
@@ -31,15 +32,15 @@ namespace LightSwitchApplication
             //this.TodasLasSolicitudes_Execute();
 
             //****CAMBIAR POR RUT****
-            NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
+            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
 
             //Verificar que que tipo de usuario esta ingresando a la pantalla.
-            if (this.PersonaPorNombreAD.Count == 0) { this.MENSAJEPersonaNoCreada(); this.Close(true); } //Si el usuario(Active directory) no ha sido asociado a un área de trabajo, el query "Persona" retornara 0 personas.   
+            if (this.PersonaPorRutAD.Count == 0) { this.MENSAJEPersonaNoCreada(); this.Close(true); } //Si el usuario(Active directory) no ha sido asociado a un área de trabajo, el query "Persona" retornara 0 personas.   
             else
             {
-                IDUsuario = PersonaPorNombreAD.First().Rut_Persona; // Filtramos que en las solicitudes no aparezcan las del mismo usuario.
+                IDUsuario = PersonaPorRutAD.First().Rut_Persona; // Filtramos que en las solicitudes no aparezcan las del mismo usuario.
 
-                if (PersonaPorNombreAD.First().Es_GerenteGeneral == true)
+                if (PersonaPorRutAD.First().Es_GerenteGeneral == true)
                 {
                     /*
                      * si solicitud es tipo horas extras
@@ -52,30 +53,30 @@ namespace LightSwitchApplication
 
                 }else
 
-                if (PersonaPorNombreAD.First().Es_Gerente == true)
+                if (PersonaPorRutAD.First().Es_Gerente == true)
                 {
                     /*
                      * si solicitud es tipo horas extras
                      * si yo ya las he evaluado(rechazado o aprobado)
                      */
 
-                    IDGERENCIA = PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
+                    IDGERENCIA = PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
                     VBGERENTE = true;
                     SWITCHRUTGERENTE = "INVALIDAR";// No traerá a otros gerentes, ya que el rut no es valido
                 }
-                else if (PersonaPorNombreAD.First().Es_SubGerente == true)
+                else if (PersonaPorRutAD.First().Es_SubGerente == true)
                 {
                     /*
                      * si yo ya las he evaluado(rechazado o aprobado)
                      */
 
-                    IDSUBGERENCIA = PersonaPorNombreAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
+                    IDSUBGERENCIA = PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Id_SubGerencia;
                     VBSUBGERENTE = true;
                     SWITCHRUTGERENTE = "INVALIDAR";
                 }
-                else if (PersonaPorNombreAD.First().Es_JefeDirecto == true)
+                else if (PersonaPorRutAD.First().Es_JefeDirecto == true)
                 {
-                    IDAREA = PersonaPorNombreAD.First().Superior_JefeDirectoQuery.First().Division_AreaItem.Id_Area;
+                    IDAREA = PersonaPorRutAD.First().Superior_JefeDirectoQuery.First().Division_AreaItem.Id_Area;
                     VBJEFEAREA = true;
                     SWITCHRUTGERENTE = "INVALIDAR";
                 }
@@ -303,6 +304,21 @@ namespace LightSwitchApplication
             this.EmpleadoFiltroSolicitudes = null;
             this.NombreEmpleadoSeleccionado = null;
 
+        }
+
+        partial void ConsultarRutUsuarioAD_Execute()
+        {
+            // Escriba el código aquí.
+            DataWorkspace dataWorkspace = new DataWorkspace();
+
+            ConsultarRutUsuarioADItem operation =
+                dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
+
+            operation.NombreUsuario = this.Application.User.FullName;
+
+            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
+
+            this.RutUsuarioAD = operation.RutUsuario;
         }
 
     }

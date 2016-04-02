@@ -59,7 +59,7 @@ namespace LightSwitchApplication
 
             // Escriba el código aquí.
             this.HorasExtrasAprobadas.SelectedItem.Caducada = true;
-            this.HorasExtrasAprobadas.SelectedItem.Estado = "Cancelada por RR.HH";
+            this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada por RR.HH";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;

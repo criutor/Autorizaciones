@@ -59,9 +59,7 @@
         <KeyProperty.Attributes>
           <Required />
           <MaxLength
-            IsFixedLength="True"
             Value="12" />
-          <AnsiConstraint />
         </KeyProperty.Attributes>
       </KeyProperty>
       <EntityProperty
@@ -131,11 +129,6 @@
         Name="Division_AreaItem"
         ToEnd="Division_Area" />
       <NavigationProperty
-        Association="FK_SolicitudHeader_Persona"
-        FromEnd="Persona"
-        Name="Solicitud_Header"
-        ToEnd="Solicitud_Header" />
-      <NavigationProperty
         Association="FK_Superior_Gerente_Persona"
         FromEnd="Persona"
         Name="Superior_Gerente"
@@ -203,6 +196,43 @@
       <EntityProperty
         Name="Es_GerenteGeneral"
         PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Email"
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@EmailAddressProperties">
+            <Property
+              Name="DefaultDomain"
+              Value="@planvital.cl" />
+          </Attribute>
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AreaDeTrabajo"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Rut_Persona_ConCeros"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="12" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SaldoVacaciones"
+        PropertyType=":Double?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
@@ -536,16 +566,6 @@
       <AssociationSetEnd
         EntitySet="Solicitud_Estados_Vacaciones"
         Name="Solicitud_Estados_Vacaciones" />
-    </AssociationSet>
-    <AssociationSet
-      Association="FK_SolicitudHeader_Persona"
-      Name="FK_SolicitudHeader_Persona">
-      <AssociationSetEnd
-        EntitySet="Persona"
-        Name="Persona" />
-      <AssociationSetEnd
-        EntitySet="Solicitud_Header"
-        Name="Solicitud_Header" />
     </AssociationSet>
     <AssociationSet
       Association="FK_Superior_Gerente_Division_Gerencia"
@@ -2104,7 +2124,7 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="PersonaPorNombreAD"
+      Name="PersonaPorRut"
       ReturnType="PersonaItem*">
       <QueryOperation.FilterExpression>
         <QueryFilterExpressionTree>
@@ -2113,12 +2133,12 @@
             <BinaryExpression.Left>
               <ChainExpression>
                 <MemberExpression
-                  Member="NombreAD" />
+                  Member="Rut_Persona" />
               </ChainExpression>
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <ParameterExpression
-                Parameter="NombreAD" />
+                Parameter="Rut_Persona" />
             </BinaryExpression.Right>
           </BinaryExpression>
         </QueryFilterExpressionTree>
@@ -2130,7 +2150,7 @@
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
-        Name="NombreAD"
+        Name="Rut_Persona"
         ParameterType=":String?" />
     </QueryOperation>
     <EntitySet
@@ -3779,92 +3799,6 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
-    <EntitySet
-      CanDelete="True"
-      CanInsert="True"
-      CanUpdate="True"
-      EntityType="ConsultarInfoUsuarioADItem"
-      Name="ConsultarInfoUsuarioAD" />
-    <QueryOperation
-      Name="ConsultarInfoUsuarioAD_Single"
-      ReturnType="ConsultarInfoUsuarioADItem">
-      <QueryOperation.Attributes>
-        <Generated />
-        <Description
-          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
-      </QueryOperation.Attributes>
-      <QueryOperation.FilterExpression>
-        <QueryFilterExpressionTree>
-          <BinaryExpression
-            NodeType="Equal">
-            <BinaryExpression.Left>
-              <ChainExpression>
-                <MemberExpression
-                  Member="id" />
-              </ChainExpression>
-            </BinaryExpression.Left>
-            <BinaryExpression.Right>
-              <ParameterExpression
-                Parameter="id" />
-            </BinaryExpression.Right>
-          </BinaryExpression>
-        </QueryFilterExpressionTree>
-      </QueryOperation.FilterExpression>
-      <QueryOperation.Source>
-        <QuerySourceExpressionTree>
-          <MemberExpression
-            Member="ConsultarInfoUsuarioAD" />
-        </QuerySourceExpressionTree>
-      </QueryOperation.Source>
-      <QueryOperationParameter
-        Name="id"
-        ParameterType=":Int32?">
-        <QueryOperationParameter.Attributes>
-          <Description
-            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
-        </QueryOperationParameter.Attributes>
-      </QueryOperationParameter>
-    </QueryOperation>
-    <QueryOperation
-      Name="ConsultarInfoUsuarioAD_SingleOrDefault"
-      ReturnType="ConsultarInfoUsuarioADItem">
-      <QueryOperation.Attributes>
-        <Generated />
-        <Description
-          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
-      </QueryOperation.Attributes>
-      <QueryOperation.FilterExpression>
-        <QueryFilterExpressionTree>
-          <BinaryExpression
-            NodeType="Equal">
-            <BinaryExpression.Left>
-              <ChainExpression>
-                <MemberExpression
-                  Member="id" />
-              </ChainExpression>
-            </BinaryExpression.Left>
-            <BinaryExpression.Right>
-              <ParameterExpression
-                Parameter="id" />
-            </BinaryExpression.Right>
-          </BinaryExpression>
-        </QueryFilterExpressionTree>
-      </QueryOperation.FilterExpression>
-      <QueryOperation.Source>
-        <QuerySourceExpressionTree>
-          <MemberExpression
-            Member="ConsultarInfoUsuarioAD" />
-        </QuerySourceExpressionTree>
-      </QueryOperation.Source>
-      <QueryOperationParameter
-        Name="id"
-        ParameterType=":Int32?">
-        <QueryOperationParameter.Attributes>
-          <Description
-            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
-        </QueryOperationParameter.Attributes>
-      </QueryOperationParameter>
-    </QueryOperation>
     <QueryOperation
       Name="SubgerenciasPorGerenciaID"
       ReturnType="Division_SubGerenciaItem*">
@@ -4388,6 +4322,178 @@
       <QueryOperationParameter
         Name="Id_Area"
         ParameterType=":Int32?" />
+    </QueryOperation>
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ConsultarRutUsuarioADItem"
+      Name="ConsultarRutUsuarioAD" />
+    <QueryOperation
+      Name="ConsultarRutUsuarioAD_Single"
+      ReturnType="ConsultarRutUsuarioADItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsultarRutUsuarioAD" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ConsultarRutUsuarioAD_SingleOrDefault"
+      ReturnType="ConsultarRutUsuarioADItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsultarRutUsuarioAD" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ConsultarEmailUsuarioADItem"
+      Name="ConsultarEmailUsuarioAD" />
+    <QueryOperation
+      Name="ConsultarEmailUsuarioAD_Single"
+      ReturnType="ConsultarEmailUsuarioADItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsultarEmailUsuarioAD" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ConsultarEmailUsuarioAD_SingleOrDefault"
+      ReturnType="ConsultarEmailUsuarioADItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsultarEmailUsuarioAD" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
     </QueryOperation>
   </EntityContainer>
   <EntityType
@@ -7430,11 +7536,6 @@
         FromEnd="Solicitud_Header"
         Name="Solicitud_Detalle_Vacaciones"
         ToEnd="Solicitud_Detalle_Vacaciones" />
-      <NavigationProperty
-        Association="FK_SolicitudHeader_Persona"
-        FromEnd="Solicitud_Header"
-        Name="PersonaItem1"
-        ToEnd="Persona" />
       <EntityProperty
         Name="Vacaciones"
         PropertyType=":Boolean?">
@@ -7476,6 +7577,17 @@
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RutPersona_fk"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            IsFixedLength="True"
+            Value="12" />
+          <AnsiConstraint />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
@@ -7784,22 +7896,6 @@
       Name="Solicitud_Estados_Vacaciones" />
   </Association>
   <Association
-    Name="FK_SolicitudHeader_Persona">
-    <AssociationEnd
-      EntityType="PersonaItem"
-      Multiplicity="One"
-      Name="Persona">
-      <AssociationEnd.Attributes>
-        <DeleteRule
-          Action="Cascade" />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      EntityType="Solicitud_HeaderItem"
-      Multiplicity="Many"
-      Name="Solicitud_Header" />
-  </Association>
-  <Association
     Name="FK_Superior_Gerente_Division_Gerencia">
     <AssociationEnd
       EntityType="Division_GerenciaItem"
@@ -7823,7 +7919,7 @@
       Name="Persona">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -7855,7 +7951,7 @@
       Name="Persona">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -7887,7 +7983,7 @@
       Name="Persona">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8443,7 +8539,54 @@
       Name="Persona" />
   </Association>
   <EntityType
-    Name="ConsultarInfoUsuarioADItem">
+    Name="ConsultarRutUsuarioADItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="RutUsuario"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NombreUsuario"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EmailUsuario"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityType
+    Name="ConsultarEmailUsuarioADItem">
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">

@@ -25,7 +25,8 @@
     <EntitySet Name="ESTADOS" EntityType="Autorizaciones_AdminsDataStore.ESTADOSItem" store:Type="Tables" Schema="dbo" Table="ESTADOS" />
     <EntitySet Name="SOLICITUDES" EntityType="Autorizaciones_AdminsDataStore.SOLICITUDESItem" store:Type="Tables" Schema="dbo" Table="SOLICITUDES" />
     <EntitySet Name="CargoRolPrivado" EntityType="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" store:Type="Tables" Schema="dbo" Table="CargoRolPrivado" />
-    <EntitySet Name="ConsultarInfoUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarInfoUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarInfoUsuarioAD" />
+    <EntitySet Name="ConsultarRutUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarRutUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarRutUsuarioAD" />
+    <EntitySet Name="ConsultarEmailUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarEmailUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarEmailUsuarioAD" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -78,10 +79,6 @@
       <End Role="Solicitud_Detalle_Vacaciones" EntitySet="Solicitud_Detalle_Vacaciones" />
       <End Role="Solicitud_Estados_Vacaciones" EntitySet="Solicitud_Estados_Vacaciones" />
     </AssociationSet>
-    <AssociationSet Name="FK_SolicitudHeader_Persona" Association="Autorizaciones_AdminsDataStore.FK_SolicitudHeader_Persona">
-      <End Role="Persona" EntitySet="Persona" />
-      <End Role="Solicitud_Header" EntitySet="Solicitud_Header" />
-    </AssociationSet>
     <AssociationSet Name="FK_Superior_Gerente_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Superior_Gerente_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Superior_Gerente" EntitySet="Superior_Gerente" />
@@ -123,7 +120,7 @@
     <Key>
       <PropertyRef Name="Rut_Persona" />
     </Key>
-    <Property Name="Rut_Persona" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Rut_Persona" Type="nvarchar" Nullable="false" MaxLength="12" />
     <Property Name="AP_Paterno" Type="varchar" MaxLength="30" />
     <Property Name="AP_Materno" Type="varchar" MaxLength="30" />
     <Property Name="Nombres" Type="varchar" MaxLength="30" />
@@ -137,6 +134,10 @@
     <Property Name="FechaVigencia" Type="datetime" />
     <Property Name="EsRolPrivado" Type="bit" />
     <Property Name="Es_GerenteGeneral" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="AreaDeTrabajo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rut_Persona_ConCeros" Type="nvarchar" MaxLength="12" />
+    <Property Name="SaldoVacaciones" Type="float" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
     <Property Name="CargoRolPrivado_fk" Type="int" />
@@ -313,7 +314,7 @@
     </Key>
     <Property Name="Id_Gerente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Gerencia_fk" Type="int" Nullable="false" />
-    <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Persona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="Superior_JefeDirectoItem">
     <Key>
@@ -321,7 +322,7 @@
     </Key>
     <Property Name="Id_JefeDirecto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Area_fk" Type="int" Nullable="false" />
-    <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Persona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="Superior_SubGerenteItem">
     <Key>
@@ -329,7 +330,7 @@
     </Key>
     <Property Name="Id_SubGerente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Subgerencia_fk" Type="int" Nullable="false" />
-    <Property Name="Persona_fk" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Persona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="ConsultarSaldoVacacionesItem">
     <Key>
@@ -398,7 +399,7 @@
     <Property Name="CodigoEstado" Type="int" />
     <Property Name="EmailProximoDestinatario" Type="nvarchar" MaxLength="50" />
     <Property Name="VB_GerenteGeneral" Type="bit" />
-    <Property Name="RutPersona_fk" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="RutPersona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">
     <Key>
@@ -407,7 +408,16 @@
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
   </EntityType>
-  <EntityType Name="ConsultarInfoUsuarioADItem">
+  <EntityType Name="ConsultarRutUsuarioADItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RutUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreUsuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailUsuario" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ConsultarEmailUsuarioADItem">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -588,20 +598,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SolicitudHeader_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Solicitud_Header" Type="Autorizaciones_AdminsDataStore.Solicitud_HeaderItem" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Persona">
-        <PropertyRef Name="Rut_Persona" />
-      </Principal>
-      <Dependent Role="Solicitud_Header">
-        <PropertyRef Name="RutPersona_fk" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Superior_Gerente_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1" />
     <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
@@ -615,9 +611,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
     <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -641,9 +635,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
     <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -667,9 +659,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
     <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">

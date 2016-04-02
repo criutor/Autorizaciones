@@ -32,7 +32,6 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Solicitud_Estados_HorasExtras_Solicitud_Detalle_HorasExtras", "Solicitud_Detalle_HorasExtras", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_Detalle_HorasExtrasItem), "Solicitud_Estados_HorasExtras", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_Estados_HorasExtrasItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Solicitud_Estados_OtroPermiso_Solicitud_Detalle_OtroPermiso", "Solicitud_Detalle_OtroPermiso", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_Detalle_OtroPermisoItem), "Solicitud_Estados_OtroPermiso", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_Estados_OtroPermisoItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Solicitud_Estados_Vacaciones_Solicitud_Detalle_Vacaciones", "Solicitud_Detalle_Vacaciones", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_Detalle_VacacionesItem), "Solicitud_Estados_Vacaciones", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_Estados_VacacionesItem), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_SolicitudHeader_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "Solicitud_Header", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Solicitud_HeaderItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_Gerente_Division_Gerencia", "Division_Gerencia", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.Division_GerenciaItem), "Superior_Gerente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_GerenteItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_Gerente_Persona", "Persona", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.PersonaItem), "Superior_Gerente", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_GerenteItem), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Superior_JefeDirecto_Division_Area", "Division_Area", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Autorizaciones_AdminsData.Implementation.Division_AreaItem), "Superior_JefeDirecto", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Autorizaciones_AdminsData.Implementation.Superior_JefeDirectoItem), true)]
@@ -477,18 +476,34 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        public ObjectSet<ConsultarInfoUsuarioADItem> ConsultarInfoUsuarioAD
+        public ObjectSet<ConsultarRutUsuarioADItem> ConsultarRutUsuarioAD
         {
             get
             {
-                if ((_ConsultarInfoUsuarioAD == null))
+                if ((_ConsultarRutUsuarioAD == null))
                 {
-                    _ConsultarInfoUsuarioAD = base.CreateObjectSet<ConsultarInfoUsuarioADItem>("ConsultarInfoUsuarioAD");
+                    _ConsultarRutUsuarioAD = base.CreateObjectSet<ConsultarRutUsuarioADItem>("ConsultarRutUsuarioAD");
                 }
-                return _ConsultarInfoUsuarioAD;
+                return _ConsultarRutUsuarioAD;
             }
         }
-        private ObjectSet<ConsultarInfoUsuarioADItem> _ConsultarInfoUsuarioAD;
+        private ObjectSet<ConsultarRutUsuarioADItem> _ConsultarRutUsuarioAD;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<ConsultarEmailUsuarioADItem> ConsultarEmailUsuarioAD
+        {
+            get
+            {
+                if ((_ConsultarEmailUsuarioAD == null))
+                {
+                    _ConsultarEmailUsuarioAD = base.CreateObjectSet<ConsultarEmailUsuarioADItem>("ConsultarEmailUsuarioAD");
+                }
+                return _ConsultarEmailUsuarioAD;
+            }
+        }
+        private ObjectSet<ConsultarEmailUsuarioADItem> _ConsultarEmailUsuarioAD;
 
         #endregion
 
@@ -687,11 +702,19 @@ namespace Autorizaciones_AdminsData.Implementation
         }
     
         /// <summary>
-        /// Método desusado para agregar un nuevo objeto al EntitySet ConsultarInfoUsuarioAD. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// Método desusado para agregar un nuevo objeto al EntitySet ConsultarRutUsuarioAD. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
         /// </summary>
-        public void AddToConsultarInfoUsuarioAD(ConsultarInfoUsuarioADItem consultarInfoUsuarioADItem)
+        public void AddToConsultarRutUsuarioAD(ConsultarRutUsuarioADItem consultarRutUsuarioADItem)
         {
-            base.AddObject("ConsultarInfoUsuarioAD", consultarInfoUsuarioADItem);
+            base.AddObject("ConsultarRutUsuarioAD", consultarRutUsuarioADItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet ConsultarEmailUsuarioAD. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToConsultarEmailUsuarioAD(ConsultarEmailUsuarioADItem consultarEmailUsuarioADItem)
+        {
+            base.AddObject("ConsultarEmailUsuarioAD", consultarEmailUsuarioADItem);
         }
 
         #endregion
@@ -897,22 +920,151 @@ namespace Autorizaciones_AdminsData.Implementation
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ConsultarInfoUsuarioADItem")]
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ConsultarEmailUsuarioADItem")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class ConsultarInfoUsuarioADItem : EntityObject
+    public partial class ConsultarEmailUsuarioADItem : EntityObject
     {
         #region Método de generador
     
         /// <summary>
-        /// Crear un nuevo objeto ConsultarInfoUsuarioADItem.
+        /// Crear un nuevo objeto ConsultarEmailUsuarioADItem.
         /// </summary>
         /// <param name="id">Valor inicial de la propiedad id.</param>
-        public static ConsultarInfoUsuarioADItem CreateConsultarInfoUsuarioADItem(global::System.Int32 id)
+        public static ConsultarEmailUsuarioADItem CreateConsultarEmailUsuarioADItem(global::System.Int32 id)
         {
-            ConsultarInfoUsuarioADItem consultarInfoUsuarioADItem = new ConsultarInfoUsuarioADItem();
-            consultarInfoUsuarioADItem.id = id;
-            return consultarInfoUsuarioADItem;
+            ConsultarEmailUsuarioADItem consultarEmailUsuarioADItem = new ConsultarEmailUsuarioADItem();
+            consultarEmailUsuarioADItem.id = id;
+            return consultarEmailUsuarioADItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = value;
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String RutUsuario
+        {
+            get
+            {
+                return _RutUsuario;
+            }
+            set
+            {
+                OnRutUsuarioChanging(value);
+                ReportPropertyChanging("RutUsuario");
+                _RutUsuario = value;
+                ReportPropertyChanged("RutUsuario");
+                OnRutUsuarioChanged();
+            }
+        }
+        private global::System.String _RutUsuario;
+        partial void OnRutUsuarioChanging(global::System.String value);
+        partial void OnRutUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String NombreUsuario
+        {
+            get
+            {
+                return _NombreUsuario;
+            }
+            set
+            {
+                OnNombreUsuarioChanging(value);
+                ReportPropertyChanging("NombreUsuario");
+                _NombreUsuario = value;
+                ReportPropertyChanged("NombreUsuario");
+                OnNombreUsuarioChanged();
+            }
+        }
+        private global::System.String _NombreUsuario;
+        partial void OnNombreUsuarioChanging(global::System.String value);
+        partial void OnNombreUsuarioChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EmailUsuario
+        {
+            get
+            {
+                return _EmailUsuario;
+            }
+            set
+            {
+                OnEmailUsuarioChanging(value);
+                ReportPropertyChanging("EmailUsuario");
+                _EmailUsuario = value;
+                ReportPropertyChanged("EmailUsuario");
+                OnEmailUsuarioChanged();
+            }
+        }
+        private global::System.String _EmailUsuario;
+        partial void OnEmailUsuarioChanging(global::System.String value);
+        partial void OnEmailUsuarioChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ConsultarRutUsuarioADItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class ConsultarRutUsuarioADItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto ConsultarRutUsuarioADItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        public static ConsultarRutUsuarioADItem CreateConsultarRutUsuarioADItem(global::System.Int32 id)
+        {
+            ConsultarRutUsuarioADItem consultarRutUsuarioADItem = new ConsultarRutUsuarioADItem();
+            consultarRutUsuarioADItem.id = id;
+            return consultarRutUsuarioADItem;
         }
 
         #endregion
@@ -2861,6 +3013,102 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = value;
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String AreaDeTrabajo
+        {
+            get
+            {
+                return _AreaDeTrabajo;
+            }
+            set
+            {
+                OnAreaDeTrabajoChanging(value);
+                ReportPropertyChanging("AreaDeTrabajo");
+                _AreaDeTrabajo = value;
+                ReportPropertyChanged("AreaDeTrabajo");
+                OnAreaDeTrabajoChanged();
+            }
+        }
+        private global::System.String _AreaDeTrabajo;
+        partial void OnAreaDeTrabajoChanging(global::System.String value);
+        partial void OnAreaDeTrabajoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Rut_Persona_ConCeros
+        {
+            get
+            {
+                return _Rut_Persona_ConCeros;
+            }
+            set
+            {
+                OnRut_Persona_ConCerosChanging(value);
+                ReportPropertyChanging("Rut_Persona_ConCeros");
+                _Rut_Persona_ConCeros = value;
+                ReportPropertyChanged("Rut_Persona_ConCeros");
+                OnRut_Persona_ConCerosChanged();
+            }
+        }
+        private global::System.String _Rut_Persona_ConCeros;
+        partial void OnRut_Persona_ConCerosChanging(global::System.String value);
+        partial void OnRut_Persona_ConCerosChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> SaldoVacaciones
+        {
+            get
+            {
+                return _SaldoVacaciones;
+            }
+            set
+            {
+                OnSaldoVacacionesChanging(value);
+                ReportPropertyChanging("SaldoVacaciones");
+                _SaldoVacaciones = value;
+                ReportPropertyChanged("SaldoVacaciones");
+                OnSaldoVacacionesChanged();
+            }
+        }
+        private Nullable<global::System.Double> _SaldoVacaciones;
+        partial void OnSaldoVacacionesChanging(Nullable<global::System.Double> value);
+        partial void OnSaldoVacacionesChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Convenio_fk
         {
             get
@@ -3005,28 +3253,6 @@ namespace Autorizaciones_AdminsData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Division_AreaItem>("LightSwitchApplication.FK_Persona_Division_Area", "Division_Area", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SolicitudHeader_Persona", "Solicitud_Header")]
-        public EntityCollection<Solicitud_HeaderItem> Solicitud_Header
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Solicitud_HeaderItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Solicitud_Header");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Solicitud_HeaderItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Solicitud_Header", value);
                 }
             }
         }
@@ -5654,44 +5880,6 @@ namespace Autorizaciones_AdminsData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Solicitud_Detalle_VacacionesItem>("LightSwitchApplication.FK_Solicitud_Detalle_Vacaciones_Solicitud_Header", "Solicitud_Detalle_Vacaciones", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_SolicitudHeader_Persona", "Persona")]
-        public PersonaItem PersonaItem1
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonaItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Persona").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonaItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Persona").Value = value;
-            }
-        }
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<PersonaItem> PersonaItem1Reference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<PersonaItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Persona");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PersonaItem>("LightSwitchApplication.FK_SolicitudHeader_Persona", "Persona", value);
                 }
             }
         }

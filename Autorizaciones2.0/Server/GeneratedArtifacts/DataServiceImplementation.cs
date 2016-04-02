@@ -37,12 +37,12 @@ namespace LightSwitchApplication.Implementation
         }
     
     #region Queries
-        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> PersonaPorNombreAD(string NombreAD)
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> PersonaPorRut(string Rut_Persona)
         {
             global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.PersonaItem> query;
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::Autorizaciones_AdminsData.Implementation.PersonaItem>("Persona"),
-                (p) => (p.NombreAD.CompareTo(NombreAD) == 0));
+                (p) => (p.Rut_Persona.CompareTo(Rut_Persona) == 0));
             return query;
         }
     
@@ -244,9 +244,13 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.CargoRolPrivadoItem();
             }
-            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarInfoUsuarioADItem))
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarRutUsuarioADItem))
             {
-                return new global::Autorizaciones_AdminsData.Implementation.ConsultarInfoUsuarioADItem();
+                return new global::Autorizaciones_AdminsData.Implementation.ConsultarRutUsuarioADItem();
+            }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem();
             }
     
             return base.CreateObject(type);
@@ -359,9 +363,13 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.CargoRolPrivadoItem();
             }
-            if (typeof(T) == typeof(global::LightSwitchApplication.ConsultarInfoUsuarioADItem))
+            if (typeof(T) == typeof(global::LightSwitchApplication.ConsultarRutUsuarioADItem))
             {
-                return new global::Autorizaciones_AdminsData.Implementation.ConsultarInfoUsuarioADItem();
+                return new global::Autorizaciones_AdminsData.Implementation.ConsultarRutUsuarioADItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ConsultarEmailUsuarioADItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem();
             }
             return null;
         }
@@ -620,9 +628,13 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::Autorizaciones_AdminsData.Implementation.CargoRolPrivadoItem);
             }
-            if (typeof(global::LightSwitchApplication.ConsultarInfoUsuarioADItem) == definitionType)
+            if (typeof(global::LightSwitchApplication.ConsultarRutUsuarioADItem) == definitionType)
             {
-                return typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarInfoUsuarioADItem);
+                return typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarRutUsuarioADItem);
+            }
+            if (typeof(global::LightSwitchApplication.ConsultarEmailUsuarioADItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {
@@ -687,14 +699,6 @@ namespace Autorizaciones_AdminsData.Implementation
                 {
                     this.__host.RaisePropertyChanged("Division_AreaItem");
                 }
-            }
-        }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.Solicitud_Header
-        {
-            get
-            {
-                return this.Solicitud_Header;
             }
         }
         
@@ -1657,30 +1661,6 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.IImplementation.PersonaItem1
-        {
-            get
-            {
-                return this.PersonaItem1;
-            }
-            set
-            {
-                this.PersonaItem1 = (global::Autorizaciones_AdminsData.Implementation.PersonaItem)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("PersonaItem1");
-                }
-            }
-        }
-        
-        partial void OnRutPersona_fkChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("PersonaItem1");
-            }
-        }
-        
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         
@@ -2182,8 +2162,41 @@ namespace Autorizaciones_AdminsData.Implementation
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public partial class ConsultarInfoUsuarioADItem :
-        global::LightSwitchApplication.ConsultarInfoUsuarioADItem.DetailsClass.IImplementation
+    public partial class ConsultarRutUsuarioADItem :
+        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ConsultarEmailUsuarioADItem :
+        global::LightSwitchApplication.ConsultarEmailUsuarioADItem.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

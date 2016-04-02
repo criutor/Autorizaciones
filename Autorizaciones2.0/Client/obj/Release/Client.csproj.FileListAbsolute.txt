@@ -1366,6 +1366,6 @@ C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\B
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\Bin\Release\es\Microsoft.Data.Edm.SL.resources.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\Bin\Release\es\System.Spatial.SL.resources.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Release\Client.csprojResolveAssemblyReference.cache
+C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Release\AUTORIZACIONES_ADMINS.Client.g.resources
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Release\AUTORIZACIONES_ADMINS.Client.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Release\AUTORIZACIONES_ADMINS.Client.pdb
-C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\obj\Release\AUTORIZACIONES_ADMINS.Client.g.resources

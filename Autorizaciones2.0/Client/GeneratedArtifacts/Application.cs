@@ -97,18 +97,18 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PERSONAL_BUSCAR_FIN700_CanRun(ref bool result);
+        partial void PERSONAL_CREAR_DESDE_FIN700_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PERSONAL_BUSCAR_FIN700_Run(ref bool handled);
+        partial void PERSONAL_CREAR_DESDE_FIN700_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowPERSONAL_BUSCAR_FIN700. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowPERSONAL_CREAR_DESDE_FIN700. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowPERSONAL_BUSCAR_FIN700()
+        public void ShowPERSONAL_CREAR_DESDE_FIN700()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_BUSCAR_FIN700);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_CREAR_DESDE_FIN700);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -202,18 +202,18 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void X_BORRAR_TESTING_VistaHEADERS_CanRun(ref bool result);
+        partial void SOLICITUDES_HISTORICO_RRHH_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void X_BORRAR_TESTING_VistaHEADERS_Run(ref bool handled);
+        partial void SOLICITUDES_HISTORICO_RRHH_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowX_BORRAR_TESTING_VistaHEADERS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_HISTORICO_RRHH. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowX_BORRAR_TESTING_VistaHEADERS()
+        public void ShowSOLICITUDES_HISTORICO_RRHH()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowX_BORRAR_TESTING_VistaHEADERS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_HISTORICO_RRHH);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -351,6 +351,36 @@ namespace LightSwitchApplication
             ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_PERMISOS);
         }
         
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowPROCESOS_PERIODICOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowPROCESOS_PERIODICOS()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPROCESOS_PERIODICOS);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_HISTORICO_ROLPRIVADO_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_HISTORICO_ROLPRIVADO_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_HISTORICO_ROLPRIVADO. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_HISTORICO_ROLPRIVADO()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_HISTORICO_ROLPRIVADO);
+        }
+        
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -418,8 +448,8 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO.CreateInstance((int)args[0], (int)args[1]);
                     case "PERSONAL_CREAR_ROL_PRIVADO":
                         return global::LightSwitchApplication.PERSONAL_CREAR_ROL_PRIVADO.CreateInstance();
-                    case "PERSONAL_BUSCAR_FIN700":
-                        return global::LightSwitchApplication.PERSONAL_BUSCAR_FIN700.CreateInstance();
+                    case "PERSONAL_CREAR_DESDE_FIN700":
+                        return global::LightSwitchApplication.PERSONAL_CREAR_DESDE_FIN700.CreateInstance();
                     case "SOLICITUDES_APROBACIÓN":
                         return global::LightSwitchApplication.SOLICITUDES_APROBACIÓN.CreateInstance();
                     case "SOLICITUDES_MIS_SOLICITUDES":
@@ -432,8 +462,8 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.SOLICITUDES_A_CARGO.CreateInstance();
                     case "ADMINISTRAR_FERIADOS":
                         return global::LightSwitchApplication.ADMINISTRAR_FERIADOS.CreateInstance();
-                    case "X_BORRAR_TESTING_VistaHEADERS":
-                        return global::LightSwitchApplication.X_BORRAR_TESTING_VistaHEADERS.CreateInstance();
+                    case "SOLICITUDES_HISTORICO_RRHH":
+                        return global::LightSwitchApplication.SOLICITUDES_HISTORICO_RRHH.CreateInstance();
                     case "SOLICITUDES_NUEVA":
                         return global::LightSwitchApplication.SOLICITUDES_NUEVA.CreateInstance((int)args[0]);
                     case "SOLICITUDES_DETALLES":
@@ -452,6 +482,10 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.CreateInstance();
                     case "SOLICITUDES_REBAJAR_PERMISOS":
                         return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.CreateInstance();
+                    case "PROCESOS_PERIODICOS":
+                        return global::LightSwitchApplication.PROCESOS_PERIODICOS.CreateInstance();
+                    case "SOLICITUDES_HISTORICO_ROLPRIVADO":
+                        return global::LightSwitchApplication.SOLICITUDES_HISTORICO_ROLPRIVADO.CreateInstance();
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -500,12 +534,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_BUSCAR_FIN700
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_CREAR_DESDE_FIN700
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPERSONAL_BUSCAR_FIN700);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPERSONAL_CREAR_DESDE_FIN700);
                     }
                 }
 
@@ -554,12 +588,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowX_BORRAR_TESTING_VistaHEADERS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_HISTORICO_RRHH
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowX_BORRAR_TESTING_VistaHEADERS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_HISTORICO_RRHH);
                     }
                 }
 
@@ -617,6 +651,24 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPROCESOS_PERIODICOS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_HISTORICO_ROLPRIVADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_HISTORICO_ROLPRIVADO);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -662,12 +714,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_BUSCAR_FIN700
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_CREAR_DESDE_FIN700
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_BUSCAR_FIN700);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_CREAR_DESDE_FIN700);
                     }
                 }
 
@@ -725,12 +777,12 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowX_BORRAR_TESTING_VistaHEADERS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_HISTORICO_RRHH
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowX_BORRAR_TESTING_VistaHEADERS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_HISTORICO_RRHH);
                     }
                 }
 
@@ -815,6 +867,24 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPROCESOS_PERIODICOS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_HISTORICO_ROLPRIVADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_HISTORICO_ROLPRIVADO);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -874,17 +944,17 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPERSONAL_BUSCAR_FIN700 = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPERSONAL_BUSCAR_FIN700",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_BUSCAR_FIN700_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_BUSCAR_FIN700_CreateExecutableObject);
-                private static void _ShowPERSONAL_BUSCAR_FIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_CREAR_DESDE_FIN700 = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_CREAR_DESDE_FIN700",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_CREAR_DESDE_FIN700_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_CREAR_DESDE_FIN700_CreateExecutableObject);
+                private static void _ShowPERSONAL_CREAR_DESDE_FIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPERSONAL_BUSCAR_FIN700Command, sf);
+                    c(d, ref d._ShowPERSONAL_CREAR_DESDE_FIN700Command, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowPERSONAL_BUSCAR_FIN700_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPERSONAL_CREAR_DESDE_FIN700_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPERSONAL_BUSCAR_FIN700.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPERSONAL_CREAR_DESDE_FIN700.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
@@ -958,17 +1028,17 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowX_BORRAR_TESTING_VistaHEADERS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowX_BORRAR_TESTING_VistaHEADERS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_CreateExecutableObject);
-                private static void _ShowX_BORRAR_TESTING_VistaHEADERS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_HISTORICO_RRHH = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_HISTORICO_RRHH",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_HISTORICO_RRHH_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_HISTORICO_RRHH_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_HISTORICO_RRHH_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowX_BORRAR_TESTING_VistaHEADERSCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_HISTORICO_RRHHCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowX_BORRAR_TESTING_VistaHEADERS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_HISTORICO_RRHH_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowX_BORRAR_TESTING_VistaHEADERS.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_HISTORICO_RRHH.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
@@ -1053,6 +1123,34 @@ namespace LightSwitchApplication
                 private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_PERMISOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
                     return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_PERMISOS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPROCESOS_PERIODICOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPROCESOS_PERIODICOS",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_CreateExecutableObject);
+                private static void _ShowPROCESOS_PERIODICOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPROCESOS_PERIODICOSCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPROCESOS_PERIODICOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPROCESOS_PERIODICOS.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_HISTORICO_ROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_HISTORICO_ROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_HISTORICO_ROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_HISTORICO_ROLPRIVADO_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_HISTORICO_ROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_HISTORICO_ROLPRIVADOCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_HISTORICO_ROLPRIVADO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_HISTORICO_ROLPRIVADO.CreateInvocation(new object[0]);
                 }
 
             }
@@ -1168,28 +1266,28 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPERSONAL_BUSCAR_FIN700 = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPERSONAL_BUSCAR_FIN700",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_BUSCAR_FIN700_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_BUSCAR_FIN700_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_BUSCAR_FIN700_InvokeMethod);
-                private static void _ShowPERSONAL_BUSCAR_FIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPERSONAL_CREAR_DESDE_FIN700 = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_CREAR_DESDE_FIN700",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_CREAR_DESDE_FIN700_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_CREAR_DESDE_FIN700_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_CREAR_DESDE_FIN700_InvokeMethod);
+                private static void _ShowPERSONAL_CREAR_DESDE_FIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPERSONAL_BUSCAR_FIN700Method, sf);
+                    c(d, ref d._ShowPERSONAL_CREAR_DESDE_FIN700Method, sf);
                 }
-                private static global::System.Exception _ShowPERSONAL_BUSCAR_FIN700_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowPERSONAL_CREAR_DESDE_FIN700_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.PERSONAL_BUSCAR_FIN700_CanRun(ref result);
+                    d.Application.PERSONAL_CREAR_DESDE_FIN700_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowPERSONAL_BUSCAR_FIN700_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowPERSONAL_CREAR_DESDE_FIN700_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.PERSONAL_BUSCAR_FIN700_Run(ref handled);
+                    d.Application.PERSONAL_CREAR_DESDE_FIN700_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:PERSONAL_BUSCAR_FIN700", () => global::LightSwitchApplication.PERSONAL_BUSCAR_FIN700.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_CREAR_DESDE_FIN700", () => global::LightSwitchApplication.PERSONAL_CREAR_DESDE_FIN700.CreateInstance(), args);
                     }
                 }
  
@@ -1350,28 +1448,28 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowX_BORRAR_TESTING_VistaHEADERS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowX_BORRAR_TESTING_VistaHEADERS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowX_BORRAR_TESTING_VistaHEADERS_InvokeMethod);
-                private static void _ShowX_BORRAR_TESTING_VistaHEADERS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_HISTORICO_RRHH = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_HISTORICO_RRHH",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HISTORICO_RRHH_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HISTORICO_RRHH_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HISTORICO_RRHH_InvokeMethod);
+                private static void _ShowSOLICITUDES_HISTORICO_RRHH_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowX_BORRAR_TESTING_VistaHEADERSMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_HISTORICO_RRHHMethod, sf);
                 }
-                private static global::System.Exception _ShowX_BORRAR_TESTING_VistaHEADERS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_HISTORICO_RRHH_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.X_BORRAR_TESTING_VistaHEADERS_CanRun(ref result);
+                    d.Application.SOLICITUDES_HISTORICO_RRHH_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowX_BORRAR_TESTING_VistaHEADERS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_HISTORICO_RRHH_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.X_BORRAR_TESTING_VistaHEADERS_Run(ref handled);
+                    d.Application.SOLICITUDES_HISTORICO_RRHH_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:X_BORRAR_TESTING_VistaHEADERS", () => global::LightSwitchApplication.X_BORRAR_TESTING_VistaHEADERS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_HISTORICO_RRHH", () => global::LightSwitchApplication.SOLICITUDES_HISTORICO_RRHH.CreateInstance(), args);
                     }
                 }
  
@@ -1609,6 +1707,58 @@ namespace LightSwitchApplication
                     }
                 }
  
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPROCESOS_PERIODICOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPROCESOS_PERIODICOS",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_InvokeMethod);
+                private static void _ShowPROCESOS_PERIODICOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPROCESOS_PERIODICOSMethod, sf);
+                }
+                private static global::System.Exception _ShowPROCESOS_PERIODICOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.PROCESOS_PERIODICOS_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowPROCESOS_PERIODICOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.PROCESOS_PERIODICOS_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:PROCESOS_PERIODICOS", () => global::LightSwitchApplication.PROCESOS_PERIODICOS.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_HISTORICO_ROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_HISTORICO_ROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HISTORICO_ROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HISTORICO_ROLPRIVADO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HISTORICO_ROLPRIVADO_InvokeMethod);
+                private static void _ShowSOLICITUDES_HISTORICO_ROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_HISTORICO_ROLPRIVADOMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_HISTORICO_ROLPRIVADO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_HISTORICO_ROLPRIVADO_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_HISTORICO_ROLPRIVADO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_HISTORICO_ROLPRIVADO_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_HISTORICO_ROLPRIVADO", () => global::LightSwitchApplication.SOLICITUDES_HISTORICO_ROLPRIVADO.CreateInstance(), args);
+                    }
+                }
+ 
             }
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOSMethod;
@@ -1619,7 +1769,7 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_CREAR_ROL_PRIVADOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_BUSCAR_FIN700Method;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_CREAR_DESDE_FIN700Method;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_APROBACIÓNMethod;
 
@@ -1633,7 +1783,7 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_FERIADOSMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowX_BORRAR_TESTING_VistaHEADERSMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HISTORICO_RRHHMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_NUEVAMethod;
 
@@ -1653,13 +1803,17 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOSMethod;
 
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOSMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HISTORICO_ROLPRIVADOMethod;
+
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOSCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_DIVISIONESCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_CREAR_ROL_PRIVADOCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_BUSCAR_FIN700Command;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_CREAR_DESDE_FIN700Command;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_APROBACIÓNCommand;
 
@@ -1671,7 +1825,7 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_FERIADOSCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowX_BORRAR_TESTING_VistaHEADERSCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HISTORICO_RRHHCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_CARGOS_ROL_PRIVADOCommand;
 
@@ -1684,6 +1838,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRASCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOSCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOSCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HISTORICO_ROLPRIVADOCommand;
 
         }
     }

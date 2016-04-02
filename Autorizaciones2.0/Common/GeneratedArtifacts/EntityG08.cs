@@ -1096,6 +1096,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string RutPersona_fk
+        {
+            get
+            {
+                return global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.RutPersona_fk);
+            }
+            set
+            {
+                global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.RutPersona_fk, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RutPersona_fk_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RutPersona_fk_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RutPersona_fk_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem> Solicitud_Detalle_Administrativo
         {
             get
@@ -1182,30 +1206,6 @@ namespace LightSwitchApplication
                 return global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.GetQuery(this, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.Solicitud_Detalle_Vacaciones);
             }
         }
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.PersonaItem PersonaItem1
-        {
-            get
-            {
-                return global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.PersonaItem1);
-            }
-            set
-            {
-                global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.PersonaItem1, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaItem1_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaItem1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PersonaItem1_Changed();
 
         #endregion
     
@@ -1425,6 +1425,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, string> RutPersona_fk
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.RutPersona_fk) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem> Solicitud_Detalle_Administrativo
                 {
                     get
@@ -1457,14 +1465,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.PersonaItem> PersonaItem1
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.PersonaItem1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.PersonaItem>;
-                    }
-                }
-                
             }
     
             #pragma warning disable 109
@@ -1488,11 +1488,11 @@ namespace LightSwitchApplication
                 new global::System.Nullable<bool> OtroPermiso { get; set; }
                 new string Titulo { get; set; }
                 new global::System.Nullable<bool> VB_Empleado { get; set; }
+                new string RutPersona_fk { get; set; }
                 new global::System.Collections.IEnumerable Solicitud_Detalle_Administrativo { get; }
                 new global::System.Collections.IEnumerable Solicitud_Detalle_HorasExtras { get; }
                 new global::System.Collections.IEnumerable Solicitud_Detalle_OtroPermiso { get; }
                 new global::System.Collections.IEnumerable Solicitud_Detalle_Vacaciones { get; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation PersonaItem1 { get; set; }
             }
             #pragma warning restore 109
     
@@ -2128,6 +2128,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, string>.Entry
+                    RutPersona_fk = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, string>.Entry(
+                        "RutPersona_fk",
+                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._RutPersona_fk_Stub,
+                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._RutPersona_fk_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._RutPersona_fk_Validate,
+                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._RutPersona_fk_GetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._RutPersona_fk_SetImplementationValue,
+                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._RutPersona_fk_OnValueChanged);
+                private static void _RutPersona_fk_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RutPersona_fk, sf);
+                }
+                private static bool _RutPersona_fk_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_HeaderItem e)
+                {
+                    bool result = false;
+                    e.RutPersona_fk_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _RutPersona_fk_Validate(global::LightSwitchApplication.Solicitud_HeaderItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.RutPersona_fk_Validate(r);
+                }
+                private static string _RutPersona_fk_GetImplementationValue(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.RutPersona_fk;
+                }
+                private static void _RutPersona_fk_SetImplementationValue(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.RutPersona_fk = v;
+                }
+                private static void _RutPersona_fk_OnValueChanged(global::LightSwitchApplication.Solicitud_HeaderItem e)
+                {
+                    e.RutPersona_fk_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Entry
                     Solicitud_Detalle_Administrativo = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Entry(
                         "Solicitud_Detalle_Administrativo",
@@ -2207,53 +2244,6 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.Solicitud_Detalle_Vacaciones;
                 }
     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    PersonaItem1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
-                        "PersonaItem1",
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_Stub,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_Validate,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_GetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_SetImplementationValue,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_Refresh,
-                        global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties._PersonaItem1_OnValueChanged);
-                private static void _PersonaItem1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._PersonaItem1, sf);
-                }
-                private static bool _PersonaItem1_ComputeIsReadOnly(global::LightSwitchApplication.Solicitud_HeaderItem e)
-                {
-                    bool result = false;
-                    e.PersonaItem1_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _PersonaItem1_Validate(global::LightSwitchApplication.Solicitud_HeaderItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.PersonaItem1_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _PersonaItem1_GetCoreImplementationValue(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.PersonaItem1;
-                }
-                private static global::LightSwitchApplication.PersonaItem _PersonaItem1_GetImplementationValue(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d)
-                {
-                    return d.GetImplementationValue<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass>(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
-                }
-                private static void _PersonaItem1_SetImplementationValue(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d, global::LightSwitchApplication.PersonaItem v)
-                {
-                    d.SetImplementationValue(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1, (i, ev) => i.PersonaItem1 = ev, v);
-                }
-                private static void _PersonaItem1_Refresh(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass.PropertySetProperties.PersonaItem1, ref d._PersonaItem1);
-                }
-                private static void _PersonaItem1_OnValueChanged(global::LightSwitchApplication.Solicitud_HeaderItem e)
-                {
-                    e.PersonaItem1_Changed();
-                }
-    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2308,6 +2298,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::System.Nullable<bool>>.Data _VB_Empleado;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, string>.Data _RutPersona_fk;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_AdministrativoItem>.Data _Solicitud_Detalle_Administrativo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2318,9 +2311,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.Solicitud_Detalle_VacacionesItem>.Data _Solicitud_Detalle_Vacaciones;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Solicitud_HeaderItem, global::LightSwitchApplication.Solicitud_HeaderItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _PersonaItem1;
             
         }
     
