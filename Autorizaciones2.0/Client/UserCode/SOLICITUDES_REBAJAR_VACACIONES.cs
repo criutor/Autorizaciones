@@ -23,8 +23,14 @@ namespace LightSwitchApplication
             }
 
             // Escriba el código aquí.
+
+
             this.Vacaciones_Aprobadas.SelectedItem.Caducada = true;
-            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada por RR.HH";
+            this.Vacaciones_Aprobadas.SelectedItem.Completada = false;
+
+
+            //this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada por RR.HH";
+            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada";
 
 
             this.NUEVOESTADO = new ESTADOSItem();
@@ -50,13 +56,18 @@ namespace LightSwitchApplication
 
             //enviar Vacaciones a fin700 *****!!!!
 
-
             this.Vacaciones_Aprobadas.SelectedItem.Rebajada = true;
-            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
+            this.Vacaciones_Aprobadas.SelectedItem.Completada = false;
+
+            //this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
+            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada";
 
             if(this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.EsRolPrivado == true)
             {
-                this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+                //***this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+                this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+                //this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+
             }
             else if (this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.EsRolPrivado == false)
             {
@@ -74,6 +85,34 @@ namespace LightSwitchApplication
                 this.Refresh();
 
 
+        }
+
+        partial void RebajarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                if (this.Vacaciones_Aprobadas.SelectedItem == null)
+                {
+                    result = false;
+                }
+                else { result = true; }
+            }
+            catch { }
+        }
+
+        partial void CancelarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                if (this.Vacaciones_Aprobadas.SelectedItem == null)
+                {
+                    result = false;
+                }
+                else { result = true; }
+            }
+            catch { }
         }
     }
 }

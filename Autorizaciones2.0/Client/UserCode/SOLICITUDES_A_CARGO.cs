@@ -16,20 +16,9 @@ namespace LightSwitchApplication
         {
             this.ConsultarRutUsuarioAD_Execute();
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
+            this.TodosLosEmpleados_Execute();
 
-            this.TodasLasSolicitudes_Execute();
-            this.FECHADESDE = null;
-            this.FECHAHASTA = null;
-            this.ADMINISTRATIVO = true;
-            this.VACACIONES = true;
-            this.OTROPERMISO = true;
-            this.HORASEXTRAS = true;
-            this.FiltroEstados = null;
-            this.FALSAS = false;
-            this.VERDADERAS = true;
-            //this.Solicitud_Header.Load();
-
-            //this.TodasLasSolicitudes_Execute();
+            this.FiltroEstados = "Todas";
 
             //****CAMBIAR POR RUT****
             //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
@@ -129,93 +118,85 @@ namespace LightSwitchApplication
 
         partial void FiltroEstados_Validate(ScreenValidationResultsBuilder results)
         {
-            // results.AddPropertyError("<Mensaje de error>");
-
-            //Si se escoge alguna de las tres opciones de búsqueda, no aplicar los filtros FALSAS ni VERDADERAS
-            if (FiltroEstados != null)
+            if (FiltroEstados == "Rechazada")
             {
-                this.FALSAS = null; this.VERDADERAS = null; //VBGERENTE = null; VBSUBGERENTE = null; VBJEFEDIRECTO = null;
+
+                this.Completada = false;
+                this.Rechazada = true;
+                this.Cancelada = false;
+                this.Caducada = false;
+                this.Rebajada = false;
             }
-            //Al cambiar la opción se cambian los filtros
-            if (FiltroEstados == "Rechazadas") { 
-                
-                /*
-                 * Por mi o despues que yo las haya aprobado                 
-                 */
-                this.Rechazada = true; this.Completada = false; this.Cancelada = false; }
             else
-                if (FiltroEstados == "Aprobadas") {
+                if (FiltroEstados == "Aprobada")
+                {
 
-               /*
-               * solo si yo participé en la aprobación                 
-               */
-                    this.Completada = true; this.Rechazada = false; this.Cancelada = false;  }
+                    this.Completada = true;
+                    this.Rechazada = false;
+                    this.Cancelada = false;
+                    this.Caducada = false;
+                    this.Rebajada = false;
+                }
                 else
-                    if (FiltroEstados == "Abiertas") {
-               /*
-               * solo si yo ya la aprobé                 
-               */
-                        this.Rechazada = false; this.Completada = false; this.Cancelada = false; }
+                    if (FiltroEstados == "En aprobacion")
+                    {
+
+                        this.Completada = false;
+                        this.Rechazada = false;
+                        this.Cancelada = false;
+                        this.Caducada = false;
+                        this.Rebajada = false;
+                    }
                     else
-                        if (FiltroEstados == "Canceladas") {
+                        if (FiltroEstados == "Cancelada")
+                        {
 
-                            /*
-                            * despues que yo las haya aprobado               
-                            */
-
-                            this.Rechazada = false; this.Completada = false; this.Cancelada = true;  }
+                            this.Completada = false;
+                            this.Rechazada = false;
+                            this.Cancelada = true;
+                            this.Caducada = false;
+                            this.Rebajada = false;
+                        }
                         else
-                            if (FiltroEstados == "Caducadas") { this.Caducada = true; }
+                            if (FiltroEstados == "Anulada")
+                            {
+
+                                this.Completada = false;
+                                this.Rechazada = false;
+                                this.Cancelada = false;
+                                this.Caducada = true;
+                                this.Rebajada = false;
+                            }
                             else
-                                if (FiltroEstados == "Rebajadas") { this.Rebajada = true; }
+                                if (FiltroEstados == "Rebajada")
+                                {
+
+                                    this.Completada = false;
+                                    this.Rechazada = false;
+                                    this.Cancelada = false;
+                                    this.Caducada = false;
+                                    this.Rebajada = true;
+                                }
                                 else
-            if (FiltroEstados == "Todos los estados") 
-                        {
-                        
-                            this.FECHADESDE = null;
-                            this.FECHAHASTA = null;
-                            this.ADMINISTRATIVO = true;
-                            this.VACACIONES = true;
-                            this.OTROPERMISO = true;
-                            this.HORASEXTRAS = true;
-                            this.FiltroEstados = null;
-                            this.FALSAS = false;
-                            this.VERDADERAS = true;
-                            //this.Solicitud_Header.Load();
-                        }
+                                    if (FiltroEstados == "Todas")
+                                    {
 
-            /*else
-                if (RechazadaAprobadaAbierta == "Falta mi aprobación") 
-                { 
-                    this.Rechazada = false; this.Completada = false;
+                                        //this.FechaSolicitudDesde = null;
+                                        //this.FechaSolicitudHasta = null;
 
-                    if (PersonaPorNombreAD.First().Es_Gerente == true)
-                    {
-                        //VBGERENTE = false;
-                        VBSUBGERENTE = true;
-                        VBJEFEDIRECTO = true;
-                    }
-                    else if (PersonaPorNombreAD.First().Es_SubGerente == true)
-                    {
-                        //VBGERENTE = false;
-                        VBSUBGERENTE = false;
-                        VBJEFEDIRECTO = true;
-                    }
-                    else if (PersonaPorNombreAD.First().Es_JefeDirecto == true)
-                    {
-                        VBJEFEDIRECTO = false; // Filtrar las solicitudes donde el jefe directo aun no las ha aprobado(visto bueno = false)
+                                        this.Administrativo = true;
+                                        this.Vacaciones = true;
+                                        this.OtroPermiso = true;
+                                        this.HorasExtras = true;
+                                        this.FiltroEstados = null;
 
-                        if (PersonaPorNombreAD.First().Division_AreaItem.Division_SubGerenciaItem == null)
-                        {
-                            VBSUBGERENTE = true;
-                        }
-                        else { VBSUBGERENTE = false; }
-
-                        //VBGERENTE = false;
-
-                    }
-                }*/
-
+                                        this.Completada = null;
+                                        this.Rechazada = null;
+                                        this.Cancelada = null;
+                                        this.Caducada = null;
+                                        this.Rebajada = null;
+                                        //this.Solicitud_Header.Load();
+                                    }
         }
 
 
@@ -282,28 +263,29 @@ namespace LightSwitchApplication
             this.CloseModalWindow("Empleados");
         }
 
-        partial void LimpiarFiltros_Execute()
+        partial void LimpiarFechas_Execute()
         {
-            // Escriba el código aquí.
-            this.FiltroEstados = null;
-            this.FECHADESDE = null;
-            this.FECHAHASTA = null;
-            //this.ADMINISTRATIVO = false;
-            //this.VACACIONES = false;
-            //this.OTROPERMISO = false;
-            //this.HORASEXTRAS = false;
-            this.FALSAS = false;
-            this.VERDADERAS = true;
-            //this.SolicitudesPorPersona.Load();
+            this.FechaSolicitudDesde = null;
+            this.FechaSolicitudHasta = null;
 
+            this.SOLICITUDES.Load();
         }
 
-        partial void TodasLasSolicitudes_Execute()
+        partial void TodosLosEmpleados_Execute()
         {
             // Escriba el código aquí.
             this.EmpleadoFiltroSolicitudes = null;
             this.NombreEmpleadoSeleccionado = null;
 
+            /*
+            this.FechaSolicitudDesde = null;
+            this.FechaSolicitudHasta = null;
+            this.Administrativo = true;
+            this.Vacaciones = true;
+            this.OtroPermiso = true;
+            this.HorasExtras = true;
+            this.FiltroEstados = null;
+            */
         }
 
         partial void ConsultarRutUsuarioAD_Execute()

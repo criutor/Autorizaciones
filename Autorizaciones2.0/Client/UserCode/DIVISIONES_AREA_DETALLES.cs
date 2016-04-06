@@ -36,5 +36,12 @@ namespace LightSwitchApplication
             this.Application.ShowPERSONAL_LISTAR_NOROLPRIVADO(1,this.Division_AreaItem.Id_Area);
 
         }
+
+        partial void DIVISIONES_AREA_DETALLES_Closing(ref bool cancel)
+        {
+            // Escriba el código aquí.
+
+
+        }
     }
 }

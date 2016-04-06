@@ -1018,7 +1018,7 @@
           Property="LightSwitchCommonModule:Division_AreaItem/Properties[Nombre]"
           Type="nvarchar" />
         <SsdlProperty
-          MaxLength="50"
+          MaxLength="100"
           Name="JefeDeArea"
           Nullable="True"
           Property="LightSwitchCommonModule:Division_AreaItem/Properties[JefeDeArea]"
@@ -1054,7 +1054,7 @@
           Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Nombre]"
           Type="nvarchar" />
         <SsdlProperty
-          MaxLength="50"
+          MaxLength="100"
           Name="Gerente"
           Nullable="True"
           Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Gerente]"
@@ -1080,7 +1080,7 @@
           Property="LightSwitchCommonModule:Division_SubGerenciaItem/Properties[Nombre]"
           Type="nvarchar" />
         <SsdlProperty
-          MaxLength="50"
+          MaxLength="100"
           Name="SubGerente"
           Nullable="True"
           Property="LightSwitchCommonModule:Division_SubGerenciaItem/Properties[SubGerente]"
@@ -1263,6 +1263,11 @@
           Name="SaldoVacaciones"
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones]"
+          Type="float" />
+        <SsdlProperty
+          Name="SaldoVacaciones2"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones2]"
           Type="float" />
         <SsdlForeignKeyProperty
           Name="CargoRolPrivado_fk"

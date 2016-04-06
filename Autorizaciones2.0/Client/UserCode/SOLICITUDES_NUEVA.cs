@@ -34,10 +34,14 @@ namespace LightSwitchApplication
             //Instanciar el objeto solicitud 
             this.SOLICITUD = new SOLICITUDESItem();
             this.SOLICITUD.FechaSolicitud = DateTime.Now;
+
             this.SOLICITUD.Rechazada = false;
             this.SOLICITUD.Completada = false;
             this.SOLICITUD.Cancelada = false;
-            this.SOLICITUD.Estado = "Siendo procesada";
+            this.SOLICITUD.Rebajada = false;
+            this.SOLICITUD.Caducada = false;
+
+            this.SOLICITUD.Estado = "Ingresada";
             this.SOLICITUD.VB_Empleado = true;
         
             //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
@@ -64,8 +68,6 @@ namespace LightSwitchApplication
                 //Guarda el correo obtenido moises.arevalo@planvital.cl
 
                 //this.SOLICITUD.EmailProximoDestinatario = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Email;
-
-                this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
 
                 /*
                 if (this.EmailUsuarioAD == null)
@@ -99,7 +101,7 @@ namespace LightSwitchApplication
                         
                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                         //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                        this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                        
 
                     }
                 }
@@ -136,7 +138,7 @@ namespace LightSwitchApplication
                             //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                             
                             //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
-                            this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                            
                         }
                         else
                             if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
@@ -147,7 +149,7 @@ namespace LightSwitchApplication
                                 //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
                                 //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl"; 
+                                 
                             }
                             else if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
                             {
@@ -157,7 +159,7 @@ namespace LightSwitchApplication
                                 //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
  
                                 //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                
                             }
                             else
                             {
@@ -218,7 +220,7 @@ namespace LightSwitchApplication
                             //ENVIAR EMAIL AL JEFE DE AREA-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
                             //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.Email;
-                            this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                            
                         }
                         else
                             if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
@@ -230,7 +232,7 @@ namespace LightSwitchApplication
                                     //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
                                     //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
-                                    this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                    
                                 }
                             }
                             else
@@ -241,7 +243,7 @@ namespace LightSwitchApplication
                                     //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
                                     //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                    this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                    
                                 }
                                 else
 
@@ -252,7 +254,7 @@ namespace LightSwitchApplication
                                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
                                         //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                        this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                        
                                     }
                     }
 
@@ -413,7 +415,9 @@ namespace LightSwitchApplication
         {
             if (this.PersonaPorRutAD.First().EsRolPrivado == true)
             {
-                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones;
+                //***this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones;
+                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones2;
+                //this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().VacacionesSaldo;
             }
             else
             {
@@ -855,6 +859,8 @@ namespace LightSwitchApplication
             
             //this.RutUsuarioAD = "17511042-9";//gustavo
         }
+
+
         
     }
 }

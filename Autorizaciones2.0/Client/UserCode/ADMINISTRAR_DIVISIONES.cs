@@ -186,6 +186,17 @@ namespace LightSwitchApplication
             NuevaArea.Division_GerenciaItem = Division_Gerencia.SelectedItem;
             
             NuevaArea.Division_SubGerenciaItem = this.SubgerenciaCampo;
+
+            /*
+             * Al agregar este nuevo campo en la tabla, podemos filtrar las areas que no tienen gerencia y las que tienen en el 
+             * mismo control de autocompletar en las ventanas crear rol privado y detalles para el control de autocompletar de las areas
+             * , lo he retirado por que causo un error en produccion.
+             * 
+            if (NuevaArea.Division_SubGerenciaItem == null)
+            { NuevaArea.ConSubgerencia = null; }
+            else { NuevaArea.ConSubgerencia = true; }
+            */
+
             this.CloseModalWindow("NuevaArea");
             this.NombreDivision = null;
             this.Save();

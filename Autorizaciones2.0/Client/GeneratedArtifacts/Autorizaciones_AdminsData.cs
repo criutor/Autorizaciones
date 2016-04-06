@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 02/04/2016 0:35:48
+// Fecha de generación: 06/04/2016 15:17:12
 namespace LightSwitchApplication.Implementation
 {
     
@@ -1198,6 +1198,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<double> _SaldoVacaciones;
         partial void OnSaldoVacacionesChanging(global::System.Nullable<double> value);
         partial void OnSaldoVacacionesChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad SaldoVacaciones2 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<double> SaldoVacaciones2
+        {
+            get
+            {
+                return this._SaldoVacaciones2;
+            }
+            set
+            {
+                this.OnSaldoVacaciones2Changing(value);
+                if (object.Equals(this.SaldoVacaciones2, value))
+                {
+                    return;
+                }
+                this._SaldoVacaciones2 = value;
+                this.OnSaldoVacaciones2Changed();
+                this.OnPropertyChanged("SaldoVacaciones2");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<double> _SaldoVacaciones2;
+        partial void OnSaldoVacaciones2Changing(global::System.Nullable<double> value);
+        partial void OnSaldoVacaciones2Changed();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>

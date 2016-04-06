@@ -23,25 +23,9 @@ namespace LightSwitchApplication
 
             //enviar horas extras a fin700 ******!!!
 
-            if (this.HorasExtrasAprobadas.SelectedItem.HorasTrabajadas > 0)
-            {
-                this.HorasExtrasAprobadas.SelectedItem.Rebajada = true;
-                this.HorasExtrasAprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
+            this.AbrirVentanaModalHorasTrabajadas_Execute();
 
-                this.NUEVOESTADO = new ESTADOSItem();
-                this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;
-                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
-                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-                this.NUEVOESTADO.CreadoAt = DateTime.Now;
-
-                this.Save();
-                this.Refresh();
-
-            }
-            else
-            {
-                this.ShowMessageBox("Para rebajar una solicitud debes ingresar las horas trabajadas", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-            }
+            
 
             
             
@@ -58,8 +42,14 @@ namespace LightSwitchApplication
             }
 
             // Escriba el código aquí.
+            
+
             this.HorasExtrasAprobadas.SelectedItem.Caducada = true;
-            this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada por RR.HH";
+            this.HorasExtrasAprobadas.SelectedItem.Completada = false;
+
+
+            //this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada por RR.HH";
+            this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;
@@ -76,18 +66,42 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             this.CloseModalWindow("VentanaModalHorasTrabajadas");
-            this.HORASTRABAJADAS = null;
+            //this.HORASTRABAJADAS = null;
         }
 
         partial void GuardarHorasTrabajadas_Execute()
         {
             // Escriba el código aquí.
+
             if (this.HORASTRABAJADAS > 0)
             {
                 this.HorasExtrasAprobadas.SelectedItem.HorasTrabajadas = this.HORASTRABAJADAS;
-                this.CloseModalWindow("VentanaModalHorasTrabajadas");
-                this.Save();
+
+                
+                    
+                    this.HorasExtrasAprobadas.SelectedItem.Rebajada = true;
+                    this.HorasExtrasAprobadas.SelectedItem.Completada = false;
+
+
+                    //this.HorasExtrasAprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
+                    this.HorasExtrasAprobadas.SelectedItem.Estado = "Rebajada";
+
+                    this.NUEVOESTADO = new ESTADOSItem();
+                    this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;
+                    this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                    this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                    this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                    this.CloseModalWindow("VentanaModalHorasTrabajadas");
+                    this.Save();
+                    this.Refresh();
+               
+            
             }
+            else
+            {
+                this.ShowMessageBox("Para rebajar una solicitud debes ingresar las horas trabajadas", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            } 
 
         }
 
@@ -107,6 +121,34 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             this.OpenModalWindow("VentanaModalHorasTrabajadas");
+        }
+
+        partial void RebajarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                if (this.HorasExtrasAprobadas.SelectedItem == null)
+                {
+                    result = false;
+                }
+                else { result = true; }
+            }
+            catch { }
+        }
+
+        partial void CancelarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                if (this.HorasExtrasAprobadas.SelectedItem == null)
+                {
+                    result = false;
+                }
+                else { result = true; }
+            }
+            catch { }
         }
     }
 }

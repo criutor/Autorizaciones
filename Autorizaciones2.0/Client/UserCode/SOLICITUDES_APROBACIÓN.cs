@@ -196,8 +196,11 @@ namespace LightSwitchApplication
                 if (this.PersonaPorRutAD.First().Es_GerenteGeneral == true)
                 {
                     this.SolicitudesAbiertasACargo.SelectedItem.VB_GerenteGeneral = true;
+
                     this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-                    this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Gerente General";
+
+                    //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Gerente General";
+                    this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada";
 
 
                 }
@@ -206,13 +209,14 @@ namespace LightSwitchApplication
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
                         this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
-                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Gerente";
-
+                        //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Gerente";
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada";
 
                     }
                     else if (this.PersonaPorRutAD.First().Es_SubGerente == true)
                     {
-                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Sub Gerente";
+                        //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Sub Gerente";
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "En aprobación";
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = true;
 
                         if (this.SolicitudesAbiertasACargo.SelectedItem.HorasExtras == true) //Solicitudes de horas extras ya estan aprobadas por el jefe de área.
@@ -223,12 +227,13 @@ namespace LightSwitchApplication
 
                                 //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                                 //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                
                             }
                             else
                             {
                                 // si no hay gerente
                                 this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;
+                                this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada";
                             }
                         }
                         else
@@ -238,12 +243,14 @@ namespace LightSwitchApplication
                                 if (this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto == true)
                                 {
                                     this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;//Si ya fue aprobada por el jda, entonces está completada la aprobación
+                                    this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada";
                                 }
                                 else if (this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto == null)//Si no tiene jda...
                                 {
                                     if (this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
                                     {
                                         this.SolicitudesAbiertasACargo.SelectedItem.Completada = true; //no llega hasta aqui, por que significa que no tiene 2 superiores al momento de crear la solicitud
+                                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada";
                                     }
                                     else { 
 
@@ -251,7 +258,7 @@ namespace LightSwitchApplication
 
                                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                                         //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                        this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                        
                                     }
                                 }
                             }
@@ -263,14 +270,15 @@ namespace LightSwitchApplication
                                 if (this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
                                     {
                                         this.SolicitudesAbiertasACargo.SelectedItem.Completada = true;//no llega hasta aqui, por que significa que no tiene 2 superiores al momento de crear la solicitud
-                                    }
+                                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada";    
+                                }
                                     else {
 
                                         this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = false; //Si hay gerente ***
 
                                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                                         //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                        this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                        
                                 }
                                     
                             }
@@ -281,7 +289,8 @@ namespace LightSwitchApplication
                     else if (this.PersonaPorRutAD.First().Es_JefeDirecto == true)
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;        
-                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Jefe de Área";
+                        //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Aprobada por el Jefe de Área";
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "En aprobación";
 
                         if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
                         {
@@ -292,7 +301,7 @@ namespace LightSwitchApplication
                                 //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                                 
                                 //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
-                                this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                
                             }
                             else
                             {
@@ -303,7 +312,7 @@ namespace LightSwitchApplication
                                     //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                                     
                                     //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                    this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                    
                                 }
 
                             }
@@ -318,7 +327,7 @@ namespace LightSwitchApplication
                                 //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
 
                                 //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+                                
                             }
                         }
                                       
@@ -350,30 +359,33 @@ namespace LightSwitchApplication
                     if (this.PersonaPorRutAD.First().Es_GerenteGeneral == true)
                     {
                         this.SolicitudesAbiertasACargo.SelectedItem.VB_GerenteGeneral = true;
-                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Gerente General";
+                        //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Gerente General";
+                        this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada";
                     }else
                         
                         if (this.PersonaPorRutAD.First().Es_Gerente == true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_Gerente = true;
-                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Gerente";
+                            //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Gerente";
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada";
                         }
                         else if (this.PersonaPorRutAD.First().Es_SubGerente == true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_SubGerente = true;
-                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Sub Gerente";
+                            //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Sub Gerente";
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada";
                         }
                         else if (this.PersonaPorRutAD.First().Es_JefeDirecto == true)
                         {
                             this.SolicitudesAbiertasACargo.SelectedItem.VB_JefeDirecto = true;
-                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Jefe de Área";
+                            //this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada por el Jefe de Área";
+                            this.SolicitudesAbiertasACargo.SelectedItem.Estado = "Rechazada";
                         }
 
                         //ENVIAR EMAIL AL SOLICITANTE-> sU SOLICITUD HA SIDO RECHAZADA
 
                         //this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = this.SolicitudesAbiertasACargo.SelectedItem.PersonaItem1.Email;
-                    this.SolicitudesAbiertasACargo.SelectedItem.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
-
+                    
                     this.CloseModalWindow("RechazarSolicitudMW");
 
                     this.Save();

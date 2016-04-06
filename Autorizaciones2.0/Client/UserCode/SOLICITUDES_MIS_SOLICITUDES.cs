@@ -69,7 +69,7 @@ namespace LightSwitchApplication
             }
                         
             //Mostrar todas las solicitudes por defecto (Parametros de la query)
-            this.FiltroEstados = "Todos los estados";
+            this.FiltroEstados = "Todas";
                         
             //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper(); 
             //NOMBREAD = "RUBIO FLORES, GUSTAVO";
@@ -228,35 +228,76 @@ namespace LightSwitchApplication
 
         }
 
-        partial void LimpiarFiltros_Execute()
+        partial void LimpiarFechas_Execute()
         {
-            this.FiltroEstados = null;
+
             this.FechaSolicitudDesde = null;
             this.FechaSolicitudHasta = null;
-            this.FALSAS = false;
-            this.VERDADERAS = true;
             this.SOLICITUDES.Load();
         }
 
         partial void FiltroEstados_Validate(ScreenValidationResultsBuilder results)
         {
             //Si se escoge alguna de las tres opciones de búsqueda, no aplicar los filtros FALSAS ni VERDADERAS
-            if (FiltroEstados != null) { this.FALSAS = null; this.VERDADERAS = null; } 
+            //if (FiltroEstados != null) { this.FALSAS = null; this.VERDADERAS = null; } 
             //Al cambiar la opción se cambian los filtros
-            if (FiltroEstados == "Rechazadas") { this.Rechazada = true; this.Completada = false; this.Cancelada = false; }
+            if (FiltroEstados == "Rechazada") {
+
+                this.Completada = false;
+                this.Rechazada = true;
+                this.Cancelada = false;
+                this.Caducada = false;
+                this.Rebajada = false; 
+            }
             else
-                if (FiltroEstados == "Aprobadas") { this.Completada = true; this.Rechazada = false; this.Cancelada = false; }
+                if (FiltroEstados == "Aprobada") {
+
+                    this.Completada = true;
+                    this.Rechazada = false;
+                    this.Cancelada = false;
+                    this.Caducada = false;
+                    this.Rebajada = false; 
+                }
                 else
-                    if (FiltroEstados == "Abiertas") { this.Rechazada = false; this.Completada = false; this.Cancelada = false; }
+                    if (FiltroEstados == "En aprobacion") {
+
+                        this.Completada = false;
+                        this.Rechazada = false;
+                        this.Cancelada = false;
+                        this.Caducada = false;
+                        this.Rebajada = false; 
+                    }
                     else
-                        if (FiltroEstados == "Canceladas") { this.Rechazada = false; this.Completada = false; this.Cancelada = true; }
+                        if (FiltroEstados == "Cancelada") {
+
+                            this.Completada = false;
+                            this.Rechazada = false;
+                            this.Cancelada = true;
+                            this.Caducada = false;
+                            this.Rebajada = false; 
+                        }
                         else
-                            if (FiltroEstados == "Caducadas") {  this.Caducada = true; }
+                            if (FiltroEstados == "Anulada") {
+
+                                this.Completada = false;
+                                this.Rechazada = false;
+                                this.Cancelada = false;
+                                this.Caducada = true;
+                                this.Rebajada = false; 
+                            }
                             else
-                                if (FiltroEstados == "Rebajadas") { this.Rebajada = true; }
+                                if (FiltroEstados == "Rebajada") {
+
+                                    this.Completada = false;
+                                    this.Rechazada = false;
+                                    this.Cancelada = false;
+                                    this.Caducada = false;
+                                    this.Rebajada = true; 
+                                }
                                 else
-                            if (FiltroEstados == "Todos los estados")
+                            if (FiltroEstados == "Todas")
                             {
+                                this.Cancelada = null;
 
                                 //this.FechaSolicitudDesde = null;
                                 //this.FechaSolicitudHasta = null;
@@ -266,8 +307,12 @@ namespace LightSwitchApplication
                                 this.OtroPermiso = true;
                                 this.HorasExtras = true;
                                 this.FiltroEstados = null;
-                                this.FALSAS = false;
-                                this.VERDADERAS = true;
+
+                                this.Completada = null;
+                                this.Rechazada = null;
+                                this.Cancelada = null;
+                                this.Caducada = null;
+                                this.Rebajada = null; 
                                 //this.Solicitud_Header.Load();
                             }
         }
@@ -306,7 +351,9 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO.Observaciones = this.NuevoComentarioAceptar;
 
                 this.SOLICITUDES.SelectedItem.VB_Empleado = true;
-                this.SOLICITUDES.SelectedItem.Estado = "Aceptada por el empleado";
+
+                //this.SOLICITUDES.SelectedItem.Estado = "Aceptada por el empleado";
+                this.SOLICITUDES.SelectedItem.Estado = "En aprobación";
 
                 this.CloseModalWindow("AceptarSolicitudMW");
 
@@ -329,9 +376,13 @@ namespace LightSwitchApplication
 
                 if (this.SOLICITUDES.SelectedItem.HorasExtras == true)
                 {
-                    this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el empleado";
+                    //this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el empleado";
+                    this.SOLICITUDES.SelectedItem.Estado = "Cancelada";
                 }
-                else { this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el solicitante"; }
+                else { 
+                    //this.SOLICITUDES.SelectedItem.Estado = "Cancelada por el solicitante";
+                    this.SOLICITUDES.SelectedItem.Estado = "Cancelada";
+                }
                 
                 this.SOLICITUDES.SelectedItem.Cancelada = true;
                 this.SOLICITUDES.SelectedItem.Completada = false;
@@ -347,12 +398,7 @@ namespace LightSwitchApplication
         {
             try
             {
-                if (this.SOLICITUDES.SelectedItem == null)
-                {
-                    result = false;
-                }
-
-                if (this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true)
+                if (this.SOLICITUDES.SelectedItem == null || this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true || this.SOLICITUDES.SelectedItem.Caducada == true)
                 {
                     result = false;
                 }
@@ -365,20 +411,16 @@ namespace LightSwitchApplication
         {
             try
             {
-                if (this.SOLICITUDES.SelectedItem == null)
+                if (this.SOLICITUDES.SelectedItem == null || this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true || this.SOLICITUDES.SelectedItem.Caducada == true || this.SOLICITUDES.SelectedItem.Completada == true)
                 {
                     result = false;
                 }
+                else { result = true; }
+            }
+            catch { }
 
-                if (this.SOLICITUDES.SelectedItem.Cancelada == true)
-                {
-                    result = false;
-                }
-                if (this.SOLICITUDES.SelectedItem.Rechazada == true)
-                {
-                    result = false;
-                }
-
+            try
+            {
                 if (this.SOLICITUDES.SelectedItem.HorasExtras == true && this.SOLICITUDES.SelectedItem.VB_Empleado == false)
                 {
                     result = true;

@@ -1111,10 +1111,13 @@ namespace LightSwitchApplication
         /// <param name="Rechazada">
         /// No hay ninguna descripción modelada
         /// </param>
-        /// <param name="Falso">
+        /// <param name="Cancelada">
         /// No hay ninguna descripción modelada
         /// </param>
-        /// <param name="Verdadero">
+        /// <param name="Rebajada">
+        /// No hay ninguna descripción modelada
+        /// </param>
+        /// <param name="Caducada">
         /// No hay ninguna descripción modelada
         /// </param>
         /// <param name="Administrativo">
@@ -1129,18 +1132,9 @@ namespace LightSwitchApplication
         /// <param name="Vacaciones">
         /// No hay ninguna descripción modelada
         /// </param>
-        /// <param name="Cancelada">
-        /// No hay ninguna descripción modelada
-        /// </param>
-        /// <param name="Rebajada">
-        /// No hay ninguna descripción modelada
-        /// </param>
-        /// <param name="Caducada">
-        /// No hay ninguna descripción modelada
-        /// </param>
-        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesConFiltro(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Falso, global::System.Nullable<bool> Verdadero, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, global::System.Nullable<bool> Cancelada, global::System.Nullable<bool> Rebajada, global::System.Nullable<bool> Caducada)
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SOLICITUDESItem> SolicitudesConFiltro(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Cancelada, global::System.Nullable<bool> Rebajada, global::System.Nullable<bool> Caducada, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones)
         {
-            return this.Details.Methods.SolicitudesConFiltro.CreateInvocation(FechaSolicitudDesde, FechaSolicitudHasta, Completada, Rechazada, Falso, Verdadero, Administrativo, HorasExtras, OtroPermiso, Vacaciones, Cancelada, Rebajada, Caducada).Execute();
+            return this.Details.Methods.SolicitudesConFiltro.CreateInvocation(FechaSolicitudDesde, FechaSolicitudHasta, Completada, Rechazada, Cancelada, Rebajada, Caducada, Administrativo, HorasExtras, OtroPermiso, Vacaciones).Execute();
         }
         
         /// <summary>

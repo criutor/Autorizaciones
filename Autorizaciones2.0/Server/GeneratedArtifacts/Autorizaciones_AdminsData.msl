@@ -25,6 +25,7 @@
           <ScalarProperty Name="AreaDeTrabajo" ColumnName="AreaDeTrabajo" />
           <ScalarProperty Name="Rut_Persona_ConCeros" ColumnName="Rut_Persona_ConCeros" />
           <ScalarProperty Name="SaldoVacaciones" ColumnName="SaldoVacaciones" />
+          <ScalarProperty Name="SaldoVacaciones2" ColumnName="SaldoVacaciones2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

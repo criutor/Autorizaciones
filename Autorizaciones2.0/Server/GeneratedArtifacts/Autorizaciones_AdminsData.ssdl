@@ -138,6 +138,7 @@
     <Property Name="AreaDeTrabajo" Type="nvarchar" MaxLength="50" />
     <Property Name="Rut_Persona_ConCeros" Type="nvarchar" MaxLength="12" />
     <Property Name="SaldoVacaciones" Type="float" />
+    <Property Name="SaldoVacaciones2" Type="float" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
     <Property Name="CargoRolPrivado_fk" Type="int" />
@@ -174,7 +175,7 @@
     </Key>
     <Property Name="Id_Area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="JefeDeArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="JefeDeArea" Type="nvarchar" MaxLength="100" />
     <Property Name="Gerencia_fk" Type="int" />
     <Property Name="SubGerencia_fk" Type="int" />
   </EntityType>
@@ -184,7 +185,7 @@
     </Key>
     <Property Name="Id_Gerencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Gerente" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gerente" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="Division_SubGerenciaItem">
     <Key>
@@ -192,7 +193,7 @@
     </Key>
     <Property Name="Id_SubGerencia" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="SubGerente" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubGerente" Type="nvarchar" MaxLength="100" />
     <Property Name="Gerencia_fk" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Solicitud_Detalle_AdministrativoItem">

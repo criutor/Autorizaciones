@@ -125,6 +125,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("SaldoVacaciones");
         }
         
+        partial void OnSaldoVacaciones2Changed()
+        {
+            this.___OnPropertyChanged("SaldoVacaciones2");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get

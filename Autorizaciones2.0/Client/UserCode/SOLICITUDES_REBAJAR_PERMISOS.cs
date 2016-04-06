@@ -23,9 +23,12 @@ namespace LightSwitchApplication
 
             //enviar Vacaciones a fin700 *****!!!!
 
-
             this.PermisosAprobados.SelectedItem.Rebajada = true;
-            this.PermisosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
+            this.PermisosAprobados.SelectedItem.Completada = false;
+
+
+            //this.PermisosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
+            this.PermisosAprobados.SelectedItem.Estado = "Rebajada";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
@@ -49,8 +52,13 @@ namespace LightSwitchApplication
             }
 
             // Escriba el código aquí.
+            
+
             this.PermisosAprobados.SelectedItem.Caducada = true;
-            this.PermisosAprobados.SelectedItem.Estado = "Anulada por RR.HH";
+            this.PermisosAprobados.SelectedItem.Completada = false;
+
+            //this.PermisosAprobados.SelectedItem.Estado = "Anulada por RR.HH";
+            this.PermisosAprobados.SelectedItem.Estado = "Anulada";
 
             this.NUEVOESTADO = new ESTADOSItem();
             this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
@@ -60,6 +68,34 @@ namespace LightSwitchApplication
 
             this.Save();
             this.Refresh();
+        }
+
+        partial void RebajarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                if (this.PermisosAprobados.SelectedItem == null)
+                {
+                    result = false;
+                }
+                else { result = true; }
+            }
+            catch { }
+        }
+
+        partial void CancelarSolicitud_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                if (this.PermisosAprobados.SelectedItem == null)
+                {
+                    result = false;
+                }
+                else { result = true; }
+            }
+            catch { }
         }
     }
 }

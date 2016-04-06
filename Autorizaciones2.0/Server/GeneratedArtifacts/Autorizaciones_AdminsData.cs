@@ -3109,6 +3109,30 @@ namespace Autorizaciones_AdminsData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Double> SaldoVacaciones2
+        {
+            get
+            {
+                return _SaldoVacaciones2;
+            }
+            set
+            {
+                OnSaldoVacaciones2Changing(value);
+                ReportPropertyChanging("SaldoVacaciones2");
+                _SaldoVacaciones2 = value;
+                ReportPropertyChanged("SaldoVacaciones2");
+                OnSaldoVacaciones2Changed();
+            }
+        }
+        private Nullable<global::System.Double> _SaldoVacaciones2;
+        partial void OnSaldoVacaciones2Changing(Nullable<global::System.Double> value);
+        partial void OnSaldoVacaciones2Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> Convenio_fk
         {
             get
