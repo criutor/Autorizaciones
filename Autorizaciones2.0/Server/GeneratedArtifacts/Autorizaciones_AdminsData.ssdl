@@ -400,6 +400,9 @@
     <Property Name="CodigoEstado" Type="int" />
     <Property Name="EmailProximoDestinatario" Type="nvarchar" MaxLength="50" />
     <Property Name="VB_GerenteGeneral" Type="bit" />
+    <Property Name="ConDescuento2" Type="nchar" MaxLength="10" />
+    <Property Name="Colacion2" Type="nchar" MaxLength="10" />
+    <Property Name="Taxi2" Type="nchar" MaxLength="10" />
     <Property Name="RutPersona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">

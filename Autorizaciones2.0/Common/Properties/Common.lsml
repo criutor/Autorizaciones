@@ -4055,22 +4055,6 @@
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
     </QueryOperation>
-    <QueryOperation
-      Name="Query1"
-      ReturnType="Superior_JefeDirectoItem*">
-      <QueryOperation.FilterExpression>
-        <QueryFilterExpressionTree />
-      </QueryOperation.FilterExpression>
-      <QueryOperation.Source>
-        <QuerySourceExpressionTree>
-          <MemberExpression
-            Member="Superior_JefeDirecto" />
-        </QuerySourceExpressionTree>
-      </QueryOperation.Source>
-      <QueryOperationParameter
-        Name="Id_Area"
-        ParameterType=":Int32?" />
-    </QueryOperation>
     <EntitySet
       CanDelete="True"
       CanInsert="True"
@@ -8198,6 +8182,33 @@
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ConDescuento2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Colacion2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Taxi2"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>

@@ -6767,6 +6767,78 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ConDescuento2
+        {
+            get
+            {
+                return _ConDescuento2;
+            }
+            set
+            {
+                OnConDescuento2Changing(value);
+                ReportPropertyChanging("ConDescuento2");
+                _ConDescuento2 = value;
+                ReportPropertyChanged("ConDescuento2");
+                OnConDescuento2Changed();
+            }
+        }
+        private global::System.String _ConDescuento2;
+        partial void OnConDescuento2Changing(global::System.String value);
+        partial void OnConDescuento2Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Colacion2
+        {
+            get
+            {
+                return _Colacion2;
+            }
+            set
+            {
+                OnColacion2Changing(value);
+                ReportPropertyChanging("Colacion2");
+                _Colacion2 = value;
+                ReportPropertyChanged("Colacion2");
+                OnColacion2Changed();
+            }
+        }
+        private global::System.String _Colacion2;
+        partial void OnColacion2Changing(global::System.String value);
+        partial void OnColacion2Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Taxi2
+        {
+            get
+            {
+                return _Taxi2;
+            }
+            set
+            {
+                OnTaxi2Changing(value);
+                ReportPropertyChanging("Taxi2");
+                _Taxi2 = value;
+                ReportPropertyChanged("Taxi2");
+                OnTaxi2Changed();
+            }
+        }
+        private global::System.String _Taxi2;
+        partial void OnTaxi2Changing(global::System.String value);
+        partial void OnTaxi2Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String RutPersona_fk

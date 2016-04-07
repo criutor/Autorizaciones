@@ -325,6 +325,9 @@
     <Property Name="CodigoEstado" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="EmailProximoDestinatario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="VB_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="ConDescuento2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Colacion2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Taxi2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />

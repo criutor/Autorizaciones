@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 06/04/2016 15:17:12
+// Fecha de generación: 06/04/2016 23:32:07
 namespace LightSwitchApplication.Implementation
 {
     
@@ -7312,6 +7312,84 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<bool> _VB_GerenteGeneral;
         partial void OnVB_GerenteGeneralChanging(global::System.Nullable<bool> value);
         partial void OnVB_GerenteGeneralChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad ConDescuento2 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ConDescuento2
+        {
+            get
+            {
+                return this._ConDescuento2;
+            }
+            set
+            {
+                this.OnConDescuento2Changing(value);
+                if (object.Equals(this.ConDescuento2, value))
+                {
+                    return;
+                }
+                this._ConDescuento2 = value;
+                this.OnConDescuento2Changed();
+                this.OnPropertyChanged("ConDescuento2");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ConDescuento2;
+        partial void OnConDescuento2Changing(string value);
+        partial void OnConDescuento2Changed();
+        /// <summary>
+        /// No hay comentarios para la propiedad Colacion2 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Colacion2
+        {
+            get
+            {
+                return this._Colacion2;
+            }
+            set
+            {
+                this.OnColacion2Changing(value);
+                if (object.Equals(this.Colacion2, value))
+                {
+                    return;
+                }
+                this._Colacion2 = value;
+                this.OnColacion2Changed();
+                this.OnPropertyChanged("Colacion2");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Colacion2;
+        partial void OnColacion2Changing(string value);
+        partial void OnColacion2Changed();
+        /// <summary>
+        /// No hay comentarios para la propiedad Taxi2 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Taxi2
+        {
+            get
+            {
+                return this._Taxi2;
+            }
+            set
+            {
+                this.OnTaxi2Changing(value);
+                if (object.Equals(this.Taxi2, value))
+                {
+                    return;
+                }
+                this._Taxi2 = value;
+                this.OnTaxi2Changed();
+                this.OnPropertyChanged("Taxi2");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Taxi2;
+        partial void OnTaxi2Changing(string value);
+        partial void OnTaxi2Changed();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

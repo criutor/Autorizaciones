@@ -22,6 +22,8 @@ namespace LightSwitchApplication
         partial void PERSONAL_CREAR_ROL_PRIVADO_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             // Escriba el código aquí.
+            this.CerrarPantallaSWITCH = true;
+
             this.PersonaItemProperty = new PersonaItem();
             
             this.PersonaItemProperty.SaldoDiasAdmins = 3.0;
@@ -117,8 +119,6 @@ namespace LightSwitchApplication
 
                 InvocarEmailAD = true;
             }
-
-
         }
 
         partial void InvocarEmailAD_Validate(ScreenValidationResultsBuilder results)
@@ -165,6 +165,7 @@ namespace LightSwitchApplication
             // results.AddPropertyError("<Mensaje de error>");
             try
             {
+                /*
                 if (this.Gerencia == null)
                 {
                     this.FindControl("ES_GERENTE").IsEnabled = false;
@@ -174,7 +175,7 @@ namespace LightSwitchApplication
                 {
                     this.FindControl("ES_GERENTE").IsEnabled = true;
                 }
-
+                */
 
                 this.IDGERENCIA = this.Gerencia.Id_Gerencia;
                 this.IDSUBGERENCIA = null;
@@ -189,6 +190,7 @@ namespace LightSwitchApplication
             // results.AddPropertyError("<Mensaje de error>");
             try
             {
+                /*
                 if (this.Subgerencia == null)
                 {
                     this.FindControl("ES_SUBGERENTE").IsEnabled = false;
@@ -199,10 +201,10 @@ namespace LightSwitchApplication
                     this.FindControl("ES_SUBGERENTE").IsEnabled = true;
 
                 }
-
+                */
 
                 this.IDSUBGERENCIA = this.Subgerencia.Id_SubGerencia;
-                this.Area = null;
+                //this.Area = null;
             }
             catch { }
         }
@@ -212,6 +214,7 @@ namespace LightSwitchApplication
             // results.AddPropertyError("<Mensaje de error>");
             try
             {
+                /*
                 if (this.Area == null)
                 {
                     this.FindControl("ES_JEFE_DE_AREA").IsEnabled = false;
@@ -222,12 +225,13 @@ namespace LightSwitchApplication
                     this.FindControl("ES_JEFE_DE_AREA").IsEnabled = true;
 
                 }
-
+                */
                 this.PersonaItemProperty.Division_AreaItem = this.Area;
             }
             catch { }
         }
 
+        /*
         partial void ES_GERENTE_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
@@ -238,13 +242,13 @@ namespace LightSwitchApplication
                 
                 if (this.Gerencia.Superior_Gerente.Count() > 0 && this.ES_GERENTE == true)
                 {
-                    if (this.Gerencia.Superior_Gerente.First().PersonaItem1.Rut_Persona != this.PersonaItemProperty.Rut_Persona )
+                   if (this.Gerencia.Superior_Gerente.First().PersonaItem1.Rut_Persona != this.PersonaItemProperty.Rut_Persona )
                     {
                         results.AddPropertyError("Esta gerencia ya tiene un gerente");
                     }
                 }
                 else
-                    /*
+                    
                     if (this.ES_GERENTE == true)
                     {
                         this.FindControl("ES_SUBGERENTE").IsEnabled = false;
@@ -254,7 +258,7 @@ namespace LightSwitchApplication
                     {
                         this.FindControl("ES_SUBGERENTE").IsEnabled = true;
                     }
-                    */
+                    
                     if (this.ES_GERENTE == false && this.ES_SUBGERENTE == false)
                     {
                         results.AddPropertyError("Debes marcar por lo menos una casilla");
@@ -277,7 +281,9 @@ namespace LightSwitchApplication
             catch { }
 
         }
-
+        */
+        
+        /*
         partial void ES_SUBGERENTE_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
@@ -294,7 +300,7 @@ namespace LightSwitchApplication
                 }
                 else
                 {
-                    /*
+                    
                     if (this.ES_SUBGERENTE == true )
                     {
                         this.FindControl("ES_GERENTE").IsEnabled = false;
@@ -304,7 +310,7 @@ namespace LightSwitchApplication
                     {
                         this.FindControl("ES_GERENTE").IsEnabled = true;
                     }
-                    */
+                    
                     if (this.ES_GERENTE == false && this.ES_SUBGERENTE == false)
                     {
                         results.AddPropertyError("Debes marcar por lo menos una casilla");
@@ -325,7 +331,9 @@ namespace LightSwitchApplication
             }
             catch { }
         }
+        */
 
+        /*
         partial void ES_JEFE_DE_AREA_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
@@ -339,6 +347,7 @@ namespace LightSwitchApplication
                 results.AddPropertyError("No puedes marcar más una casilla");
             }
         }
+        */
 
         partial void PERSONAL_CREAR_ROL_PRIVADO_Saving(ref bool handled)
         {
@@ -417,7 +426,14 @@ namespace LightSwitchApplication
         partial void PERSONAL_CREAR_ROL_PRIVADO_Saved()
         {
             // Escriba el código aquí.
-            this.Close(false);
+            if (this.CerrarPantallaSWITCH == true)
+            {
+                this.Close(true);
+            }
+            else
+            {
+                this.CerrarPantallaSWITCH = true;
+            }
         }
 
 
@@ -503,5 +519,191 @@ namespace LightSwitchApplication
 
         }
         */
+
+        partial void SeleccionarComoGerente_Execute()
+        {
+            // Escriba el código aquí.
+
+            if (this.Gerencia.Superior_Gerente.Count() == 0)
+            {
+
+                this.PersonaItemProperty.Cargo = "GERENTE DE " + this.Gerencia.Nombre;
+
+                Superior_GerenteItem gerente = new Superior_GerenteItem();
+                gerente.PersonaItem1 = this.PersonaItemProperty;
+                gerente.Division_GerenciaItem = this.Gerencia;
+                this.PersonaItemProperty.Es_Gerente = true;
+                this.PersonaItemProperty.Division_AreaItem = null;
+                this.PersonaItemProperty.EsRolPrivado = true;
+                this.PersonaItemProperty.AreaDeTrabajo = this.Gerencia.Nombre;
+
+                //this.Gerencia.Gerente = this.PersonaItemProperty.AP_Paterno.ToUpper() + " " + this.PersonaItemProperty.AP_Materno.ToUpper() + ", " + this.PersonaItemProperty.Nombres.ToUpper();
+                this.Gerencia.Gerente = this.PersonaItemProperty.NombreAD;
+                if (this.Gerencia.Nombre == "GERENCIA GENERAL") { this.PersonaItemProperty.Es_GerenteGeneral = true; }
+
+                this.CerrarPantallaSWITCH = false;
+
+                this.Save();
+
+                this.ShowMessageBox("Cargo de gerente asignado con exito");
+            }
+            else
+            {
+                this.ShowMessageBox(this.Gerencia.Superior_Gerente.First().PersonaItem1.NombreAD + " es el actual gerente.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+        }
+
+        partial void SeleccionarComoSubgerente_Execute()
+        {
+            // Escriba el código aquí.
+            if (this.Subgerencia.Superior_SubGerente.Count() == 0)
+            {
+                this.PersonaItemProperty.Cargo = "SUBGERENTE DE " + this.Subgerencia.Nombre;
+
+                Superior_SubGerenteItem Subgerente = new Superior_SubGerenteItem();
+                Subgerente.PersonaItem1 = this.PersonaItemProperty;
+                Subgerente.Division_SubGerenciaItem = this.Subgerencia;
+                this.PersonaItemProperty.Es_SubGerente = true;
+                this.PersonaItemProperty.EsRolPrivado = true;
+                this.PersonaItemProperty.IDGerencia_para_subgerentes = this.Subgerencia.Division_GerenciaItem.Id_Gerencia;
+                //IDGerencia_para_subgerentes es utilizado en el Query de Solicitud_Header en la pantalla "Master_SolicitudesPendientes",...
+                //...ya que los subgerentes no pertenecen a ninguna area, si no se guardara el id de la subgerencia, ...
+                //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
+                this.PersonaItemProperty.Division_AreaItem = null;
+                this.PersonaItemProperty.AreaDeTrabajo = this.Subgerencia.Nombre;
+
+                //this.Subgerencia.SubGerente = this.PersonaItemProperty.AP_Paterno.ToUpper() + " " + this.PersonaItemProperty.AP_Materno.ToUpper() + ", " + this.PersonaItemProperty.Nombres.ToUpper();
+                this.Subgerencia.SubGerente = this.PersonaItemProperty.NombreAD;
+
+                this.CerrarPantallaSWITCH = false;
+
+                this.Save();
+
+                this.ShowMessageBox("Cargo de subgerente asignado con exito");
+            }
+            else
+            {
+                this.ShowMessageBox(this.Subgerencia.Superior_SubGerente.First().PersonaItem1.NombreAD + " es el actual subgerente.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+        }
+
+         
+        partial void SeleccionarComoGerente_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.CanSave == true)
+            {
+                if (this.Gerencia == null)
+                {
+                    result = false;
+                }
+
+                if (this.PersonaItemProperty.Superior_Gerente.Count() > 0)
+                {
+                    result = false;
+                }
+
+                if (this.PersonaItemProperty.Superior_SubGerente.Count() > 0)
+                {
+                    result = false;
+                }
+            }
+            else { result = false; }
+        }
+
+        partial void SeleccionarComoSubgerente_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.CanSave == true)
+            {
+
+                if (this.Subgerencia == null)
+                {
+                    result = false;
+                }
+
+                if (this.PersonaItemProperty.Superior_SubGerente.Count() > 0)
+                {
+                    result = false;
+
+                }
+
+                if (this.PersonaItemProperty.Superior_Gerente.Count() > 0)
+                {
+                    result = false;
+                }
+            }
+            else { result = false; }
+        }
+
+        partial void QuitarCargo_Execute()
+        {
+            // Escriba el código aquí.
+            if (this.PersonaItemProperty.Es_Gerente == true)
+            {
+                if (this.PersonaItemProperty.Superior_Gerente.First().Division_GerenciaItem.Nombre == "GERENCIA GENERAL")
+                {
+                    this.PersonaItemProperty.Es_GerenteGeneral = false;
+                }
+
+                this.PersonaItemProperty.Es_Gerente = false;
+
+                this.PersonaItemProperty.Cargo = null;
+
+                this.PersonaItemProperty.Superior_Gerente.First().Division_GerenciaItem.Gerente = null;
+
+                this.PersonaItemProperty.Superior_Gerente.First().Delete();
+
+                this.CerrarPantallaSWITCH = false;
+
+                this.Save();
+
+                this.ShowMessageBox("Cargo de gerente eliminado con exito");
+
+            }
+            else
+                if (this.PersonaItemProperty.Es_SubGerente == true)
+                {
+                    this.PersonaItemProperty.Es_SubGerente = false;
+
+                    this.PersonaItemProperty.Cargo = null;
+
+                    this.PersonaItemProperty.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
+
+                    this.PersonaItemProperty.Superior_SubGerente.First().Delete();
+
+                    this.CerrarPantallaSWITCH = false;
+
+                    this.Save();
+
+                    this.ShowMessageBox("Cargo de subgerente eliminado con exito");
+
+                }
+                else
+                    if (this.PersonaItemProperty.Es_JefeDirecto == true)
+                    {
+                        this.PersonaItemProperty.Es_JefeDirecto = false;
+
+                        this.PersonaItemProperty.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
+
+                        this.PersonaItemProperty.Superior_JefeDirecto.First().Delete();
+
+                        this.CerrarPantallaSWITCH = false;
+
+                        this.Save();
+
+                        this.ShowMessageBox("Cargo de jefe de área eliminado con exito");
+                    }
+
+        }
+
+        partial void QuitarCargo_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.PersonaItemProperty.Es_Gerente != true && this.PersonaItemProperty.Es_SubGerente != true && this.PersonaItemProperty.Es_JefeDirecto != true)
+            {
+                result = false;
+            }
+        }
     }
 }

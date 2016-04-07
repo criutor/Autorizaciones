@@ -1908,6 +1908,24 @@
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[VB_GerenteGeneral]"
           Type="bit" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="ConDescuento2"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuento2]"
+          Type="nchar" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Colacion2"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Colacion2]"
+          Type="nchar" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="Taxi2"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Taxi2]"
+          Type="nchar" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

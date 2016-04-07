@@ -187,6 +187,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UserCode\PROCESOS_PERIODICOS.cs" />
+    <Compile Include="UserCode\SOLICITUDES_HISTORICO_ROLPRIVADO.cs" />
+    <Compile Include="UserCode\SOLICITUDES_HISTORICO_RRHH.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_ADMINISTRATIVOS.cs" />
     <Compile Include="UserCode\SOLICITUDES_DETALLES.cs" />
     <Compile Include="UserCode\SOLICITUDES_A_CARGO.cs" />

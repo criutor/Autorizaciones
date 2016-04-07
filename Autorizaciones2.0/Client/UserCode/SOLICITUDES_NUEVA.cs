@@ -581,6 +581,24 @@ namespace LightSwitchApplication
 
             if (TIPOSOLICITUD == 3)// si la solicitud es del tipo horas extras
             {
+                if (this.SOLICITUD.Taxi == true)
+                {
+                    this.SOLICITUD.Taxi2 = "Sí";
+                }
+                else
+                {
+                    this.SOLICITUD.Taxi2 = "No";
+                }
+
+                if (this.SOLICITUD.Colacion == true)
+                {
+                    this.SOLICITUD.Colacion2 = "Sí";
+                }
+                else
+                {
+                    this.SOLICITUD.Colacion2 = "No";
+                }
+
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
                 this.SOLICITUD.Colacion = this.COLACION;
                 this.SOLICITUD.Taxi = this.TAXI;
@@ -616,6 +634,15 @@ namespace LightSwitchApplication
 
             if (TIPOSOLICITUD == 4)// si la solicitud es del tipo otro permiso
             {
+                if (this.SOLICITUD.ConDescuento == true)
+                {
+                    this.SOLICITUD.ConDescuento2 = "Sí";
+                }
+                else
+                {
+                    this.SOLICITUD.ConDescuento2 = "No";
+                }
+
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
 
                 //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
@@ -796,7 +823,7 @@ namespace LightSwitchApplication
                     if (this.SOLICITUD.Prestamo == null)
                     {
                         //Si la casilla es verdadera, el campo debe tener algún valor
-                        results.AddPropertyError("El préstamo a solicitar no puede ser vacio"); 
+                        results.AddPropertyError("El préstamo a solicitar no puede ser vacío"); 
                     }
                 }
                 catch { }

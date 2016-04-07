@@ -2301,6 +2301,21 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("VB_GerenteGeneral");
         }
         
+        partial void OnConDescuento2Changed()
+        {
+            this.___OnPropertyChanged("ConDescuento2");
+        }
+        
+        partial void OnColacion2Changed()
+        {
+            this.___OnPropertyChanged("Colacion2");
+        }
+        
+        partial void OnTaxi2Changed()
+        {
+            this.___OnPropertyChanged("Taxi2");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS
         {
             get

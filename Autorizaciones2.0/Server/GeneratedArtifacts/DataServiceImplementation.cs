@@ -136,13 +136,6 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.Superior_JefeDirectoItem> Query1(global::System.Nullable<int> Id_Area)
-        {
-            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.Superior_JefeDirectoItem> query;
-            query = this.GetQuery<global::Autorizaciones_AdminsData.Implementation.Superior_JefeDirectoItem>("Superior_JefeDirecto");
-            return query;
-        }
-    
     #endregion
 
     #region Protected Methods

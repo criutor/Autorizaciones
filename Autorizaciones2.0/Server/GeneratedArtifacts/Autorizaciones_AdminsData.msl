@@ -306,6 +306,9 @@
           <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
           <ScalarProperty Name="EmailProximoDestinatario" ColumnName="EmailProximoDestinatario" />
           <ScalarProperty Name="VB_GerenteGeneral" ColumnName="VB_GerenteGeneral" />
+          <ScalarProperty Name="ConDescuento2" ColumnName="ConDescuento2" />
+          <ScalarProperty Name="Colacion2" ColumnName="Colacion2" />
+          <ScalarProperty Name="Taxi2" ColumnName="Taxi2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
