@@ -28,7 +28,7 @@ namespace LightSwitchApplication
             
             this.PersonaItemProperty.SaldoDiasAdmins = 3.0;
             //***this.PersonaItemProperty.SaldoVacaciones = 15;
-            this.PersonaItemProperty.SaldoVacaciones2 = 15;
+            this.PersonaItemProperty.SaldoVacaciones2 = 0;
             //this.PersonaItemProperty.VacacionesSaldo = 15;
             this.PersonaItemProperty.Es_Gerente = false;
             this.PersonaItemProperty.Es_JefeDirecto = false;
@@ -58,15 +58,23 @@ namespace LightSwitchApplication
             */
             try
             {
-                this.PersonaItemProperty.Rut_Persona = this.RUN + '-' + this.Dig_Verificador;
-            }
-            catch { }
+            
+            this.PersonaItemProperty.Rut_Persona = this.RUN + '-' + this.Dig_Verificador;
 
             //this.PersonaItemProperty.Rut_Persona = this.RUN + '-' + this.Dig_Verificador;
             this.PersonaItemProperty.Email = this.Email;
-            this.PersonaItemProperty.Nombres = this.Nombres;
-            this.PersonaItemProperty.AP_Materno = this.ApellidoMaterno;
-            this.PersonaItemProperty.AP_Paterno = this.ApellidoPaterno;
+            this.PersonaItemProperty.Nombres = this.Nombres.ToUpper();
+            this.PersonaItemProperty.AP_Materno = this.ApellidoMaterno.ToUpper();
+            this.PersonaItemProperty.AP_Paterno = this.ApellidoPaterno.ToUpper();
+
+            string[] porPalabrasNombre = PersonaItemProperty.Nombres.Split(new Char[] { ' ' });
+            string[] porPalabrasAPP = PersonaItemProperty.AP_Paterno.Split(new Char[] { ' ' });
+            string[] porPalabrasAPM = PersonaItemProperty.AP_Materno.Split(new Char[] { ' ' });
+            
+            this.PersonaItemProperty.NombreAD = porPalabrasAPP[0].ToUpper() + " " + porPalabrasAPM[0].ToUpper() + ", " + porPalabrasNombre[0].ToUpper();
+
+            }
+            catch { }
 
         }
 
@@ -134,22 +142,24 @@ namespace LightSwitchApplication
         partial void Dig_Verificador_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                string rutAux = this.RUN;//control que contenga rut
+                int suma = 0;
+                try
+                {
+                    for (int x = rutAux.Length - 1; x >= 0; x--)
+                        suma += int.Parse(char.IsDigit(rutAux[x]) ? rutAux[x].ToString() : "0") * (((rutAux.Length - (x + 1)) % 6) + 2);
+                }
+                catch { }
+                int numericDigito = (11 - suma % 11);
+                string digito = numericDigito == 11 ? "0" : numericDigito == 10 ? "K" : numericDigito.ToString();
+                string Dig = digito;
+                Regex expresion = new Regex("^([0-9]+-[0-9K])$");
+                string dv = this.Dig_Verificador.ToUpper();//control que contenga DV
+            
 
-            string rutAux = this.RUN;//control que contenga rut
-            int suma = 0;
-            try
-            {
-                for (int x = rutAux.Length - 1; x >= 0; x--)
-                    suma += int.Parse(char.IsDigit(rutAux[x]) ? rutAux[x].ToString() : "0") * (((rutAux.Length - (x + 1)) % 6) + 2);
-            }
-            catch { }
-            int numericDigito = (11 - suma % 11);
-            string digito = numericDigito == 11 ? "0" : numericDigito == 10 ? "K" : numericDigito.ToString();
-            string Dig = digito;
-            Regex expresion = new Regex("^([0-9]+-[0-9K])$");
-            string dv = this.Dig_Verificador;//control que contenga DV
-            try
-            {
+            
                 if (!expresion.IsMatch(rutAux) && dv != Dig)
                 {
                     results.AddPropertyError("Run invalido");
@@ -351,15 +361,11 @@ namespace LightSwitchApplication
 
         partial void PERSONAL_CREAR_ROL_PRIVADO_Saving(ref bool handled)
         {
-            // Escriba el código aquí.
-            
-            //this.PersonaItemProperty.Rut_Persona = this.RUN + '-' + this.Dig_Verificador;
             if (this.ES_GERENTE == true)
             {
                 this.PersonaItemProperty.Cargo = "GERENTE DE " + this.Gerencia.Nombre;
             }
-
-            if (this.ES_SUBGERENTE == true)
+            else if (this.ES_SUBGERENTE == true)
             {
                 this.PersonaItemProperty.Cargo = "SUBGERENTE DE " + this.Subgerencia.Nombre;
             }
@@ -539,6 +545,7 @@ namespace LightSwitchApplication
 
                 //this.Gerencia.Gerente = this.PersonaItemProperty.AP_Paterno.ToUpper() + " " + this.PersonaItemProperty.AP_Materno.ToUpper() + ", " + this.PersonaItemProperty.Nombres.ToUpper();
                 this.Gerencia.Gerente = this.PersonaItemProperty.NombreAD;
+                
                 if (this.Gerencia.Nombre == "GERENCIA GENERAL") { this.PersonaItemProperty.Es_GerenteGeneral = true; }
 
                 this.CerrarPantallaSWITCH = false;

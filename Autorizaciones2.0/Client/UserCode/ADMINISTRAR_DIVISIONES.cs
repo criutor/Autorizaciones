@@ -89,6 +89,8 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().PersonaItem1.Es_SubGerente = false;
 
+            this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().PersonaItem1.IDGerencia_para_subgerentes = null;
+
             this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().Delete();
 
             this.Division_SubGerencia.SelectedItem.SubGerente = null;
@@ -182,7 +184,7 @@ namespace LightSwitchApplication
             else{
 
             Division_AreaItem NuevaArea = new Division_AreaItem();
-            NuevaArea.Nombre = NombreDivision;
+            NuevaArea.Nombre = NombreDivision.ToUpper();
             NuevaArea.Division_GerenciaItem = Division_Gerencia.SelectedItem;
             
             NuevaArea.Division_SubGerenciaItem = this.SubgerenciaCampo;
@@ -210,7 +212,7 @@ namespace LightSwitchApplication
             else
             {
                 Division_GerenciaItem NuevaGerencia = new Division_GerenciaItem();
-                NuevaGerencia.Nombre = NombreDivision;
+                NuevaGerencia.Nombre = NombreDivision.ToUpper();
                 this.CloseModalWindow("NuevaGerencia");
                 this.NombreDivision = null;
                 this.Save();
@@ -224,7 +226,7 @@ namespace LightSwitchApplication
             else
             {
                 Division_SubGerenciaItem NuevaSubgerencia = new Division_SubGerenciaItem();
-                NuevaSubgerencia.Nombre = NombreDivision;
+                NuevaSubgerencia.Nombre = NombreDivision.ToUpper();
                 NuevaSubgerencia.Division_GerenciaItem = this.Division_Gerencia.SelectedItem;
                 this.CloseModalWindow("NuevaSubgerencia");
                 this.NombreDivision = null;

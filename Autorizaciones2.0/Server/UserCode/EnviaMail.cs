@@ -10,8 +10,11 @@ namespace LightSwitchApplication.UserCode
     public class EnviaMail
     {
         String SMTPServer = "mail.planvital.cl";
-        String SMTPUserId = "documentos.super@planvital.cl";
-        String SMTPPassword = "documentossuper15";
+        //String SMTPUserId = "documentos.super@planvital.cl";
+        //String SMTPPassword = "documentossuper15";
+        String SMTPUserId = "autorizaciones.administrativas@planvital.cl";
+        //El login es autorizaciones.admin
+        String SMTPPassword = "Planvital2016";
         int SMTPPort = 25;
 
         public void Mail(String sendFrom,

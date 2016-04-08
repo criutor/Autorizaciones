@@ -292,78 +292,78 @@ namespace LightSwitchApplication
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_CanRun(ref bool result);
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_Run(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_VACACIONES. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_VACACIONES_NRP. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_REBAJAR_VACACIONES()
+        public void ShowSOLICITUDES_REBAJAR_VACACIONES_NRP()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_VACACIONES);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_VACACIONES_NRP);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanRun(ref bool result);
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Run(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS()
+        public void ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_CanRun(ref bool result);
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Run(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_HORASEXTRAS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_REBAJAR_HORASEXTRAS()
+        public void ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_HORASEXTRAS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_CanRun(ref bool result);
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_Run(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_PERMISOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_PERMISOS_NRP. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowSOLICITUDES_REBAJAR_PERMISOS()
+        public void ShowSOLICITUDES_REBAJAR_PERMISOS_NRP()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_PERMISOS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_PERMISOS_NRP);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_CanRun(ref bool result);
+        partial void PROCESOS_PERIODICOS_RRHH_CanRun(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_Run(ref bool handled);
+        partial void PROCESOS_PERIODICOS_RRHH_Run(ref bool handled);
     
         /// <summary>
-        /// Abre la pantalla ShowPROCESOS_PERIODICOS. Si la pantalla ya está abierta, se activa y se muestra.
+        /// Abre la pantalla ShowPROCESOS_PERIODICOS_RRHH. Si la pantalla ya está abierta, se activa y se muestra.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ShowPROCESOS_PERIODICOS()
+        public void ShowPROCESOS_PERIODICOS_RRHH()
         {
-            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPROCESOS_PERIODICOS);
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPROCESOS_PERIODICOS_RRHH);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -379,6 +379,66 @@ namespace LightSwitchApplication
         public void ShowSOLICITUDES_HISTORICO_ROLPRIVADO()
         {
             ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_HISTORICO_ROLPRIVADO);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowPROCESOS_PERIODICOS_ROLPRIVADO. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowPROCESOS_PERIODICOS_ROLPRIVADO()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPROCESOS_PERIODICOS_ROLPRIVADO);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_REBAJAR_VACACIONES_RP. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_REBAJAR_VACACIONES_RP()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_REBAJAR_VACACIONES_RP);
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -474,18 +534,26 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.PERSONAL_DETALLES.CreateInstance((string)args[0]);
                     case "PERSONAL_LISTAR_NOROLPRIVADO":
                         return global::LightSwitchApplication.PERSONAL_LISTAR_NOROLPRIVADO.CreateInstance((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1]);
-                    case "SOLICITUDES_REBAJAR_VACACIONES":
-                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.CreateInstance();
-                    case "SOLICITUDES_REBAJAR_ADMINISTRATIVOS":
-                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.CreateInstance();
-                    case "SOLICITUDES_REBAJAR_HORASEXTRAS":
-                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.CreateInstance();
-                    case "SOLICITUDES_REBAJAR_PERMISOS":
-                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.CreateInstance();
-                    case "PROCESOS_PERIODICOS":
-                        return global::LightSwitchApplication.PROCESOS_PERIODICOS.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_VACACIONES_NRP":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_HORASEXTRAS_NRP":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_PERMISOS_NRP":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.CreateInstance();
+                    case "PROCESOS_PERIODICOS_RRHH":
+                        return global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.CreateInstance();
                     case "SOLICITUDES_HISTORICO_ROLPRIVADO":
                         return global::LightSwitchApplication.SOLICITUDES_HISTORICO_ROLPRIVADO.CreateInstance();
+                    case "PROCESOS_PERIODICOS_ROLPRIVADO":
+                        return global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.CreateInstance();
+                    case "PERSONAL_LISTAR_ROLPRIVADO_REPORTE":
+                        return global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.CreateInstance();
+                    case "SOLICITUDES_REBAJAR_VACACIONES_RP":
+                        return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.CreateInstance();
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -615,48 +683,48 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_HORASEXTRAS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_HORASEXTRAS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_PERMISOS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_PERMISOS_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_PERMISOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_PERMISOS_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS_RRHH
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPROCESOS_PERIODICOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPROCESOS_PERIODICOS_RRHH);
                     }
                 }
 
@@ -666,6 +734,42 @@ namespace LightSwitchApplication
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
                                base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_HISTORICO_ROLPRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS_ROLPRIVADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPROCESOS_PERIODICOS_ROLPRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES_RP
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES_RP);
                     }
                 }
 
@@ -831,48 +935,48 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_HORASEXTRAS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_HORASEXTRAS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_PERMISOS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_PERMISOS_NRP
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_PERMISOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_PERMISOS_NRP);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS_RRHH
                 {
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
-                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPROCESOS_PERIODICOS);
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPROCESOS_PERIODICOS_RRHH);
                     }
                 }
 
@@ -882,6 +986,42 @@ namespace LightSwitchApplication
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
                                base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_HISTORICO_ROLPRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPROCESOS_PERIODICOS_ROLPRIVADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPROCESOS_PERIODICOS_ROLPRIVADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_REBAJAR_VACACIONES_RP
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_REBAJAR_VACACIONES_RP);
                     }
                 }
 
@@ -1070,73 +1210,73 @@ namespace LightSwitchApplication
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_VACACIONES = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_VACACIONES",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_VACACIONES_NRP = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_VACACIONES_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONESCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONES_NRPCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_VACACIONES_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_VACACIONES.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_VACACIONES_NRP.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_HORASEXTRAS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_HORASEXTRAS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_HORASEXTRASCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRPCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_HORASEXTRAS.CreateInvocation(new object[0]);
-                }
-
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_PERMISOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_PERMISOS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_CreateExecutableObject);
-                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_PERMISOSCommand, sf);
-                }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_PERMISOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
-                {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_PERMISOS.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPROCESOS_PERIODICOS = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPROCESOS_PERIODICOS",
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_CreateExecutableObject);
-                private static void _ShowPROCESOS_PERIODICOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPROCESOS_PERIODICOSCommand, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRPCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ShowPROCESOS_PERIODICOS_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPROCESOS_PERIODICOS.CreateInvocation(new object[0]);
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_PERMISOS_NRP = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_PERMISOS_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_PERMISOS_NRPCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_PERMISOS_NRP.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPROCESOS_PERIODICOS_RRHH = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPROCESOS_PERIODICOS_RRHH",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_RRHH_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_RRHH_CreateExecutableObject);
+                private static void _ShowPROCESOS_PERIODICOS_RRHH_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPROCESOS_PERIODICOS_RRHHCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPROCESOS_PERIODICOS_RRHH_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPROCESOS_PERIODICOS_RRHH.CreateInvocation(new object[0]);
                 }
 
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
@@ -1151,6 +1291,62 @@ namespace LightSwitchApplication
                 private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_HISTORICO_ROLPRIVADO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
                     return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_HISTORICO_ROLPRIVADO.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPROCESOS_PERIODICOS_ROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPROCESOS_PERIODICOS_ROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_ROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPROCESOS_PERIODICOS_ROLPRIVADO_CreateExecutableObject);
+                private static void _ShowPROCESOS_PERIODICOS_ROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPROCESOS_PERIODICOS_ROLPRIVADOCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPROCESOS_PERIODICOS_ROLPRIVADO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPROCESOS_PERIODICOS_ROLPRIVADO.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_CreateExecutableObject);
+                private static void _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTECommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RPCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_VACACIONES_RP = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_VACACIONES_RP",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_RP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_RP_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_RP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONES_RPCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_REBAJAR_VACACIONES_RP_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_REBAJAR_VACACIONES_RP.CreateInvocation(new object[0]);
                 }
 
             }
@@ -1604,132 +1800,132 @@ namespace LightSwitchApplication
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_VACACIONES = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_VACACIONES",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_InvokeMethod);
-                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_VACACIONES_NRP = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_VACACIONES_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONESMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONES_NRPMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_VACACIONES_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_CanRun(ref result);
+                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_NRP_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_Run(ref handled);
+                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_NRP_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES_NRP", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeMethod);
-                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRPMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_CanRun(ref result);
+                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Run(ref handled);
+                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_HORASEXTRAS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_HORASEXTRAS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_InvokeMethod);
-                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_HORASEXTRASMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRPMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_REBAJAR_HORASEXTRAS_CanRun(ref result);
+                    d.Application.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_REBAJAR_HORASEXTRAS_Run(ref handled);
+                    d.Application.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_HORASEXTRAS", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_HORASEXTRAS_NRP", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowSOLICITUDES_REBAJAR_PERMISOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowSOLICITUDES_REBAJAR_PERMISOS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_InvokeMethod);
-                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowSOLICITUDES_REBAJAR_PERMISOS_NRP = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_PERMISOS_NRP",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowSOLICITUDES_REBAJAR_PERMISOSMethod, sf);
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_PERMISOS_NRPMethod, sf);
                 }
-                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_PERMISOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.SOLICITUDES_REBAJAR_PERMISOS_CanRun(ref result);
+                    d.Application.SOLICITUDES_REBAJAR_PERMISOS_NRP_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowSOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.SOLICITUDES_REBAJAR_PERMISOS_Run(ref handled);
+                    d.Application.SOLICITUDES_REBAJAR_PERMISOS_NRP_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_PERMISOS", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_PERMISOS_NRP", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.CreateInstance(), args);
                     }
                 }
  
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
-                    ShowPROCESOS_PERIODICOS = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
-                        "ShowPROCESOS_PERIODICOS",
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_Stub,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_CanInvoke,
-                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_InvokeMethod);
-                private static void _ShowPROCESOS_PERIODICOS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                    ShowPROCESOS_PERIODICOS_RRHH = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPROCESOS_PERIODICOS_RRHH",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_RRHH_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_RRHH_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_RRHH_InvokeMethod);
+                private static void _ShowPROCESOS_PERIODICOS_RRHH_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ShowPROCESOS_PERIODICOSMethod, sf);
+                    c(d, ref d._ShowPROCESOS_PERIODICOS_RRHHMethod, sf);
                 }
-                private static global::System.Exception _ShowPROCESOS_PERIODICOS_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ShowPROCESOS_PERIODICOS_RRHH_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Application.PROCESOS_PERIODICOS_CanRun(ref result);
+                    d.Application.PROCESOS_PERIODICOS_RRHH_CanRun(ref result);
                     return result ? null : ex;
                 }
-                private static void _ShowPROCESOS_PERIODICOS_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ShowPROCESOS_PERIODICOS_RRHH_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     bool handled = false;
-                    d.Application.PROCESOS_PERIODICOS_Run(ref handled);
+                    d.Application.PROCESOS_PERIODICOS_RRHH_Run(ref handled);
                     if (!handled)
                     {
-                        d.ShowScreen("LightSwitchApplication:PROCESOS_PERIODICOS", () => global::LightSwitchApplication.PROCESOS_PERIODICOS.CreateInstance(), args);
+                        d.ShowScreen("LightSwitchApplication:PROCESOS_PERIODICOS_RRHH", () => global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.CreateInstance(), args);
                     }
                 }
  
@@ -1756,6 +1952,110 @@ namespace LightSwitchApplication
                     if (!handled)
                     {
                         d.ShowScreen("LightSwitchApplication:SOLICITUDES_HISTORICO_ROLPRIVADO", () => global::LightSwitchApplication.SOLICITUDES_HISTORICO_ROLPRIVADO.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPROCESOS_PERIODICOS_ROLPRIVADO = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPROCESOS_PERIODICOS_ROLPRIVADO",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_ROLPRIVADO_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_ROLPRIVADO_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPROCESOS_PERIODICOS_ROLPRIVADO_InvokeMethod);
+                private static void _ShowPROCESOS_PERIODICOS_ROLPRIVADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPROCESOS_PERIODICOS_ROLPRIVADOMethod, sf);
+                }
+                private static global::System.Exception _ShowPROCESOS_PERIODICOS_ROLPRIVADO_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.PROCESOS_PERIODICOS_ROLPRIVADO_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowPROCESOS_PERIODICOS_ROLPRIVADO_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.PROCESOS_PERIODICOS_ROLPRIVADO_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:PROCESOS_PERIODICOS_ROLPRIVADO", () => global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeMethod);
+                private static void _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTEMethod, sf);
+                }
+                private static global::System.Exception _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:PERSONAL_LISTAR_ROLPRIVADO_REPORTE", () => global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RPMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_REBAJAR_VACACIONES_RP = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_REBAJAR_VACACIONES_RP",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_RP_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_RP_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_REBAJAR_VACACIONES_RP_InvokeMethod);
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_RP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_REBAJAR_VACACIONES_RPMethod, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_REBAJAR_VACACIONES_RP_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_RP_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_REBAJAR_VACACIONES_RP_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_REBAJAR_VACACIONES_RP_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES_RP", () => global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.CreateInstance(), args);
                     }
                 }
  
@@ -1795,17 +2095,25 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_NOROLPRIVADOMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONESMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONES_NRPMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRPMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRASMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRPMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOSMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOS_NRPMethod;
 
-            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOSMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOS_RRHHMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HISTORICO_ROLPRIVADOMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOS_ROLPRIVADOMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTEMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RPMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONES_RPMethod;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOSCommand;
 
@@ -1831,17 +2139,25 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_NOROLPRIVADOCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONESCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONES_NRPCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOSCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRPCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRASCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_HORASEXTRAS_NRPCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOSCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_PERMISOS_NRPCommand;
 
-            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOSCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOS_RRHHCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HISTORICO_ROLPRIVADOCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPROCESOS_PERIODICOS_ROLPRIVADOCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPERSONAL_LISTAR_ROLPRIVADO_REPORTECommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ADMINISTRATIVOS_RPCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_VACACIONES_RPCommand;
 
         }
     }

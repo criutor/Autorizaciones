@@ -6402,6 +6402,8 @@
             ScreenParameter="LightSwitchApplication:DIVISIONES_AREA_DETALLES/Properties[Division_AreaItemId_Area]" />
         </DefaultScreen.Attributes>
       </DefaultScreen>
+      <DisplayName
+        Value="División Área" />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -7782,6 +7784,10 @@
   </EntityType>
   <EntityType
     Name="FeriadosItem">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="Feriados " />
+    </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -7901,6 +7907,10 @@
             ScreenParameter="LightSwitchApplication:SOLICITUDES_DETALLES/Properties[SOLICITUDESItemId_Solicitud]" />
         </DefaultScreen.Attributes>
       </DefaultScreen>
+      <DisplayName
+        Value="SOLICITUDES" />
+      <SummaryProperty
+        Property="SOLICITUDESItem/Properties[Titulo]" />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -8391,4 +8401,13 @@
       </EntityProperty>
     </EntityType.Properties>
   </EntityType>
+  <Permission
+    Name="AdminRolPrivado">
+    <Permission.Attributes>
+      <DisplayName
+        Value="Administración de rol privado" />
+      <Description
+        Value="Permite administrar las pantallas de rol privado." />
+    </Permission.Attributes>
+  </Permission>
 </ModelFragment>

@@ -19734,39 +19734,39 @@ namespace LightSwitchApplication
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class SOLICITUDES_REBAJAR_VACACIONES
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>
+    public sealed partial class SOLICITUDES_REBAJAR_VACACIONES_NRP
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private SOLICITUDES_REBAJAR_VACACIONES() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES")
+        private SOLICITUDES_REBAJAR_VACACIONES_NRP() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES_NRP")
         {
-            global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static SOLICITUDES_REBAJAR_VACACIONES CreateInstance()
+        public static SOLICITUDES_REBAJAR_VACACIONES_NRP CreateInstance()
         {
-            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES(
+            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP(
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_Created();
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_Activated();
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_Saving(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_Saved();
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_Closing(ref bool cancel);
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_VACACIONES_SaveError(global::System.Exception exception, ref bool handled);
+        partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -19807,6 +19807,17 @@ namespace LightSwitchApplication
 
         partial void NUEVOESTADO_Changed();
 
+        partial void NombreEmpleadoSeleccionado_Changed();
+
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        partial void EmpleadoFiltroSolicitudes_Changed();
+
         /// <summary>
         /// Obtiene la colección visual Vacaciones_Aprobadas. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
         /// </summary>
@@ -19816,7 +19827,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -19828,27 +19839,74 @@ namespace LightSwitchApplication
         {
             get 
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
             }
             set
             {
-                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void NUEVOESTADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NombreEmpleadoSeleccionado
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
         /// <summary>
-        /// Llama al método de pantalla CancelarSolicitud.
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void CancelarSolicitud()
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
         {
-            this.Details.Methods.CancelarSolicitud.CreateInvocation().Execute();
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.Persona);
+            }
         }
-        partial void CancelarSolicitud_CanExecute(ref bool result);
-        partial void CancelarSolicitud_Execute();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EmpleadoFiltroSolicitudes
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmpleadoFiltroSolicitudes_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Llama al método de pantalla AnularSolicitud.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void AnularSolicitud()
+        {
+            this.Details.Methods.AnularSolicitud.CreateInvocation().Execute();
+        }
+        partial void AnularSolicitud_CanExecute(ref bool result);
+        partial void AnularSolicitud_Execute();
 
         /// <summary>
         /// Llama al método de pantalla RebajarSolicitud.
@@ -19862,62 +19920,86 @@ namespace LightSwitchApplication
         partial void RebajarSolicitud_CanExecute(ref bool result);
         partial void RebajarSolicitud_Execute();
 
+        /// <summary>
+        /// Llama al método de pantalla TodosLosEmpleados.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void TodosLosEmpleados()
+        {
+            this.Details.Methods.TodosLosEmpleados.CreateInvocation().Execute();
+        }
+        partial void TodosLosEmpleados_CanExecute(ref bool result);
+        partial void TodosLosEmpleados_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla SeleccionarEmpleado.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void SeleccionarEmpleado()
+        {
+            this.Details.Methods.SeleccionarEmpleado.CreateInvocation().Execute();
+        }
+        partial void SeleccionarEmpleado_CanExecute(ref bool result);
+        partial void SeleccionarEmpleado_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas;
-                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties.CancelarSolicitud;
-                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties.CancelarSolicitud;
+                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas;
+                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties.AnularSolicitud;
+                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties.AnularSolicitud;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry
-                __SOLICITUDES_REBAJAR_VACACIONESEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry(
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeSavingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeSavedEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeClosingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeCreated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeActivated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_InvokeSaveErrorEvent);
-            private static void __SOLICITUDES_REBAJAR_VACACIONES_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                __SOLICITUDES_REBAJAR_VACACIONES_NRPEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeSavingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeSavedEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeClosingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeCreated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeActivated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeSaveErrorEvent);
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.SOLICITUDES_REBAJAR_VACACIONES_InitializeDataWorkspace(saveChangesTo);
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __SOLICITUDES_REBAJAR_VACACIONES_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+            private static bool __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_VACACIONES_Saving(ref handled);
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_Saving(ref handled);
                 return handled;
             }
-            private static void __SOLICITUDES_REBAJAR_VACACIONES_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_VACACIONES_Saved();
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_Saved();
             }
-            private static bool __SOLICITUDES_REBAJAR_VACACIONES_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+            private static bool __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
             {
                 bool cancel = false;
-                s.SOLICITUDES_REBAJAR_VACACIONES_Closing(ref cancel);
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_Closing(ref cancel);
                 return cancel;
             }
-            private static void __SOLICITUDES_REBAJAR_VACACIONES_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_VACACIONES_Created();
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_Created();
             }
-            private static void __SOLICITUDES_REBAJAR_VACACIONES_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_VACACIONES_Activated();
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_Activated();
             }
-            private static bool __SOLICITUDES_REBAJAR_VACACIONES_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s, global::System.Exception ex)
+            private static bool __SOLICITUDES_REBAJAR_VACACIONES_NRP_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_VACACIONES_SaveError(ex, ref handled);
+                s.SOLICITUDES_REBAJAR_VACACIONES_NRP_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -19925,7 +20007,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -19933,7 +20015,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -19941,7 +20023,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -19949,51 +20031,105 @@ namespace LightSwitchApplication
                 }
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable Vacaciones_AprobadasQuery()
+            private global::Microsoft.LightSwitch.IDataServiceQueryable Vacaciones_AprobadasQuery(string Rut_Persona)
             {
                 return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.VacacionesAprobadas(),
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.VacacionesAprobadas(),
+                        (s) => (((s.PersonaItem1.EsRolPrivado.HasValue && (s.PersonaItem1.EsRolPrivado == true)) == false) && ((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)))),
                     "PersonaItem1");
             }
 
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _Vacaciones_Aprobadas;
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                    (p) => ((p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)) == false));
+            }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _Vacaciones_Aprobadas;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data _CancelarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data _RebajarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data _CancelarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data _RebajarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _AnularSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _RebajarSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _TodosLosEmpleadosCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _SeleccionarEmpleadoCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _AnularSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _RebajarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _TodosLosEmpleadosMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data _SeleccionarEmpleadoMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> Vacaciones_Aprobadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> Vacaciones_Aprobadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string> NombreEmpleadoSeleccionado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string> EmpleadoFiltroSolicitudes
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
                     }
                 }
 
@@ -20003,22 +20139,38 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> AnularSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties.AnularSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -20028,22 +20180,38 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> AnularSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties.AnularSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -20055,58 +20223,132 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
-                    Vacaciones_Aprobadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    Vacaciones_Aprobadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
                         "Vacaciones_Aprobadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_CreateQuery,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_SelectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_OnCollectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_OnLoaded);
-                private static void _Vacaciones_Aprobadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_OnLoaded);
+                private static void _Vacaciones_Aprobadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._Vacaciones_Aprobadas, sf);
                 }
-                private static void _Vacaciones_Aprobadas_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _Vacaciones_Aprobadas_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.Vacaciones_Aprobadas_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Vacaciones_Aprobadas_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object[] args)
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Vacaciones_Aprobadas_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object[] args)
                 {
-                    return d.Vacaciones_AprobadasQuery();
+                    return d.Vacaciones_AprobadasQuery((string)args[0]);
                 }
-                private static void _Vacaciones_Aprobadas_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+                private static void _Vacaciones_Aprobadas_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
                 {
                     s.Vacaciones_Aprobadas_SelectionChanged();
                 }
-                private static void _Vacaciones_Aprobadas_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                private static void _Vacaciones_Aprobadas_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
                 {
                     s.Vacaciones_Aprobadas_Changed(e);
                 }
-                private static void _Vacaciones_Aprobadas_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s, bool succeeded)
+                private static void _Vacaciones_Aprobadas_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, bool succeeded)
                 {
                     s.Vacaciones_Aprobadas_Loaded(succeeded);
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
-                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
                         "NUEVOESTADO",
                         false,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
-                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
+                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._NUEVOESTADO, sf);
                 }
-                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.NUEVOESTADO_Validate(r);
                 }
-                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES s)
+                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
                 {
                     s.NUEVOESTADO_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Entry
+                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Entry(
+                        "NombreEmpleadoSeleccionado",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
+                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
+                }
+                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NombreEmpleadoSeleccionado_Validate(r);
+                }
+                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
+                {
+                    s.NombreEmpleadoSeleccionado_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Entry
+                    EmpleadoFiltroSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Entry(
+                        "EmpleadoFiltroSolicitudes",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_OnValueChanged);
+                private static void _EmpleadoFiltroSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmpleadoFiltroSolicitudes, sf);
+                }
+                private static void _EmpleadoFiltroSolicitudes_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EmpleadoFiltroSolicitudes_Validate(r);
+                }
+                private static void _EmpleadoFiltroSolicitudes_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP s)
+                {
+                    s.EmpleadoFiltroSolicitudes_Changed();
                 }
 
             }
@@ -20117,32 +20359,60 @@ namespace LightSwitchApplication
             internal sealed class CommandSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry(
-                        "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties._CancelarSolicitud_CreateExecutableObject);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._AnularSolicitud_CreateExecutableObject);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._CancelarSolicitudCommand, sf);
+                    c(d, ref d._AnularSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _CancelarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _AnularSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass)d).Methods.CancelarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass)d).Methods.AnularSolicitud.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_CreateExecutableObject);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _TodosLosEmpleados_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass)d).Methods.TodosLosEmpleados.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_CreateExecutableObject);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarEmpleado_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass)d).Methods.SeleccionarEmpleado.CreateInvocation();
                 }
 
             }
@@ -20153,85 +20423,127 @@ namespace LightSwitchApplication
             internal sealed class MethodSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry(
-                        "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties._CancelarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties._CancelarSolicitud_InvokeMethod);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._AnularSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._AnularSolicitud_InvokeMethod);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._CancelarSolicitudMethod, sf);
+                    c(d, ref d._AnularSolicitudMethod, sf);
                 }
-                private static global::System.Exception _CancelarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _AnularSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Screen.CancelarSolicitud_CanExecute(ref result);
+                    d.Screen.AnularSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _CancelarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _AnularSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
-                    d.Screen.CancelarSolicitud_Execute();
+                    d.Screen.AnularSolicitud_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudMethod, sf);
                 }
-                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.RebajarSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.RebajarSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_InvokeMethod);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosMethod, sf);
+                }
+                private static global::System.Exception _TodosLosEmpleados_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.TodosLosEmpleados_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _TodosLosEmpleados_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.TodosLosEmpleados_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_InvokeMethod);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoMethod, sf);
+                }
+                private static global::System.Exception _SeleccionarEmpleado_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.SeleccionarEmpleado_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.SeleccionarEmpleado_Execute();
                 }
 
             }
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class SOLICITUDES_REBAJAR_ADMINISTRATIVOS
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>
+    public sealed partial class SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private SOLICITUDES_REBAJAR_ADMINISTRATIVOS() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS")
+        private SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP")
         {
-            global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static SOLICITUDES_REBAJAR_ADMINISTRATIVOS CreateInstance()
+        public static SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP CreateInstance()
         {
-            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS(
+            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP(
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Created();
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Activated();
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Saving(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Saved();
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Closing(ref bool cancel);
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_SaveError(global::System.Exception exception, ref bool handled);
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -20270,6 +20582,10 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void DiasAdministrativosAprobados_Loaded(bool succeeded);
 
+        partial void NUEVOESTADO_Changed();
+
+        partial void NombreEmpleadoSeleccionado_Changed();
+
         partial void Persona_SelectionChanged();
 
         partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
@@ -20277,7 +20593,7 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Persona_Loaded(bool succeeded);
 
-        partial void NUEVOESTADO_Changed();
+        partial void EmpleadoFiltroSolicitudes_Changed();
 
         /// <summary>
         /// Obtiene la colección visual DiasAdministrativosAprobados. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
@@ -20288,11 +20604,43 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void DiasAdministrativosAprobados_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.ESTADOSItem NUEVOESTADO
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NUEVOESTADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NombreEmpleadoSeleccionado
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         /// <summary>
         /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
@@ -20303,7 +20651,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.Persona);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.Persona);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -20311,19 +20659,19 @@ namespace LightSwitchApplication
  
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.ESTADOSItem NUEVOESTADO
+        public string EmpleadoFiltroSolicitudes
         {
             get 
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
             }
             set
             {
-                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void NUEVOESTADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+        partial void EmpleadoFiltroSolicitudes_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         /// <summary>
         /// Llama al método de pantalla RebajarSolicitud.
@@ -20338,85 +20686,97 @@ namespace LightSwitchApplication
         partial void RebajarSolicitud_Execute();
 
         /// <summary>
-        /// Llama al método de pantalla ResetearSaldoATodos.
+        /// Llama al método de pantalla AnularSolicitud.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void ResetearSaldoATodos()
+        public void AnularSolicitud()
         {
-            this.Details.Methods.ResetearSaldoATodos.CreateInvocation().Execute();
+            this.Details.Methods.AnularSolicitud.CreateInvocation().Execute();
         }
-        partial void ResetearSaldoATodos_CanExecute(ref bool result);
-        partial void ResetearSaldoATodos_Execute();
+        partial void AnularSolicitud_CanExecute(ref bool result);
+        partial void AnularSolicitud_Execute();
 
         /// <summary>
-        /// Llama al método de pantalla CancelarSolicitud.
+        /// Llama al método de pantalla TodosLosEmpleados.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public void CancelarSolicitud()
+        public void TodosLosEmpleados()
         {
-            this.Details.Methods.CancelarSolicitud.CreateInvocation().Execute();
+            this.Details.Methods.TodosLosEmpleados.CreateInvocation().Execute();
         }
-        partial void CancelarSolicitud_CanExecute(ref bool result);
-        partial void CancelarSolicitud_Execute();
+        partial void TodosLosEmpleados_CanExecute(ref bool result);
+        partial void TodosLosEmpleados_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla SeleccionarEmpleado.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void SeleccionarEmpleado()
+        {
+            this.Details.Methods.SeleccionarEmpleado.CreateInvocation().Execute();
+        }
+        partial void SeleccionarEmpleado_CanExecute(ref bool result);
+        partial void SeleccionarEmpleado_Execute();
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados;
-                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties.RebajarSolicitud;
-                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties.RebajarSolicitud;
+                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados;
+                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties.RebajarSolicitud;
+                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties.RebajarSolicitud;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                __SOLICITUDES_REBAJAR_ADMINISTRATIVOSEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeSavingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeSavedEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeClosingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeCreated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeActivated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeSaveErrorEvent);
-            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRPEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeSavingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeSavedEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeClosingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeCreated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeActivated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeSaveErrorEvent);
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InitializeDataWorkspace(saveChangesTo);
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Saving(ref handled);
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Saving(ref handled);
                 return handled;
             }
-            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Saved();
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Saved();
             }
-            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
             {
                 bool cancel = false;
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Closing(ref cancel);
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Closing(ref cancel);
                 return cancel;
             }
-            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Created();
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Created();
             }
-            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_Activated();
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_Activated();
             }
-            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::System.Exception ex)
+            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_SaveError(ex, ref handled);
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -20424,7 +20784,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -20432,7 +20792,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -20440,7 +20800,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -20448,73 +20808,105 @@ namespace LightSwitchApplication
                 }
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable DiasAdministrativosAprobadosQuery()
+            private global::Microsoft.LightSwitch.IDataServiceQueryable DiasAdministrativosAprobadosQuery(string Rut_Persona)
             {
                 return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.DiasAdministrativosAprobados(),
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.DiasAdministrativosAprobados(),
+                        (s) => (((s.PersonaItem1.EsRolPrivado.HasValue && (s.PersonaItem1.EsRolPrivado == true)) == false) && ((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)))),
                     "PersonaItem1");
             }
 
             private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
             {
-                return this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona;
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                    (p) => ((p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)) == false));
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _DiasAdministrativosAprobados;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _DiasAdministrativosAprobados;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data _RebajarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data _ResetearSaldoATodosCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data _CancelarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _RebajarSolicitudCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data _RebajarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _AnularSolicitudCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data _ResetearSaldoATodosMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _TodosLosEmpleadosCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data _CancelarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _SeleccionarEmpleadoCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _RebajarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _AnularSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _TodosLosEmpleadosMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data _SeleccionarEmpleadoMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> DiasAdministrativosAprobados
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> DiasAdministrativosAprobados
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.Persona);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string> NombreEmpleadoSeleccionado
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string> EmpleadoFiltroSolicitudes
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
                     }
                 }
 
@@ -20524,30 +20916,38 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties.RebajarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass> ResetearSaldoATodos
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> AnularSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties.ResetearSaldoATodos);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties.AnularSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> TodosLosEmpleados
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -20557,30 +20957,38 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties.RebajarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass> ResetearSaldoATodos
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> AnularSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties.ResetearSaldoATodos);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties.AnularSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> TodosLosEmpleados
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -20592,92 +21000,132 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
-                    DiasAdministrativosAprobados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    DiasAdministrativosAprobados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
                         "DiasAdministrativosAprobados",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_CreateQuery,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_SelectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_OnCollectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_OnLoaded);
-                private static void _DiasAdministrativosAprobados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_OnLoaded);
+                private static void _DiasAdministrativosAprobados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._DiasAdministrativosAprobados, sf);
                 }
-                private static void _DiasAdministrativosAprobados_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _DiasAdministrativosAprobados_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.DiasAdministrativosAprobados_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _DiasAdministrativosAprobados_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object[] args)
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _DiasAdministrativosAprobados_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object[] args)
                 {
-                    return d.DiasAdministrativosAprobadosQuery();
+                    return d.DiasAdministrativosAprobadosQuery((string)args[0]);
                 }
-                private static void _DiasAdministrativosAprobados_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+                private static void _DiasAdministrativosAprobados_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
                 {
                     s.DiasAdministrativosAprobados_SelectionChanged();
                 }
-                private static void _DiasAdministrativosAprobados_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                private static void _DiasAdministrativosAprobados_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
                 {
                     s.DiasAdministrativosAprobados_Changed(e);
                 }
-                private static void _DiasAdministrativosAprobados_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, bool succeeded)
+                private static void _DiasAdministrativosAprobados_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, bool succeeded)
                 {
                     s.DiasAdministrativosAprobados_Loaded(succeeded);
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                        "NUEVOESTADO",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
+                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NUEVOESTADO, sf);
+                }
+                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NUEVOESTADO_Validate(r);
+                }
+                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
+                {
+                    s.NUEVOESTADO_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Entry
+                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Entry(
+                        "NombreEmpleadoSeleccionado",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
+                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
+                }
+                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NombreEmpleadoSeleccionado_Validate(r);
+                }
+                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
+                {
+                    s.NombreEmpleadoSeleccionado_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
                         "Persona",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._Persona_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._Persona_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._Persona_CreateQuery,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._Persona_OnLoaded);
-                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._Persona, sf);
                 }
-                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.Persona_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object[] args)
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object[] args)
                 {
                     return d.PersonaQuery();
                 }
-                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
                 {
                     s.Persona_SelectionChanged();
                 }
-                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
                 {
                     s.Persona_Changed(e);
                 }
-                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, bool succeeded)
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, bool succeeded)
                 {
                     s.Persona_Loaded(succeeded);
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
-                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
-                        "NUEVOESTADO",
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Entry
+                    EmpleadoFiltroSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Entry(
+                        "EmpleadoFiltroSolicitudes",
                         false,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
-                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_OnValueChanged);
+                private static void _EmpleadoFiltroSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._NUEVOESTADO, sf);
+                    c(d, ref d._EmpleadoFiltroSolicitudes, sf);
                 }
-                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _EmpleadoFiltroSolicitudes_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
-                    s.NUEVOESTADO_Validate(r);
+                    s.EmpleadoFiltroSolicitudes_Validate(r);
                 }
-                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS s)
+                private static void _EmpleadoFiltroSolicitudes_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP s)
                 {
-                    s.NUEVOESTADO_Changed();
+                    s.EmpleadoFiltroSolicitudes_Changed();
                 }
 
             }
@@ -20688,46 +21136,60 @@ namespace LightSwitchApplication
             internal sealed class CommandSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                    ResetearSaldoATodos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
-                        "ResetearSaldoATodos",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties._ResetearSaldoATodos_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties._ResetearSaldoATodos_CreateExecutableObject);
-                private static void _ResetearSaldoATodos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._AnularSolicitud_CreateExecutableObject);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ResetearSaldoATodosCommand, sf);
+                    c(d, ref d._AnularSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ResetearSaldoATodos_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _AnularSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass)d).Methods.ResetearSaldoATodos.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass)d).Methods.AnularSolicitud.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
-                        "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.CommandSetProperties._CancelarSolicitud_CreateExecutableObject);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_CreateExecutableObject);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._CancelarSolicitudCommand, sf);
+                    c(d, ref d._TodosLosEmpleadosCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _CancelarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _TodosLosEmpleados_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass)d).Methods.CancelarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass)d).Methods.TodosLosEmpleados.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_CreateExecutableObject);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarEmpleado_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass)d).Methods.SeleccionarEmpleado.CreateInvocation();
                 }
 
             }
@@ -20738,106 +21200,127 @@ namespace LightSwitchApplication
             internal sealed class MethodSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudMethod, sf);
                 }
-                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.RebajarSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.RebajarSolicitud_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                    ResetearSaldoATodos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
-                        "ResetearSaldoATodos",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._ResetearSaldoATodos_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._ResetearSaldoATodos_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._ResetearSaldoATodos_InvokeMethod);
-                private static void _ResetearSaldoATodos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._AnularSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._AnularSolicitud_InvokeMethod);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ResetearSaldoATodosMethod, sf);
+                    c(d, ref d._AnularSolicitudMethod, sf);
                 }
-                private static global::System.Exception _ResetearSaldoATodos_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _AnularSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Screen.ResetearSaldoATodos_CanExecute(ref result);
+                    d.Screen.AnularSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _ResetearSaldoATodos_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _AnularSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
-                    d.Screen.ResetearSaldoATodos_Execute();
+                    d.Screen.AnularSolicitud_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Entry(
-                        "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._CancelarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass.MethodSetProperties._CancelarSolicitud_InvokeMethod);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_InvokeMethod);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
                 {
-                    c(d, ref d._CancelarSolicitudMethod, sf);
+                    c(d, ref d._TodosLosEmpleadosMethod, sf);
                 }
-                private static global::System.Exception _CancelarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _TodosLosEmpleados_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
-                    d.Screen.CancelarSolicitud_CanExecute(ref result);
+                    d.Screen.TodosLosEmpleados_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _CancelarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _TodosLosEmpleados_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
-                    d.Screen.CancelarSolicitud_Execute();
+                    d.Screen.TodosLosEmpleados_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_InvokeMethod);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoMethod, sf);
+                }
+                private static global::System.Exception _SeleccionarEmpleado_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.SeleccionarEmpleado_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.SeleccionarEmpleado_Execute();
                 }
 
             }
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class SOLICITUDES_REBAJAR_HORASEXTRAS
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>
+    public sealed partial class SOLICITUDES_REBAJAR_HORASEXTRAS_NRP
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private SOLICITUDES_REBAJAR_HORASEXTRAS() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_HORASEXTRAS")
+        private SOLICITUDES_REBAJAR_HORASEXTRAS_NRP() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_HORASEXTRAS_NRP")
         {
-            global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static SOLICITUDES_REBAJAR_HORASEXTRAS CreateInstance()
+        public static SOLICITUDES_REBAJAR_HORASEXTRAS_NRP CreateInstance()
         {
-            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS(
+            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP(
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Created();
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Activated();
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Saving(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Saved();
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_Closing(ref bool cancel);
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_SaveError(global::System.Exception exception, ref bool handled);
+        partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -20880,6 +21363,17 @@ namespace LightSwitchApplication
 
         partial void HORASTRABAJADAS_Changed();
 
+        partial void NombreEmpleadoSeleccionado_Changed();
+
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        partial void EmpleadoFiltroSolicitudes_Changed();
+
         /// <summary>
         /// Obtiene la colección visual HorasExtrasAprobadas. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
         /// </summary>
@@ -20889,7 +21383,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.HorasExtrasAprobadas);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.HorasExtrasAprobadas);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -20901,11 +21395,11 @@ namespace LightSwitchApplication
         {
             get 
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
             }
             set
             {
-                global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -20917,15 +21411,62 @@ namespace LightSwitchApplication
         {
             get 
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.HORASTRABAJADAS);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.HORASTRABAJADAS);
             }
             set
             {
-                global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.HORASTRABAJADAS, value);
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.HORASTRABAJADAS, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void HORASTRABAJADAS_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NombreEmpleadoSeleccionado
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.Persona);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EmpleadoFiltroSolicitudes
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmpleadoFiltroSolicitudes_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         /// <summary>
         /// Llama al método de pantalla RebajarSolicitud.
@@ -20987,62 +21528,86 @@ namespace LightSwitchApplication
         partial void AbrirVentanaModalHorasTrabajadas_CanExecute(ref bool result);
         partial void AbrirVentanaModalHorasTrabajadas_Execute();
 
+        /// <summary>
+        /// Llama al método de pantalla TodosLosEmpleados.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void TodosLosEmpleados()
+        {
+            this.Details.Methods.TodosLosEmpleados.CreateInvocation().Execute();
+        }
+        partial void TodosLosEmpleados_CanExecute(ref bool result);
+        partial void TodosLosEmpleados_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla SeleccionarEmpleado.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void SeleccionarEmpleado()
+        {
+            this.Details.Methods.SeleccionarEmpleado.CreateInvocation().Execute();
+        }
+        partial void SeleccionarEmpleado_CanExecute(ref bool result);
+        partial void SeleccionarEmpleado_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.HorasExtrasAprobadas;
-                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties.RebajarSolicitud;
-                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties.RebajarSolicitud;
+                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.HorasExtrasAprobadas;
+                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.RebajarSolicitud;
+                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.RebajarSolicitud;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                __SOLICITUDES_REBAJAR_HORASEXTRASEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeSavingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeSavedEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeClosingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeCreated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeActivated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeSaveErrorEvent);
-            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                __SOLICITUDES_REBAJAR_HORASEXTRAS_NRPEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeSavingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeSavedEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeClosingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeCreated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeActivated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeSaveErrorEvent);
+            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_InitializeDataWorkspace(saveChangesTo);
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+            private static bool __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_Saving(ref handled);
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Saving(ref handled);
                 return handled;
             }
-            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_Saved();
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Saved();
             }
-            private static bool __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+            private static bool __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
             {
                 bool cancel = false;
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_Closing(ref cancel);
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Closing(ref cancel);
                 return cancel;
             }
-            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_Created();
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Created();
             }
-            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+            private static void __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_Activated();
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_Activated();
             }
-            private static bool __SOLICITUDES_REBAJAR_HORASEXTRAS_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, global::System.Exception ex)
+            private static bool __SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_HORASEXTRAS_SaveError(ex, ref handled);
+                s.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -21050,7 +21615,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -21058,7 +21623,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -21066,7 +21631,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -21074,80 +21639,134 @@ namespace LightSwitchApplication
                 }
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable HorasExtrasAprobadasQuery()
+            private global::Microsoft.LightSwitch.IDataServiceQueryable HorasExtrasAprobadasQuery(string Rut_Persona)
             {
                 return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.HorasExtrasAprobadas(),
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.HorasExtrasAprobadas(),
+                        (s) => (((s.PersonaItem1.EsRolPrivado.HasValue && (s.PersonaItem1.EsRolPrivado == true)) == false) && ((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)))),
                     "PersonaItem1");
             }
 
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _HorasExtrasAprobadas;
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                    (p) => ((p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)) == false));
+            }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _HorasExtrasAprobadas;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::System.Nullable<double>>.Data _HORASTRABAJADAS;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _RebajarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::System.Nullable<double>>.Data _HORASTRABAJADAS;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _CancelarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _GuardarHorasTrabajadasCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _CerrarVentanaModalHorasTrabajadasCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _AbrirVentanaModalHorasTrabajadasCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _RebajarSolicitudCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _RebajarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _CancelarSolicitudCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _CancelarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _GuardarHorasTrabajadasCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _GuardarHorasTrabajadasMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _CerrarVentanaModalHorasTrabajadasCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _CerrarVentanaModalHorasTrabajadasMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _AbrirVentanaModalHorasTrabajadasCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data _AbrirVentanaModalHorasTrabajadasMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _TodosLosEmpleadosCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _SeleccionarEmpleadoCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _RebajarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _CancelarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _GuardarHorasTrabajadasMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _CerrarVentanaModalHorasTrabajadasMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _AbrirVentanaModalHorasTrabajadasMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _TodosLosEmpleadosMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data _SeleccionarEmpleadoMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> HorasExtrasAprobadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> HorasExtrasAprobadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.HorasExtrasAprobadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.HorasExtrasAprobadas);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::System.Nullable<double>> HORASTRABAJADAS
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::System.Nullable<double>> HORASTRABAJADAS
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::System.Nullable<double>>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties.HORASTRABAJADAS);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::System.Nullable<double>>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.HORASTRABAJADAS);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string> NombreEmpleadoSeleccionado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string> EmpleadoFiltroSolicitudes
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
                     }
                 }
 
@@ -21157,46 +21776,62 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.RebajarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> CancelarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.CancelarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> GuardarHorasTrabajadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> GuardarHorasTrabajadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties.GuardarHorasTrabajadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.GuardarHorasTrabajadas);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> CerrarVentanaModalHorasTrabajadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> CerrarVentanaModalHorasTrabajadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties.CerrarVentanaModalHorasTrabajadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.CerrarVentanaModalHorasTrabajadas);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> AbrirVentanaModalHorasTrabajadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> AbrirVentanaModalHorasTrabajadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties.AbrirVentanaModalHorasTrabajadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.AbrirVentanaModalHorasTrabajadas);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -21206,46 +21841,62 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.RebajarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> CancelarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.CancelarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> GuardarHorasTrabajadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> GuardarHorasTrabajadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties.GuardarHorasTrabajadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.GuardarHorasTrabajadas);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> CerrarVentanaModalHorasTrabajadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> CerrarVentanaModalHorasTrabajadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties.CerrarVentanaModalHorasTrabajadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.CerrarVentanaModalHorasTrabajadas);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass> AbrirVentanaModalHorasTrabajadas
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> AbrirVentanaModalHorasTrabajadas
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties.AbrirVentanaModalHorasTrabajadas);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.AbrirVentanaModalHorasTrabajadas);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -21257,78 +21908,152 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
-                    HorasExtrasAprobadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    HorasExtrasAprobadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
                         "HorasExtrasAprobadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_CreateQuery,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_SelectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_OnCollectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_OnLoaded);
-                private static void _HorasExtrasAprobadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HorasExtrasAprobadas_OnLoaded);
+                private static void _HorasExtrasAprobadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._HorasExtrasAprobadas, sf);
                 }
-                private static void _HorasExtrasAprobadas_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _HorasExtrasAprobadas_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.HorasExtrasAprobadas_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _HorasExtrasAprobadas_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object[] args)
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _HorasExtrasAprobadas_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object[] args)
                 {
-                    return d.HorasExtrasAprobadasQuery();
+                    return d.HorasExtrasAprobadasQuery((string)args[0]);
                 }
-                private static void _HorasExtrasAprobadas_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+                private static void _HorasExtrasAprobadas_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
                 {
                     s.HorasExtrasAprobadas_SelectionChanged();
                 }
-                private static void _HorasExtrasAprobadas_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                private static void _HorasExtrasAprobadas_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
                 {
                     s.HorasExtrasAprobadas_Changed(e);
                 }
-                private static void _HorasExtrasAprobadas_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, bool succeeded)
+                private static void _HorasExtrasAprobadas_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, bool succeeded)
                 {
                     s.HorasExtrasAprobadas_Loaded(succeeded);
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
-                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
                         "NUEVOESTADO",
                         false,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
-                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
+                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._NUEVOESTADO, sf);
                 }
-                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.NUEVOESTADO_Validate(r);
                 }
-                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
                 {
                     s.NUEVOESTADO_Changed();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::System.Nullable<double>>.Entry
-                    HORASTRABAJADAS = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::System.Nullable<double>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::System.Nullable<double>>.Entry
+                    HORASTRABAJADAS = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::System.Nullable<double>>.Entry(
                         "HORASTRABAJADAS",
                         false,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HORASTRABAJADAS_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HORASTRABAJADAS_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.PropertySetProperties._HORASTRABAJADAS_OnValueChanged);
-                private static void _HORASTRABAJADAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::System.Nullable<double>>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HORASTRABAJADAS_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HORASTRABAJADAS_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._HORASTRABAJADAS_OnValueChanged);
+                private static void _HORASTRABAJADAS_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::System.Nullable<double>>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._HORASTRABAJADAS, sf);
                 }
-                private static void _HORASTRABAJADAS_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _HORASTRABAJADAS_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.HORASTRABAJADAS_Validate(r);
                 }
-                private static void _HORASTRABAJADAS_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS s)
+                private static void _HORASTRABAJADAS_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
                 {
                     s.HORASTRABAJADAS_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Entry
+                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Entry(
+                        "NombreEmpleadoSeleccionado",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
+                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
+                }
+                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NombreEmpleadoSeleccionado_Validate(r);
+                }
+                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
+                {
+                    s.NombreEmpleadoSeleccionado_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Entry
+                    EmpleadoFiltroSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Entry(
+                        "EmpleadoFiltroSolicitudes",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_OnValueChanged);
+                private static void _EmpleadoFiltroSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmpleadoFiltroSolicitudes, sf);
+                }
+                private static void _EmpleadoFiltroSolicitudes_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EmpleadoFiltroSolicitudes_Validate(r);
+                }
+                private static void _EmpleadoFiltroSolicitudes_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP s)
+                {
+                    s.EmpleadoFiltroSolicitudes_Changed();
                 }
 
             }
@@ -21339,74 +22064,102 @@ namespace LightSwitchApplication
             internal sealed class CommandSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._CancelarSolicitud_CreateExecutableObject);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._CancelarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._CancelarSolicitud_CreateExecutableObject);
+                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CancelarSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _CancelarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _CancelarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass)d).Methods.CancelarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.CancelarSolicitud.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    GuardarHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    GuardarHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "GuardarHorasTrabajadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._GuardarHorasTrabajadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._GuardarHorasTrabajadas_CreateExecutableObject);
-                private static void _GuardarHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._GuardarHorasTrabajadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._GuardarHorasTrabajadas_CreateExecutableObject);
+                private static void _GuardarHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._GuardarHorasTrabajadasCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _GuardarHorasTrabajadas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _GuardarHorasTrabajadas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass)d).Methods.GuardarHorasTrabajadas.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.GuardarHorasTrabajadas.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    CerrarVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    CerrarVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "CerrarVentanaModalHorasTrabajadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._CerrarVentanaModalHorasTrabajadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._CerrarVentanaModalHorasTrabajadas_CreateExecutableObject);
-                private static void _CerrarVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._CerrarVentanaModalHorasTrabajadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._CerrarVentanaModalHorasTrabajadas_CreateExecutableObject);
+                private static void _CerrarVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CerrarVentanaModalHorasTrabajadasCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _CerrarVentanaModalHorasTrabajadas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _CerrarVentanaModalHorasTrabajadas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass)d).Methods.CerrarVentanaModalHorasTrabajadas.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.CerrarVentanaModalHorasTrabajadas.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    AbrirVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    AbrirVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "AbrirVentanaModalHorasTrabajadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._AbrirVentanaModalHorasTrabajadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.CommandSetProperties._AbrirVentanaModalHorasTrabajadas_CreateExecutableObject);
-                private static void _AbrirVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._AbrirVentanaModalHorasTrabajadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._AbrirVentanaModalHorasTrabajadas_CreateExecutableObject);
+                private static void _AbrirVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._AbrirVentanaModalHorasTrabajadasCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _AbrirVentanaModalHorasTrabajadas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _AbrirVentanaModalHorasTrabajadas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass)d).Methods.AbrirVentanaModalHorasTrabajadas.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.AbrirVentanaModalHorasTrabajadas.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_CreateExecutableObject);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _TodosLosEmpleados_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.TodosLosEmpleados.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_CreateExecutableObject);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarEmpleado_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass)d).Methods.SeleccionarEmpleado.CreateInvocation();
                 }
 
             }
@@ -21417,148 +22170,190 @@ namespace LightSwitchApplication
             internal sealed class MethodSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudMethod, sf);
                 }
-                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.RebajarSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.RebajarSolicitud_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._CancelarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._CancelarSolicitud_InvokeMethod);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._CancelarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._CancelarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._CancelarSolicitud_InvokeMethod);
+                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CancelarSolicitudMethod, sf);
                 }
-                private static global::System.Exception _CancelarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _CancelarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.CancelarSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _CancelarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _CancelarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.CancelarSolicitud_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    GuardarHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    GuardarHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "GuardarHorasTrabajadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._GuardarHorasTrabajadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._GuardarHorasTrabajadas_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._GuardarHorasTrabajadas_InvokeMethod);
-                private static void _GuardarHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._GuardarHorasTrabajadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._GuardarHorasTrabajadas_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._GuardarHorasTrabajadas_InvokeMethod);
+                private static void _GuardarHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._GuardarHorasTrabajadasMethod, sf);
                 }
-                private static global::System.Exception _GuardarHorasTrabajadas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _GuardarHorasTrabajadas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.GuardarHorasTrabajadas_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _GuardarHorasTrabajadas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _GuardarHorasTrabajadas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.GuardarHorasTrabajadas_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    CerrarVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    CerrarVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "CerrarVentanaModalHorasTrabajadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._CerrarVentanaModalHorasTrabajadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._CerrarVentanaModalHorasTrabajadas_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._CerrarVentanaModalHorasTrabajadas_InvokeMethod);
-                private static void _CerrarVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._CerrarVentanaModalHorasTrabajadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._CerrarVentanaModalHorasTrabajadas_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._CerrarVentanaModalHorasTrabajadas_InvokeMethod);
+                private static void _CerrarVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CerrarVentanaModalHorasTrabajadasMethod, sf);
                 }
-                private static global::System.Exception _CerrarVentanaModalHorasTrabajadas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _CerrarVentanaModalHorasTrabajadas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.CerrarVentanaModalHorasTrabajadas_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _CerrarVentanaModalHorasTrabajadas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _CerrarVentanaModalHorasTrabajadas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.CerrarVentanaModalHorasTrabajadas_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry
-                    AbrirVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    AbrirVentanaModalHorasTrabajadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
                         "AbrirVentanaModalHorasTrabajadas",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._AbrirVentanaModalHorasTrabajadas_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._AbrirVentanaModalHorasTrabajadas_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass.MethodSetProperties._AbrirVentanaModalHorasTrabajadas_InvokeMethod);
-                private static void _AbrirVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._AbrirVentanaModalHorasTrabajadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._AbrirVentanaModalHorasTrabajadas_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._AbrirVentanaModalHorasTrabajadas_InvokeMethod);
+                private static void _AbrirVentanaModalHorasTrabajadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._AbrirVentanaModalHorasTrabajadasMethod, sf);
                 }
-                private static global::System.Exception _AbrirVentanaModalHorasTrabajadas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _AbrirVentanaModalHorasTrabajadas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.AbrirVentanaModalHorasTrabajadas_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _AbrirVentanaModalHorasTrabajadas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _AbrirVentanaModalHorasTrabajadas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.AbrirVentanaModalHorasTrabajadas_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_InvokeMethod);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosMethod, sf);
+                }
+                private static global::System.Exception _TodosLosEmpleados_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.TodosLosEmpleados_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _TodosLosEmpleados_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.TodosLosEmpleados_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_InvokeMethod);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoMethod, sf);
+                }
+                private static global::System.Exception _SeleccionarEmpleado_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.SeleccionarEmpleado_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.SeleccionarEmpleado_Execute();
                 }
 
             }
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class SOLICITUDES_REBAJAR_PERMISOS
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>
+    public sealed partial class SOLICITUDES_REBAJAR_PERMISOS_NRP
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private SOLICITUDES_REBAJAR_PERMISOS() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_PERMISOS")
+        private SOLICITUDES_REBAJAR_PERMISOS_NRP() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_PERMISOS_NRP")
         {
-            global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static SOLICITUDES_REBAJAR_PERMISOS CreateInstance()
+        public static SOLICITUDES_REBAJAR_PERMISOS_NRP CreateInstance()
         {
-            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS(
+            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP(
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_Created();
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_Activated();
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_Saving(ref bool handled);
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_Saved();
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_Closing(ref bool cancel);
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void SOLICITUDES_REBAJAR_PERMISOS_SaveError(global::System.Exception exception, ref bool handled);
+        partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -21599,6 +22394,17 @@ namespace LightSwitchApplication
 
         partial void NUEVOESTADO_Changed();
 
+        partial void NombreEmpleadoSeleccionado_Changed();
+
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        partial void EmpleadoFiltroSolicitudes_Changed();
+
         /// <summary>
         /// Obtiene la colección visual PermisosAprobados. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
         /// </summary>
@@ -21608,7 +22414,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties.PermisosAprobados);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.PermisosAprobados);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -21620,15 +22426,62 @@ namespace LightSwitchApplication
         {
             get 
             {
-                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
             }
             set
             {
-                global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void NUEVOESTADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NombreEmpleadoSeleccionado
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.Persona);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EmpleadoFiltroSolicitudes
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmpleadoFiltroSolicitudes_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         /// <summary>
         /// Llama al método de pantalla CancelarSolicitud.
@@ -21654,62 +22507,86 @@ namespace LightSwitchApplication
         partial void RebajarSolicitud_CanExecute(ref bool result);
         partial void RebajarSolicitud_Execute();
 
+        /// <summary>
+        /// Llama al método de pantalla TodosLosEmpleados.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void TodosLosEmpleados()
+        {
+            this.Details.Methods.TodosLosEmpleados.CreateInvocation().Execute();
+        }
+        partial void TodosLosEmpleados_CanExecute(ref bool result);
+        partial void TodosLosEmpleados_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla SeleccionarEmpleado.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void SeleccionarEmpleado()
+        {
+            this.Details.Methods.SeleccionarEmpleado.CreateInvocation().Execute();
+        }
+        partial void SeleccionarEmpleado_CanExecute(ref bool result);
+        partial void SeleccionarEmpleado_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties.PermisosAprobados;
-                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties.CancelarSolicitud;
-                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties.CancelarSolicitud;
+                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.PermisosAprobados;
+                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties.CancelarSolicitud;
+                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties.CancelarSolicitud;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry
-                __SOLICITUDES_REBAJAR_PERMISOSEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry(
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeSavingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeSavedEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeClosingEvent,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeCreated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeActivated,
-                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_InvokeSaveErrorEvent);
-            private static void __SOLICITUDES_REBAJAR_PERMISOS_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                __SOLICITUDES_REBAJAR_PERMISOS_NRPEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeSavingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeSavedEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeClosingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeCreated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeActivated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.__SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeSaveErrorEvent);
+            private static void __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.SOLICITUDES_REBAJAR_PERMISOS_InitializeDataWorkspace(saveChangesTo);
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __SOLICITUDES_REBAJAR_PERMISOS_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+            private static bool __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_PERMISOS_Saving(ref handled);
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_Saving(ref handled);
                 return handled;
             }
-            private static void __SOLICITUDES_REBAJAR_PERMISOS_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+            private static void __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_PERMISOS_Saved();
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_Saved();
             }
-            private static bool __SOLICITUDES_REBAJAR_PERMISOS_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+            private static bool __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
             {
                 bool cancel = false;
-                s.SOLICITUDES_REBAJAR_PERMISOS_Closing(ref cancel);
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_Closing(ref cancel);
                 return cancel;
             }
-            private static void __SOLICITUDES_REBAJAR_PERMISOS_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+            private static void __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_PERMISOS_Created();
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_Created();
             }
-            private static void __SOLICITUDES_REBAJAR_PERMISOS_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+            private static void __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
             {
-                s.SOLICITUDES_REBAJAR_PERMISOS_Activated();
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_Activated();
             }
-            private static bool __SOLICITUDES_REBAJAR_PERMISOS_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s, global::System.Exception ex)
+            private static bool __SOLICITUDES_REBAJAR_PERMISOS_NRP_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.SOLICITUDES_REBAJAR_PERMISOS_SaveError(ex, ref handled);
+                s.SOLICITUDES_REBAJAR_PERMISOS_NRP_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -21717,7 +22594,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -21725,7 +22602,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -21733,7 +22610,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -21741,51 +22618,105 @@ namespace LightSwitchApplication
                 }
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable PermisosAprobadosQuery()
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PermisosAprobadosQuery(string Rut_Persona)
             {
                 return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
-                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.PermisosAprobados(),
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.PermisosAprobados(),
+                        (s) => (((s.PersonaItem1.EsRolPrivado.HasValue && (s.PersonaItem1.EsRolPrivado == true)) == false) && ((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)))),
                     "PersonaItem1");
             }
 
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _PermisosAprobados;
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                    (p) => ((p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)) == false));
+            }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _PermisosAprobados;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data _CancelarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data _RebajarSolicitudCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data _CancelarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data _RebajarSolicitudMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _CancelarSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _RebajarSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _TodosLosEmpleadosCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _SeleccionarEmpleadoCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _CancelarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _RebajarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _TodosLosEmpleadosMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data _SeleccionarEmpleadoMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> PermisosAprobados
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> PermisosAprobados
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties.PermisosAprobados);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.PermisosAprobados);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string> NombreEmpleadoSeleccionado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string> EmpleadoFiltroSolicitudes
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
                     }
                 }
 
@@ -21795,22 +22726,38 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> CancelarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties.CancelarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -21820,22 +22767,38 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass> CancelarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> CancelarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties.CancelarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties.CancelarSolicitud);
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass> RebajarSolicitud
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> RebajarSolicitud
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties.SeleccionarEmpleado);
                     }
                 }
 
@@ -21847,58 +22810,132 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
-                    PermisosAprobados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    PermisosAprobados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
                         "PermisosAprobados",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._PermisosAprobados_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._PermisosAprobados_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._PermisosAprobados_CreateQuery,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._PermisosAprobados_SelectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._PermisosAprobados_OnCollectionChanged,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._PermisosAprobados_OnLoaded);
-                private static void _PermisosAprobados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._PermisosAprobados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._PermisosAprobados_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._PermisosAprobados_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._PermisosAprobados_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._PermisosAprobados_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._PermisosAprobados_OnLoaded);
+                private static void _PermisosAprobados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._PermisosAprobados, sf);
                 }
-                private static void _PermisosAprobados_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _PermisosAprobados_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.PermisosAprobados_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _PermisosAprobados_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object[] args)
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _PermisosAprobados_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object[] args)
                 {
-                    return d.PermisosAprobadosQuery();
+                    return d.PermisosAprobadosQuery((string)args[0]);
                 }
-                private static void _PermisosAprobados_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+                private static void _PermisosAprobados_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
                 {
                     s.PermisosAprobados_SelectionChanged();
                 }
-                private static void _PermisosAprobados_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                private static void _PermisosAprobados_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
                 {
                     s.PermisosAprobados_Changed(e);
                 }
-                private static void _PermisosAprobados_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s, bool succeeded)
+                private static void _PermisosAprobados_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, bool succeeded)
                 {
                     s.PermisosAprobados_Loaded(succeeded);
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
-                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
                         "NUEVOESTADO",
                         false,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
-                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
+                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._NUEVOESTADO, sf);
                 }
-                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.NUEVOESTADO_Validate(r);
                 }
-                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS s)
+                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
                 {
                     s.NUEVOESTADO_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Entry
+                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Entry(
+                        "NombreEmpleadoSeleccionado",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
+                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
+                }
+                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NombreEmpleadoSeleccionado_Validate(r);
+                }
+                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
+                {
+                    s.NombreEmpleadoSeleccionado_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Entry
+                    EmpleadoFiltroSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Entry(
+                        "EmpleadoFiltroSolicitudes",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_OnValueChanged);
+                private static void _EmpleadoFiltroSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmpleadoFiltroSolicitudes, sf);
+                }
+                private static void _EmpleadoFiltroSolicitudes_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EmpleadoFiltroSolicitudes_Validate(r);
+                }
+                private static void _EmpleadoFiltroSolicitudes_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP s)
+                {
+                    s.EmpleadoFiltroSolicitudes_Changed();
                 }
 
             }
@@ -21909,32 +22946,60 @@ namespace LightSwitchApplication
             internal sealed class CommandSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
                         "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties._CancelarSolicitud_CreateExecutableObject);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._CancelarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._CancelarSolicitud_CreateExecutableObject);
+                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CancelarSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _CancelarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _CancelarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass)d).Methods.CancelarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass)d).Methods.CancelarSolicitud.CreateInvocation();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._TodosLosEmpleados_CreateExecutableObject);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _TodosLosEmpleados_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass)d).Methods.TodosLosEmpleados.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_CreateExecutableObject);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarEmpleado_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass)d).Methods.SeleccionarEmpleado.CreateInvocation();
                 }
 
             }
@@ -21945,85 +23010,127 @@ namespace LightSwitchApplication
             internal sealed class MethodSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry
-                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    CancelarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
                         "CancelarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties._CancelarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties._CancelarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties._CancelarSolicitud_InvokeMethod);
-                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._CancelarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._CancelarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._CancelarSolicitud_InvokeMethod);
+                private static void _CancelarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CancelarSolicitudMethod, sf);
                 }
-                private static global::System.Exception _CancelarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _CancelarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.CancelarSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _CancelarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _CancelarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.CancelarSolicitud_Execute();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry
-                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
                         "RebajarSolicitud",
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
-                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
-                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
                 {
                     c(d, ref d._RebajarSolicitudMethod, sf);
                 }
-                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.RebajarSolicitud_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.RebajarSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._TodosLosEmpleados_InvokeMethod);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosMethod, sf);
+                }
+                private static global::System.Exception _TodosLosEmpleados_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.TodosLosEmpleados_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _TodosLosEmpleados_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.TodosLosEmpleados_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_InvokeMethod);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoMethod, sf);
+                }
+                private static global::System.Exception _SeleccionarEmpleado_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.SeleccionarEmpleado_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_PERMISOS_NRP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.SeleccionarEmpleado_Execute();
                 }
 
             }
         }
     }
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class PROCESOS_PERIODICOS
-        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>
+    public sealed partial class PROCESOS_PERIODICOS_RRHH
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>
     {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        private PROCESOS_PERIODICOS() : base("LightSwitchApplication:PROCESOS_PERIODICOS")
+        private PROCESOS_PERIODICOS_RRHH() : base("LightSwitchApplication:PROCESOS_PERIODICOS_RRHH")
         {
-            global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.Initialize(this);
         }
 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public static PROCESOS_PERIODICOS CreateInstance()
+        public static PROCESOS_PERIODICOS_RRHH CreateInstance()
         {
-            return new global::LightSwitchApplication.PROCESOS_PERIODICOS(
+            return new global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH(
             );
         }
 
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        partial void PROCESOS_PERIODICOS_RRHH_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_Created();
+        partial void PROCESOS_PERIODICOS_RRHH_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_Activated();
+        partial void PROCESOS_PERIODICOS_RRHH_Activated();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_Saving(ref bool handled);
+        partial void PROCESOS_PERIODICOS_RRHH_Saving(ref bool handled);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_Saved();
+        partial void PROCESOS_PERIODICOS_RRHH_Saved();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_Closing(ref bool cancel);
+        partial void PROCESOS_PERIODICOS_RRHH_Closing(ref bool cancel);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PROCESOS_PERIODICOS_SaveError(global::System.Exception exception, ref bool handled);
+        partial void PROCESOS_PERIODICOS_RRHH_SaveError(global::System.Exception exception, ref bool handled);
      
         #region Private Properties
         
@@ -22071,7 +23178,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.GetValue(this, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties.Persona);
+                return global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.GetValue(this, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties.Persona);
             }
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -22093,58 +23200,58 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass
-            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySet, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.CommandSet, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSet>
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySet, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.CommandSet, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSet>
         {
 
             static DetailsClass()
             {
-                var initializePropertyEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties.Persona;
-                var initializeCommandEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.CommandSetProperties.ResetearDíasAdministrativos;
-                var initializeMethodEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSetProperties.ResetearDíasAdministrativos;
+                var initializePropertyEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties.Persona;
+                var initializeCommandEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.CommandSetProperties.ResetearDíasAdministrativos;
+                var initializeMethodEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSetProperties.ResetearDíasAdministrativos;
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Entry
-                __PROCESOS_PERIODICOSEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Entry(
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeInitializeDataWorkspace,
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeSavingEvent,
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeSavedEvent,
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeClosingEvent,
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeCreated,
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeActivated,
-                    global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.__PROCESOS_PERIODICOS_InvokeSaveErrorEvent);
-            private static void __PROCESOS_PERIODICOS_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PROCESOS_PERIODICOS s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Entry
+                __PROCESOS_PERIODICOS_RRHHEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeSavingEvent,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeSavedEvent,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeClosingEvent,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeCreated,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeActivated,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.__PROCESOS_PERIODICOS_RRHH_InvokeSaveErrorEvent);
+            private static void __PROCESOS_PERIODICOS_RRHH_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
             {
-                s.PROCESOS_PERIODICOS_InitializeDataWorkspace(saveChangesTo);
+                s.PROCESOS_PERIODICOS_RRHH_InitializeDataWorkspace(saveChangesTo);
             }
-            private static bool __PROCESOS_PERIODICOS_InvokeSavingEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS s)
+            private static bool __PROCESOS_PERIODICOS_RRHH_InvokeSavingEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s)
             {
                 bool handled = false;
-                s.PROCESOS_PERIODICOS_Saving(ref handled);
+                s.PROCESOS_PERIODICOS_RRHH_Saving(ref handled);
                 return handled;
             }
-            private static void __PROCESOS_PERIODICOS_InvokeSavedEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS s)
+            private static void __PROCESOS_PERIODICOS_RRHH_InvokeSavedEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s)
             {
-                s.PROCESOS_PERIODICOS_Saved();
+                s.PROCESOS_PERIODICOS_RRHH_Saved();
             }
-            private static bool __PROCESOS_PERIODICOS_InvokeClosingEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS s)
+            private static bool __PROCESOS_PERIODICOS_RRHH_InvokeClosingEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s)
             {
                 bool cancel = false;
-                s.PROCESOS_PERIODICOS_Closing(ref cancel);
+                s.PROCESOS_PERIODICOS_RRHH_Closing(ref cancel);
                 return cancel;
             }
-            private static void __PROCESOS_PERIODICOS_InvokeCreated(global::LightSwitchApplication.PROCESOS_PERIODICOS s)
+            private static void __PROCESOS_PERIODICOS_RRHH_InvokeCreated(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s)
             {
-                s.PROCESOS_PERIODICOS_Created();
+                s.PROCESOS_PERIODICOS_RRHH_Created();
             }
-            private static void __PROCESOS_PERIODICOS_InvokeActivated(global::LightSwitchApplication.PROCESOS_PERIODICOS s)
+            private static void __PROCESOS_PERIODICOS_RRHH_InvokeActivated(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s)
             {
-                s.PROCESOS_PERIODICOS_Activated();
+                s.PROCESOS_PERIODICOS_RRHH_Activated();
             }
-            private static bool __PROCESOS_PERIODICOS_InvokeSaveErrorEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS s, global::System.Exception ex)
+            private static bool __PROCESOS_PERIODICOS_RRHH_InvokeSaveErrorEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s, global::System.Exception ex)
             {
                 bool handled = false;
-                s.PROCESOS_PERIODICOS_SaveError(ex, ref handled);
+                s.PROCESOS_PERIODICOS_RRHH_SaveError(ex, ref handled);
                 return handled;
             }
 
@@ -22152,7 +23259,7 @@ namespace LightSwitchApplication
             {
             }
 
-            public new global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -22160,7 +23267,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.CommandSet Commands
+            public new global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.CommandSet Commands
             {
                 get
                 {
@@ -22168,7 +23275,7 @@ namespace LightSwitchApplication
                 }
             }
 
-            public new global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSet Methods
+            public new global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSet Methods
             {
                 get
                 {
@@ -22182,26 +23289,26 @@ namespace LightSwitchApplication
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Data _ResetearDíasAdministrativosCommand;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Data _ResetearDíasAdministrativosCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Data _ResetearDíasAdministrativosMethod;
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Data _ResetearDíasAdministrativosMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class PropertySet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties.Persona);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties.Persona);
                     }
                 }
 
@@ -22211,14 +23318,14 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class CommandSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass> ResetearDíasAdministrativos
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass> ResetearDíasAdministrativos
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.CommandSetProperties.ResetearDíasAdministrativos);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.CommandSetProperties.ResetearDíasAdministrativos);
                     }
                 }
 
@@ -22228,14 +23335,14 @@ namespace LightSwitchApplication
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             public sealed class MethodSet
-                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>
             {
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass> ResetearDíasAdministrativos
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass> ResetearDíasAdministrativos
                 {
                     get
                     {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSetProperties.ResetearDíasAdministrativos);
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSetProperties.ResetearDíasAdministrativos);
                     }
                 }
 
@@ -22247,36 +23354,36 @@ namespace LightSwitchApplication
             internal sealed class PropertySetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
                         "Persona",
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties._Persona_Stub,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties._Persona_Validate,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties._Persona_CreateQuery,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.PropertySetProperties._Persona_OnLoaded);
-                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d, object sf)
                 {
                     c(d, ref d._Persona, sf);
                 }
-                private static void _Persona_Validate(global::LightSwitchApplication.PROCESOS_PERIODICOS s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                private static void _Persona_Validate(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
                 {
                     s.Persona_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d, object[] args)
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d, object[] args)
                 {
                     return d.PersonaQuery();
                 }
-                private static void _Persona_SelectionChanged(global::LightSwitchApplication.PROCESOS_PERIODICOS s)
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s)
                 {
                     s.Persona_SelectionChanged();
                 }
-                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.PROCESOS_PERIODICOS s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
                 {
                     s.Persona_Changed(e);
                 }
-                private static void _Persona_OnLoaded(global::LightSwitchApplication.PROCESOS_PERIODICOS s, bool succeeded)
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH s, bool succeeded)
                 {
                     s.Persona_Loaded(succeeded);
                 }
@@ -22289,18 +23396,18 @@ namespace LightSwitchApplication
             internal sealed class CommandSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Entry
-                    ResetearDíasAdministrativos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Entry
+                    ResetearDíasAdministrativos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Entry(
                         "ResetearDíasAdministrativos",
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.CommandSetProperties._ResetearDíasAdministrativos_Stub,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.CommandSetProperties._ResetearDíasAdministrativos_CreateExecutableObject);
-                private static void _ResetearDíasAdministrativos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.CommandSetProperties._ResetearDíasAdministrativos_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.CommandSetProperties._ResetearDíasAdministrativos_CreateExecutableObject);
+                private static void _ResetearDíasAdministrativos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d, object sf)
                 {
                     c(d, ref d._ResetearDíasAdministrativosCommand, sf);
                 }
-                private static global::Microsoft.LightSwitch.IExecutable _ResetearDíasAdministrativos_CreateExecutableObject(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d)
+                private static global::Microsoft.LightSwitch.IExecutable _ResetearDíasAdministrativos_CreateExecutableObject(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d)
                 {
-                    return ((global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass)d).Methods.ResetearDíasAdministrativos.CreateInvocation();
+                    return ((global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass)d).Methods.ResetearDíasAdministrativos.CreateInvocation();
                 }
 
             }
@@ -22311,23 +23418,23 @@ namespace LightSwitchApplication
             internal sealed class MethodSetProperties
             {
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Entry
-                    ResetearDíasAdministrativos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Entry
+                    ResetearDíasAdministrativos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Entry(
                         "ResetearDíasAdministrativos",
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_Stub,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_CanInvoke,
-                        global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_InvokeMethod);
-                private static void _ResetearDíasAdministrativos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d, object sf)
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_CanInvoke,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_InvokeMethod);
+                private static void _ResetearDíasAdministrativos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d, object sf)
                 {
                     c(d, ref d._ResetearDíasAdministrativosMethod, sf);
                 }
-                private static global::System.Exception _ResetearDíasAdministrativos_CanInvoke(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                private static global::System.Exception _ResetearDíasAdministrativos_CanInvoke(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
                 {
                     bool result = true;
                     d.Screen.ResetearDíasAdministrativos_CanExecute(ref result);
                     return result ? null : ex;
                 }
-                private static void _ResetearDíasAdministrativos_InvokeMethod(global::LightSwitchApplication.PROCESOS_PERIODICOS.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                private static void _ResetearDíasAdministrativos_InvokeMethod(global::LightSwitchApplication.PROCESOS_PERIODICOS_RRHH.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.ResetearDíasAdministrativos_Execute();
                 }
@@ -23575,6 +24682,2248 @@ namespace LightSwitchApplication
                     return result ? null : ex;
                 }
                 private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_HISTORICO_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.SeleccionarEmpleado_Execute();
+                }
+
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class PROCESOS_PERIODICOS_ROLPRIVADO
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private PROCESOS_PERIODICOS_ROLPRIVADO() : base("LightSwitchApplication:PROCESOS_PERIODICOS_ROLPRIVADO")
+        {
+            global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static PROCESOS_PERIODICOS_ROLPRIVADO CreateInstance()
+        {
+            return new global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        /// <summary>
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
+        {
+            get
+            {
+                return global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.GetValue(this, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties.Persona);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Llama al método de pantalla GenerarVacacionesProporcionales.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void GenerarVacacionesProporcionales()
+        {
+            this.Details.Methods.GenerarVacacionesProporcionales.CreateInvocation().Execute();
+        }
+        partial void GenerarVacacionesProporcionales_CanExecute(ref bool result);
+        partial void GenerarVacacionesProporcionales_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla ResetearDíasAdministrativos.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ResetearDíasAdministrativos()
+        {
+            this.Details.Methods.ResetearDíasAdministrativos.CreateInvocation().Execute();
+        }
+        partial void ResetearDíasAdministrativos_CanExecute(ref bool result);
+        partial void ResetearDíasAdministrativos_Execute();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySet, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSet, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties.Persona;
+                var initializeCommandEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties.GenerarVacacionesProporcionales;
+                var initializeMethodEntry = global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties.GenerarVacacionesProporcionales;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry
+                __PROCESOS_PERIODICOS_ROLPRIVADOEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeSavingEvent,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeSavedEvent,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeClosingEvent,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeCreated,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeActivated,
+                    global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.__PROCESOS_PERIODICOS_ROLPRIVADO_InvokeSaveErrorEvent);
+            private static void __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeSavingEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s)
+            {
+                bool handled = false;
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_Saving(ref handled);
+                return handled;
+            }
+            private static void __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeSavedEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s)
+            {
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_Saved();
+            }
+            private static bool __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeClosingEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s)
+            {
+                bool cancel = false;
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeCreated(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s)
+            {
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_Created();
+            }
+            private static void __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeActivated(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s)
+            {
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_Activated();
+            }
+            private static bool __PROCESOS_PERIODICOS_ROLPRIVADO_InvokeSaveErrorEvent(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.PROCESOS_PERIODICOS_ROLPRIVADO_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data _GenerarVacacionesProporcionalesCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data _ResetearDíasAdministrativosCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data _GenerarVacacionesProporcionalesMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data _ResetearDíasAdministrativosMethod;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass> GenerarVacacionesProporcionales
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties.GenerarVacacionesProporcionales);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass> ResetearDíasAdministrativos
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties.ResetearDíasAdministrativos);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass> GenerarVacacionesProporcionales
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties.GenerarVacacionesProporcionales);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass> ResetearDíasAdministrativos
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties.ResetearDíasAdministrativos);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry
+                    GenerarVacacionesProporcionales = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry(
+                        "GenerarVacacionesProporcionales",
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties._GenerarVacacionesProporcionales_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties._GenerarVacacionesProporcionales_CreateExecutableObject);
+                private static void _GenerarVacacionesProporcionales_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._GenerarVacacionesProporcionalesCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _GenerarVacacionesProporcionales_CreateExecutableObject(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass)d).Methods.GenerarVacacionesProporcionales.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry
+                    ResetearDíasAdministrativos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry(
+                        "ResetearDíasAdministrativos",
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties._ResetearDíasAdministrativos_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.CommandSetProperties._ResetearDíasAdministrativos_CreateExecutableObject);
+                private static void _ResetearDíasAdministrativos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ResetearDíasAdministrativosCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ResetearDíasAdministrativos_CreateExecutableObject(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass)d).Methods.ResetearDíasAdministrativos.CreateInvocation();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry
+                    GenerarVacacionesProporcionales = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry(
+                        "GenerarVacacionesProporcionales",
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties._GenerarVacacionesProporcionales_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties._GenerarVacacionesProporcionales_CanInvoke,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties._GenerarVacacionesProporcionales_InvokeMethod);
+                private static void _GenerarVacacionesProporcionales_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._GenerarVacacionesProporcionalesMethod, sf);
+                }
+                private static global::System.Exception _GenerarVacacionesProporcionales_CanInvoke(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.GenerarVacacionesProporcionales_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _GenerarVacacionesProporcionales_InvokeMethod(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.GenerarVacacionesProporcionales_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry
+                    ResetearDíasAdministrativos = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Entry(
+                        "ResetearDíasAdministrativos",
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_Stub,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_CanInvoke,
+                        global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass.MethodSetProperties._ResetearDíasAdministrativos_InvokeMethod);
+                private static void _ResetearDíasAdministrativos_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass>.Data> c, global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ResetearDíasAdministrativosMethod, sf);
+                }
+                private static global::System.Exception _ResetearDíasAdministrativos_CanInvoke(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.ResetearDíasAdministrativos_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ResetearDíasAdministrativos_InvokeMethod(global::LightSwitchApplication.PROCESOS_PERIODICOS_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.ResetearDíasAdministrativos_Execute();
+                }
+
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class PERSONAL_LISTAR_ROLPRIVADO_REPORTE
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private PERSONAL_LISTAR_ROLPRIVADO_REPORTE() : base("LightSwitchApplication:PERSONAL_LISTAR_ROLPRIVADO_REPORTE")
+        {
+            global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static PERSONAL_LISTAR_ROLPRIVADO_REPORTE CreateInstance()
+        {
+            return new global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void PERSONAL_LISTAR_ROLPRIVADO_REPORTE_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        /// <summary>
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
+        {
+            get
+            {
+                return global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.GetValue(this, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties.Persona);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySet, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.CommandSet, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties.Persona;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass>.Entry
+                __PERSONAL_LISTAR_ROLPRIVADO_REPORTEEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass>.Entry(
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeSavingEvent,
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeSavedEvent,
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeClosingEvent,
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeCreated,
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeActivated,
+                    global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.__PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeSaveErrorEvent);
+            private static void __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeInitializeDataWorkspace(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeSavingEvent(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s)
+            {
+                bool handled = false;
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Saving(ref handled);
+                return handled;
+            }
+            private static void __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeSavedEvent(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s)
+            {
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Saved();
+            }
+            private static bool __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeClosingEvent(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s)
+            {
+                bool cancel = false;
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeCreated(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s)
+            {
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Created();
+            }
+            private static void __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeActivated(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s)
+            {
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_Activated();
+            }
+            private static bool __PERSONAL_LISTAR_ROLPRIVADO_REPORTE_InvokeSaveErrorEvent(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.PERSONAL_LISTAR_ROLPRIVADO_REPORTE_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                        (p) => (p.EsRolPrivado.HasValue && (p.EsRolPrivado == true))),
+                    "ConvenioColectivoItem");
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass>
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.PERSONAL_LISTAR_ROLPRIVADO_REPORTE s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP")
+        {
+            global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP CreateInstance()
+        {
+            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void DiasAdministrativosAprobados_SelectionChanged();
+
+        partial void DiasAdministrativosAprobados_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DiasAdministrativosAprobados_Loaded(bool succeeded);
+
+        partial void NUEVOESTADO_Changed();
+
+        partial void NombreEmpleadoSeleccionado_Changed();
+
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        partial void EmpleadoFiltroSolicitudes_Changed();
+
+        /// <summary>
+        /// Obtiene la colección visual DiasAdministrativosAprobados. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.SOLICITUDESItem> DiasAdministrativosAprobados
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void DiasAdministrativosAprobados_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.ESTADOSItem NUEVOESTADO
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NUEVOESTADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NombreEmpleadoSeleccionado
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.Persona);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EmpleadoFiltroSolicitudes
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmpleadoFiltroSolicitudes_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Llama al método de pantalla RebajarSolicitud.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void RebajarSolicitud()
+        {
+            this.Details.Methods.RebajarSolicitud.CreateInvocation().Execute();
+        }
+        partial void RebajarSolicitud_CanExecute(ref bool result);
+        partial void RebajarSolicitud_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla AnularSolicitud.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void AnularSolicitud()
+        {
+            this.Details.Methods.AnularSolicitud.CreateInvocation().Execute();
+        }
+        partial void AnularSolicitud_CanExecute(ref bool result);
+        partial void AnularSolicitud_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla TodosLosEmpleados.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void TodosLosEmpleados()
+        {
+            this.Details.Methods.TodosLosEmpleados.CreateInvocation().Execute();
+        }
+        partial void TodosLosEmpleados_CanExecute(ref bool result);
+        partial void TodosLosEmpleados_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla SeleccionarEmpleado.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void SeleccionarEmpleado()
+        {
+            this.Details.Methods.SeleccionarEmpleado.CreateInvocation().Execute();
+        }
+        partial void SeleccionarEmpleado_CanExecute(ref bool result);
+        partial void SeleccionarEmpleado_Execute();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados;
+                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties.RebajarSolicitud;
+                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties.RebajarSolicitud;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RPEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeSavingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeSavedEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeClosingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeCreated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeActivated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.__SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeSaveErrorEvent);
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+            {
+                bool handled = false;
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Saving(ref handled);
+                return handled;
+            }
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+            {
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Saved();
+            }
+            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+            {
+                bool cancel = false;
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+            {
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Created();
+            }
+            private static void __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+            {
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_Activated();
+            }
+            private static bool __SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable DiasAdministrativosAprobadosQuery(string Rut_Persona)
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.DiasAdministrativosAprobados(),
+                        (s) => ((s.PersonaItem1.EsRolPrivado.HasValue && (s.PersonaItem1.EsRolPrivado == true)) && ((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)))),
+                    "PersonaItem1");
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                    (p) => (p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)));
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _DiasAdministrativosAprobados;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _RebajarSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _AnularSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _TodosLosEmpleadosCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _SeleccionarEmpleadoCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _RebajarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _AnularSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _TodosLosEmpleadosMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data _SeleccionarEmpleadoMethod;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> DiasAdministrativosAprobados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.DiasAdministrativosAprobados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string> NombreEmpleadoSeleccionado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string> EmpleadoFiltroSolicitudes
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> RebajarSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> AnularSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties.AnularSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties.SeleccionarEmpleado);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> RebajarSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> AnularSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties.AnularSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties.SeleccionarEmpleado);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    DiasAdministrativosAprobados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "DiasAdministrativosAprobados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._DiasAdministrativosAprobados_OnLoaded);
+                private static void _DiasAdministrativosAprobados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._DiasAdministrativosAprobados, sf);
+                }
+                private static void _DiasAdministrativosAprobados_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.DiasAdministrativosAprobados_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _DiasAdministrativosAprobados_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object[] args)
+                {
+                    return d.DiasAdministrativosAprobadosQuery((string)args[0]);
+                }
+                private static void _DiasAdministrativosAprobados_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+                {
+                    s.DiasAdministrativosAprobados_SelectionChanged();
+                }
+                private static void _DiasAdministrativosAprobados_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.DiasAdministrativosAprobados_Changed(e);
+                }
+                private static void _DiasAdministrativosAprobados_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, bool succeeded)
+                {
+                    s.DiasAdministrativosAprobados_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                        "NUEVOESTADO",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
+                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NUEVOESTADO, sf);
+                }
+                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NUEVOESTADO_Validate(r);
+                }
+                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+                {
+                    s.NUEVOESTADO_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Entry
+                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Entry(
+                        "NombreEmpleadoSeleccionado",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
+                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
+                }
+                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NombreEmpleadoSeleccionado_Validate(r);
+                }
+                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+                {
+                    s.NombreEmpleadoSeleccionado_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Entry
+                    EmpleadoFiltroSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Entry(
+                        "EmpleadoFiltroSolicitudes",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_OnValueChanged);
+                private static void _EmpleadoFiltroSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmpleadoFiltroSolicitudes, sf);
+                }
+                private static void _EmpleadoFiltroSolicitudes_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EmpleadoFiltroSolicitudes_Validate(r);
+                }
+                private static void _EmpleadoFiltroSolicitudes_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP s)
+                {
+                    s.EmpleadoFiltroSolicitudes_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "RebajarSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RebajarSolicitudCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._AnularSolicitud_CreateExecutableObject);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AnularSolicitudCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _AnularSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass)d).Methods.AnularSolicitud.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._TodosLosEmpleados_CreateExecutableObject);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _TodosLosEmpleados_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass)d).Methods.TodosLosEmpleados.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_CreateExecutableObject);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarEmpleado_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass)d).Methods.SeleccionarEmpleado.CreateInvocation();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "RebajarSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RebajarSolicitudMethod, sf);
+                }
+                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.RebajarSolicitud_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.RebajarSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._AnularSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._AnularSolicitud_InvokeMethod);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AnularSolicitudMethod, sf);
+                }
+                private static global::System.Exception _AnularSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.AnularSolicitud_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _AnularSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.AnularSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._TodosLosEmpleados_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._TodosLosEmpleados_InvokeMethod);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosMethod, sf);
+                }
+                private static global::System.Exception _TodosLosEmpleados_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.TodosLosEmpleados_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _TodosLosEmpleados_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.TodosLosEmpleados_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_InvokeMethod);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoMethod, sf);
+                }
+                private static global::System.Exception _SeleccionarEmpleado_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.SeleccionarEmpleado_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.SeleccionarEmpleado_Execute();
+                }
+
+            }
+        }
+    }
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class SOLICITUDES_REBAJAR_VACACIONES_RP
+        : global::Microsoft.LightSwitch.Framework.Client.ScreenObject<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>
+    {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private SOLICITUDES_REBAJAR_VACACIONES_RP() : base("LightSwitchApplication:SOLICITUDES_REBAJAR_VACACIONES_RP")
+        {
+            global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.Initialize(this);
+        }
+
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public static SOLICITUDES_REBAJAR_VACACIONES_RP CreateInstance()
+        {
+            return new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP(
+            );
+        }
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_Activated();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_Saving(ref bool handled);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_Saved();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_Closing(ref bool cancel);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_REBAJAR_VACACIONES_RP_SaveError(global::System.Exception exception, ref bool handled);
+     
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)((global::Microsoft.LightSwitch.Details.Client.IScreenDetails)this.Details).DataWorkspace;
+            }
+        }
+        
+        #endregion
+ 
+        partial void Vacaciones_Aprobadas_SelectionChanged();
+
+        partial void Vacaciones_Aprobadas_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Vacaciones_Aprobadas_Loaded(bool succeeded);
+
+        partial void NUEVOESTADO_Changed();
+
+        partial void NombreEmpleadoSeleccionado_Changed();
+
+        partial void Persona_SelectionChanged();
+
+        partial void Persona_Changed(global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e);
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Loaded(bool succeeded);
+
+        partial void EmpleadoFiltroSolicitudes_Changed();
+
+        /// <summary>
+        /// Obtiene la colección visual Vacaciones_Aprobadas. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.SOLICITUDESItem> Vacaciones_Aprobadas
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Vacaciones_Aprobadas_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.ESTADOSItem NUEVOESTADO
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.NUEVOESTADO, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NUEVOESTADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string NombreEmpleadoSeleccionado
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.Client.VisualCollection<global::LightSwitchApplication.PersonaItem> Persona
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.Persona);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Persona_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EmpleadoFiltroSolicitudes
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmpleadoFiltroSolicitudes_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        /// <summary>
+        /// Llama al método de pantalla AnularSolicitud.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void AnularSolicitud()
+        {
+            this.Details.Methods.AnularSolicitud.CreateInvocation().Execute();
+        }
+        partial void AnularSolicitud_CanExecute(ref bool result);
+        partial void AnularSolicitud_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla RebajarSolicitud.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void RebajarSolicitud()
+        {
+            this.Details.Methods.RebajarSolicitud.CreateInvocation().Execute();
+        }
+        partial void RebajarSolicitud_CanExecute(ref bool result);
+        partial void RebajarSolicitud_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla TodosLosEmpleados.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void TodosLosEmpleados()
+        {
+            this.Details.Methods.TodosLosEmpleados.CreateInvocation().Execute();
+        }
+        partial void TodosLosEmpleados_CanExecute(ref bool result);
+        partial void TodosLosEmpleados_Execute();
+
+        /// <summary>
+        /// Llama al método de pantalla SeleccionarEmpleado.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void SeleccionarEmpleado()
+        {
+            this.Details.Methods.SeleccionarEmpleado.CreateInvocation().Execute();
+        }
+        partial void SeleccionarEmpleado_CanExecute(ref bool result);
+        partial void SeleccionarEmpleado_Execute();
+
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass
+            : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSet, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSet>
+        {
+
+            static DetailsClass()
+            {
+                var initializePropertyEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas;
+                var initializeCommandEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties.AnularSolicitud;
+                var initializeMethodEntry = global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties.AnularSolicitud;
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                __SOLICITUDES_REBAJAR_VACACIONES_RPEntry = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenDetails<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeInitializeDataWorkspace,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeSavingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeSavedEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeClosingEvent,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeCreated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeActivated,
+                    global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.__SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeSaveErrorEvent);
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeInitializeDataWorkspace(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+            {
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_InitializeDataWorkspace(saveChangesTo);
+            }
+            private static bool __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeSavingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+            {
+                bool handled = false;
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_Saving(ref handled);
+                return handled;
+            }
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeSavedEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+            {
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_Saved();
+            }
+            private static bool __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeClosingEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+            {
+                bool cancel = false;
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_Closing(ref cancel);
+                return cancel;
+            }
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeCreated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+            {
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_Created();
+            }
+            private static void __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeActivated(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+            {
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_Activated();
+            }
+            private static bool __SOLICITUDES_REBAJAR_VACACIONES_RP_InvokeSaveErrorEvent(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::System.Exception ex)
+            {
+                bool handled = false;
+                s.SOLICITUDES_REBAJAR_VACACIONES_RP_SaveError(ex, ref handled);
+                return handled;
+            }
+
+            public DetailsClass() : base()
+            {
+            }
+
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSet Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+
+            public new global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSet Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable Vacaciones_AprobadasQuery(string Rut_Persona)
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.VacacionesAprobadas(),
+                        (s) => (((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)) && (s.PersonaItem1.EsRolPrivado.HasValue && (s.PersonaItem1.EsRolPrivado == true)))),
+                    "PersonaItem1");
+            }
+
+            private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
+            {
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                    (p) => (p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)));
+            }
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data _Vacaciones_Aprobadas;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _NUEVOESTADO;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _AnularSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _RebajarSolicitudCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _TodosLosEmpleadosCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _SeleccionarEmpleadoCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _AnularSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _RebajarSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _TodosLosEmpleadosMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data _SeleccionarEmpleadoMethod;
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenPropertySet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem> Vacaciones_Aprobadas
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.Vacaciones_Aprobadas);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem> NUEVOESTADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.NUEVOESTADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string> NombreEmpleadoSeleccionado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.Persona);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string> EmpleadoFiltroSolicitudes
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties.EmpleadoFiltroSolicitudes);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class CommandSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommandSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> AnularSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties.AnularSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> RebajarSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties.SeleccionarEmpleado);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class MethodSet
+                : global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethodSet<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>
+            {
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> AnularSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties.AnularSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> RebajarSolicitud
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties.RebajarSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> TodosLosEmpleados
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties.TodosLosEmpleados);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass> SeleccionarEmpleado
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties.SeleccionarEmpleado);
+                    }
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class PropertySetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry
+                    Vacaciones_Aprobadas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Entry(
+                        "Vacaciones_Aprobadas",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Vacaciones_Aprobadas_OnLoaded);
+                private static void _Vacaciones_Aprobadas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.SOLICITUDESItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Vacaciones_Aprobadas, sf);
+                }
+                private static void _Vacaciones_Aprobadas_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Vacaciones_Aprobadas_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Vacaciones_Aprobadas_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object[] args)
+                {
+                    return d.Vacaciones_AprobadasQuery((string)args[0]);
+                }
+                private static void _Vacaciones_Aprobadas_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+                {
+                    s.Vacaciones_Aprobadas_SelectionChanged();
+                }
+                private static void _Vacaciones_Aprobadas_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Vacaciones_Aprobadas_Changed(e);
+                }
+                private static void _Vacaciones_Aprobadas_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, bool succeeded)
+                {
+                    s.Vacaciones_Aprobadas_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
+                    NUEVOESTADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
+                        "NUEVOESTADO",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._NUEVOESTADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._NUEVOESTADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._NUEVOESTADO_OnValueChanged);
+                private static void _NUEVOESTADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NUEVOESTADO, sf);
+                }
+                private static void _NUEVOESTADO_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NUEVOESTADO_Validate(r);
+                }
+                private static void _NUEVOESTADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+                {
+                    s.NUEVOESTADO_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Entry
+                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Entry(
+                        "NombreEmpleadoSeleccionado",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
+                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
+                }
+                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.NombreEmpleadoSeleccionado_Validate(r);
+                }
+                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+                {
+                    s.NombreEmpleadoSeleccionado_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    Persona = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "Persona",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Persona_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Persona_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Persona_CreateQuery,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Persona_SelectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Persona_OnCollectionChanged,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._Persona_OnLoaded);
+                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCollectionProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Persona, sf);
+                }
+                private static void _Persona_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.Persona_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.IDataServiceQueryable _Persona_CreateQuery(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object[] args)
+                {
+                    return d.PersonaQuery();
+                }
+                private static void _Persona_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+                {
+                    s.Persona_SelectionChanged();
+                }
+                private static void _Persona_OnCollectionChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+                {
+                    s.Persona_Changed(e);
+                }
+                private static void _Persona_OnLoaded(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, bool succeeded)
+                {
+                    s.Persona_Loaded(succeeded);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Entry
+                    EmpleadoFiltroSolicitudes = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Entry(
+                        "EmpleadoFiltroSolicitudes",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.PropertySetProperties._EmpleadoFiltroSolicitudes_OnValueChanged);
+                private static void _EmpleadoFiltroSolicitudes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmpleadoFiltroSolicitudes, sf);
+                }
+                private static void _EmpleadoFiltroSolicitudes_Validate(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EmpleadoFiltroSolicitudes_Validate(r);
+                }
+                private static void _EmpleadoFiltroSolicitudes_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP s)
+                {
+                    s.EmpleadoFiltroSolicitudes_Changed();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class CommandSetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._AnularSolicitud_CreateExecutableObject);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AnularSolicitudCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _AnularSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass)d).Methods.AnularSolicitud.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "RebajarSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._RebajarSolicitud_CreateExecutableObject);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RebajarSolicitudCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarSolicitud_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass)d).Methods.RebajarSolicitud.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._TodosLosEmpleados_CreateExecutableObject);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _TodosLosEmpleados_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass)d).Methods.TodosLosEmpleados.CreateInvocation();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.CommandSetProperties._SeleccionarEmpleado_CreateExecutableObject);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _SeleccionarEmpleado_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass)d).Methods.SeleccionarEmpleado.CreateInvocation();
+                }
+
+            }
+
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal sealed class MethodSetProperties
+            {
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    AnularSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "AnularSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._AnularSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._AnularSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._AnularSolicitud_InvokeMethod);
+                private static void _AnularSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AnularSolicitudMethod, sf);
+                }
+                private static global::System.Exception _AnularSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.AnularSolicitud_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _AnularSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.AnularSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    RebajarSolicitud = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "RebajarSolicitud",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._RebajarSolicitud_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._RebajarSolicitud_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._RebajarSolicitud_InvokeMethod);
+                private static void _RebajarSolicitud_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RebajarSolicitudMethod, sf);
+                }
+                private static global::System.Exception _RebajarSolicitud_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.RebajarSolicitud_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _RebajarSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.RebajarSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    TodosLosEmpleados = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "TodosLosEmpleados",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._TodosLosEmpleados_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._TodosLosEmpleados_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._TodosLosEmpleados_InvokeMethod);
+                private static void _TodosLosEmpleados_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._TodosLosEmpleadosMethod, sf);
+                }
+                private static global::System.Exception _TodosLosEmpleados_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.TodosLosEmpleados_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _TodosLosEmpleados_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.TodosLosEmpleados_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry
+                    SeleccionarEmpleado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Entry(
+                        "SeleccionarEmpleado",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass.MethodSetProperties._SeleccionarEmpleado_InvokeMethod);
+                private static void _SeleccionarEmpleado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SeleccionarEmpleadoMethod, sf);
+                }
+                private static global::System.Exception _SeleccionarEmpleado_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.SeleccionarEmpleado_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _SeleccionarEmpleado_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_VACACIONES_RP.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.SeleccionarEmpleado_Execute();
                 }

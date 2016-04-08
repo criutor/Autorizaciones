@@ -544,6 +544,8 @@ namespace LightSwitchApplication
 
             this.PersonaItem.Cargo = null;
 
+            this.PersonaItem.IDGerencia_para_subgerentes = null;
+
             this.PersonaItem.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
 
             this.PersonaItem.Superior_SubGerente.First().Delete();

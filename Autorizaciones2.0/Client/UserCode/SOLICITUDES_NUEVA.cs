@@ -49,12 +49,19 @@ namespace LightSwitchApplication
                 else{this.SOLICITUD.PersonaItem1 = this.PersonaPorRutAD.First();}
 
             //Configura quien sera el primero en aprobar la solicitud
-        
+
+            if (this.PersonaPorRutAD.First().Es_GerenteGeneral == true)
+            {
+                this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                this.SOLICITUD.Completada = true;
+            }
+
             if (this.PersonaPorRutAD.First().Es_Gerente == true)
             {   
 
                 //Si el solicitante es gerente
-                this.SOLICITUD.Departamento = " Gerencia de " + this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.VB_Gerente = true;
                 this.SOLICITUD.VB_GerenteGeneral = false;
@@ -85,7 +92,7 @@ namespace LightSwitchApplication
             else 
                 if (this.PersonaPorRutAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
                 {   
-                    this.SOLICITUD.Departamento = " SubGerencia de " + this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
+                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
                     this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Division_GerenciaItem.Nombre;
                     this.SOLICITUD.VB_SubGerente = true;
 
@@ -835,7 +842,7 @@ namespace LightSwitchApplication
         {
             if (TIPOSOLICITUD == 3 || TIPOSOLICITUD == 4)
             {
-                if (this.OBSERVACIONES == null) { results.AddPropertyError("La justificación no puede quedar vacia"); }
+                if (this.OBSERVACIONES == null) { results.AddPropertyError("La justificación no puede quedar vacía"); }
             }
         }
 
