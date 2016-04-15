@@ -178,6 +178,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\ADMINISTRAR_CARGOS_ROL_PRIVADO.cs" />
+    <Compile Include="UserCode\ADMINISTRAR_EMPLEADOS_ROLPRIVADO.cs" />
     <Compile Include="UserCode\ADMINISTRAR_FERIADOS.cs" />
     <Compile Include="UserCode\Application.cs" />
     <Compile Include="UserCode\ADMINISTRAR_CONVENIOS_COLECTIVOS.cs" />
@@ -195,7 +196,7 @@
     <Compile Include="UserCode\SOLICITUDES_A_CARGO.cs" />
     <Compile Include="UserCode\PERSONAL_CREAR_ROL_PRIVADO.cs" />
     <Compile Include="UserCode\ADMINISTRAR_DIVISIONES.cs" />
-    <Compile Include="UserCode\ADMINISTRAR_EMPLEADOS.cs" />
+    <Compile Include="UserCode\ADMINISTRAR_EMPLEADOS_RRHH.cs" />
     <Compile Include="UserCode\PERSONAL_CREAR_DESDE_FIN700.cs" />
     <Compile Include="UserCode\PERSONAL_LISTAR_ROLPRIVADO.cs">
       <SubType>Code</SubType>
@@ -208,6 +209,7 @@
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_PERMISOS_NRP.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_VACACIONES_NRP.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_VACACIONES_RP.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REPORTE_RRHH.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Client.lsml">

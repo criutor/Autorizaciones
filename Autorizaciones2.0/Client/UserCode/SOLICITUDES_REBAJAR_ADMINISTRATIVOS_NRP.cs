@@ -22,52 +22,55 @@ namespace LightSwitchApplication
                 this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
             }
 
-            this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.DiasAdministrativosAprobados.SelectedItem.NumeroDiasTomados;
-            
-            this.DiasAdministrativosAprobados.SelectedItem.Rebajada = true;
-            this.DiasAdministrativosAprobados.SelectedItem.Completada = false;
-             
-            //this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
-            this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada";
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Los días solicitados por el empleado serán descontados de su saldo de días administrativos. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
 
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.DiasAdministrativosAprobados.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
 
-            this.Save();
-            this.Refresh();
+                this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.DiasAdministrativosAprobados.SelectedItem.NumeroDiasTomados;
 
+                this.DiasAdministrativosAprobados.SelectedItem.Rebajada = true;
+                this.DiasAdministrativosAprobados.SelectedItem.Completada = false;
+
+                //this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
+                this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada";
+
+                this.NUEVOESTADO = new ESTADOSItem();
+                this.NUEVOESTADO.SOLICITUDESItem = this.DiasAdministrativosAprobados.SelectedItem;
+                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                this.Save();
+                this.Refresh();
+            }
 
         }
 
 
         partial void AnularSolicitud_Execute()
         {
-            if (this.DiasAdministrativosAprobados.SelectedItem.Termino.Value > DateTime.Today)
-            { }
-            else
-            {
-                this.ShowMessageBox("Para anular una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-            }
-
             // Escriba el código aquí.
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("La solicitud será anulada. Esta acción se utiliza cuando el empleado no ha tomado los días solicitados. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
 
-            this.DiasAdministrativosAprobados.SelectedItem.Caducada = true;
-            this.DiasAdministrativosAprobados.SelectedItem.Completada = false;
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
 
-            //this.DiasAdministrativosAprobados.SelectedItem.Estado = "Anulada por RR.HH";
-            this.DiasAdministrativosAprobados.SelectedItem.Estado = "Anulada";
+                this.DiasAdministrativosAprobados.SelectedItem.Caducada = true;
+                this.DiasAdministrativosAprobados.SelectedItem.Completada = false;
 
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.DiasAdministrativosAprobados.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
+                //this.DiasAdministrativosAprobados.SelectedItem.Estado = "Anulada por RR.HH";
+                this.DiasAdministrativosAprobados.SelectedItem.Estado = "Anulada";
 
-            this.Save();
-            this.Refresh();
+                this.NUEVOESTADO = new ESTADOSItem();
+                this.NUEVOESTADO.SOLICITUDESItem = this.DiasAdministrativosAprobados.SelectedItem;
+                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
+                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                this.Save();
+                this.Refresh();
+            }
         }
 
         partial void RebajarSolicitud_CanExecute(ref bool result)

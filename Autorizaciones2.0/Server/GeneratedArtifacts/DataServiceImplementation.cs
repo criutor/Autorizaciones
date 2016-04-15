@@ -55,12 +55,12 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
-        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> SolicitudesPendientes(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_JefeDirectoNulo, global::System.Nullable<bool> VB_SubGerenteNulo, global::System.Nullable<bool> VB_GerenteNulo)
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> SolicitudesPendientes(global::System.Nullable<int> Id_Gerencia, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Area, string Rut_Persona, global::System.Nullable<bool> VB_Empleado, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> Es_Gerente)
         {
             global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
             query = global::System.Linq.Queryable.Where(
                 this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
-                (s) => ((((((((((((Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia)) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (Id_SubGerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Area.HasValue && (s.PersonaItem1.Division_AreaItem.Id_Area == Id_Area))) || ((s.PersonaItem1.Es_SubGerente.HasValue && (s.PersonaItem1.Es_SubGerente == true)) && (s.PersonaItem1.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (s.PersonaItem1.IDGerencia_para_subgerentes == Id_Gerencia))))) || ((s.PersonaItem1.Es_Gerente.HasValue && (s.PersonaItem1.Es_Gerente == true)) && (s.VB_GerenteGeneral.HasValue && (s.VB_GerenteGeneral == false)))) && ((((s.Completada.HasValue && (s.Completada == true)) == false) && ((s.Rechazada.HasValue && (s.Rechazada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false))) && ((s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0) == false)) && (s.VB_Empleado.HasValue && (s.VB_Empleado == true))) && ((VB_JefeDirecto.HasValue == false) || (s.VB_JefeDirecto.HasValue && (VB_JefeDirecto.HasValue && (s.VB_JefeDirecto == VB_JefeDirecto))))) && ((VB_SubGerente.HasValue == false) || (s.VB_SubGerente.HasValue && (VB_SubGerente.HasValue && (s.VB_SubGerente == VB_SubGerente))))) && ((VB_Gerente.HasValue == false) || (s.VB_Gerente.HasValue && (VB_Gerente.HasValue && (s.VB_Gerente == VB_Gerente))))));
+                (s) => ((((((((((((Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia)) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (Id_SubGerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Area.HasValue && (s.PersonaItem1.Division_AreaItem.Id_Area == Id_Area))) || ((s.PersonaItem1.Es_SubGerente.HasValue && (s.PersonaItem1.Es_SubGerente == true)) && (s.PersonaItem1.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (s.PersonaItem1.IDGerencia_para_subgerentes == Id_Gerencia))))) || ((s.PersonaItem1.Es_Gerente.HasValue && (Es_Gerente.HasValue && (s.PersonaItem1.Es_Gerente == Es_Gerente))) && (s.VB_GerenteGeneral.HasValue && (s.VB_GerenteGeneral == false)))) && ((((((s.Completada.HasValue && (s.Completada == true)) == false) && ((s.Rechazada.HasValue && (s.Rechazada == true)) == false)) && ((s.Cancelada.HasValue && (s.Cancelada == true)) == false)) && ((s.Rebajada.HasValue && (s.Rebajada == true)) == false)) && ((s.Caducada.HasValue && (s.Caducada == true)) == false))) && ((VB_Empleado.HasValue == false) || (s.VB_Empleado.HasValue && (VB_Empleado.HasValue && (s.VB_Empleado == VB_Empleado))))) && ((VB_JefeDirecto.HasValue == false) || (s.VB_JefeDirecto.HasValue && (VB_JefeDirecto.HasValue && (s.VB_JefeDirecto == VB_JefeDirecto))))) && ((VB_SubGerente.HasValue == false) || (s.VB_SubGerente.HasValue && (VB_SubGerente.HasValue && (s.VB_SubGerente == VB_SubGerente))))) && ((VB_Gerente.HasValue == false) || (s.VB_Gerente.HasValue && (VB_Gerente.HasValue && (s.VB_Gerente == VB_Gerente))))) && ((s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0) == false)));
             return query;
         }
     
@@ -245,6 +245,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem();
             }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem();
+            }
     
             return base.CreateObject(type);
         }
@@ -363,6 +367,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.ConsultarEmailUsuarioADItem))
             {
                 return new global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.CorreosDeAvisosItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem();
             }
             return null;
         }
@@ -628,6 +636,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ConsultarEmailUsuarioADItem) == definitionType)
             {
                 return typeof(global::Autorizaciones_AdminsData.Implementation.ConsultarEmailUsuarioADItem);
+            }
+            if (typeof(global::LightSwitchApplication.CorreosDeAvisosItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {
@@ -2190,6 +2202,39 @@ namespace Autorizaciones_AdminsData.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class ConsultarEmailUsuarioADItem :
         global::LightSwitchApplication.ConsultarEmailUsuarioADItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class CorreosDeAvisosItem :
+        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

@@ -59,6 +59,8 @@ namespace LightSwitchApplication
         partial void SOLICITUDES_MIS_SOLICITUDES_Activated()
         {
             //guarda en this.RutUsuarioAD el rut del usuario AD
+
+            
             this.ConsultarRutUsuarioAD_Execute();
 
             if (this.RutUsuarioAD == null)
@@ -91,6 +93,16 @@ namespace LightSwitchApplication
                 //Cuando se encuentra un empleado asociado al rut de AD pero este no ha sido asociado a un cargo de jefatura o área
                 this.MENSAJECuentaNoAsociada_Execute(); this.Close(true);
             }
+            else
+            {
+                if (this.PersonaPorRut.First().EsRolPrivado != true && this.PersonaPorRut.First().Es_JefeDirecto != true)
+                {
+                    this.FindControl("AceptarHrsExtras").IsVisible = true;
+                }
+            }
+
+            
+
         }
 
         // Abre la ventana modal correspondiente al tipo de usuario. Rol privado, jefe de área o administrativo.
@@ -317,7 +329,7 @@ namespace LightSwitchApplication
                             }
         }
 
-        partial void AceptarSolicitud_Execute()
+        partial void AceptarHrsExtras_Execute()
         {
             this.OpenModalWindow("AceptarSolicitudMW");
         }
@@ -407,7 +419,7 @@ namespace LightSwitchApplication
             catch { }
         }
 
-        partial void AceptarSolicitud_CanExecute(ref bool result)
+        partial void AceptarHrsExtras_CanExecute(ref bool result)
         {
             try
             {

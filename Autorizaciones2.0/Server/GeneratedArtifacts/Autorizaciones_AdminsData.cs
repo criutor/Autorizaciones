@@ -504,6 +504,22 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         private ObjectSet<ConsultarEmailUsuarioADItem> _ConsultarEmailUsuarioAD;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<CorreosDeAvisosItem> CorreosDeAvisos
+        {
+            get
+            {
+                if ((_CorreosDeAvisos == null))
+                {
+                    _CorreosDeAvisos = base.CreateObjectSet<CorreosDeAvisosItem>("CorreosDeAvisos");
+                }
+                return _CorreosDeAvisos;
+            }
+        }
+        private ObjectSet<CorreosDeAvisosItem> _CorreosDeAvisos;
 
         #endregion
 
@@ -715,6 +731,14 @@ namespace Autorizaciones_AdminsData.Implementation
         public void AddToConsultarEmailUsuarioAD(ConsultarEmailUsuarioADItem consultarEmailUsuarioADItem)
         {
             base.AddObject("ConsultarEmailUsuarioAD", consultarEmailUsuarioADItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet CorreosDeAvisos. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToCorreosDeAvisos(CorreosDeAvisosItem correosDeAvisosItem)
+        {
+            base.AddObject("CorreosDeAvisos", correosDeAvisosItem);
         }
 
         #endregion
@@ -1631,6 +1655,161 @@ namespace Autorizaciones_AdminsData.Implementation
 
         #endregion
 
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="CorreosDeAvisosItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CorreosDeAvisosItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto CorreosDeAvisosItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        /// <param name="nombre">Valor inicial de la propiedad Nombre.</param>
+        public static CorreosDeAvisosItem CreateCorreosDeAvisosItem(global::System.Int32 id, global::System.String nombre)
+        {
+            CorreosDeAvisosItem correosDeAvisosItem = new CorreosDeAvisosItem();
+            correosDeAvisosItem.id = id;
+            correosDeAvisosItem.Nombre = nombre;
+            return correosDeAvisosItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = value;
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombre
+        {
+            get
+            {
+                return _Nombre;
+            }
+            set
+            {
+                OnNombreChanging(value);
+                ReportPropertyChanging("Nombre");
+                _Nombre = value;
+                ReportPropertyChanged("Nombre");
+                OnNombreChanged();
+            }
+        }
+        private global::System.String _Nombre;
+        partial void OnNombreChanging(global::System.String value);
+        partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = value;
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Descripcion
+        {
+            get
+            {
+                return _Descripcion;
+            }
+            set
+            {
+                OnDescripcionChanging(value);
+                ReportPropertyChanging("Descripcion");
+                _Descripcion = value;
+                ReportPropertyChanged("Descripcion");
+                OnDescripcionChanged();
+            }
+        }
+        private global::System.String _Descripcion;
+        partial void OnDescripcionChanging(global::System.String value);
+        partial void OnDescripcionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> RolPrivado
+        {
+            get
+            {
+                return _RolPrivado;
+            }
+            set
+            {
+                OnRolPrivadoChanging(value);
+                ReportPropertyChanging("RolPrivado");
+                _RolPrivado = value;
+                ReportPropertyChanged("RolPrivado");
+                OnRolPrivadoChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _RolPrivado;
+        partial void OnRolPrivadoChanging(Nullable<global::System.Boolean> value);
+        partial void OnRolPrivadoChanged();
+
+        #endregion
+
+    
     }
     
     /// <summary>

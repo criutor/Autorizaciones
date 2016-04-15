@@ -27,6 +27,7 @@
     <EntitySet Name="CargoRolPrivado" EntityType="Autorizaciones_AdminsDataStore.CargoRolPrivadoItem" store:Type="Tables" Schema="dbo" Table="CargoRolPrivado" />
     <EntitySet Name="ConsultarRutUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarRutUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarRutUsuarioAD" />
     <EntitySet Name="ConsultarEmailUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarEmailUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarEmailUsuarioAD" />
+    <EntitySet Name="CorreosDeAvisos" EntityType="Autorizaciones_AdminsDataStore.CorreosDeAvisosItem" store:Type="Tables" Schema="dbo" Table="CorreosDeAvisos" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -430,6 +431,16 @@
     <Property Name="NombreUsuario" Type="nvarchar" MaxLength="50" />
     <Property Name="EmailUsuario" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="CorreosDeAvisosItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="200" />
+    <Property Name="RolPrivado" Type="bit" />
+  </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />
     <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="*" />
@@ -443,7 +454,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Division_Area_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="0..1" />
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">
@@ -603,7 +616,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Division_Gerencia">
-    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1" />
+    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Gerencia">
@@ -627,7 +642,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Division_Area">
-    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="1" />
+    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Area">
@@ -651,7 +668,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="1" />
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">

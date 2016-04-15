@@ -340,5 +340,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CorreosDeAvisos">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CorreosDeAvisosItem)">
+        <MappingFragment StoreEntitySet="CorreosDeAvisos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="RolPrivado" ColumnName="RolPrivado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

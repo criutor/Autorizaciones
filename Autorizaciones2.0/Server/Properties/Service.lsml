@@ -1000,6 +1000,43 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="CorreosDeAvisos">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="CorreosDeAvisos" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CorreosDeAvisosItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Nombre"
+          Nullable="False"
+          Property="LightSwitchCommonModule:CorreosDeAvisosItem/Properties[Nombre]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Email"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CorreosDeAvisosItem/Properties[Email]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="200"
+          Name="Descripcion"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CorreosDeAvisosItem/Properties[Descripcion]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="RolPrivado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CorreosDeAvisosItem/Properties[RolPrivado]"
+          Type="bit" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Division_Area">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet

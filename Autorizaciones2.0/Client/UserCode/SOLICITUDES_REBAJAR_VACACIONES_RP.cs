@@ -15,32 +15,28 @@ namespace LightSwitchApplication
         partial void AnularSolicitud_Execute()
         {
             // Escriba el código aquí.
-            if (this.Vacaciones_Aprobadas.SelectedItem.Termino.Value > DateTime.Today)
-            { }
-            else
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("La solicitud será anulada. Esta acción se utiliza cuando el empleado no ha tomado los días solicitados. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
             {
-                this.ShowMessageBox("Para anular una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+
+                this.Vacaciones_Aprobadas.SelectedItem.Caducada = true;
+                this.Vacaciones_Aprobadas.SelectedItem.Completada = false;
+
+
+                //this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada por RR.HH";
+                this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada";
+
+
+                this.NUEVOESTADO = new ESTADOSItem();
+                this.NUEVOESTADO.SOLICITUDESItem = this.Vacaciones_Aprobadas.SelectedItem;
+                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
+                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                this.Save();
+                this.Refresh();
             }
-
-            // Escriba el código aquí.
-
-
-            this.Vacaciones_Aprobadas.SelectedItem.Caducada = true;
-            this.Vacaciones_Aprobadas.SelectedItem.Completada = false;
-
-
-            //this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada por RR.HH";
-            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Anulada";
-
-
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.Vacaciones_Aprobadas.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
-
-            this.Save();
-            this.Refresh();
 
         }
 
@@ -54,28 +50,34 @@ namespace LightSwitchApplication
                 this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
             }
 
-            this.Vacaciones_Aprobadas.SelectedItem.Rebajada = true;
-            this.Vacaciones_Aprobadas.SelectedItem.Completada = false;
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Los días solicitados por el empleado serán descontados de su saldo de vacaciones. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
 
-            //this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
-            this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada";
-
-            if (this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.EsRolPrivado == true)
+            if (result == System.Windows.MessageBoxResult.Yes)
             {
-                //***this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
-                this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
-                //this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
 
+                this.Vacaciones_Aprobadas.SelectedItem.Rebajada = true;
+                this.Vacaciones_Aprobadas.SelectedItem.Completada = false;
+
+                //this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada por RR.HH";
+                this.Vacaciones_Aprobadas.SelectedItem.Estado = "Rebajada";
+
+                if (this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.EsRolPrivado == true)
+                {
+                    //***this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+                    this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+                    //this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+
+                }
+
+                this.NUEVOESTADO = new ESTADOSItem();
+                this.NUEVOESTADO.SOLICITUDESItem = this.Vacaciones_Aprobadas.SelectedItem;
+                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                this.Save();
+                this.Refresh();
             }
-            
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.Vacaciones_Aprobadas.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
-
-            this.Save();
-            this.Refresh();
 
         }
 

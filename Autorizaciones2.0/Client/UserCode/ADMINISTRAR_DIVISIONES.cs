@@ -255,11 +255,7 @@ namespace LightSwitchApplication
             this.NombreDivision = null;
         }
 
-        partial void Division_GerenciaDeleteSelected_CanExecute(ref bool result)
-        {
-            // Escriba el código aquí.
-
-        }
+ 
 
         partial void Division_GerenciaDeleteSelected_Execute()
         {
@@ -270,7 +266,63 @@ namespace LightSwitchApplication
             }
             else
             {
-                this.Division_Gerencia.SelectedItem.Delete();
+                    if(this.Division_Gerencia.SelectedItem.Superior_Gerente.Count() > 0)
+                    {
+                        this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Es_Gerente = false;
+                        this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Cargo = null;
+                    }
+
+                    this.Division_Gerencia.SelectedItem.Delete();
+                    /*
+                    try
+                    {
+                        this.Save();
+                    }
+                    catch (Exception e) { throw new ValidationException("Es necesario eliminar las subgerencias y áreas asociadas a esta gerencia antes de su eliminación", e); }
+                    */
+                    this.ShowMessageBox("Es necesario eliminar las subgerencias y áreas asociadas a esta gerencia antes de su eliminación");
+                    try
+                    {
+                        this.Division_Gerencia.SelectedItem.Gerente = null; 
+                        
+                        this.Save();
+                    }
+                    catch{ }
+
+                    this.Refresh();                
+            }
+        }
+
+
+
+        partial void Division_SubGerenciaDeleteSelected_Execute()
+        {
+            // Escriba el código aquí.
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Sí elimina esta subgerencia, se eliminarán todas las áreas asociadas. Los empleados asociados a esta subgerencia, quedaran sin área asignada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
+                try
+                {
+                    foreach (Division_AreaItem area in this.Division_SubGerencia.SelectedItem.Division_Area)
+                    {
+                        foreach (PersonaItem persona in area.Persona)
+                        {
+                            persona.AreaDeTrabajo = null;
+                            persona.Es_JefeDirecto = false;
+                            persona.Division_AreaItem = null;
+                        }
+                    }
+                }
+                catch { }
+
+                if (this.Division_SubGerencia.SelectedItem.Superior_SubGerente.Count() > 0)
+                {
+                    this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().PersonaItem1.Es_SubGerente = false;
+                    this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().PersonaItem1.Cargo = null;
+                }
+                
+                this.Division_SubGerencia.SelectedItem.Delete();
                 this.Save();
                 this.Refresh();
             }
@@ -278,6 +330,69 @@ namespace LightSwitchApplication
 
 
 
+        partial void Division_AreaDeleteSelected_Execute()
+        {
+            // Escriba el código aquí.
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Sí elimina esta área, todos los empleados asociados quedarán sin área asignada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
+                try
+                {
+                    foreach (PersonaItem persona in this.Division_Area.SelectedItem.Persona)
+                    {
+                        persona.AreaDeTrabajo = null;
+                        persona.Es_JefeDirecto = false;
+                        persona.Division_AreaItem = null;
+                    }
+                }
+                catch { }
+
+                this.Division_Area.SelectedItem.Delete();
+                this.Save();
+                this.Refresh();
+            }
+        }
+
+        partial void Division_AreaDeleteSelected_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.Division_Area.SelectedItem == null)
+            {
+                result = false;
+            }
+            else
+            {
+                result = true;
+            }
+        }
+
+        partial void Division_GerenciaDeleteSelected_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.Division_Gerencia.SelectedItem == null)
+            {
+                result = false;
+            }
+            else
+            {
+                result = true;
+            }
+        }
+
+
+        partial void Division_SubGerenciaDeleteSelected_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.Division_SubGerencia.SelectedItem == null)
+            {
+                result = false;
+            }
+            else
+            {
+                result = true;
+            }
+        }
 
        
     }

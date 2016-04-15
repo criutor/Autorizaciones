@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 08/04/2016 1:04:29
+// Fecha de generación: 14/04/2016 16:53:59
 namespace LightSwitchApplication.Implementation
 {
     
@@ -501,6 +501,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<ConsultarEmailUsuarioADItem> _ConsultarEmailUsuarioAD;
         /// <summary>
+        /// No hay comentarios para CorreosDeAvisos en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<CorreosDeAvisosItem> CorreosDeAvisos
+        {
+            get
+            {
+                if ((this._CorreosDeAvisos == null))
+                {
+                    this._CorreosDeAvisos = base.CreateQuery<CorreosDeAvisosItem>("CorreosDeAvisos");
+                }
+                return this._CorreosDeAvisos;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<CorreosDeAvisosItem> _CorreosDeAvisos;
+        /// <summary>
         /// No hay comentarios para Persona en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -707,6 +724,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToConsultarEmailUsuarioAD(ConsultarEmailUsuarioADItem consultarEmailUsuarioADItem)
         {
             base.AddObject("ConsultarEmailUsuarioAD", consultarEmailUsuarioADItem);
+        }
+        /// <summary>
+        /// No hay comentarios para CorreosDeAvisos en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToCorreosDeAvisos(CorreosDeAvisosItem correosDeAvisosItem)
+        {
+            base.AddObject("CorreosDeAvisos", correosDeAvisosItem);
         }
     }
     /// <summary>
@@ -7859,6 +7884,170 @@ namespace LightSwitchApplication.Implementation
         private string _EmailUsuario;
         partial void OnEmailUsuarioChanging(string value);
         partial void OnEmailUsuarioChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// No hay comentarios para LightSwitchApplication.CorreosDeAvisosItem en el esquema.
+    /// </summary>
+    /// <KeyProperties>
+    /// id
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("CorreosDeAvisos")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("id")]
+    public partial class CorreosDeAvisosItem : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Crear un nuevo objeto CorreosDeAvisosItem.
+        /// </summary>
+        /// <param name="ID">Valor inicial de id.</param>
+        /// <param name="nombre">Valor inicial de Nombre.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static CorreosDeAvisosItem CreateCorreosDeAvisosItem(int ID, string nombre)
+        {
+            CorreosDeAvisosItem correosDeAvisosItem = new CorreosDeAvisosItem();
+            correosDeAvisosItem.id = ID;
+            correosDeAvisosItem.Nombre = nombre;
+            return correosDeAvisosItem;
+        }
+        /// <summary>
+        /// No hay comentarios para la propiedad id en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int id
+        {
+            get
+            {
+                return this._id;
+            }
+            set
+            {
+                this.OnidChanging(value);
+                if (object.Equals(this.id, value))
+                {
+                    return;
+                }
+                this._id = value;
+                this.OnidChanged();
+                this.OnPropertyChanged("id");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _id;
+        partial void OnidChanging(int value);
+        partial void OnidChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Nombre en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Nombre
+        {
+            get
+            {
+                return this._Nombre;
+            }
+            set
+            {
+                this.OnNombreChanging(value);
+                if (object.Equals(this.Nombre, value))
+                {
+                    return;
+                }
+                this._Nombre = value;
+                this.OnNombreChanged();
+                this.OnPropertyChanged("Nombre");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Nombre;
+        partial void OnNombreChanging(string value);
+        partial void OnNombreChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Email en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Email
+        {
+            get
+            {
+                return this._Email;
+            }
+            set
+            {
+                this.OnEmailChanging(value);
+                if (object.Equals(this.Email, value))
+                {
+                    return;
+                }
+                this._Email = value;
+                this.OnEmailChanged();
+                this.OnPropertyChanged("Email");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Email;
+        partial void OnEmailChanging(string value);
+        partial void OnEmailChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Descripcion en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Descripcion
+        {
+            get
+            {
+                return this._Descripcion;
+            }
+            set
+            {
+                this.OnDescripcionChanging(value);
+                if (object.Equals(this.Descripcion, value))
+                {
+                    return;
+                }
+                this._Descripcion = value;
+                this.OnDescripcionChanged();
+                this.OnPropertyChanged("Descripcion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Descripcion;
+        partial void OnDescripcionChanging(string value);
+        partial void OnDescripcionChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad RolPrivado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> RolPrivado
+        {
+            get
+            {
+                return this._RolPrivado;
+            }
+            set
+            {
+                this.OnRolPrivadoChanging(value);
+                if (object.Equals(this.RolPrivado, value))
+                {
+                    return;
+                }
+                this._RolPrivado = value;
+                this.OnRolPrivadoChanged();
+                this.OnPropertyChanged("RolPrivado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _RolPrivado;
+        partial void OnRolPrivadoChanging(global::System.Nullable<bool> value);
+        partial void OnRolPrivadoChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

@@ -27,10 +27,6 @@ namespace LightSwitchApplication
             this.AdministrativoDesde = "La mañana (Todo el día)";
             this.AdministrativoHasta = "La tarde (Todo el día)"; 
 
-            // Parametro de busqueda de la persona
-            //NOMBREAD = removerSignosAcentos(this.Application.User.FullName).ToUpper();
-            //NOMBREAD = "RUBIO FLORES, GUSTAVO";
-
             //Instanciar el objeto solicitud 
             this.SOLICITUD = new SOLICITUDESItem();
             this.SOLICITUD.FechaSolicitud = DateTime.Now;
@@ -48,46 +44,34 @@ namespace LightSwitchApplication
             if (TIPOSOLICITUD == 3) { this.SOLICITUD.PersonaItem1 = null; }
                 else{this.SOLICITUD.PersonaItem1 = this.PersonaPorRutAD.First();}
 
-            //Configura quien sera el primero en aprobar la solicitud
-
+            //Configura quien será el primero en aprobar la solicitud
             if (this.PersonaPorRutAD.First().Es_GerenteGeneral == true)
             {
                 this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Completada = true;
             }
-
-            if (this.PersonaPorRutAD.First().Es_Gerente == true)
+            else if (this.PersonaPorRutAD.First().Es_Gerente == true)
             {   
-
                 //Si el solicitante es gerente
-                this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
-                this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
-                this.SOLICITUD.VB_Gerente = true;
-                this.SOLICITUD.VB_GerenteGeneral = false;
 
-                //ENVIAR EMAIL AL GERENTE GENERAL-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-                
-                //El campo de consulta es igual al rut del gerente
-                //this.RutUsuarioAD = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Rut_Persona;
-                //Llamar al metodo que trae el email actual del usuario AD
-                //this.ConsultarEmailUsuarioAD_Execute();
-                //Guarda el correo obtenido moises.arevalo@planvital.cl
-
-                //this.SOLICITUD.EmailProximoDestinatario = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Email;
-
-                /*
-                if (this.EmailUsuarioAD == null)
+                if (this.Superior_GerenteGERENTEGENERAL.Count() == 0)
                 {
-                    this.ShowMessageBox("No hemos podido enviar un email de aviso a " + this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + " , de todas maneras, tu solicitud ha sido registrada en el sistema", "EMAIL NO ENVIADO", MessageBoxOption.Ok);
+                    this.ShowMessageBox("El gerente general no ha sido asociado a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                    this.Close(false);
                 }
-                else { 
+                else
+                {
 
-                    //this.SOLICITUD.EmailProximoDestinatario = this.EmailUsuarioAD;
-                    this.SOLICITUD.EmailProximoDestinatario = "cesar.riutor@planvital.cl";
-                    this.ShowMessageBox("Hemos enviado un email de aviso a " + this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD, "EMAIL ENVIADO", MessageBoxOption.Ok);
+                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                    this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                    this.SOLICITUD.VB_Gerente = true;
+                    this.SOLICITUD.VB_GerenteGeneral = false;
+
+                    //ENVIAR EMAIL AL GERENTE GENERAL-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                    this.SOLICITUD.EmailProximoDestinatario = this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Email;
+                    //this.ShowMessageBox("Hemos enviado un email de aviso a: " + this.Superior_GerenteGERENTEGENERAL.First().PersonaItem1.Email , "EMAIL ENVIADO", MessageBoxOption.Ok);
                 }
-                */
             }
             else 
                 if (this.PersonaPorRutAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
@@ -99,91 +83,66 @@ namespace LightSwitchApplication
                     //si no hay un gerente, la solicitud queda automaticamente aprobada
                     if (this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
                     {
-                        this.SOLICITUD.Completada = true;
-                        //this.SOLICITUD.Estado = "Aprobada por el Sub Gerente";
+                        this.ShowMessageBox("Debe haber un gerente asociado a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                        this.Close(false);
                     }
                     else 
                     {
                         this.SOLICITUD.VB_Gerente = false;
-                        
                         //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-                        //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                        
-
+                        this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
                     }
                 }
                 else 
                     if (this.PersonaPorRutAD.First().Es_JefeDirecto == true)//Si el solicitante es Jefe de área
                     {   
+                        this.IDAREA = this.PersonaPorRutAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
+                        this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
+                        this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
+                        this.SOLICITUD.VB_JefeDirecto = true;
 
-                    this.IDAREA = this.PersonaPorRutAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
-                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
-                    this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
-                    this.SOLICITUD.VB_JefeDirecto = true;
-
-                    //Si es solicitud de horas extras
-                    if (TIPOSOLICITUD == 3)
-                    {
-                        
-                        this.SOLICITUD.VB_Empleado = false;
-                        //ENVIAR EMAIL AL EMPLEADO-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                        // la configuracion se realiza desde SeleccionarPersonal_Execute() cuando el Jefe de área escoge un empleado.
-
-                        
-
-                    }
-                    //Todas las otras solicitudes
-                    else
-                    {
-                  
-                        if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                        //Si es solicitud de horas extras
+                        if (TIPOSOLICITUD == 3)
                         {
-                            // Si hay subgerencia y subgerente
-                            this.SOLICITUD.VB_SubGerente = false;
-
-                            //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-                            
-                            //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
-                            
+                            this.SOLICITUD.VB_Empleado = false;
+                            //ENVIAR EMAIL AL EMPLEADO-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                            // la configuracion se realiza desde SeleccionarPersonal_Execute() cuando el Jefe de área escoge un empleado.
                         }
-                        else
-                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                        else//Si no es solicitud de horas extras
+                        {
+                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                             {
-                                // Si hay gerente
-                                this.SOLICITUD.VB_Gerente = false;
-
-                                //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                                //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                 
-                            }
-                            else if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
-                            {
-                                // Si hay gerente
-                                this.SOLICITUD.VB_Gerente = false;
-
-                                //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
- 
-                                //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                
+                                // Si hay subgerencia y subgerente
+                                this.SOLICITUD.VB_SubGerente = false;
+                                //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
                             }
                             else
-                            {
-                                // debe tener por lo menos 1 superior para poder crear una solicitud
-                                this.ShowMessageBox("Debe haber como mínimo 1 superior asociado a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-
-                                this.Close(false);
+                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                {
+                                    // Si hay gerente
+                                    this.SOLICITUD.VB_Gerente = false;
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                    this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                }
+                                else if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                {
+                                    // Si hay gerente
+                                    this.SOLICITUD.VB_Gerente = false;
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                    this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                }
+                                else
+                                {
+                                    // debe tener por lo menos 1 superior para poder crear una solicitud
+                                    this.ShowMessageBox("Debe haber como mínimo 1 superior asociado a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                                    this.Close(false);
+                                }
                             }
-                        }
-                    
-                    
                 }
                 else// Para los empleados que no tienen ningun cargo de supervisión
                 {
-                    
                     int contarSuperiores = 0;
-
                     this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
                     this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
 
@@ -225,49 +184,19 @@ namespace LightSwitchApplication
                             this.SOLICITUD.VB_JefeDirecto = false; //si hay jefe de área
                             
                             //ENVIAR EMAIL AL JEFE DE AREA-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                            //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.Email;
-                            
+                            this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.Email;
                         }
                         else
-                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null && this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
                             {
-                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
-                                {
                                     this.SOLICITUD.VB_SubGerente = false; // Si hay subgerente
 
                                     //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                                    //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
-                                    
-                                }
+                                    this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
                             }
-                            else
-                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
-                                {
-                                    this.SOLICITUD.VB_Gerente = false; // Si hay gerente
-
-                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                                    //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                    
-                                }
-                                else
-
-                                    if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
-                                    {
-                                        this.SOLICITUD.VB_Gerente = false; // Si hay gerente
-
-                                        //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
-
-                                        //this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
-                                        
-                                    }
                     }
-
                     contarSuperiores = 0;
                 }
-
             //Instanciar el objeto detalle de solicitud dependiendo del caso
             if (TIPOSOLICITUD == 1)
             {
@@ -292,7 +221,6 @@ namespace LightSwitchApplication
                 this.SOLICITUD.Titulo = "Permiso";   
             }
 
-
             this.SOLICITUD.Inicio = DateTime.Today;
             this.SOLICITUD.Termino = DateTime.Today;
 
@@ -306,7 +234,6 @@ namespace LightSwitchApplication
             this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO CREADA POR:";
             this.NUEVOESTADO.MensajeBy = this.PersonaPorRutAD.First().NombreAD;
             this.NUEVOESTADO.CreadoAt = DateTime.Now;
-            
         }
 
         partial void SOLICITUDES_NUEVA_Activated()
@@ -339,47 +266,8 @@ namespace LightSwitchApplication
             catch { }
         }
 
-        //Quitar acentos del nombre de active directory.
-        public static string removerSignosAcentos(String conAcentos)
-        {
-            int largo = conAcentos.Length;
-            char[] NombreAD = new char[largo];
-            int i = 0;
-
-            foreach (char ch in conAcentos)
-            {
-                char val = ch;
-
-                switch (val)
-                {
-                    case 'á':
-                    case 'Á':
-                        val = 'A'; break;
-                    case 'é':
-                    case 'É':
-                        val = 'E'; break;
-                    case 'í':
-                    case 'Í':
-                        val = 'I'; break;
-                    case 'ó':
-                    case 'Ó':
-                        val = 'O'; break;
-                    case 'ú':
-                    case 'Ú':
-                        val = 'U'; break;
-                }
-                NombreAD[i] = val;
-                i++;
-            }
-
-            string Nombreaux = new string(NombreAD);
-
-            return Nombreaux.ToUpper();
-        }
-
         partial void SOLICITUDES_NUEVA_Saved()
         {
-            // Escriba el código aquí.
             this.Close(true);
             //Application.Current.ShowDefaultScreen(this.SOLICITUDESItemProperty);
         }
@@ -402,17 +290,8 @@ namespace LightSwitchApplication
         //Detecta si se ha hecho algún cambio en el campo Inicio
         void CrearNuevaSolicitud_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            /*
-            if (e.PropertyName.Equals("Termino"))
-            {
-                TimeSpan diferenciaDias = this.Solicitud_Detalle_Vacaciones.Termino - this.Solicitud_Detalle_Vacaciones.Inicio;
-                this.Solicitud_Detalle_Vacaciones.NumeroDias = diferenciaDias.Days;
-
-            }
-             */
             if (e.PropertyName.Equals("Inicio"))
             {
-
                 InvocarSaldoVacaciones = true;
             }
         }
@@ -429,22 +308,14 @@ namespace LightSwitchApplication
             else
             {
                 DataWorkspace dataWorkspace = new DataWorkspace();
-
-                ConsultarSaldoVacacionesItem operation =
-                    dataWorkspace.Autorizaciones_AdminsData.ConsultarSaldoVacaciones.AddNew();
-
+                ConsultarSaldoVacacionesItem operation = dataWorkspace.Autorizaciones_AdminsData.ConsultarSaldoVacaciones.AddNew();
                 operation.Fecha = this.SOLICITUD.Inicio.Value;
- 
                 operation.Rut = this.PersonaPorRutAD.First().Rut_Persona_ConCeros;
                 RUTUSUARIOPARACONTRATO = this.PersonaPorRutAD.First().Rut_Persona_ConCeros;
-                 
                 //operation.Rut = "0017511042-9"; //Gustavo
-
                 operation.Contrato = this.ContratoPorRut.Last().Contrato;
                 //operation.Contrato = 2063;//Gustavo
-
                 dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
-
                 this.SOLICITUD.SaldoDias = operation.Saldo;
             }
         }
@@ -497,7 +368,6 @@ namespace LightSwitchApplication
                 if (firstDay <= bh && bh <= lastDay && !(bh.DayOfWeek == DayOfWeek.Sunday || bh.DayOfWeek == DayOfWeek.Saturday))
                     --businessDays;
             }
-
             return businessDays;
         }
 
@@ -509,7 +379,6 @@ namespace LightSwitchApplication
                 InvocarSaldoVacaciones = false;
             }
                 
-
             if (TIPOSOLICITUD == 2)// si la solicitud es del tipo vacaciones
             {
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
@@ -523,7 +392,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-
                 //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
 
                 DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
@@ -583,8 +451,6 @@ namespace LightSwitchApplication
                 }
 
             }
-            
-
 
             if (TIPOSOLICITUD == 3)// si la solicitud es del tipo horas extras
             {
@@ -612,7 +478,6 @@ namespace LightSwitchApplication
 
                 if (this.SOLICITUD.HorasAutorizadas > 2)
                 {
-
                     results.AddPropertyError("El máximo de horas extras a trabajar es 2");
 
                 }
@@ -620,19 +485,14 @@ namespace LightSwitchApplication
 
                 if (this.SOLICITUD.HorasAutorizadas < 0 || this.SOLICITUD.HorasAutorizadas == null)
                 {
-
                     results.AddPropertyError("Las horas autorizadas deben ser mayor a 0");
-
                 }
                 else { this.SOLICITUD.HorasAutorizadas = this.SOLICITUD.HorasAutorizadas; }
 
                 if (this.SOLICITUD.Inicio < DateTime.Today)
                 {
-
                     results.AddPropertyError("La fecha de realización no puede ser antes de hoy");
-
                 }
-
 
                 //if (COLACION == true) { this.SOLICITUDESItemProperty.Colacion = true; } else { this.SOLICITUDESItemProperty.Colacion = false; }
                 //if (TAXI == true) { this.SOLICITUDESItemProperty.Taxi = true; } else { this.SOLICITUDESItemProperty.Taxi = false; }
@@ -698,7 +558,6 @@ namespace LightSwitchApplication
                 {
 
                     results.AddPropertyError("La fecha de inicio no puede ser antes de hoy");
-
                 }
 
 
@@ -711,9 +570,7 @@ namespace LightSwitchApplication
                     {
                         this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
                     }
-
             }
-
 
             if (TIPOSOLICITUD == 1)// si la solicitud es del tipo dia administrativo
             {
@@ -724,14 +581,11 @@ namespace LightSwitchApplication
 
                 foreach (FeriadosItem feriado in this.Feriados)
                 {
-
                     dia = feriado.Feriado.Day;
                     mes = feriado.Feriado.Month;
                     DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
                     FERIADOS[i] = DiaAux;
-
                     i++;
-
                 }
 
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
@@ -748,7 +602,6 @@ namespace LightSwitchApplication
 
                     if (this.SOLICITUD.Termino.Value == feriado)
                     {
-                        
                         results.AddPropertyError("La fecha de término no puede ser un día feriado ");
                     }    
                 }
@@ -765,16 +618,12 @@ namespace LightSwitchApplication
 
                 if (this.SOLICITUD.Inicio < DateTime.Today)
                 {
-
                     results.AddPropertyError("La fecha de inicio no puede ser antes de hoy");
-
                 }
 
                 if (this.SOLICITUD.Termino < this.SOLICITUD.Inicio)
                 {
-
                     results.AddPropertyError("Día de Término debe ser después o igual al día de Inicio ");
-
                 }
                 else
                 {
@@ -788,7 +637,6 @@ namespace LightSwitchApplication
                     }
                     else
                     {
-
                         this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 0.5;
                     }
                 }
@@ -870,31 +718,20 @@ namespace LightSwitchApplication
         partial void SeleccionarPersonal_Execute()
         {
             this.SOLICITUD.PersonaItem1 = this.PersonalBajoJefeDeArea.SelectedItem;
-
-            //this.SOLICITUD.EmailProximoDestinatario = this.PersonalBajoJefeDeArea.SelectedItem.Email;
-            this.SOLICITUD.EmailProximoDestinatario = "moises.arevalo@planvital.cl";
+            this.SOLICITUD.EmailProximoDestinatario = this.PersonalBajoJefeDeArea.SelectedItem.Email;
             this.CloseModalWindow("PersonalArea");
         }
 
         partial void ConsultarRutUsuarioAD_Execute()
         {
-            
             // Escriba el código aquí.
             DataWorkspace dataWorkspace = new DataWorkspace();
-
-            ConsultarRutUsuarioADItem operation =
-                dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
-
+            ConsultarRutUsuarioADItem operation = dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
             operation.NombreUsuario = this.Application.User.FullName;
-
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
-
             this.RutUsuarioAD = operation.RutUsuario;
-            
             //this.RutUsuarioAD = "17511042-9";//gustavo
         }
-
-
-        
+       
     }
 }

@@ -2769,9 +2769,8 @@
                                               </ChainExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
-                                              <ConstantExpression
-                                                ResultType=":Boolean?"
-                                                Value="True" />
+                                              <ParameterExpression
+                                                Parameter="Es_Gerente" />
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Left>
@@ -2806,17 +2805,59 @@
                                         NodeType="And">
                                         <BinaryExpression.Left>
                                           <BinaryExpression
-                                            NodeType="NotEqual">
+                                            NodeType="And">
                                             <BinaryExpression.Left>
-                                              <ChainExpression>
-                                                <MemberExpression
-                                                  Member="Completada" />
-                                              </ChainExpression>
+                                              <BinaryExpression
+                                                NodeType="And">
+                                                <BinaryExpression.Left>
+                                                  <BinaryExpression
+                                                    NodeType="NotEqual">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="Completada" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ConstantExpression
+                                                        ResultType=":Boolean?"
+                                                        Value="True" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <BinaryExpression
+                                                    NodeType="NotEqual">
+                                                    <BinaryExpression.Left>
+                                                      <ChainExpression>
+                                                        <MemberExpression
+                                                          Member="Rechazada" />
+                                                      </ChainExpression>
+                                                    </BinaryExpression.Left>
+                                                    <BinaryExpression.Right>
+                                                      <ConstantExpression
+                                                        ResultType=":Boolean?"
+                                                        Value="True" />
+                                                    </BinaryExpression.Right>
+                                                  </BinaryExpression>
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
-                                              <ConstantExpression
-                                                ResultType=":Boolean?"
-                                                Value="True" />
+                                              <BinaryExpression
+                                                NodeType="NotEqual">
+                                                <BinaryExpression.Left>
+                                                  <ChainExpression>
+                                                    <MemberExpression
+                                                      Member="Cancelada" />
+                                                  </ChainExpression>
+                                                </BinaryExpression.Left>
+                                                <BinaryExpression.Right>
+                                                  <ConstantExpression
+                                                    ResultType=":Boolean?"
+                                                    Value="True" />
+                                                </BinaryExpression.Right>
+                                              </BinaryExpression>
                                             </BinaryExpression.Right>
                                           </BinaryExpression>
                                         </BinaryExpression.Left>
@@ -2826,7 +2867,7 @@
                                             <BinaryExpression.Left>
                                               <ChainExpression>
                                                 <MemberExpression
-                                                  Member="Rechazada" />
+                                                  Member="Rebajada" />
                                               </ChainExpression>
                                             </BinaryExpression.Left>
                                             <BinaryExpression.Right>
@@ -2844,7 +2885,7 @@
                                         <BinaryExpression.Left>
                                           <ChainExpression>
                                             <MemberExpression
-                                              Member="Cancelada" />
+                                              Member="Caducada" />
                                           </ChainExpression>
                                         </BinaryExpression.Left>
                                         <BinaryExpression.Right>
@@ -2860,18 +2901,16 @@
                             </BinaryExpression.Left>
                             <BinaryExpression.Right>
                               <BinaryExpression
-                                NodeType="NotEqual">
+                                NodeType="Equal">
                                 <BinaryExpression.Left>
                                   <ChainExpression>
                                     <MemberExpression
-                                      Member="PersonaItem1" />
-                                    <MemberExpression
-                                      Member="Rut_Persona" />
+                                      Member="VB_Empleado" />
                                   </ChainExpression>
                                 </BinaryExpression.Left>
                                 <BinaryExpression.Right>
                                   <ParameterExpression
-                                    Parameter="Rut_Persona" />
+                                    Parameter="VB_Empleado" />
                                 </BinaryExpression.Right>
                               </BinaryExpression>
                             </BinaryExpression.Right>
@@ -2883,13 +2922,12 @@
                             <BinaryExpression.Left>
                               <ChainExpression>
                                 <MemberExpression
-                                  Member="VB_Empleado" />
+                                  Member="VB_JefeDirecto" />
                               </ChainExpression>
                             </BinaryExpression.Left>
                             <BinaryExpression.Right>
-                              <ConstantExpression
-                                ResultType=":Boolean?"
-                                Value="True" />
+                              <ParameterExpression
+                                Parameter="VB_JefeDirecto" />
                             </BinaryExpression.Right>
                           </BinaryExpression>
                         </BinaryExpression.Right>
@@ -2901,12 +2939,12 @@
                         <BinaryExpression.Left>
                           <ChainExpression>
                             <MemberExpression
-                              Member="VB_JefeDirecto" />
+                              Member="VB_SubGerente" />
                           </ChainExpression>
                         </BinaryExpression.Left>
                         <BinaryExpression.Right>
                           <ParameterExpression
-                            Parameter="VB_JefeDirecto" />
+                            Parameter="VB_SubGerente" />
                         </BinaryExpression.Right>
                       </BinaryExpression>
                     </BinaryExpression.Right>
@@ -2918,12 +2956,12 @@
                     <BinaryExpression.Left>
                       <ChainExpression>
                         <MemberExpression
-                          Member="VB_SubGerente" />
+                          Member="VB_Gerente" />
                       </ChainExpression>
                     </BinaryExpression.Left>
                     <BinaryExpression.Right>
                       <ParameterExpression
-                        Parameter="VB_SubGerente" />
+                        Parameter="VB_Gerente" />
                     </BinaryExpression.Right>
                   </BinaryExpression>
                 </BinaryExpression.Right>
@@ -2931,16 +2969,18 @@
             </BinaryExpression.Left>
             <BinaryExpression.Right>
               <BinaryExpression
-                NodeType="Equal">
+                NodeType="NotEqual">
                 <BinaryExpression.Left>
                   <ChainExpression>
                     <MemberExpression
-                      Member="VB_Gerente" />
+                      Member="PersonaItem1" />
+                    <MemberExpression
+                      Member="Rut_Persona" />
                   </ChainExpression>
                 </BinaryExpression.Left>
                 <BinaryExpression.Right>
                   <ParameterExpression
-                    Parameter="VB_Gerente" />
+                    Parameter="Rut_Persona" />
                 </BinaryExpression.Right>
               </BinaryExpression>
             </BinaryExpression.Right>
@@ -2966,6 +3006,7 @@
         Name="Rut_Persona"
         ParameterType=":String?" />
       <QueryOperationParameter
+        IsOptional="True"
         Name="VB_Empleado"
         ParameterType=":Boolean?" />
       <QueryOperationParameter
@@ -2981,16 +3022,7 @@
         Name="VB_SubGerente"
         ParameterType=":Boolean?" />
       <QueryOperationParameter
-        IsOptional="True"
-        Name="VB_JefeDirectoNulo"
-        ParameterType=":Boolean?" />
-      <QueryOperationParameter
-        IsOptional="True"
-        Name="VB_SubGerenteNulo"
-        ParameterType=":Boolean?" />
-      <QueryOperationParameter
-        IsOptional="True"
-        Name="VB_GerenteNulo"
+        Name="Es_Gerente"
         ParameterType=":Boolean?" />
     </QueryOperation>
     <QueryOperation
@@ -4216,6 +4248,92 @@
         <QuerySourceExpressionTree>
           <MemberExpression
             Member="ConsultarEmailUsuarioAD" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <EntitySet
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="CorreosDeAvisosItem"
+      Name="CorreosDeAvisos" />
+    <QueryOperation
+      Name="CorreosDeAvisos_Single"
+      ReturnType="CorreosDeAvisosItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad especifican el o los parámetros." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CorreosDeAvisos" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="id"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="Valor de la propiedad clave 'id' de la entidad que se va a recuperar." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="CorreosDeAvisos_SingleOrDefault"
+      ReturnType="CorreosDeAvisosItem">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="CorreosDeAvisos" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -7447,7 +7565,7 @@
       Name="Division_SubGerencia">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -7637,7 +7755,7 @@
       Name="Division_Gerencia">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -7669,7 +7787,7 @@
       Name="Division_Area">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -7701,7 +7819,7 @@
       Name="Division_SubGerencia">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8410,4 +8528,65 @@
         Value="Permite administrar las pantallas de rol privado." />
     </Permission.Attributes>
   </Permission>
+  <EntityType
+    Name="CorreosDeAvisosItem">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="id"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Nombre"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Email"
+        PropertyType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <Attribute
+            Class="Microsoft.LightSwitch.Extensions:@EmailAddressProperties">
+            <Property
+              Name="DefaultDomain"
+              Value="@planvital.cl" />
+          </Attribute>
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Descripcion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="200" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RolPrivado"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
 </ModelFragment>

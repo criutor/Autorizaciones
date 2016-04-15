@@ -60,18 +60,18 @@ namespace LightSwitchApplication
                         else
                             if (FiltroEstados == "Anulada") {
 
-                               // this.Completada = false;
-                                //this.Rechazada = false;
-                                //this.Cancelada = false;
+                                this.Completada = false;
+                                this.Rechazada = false;
+                                this.Cancelada = false;
                                 this.Caducada = true;
                                 this.Rebajada = false; 
                             }
                             else
                                 if (FiltroEstados == "Rebajada") {
 
-                                    //this.Completada = false;
-                                    //this.Rechazada = false;
-                                    //this.Cancelada = false;
+                                    this.Completada = false;
+                                    this.Rechazada = false;
+                                    this.Cancelada = false;
                                     this.Caducada = false;
                                     this.Rebajada = true; 
                                 }
@@ -89,11 +89,11 @@ namespace LightSwitchApplication
                                 this.HorasExtras = true;
                                 this.FiltroEstados = null;
 
-                                //this.Completada = null;
-                                //this.Rechazada = null;
-                                //this.Cancelada = null;
-                                this.Caducada = true;
-                                this.Rebajada = true; 
+                                this.Completada = false;
+                                this.Rechazada = false;
+                                this.Cancelada = false;
+                                this.Caducada = null;
+                                this.Rebajada = null; 
                                 //this.Solicitud_Header.Load();
                             }
         }
@@ -116,6 +116,73 @@ namespace LightSwitchApplication
             catch { }
 
             this.CloseModalWindow("Empleados");
+        }
+
+        partial void SOLICITUDES_HISTORICO_RRHH_Activated()
+        {
+            // Escriba el código aquí.
+            this.TodosLosEmpleados_Execute();
+            
+            this.FiltroEstados = "Todas";
+        }
+
+        partial void Gerencia_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                Id_Gerencia = this.Gerencia.Id_Gerencia;
+                Id_SubGerencia = -1;
+                Id_Area = -1;
+                this.SubGerencia = null;
+                this.Área = null;
+            }
+            catch { }
+        }
+
+        partial void SubGerencia_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                Id_SubGerencia = this.SubGerencia.Id_SubGerencia;
+                Id_Area = -1;
+                Id_Gerencia = -1;
+                this.Gerencia = null;
+                this.Área = null;
+            }
+            catch { }
+        }
+
+        partial void Área_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                Id_Area = this.Área.Id_Area;
+                Id_SubGerencia = -1;
+                Id_Gerencia = -1;
+                this.SubGerencia = null;
+                this.Gerencia = null;
+            }
+            catch { }
+        }
+
+        partial void SolicitudesConFiltro_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            this.NumDeSolicitudes = this.SolicitudesConFiltro.Count();
+        }
+
+        partial void LimpiarDivisiones_Execute()
+        {
+            // Escriba el código aquí.
+            this.SubGerencia = null;
+            this.Gerencia = null;
+            this.Área = null;
+            //this.FiltroEstados = "Todas";
+            this.TodosLosEmpleados_Execute();
+            this.SolicitudesConFiltro.Load();
         }
     }
 }

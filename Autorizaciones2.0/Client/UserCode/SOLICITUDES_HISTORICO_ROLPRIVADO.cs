@@ -85,9 +85,9 @@ namespace LightSwitchApplication
                             if (FiltroEstados == "Anulada")
                             {
 
-                                // this.Completada = false;
-                                //this.Rechazada = false;
-                                //this.Cancelada = false;
+                                this.Completada = false;
+                                this.Rechazada = false;
+                                this.Cancelada = false;
                                 this.Caducada = true;
                                 this.Rebajada = false;
                             }
@@ -95,9 +95,9 @@ namespace LightSwitchApplication
                                 if (FiltroEstados == "Rebajada")
                                 {
 
-                                    //this.Completada = false;
-                                    //this.Rechazada = false;
-                                    //this.Cancelada = false;
+                                    this.Completada = false;
+                                    this.Rechazada = false;
+                                    this.Cancelada = false;
                                     this.Caducada = false;
                                     this.Rebajada = true;
                                 }
@@ -115,13 +115,21 @@ namespace LightSwitchApplication
                                         this.HorasExtras = true;
                                         this.FiltroEstados = null;
 
-                                        //this.Completada = null;
-                                        //this.Rechazada = null;
-                                        //this.Cancelada = null;
-                                        this.Caducada = true;
-                                        this.Rebajada = true;
+                                        this.Completada = false;
+                                        this.Rechazada = false;
+                                        this.Cancelada = false;
+                                        this.Caducada = null;
+                                        this.Rebajada = null;
                                         //this.Solicitud_Header.Load();
                                     }
+        }
+
+        partial void SOLICITUDES_HISTORICO_ROLPRIVADO_Activated()
+        {
+            // Escriba el código aquí.
+            this.TodosLosEmpleados_Execute();
+
+            this.FiltroEstados = "Todas";
         }
     }
 }

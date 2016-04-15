@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class CargoRolPrivadoItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass>
+    public sealed partial class ConsultarRutUsuarioADItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Inicializa una nueva instancia de la entidad CargoRolPrivadoItem.
+        /// Inicializa una nueva instancia de la entidad ConsultarRutUsuarioADItem.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CargoRolPrivadoItem()
+        public ConsultarRutUsuarioADItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CargoRolPrivadoItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CargoRolPrivadoItem> entitySet)
+        public ConsultarRutUsuarioADItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarRutUsuarioADItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CargoRolPrivadoItem_Created();
+        partial void ConsultarRutUsuarioADItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CargoRolPrivadoItem_AllowSaveWithErrors(ref bool result);
+        partial void ConsultarRutUsuarioADItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,67 +83,92 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Id
+        public int id
         {
             get
             {
-                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Id);
+                return global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.id);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_IsReadOnly(ref bool result);
+        partial void id_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Id_Changed();
+        partial void id_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Nombre
+        public string RutUsuario
         {
             get
             {
-                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Nombre);
+                return global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.RutUsuario);
             }
             set
             {
-                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Nombre, value);
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.RutUsuario, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nombre_IsReadOnly(ref bool result);
+        partial void RutUsuario_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nombre_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void RutUsuario_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nombre_Changed();
+        partial void RutUsuario_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.PersonaItem> Persona
+        public string NombreUsuario
         {
             get
             {
-                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Persona);
+                return global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.NombreUsuario);
+            }
+            set
+            {
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.NombreUsuario, value);
             }
         }
         
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreUsuario_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreUsuario_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NombreUsuario_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PersonaItem> PersonaQuery
+        public string EmailUsuario
         {
             get
             {
-                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetQuery(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Persona);
+                return global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.EmailUsuario);
+            }
+            set
+            {
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.EmailUsuario, value);
             }
         }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmailUsuario_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmailUsuario_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EmailUsuario_Changed();
 
         #endregion
     
@@ -154,37 +179,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.CargoRolPrivadoItem,
-                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass,
-                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.IImplementation,
-                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass>>
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem,
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass,
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Id;
+                var initializeEntry = global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.id;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass>.Entry
-                __CargoRolPrivadoItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass>.Entry(
-                    global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.__CargoRolPrivadoItem_CreateNew,
-                    global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.__CargoRolPrivadoItem_Created,
-                    global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.__CargoRolPrivadoItem_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.CargoRolPrivadoItem __CargoRolPrivadoItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CargoRolPrivadoItem> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass>.Entry
+                __ConsultarRutUsuarioADItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.__ConsultarRutUsuarioADItem_CreateNew,
+                    global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.__ConsultarRutUsuarioADItem_Created,
+                    global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.__ConsultarRutUsuarioADItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.ConsultarRutUsuarioADItem __ConsultarRutUsuarioADItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConsultarRutUsuarioADItem> es)
             {
-                return new global::LightSwitchApplication.CargoRolPrivadoItem(es);
+                return new global::LightSwitchApplication.ConsultarRutUsuarioADItem(es);
             }
-            private static void __CargoRolPrivadoItem_Created(global::LightSwitchApplication.CargoRolPrivadoItem e)
+            private static void __ConsultarRutUsuarioADItem_Created(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
-                e.CargoRolPrivadoItem_Created();
+                e.ConsultarRutUsuarioADItem_Created();
             }
-            private static bool __CargoRolPrivadoItem_AllowSaveWithErrors(global::LightSwitchApplication.CargoRolPrivadoItem e)
+            private static bool __ConsultarRutUsuarioADItem_AllowSaveWithErrors(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
             {
                 bool result = false;
-                e.CargoRolPrivadoItem_AllowSaveWithErrors(ref result);
+                e.ConsultarRutUsuarioADItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -192,7 +217,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass> Commands
             {
                 get
                 {
@@ -200,7 +225,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass> Methods
             {
                 get
                 {
@@ -208,7 +233,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -220,34 +245,42 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, int> Id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, int> id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string> Nombre
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string> RutUsuario
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Nombre) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.RutUsuario) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string> NombreUsuario
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Persona) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>;
+                        return base.GetItem(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.NombreUsuario) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string> EmailUsuario
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties.EmailUsuario) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>;
                     }
                 }
                 
@@ -257,9 +290,10 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int Id { get; }
-                new string Nombre { get; set; }
-                new global::System.Collections.IEnumerable Persona { get; }
+                new int id { get; }
+                new string RutUsuario { get; set; }
+                new string NombreUsuario { get; set; }
+                new string EmailUsuario { get; set; }
             }
             #pragma warning restore 109
     
@@ -270,105 +304,162 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, int>.Entry
-                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, int>.Entry(
-                        "Id",
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Id_Stub,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Id_Validate,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, int>.Entry
+                    id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, int>.Entry(
+                        "id",
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._id_Stub,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._id_Validate,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._id_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Id_OnValueChanged);
-                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._id_OnValueChanged);
+                private static void _id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Id, sf);
+                    c(d, ref d._id, sf);
                 }
-                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                private static bool _id_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
                 {
                     bool result = false;
-                    e.Id_IsReadOnly(ref result);
+                    e.id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Id_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _id_Validate(global::LightSwitchApplication.ConsultarRutUsuarioADItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Id_Validate(r);
+                    e.id_Validate(r);
                 }
-                private static int _Id_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                private static int _id_GetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Id;
+                    return d.ImplementationEntity.id;
                 }
-                private static void _Id_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                private static void _id_OnValueChanged(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
                 {
-                    e.Id_Changed();
+                    e.id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string>.Entry
-                    Nombre = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string>.Entry(
-                        "Nombre",
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Nombre_Stub,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Nombre_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Nombre_Validate,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Nombre_GetImplementationValue,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Nombre_SetImplementationValue,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Nombre_OnValueChanged);
-                private static void _Nombre_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Entry
+                    RutUsuario = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Entry(
+                        "RutUsuario",
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._RutUsuario_Stub,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._RutUsuario_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._RutUsuario_Validate,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._RutUsuario_GetImplementationValue,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._RutUsuario_SetImplementationValue,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._RutUsuario_OnValueChanged);
+                private static void _RutUsuario_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Nombre, sf);
+                    c(d, ref d._RutUsuario, sf);
                 }
-                private static bool _Nombre_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                private static bool _RutUsuario_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
                 {
                     bool result = false;
-                    e.Nombre_IsReadOnly(ref result);
+                    e.RutUsuario_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Nombre_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _RutUsuario_Validate(global::LightSwitchApplication.ConsultarRutUsuarioADItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Nombre_Validate(r);
+                    e.RutUsuario_Validate(r);
                 }
-                private static string _Nombre_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                private static string _RutUsuario_GetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Nombre;
+                    return d.ImplementationEntity.RutUsuario;
                 }
-                private static void _Nombre_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, string v)
+                private static void _RutUsuario_SetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.Nombre = v;
+                    d.ImplementationEntity.RutUsuario = v;
                 }
-                private static void _Nombre_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                private static void _RutUsuario_OnValueChanged(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
                 {
-                    e.Nombre_Changed();
+                    e.RutUsuario_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
-                    Persona = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
-                        "Persona",
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Persona_Stub,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Persona_GetReferencedEntities,
-                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._Persona_GetEntityCollection);
-                private static void _Persona_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Entry
+                    NombreUsuario = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Entry(
+                        "NombreUsuario",
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._NombreUsuario_Stub,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._NombreUsuario_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._NombreUsuario_Validate,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._NombreUsuario_GetImplementationValue,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._NombreUsuario_SetImplementationValue,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._NombreUsuario_OnValueChanged);
+                private static void _NombreUsuario_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Persona, sf);
+                    c(d, ref d._NombreUsuario, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PersonaItem> _Persona_GetReferencedEntities(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                private static bool _NombreUsuario_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass>(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.Persona, ref d._Persona);
+                    bool result = false;
+                    e.NombreUsuario_IsReadOnly(ref result);
+                    return result;
                 }
-                private static global::System.Collections.IEnumerable _Persona_GetEntityCollection(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                private static void _NombreUsuario_Validate(global::LightSwitchApplication.ConsultarRutUsuarioADItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    return d.ImplementationEntity.Persona;
+                    e.NombreUsuario_Validate(r);
+                }
+                private static string _NombreUsuario_GetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.NombreUsuario;
+                }
+                private static void _NombreUsuario_SetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.NombreUsuario = v;
+                }
+                private static void _NombreUsuario_OnValueChanged(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
+                {
+                    e.NombreUsuario_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Entry
+                    EmailUsuario = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Entry(
+                        "EmailUsuario",
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._EmailUsuario_Stub,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._EmailUsuario_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._EmailUsuario_Validate,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._EmailUsuario_GetImplementationValue,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._EmailUsuario_SetImplementationValue,
+                        global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass.PropertySetProperties._EmailUsuario_OnValueChanged);
+                private static void _EmailUsuario_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EmailUsuario, sf);
+                }
+                private static bool _EmailUsuario_ComputeIsReadOnly(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
+                {
+                    bool result = false;
+                    e.EmailUsuario_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EmailUsuario_Validate(global::LightSwitchApplication.ConsultarRutUsuarioADItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EmailUsuario_Validate(r);
+                }
+                private static string _EmailUsuario_GetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EmailUsuario;
+                }
+                private static void _EmailUsuario_SetImplementationValue(global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.EmailUsuario = v;
+                }
+                private static void _EmailUsuario_OnValueChanged(global::LightSwitchApplication.ConsultarRutUsuarioADItem e)
+                {
+                    e.EmailUsuario_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, int>.Data _Id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, int>.Data _id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string>.Data _Nombre;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Data _RutUsuario;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Data _NombreUsuario;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ConsultarRutUsuarioADItem, global::LightSwitchApplication.ConsultarRutUsuarioADItem.DetailsClass, string>.Data _EmailUsuario;
             
         }
     

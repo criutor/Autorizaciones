@@ -82,146 +82,198 @@ namespace LightSwitchApplication
                 }
             } this.Details.DiscardChanges();
         }
-
-
         
         partial void SOLICITUDES_Inserted(SOLICITUDESItem entity)
         {
-            //string destinatario = entity.EmailProximoDestinatario;
-            string destinatario = "cesar.riutor@planvital.cl";
-            string asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
+            string destinatario = entity.EmailProximoDestinatario;
+            string asunto = "Tiene una solicitud en espera de su aprobación";
             
-
             LightSwitchApplication.UserCode.EnviaMail correo = new UserCode.EnviaMail();
+
+            //Si es de solicitud de horas extras
+            if (entity.PersonaItem1.Es_GerenteGeneral == true)
+            {
+                string mensaje = "Estimado(a) Administrador(a) Rol Privado:\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                asunto = "Solicitud aprobada por todos los superiores correspondientes";
+                
+                DataWorkspace dataWorkspace = new DataWorkspace();
+                var CorreoNotificacion = (from o in dataWorkspace.Autorizaciones_AdminsData.CorreosDeAvisos where o.Nombre == "Administrador(a) Rol Privado" select o);
+
+                if (CorreoNotificacion.First().Email != null)
+                {
+                    correo.Mail(CorreoNotificacion.First().Email, asunto, mensaje);
+                }
+            }
 
             //Si es de solicitud de horas extras
             if (entity.HorasExtras == true)
             {
-                string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " en espera de su aceptación. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " en espera de su aceptación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                correo.Mail(destinatario, asunto, mensaje);
             }
             //todas las otras solicitudes
             else
             {
                 if (entity.VB_GerenteGeneral == false)
                 {
-                    string mensaje = "Estimado Gerente General" + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles. ";
-                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                    string mensaje = "Estimado Gerente General:\n" + "Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                    correo.Mail(destinatario, asunto, mensaje);
                 }
 
                 if (entity.VB_JefeDirecto == false)
                 {
-                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                    correo.Mail(destinatario, asunto, mensaje);
                 }
                 else
                     if (entity.VB_SubGerente == false)
                     {
-                        string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                        correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                        string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                        correo.Mail(destinatario, asunto, mensaje);
                     }
                     else
                         if (entity.VB_Gerente == false)
                         {
-                            if(entity.PersonaItem1.Division_AreaItem != null){
+                            if(entity.PersonaItem1.Division_AreaItem != null)
+                            {
 
                                 if(entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
                                 {
-                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    correo.Mail(destinatario, asunto, mensaje);
                                 }
                                 else
                                 {
-                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    correo.Mail(destinatario, asunto, mensaje);
                                 }
-
                             }else
                             {
                                 if (entity.PersonaItem1.Es_SubGerente == true)
                                 {
-                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    correo.Mail(destinatario, asunto, mensaje); 
                                 }
-
-                                
-
-                                
-                            
                             }
                         }
             }
-
-            //entity.EmailProximoDestinatario = null;
         }
-
         
         partial void SOLICITUDES_Updated(SOLICITUDESItem entity)
         {
-            if(entity.Cancelada != true){
-
-                //string destinatario = entity.EmailProximoDestinatario;
-                string destinatario = "cesar.riutor@planvital.cl";
+            if (entity.Cancelada != true)
+            {
+                string destinatario = entity.EmailProximoDestinatario;
                 string asunto;
-
 
                 LightSwitchApplication.UserCode.EnviaMail correo = new UserCode.EnviaMail();
 
                 if (entity.Rechazada == true)
                 {
-                    asunto = "SU SOLICITUD HA SIDO RECHAZADA";
-                    string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ". Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                    asunto = "Su solicitud ha sido rechazada";
+                    string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ".\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                    correo.Mail(destinatario, asunto, mensaje);
                 }
                 else
                     if (entity.Rebajada == true)
                     {
-                        asunto = "SU SOLICITUD HA SIDO REBAJADA";
-                        string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ". Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                        correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                        asunto = "Su solicitud ha sido rebajada";
+                        string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ".\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                        correo.Mail(destinatario, asunto, mensaje);
                     }
                     else
                         if (entity.Completada == true)
                         {
-                            asunto = "SU SOLICITUD HA SIDO APROBADA POR SUS SUPERIORES ";
-                            string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ". " + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha completado todas las aprobaciones necesarias. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                            correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
-                        }
-                        else
+                            asunto = "Su solicitud ha sido aprobada por sus superiores";
+                            string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                            correo.Mail(destinatario, asunto, mensaje);
+
+                            if (entity.PersonaItem1.EsRolPrivado == true)
                             {
-                                if (entity.VB_JefeDirecto == false)
+                                mensaje = "Estimado(a) Administrador(a) Rol Privado:\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                asunto = "Solicitud aprobada por todos los superiores correspondientes";
+
+                                DataWorkspace dataWorkspace = new DataWorkspace();
+                                var CorreoNotificacion = (from o in dataWorkspace.Autorizaciones_AdminsData.CorreosDeAvisos where o.Nombre == "Administrador(a) Rol Privado" select o);
+
+                                if (CorreoNotificacion.First().Email != null)
                                 {
-                                    asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
-                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                    correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
+                                    correo.Mail(CorreoNotificacion.First().Email, asunto, mensaje);
                                 }
-                                else
-                                    if (entity.VB_SubGerente == false)
-                                    {
-                                        asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
-                                        string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                        correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
-                                    }
-                                    else
-                                        if (entity.VB_Gerente == false)
-                                        {
-                                            asunto = "TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN";
-                                            if (entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
-                                            {
-                                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                                correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
-                                            }
-                                            else
-                                            {
-                                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ". Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente. Por favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows para más detalles.";
-                                                correo.Mail("autorizaciones.administrativas@planvital.cl", destinatario, asunto, mensaje);
-                                            }
-                                        }
+                            }
+                            else
+                            {
+                                mensaje = "Estimado(a) Administrador(a) RR.HH:\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                asunto = "Solicitud aprobada por todos los superiores correspondientes";
+                                
+                                DataWorkspace dataWorkspace = new DataWorkspace();
+                                var CorreoNotificacion = (from o in dataWorkspace.Autorizaciones_AdminsData.CorreosDeAvisos where o.Nombre == "Administrador(a) Recursos Humanos" select o);
+                                
+                                if (CorreoNotificacion.First().Email != null)
+                                {
+                                    correo.Mail(CorreoNotificacion.First().Email, asunto, mensaje);
+                                }
                             }
 
+                            if(entity.HorasExtras == true)
+                            {
+                                if (entity.Colacion == true && entity.Taxi == true)
+                                {
+                                    mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y tanto TAXI como COLACIÓN han sido requeridos.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                }
+                                else if (entity.Colacion == true)
+                                {
+                                    mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido TAXI.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                }
+                                else if ( entity.Taxi == true)
+                                {
+                                    mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido COLACIÓN .\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                }
+
+                                asunto = "Solicitud aprobada por todos los superiores correspondientes";
+
+                                DataWorkspace dataWorkspace = new DataWorkspace();
+                                var CorreoNotificacion = (from o in dataWorkspace.Autorizaciones_AdminsData.CorreosDeAvisos where o.Nombre == "Notificar pedir colación y/o taxi" select o);
+
+                                if (CorreoNotificacion.First().Email != null)
+                                {
+                                    correo.Mail(CorreoNotificacion.First().Email, asunto, mensaje);
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (entity.VB_JefeDirecto == false)
+                            {
+                                asunto = "Tiene una solicitud en espera de su aprobación";
+                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                correo.Mail(destinatario, asunto, mensaje);
+                            }
+                            else
+                                if (entity.VB_SubGerente == false)
+                                {
+                                    asunto = "Tiene una solicitud en espera de su aprobación";
+                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    correo.Mail(destinatario, asunto, mensaje);
+                                }
+                                else
+                                    if (entity.VB_Gerente == false)
+                                    {
+                                        asunto = "Tiene una solicitud en espera de su aprobación";
+                                        if (entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
+                                        {
+                                            string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                            correo.Mail(destinatario, asunto, mensaje);
+                                        }
+                                        else
+                                        {
+                                            string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla."; 
+                                            correo.Mail(destinatario, asunto, mensaje);
+                                        }
+                                    }
+                        }
                 //entity.EmailProximoDestinatario = null;
             }
-        
         }
 
         //Consultar rut usando nombre de AD
@@ -253,6 +305,5 @@ namespace LightSwitchApplication
 
             this.Details.DiscardChanges();
         }
-
     }
 }

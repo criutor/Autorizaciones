@@ -523,8 +523,10 @@ namespace LightSwitchApplication
             //if (this.Division_Gerencia.SelectedItem.Nombre == "GERENCIA GENERAL") { this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Es_GerenteGeneral = false; }
 
             this.PersonaItem.Es_Gerente = false;
-
+            this.PersonaItem.Es_GerenteGeneral = false;
             this.PersonaItem.Cargo = null;
+
+            this.PersonaItem.AreaDeTrabajo = null;
 
             this.PersonaItem.Superior_Gerente.First().Division_GerenciaItem.Gerente = null;
 
@@ -534,7 +536,7 @@ namespace LightSwitchApplication
 
             this.Save();
 
-            this.ShowMessageBox("Cargo de gerente eliminado con exito");
+            this.ShowMessageBox("Cargo de gerente eliminado con éxito");
         }
 
         partial void QuitarComoSubgerente_Execute()
@@ -546,6 +548,8 @@ namespace LightSwitchApplication
 
             this.PersonaItem.IDGerencia_para_subgerentes = null;
 
+            this.PersonaItem.AreaDeTrabajo = null;
+
             this.PersonaItem.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
 
             this.PersonaItem.Superior_SubGerente.First().Delete();
@@ -554,7 +558,7 @@ namespace LightSwitchApplication
 
             this.Save();
 
-            this.ShowMessageBox("Cargo de subgerente eliminado con exito");
+            this.ShowMessageBox("Cargo de subgerente eliminado con éxito");
         }
 
         partial void QuitarComoJefeDeArea_Execute()
@@ -570,7 +574,7 @@ namespace LightSwitchApplication
 
             this.Save();
 
-            this.ShowMessageBox("Cargo de jefe de área eliminado con exito");
+            this.ShowMessageBox("Cargo de jefe de área eliminado con éxito");
         }
 
         partial void QuitarComoGerente_CanExecute(ref bool result)

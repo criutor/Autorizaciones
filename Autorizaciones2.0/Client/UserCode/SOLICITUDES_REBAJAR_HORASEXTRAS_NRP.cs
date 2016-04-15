@@ -24,41 +24,33 @@ namespace LightSwitchApplication
             //enviar horas extras a fin700 ******!!!
 
             this.AbrirVentanaModalHorasTrabajadas_Execute();
-
-            
-
-            
-            
+    
         }
 
-        partial void CancelarSolicitud_Execute()
+        partial void AnularSolicitud_Execute()
         {
             // Escriba el código aquí.
-            if (this.HorasExtrasAprobadas.SelectedItem.Inicio.Value > DateTime.Today)
-            { }
-            else
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("La solicitud será anulada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
             {
-                this.ShowMessageBox("Para cancelar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+
+                this.HorasExtrasAprobadas.SelectedItem.Caducada = true;
+                this.HorasExtrasAprobadas.SelectedItem.Completada = false;
+
+
+                //this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada por RR.HH";
+                this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada";
+
+                this.NUEVOESTADO = new ESTADOSItem();
+                this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;
+                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
+                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                this.Save();
+                this.Refresh();
             }
-
-            // Escriba el código aquí.
-            
-
-            this.HorasExtrasAprobadas.SelectedItem.Caducada = true;
-            this.HorasExtrasAprobadas.SelectedItem.Completada = false;
-
-
-            //this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada por RR.HH";
-            this.HorasExtrasAprobadas.SelectedItem.Estado = "Anulada";
-
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.HorasExtrasAprobadas.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
-
-            this.Save();
-            this.Refresh();
             
         }
 
@@ -77,8 +69,11 @@ namespace LightSwitchApplication
             {
                 this.HorasExtrasAprobadas.SelectedItem.HorasTrabajadas = this.HORASTRABAJADAS;
 
-                
-                    
+                System.Windows.MessageBoxResult result = this.ShowMessageBox("Las horas extras serán enviadas a Fin700. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+                if (result == System.Windows.MessageBoxResult.Yes)
+                {
+
                     this.HorasExtrasAprobadas.SelectedItem.Rebajada = true;
                     this.HorasExtrasAprobadas.SelectedItem.Completada = false;
 
@@ -95,7 +90,7 @@ namespace LightSwitchApplication
                     this.CloseModalWindow("VentanaModalHorasTrabajadas");
                     this.Save();
                     this.Refresh();
-               
+                }
             
             }
             else
@@ -137,7 +132,7 @@ namespace LightSwitchApplication
             catch { }
         }
 
-        partial void CancelarSolicitud_CanExecute(ref bool result)
+        partial void AnularSolicitud_CanExecute(ref bool result)
         {
             // Escriba el código aquí.
             try

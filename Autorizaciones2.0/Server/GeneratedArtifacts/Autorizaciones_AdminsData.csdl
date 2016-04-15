@@ -358,6 +358,16 @@
     <Property Name="NombreUsuario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="EmailUsuario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
   </EntityType>
+  <EntityType Name="CorreosDeAvisosItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Email" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Descripcion" Type="Edm.String" MaxLength="200" ConcurrencyMode="Fixed" />
+    <Property Name="RolPrivado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+  </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="0..1" />
     <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="*" />
@@ -371,7 +381,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Division_Area_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="0..1" />
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">
@@ -531,7 +543,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Division_Gerencia">
-    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1" />
+    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Gerencia">
@@ -555,7 +569,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Division_Area">
-    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="1" />
+    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Area">
@@ -579,7 +595,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="1" />
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">
@@ -669,6 +687,7 @@
     <EntitySet Name="CargoRolPrivado" EntityType="LightSwitchApplication.CargoRolPrivadoItem" />
     <EntitySet Name="ConsultarRutUsuarioAD" EntityType="LightSwitchApplication.ConsultarRutUsuarioADItem" />
     <EntitySet Name="ConsultarEmailUsuarioAD" EntityType="LightSwitchApplication.ConsultarEmailUsuarioADItem" />
+    <EntitySet Name="CorreosDeAvisos" EntityType="LightSwitchApplication.CorreosDeAvisosItem" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />

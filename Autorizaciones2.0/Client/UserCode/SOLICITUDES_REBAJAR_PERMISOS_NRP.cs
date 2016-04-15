@@ -23,51 +23,52 @@ namespace LightSwitchApplication
 
             //enviar Vacaciones a fin700 *****!!!!
 
-            this.PermisosAprobados.SelectedItem.Rebajada = true;
-            this.PermisosAprobados.SelectedItem.Completada = false;
+             System.Windows.MessageBoxResult result = this.ShowMessageBox("Esta acción indica que RR.HH ha recibido esta solicitud. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+             if (result == System.Windows.MessageBoxResult.Yes)
+             {
+
+                 this.PermisosAprobados.SelectedItem.Rebajada = true;
+                 this.PermisosAprobados.SelectedItem.Completada = false;
 
 
-            //this.PermisosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
-            this.PermisosAprobados.SelectedItem.Estado = "Rebajada";
+                 //this.PermisosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
+                 this.PermisosAprobados.SelectedItem.Estado = "Rebajada";
 
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
+                 this.NUEVOESTADO = new ESTADOSItem();
+                 this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
+                 this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                 this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                 this.NUEVOESTADO.CreadoAt = DateTime.Now;
 
-            this.Save();
-            this.Refresh();
+                 this.Save();
+                 this.Refresh();
+             }
 
         }
 
-        partial void CancelarSolicitud_Execute()
+        partial void AnularSolicitud_Execute()
         {
-            // Escriba el código aquí.
-            if (this.PermisosAprobados.SelectedItem.Termino.Value > DateTime.Today)
-            { }
-            else
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("La solicitud será anulada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
             {
-                this.ShowMessageBox("Para cancelar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+
+                this.PermisosAprobados.SelectedItem.Caducada = true;
+                this.PermisosAprobados.SelectedItem.Completada = false;
+
+                //this.PermisosAprobados.SelectedItem.Estado = "Anulada por RR.HH";
+                this.PermisosAprobados.SelectedItem.Estado = "Anulada";
+
+                this.NUEVOESTADO = new ESTADOSItem();
+                this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
+                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
+                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                this.Save();
+                this.Refresh();
             }
-
-            // Escriba el código aquí.
-            
-
-            this.PermisosAprobados.SelectedItem.Caducada = true;
-            this.PermisosAprobados.SelectedItem.Completada = false;
-
-            //this.PermisosAprobados.SelectedItem.Estado = "Anulada por RR.HH";
-            this.PermisosAprobados.SelectedItem.Estado = "Anulada";
-
-            this.NUEVOESTADO = new ESTADOSItem();
-            this.NUEVOESTADO.SOLICITUDESItem = this.PermisosAprobados.SelectedItem;
-            this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA CADUCADO (RR.HH):";
-            this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-            this.NUEVOESTADO.CreadoAt = DateTime.Now;
-
-            this.Save();
-            this.Refresh();
         }
 
         partial void RebajarSolicitud_CanExecute(ref bool result)
@@ -84,7 +85,7 @@ namespace LightSwitchApplication
             catch { }
         }
 
-        partial void CancelarSolicitud_CanExecute(ref bool result)
+        partial void AnularSolicitud_CanExecute(ref bool result)
         {
             // Escriba el código aquí.
             try

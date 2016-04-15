@@ -2483,6 +2483,41 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region CorreosDeAvisosItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class CorreosDeAvisosItem :
+        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.IImplementation
+    {
+        partial void OnidChanged()
+        {
+            this.___OnPropertyChanged("id");
+        }
+        
+        partial void OnNombreChanged()
+        {
+            this.___OnPropertyChanged("Nombre");
+        }
+        
+        partial void OnEmailChanged()
+        {
+            this.___OnPropertyChanged("Email");
+        }
+        
+        partial void OnDescripcionChanged()
+        {
+            this.___OnPropertyChanged("Descripcion");
+        }
+        
+        partial void OnRolPrivadoChanged()
+        {
+            this.___OnPropertyChanged("RolPrivado");
+        }
+        
+    }
+    #endregion
+    
     #region ContratoItem1
     [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Fin700v60Data.Implementation")]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -3299,6 +3334,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.ConsultarEmailUsuarioADItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.CorreosDeAvisosItem))
+            {
+                return new global::LightSwitchApplication.Implementation.CorreosDeAvisosItem();
+            }
             return null;
         }
     }
@@ -3485,6 +3524,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ConsultarEmailUsuarioADItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.ConsultarEmailUsuarioADItem);
+            }
+            if (typeof(global::LightSwitchApplication.CorreosDeAvisosItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.CorreosDeAvisosItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {

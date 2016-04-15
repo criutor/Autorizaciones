@@ -34,6 +34,8 @@ namespace LightSwitchApplication
             this.PersonaItemProperty.Es_JefeDirecto = false;
             this.PersonaItemProperty.Es_SubGerente = false;
             this.PersonaItemProperty.EsRolPrivado = true;
+            //this.PersonaItemProperty.RolPrivado = "Sí";
+
             
             this.ES_GERENTE = false;
             this.ES_SUBGERENTE = false;
