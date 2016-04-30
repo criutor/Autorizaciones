@@ -23,13 +23,30 @@ namespace LightSwitchApplication
                     if (empleado.EsRolPrivado != true)
                     {
                         empleado.SaldoDiasAdmins = 3;
-                        this.Save();
+                        
                     }
                 }
 
+                HistorialPPRRHHResetearSaldoDiasAdminsItem historial = new HistorialPPRRHHResetearSaldoDiasAdminsItem();
+
+                historial.EjecutadoPor = this.Application.User.FullName;
+                historial.FechaEjecución = DateTime.Now;
+
+                this.Save();
+                
                 this.ShowMessageBox("Saldos actualizados con éxito");
             }
+        }
 
+        partial void PROCESOS_PERIODICOS_RRHH_InitializeDataWorkspace(List<IDataService> saveChangesTo)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                this.FechaDeEjecución = this.HistorialPPRRHHResetearSaldoDiasAdmins.Last().FechaEjecución;
+                this.EjecutadoPor = this.HistorialPPRRHHResetearSaldoDiasAdmins.Last().EjecutadoPor;
+            }
+            catch { }
         }
 
     }

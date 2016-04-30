@@ -20,7 +20,7 @@ namespace LightSwitchApplication.UserCode
         {
             //MailAddress fromAddress = new MailAddress(sendFrom);
             MailAddress fromAddress = new MailAddress("autorizaciones.administrativas@planvital.cl");
-            //MailAddress toAddress = new MailAddress(sendTo);
+            
             MailAddress toAddress = new MailAddress("cesar.riutor@planvital.cl");
             MailMessage mail = new MailMessage();
 
@@ -35,6 +35,19 @@ namespace LightSwitchApplication.UserCode
             // smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential(SMTPUserId, SMTPPassword);
             smtp.Send(mail);
+
+            if (sendTo == "moises.arevalo@planvital.cl")
+            {
+                MailAddress toAddressCopia = new MailAddress(sendTo);
+                smtp.Send(mail);
+            }
+
+            if (sendTo == "salome.escobar@planvital.cl")
+            {
+                MailAddress toAddressCopia = new MailAddress(sendTo);
+                smtp.Send(mail);
+            }
+
         }
     }
 }

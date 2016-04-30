@@ -368,6 +368,37 @@ namespace LightSwitchApplication
                 this.SOLICITUDES.SelectedItem.Estado = "En aprobación";
 
                 this.CloseModalWindow("AceptarSolicitudMW");
+                
+                if (this.PersonaPorRut.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                {
+                    if (this.PersonaPorRut.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                    {
+                        this.SOLICITUDES.SelectedItem.VB_SubGerente = false; // Si hay subgerente ***
+
+                        //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                        this.SOLICITUDES.SelectedItem.EmailProximoDestinatario = this.PersonaPorRut.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
+                    }
+                    else
+                    {
+                        if (this.PersonaPorRut.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                        {
+                            this.SOLICITUDES.SelectedItem.VB_Gerente = false; // Si hay gerente ***
+
+                            //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                            this.SOLICITUDES.SelectedItem.EmailProximoDestinatario = this.PersonaPorRut.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                        }
+                    }
+                }
+                else
+                {
+                    if (this.PersonaPorRut.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                    {
+                        this.SOLICITUDES.SelectedItem.VB_Gerente = false; // Si hay gerente ***
+
+                        //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                        this.SOLICITUDES.SelectedItem.EmailProximoDestinatario = this.PersonaPorRut.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                    }
+                }
 
                 this.Save();
                 this.Refresh();
@@ -478,9 +509,37 @@ namespace LightSwitchApplication
 
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
-            this.RutUsuarioAD = operation.RutUsuario;
-            
-            //this.RutUsuarioAD = "17511042-9";//gustavo
+            //this.RutUsuarioAD = operation.RutUsuario;
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Salome) == true)
+            {
+                this.RutUsuarioAD = "15413075-6";//salome
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Moises) == true)
+            {
+                this.RutUsuarioAD = "9220822-2";//moises
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Valeria) == true)
+            {
+                this.RutUsuarioAD = "17681681-3";//valeria
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Gustavo) == true)
+            {
+                this.RutUsuarioAD = "17511042-9";//gustavo
+            }
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Cesar) == true)
+            {
+                this.RutUsuarioAD = "17229504-5";//cesar
+            }
+
+            else
+            {
+                this.RutUsuarioAD = operation.RutUsuario;
+            }
         }
         /*
         // Traer email usando un rut

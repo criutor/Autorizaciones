@@ -8,6 +8,6 @@ namespace LightSwitchApplication
 {
     public partial class Fin700v60DataService
     {
-        
+
     }
 }

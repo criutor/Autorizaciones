@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\Properties\Client.lsml" Checksum="0FF5717017C5D39081485BA9AE5C2739404214968494A760270AB6BE0F780585" />
-    <Document FullPath="C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Properties\Common.lsml" Checksum="47810CCBEA0A45A93D45D2A24D89F7AA8BDFC38A6A9465E28A37C05F309A1D56" />
+    <Document FullPath="C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Client\Properties\Client.lsml" Checksum="4FF0D32567E4CC7D922EB9A402E5AFF63E7400F3DEA653CD8F9A0CED00092BFA" />
+    <Document FullPath="C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Properties\Common.lsml" Checksum="8AEBAA1A330FC77EEDA1E9CCB5CCEEAE1177CBDA348F2971E9AAD434D661984A" />
   </Documents>
 </ModelDocumentManifest>

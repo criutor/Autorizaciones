@@ -24,9 +24,16 @@ namespace LightSwitchApplication
                     if (empleado.EsRolPrivado == true)
                     {
                         empleado.SaldoVacaciones2 = empleado.SaldoVacaciones2 + 1.25;
-                        this.Save();
+                        
                     }
                 }
+
+                HistorialPPRolPrivadoVacacionesProporcionalesItem historial = new HistorialPPRolPrivadoVacacionesProporcionalesItem();
+
+                historial.EjecutadoPor = this.Application.User.FullName;
+                historial.FechaEjecución = DateTime.Now;
+
+                this.Save();
 
                 this.ShowMessageBox("Saldos actualizados con éxito");
             }
@@ -44,13 +51,34 @@ namespace LightSwitchApplication
                     if (empleado.EsRolPrivado == true)
                     {
                         empleado.SaldoDiasAdmins = 3;
-                        this.Save();
+                        
                     }
                 }
+
+                HistorialPPRolPrivadoResetearSaldoDiasAdminsItem historial = new HistorialPPRolPrivadoResetearSaldoDiasAdminsItem ();
+
+                historial.EjecutadoPor = this.Application.User.FullName;
+                historial.FechaEjecución = DateTime.Now;
+
+                this.Save();
 
                 this.ShowMessageBox("Saldos actualizados con éxito");
             }
 
+        }
+
+        partial void PROCESOS_PERIODICOS_ROLPRIVADO_InitializeDataWorkspace(List<IDataService> saveChangesTo)
+        {
+            // Escriba el código aquí.
+            try
+            {
+                this.FechaDeEjecución = this.HistorialPPRolPrivadoResetearSaldoDiasAdmins.Last().FechaEjecución;
+                this.EjecutadoPor = this.HistorialPPRolPrivadoResetearSaldoDiasAdmins.Last().EjecutadoPor;
+
+                this.FechaDeEjecución2 = this.HistorialPPRolPrivadoVacacionesProporcionales.Last().FechaEjecución;
+                this.EjecutadoPor2 = this.HistorialPPRolPrivadoVacacionesProporcionales.Last().EjecutadoPor;
+            }
+            catch { }
         }
 
     }

@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-    public sealed partial class CorreosDeAvisosItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass>
+    public sealed partial class HistorialPPRolPrivadoResetearSaldoDiasAdminsItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Inicializa una nueva instancia de la entidad CorreosDeAvisosItem.
+        /// Inicializa una nueva instancia de la entidad HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CorreosDeAvisosItem()
+        public HistorialPPRolPrivadoResetearSaldoDiasAdminsItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CorreosDeAvisosItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CorreosDeAvisosItem> entitySet)
+        public HistorialPPRolPrivadoResetearSaldoDiasAdminsItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CorreosDeAvisosItem_Created();
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CorreosDeAvisosItem_AllowSaveWithErrors(ref bool result);
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -87,7 +87,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.id);
+                return global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.GetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.id);
             }
         }
         
@@ -103,96 +103,48 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Nombre
+        public string EjecutadoPor
         {
             get
             {
-                return global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Nombre);
+                return global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.GetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.EjecutadoPor);
             }
             set
             {
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Nombre, value);
+                global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.SetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.EjecutadoPor, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nombre_IsReadOnly(ref bool result);
+        partial void EjecutadoPor_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nombre_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void EjecutadoPor_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Nombre_Changed();
+        partial void EjecutadoPor_Changed();
 
         /// <summary>
         /// No hay ninguna descripción modelada
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Email
+        public global::System.Nullable<global::System.DateTime> FechaEjecución
         {
             get
             {
-                return global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Email);
+                return global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.GetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.FechaEjecución);
             }
             set
             {
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Email, value);
+                global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.SetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.FechaEjecución, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Email_IsReadOnly(ref bool result);
+        partial void FechaEjecución_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Email_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void FechaEjecución_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Email_Changed();
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Descripcion
-        {
-            get
-            {
-                return global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Descripcion);
-            }
-            set
-            {
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Descripcion, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Descripcion_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Descripcion_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Descripcion_Changed();
-
-        /// <summary>
-        /// No hay ninguna descripción modelada
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> RolPrivado
-        {
-            get
-            {
-                return global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.RolPrivado);
-            }
-            set
-            {
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.RolPrivado, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RolPrivado_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RolPrivado_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void RolPrivado_Changed();
+        partial void FechaEjecución_Changed();
 
         #endregion
     
@@ -203,37 +155,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.CorreosDeAvisosItem,
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass,
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.IImplementation,
-                global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass>>
+                global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem,
+                global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass,
+                global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.id;
+                var initializeEntry = global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.id;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass>.Entry
-                __CorreosDeAvisosItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass>.Entry(
-                    global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.__CorreosDeAvisosItem_CreateNew,
-                    global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.__CorreosDeAvisosItem_Created,
-                    global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.__CorreosDeAvisosItem_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.CorreosDeAvisosItem __CorreosDeAvisosItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CorreosDeAvisosItem> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass>.Entry
+                __HistorialPPRolPrivadoResetearSaldoDiasAdminsItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_CreateNew,
+                    global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_Created,
+                    global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem __HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> es)
             {
-                return new global::LightSwitchApplication.CorreosDeAvisosItem(es);
+                return new global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem(es);
             }
-            private static void __CorreosDeAvisosItem_Created(global::LightSwitchApplication.CorreosDeAvisosItem e)
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_Created(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
             {
-                e.CorreosDeAvisosItem_Created();
+                e.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_Created();
             }
-            private static bool __CorreosDeAvisosItem_AllowSaveWithErrors(global::LightSwitchApplication.CorreosDeAvisosItem e)
+            private static bool __HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_AllowSaveWithErrors(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
             {
                 bool result = false;
-                e.CorreosDeAvisosItem_AllowSaveWithErrors(ref result);
+                e.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -241,7 +193,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass> Commands
             {
                 get
                 {
@@ -249,7 +201,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass> Methods
             {
                 get
                 {
@@ -257,7 +209,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -269,50 +221,34 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, int> id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, int> id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string> Nombre
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, string> EjecutadoPor
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Nombre) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.EjecutadoPor) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string> Email
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::System.Nullable<global::System.DateTime>> FechaEjecución
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Email) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string> Descripcion
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.Descripcion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::System.Nullable<bool>> RolPrivado
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties.RolPrivado) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties.FechaEjecución) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::System.Nullable<global::System.DateTime>>;
                     }
                 }
                 
@@ -323,10 +259,8 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int id { get; }
-                new string Nombre { get; set; }
-                new string Email { get; set; }
-                new string Descripcion { get; set; }
-                new global::System.Nullable<bool> RolPrivado { get; set; }
+                new string EjecutadoPor { get; set; }
+                new global::System.Nullable<global::System.DateTime> FechaEjecución { get; set; }
             }
             #pragma warning restore 109
     
@@ -337,202 +271,502 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, int>.Entry
-                    id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, int>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, int>.Entry
+                    id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, int>.Entry(
                         "id",
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._id_Stub,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._id_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._id_Validate,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._id_GetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._id_Stub,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._id_Validate,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._id_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._id_OnValueChanged);
-                private static void _id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, object sf)
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._id_OnValueChanged);
+                private static void _id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._id, sf);
                 }
-                private static bool _id_ComputeIsReadOnly(global::LightSwitchApplication.CorreosDeAvisosItem e)
+                private static bool _id_ComputeIsReadOnly(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
                 {
                     bool result = false;
                     e.id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _id_Validate(global::LightSwitchApplication.CorreosDeAvisosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _id_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.id_Validate(r);
                 }
-                private static int _id_GetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d)
+                private static int _id_GetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.id;
                 }
-                private static void _id_OnValueChanged(global::LightSwitchApplication.CorreosDeAvisosItem e)
+                private static void _id_OnValueChanged(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
                 {
                     e.id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Entry
-                    Nombre = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Entry(
-                        "Nombre",
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Nombre_Stub,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Nombre_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Nombre_Validate,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Nombre_GetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Nombre_SetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Nombre_OnValueChanged);
-                private static void _Nombre_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, string>.Entry
+                    EjecutadoPor = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, string>.Entry(
+                        "EjecutadoPor",
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._EjecutadoPor_Stub,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._EjecutadoPor_ComputeIsReadOnly,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._EjecutadoPor_Validate,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._EjecutadoPor_GetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._EjecutadoPor_SetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._EjecutadoPor_OnValueChanged);
+                private static void _EjecutadoPor_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Nombre, sf);
+                    c(d, ref d._EjecutadoPor, sf);
                 }
-                private static bool _Nombre_ComputeIsReadOnly(global::LightSwitchApplication.CorreosDeAvisosItem e)
+                private static bool _EjecutadoPor_ComputeIsReadOnly(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
                 {
                     bool result = false;
-                    e.Nombre_IsReadOnly(ref result);
+                    e.EjecutadoPor_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Nombre_Validate(global::LightSwitchApplication.CorreosDeAvisosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _EjecutadoPor_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Nombre_Validate(r);
+                    e.EjecutadoPor_Validate(r);
                 }
-                private static string _Nombre_GetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d)
+                private static string _EjecutadoPor_GetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Nombre;
+                    return d.ImplementationEntity.EjecutadoPor;
                 }
-                private static void _Nombre_SetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, string v)
+                private static void _EjecutadoPor_SetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.Nombre = v;
+                    d.ImplementationEntity.EjecutadoPor = v;
                 }
-                private static void _Nombre_OnValueChanged(global::LightSwitchApplication.CorreosDeAvisosItem e)
+                private static void _EjecutadoPor_OnValueChanged(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
                 {
-                    e.Nombre_Changed();
+                    e.EjecutadoPor_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Entry
-                    Email = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Entry(
-                        "Email",
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Email_Stub,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Email_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Email_Validate,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Email_GetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Email_SetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Email_OnValueChanged);
-                private static void _Email_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    FechaEjecución = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "FechaEjecución",
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._FechaEjecución_Stub,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._FechaEjecución_ComputeIsReadOnly,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._FechaEjecución_Validate,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._FechaEjecución_GetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._FechaEjecución_SetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.PropertySetProperties._FechaEjecución_OnValueChanged);
+                private static void _FechaEjecución_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Email, sf);
+                    c(d, ref d._FechaEjecución, sf);
                 }
-                private static bool _Email_ComputeIsReadOnly(global::LightSwitchApplication.CorreosDeAvisosItem e)
+                private static bool _FechaEjecución_ComputeIsReadOnly(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
                 {
                     bool result = false;
-                    e.Email_IsReadOnly(ref result);
+                    e.FechaEjecución_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Email_Validate(global::LightSwitchApplication.CorreosDeAvisosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _FechaEjecución_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Email_Validate(r);
+                    e.FechaEjecución_Validate(r);
                 }
-                private static string _Email_GetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d)
+                private static global::System.Nullable<global::System.DateTime> _FechaEjecución_GetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Email;
+                    return d.ImplementationEntity.FechaEjecución;
                 }
-                private static void _Email_SetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, string v)
+                private static void _FechaEjecución_SetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
                 {
-                    d.ImplementationEntity.Email = v;
+                    d.ImplementationEntity.FechaEjecución = global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _Email_OnValueChanged(global::LightSwitchApplication.CorreosDeAvisosItem e)
+                private static void _FechaEjecución_OnValueChanged(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
                 {
-                    e.Email_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Entry
-                    Descripcion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Entry(
-                        "Descripcion",
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Descripcion_Stub,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Descripcion_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Descripcion_Validate,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Descripcion_GetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Descripcion_SetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._Descripcion_OnValueChanged);
-                private static void _Descripcion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Descripcion, sf);
-                }
-                private static bool _Descripcion_ComputeIsReadOnly(global::LightSwitchApplication.CorreosDeAvisosItem e)
-                {
-                    bool result = false;
-                    e.Descripcion_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Descripcion_Validate(global::LightSwitchApplication.CorreosDeAvisosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Descripcion_Validate(r);
-                }
-                private static string _Descripcion_GetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Descripcion;
-                }
-                private static void _Descripcion_SetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Descripcion = v;
-                }
-                private static void _Descripcion_OnValueChanged(global::LightSwitchApplication.CorreosDeAvisosItem e)
-                {
-                    e.Descripcion_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    RolPrivado = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::System.Nullable<bool>>.Entry(
-                        "RolPrivado",
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._RolPrivado_Stub,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._RolPrivado_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._RolPrivado_Validate,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._RolPrivado_GetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._RolPrivado_SetImplementationValue,
-                        global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.PropertySetProperties._RolPrivado_OnValueChanged);
-                private static void _RolPrivado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._RolPrivado, sf);
-                }
-                private static bool _RolPrivado_ComputeIsReadOnly(global::LightSwitchApplication.CorreosDeAvisosItem e)
-                {
-                    bool result = false;
-                    e.RolPrivado_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _RolPrivado_Validate(global::LightSwitchApplication.CorreosDeAvisosItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.RolPrivado_Validate(r);
-                }
-                private static global::System.Nullable<bool> _RolPrivado_GetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.RolPrivado;
-                }
-                private static void _RolPrivado_SetImplementationValue(global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass d, global::System.Nullable<bool> v)
-                {
-                    d.ImplementationEntity.RolPrivado = v;
-                }
-                private static void _RolPrivado_OnValueChanged(global::LightSwitchApplication.CorreosDeAvisosItem e)
-                {
-                    e.RolPrivado_Changed();
+                    e.FechaEjecución_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, int>.Data _id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, int>.Data _id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Data _Nombre;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, string>.Data _EjecutadoPor;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Data _Email;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _FechaEjecución;
+            
+        }
+    
+        #endregion
+    }
+    
+    /// <summary>
+    /// No hay ninguna descripción modelada
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class HistorialPPRolPrivadoVacacionesProporcionalesItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass>
+    {
+        #region Constructors
+    
+        /// <summary>
+        /// Inicializa una nueva instancia de la entidad HistorialPPRolPrivadoVacacionesProporcionalesItem.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public HistorialPPRolPrivadoVacacionesProporcionalesItem()
+            : this(null)
+        {
+        }
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public HistorialPPRolPrivadoVacacionesProporcionalesItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem> entitySet)
+            : base(entitySet)
+        {
+            global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.Initialize(this);
+        }
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionalesItem_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionalesItem_AllowSaveWithErrors(ref bool result);
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.EntitySet.Details.DataService.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Public Properties
+    
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int id
+        {
+            get
+            {
+                return global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.id);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void id_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void id_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string EjecutadoPor
+        {
+            get
+            {
+                return global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.EjecutadoPor);
+            }
+            set
+            {
+                global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.EjecutadoPor, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EjecutadoPor_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EjecutadoPor_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EjecutadoPor_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<global::System.DateTime> FechaEjecución
+        {
+            get
+            {
+                return global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.GetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.FechaEjecución);
+            }
+            set
+            {
+                global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.SetValue(this, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.FechaEjecución, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FechaEjecución_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FechaEjecución_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FechaEjecución_Changed();
+
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
+                global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem,
+                global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass,
+                global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass>>
+        {
+    
+            static DetailsClass()
+            {
+                var initializeEntry = global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.id;
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass>.Entry
+                __HistorialPPRolPrivadoVacacionesProporcionalesItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionalesItem_CreateNew,
+                    global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionalesItem_Created,
+                    global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionalesItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem __HistorialPPRolPrivadoVacacionesProporcionalesItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem> es)
+            {
+                return new global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem(es);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionalesItem_Created(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                e.HistorialPPRolPrivadoVacacionesProporcionalesItem_Created();
+            }
+            private static bool __HistorialPPRolPrivadoVacacionesProporcionalesItem_AllowSaveWithErrors(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                bool result = false;
+                e.HistorialPPRolPrivadoVacacionesProporcionalesItem_AllowSaveWithErrors(ref result);
+                return result;
+            }
+    
+            public DetailsClass() : base()
+            {
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass> Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass> Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+    
+            public new global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass>
+            {
+    
+                public PropertySet() : base()
+                {
+                }
+    
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, int> id
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, int>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, string> EjecutadoPor
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.EjecutadoPor) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::System.Nullable<global::System.DateTime>> FechaEjecución
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties.FechaEjecución) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                    }
+                }
+                
+            }
+    
+            #pragma warning disable 109
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
+            {
+                new int id { get; }
+                new string EjecutadoPor { get; set; }
+                new global::System.Nullable<global::System.DateTime> FechaEjecución { get; set; }
+            }
+            #pragma warning restore 109
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal class PropertySetProperties
+            {
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, int>.Entry
+                    id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, int>.Entry(
+                        "id",
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._id_Stub,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._id_Validate,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._id_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._id_OnValueChanged);
+                private static void _id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._id, sf);
+                }
+                private static bool _id_ComputeIsReadOnly(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+                {
+                    bool result = false;
+                    e.id_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _id_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.id_Validate(r);
+                }
+                private static int _id_GetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.id;
+                }
+                private static void _id_OnValueChanged(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+                {
+                    e.id_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, string>.Entry
+                    EjecutadoPor = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, string>.Entry(
+                        "EjecutadoPor",
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._EjecutadoPor_Stub,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._EjecutadoPor_ComputeIsReadOnly,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._EjecutadoPor_Validate,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._EjecutadoPor_GetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._EjecutadoPor_SetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._EjecutadoPor_OnValueChanged);
+                private static void _EjecutadoPor_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EjecutadoPor, sf);
+                }
+                private static bool _EjecutadoPor_ComputeIsReadOnly(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+                {
+                    bool result = false;
+                    e.EjecutadoPor_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EjecutadoPor_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EjecutadoPor_Validate(r);
+                }
+                private static string _EjecutadoPor_GetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EjecutadoPor;
+                }
+                private static void _EjecutadoPor_SetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.EjecutadoPor = v;
+                }
+                private static void _EjecutadoPor_OnValueChanged(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+                {
+                    e.EjecutadoPor_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    FechaEjecución = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "FechaEjecución",
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._FechaEjecución_Stub,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._FechaEjecución_ComputeIsReadOnly,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._FechaEjecución_Validate,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._FechaEjecución_GetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._FechaEjecución_SetImplementationValue,
+                        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.PropertySetProperties._FechaEjecución_OnValueChanged);
+                private static void _FechaEjecución_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FechaEjecución, sf);
+                }
+                private static bool _FechaEjecución_ComputeIsReadOnly(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+                {
+                    bool result = false;
+                    e.FechaEjecución_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _FechaEjecución_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.FechaEjecución_Validate(r);
+                }
+                private static global::System.Nullable<global::System.DateTime> _FechaEjecución_GetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.FechaEjecución;
+                }
+                private static void _FechaEjecución_SetImplementationValue(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                {
+                    d.ImplementationEntity.FechaEjecución = global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _FechaEjecución_OnValueChanged(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+                {
+                    e.FechaEjecución_Changed();
+                }
+    
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, int>.Data _id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, string>.Data _Descripcion;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, string>.Data _EjecutadoPor;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CorreosDeAvisosItem, global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass, global::System.Nullable<bool>>.Data _RolPrivado;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _FechaEjecución;
             
         }
     

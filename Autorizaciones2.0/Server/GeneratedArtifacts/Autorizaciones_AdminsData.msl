@@ -26,6 +26,9 @@
           <ScalarProperty Name="Rut_Persona_ConCeros" ColumnName="Rut_Persona_ConCeros" />
           <ScalarProperty Name="SaldoVacaciones" ColumnName="SaldoVacaciones" />
           <ScalarProperty Name="SaldoVacaciones2" ColumnName="SaldoVacaciones2" />
+          <ScalarProperty Name="IDGerencia" ColumnName="IDGerencia" />
+          <ScalarProperty Name="IDSubgerencia" ColumnName="IDSubgerencia" />
+          <ScalarProperty Name="VacacionesProgresivas" ColumnName="VacacionesProgresivas" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -317,6 +320,12 @@
         <MappingFragment StoreEntitySet="CargoRolPrivado">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IDArea" ColumnName="IDArea" />
+          <ScalarProperty Name="IDSubgerencia" ColumnName="IDSubgerencia" />
+          <ScalarProperty Name="IDGerencia" ColumnName="IDGerencia" />
+          <ScalarProperty Name="EsJefeDeArea" ColumnName="EsJefeDeArea" />
+          <ScalarProperty Name="EsSubgerente" ColumnName="EsSubgerente" />
+          <ScalarProperty Name="EsGerente" ColumnName="EsGerente" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -348,6 +357,33 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="RolPrivado" ColumnName="RolPrivado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialPPRRHHResetearSaldoDiasAdmins">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem)">
+        <MappingFragment StoreEntitySet="HistorialPPRRHHResetearSaldoDiasAdmins">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="EjecutadoPor" ColumnName="EjecutadoPor" />
+          <ScalarProperty Name="FechaEjecución" ColumnName="FechaEjecución" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialPPRolPrivadoResetearSaldoDiasAdmins">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem)">
+        <MappingFragment StoreEntitySet="HistorialPPRolPrivadoResetearSaldoDiasAdmins">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="EjecutadoPor" ColumnName="EjecutadoPor" />
+          <ScalarProperty Name="FechaEjecución" ColumnName="FechaEjecución" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HistorialPPRolPrivadoVacacionesProporcionales">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem)">
+        <MappingFragment StoreEntitySet="HistorialPPRolPrivadoVacacionesProporcionales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="EjecutadoPor" ColumnName="EjecutadoPor" />
+          <ScalarProperty Name="FechaEjecución" ColumnName="FechaEjecución" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

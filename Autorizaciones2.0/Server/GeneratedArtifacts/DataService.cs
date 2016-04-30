@@ -1032,6 +1032,114 @@ namespace LightSwitchApplication
         partial void CorreosDeAvisos_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.CorreosDeAvisosItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Inserting(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Inserted(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Updating(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Updated(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Deleting(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Deleted(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Validate(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRRHHResetearSaldoDiasAdmins_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserting(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserted(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updating(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updated(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleting(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleted(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoResetearSaldoDiasAdmins_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Inserting(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Inserted(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Updating(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Updated(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Deleting(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Deleted(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Validate(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HistorialPPRolPrivadoVacacionesProporcionales_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3253,6 +3361,231 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.CorreosDeAvisosItem, bool>> filter = null;
                 d.CorreosDeAvisos_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>
+                __HistorialPPRRHHResetearSaldoDiasAdminsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>(
+                    "HistorialPPRRHHResetearSaldoDiasAdmins",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRRHHResetearSaldoDiasAdmins_Filter);
+            private static bool __HistorialPPRRHHResetearSaldoDiasAdmins_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_CanInsert(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRRHHResetearSaldoDiasAdmins_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRRHHResetearSaldoDiasAdmins_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_CanDelete(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRRHHResetearSaldoDiasAdmins_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_CanRead(ref result);
+                return result;
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Inserting(e);
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Inserted(e);
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Updating(e);
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Updated(e);
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Deleting(e);
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Deleted(e);
+            }
+            private static void __HistorialPPRRHHResetearSaldoDiasAdmins_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem, bool>> __HistorialPPRRHHResetearSaldoDiasAdmins_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem, bool>> filter = null;
+                d.HistorialPPRRHHResetearSaldoDiasAdmins_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>
+                __HistorialPPRolPrivadoResetearSaldoDiasAdminsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>(
+                    "HistorialPPRolPrivadoResetearSaldoDiasAdmins",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoResetearSaldoDiasAdmins_Filter);
+            private static bool __HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanInsert(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanDelete(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_CanRead(ref result);
+                return result;
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserting(e);
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Inserted(e);
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updating(e);
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Updated(e);
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleting(e);
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Deleted(e);
+            }
+            private static void __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, bool>> __HistorialPPRolPrivadoResetearSaldoDiasAdmins_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem, bool>> filter = null;
+                d.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>
+                __HistorialPPRolPrivadoVacacionesProporcionalesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>(
+                    "HistorialPPRolPrivadoVacacionesProporcionales",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HistorialPPRolPrivadoVacacionesProporcionales_Filter);
+            private static bool __HistorialPPRolPrivadoVacacionesProporcionales_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoVacacionesProporcionales_CanInsert(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRolPrivadoVacacionesProporcionales_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoVacacionesProporcionales_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRolPrivadoVacacionesProporcionales_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoVacacionesProporcionales_CanDelete(ref result);
+                return result;
+            }
+            private static bool __HistorialPPRolPrivadoVacacionesProporcionales_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.HistorialPPRolPrivadoVacacionesProporcionales_CanRead(ref result);
+                return result;
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Inserting(e);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Inserted(e);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Updating(e);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Updated(e);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Deleting(e);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Deleted(e);
+            }
+            private static void __HistorialPPRolPrivadoVacacionesProporcionales_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, bool>> __HistorialPPRolPrivadoVacacionesProporcionales_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, bool>> filter = null;
+                d.HistorialPPRolPrivadoVacacionesProporcionales_Filter(ref filter);
                 return filter;
             }
             

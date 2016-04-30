@@ -64,45 +64,70 @@ namespace LightSwitchApplication
         partial void ConsultarGerencia_Execute()
         {
             // Escriba el código aquí.
-            if (this.Gerencia != null)
+            if (ADMINISTRATIVO == false && VACACIONES == false && OTROPERMISO == false && HORASEXTRAS == false)
             {
-                Id_Gerencia = this.Gerencia.Id_Gerencia;
-                Id_SubGerencia = -1;
-                Id_Area = -1;
-                this.NúmeroDeSolicitudesGerencia = this.SOLICITUDES.Count();
+                this.ShowMessageBox("Debes seleccionar por lo menos un tipo de solicitudes");
             }
-            else { this.ShowMessageBox("Primero debes escoger una gerencia"); }
+            else
+            {
+                if (this.Gerencia != null)
+                {
+                    Id_Gerencia = this.Gerencia.Id_Gerencia;
+                    Id_SubGerencia = -1;
+                    Id_Area = -1;
+
+                    this.NúmeroDeSolicitudesGerencia = this.SOLICITUDES.Count();
+                }
+                else { this.ShowMessageBox("Primero debes escoger una gerencia"); }
+            }
         }
 
         partial void ConsultarSubgerencia_Execute()
         {
             // Escriba el código aquí.
-            if (this.SubGerencia != null)
+            if (ADMINISTRATIVO == false && VACACIONES == false && OTROPERMISO == false && HORASEXTRAS == false)
             {
-                Id_SubGerencia = this.SubGerencia.Id_SubGerencia;
-                Id_Area = -1;
-                Id_Gerencia = -1;
-                this.NúmeroDeSolicitudesSubGerencia = this.SOLICITUDES.Count();
+                this.ShowMessageBox("Debes seleccionar por lo menos un tipo de solicitudes");
             }
-            else { this.ShowMessageBox("Primero debes escoger una subgerencia"); }
+            else
+            {
+                if (this.SubGerencia != null)
+                {
+                    Id_SubGerencia = this.SubGerencia.Id_SubGerencia;
+                    Id_Area = -1;
+                    Id_Gerencia = -1;
+
+                    this.NúmeroDeSolicitudesSubGerencia = this.SOLICITUDES.Count();
+                }
+                else { this.ShowMessageBox("Primero debes escoger una subgerencia"); }
+            }
         }
 
         partial void ConsultarArea_Execute()
         {
             // Escriba el código aquí.
-            if (this.Área != null)
+            if (ADMINISTRATIVO == false && VACACIONES == false && OTROPERMISO == false && HORASEXTRAS == false)
             {
-                Id_Area = this.Área.Id_Area;
-                Id_SubGerencia = -1;
-                Id_Gerencia = -1;
-                this.NúmeroDeSolicitudesArea = this.SOLICITUDES.Count();
+                this.ShowMessageBox("Debes seleccionar por lo menos un tipo de solicitudes");
             }
-            else { this.ShowMessageBox("Primero debes escoger un área"); }
+            else
+            {
+                if (this.Área != null)
+                {
+                    Id_Area = this.Área.Id_Area;
+                    Id_SubGerencia = -1;
+                    Id_Gerencia = -1;
+
+                    this.NúmeroDeSolicitudesArea = this.SOLICITUDES.Count();
+                }
+                else { this.ShowMessageBox("Primero debes escoger un área"); }
+            }
         }
 
         partial void FechaSolicitudDesde_Validate(ScreenValidationResultsBuilder results)
         {
             // results.AddPropertyError("<Mensaje de error>");
+            /*
             if(this.FechaSolicitudDesde > this.FechaSolicitudHasta)
             {
                 results.AddPropertyError("Las fechas deben ser en orden cronológico.");
@@ -112,9 +137,7 @@ namespace LightSwitchApplication
             {
                 results.AddPropertyError("Las fechas no pueden estar en blanco");
             }
-
-
-
+            */
         }
 
         partial void LimpiarFechas_Execute()
@@ -125,20 +148,6 @@ namespace LightSwitchApplication
 
             //this.SOLICITUDES.Load();
         }
-
-        partial void ADMINISTRATIVO_Validate(ScreenValidationResultsBuilder results)
-        {
-            // results.AddPropertyError("<Mensaje de error>");
-            if(ADMINISTRATIVO == false && VACACIONES == false && OTROPERMISO == false && HORASEXTRAS == false)
-            {
-                results.AddPropertyError("Debes seleccionar por lo menos un tipo de solicitudes");
-            }
-
-        }
-
-       
-
-        
-
+           
     }
 }

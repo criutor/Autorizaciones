@@ -520,6 +520,54 @@ namespace Autorizaciones_AdminsData.Implementation
             }
         }
         private ObjectSet<CorreosDeAvisosItem> _CorreosDeAvisos;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<HistorialPPRRHHResetearSaldoDiasAdminsItem> HistorialPPRRHHResetearSaldoDiasAdmins
+        {
+            get
+            {
+                if ((_HistorialPPRRHHResetearSaldoDiasAdmins == null))
+                {
+                    _HistorialPPRRHHResetearSaldoDiasAdmins = base.CreateObjectSet<HistorialPPRRHHResetearSaldoDiasAdminsItem>("HistorialPPRRHHResetearSaldoDiasAdmins");
+                }
+                return _HistorialPPRRHHResetearSaldoDiasAdmins;
+            }
+        }
+        private ObjectSet<HistorialPPRRHHResetearSaldoDiasAdminsItem> _HistorialPPRRHHResetearSaldoDiasAdmins;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> HistorialPPRolPrivadoResetearSaldoDiasAdmins
+        {
+            get
+            {
+                if ((_HistorialPPRolPrivadoResetearSaldoDiasAdmins == null))
+                {
+                    _HistorialPPRolPrivadoResetearSaldoDiasAdmins = base.CreateObjectSet<HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>("HistorialPPRolPrivadoResetearSaldoDiasAdmins");
+                }
+                return _HistorialPPRolPrivadoResetearSaldoDiasAdmins;
+            }
+        }
+        private ObjectSet<HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> _HistorialPPRolPrivadoResetearSaldoDiasAdmins;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<HistorialPPRolPrivadoVacacionesProporcionalesItem> HistorialPPRolPrivadoVacacionesProporcionales
+        {
+            get
+            {
+                if ((_HistorialPPRolPrivadoVacacionesProporcionales == null))
+                {
+                    _HistorialPPRolPrivadoVacacionesProporcionales = base.CreateObjectSet<HistorialPPRolPrivadoVacacionesProporcionalesItem>("HistorialPPRolPrivadoVacacionesProporcionales");
+                }
+                return _HistorialPPRolPrivadoVacacionesProporcionales;
+            }
+        }
+        private ObjectSet<HistorialPPRolPrivadoVacacionesProporcionalesItem> _HistorialPPRolPrivadoVacacionesProporcionales;
 
         #endregion
 
@@ -740,6 +788,30 @@ namespace Autorizaciones_AdminsData.Implementation
         {
             base.AddObject("CorreosDeAvisos", correosDeAvisosItem);
         }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet HistorialPPRRHHResetearSaldoDiasAdmins. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToHistorialPPRRHHResetearSaldoDiasAdmins(HistorialPPRRHHResetearSaldoDiasAdminsItem historialPPRRHHResetearSaldoDiasAdminsItem)
+        {
+            base.AddObject("HistorialPPRRHHResetearSaldoDiasAdmins", historialPPRRHHResetearSaldoDiasAdminsItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet HistorialPPRolPrivadoResetearSaldoDiasAdmins. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToHistorialPPRolPrivadoResetearSaldoDiasAdmins(HistorialPPRolPrivadoResetearSaldoDiasAdminsItem historialPPRolPrivadoResetearSaldoDiasAdminsItem)
+        {
+            base.AddObject("HistorialPPRolPrivadoResetearSaldoDiasAdmins", historialPPRolPrivadoResetearSaldoDiasAdminsItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet HistorialPPRolPrivadoVacacionesProporcionales. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToHistorialPPRolPrivadoVacacionesProporcionales(HistorialPPRolPrivadoVacacionesProporcionalesItem historialPPRolPrivadoVacacionesProporcionalesItem)
+        {
+            base.AddObject("HistorialPPRolPrivadoVacacionesProporcionales", historialPPRolPrivadoVacacionesProporcionalesItem);
+        }
 
         #endregion
 
@@ -909,6 +981,150 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Nombre;
         partial void OnNombreChanging(global::System.String value);
         partial void OnNombreChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDArea
+        {
+            get
+            {
+                return _IDArea;
+            }
+            set
+            {
+                OnIDAreaChanging(value);
+                ReportPropertyChanging("IDArea");
+                _IDArea = value;
+                ReportPropertyChanged("IDArea");
+                OnIDAreaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDArea;
+        partial void OnIDAreaChanging(Nullable<global::System.Int32> value);
+        partial void OnIDAreaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDSubgerencia
+        {
+            get
+            {
+                return _IDSubgerencia;
+            }
+            set
+            {
+                OnIDSubgerenciaChanging(value);
+                ReportPropertyChanging("IDSubgerencia");
+                _IDSubgerencia = value;
+                ReportPropertyChanged("IDSubgerencia");
+                OnIDSubgerenciaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDSubgerencia;
+        partial void OnIDSubgerenciaChanging(Nullable<global::System.Int32> value);
+        partial void OnIDSubgerenciaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDGerencia
+        {
+            get
+            {
+                return _IDGerencia;
+            }
+            set
+            {
+                OnIDGerenciaChanging(value);
+                ReportPropertyChanging("IDGerencia");
+                _IDGerencia = value;
+                ReportPropertyChanged("IDGerencia");
+                OnIDGerenciaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDGerencia;
+        partial void OnIDGerenciaChanging(Nullable<global::System.Int32> value);
+        partial void OnIDGerenciaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> EsJefeDeArea
+        {
+            get
+            {
+                return _EsJefeDeArea;
+            }
+            set
+            {
+                OnEsJefeDeAreaChanging(value);
+                ReportPropertyChanging("EsJefeDeArea");
+                _EsJefeDeArea = value;
+                ReportPropertyChanged("EsJefeDeArea");
+                OnEsJefeDeAreaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _EsJefeDeArea;
+        partial void OnEsJefeDeAreaChanging(Nullable<global::System.Boolean> value);
+        partial void OnEsJefeDeAreaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> EsSubgerente
+        {
+            get
+            {
+                return _EsSubgerente;
+            }
+            set
+            {
+                OnEsSubgerenteChanging(value);
+                ReportPropertyChanging("EsSubgerente");
+                _EsSubgerente = value;
+                ReportPropertyChanged("EsSubgerente");
+                OnEsSubgerenteChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _EsSubgerente;
+        partial void OnEsSubgerenteChanging(Nullable<global::System.Boolean> value);
+        partial void OnEsSubgerenteChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> EsGerente
+        {
+            get
+            {
+                return _EsGerente;
+            }
+            set
+            {
+                OnEsGerenteChanging(value);
+                ReportPropertyChanging("EsGerente");
+                _EsGerente = value;
+                ReportPropertyChanged("EsGerente");
+                OnEsGerenteChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _EsGerente;
+        partial void OnEsGerenteChanging(Nullable<global::System.Boolean> value);
+        partial void OnEsGerenteChanged();
 
         #endregion
 
@@ -2826,6 +3042,321 @@ namespace Autorizaciones_AdminsData.Implementation
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="HistorialPPRolPrivadoResetearSaldoDiasAdminsItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class HistorialPPRolPrivadoResetearSaldoDiasAdminsItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        public static HistorialPPRolPrivadoResetearSaldoDiasAdminsItem CreateHistorialPPRolPrivadoResetearSaldoDiasAdminsItem(global::System.Int32 id)
+        {
+            HistorialPPRolPrivadoResetearSaldoDiasAdminsItem historialPPRolPrivadoResetearSaldoDiasAdminsItem = new HistorialPPRolPrivadoResetearSaldoDiasAdminsItem();
+            historialPPRolPrivadoResetearSaldoDiasAdminsItem.id = id;
+            return historialPPRolPrivadoResetearSaldoDiasAdminsItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = value;
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EjecutadoPor
+        {
+            get
+            {
+                return _EjecutadoPor;
+            }
+            set
+            {
+                OnEjecutadoPorChanging(value);
+                ReportPropertyChanging("EjecutadoPor");
+                _EjecutadoPor = value;
+                ReportPropertyChanged("EjecutadoPor");
+                OnEjecutadoPorChanged();
+            }
+        }
+        private global::System.String _EjecutadoPor;
+        partial void OnEjecutadoPorChanging(global::System.String value);
+        partial void OnEjecutadoPorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaEjecución
+        {
+            get
+            {
+                return _FechaEjecución;
+            }
+            set
+            {
+                OnFechaEjecuciónChanging(value);
+                ReportPropertyChanging("FechaEjecución");
+                _FechaEjecución = value;
+                ReportPropertyChanged("FechaEjecución");
+                OnFechaEjecuciónChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaEjecución;
+        partial void OnFechaEjecuciónChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaEjecuciónChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="HistorialPPRolPrivadoVacacionesProporcionalesItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class HistorialPPRolPrivadoVacacionesProporcionalesItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto HistorialPPRolPrivadoVacacionesProporcionalesItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        public static HistorialPPRolPrivadoVacacionesProporcionalesItem CreateHistorialPPRolPrivadoVacacionesProporcionalesItem(global::System.Int32 id)
+        {
+            HistorialPPRolPrivadoVacacionesProporcionalesItem historialPPRolPrivadoVacacionesProporcionalesItem = new HistorialPPRolPrivadoVacacionesProporcionalesItem();
+            historialPPRolPrivadoVacacionesProporcionalesItem.id = id;
+            return historialPPRolPrivadoVacacionesProporcionalesItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = value;
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EjecutadoPor
+        {
+            get
+            {
+                return _EjecutadoPor;
+            }
+            set
+            {
+                OnEjecutadoPorChanging(value);
+                ReportPropertyChanging("EjecutadoPor");
+                _EjecutadoPor = value;
+                ReportPropertyChanged("EjecutadoPor");
+                OnEjecutadoPorChanged();
+            }
+        }
+        private global::System.String _EjecutadoPor;
+        partial void OnEjecutadoPorChanging(global::System.String value);
+        partial void OnEjecutadoPorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaEjecución
+        {
+            get
+            {
+                return _FechaEjecución;
+            }
+            set
+            {
+                OnFechaEjecuciónChanging(value);
+                ReportPropertyChanging("FechaEjecución");
+                _FechaEjecución = value;
+                ReportPropertyChanged("FechaEjecución");
+                OnFechaEjecuciónChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaEjecución;
+        partial void OnFechaEjecuciónChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaEjecuciónChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="HistorialPPRRHHResetearSaldoDiasAdminsItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class HistorialPPRRHHResetearSaldoDiasAdminsItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto HistorialPPRRHHResetearSaldoDiasAdminsItem.
+        /// </summary>
+        /// <param name="id">Valor inicial de la propiedad id.</param>
+        public static HistorialPPRRHHResetearSaldoDiasAdminsItem CreateHistorialPPRRHHResetearSaldoDiasAdminsItem(global::System.Int32 id)
+        {
+            HistorialPPRRHHResetearSaldoDiasAdminsItem historialPPRRHHResetearSaldoDiasAdminsItem = new HistorialPPRRHHResetearSaldoDiasAdminsItem();
+            historialPPRRHHResetearSaldoDiasAdminsItem.id = id;
+            return historialPPRRHHResetearSaldoDiasAdminsItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                if (_id != value)
+                {
+                    OnidChanging(value);
+                    ReportPropertyChanging("id");
+                    _id = value;
+                    ReportPropertyChanged("id");
+                    OnidChanged();
+                }
+            }
+        }
+        private global::System.Int32 _id;
+        partial void OnidChanging(global::System.Int32 value);
+        partial void OnidChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String EjecutadoPor
+        {
+            get
+            {
+                return _EjecutadoPor;
+            }
+            set
+            {
+                OnEjecutadoPorChanging(value);
+                ReportPropertyChanging("EjecutadoPor");
+                _EjecutadoPor = value;
+                ReportPropertyChanged("EjecutadoPor");
+                OnEjecutadoPorChanged();
+            }
+        }
+        private global::System.String _EjecutadoPor;
+        partial void OnEjecutadoPorChanging(global::System.String value);
+        partial void OnEjecutadoPorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FechaEjecución
+        {
+            get
+            {
+                return _FechaEjecución;
+            }
+            set
+            {
+                OnFechaEjecuciónChanging(value);
+                ReportPropertyChanging("FechaEjecución");
+                _FechaEjecución = value;
+                ReportPropertyChanged("FechaEjecución");
+                OnFechaEjecuciónChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FechaEjecución;
+        partial void OnFechaEjecuciónChanging(Nullable<global::System.DateTime> value);
+        partial void OnFechaEjecuciónChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="PersonaItem")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -2837,10 +3368,18 @@ namespace Autorizaciones_AdminsData.Implementation
         /// Crear un nuevo objeto PersonaItem.
         /// </summary>
         /// <param name="rut_Persona">Valor inicial de la propiedad Rut_Persona.</param>
-        public static PersonaItem CreatePersonaItem(global::System.String rut_Persona)
+        /// <param name="aP_Paterno">Valor inicial de la propiedad AP_Paterno.</param>
+        /// <param name="aP_Materno">Valor inicial de la propiedad AP_Materno.</param>
+        /// <param name="nombres">Valor inicial de la propiedad Nombres.</param>
+        /// <param name="es_JefeDirecto">Valor inicial de la propiedad Es_JefeDirecto.</param>
+        public static PersonaItem CreatePersonaItem(global::System.String rut_Persona, global::System.String aP_Paterno, global::System.String aP_Materno, global::System.String nombres, global::System.Boolean es_JefeDirecto)
         {
             PersonaItem personaItem = new PersonaItem();
             personaItem.Rut_Persona = rut_Persona;
+            personaItem.AP_Paterno = aP_Paterno;
+            personaItem.AP_Materno = aP_Materno;
+            personaItem.Nombres = nombres;
+            personaItem.Es_JefeDirecto = es_JefeDirecto;
             return personaItem;
         }
 
@@ -2878,7 +3417,7 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String AP_Paterno
         {
@@ -2902,7 +3441,7 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String AP_Materno
         {
@@ -2926,7 +3465,7 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Nombres
         {
@@ -2998,9 +3537,9 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> Es_JefeDirecto
+        public global::System.Boolean Es_JefeDirecto
         {
             get
             {
@@ -3015,8 +3554,8 @@ namespace Autorizaciones_AdminsData.Implementation
                 OnEs_JefeDirectoChanged();
             }
         }
-        private Nullable<global::System.Boolean> _Es_JefeDirecto;
-        partial void OnEs_JefeDirectoChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _Es_JefeDirecto;
+        partial void OnEs_JefeDirectoChanging(global::System.Boolean value);
         partial void OnEs_JefeDirectoChanged();
     
         /// <summary>
@@ -3306,6 +3845,78 @@ namespace Autorizaciones_AdminsData.Implementation
         private Nullable<global::System.Double> _SaldoVacaciones2;
         partial void OnSaldoVacaciones2Changing(Nullable<global::System.Double> value);
         partial void OnSaldoVacaciones2Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDGerencia
+        {
+            get
+            {
+                return _IDGerencia;
+            }
+            set
+            {
+                OnIDGerenciaChanging(value);
+                ReportPropertyChanging("IDGerencia");
+                _IDGerencia = value;
+                ReportPropertyChanged("IDGerencia");
+                OnIDGerenciaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDGerencia;
+        partial void OnIDGerenciaChanging(Nullable<global::System.Int32> value);
+        partial void OnIDGerenciaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> IDSubgerencia
+        {
+            get
+            {
+                return _IDSubgerencia;
+            }
+            set
+            {
+                OnIDSubgerenciaChanging(value);
+                ReportPropertyChanging("IDSubgerencia");
+                _IDSubgerencia = value;
+                ReportPropertyChanged("IDSubgerencia");
+                OnIDSubgerenciaChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _IDSubgerencia;
+        partial void OnIDSubgerenciaChanging(Nullable<global::System.Int32> value);
+        partial void OnIDSubgerenciaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Double> VacacionesProgresivas
+        {
+            get
+            {
+                return _VacacionesProgresivas;
+            }
+            set
+            {
+                OnVacacionesProgresivasChanging(value);
+                ReportPropertyChanging("VacacionesProgresivas");
+                _VacacionesProgresivas = value;
+                ReportPropertyChanged("VacacionesProgresivas");
+                OnVacacionesProgresivasChanged();
+            }
+        }
+        private Nullable<global::System.Double> _VacacionesProgresivas;
+        partial void OnVacacionesProgresivasChanging(Nullable<global::System.Double> value);
+        partial void OnVacacionesProgresivasChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

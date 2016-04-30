@@ -169,10 +169,10 @@ namespace LightSwitchApplication
                         }
                     }
 
-                    if (contarSuperiores < 2)
+                    if (contarSuperiores < 1)
                     {
                         // debe tener por lo menos 2 superiores para poder crear una solicitud
-                        this.ShowMessageBox("Debe haber como mínimo 2 superiores asociados a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                        this.ShowMessageBox("Debe haber como mínimo 1 superior asociado a tu área de trabajo para evaluar tu solicitud, por favor contacta al administrador de la aplicación", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
 
                         this.Close(false);
                     }
@@ -194,10 +194,30 @@ namespace LightSwitchApplication
                                     //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
                                     this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
                             }
+                            else
+                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem != null && this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                {
+                                    this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                    this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                }else
+                                    if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem != null && this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                    {
+                                        this.SOLICITUD.VB_Gerente = false; // Si hay gerente
+
+                                        //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                        this.SOLICITUD.EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                    }
+
                     }
                     contarSuperiores = 0;
                 }
             //Instanciar el objeto detalle de solicitud dependiendo del caso
+
+            this.SOLICITUD.Inicio = DateTime.Today;
+            this.SOLICITUD.Termino = DateTime.Today;
+
             if (TIPOSOLICITUD == 1)
             {
                 this.SOLICITUD.Administrativo = true;
@@ -208,6 +228,9 @@ namespace LightSwitchApplication
             {
                 this.SOLICITUD.Vacaciones = true;
                 this.SOLICITUD.Titulo = "Vacaciones";
+
+                this.SOLICITUD.Inicio = DateTime.Today.AddDays(1);
+                this.SOLICITUD.Termino = DateTime.Today.AddDays(1);
             }
             else if (TIPOSOLICITUD == 3)
             {
@@ -221,8 +244,7 @@ namespace LightSwitchApplication
                 this.SOLICITUD.Titulo = "Permiso";   
             }
 
-            this.SOLICITUD.Inicio = DateTime.Today;
-            this.SOLICITUD.Termino = DateTime.Today;
+            
 
             if (TIPOSOLICITUD == 3)//Solicitudes de horas extras no tienen fecha de término
             {
@@ -268,6 +290,11 @@ namespace LightSwitchApplication
 
         partial void SOLICITUDES_NUEVA_Saved()
         {
+            if (this.SOLICITUD.HorasExtras == true)
+            {
+                this.ShowMessageBox("Para hacer seguimiento de esta solicitud diríjase al menú 'Reportes' y seleccione la pantalla 'HISTÓRICO'.", "SOLICITUD INGRESADA CON EXITO", MessageBoxOption.Ok);
+            }
+            
             this.Close(true);
             //Application.Current.ShowDefaultScreen(this.SOLICITUDESItemProperty);
         }
@@ -302,7 +329,15 @@ namespace LightSwitchApplication
             if (this.PersonaPorRutAD.First().EsRolPrivado == true)
             {
                 //***this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones;
-                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones2;
+
+                double progresivas = 0;
+
+                if (this.PersonaPorRutAD.First().VacacionesProgresivas != null)
+                {
+                    progresivas = this.PersonaPorRutAD.First().VacacionesProgresivas.Value;
+                }
+                
+                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones2 + progresivas;
                 //this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().VacacionesSaldo;
             }
             else
@@ -391,22 +426,22 @@ namespace LightSwitchApplication
                         results.AddPropertyError("El prestamo debe ser entre 0 y 50");
                     }
                 }
+
                 
                 //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
 
                 DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
-                int dia; int mes; int i = 0;
+                int dia; int mes; int año; int i = 0;
 
                 foreach (FeriadosItem feriado in this.Feriados)
                 {
-
                     dia = feriado.Feriado.Day;
                     mes = feriado.Feriado.Month;
-                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    año = feriado.Feriado.Year;
+                    //DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    DateTime DiaAux = new DateTime(año, mes, dia);
                     FERIADOS[i] = DiaAux;
-
                     i++;
-
                 }
 
                 //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
@@ -442,7 +477,7 @@ namespace LightSwitchApplication
 
                 if (this.SOLICITUD.Inicio <= DateTime.Today)
                 {
-                    results.AddPropertyError("Día de Inicio debe ser después de hoy");
+                    results.AddPropertyError("Día de Inicio debe ser después hoy");
                 }
 
                 if (this.SOLICITUD.NumeroDiasTomados > this.SOLICITUD.SaldoDias)
@@ -483,7 +518,7 @@ namespace LightSwitchApplication
                 }
                 else { this.SOLICITUD.HorasAutorizadas = this.SOLICITUD.HorasAutorizadas; }
 
-                if (this.SOLICITUD.HorasAutorizadas < 0 || this.SOLICITUD.HorasAutorizadas == null)
+                if (this.SOLICITUD.HorasAutorizadas <= 0 || this.SOLICITUD.HorasAutorizadas == null)
                 {
                     results.AddPropertyError("Las horas autorizadas deben ser mayor a 0");
                 }
@@ -492,6 +527,11 @@ namespace LightSwitchApplication
                 if (this.SOLICITUD.Inicio < DateTime.Today)
                 {
                     results.AddPropertyError("La fecha de realización no puede ser antes de hoy");
+                }
+
+                if (this.SOLICITUD.PersonaItem1 == null)
+                {
+                    results.AddPropertyError("Debe seleccionar un empleado");
                 }
 
                 //if (COLACION == true) { this.SOLICITUDESItemProperty.Colacion = true; } else { this.SOLICITUDESItemProperty.Colacion = false; }
@@ -515,14 +555,15 @@ namespace LightSwitchApplication
                 //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
 
                 DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
-                int dia; int mes; int i = 0;
+                int dia; int mes; int año; int i = 0;
 
                 foreach (FeriadosItem feriado in this.Feriados)
                 {
-
                     dia = feriado.Feriado.Day;
                     mes = feriado.Feriado.Month;
-                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    año = feriado.Feriado.Year;
+                    //DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    DateTime DiaAux = new DateTime(año, mes, dia);
                     FERIADOS[i] = DiaAux;
 
                     i++;
@@ -577,13 +618,15 @@ namespace LightSwitchApplication
                 //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
 
                 DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
-                int dia; int mes; int i = 0;
+                int dia; int mes; int año; int i = 0;
 
                 foreach (FeriadosItem feriado in this.Feriados)
                 {
                     dia = feriado.Feriado.Day;
                     mes = feriado.Feriado.Month;
-                    DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    año = feriado.Feriado.Year;
+                    //DateTime DiaAux = new DateTime(DateTime.Today.Year, mes, dia);//Cambia el año del registro al año actual
+                    DateTime DiaAux = new DateTime(año, mes, dia);
                     FERIADOS[i] = DiaAux;
                     i++;
                 }
@@ -729,9 +772,47 @@ namespace LightSwitchApplication
             ConsultarRutUsuarioADItem operation = dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
             operation.NombreUsuario = this.Application.User.FullName;
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
-            this.RutUsuarioAD = operation.RutUsuario;
-            //this.RutUsuarioAD = "17511042-9";//gustavo
+            //this.RutUsuarioAD = operation.RutUsuario;
+
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Salome) == true)
+            {
+                this.RutUsuarioAD = "15413075-6";//salome
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Moises) == true)
+            {
+                this.RutUsuarioAD = "9220822-2";//moises
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Valeria) == true)
+            {
+                this.RutUsuarioAD = "17681681-3";//valeria
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Gustavo) == true)
+            {
+                this.RutUsuarioAD = "17511042-9";//gustavo
+            }
+
+            if (this.Application.User.HasPermission(Permissions.Soy_Cesar) == true)
+            {
+                this.RutUsuarioAD = "17229504-5";//cesar
+            }
+
+            else
+            {
+                this.RutUsuarioAD = operation.RutUsuario;
+            }
         }
+
+        partial void PersonalBajoJefeDeArea_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+
+        }
+
+        
        
     }
 }

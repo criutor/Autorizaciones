@@ -840,6 +840,36 @@
           Nullable="False"
           Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[Nombre]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="IDArea"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[IDArea]"
+          Type="int" />
+        <SsdlProperty
+          Name="IDSubgerencia"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[IDSubgerencia]"
+          Type="int" />
+        <SsdlProperty
+          Name="IDGerencia"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[IDGerencia]"
+          Type="int" />
+        <SsdlProperty
+          Name="EsJefeDeArea"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[EsJefeDeArea]"
+          Type="bit" />
+        <SsdlProperty
+          Name="EsSubgerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[EsSubgerente]"
+          Type="bit" />
+        <SsdlProperty
+          Name="EsGerente"
+          Nullable="True"
+          Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[EsGerente]"
+          Type="bit" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -1197,6 +1227,81 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="HistorialPPRolPrivadoResetearSaldoDiasAdmins">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="HistorialPPRolPrivadoResetearSaldoDiasAdmins" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:HistorialPPRolPrivadoResetearSaldoDiasAdminsItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EjecutadoPor"
+          Nullable="True"
+          Property="LightSwitchCommonModule:HistorialPPRolPrivadoResetearSaldoDiasAdminsItem/Properties[EjecutadoPor]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FechaEjecución"
+          Nullable="True"
+          Property="LightSwitchCommonModule:HistorialPPRolPrivadoResetearSaldoDiasAdminsItem/Properties[FechaEjecución]"
+          Type="datetime" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="HistorialPPRolPrivadoVacacionesProporcionales">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="HistorialPPRolPrivadoVacacionesProporcionales" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:HistorialPPRolPrivadoVacacionesProporcionalesItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EjecutadoPor"
+          Nullable="True"
+          Property="LightSwitchCommonModule:HistorialPPRolPrivadoVacacionesProporcionalesItem/Properties[EjecutadoPor]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FechaEjecución"
+          Nullable="True"
+          Property="LightSwitchCommonModule:HistorialPPRolPrivadoVacacionesProporcionalesItem/Properties[FechaEjecución]"
+          Type="datetime" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="HistorialPPRRHHResetearSaldoDiasAdmins">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="HistorialPPRRHHResetearSaldoDiasAdmins" />
+        <SsdlProperty
+          Name="id"
+          Nullable="False"
+          Property="LightSwitchCommonModule:HistorialPPRRHHResetearSaldoDiasAdminsItem/Properties[id]"
+          StoreGeneratedPattern="Identity"
+          Type="int" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="EjecutadoPor"
+          Nullable="True"
+          Property="LightSwitchCommonModule:HistorialPPRRHHResetearSaldoDiasAdminsItem/Properties[EjecutadoPor]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FechaEjecución"
+          Nullable="True"
+          Property="LightSwitchCommonModule:HistorialPPRRHHResetearSaldoDiasAdminsItem/Properties[FechaEjecución]"
+          Type="datetime" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Persona">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -1211,19 +1316,19 @@
         <SsdlProperty
           MaxLength="30"
           Name="AP_Paterno"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:PersonaItem/Properties[AP_Paterno]"
           Type="varchar" />
         <SsdlProperty
           MaxLength="30"
           Name="AP_Materno"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:PersonaItem/Properties[AP_Materno]"
           Type="varchar" />
         <SsdlProperty
           MaxLength="30"
           Name="Nombres"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:PersonaItem/Properties[Nombres]"
           Type="varchar" />
         <SsdlProperty
@@ -1238,7 +1343,7 @@
           Type="bit" />
         <SsdlProperty
           Name="Es_JefeDirecto"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:PersonaItem/Properties[Es_JefeDirecto]"
           Type="bit" />
         <SsdlProperty
@@ -1305,6 +1410,21 @@
           Name="SaldoVacaciones2"
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones2]"
+          Type="float" />
+        <SsdlProperty
+          Name="IDGerencia"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[IDGerencia]"
+          Type="int" />
+        <SsdlProperty
+          Name="IDSubgerencia"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[IDSubgerencia]"
+          Type="int" />
+        <SsdlProperty
+          Name="VacacionesProgresivas"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[VacacionesProgresivas]"
           Type="float" />
         <SsdlForeignKeyProperty
           Name="CargoRolPrivado_fk"

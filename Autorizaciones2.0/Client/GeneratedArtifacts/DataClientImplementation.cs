@@ -130,6 +130,21 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("SaldoVacaciones2");
         }
         
+        partial void OnIDGerenciaChanged()
+        {
+            this.___OnPropertyChanged("IDGerencia");
+        }
+        
+        partial void OnIDSubgerenciaChanged()
+        {
+            this.___OnPropertyChanged("IDSubgerencia");
+        }
+        
+        partial void OnVacacionesProgresivasChanged()
+        {
+            this.___OnPropertyChanged("VacacionesProgresivas");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
         {
             get
@@ -2394,6 +2409,36 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Nombre");
         }
         
+        partial void OnIDAreaChanged()
+        {
+            this.___OnPropertyChanged("IDArea");
+        }
+        
+        partial void OnIDSubgerenciaChanged()
+        {
+            this.___OnPropertyChanged("IDSubgerencia");
+        }
+        
+        partial void OnIDGerenciaChanged()
+        {
+            this.___OnPropertyChanged("IDGerencia");
+        }
+        
+        partial void OnEsJefeDeAreaChanged()
+        {
+            this.___OnPropertyChanged("EsJefeDeArea");
+        }
+        
+        partial void OnEsSubgerenteChanged()
+        {
+            this.___OnPropertyChanged("EsSubgerente");
+        }
+        
+        partial void OnEsGerenteChanged()
+        {
+            this.___OnPropertyChanged("EsGerente");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.IImplementation.Persona
         {
             get
@@ -2513,6 +2558,81 @@ namespace LightSwitchApplication.Implementation
         partial void OnRolPrivadoChanged()
         {
             this.___OnPropertyChanged("RolPrivado");
+        }
+        
+    }
+    #endregion
+    
+    #region HistorialPPRRHHResetearSaldoDiasAdminsItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class HistorialPPRRHHResetearSaldoDiasAdminsItem :
+        global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem.DetailsClass.IImplementation
+    {
+        partial void OnidChanged()
+        {
+            this.___OnPropertyChanged("id");
+        }
+        
+        partial void OnEjecutadoPorChanged()
+        {
+            this.___OnPropertyChanged("EjecutadoPor");
+        }
+        
+        partial void OnFechaEjecuciónChanged()
+        {
+            this.___OnPropertyChanged("FechaEjecución");
+        }
+        
+    }
+    #endregion
+    
+    #region HistorialPPRolPrivadoResetearSaldoDiasAdminsItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class HistorialPPRolPrivadoResetearSaldoDiasAdminsItem :
+        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.IImplementation
+    {
+        partial void OnidChanged()
+        {
+            this.___OnPropertyChanged("id");
+        }
+        
+        partial void OnEjecutadoPorChanged()
+        {
+            this.___OnPropertyChanged("EjecutadoPor");
+        }
+        
+        partial void OnFechaEjecuciónChanged()
+        {
+            this.___OnPropertyChanged("FechaEjecución");
+        }
+        
+    }
+    #endregion
+    
+    #region HistorialPPRolPrivadoVacacionesProporcionalesItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class HistorialPPRolPrivadoVacacionesProporcionalesItem :
+        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.IImplementation
+    {
+        partial void OnidChanged()
+        {
+            this.___OnPropertyChanged("id");
+        }
+        
+        partial void OnEjecutadoPorChanged()
+        {
+            this.___OnPropertyChanged("EjecutadoPor");
+        }
+        
+        partial void OnFechaEjecuciónChanged()
+        {
+            this.___OnPropertyChanged("FechaEjecución");
         }
         
     }
@@ -3338,6 +3458,18 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.CorreosDeAvisosItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem))
+            {
+                return new global::LightSwitchApplication.Implementation.HistorialPPRRHHResetearSaldoDiasAdminsItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem))
+            {
+                return new global::LightSwitchApplication.Implementation.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem))
+            {
+                return new global::LightSwitchApplication.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem();
+            }
             return null;
         }
     }
@@ -3528,6 +3660,18 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.CorreosDeAvisosItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.CorreosDeAvisosItem);
+            }
+            if (typeof(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.HistorialPPRRHHResetearSaldoDiasAdminsItem);
+            }
+            if (typeof(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem);
+            }
+            if (typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {

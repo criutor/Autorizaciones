@@ -3127,6 +3127,150 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> IDArea
+        {
+            get
+            {
+                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDArea);
+            }
+            set
+            {
+                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDArea, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDArea_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDArea_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDArea_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> IDSubgerencia
+        {
+            get
+            {
+                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDSubgerencia);
+            }
+            set
+            {
+                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDSubgerencia, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDSubgerencia_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDSubgerencia_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDSubgerencia_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> IDGerencia
+        {
+            get
+            {
+                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDGerencia);
+            }
+            set
+            {
+                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDGerencia, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDGerencia_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDGerencia_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void IDGerencia_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> EsJefeDeArea
+        {
+            get
+            {
+                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsJefeDeArea);
+            }
+            set
+            {
+                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsJefeDeArea, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsJefeDeArea_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsJefeDeArea_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsJefeDeArea_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> EsSubgerente
+        {
+            get
+            {
+                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsSubgerente);
+            }
+            set
+            {
+                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsSubgerente, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsSubgerente_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsSubgerente_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsSubgerente_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> EsGerente
+        {
+            get
+            {
+                return global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsGerente);
+            }
+            set
+            {
+                global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsGerente, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsGerente_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsGerente_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EsGerente_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.PersonaItem> Persona
         {
             get
@@ -3243,6 +3387,54 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>> IDArea
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDArea) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>> IDSubgerencia
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDSubgerencia) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>> IDGerencia
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.IDGerencia) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>> EsJefeDeArea
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsJefeDeArea) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>> EsSubgerente
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsSubgerente) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>> EsGerente
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties.EsGerente) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem> Persona
                 {
                     get
@@ -3259,6 +3451,12 @@ namespace LightSwitchApplication
             {
                 new int Id { get; }
                 new string Nombre { get; set; }
+                new global::System.Nullable<int> IDArea { get; set; }
+                new global::System.Nullable<int> IDSubgerencia { get; set; }
+                new global::System.Nullable<int> IDGerencia { get; set; }
+                new global::System.Nullable<bool> EsJefeDeArea { get; set; }
+                new global::System.Nullable<bool> EsSubgerente { get; set; }
+                new global::System.Nullable<bool> EsGerente { get; set; }
                 new global::System.Collections.IEnumerable Persona { get; }
             }
             #pragma warning restore 109
@@ -3340,6 +3538,228 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Entry
+                    IDArea = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "IDArea",
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDArea_Stub,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDArea_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDArea_Validate,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDArea_GetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDArea_SetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDArea_OnValueChanged);
+                private static void _IDArea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._IDArea, sf);
+                }
+                private static bool _IDArea_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    bool result = false;
+                    e.IDArea_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _IDArea_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.IDArea_Validate(r);
+                }
+                private static global::System.Nullable<int> _IDArea_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.IDArea;
+                }
+                private static void _IDArea_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.IDArea = v;
+                }
+                private static void _IDArea_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    e.IDArea_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Entry
+                    IDSubgerencia = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "IDSubgerencia",
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDSubgerencia_Stub,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDSubgerencia_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDSubgerencia_Validate,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDSubgerencia_GetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDSubgerencia_SetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDSubgerencia_OnValueChanged);
+                private static void _IDSubgerencia_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._IDSubgerencia, sf);
+                }
+                private static bool _IDSubgerencia_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    bool result = false;
+                    e.IDSubgerencia_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _IDSubgerencia_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.IDSubgerencia_Validate(r);
+                }
+                private static global::System.Nullable<int> _IDSubgerencia_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.IDSubgerencia;
+                }
+                private static void _IDSubgerencia_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.IDSubgerencia = v;
+                }
+                private static void _IDSubgerencia_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    e.IDSubgerencia_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Entry
+                    IDGerencia = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "IDGerencia",
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDGerencia_Stub,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDGerencia_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDGerencia_Validate,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDGerencia_GetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDGerencia_SetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._IDGerencia_OnValueChanged);
+                private static void _IDGerencia_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._IDGerencia, sf);
+                }
+                private static bool _IDGerencia_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    bool result = false;
+                    e.IDGerencia_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _IDGerencia_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.IDGerencia_Validate(r);
+                }
+                private static global::System.Nullable<int> _IDGerencia_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.IDGerencia;
+                }
+                private static void _IDGerencia_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.IDGerencia = v;
+                }
+                private static void _IDGerencia_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    e.IDGerencia_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Entry
+                    EsJefeDeArea = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "EsJefeDeArea",
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsJefeDeArea_Stub,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsJefeDeArea_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsJefeDeArea_Validate,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsJefeDeArea_GetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsJefeDeArea_SetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsJefeDeArea_OnValueChanged);
+                private static void _EsJefeDeArea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EsJefeDeArea, sf);
+                }
+                private static bool _EsJefeDeArea_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    bool result = false;
+                    e.EsJefeDeArea_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EsJefeDeArea_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EsJefeDeArea_Validate(r);
+                }
+                private static global::System.Nullable<bool> _EsJefeDeArea_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EsJefeDeArea;
+                }
+                private static void _EsJefeDeArea_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, global::System.Nullable<bool> v)
+                {
+                    d.ImplementationEntity.EsJefeDeArea = v;
+                }
+                private static void _EsJefeDeArea_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    e.EsJefeDeArea_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Entry
+                    EsSubgerente = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "EsSubgerente",
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsSubgerente_Stub,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsSubgerente_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsSubgerente_Validate,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsSubgerente_GetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsSubgerente_SetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsSubgerente_OnValueChanged);
+                private static void _EsSubgerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EsSubgerente, sf);
+                }
+                private static bool _EsSubgerente_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    bool result = false;
+                    e.EsSubgerente_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EsSubgerente_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EsSubgerente_Validate(r);
+                }
+                private static global::System.Nullable<bool> _EsSubgerente_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EsSubgerente;
+                }
+                private static void _EsSubgerente_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, global::System.Nullable<bool> v)
+                {
+                    d.ImplementationEntity.EsSubgerente = v;
+                }
+                private static void _EsSubgerente_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    e.EsSubgerente_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Entry
+                    EsGerente = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "EsGerente",
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsGerente_Stub,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsGerente_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsGerente_Validate,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsGerente_GetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsGerente_SetImplementationValue,
+                        global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass.PropertySetProperties._EsGerente_OnValueChanged);
+                private static void _EsGerente_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EsGerente, sf);
+                }
+                private static bool _EsGerente_ComputeIsReadOnly(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    bool result = false;
+                    e.EsGerente_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _EsGerente_Validate(global::LightSwitchApplication.CargoRolPrivadoItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.EsGerente_Validate(r);
+                }
+                private static global::System.Nullable<bool> _EsGerente_GetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.EsGerente;
+                }
+                private static void _EsGerente_SetImplementationValue(global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass d, global::System.Nullable<bool> v)
+                {
+                    d.ImplementationEntity.EsGerente = v;
+                }
+                private static void _EsGerente_OnValueChanged(global::LightSwitchApplication.CargoRolPrivadoItem e)
+                {
+                    e.EsGerente_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
                     Persona = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
                         "Persona",
@@ -3366,6 +3786,24 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, string>.Data _Nombre;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Data _IDArea;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Data _IDSubgerencia;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<int>>.Data _IDGerencia;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Data _EsJefeDeArea;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Data _EsSubgerente;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::System.Nullable<bool>>.Data _EsGerente;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.CargoRolPrivadoItem, global::LightSwitchApplication.CargoRolPrivadoItem.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona;

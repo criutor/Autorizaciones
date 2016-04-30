@@ -11,5 +11,10 @@ namespace LightSwitchApplication
 {
     public partial class ADMINISTRAR_CARGOS_ROL_PRIVADO
     {
+        partial void NuevoCargo_Execute()
+        {
+            // Escriba el código aquí.
+            this.Application.ShowCARGOS_ROL_PRIVADO_NUEVO();
+        }
     }
 }

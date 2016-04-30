@@ -182,6 +182,7 @@
     <Compile Include="UserCode\ADMINISTRAR_FERIADOS.cs" />
     <Compile Include="UserCode\Application.cs" />
     <Compile Include="UserCode\ADMINISTRAR_CONVENIOS_COLECTIVOS.cs" />
+    <Compile Include="UserCode\CARGOS_ROL_PRIVADO_NUEVO.cs" />
     <Compile Include="UserCode\DIVISIONES_AREA_DETALLES.cs" />
     <Compile Include="UserCode\PERSONAL_LISTAR_NOROLPRIVADO.cs" />
     <Compile Include="UserCode\PERSONAL_DETALLES.cs">
@@ -207,8 +208,11 @@
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_PERMISOS_NRP.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REBAJAR_ROLPRIVADO.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REBAJAR_RRHH.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_VACACIONES_NRP.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_VACACIONES_RP.cs" />
+    <Compile Include="UserCode\SOLICITUDES_REPORTE_ROLPRIVADO.cs" />
     <Compile Include="UserCode\SOLICITUDES_REPORTE_RRHH.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +231,45 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\LogoSAA %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nuevaSolicitud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Solicitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\closewindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Solicitar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nuevaSolicitud2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AceptarHEE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RechazarSolicitud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RebajarSolicitud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AnularSolicitud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\nuevaPersona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\EliminarPersona.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />

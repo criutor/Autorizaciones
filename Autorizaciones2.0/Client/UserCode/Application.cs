@@ -15,74 +15,85 @@ namespace LightSwitchApplication
         partial void ADMINISTRAR_DIVISIONES_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void ADMINISTRAR_EMPLEADOS_RRHH_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void ADMINISTRAR_FERIADOS_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void ADMINISTRAR_CONVENIOS_COLECTIVOS_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void ADMINISTRAR_CARGOS_ROL_PRIVADO_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void SOLICITUDES_REBAJAR_HORASEXTRAS_NRP_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void SOLICITUDES_REBAJAR_PERMISOS_NRP_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void SOLICITUDES_REBAJAR_VACACIONES_NRP_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void SOLICITUDES_HISTORICO_RRHH_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
-        }
-
-        partial void SOLICITUDES_HISTORICO_ROLPRIVADO_CanRun(ref bool result)
-        {
-            // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRolPrivado);
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            //result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void PROCESOS_PERIODICOS_RRHH_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
+        }
+
+        partial void ADMINISTRAR_NOTIFICACIONES_RRHH_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRRHH);
+        }
+
+        partial void SOLICITUDES_REPORTE_RRHH_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRRHH);
+        }
+
+        partial void SOLICITUDES_REBAJAR_RRHH_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void SOLICITUDES_APROBACIÓN_CanRun(ref bool result)
@@ -134,7 +145,7 @@ namespace LightSwitchApplication
 
             var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();
             //var Persona = (from o in dataWorkspace2.Autorizaciones_AdminsData.Persona where o.Rut_Persona == operation.RutUsuario select o);
-
+            
             if (Persona.First().Es_Gerente != true && Persona.First().Es_SubGerente != true && Persona.First().Es_JefeDirecto != true)
             {
                 result = false;
@@ -142,45 +153,56 @@ namespace LightSwitchApplication
             else { result = true; }  
         }
 
+        partial void SOLICITUDES_HISTORICO_ROLPRIVADO_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+            //result = this.User.HasPermission(Permissions.SecurityAdministration);
+        }
+
         partial void PROCESOS_PERIODICOS_ROLPRIVADO_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRolPrivado);
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+            //result = this.User.HasPermission(Permissions.SecurityAdministration);
         }
 
         partial void ADMINISTRAR_EMPLEADOS_ROLPRIVADO_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRolPrivado);
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+            //result = this.User.HasPermission(Permissions.SecurityAdministration);
         }
 
         partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRolPrivado);
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+            //result = this.User.HasPermission(Permissions.SecurityAdministration);
         }
 
         partial void SOLICITUDES_REBAJAR_VACACIONES_RP_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRolPrivado);
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+            //result = this.User.HasPermission(Permissions.SecurityAdministration);
         }
 
-        partial void SOLICITUDES_REPORTE_RRHH_CanRun(ref bool result)
-        {
-            // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
-        }
-
+        
         partial void ADMINISTRAR_NOTIFICACIONES_ROLPRIVADO_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRolPrivado);
-            result = this.User.HasPermission(Permissions.SecurityAdministration);
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+            //result = this.User.HasPermission(Permissions.SecurityAdministration);
         }
+
+        partial void SOLICITUDES_REPORTE_ROLPRIVADO_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+        }
+
+        
+        
     }
 }

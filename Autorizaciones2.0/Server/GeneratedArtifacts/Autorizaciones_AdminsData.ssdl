@@ -28,6 +28,9 @@
     <EntitySet Name="ConsultarRutUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarRutUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarRutUsuarioAD" />
     <EntitySet Name="ConsultarEmailUsuarioAD" EntityType="Autorizaciones_AdminsDataStore.ConsultarEmailUsuarioADItem" store:Type="Tables" Schema="dbo" Table="ConsultarEmailUsuarioAD" />
     <EntitySet Name="CorreosDeAvisos" EntityType="Autorizaciones_AdminsDataStore.CorreosDeAvisosItem" store:Type="Tables" Schema="dbo" Table="CorreosDeAvisos" />
+    <EntitySet Name="HistorialPPRRHHResetearSaldoDiasAdmins" EntityType="Autorizaciones_AdminsDataStore.HistorialPPRRHHResetearSaldoDiasAdminsItem" store:Type="Tables" Schema="dbo" Table="HistorialPPRRHHResetearSaldoDiasAdmins" />
+    <EntitySet Name="HistorialPPRolPrivadoResetearSaldoDiasAdmins" EntityType="Autorizaciones_AdminsDataStore.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem" store:Type="Tables" Schema="dbo" Table="HistorialPPRolPrivadoResetearSaldoDiasAdmins" />
+    <EntitySet Name="HistorialPPRolPrivadoVacacionesProporcionales" EntityType="Autorizaciones_AdminsDataStore.HistorialPPRolPrivadoVacacionesProporcionalesItem" store:Type="Tables" Schema="dbo" Table="HistorialPPRolPrivadoVacacionesProporcionales" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="Autorizaciones_AdminsDataStore.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />
@@ -122,12 +125,12 @@
       <PropertyRef Name="Rut_Persona" />
     </Key>
     <Property Name="Rut_Persona" Type="nvarchar" Nullable="false" MaxLength="12" />
-    <Property Name="AP_Paterno" Type="varchar" MaxLength="30" />
-    <Property Name="AP_Materno" Type="varchar" MaxLength="30" />
-    <Property Name="Nombres" Type="varchar" MaxLength="30" />
+    <Property Name="AP_Paterno" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="AP_Materno" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Nombres" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Es_Gerente" Type="bit" />
     <Property Name="Es_SubGerente" Type="bit" />
-    <Property Name="Es_JefeDirecto" Type="bit" />
+    <Property Name="Es_JefeDirecto" Type="bit" Nullable="false" />
     <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
     <Property Name="IDGerencia_para_subgerentes" Type="int" />
     <Property Name="SaldoDiasAdmins" Type="float" />
@@ -140,6 +143,9 @@
     <Property Name="Rut_Persona_ConCeros" Type="nvarchar" MaxLength="12" />
     <Property Name="SaldoVacaciones" Type="float" />
     <Property Name="SaldoVacaciones2" Type="float" />
+    <Property Name="IDGerencia" Type="int" />
+    <Property Name="IDSubgerencia" Type="int" />
+    <Property Name="VacacionesProgresivas" Type="float" />
     <Property Name="Convenio_fk" Type="int" />
     <Property Name="Area_fk" Type="int" />
     <Property Name="CargoRolPrivado_fk" Type="int" />
@@ -412,6 +418,12 @@
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IDArea" Type="int" />
+    <Property Name="IDSubgerencia" Type="int" />
+    <Property Name="IDGerencia" Type="int" />
+    <Property Name="EsJefeDeArea" Type="bit" />
+    <Property Name="EsSubgerente" Type="bit" />
+    <Property Name="EsGerente" Type="bit" />
   </EntityType>
   <EntityType Name="ConsultarRutUsuarioADItem">
     <Key>
@@ -440,6 +452,30 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
     <Property Name="Descripcion" Type="nvarchar" MaxLength="200" />
     <Property Name="RolPrivado" Type="bit" />
+  </EntityType>
+  <EntityType Name="HistorialPPRRHHResetearSaldoDiasAdminsItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EjecutadoPor" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaEjecución" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HistorialPPRolPrivadoResetearSaldoDiasAdminsItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EjecutadoPor" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaEjecución" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HistorialPPRolPrivadoVacacionesProporcionalesItem">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="EjecutadoPor" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaEjecución" Type="datetime" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="0..1" />

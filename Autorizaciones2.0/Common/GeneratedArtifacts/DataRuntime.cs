@@ -527,6 +527,45 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Obtiene el conjunto de entidades HistorialPPRRHHResetearSaldoDiasAdmins. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem> HistorialPPRRHHResetearSaldoDiasAdmins
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.HistorialPPRRHHResetearSaldoDiasAdmins);
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el conjunto de entidades HistorialPPRolPrivadoResetearSaldoDiasAdmins. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> HistorialPPRolPrivadoResetearSaldoDiasAdmins
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.HistorialPPRolPrivadoResetearSaldoDiasAdmins);
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el conjunto de entidades HistorialPPRolPrivadoVacacionesProporcionales. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem> HistorialPPRolPrivadoVacacionesProporcionales
+        {
+            get
+            {
+                return global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.GetValue(this, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.HistorialPPRolPrivadoVacacionesProporcionales);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -1303,6 +1342,72 @@ namespace LightSwitchApplication
             return this.Details.Methods.CorreosDeAvisos_SingleOrDefault.CreateInvocation(id).Execute();
         }
         
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem HistorialPPRRHHResetearSaldoDiasAdmins_Single(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.HistorialPPRRHHResetearSaldoDiasAdmins_Single.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem HistorialPPRolPrivadoVacacionesProporcionales_Single(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.HistorialPPRolPrivadoVacacionesProporcionales_Single.CreateInvocation(id).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="id">
+        /// Valor de la propiedad clave 'id' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault(global::System.Nullable<int> id)
+        {
+            return this.Details.Methods.HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault.CreateInvocation(id).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1871,6 +1976,54 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem> HistorialPPRRHHResetearSaldoDiasAdmins_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.HistorialPPRRHHResetearSaldoDiasAdmins_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem> HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem> HistorialPPRolPrivadoVacacionesProporcionales_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.HistorialPPRolPrivadoVacacionesProporcionales_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem> HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties.HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2097,6 +2250,30 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.CorreosDeAvisos) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.CorreosDeAvisosItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem> HistorialPPRRHHResetearSaldoDiasAdmins
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.HistorialPPRRHHResetearSaldoDiasAdmins) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem> HistorialPPRolPrivadoResetearSaldoDiasAdmins
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.HistorialPPRolPrivadoResetearSaldoDiasAdmins) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem> HistorialPPRolPrivadoVacacionesProporcionales
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties.HistorialPPRolPrivadoVacacionesProporcionales) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>;
                     }
                 }
                 
@@ -2758,6 +2935,66 @@ namespace LightSwitchApplication
                     c(d, ref d._CorreosDeAvisos_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Entry
+                    HistorialPPRRHHResetearSaldoDiasAdmins_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Entry(
+                        "HistorialPPRRHHResetearSaldoDiasAdmins_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._HistorialPPRRHHResetearSaldoDiasAdmins_Single_Stub);
+                private static void _HistorialPPRRHHResetearSaldoDiasAdmins_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRRHHResetearSaldoDiasAdmins_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Entry
+                    HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Entry(
+                        "HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault_Stub);
+                private static void _HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Entry
+                    HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Entry(
+                        "HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single_Stub);
+                private static void _HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Entry
+                    HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Entry(
+                        "HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault_Stub);
+                private static void _HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Entry
+                    HistorialPPRolPrivadoVacacionesProporcionales_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Entry(
+                        "HistorialPPRolPrivadoVacacionesProporcionales_Single",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._HistorialPPRolPrivadoVacacionesProporcionales_Single_Stub);
+                private static void _HistorialPPRolPrivadoVacacionesProporcionales_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRolPrivadoVacacionesProporcionales_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Entry
+                    HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Entry(
+                        "HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.MethodSetProperties._HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault_Stub);
+                private static void _HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3036,6 +3273,36 @@ namespace LightSwitchApplication
                     c(d, ref d._CorreosDeAvisos, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Entry
+                    HistorialPPRRHHResetearSaldoDiasAdmins = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Entry(
+                        "HistorialPPRRHHResetearSaldoDiasAdmins",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._HistorialPPRRHHResetearSaldoDiasAdmins_Stub);
+                private static void _HistorialPPRRHHResetearSaldoDiasAdmins_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRRHHResetearSaldoDiasAdmins, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Entry
+                    HistorialPPRolPrivadoResetearSaldoDiasAdmins = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Entry(
+                        "HistorialPPRolPrivadoResetearSaldoDiasAdmins",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._HistorialPPRolPrivadoResetearSaldoDiasAdmins_Stub);
+                private static void _HistorialPPRolPrivadoResetearSaldoDiasAdmins_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRolPrivadoResetearSaldoDiasAdmins, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Entry
+                    HistorialPPRolPrivadoVacacionesProporcionales = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Entry(
+                        "HistorialPPRolPrivadoVacacionesProporcionales",
+                        global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass.PropertySetProperties._HistorialPPRolPrivadoVacacionesProporcionales_Stub);
+                private static void _HistorialPPRolPrivadoVacacionesProporcionales_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Data> c, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HistorialPPRolPrivadoVacacionesProporcionales, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3118,6 +3385,15 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.CorreosDeAvisosItem>.Data _CorreosDeAvisos;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Data _HistorialPPRRHHResetearSaldoDiasAdmins;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Data _HistorialPPRolPrivadoResetearSaldoDiasAdmins;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Data _HistorialPPRolPrivadoVacacionesProporcionales;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _Persona_Single;
@@ -3313,6 +3589,24 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.CorreosDeAvisosItem>.Data _CorreosDeAvisos_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Data _HistorialPPRRHHResetearSaldoDiasAdmins_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem>.Data _HistorialPPRRHHResetearSaldoDiasAdmins_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Data _HistorialPPRolPrivadoResetearSaldoDiasAdmins_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem>.Data _HistorialPPRolPrivadoResetearSaldoDiasAdmins_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Data _HistorialPPRolPrivadoVacacionesProporcionales_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Autorizaciones_AdminsData, global::LightSwitchApplication.Autorizaciones_AdminsData.DetailsClass, global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem>.Data _HistorialPPRolPrivadoVacacionesProporcionales_SingleOrDefault;
             
         }
     

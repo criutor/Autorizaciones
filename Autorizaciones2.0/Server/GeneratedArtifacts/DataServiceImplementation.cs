@@ -249,6 +249,18 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem();
             }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRRHHResetearSaldoDiasAdminsItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRRHHResetearSaldoDiasAdminsItem();
+            }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem();
+            }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem();
+            }
     
             return base.CreateObject(type);
         }
@@ -371,6 +383,18 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.CorreosDeAvisosItem))
             {
                 return new global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRRHHResetearSaldoDiasAdminsItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem();
             }
             return null;
         }
@@ -640,6 +664,18 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.CorreosDeAvisosItem) == definitionType)
             {
                 return typeof(global::Autorizaciones_AdminsData.Implementation.CorreosDeAvisosItem);
+            }
+            if (typeof(global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRRHHResetearSaldoDiasAdminsItem);
+            }
+            if (typeof(global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem);
+            }
+            if (typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {
@@ -2235,6 +2271,105 @@ namespace Autorizaciones_AdminsData.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class CorreosDeAvisosItem :
         global::LightSwitchApplication.CorreosDeAvisosItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class HistorialPPRRHHResetearSaldoDiasAdminsItem :
+        global::LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class HistorialPPRolPrivadoResetearSaldoDiasAdminsItem :
+        global::LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class HistorialPPRolPrivadoVacacionesProporcionalesItem :
+        global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members
