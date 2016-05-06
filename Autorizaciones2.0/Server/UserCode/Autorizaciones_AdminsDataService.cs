@@ -64,6 +64,15 @@ namespace LightSwitchApplication
             string[] porPalabrasAPM = entity.AP_Materno.Split(new Char[] { ' ' });
             entity.NombreAD = porPalabrasAPP[0].ToUpper() + " " + porPalabrasAPM[0].ToUpper() + ", " + porPalabrasNombre[0].ToUpper();
             //entity.NombreAD = removerSignosAcentos(entity.NombreAD);
+
+            if (entity.EsRolPrivado == true)
+            {
+                //Aproxima el saldo al segundo decimal
+                if (entity.SaldoVacaciones2 != null)
+                {
+                    entity.SaldoVacaciones2 = Math.Round(entity.SaldoVacaciones2.Value, 2);
+                }
+            }
         }
               
         partial void ConsultarSaldoVacaciones_Inserting(ConsultarSaldoVacacionesItem entity)
@@ -123,6 +132,7 @@ namespace LightSwitchApplication
             //Si es de solicitud de horas extras y el empleado no la ha acptado.
             if (entity.HorasExtras == true && entity.VB_Empleado == false )
             {
+                asunto = "Tiene una solicitud en espera de su aceptación";
                 mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " en espera de su aceptación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                 correo.Mail(destinatario, asunto, mensaje);
             }
@@ -176,6 +186,7 @@ namespace LightSwitchApplication
         
         partial void SOLICITUDES_Updated(SOLICITUDESItem entity)
         {
+            
             if (entity.Cancelada != true)
             {
                 string destinatario = entity.EmailProximoDestinatario;
@@ -230,31 +241,33 @@ namespace LightSwitchApplication
                                 }
                             }
 
-                            if(entity.HorasExtras == true)
-                            {
-                                if (entity.Colacion == true && entity.Taxi == true)
+                            
+                                if (entity.HorasExtras == true)
                                 {
-                                    mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y tanto TAXI como COLACIÓN han sido requeridos.\n\nEmail generado automáticamente. No responder a esta casilla..";
-                                }
-                                else if (entity.Colacion == true)
-                                {
-                                    mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido TAXI.\n\nEmail generado automáticamente. No responder a esta casilla..";
-                                }
-                                else if ( entity.Taxi == true)
-                                {
-                                    mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido COLACIÓN .\n\nEmail generado automáticamente. No responder a esta casilla..";
-                                }
+                                    if (entity.Colacion == true && entity.Taxi == true)
+                                    {
+                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y tanto TAXI como COLACIÓN han sido requeridos.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                    }
+                                    else if (entity.Colacion == true)
+                                    {
+                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido COLACIÓN.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                    }
+                                    else if (entity.Taxi == true)
+                                    {
+                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido TAXI .\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                    }
 
-                                asunto = "Solicitud aprobada por todos los superiores correspondientes";
+                                    asunto = "Solicitud aprobada por todos los superiores correspondientes";
 
-                                DataWorkspace dataWorkspace = new DataWorkspace();
-                                var CorreoNotificacion = (from o in dataWorkspace.Autorizaciones_AdminsData.CorreosDeAvisos where o.Nombre == "Notificar pedir colación y/o taxi" select o);
+                                    DataWorkspace dataWorkspace = new DataWorkspace();
+                                    var CorreoNotificacion = (from o in dataWorkspace.Autorizaciones_AdminsData.CorreosDeAvisos where o.Nombre == "Notificar pedir colación y/o taxi" select o);
 
-                                if (CorreoNotificacion.First().Email != null)
-                                {
-                                    correo.Mail(CorreoNotificacion.First().Email, asunto, mensaje);
+                                    if (CorreoNotificacion.First().Email != null)
+                                    {
+                                        correo.Mail(CorreoNotificacion.First().Email, asunto, mensaje);
+                                    }
                                 }
-                            }
+                            
                         }
                         else
                         {
@@ -289,7 +302,9 @@ namespace LightSwitchApplication
                         }
                 //entity.EmailProximoDestinatario = null;
             }
+            
         }
+        
 
         //Consultar rut usando nombre de AD
         partial void ConsultarRutUsuarioAD_Inserting(ConsultarRutUsuarioADItem entity)
@@ -320,8 +335,6 @@ namespace LightSwitchApplication
 
             this.Details.DiscardChanges();
         }
-
-        
 
         
     }

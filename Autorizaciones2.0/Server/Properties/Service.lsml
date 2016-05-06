@@ -857,17 +857,17 @@
           Type="int" />
         <SsdlProperty
           Name="EsJefeDeArea"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[EsJefeDeArea]"
           Type="bit" />
         <SsdlProperty
           Name="EsSubgerente"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[EsSubgerente]"
           Type="bit" />
         <SsdlProperty
           Name="EsGerente"
-          Nullable="True"
+          Nullable="False"
           Property="LightSwitchCommonModule:CargoRolPrivadoItem/Properties[EsGerente]"
           Type="bit" />
       </EntitySetMapping.Attributes>
@@ -1402,11 +1402,6 @@
           Property="LightSwitchCommonModule:PersonaItem/Properties[Rut_Persona_ConCeros]"
           Type="nvarchar" />
         <SsdlProperty
-          Name="SaldoVacaciones"
-          Nullable="True"
-          Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones]"
-          Type="float" />
-        <SsdlProperty
           Name="SaldoVacaciones2"
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[SaldoVacaciones2]"
@@ -1426,6 +1421,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[VacacionesProgresivas]"
           Type="float" />
+        <SsdlProperty
+          Name="VacacionesPrimerMesDevengado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:PersonaItem/Properties[VacacionesPrimerMesDevengado]"
+          Type="bit" />
         <SsdlForeignKeyProperty
           Name="CargoRolPrivado_fk"
           Nullable="True"
@@ -1441,6 +1441,35 @@
           Nullable="True"
           PropertyName="Area_fk"
           Type="int" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="ReporteHorasExtras">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ReporteHorasExtras" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ruttrabajador"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ReporteHorasExtrasItem/Properties[ruttrabajador]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="formula"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ReporteHorasExtrasItem/Properties[formula]"
+          Type="int" />
+        <SsdlProperty
+          Name="valor"
+          Nullable="True"
+          Property="LightSwitchCommonModule:ReporteHorasExtrasItem/Properties[valor]"
+          Type="int" />
+        <SsdlProperty
+          Name="valorbase"
+          Nullable="False"
+          Property="LightSwitchCommonModule:ReporteHorasExtrasItem/Properties[valorbase]"
+          Type="float" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping

@@ -24,11 +24,11 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="AreaDeTrabajo" ColumnName="AreaDeTrabajo" />
           <ScalarProperty Name="Rut_Persona_ConCeros" ColumnName="Rut_Persona_ConCeros" />
-          <ScalarProperty Name="SaldoVacaciones" ColumnName="SaldoVacaciones" />
           <ScalarProperty Name="SaldoVacaciones2" ColumnName="SaldoVacaciones2" />
           <ScalarProperty Name="IDGerencia" ColumnName="IDGerencia" />
           <ScalarProperty Name="IDSubgerencia" ColumnName="IDSubgerencia" />
           <ScalarProperty Name="VacacionesProgresivas" ColumnName="VacacionesProgresivas" />
+          <ScalarProperty Name="VacacionesPrimerMesDevengado" ColumnName="VacacionesPrimerMesDevengado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -384,6 +384,16 @@
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="EjecutadoPor" ColumnName="EjecutadoPor" />
           <ScalarProperty Name="FechaEjecución" ColumnName="FechaEjecución" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReporteHorasExtras">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ReporteHorasExtrasItem)">
+        <MappingFragment StoreEntitySet="ReporteHorasExtras">
+          <ScalarProperty Name="ruttrabajador" ColumnName="ruttrabajador" />
+          <ScalarProperty Name="formula" ColumnName="formula" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="valorbase" ColumnName="valorbase" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

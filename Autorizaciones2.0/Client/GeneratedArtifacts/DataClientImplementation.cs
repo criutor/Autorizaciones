@@ -120,11 +120,6 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Rut_Persona_ConCeros");
         }
         
-        partial void OnSaldoVacacionesChanged()
-        {
-            this.___OnPropertyChanged("SaldoVacaciones");
-        }
-        
         partial void OnSaldoVacaciones2Changed()
         {
             this.___OnPropertyChanged("SaldoVacaciones2");
@@ -143,6 +138,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnVacacionesProgresivasChanged()
         {
             this.___OnPropertyChanged("VacacionesProgresivas");
+        }
+        
+        partial void OnVacacionesPrimerMesDevengadoChanged()
+        {
+            this.___OnPropertyChanged("VacacionesPrimerMesDevengado");
         }
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PersonaItem.DetailsClass.IImplementation.ConvenioColectivoItem
@@ -2638,6 +2638,36 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region ReporteHorasExtrasItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Autorizaciones_AdminsData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ReporteHorasExtrasItem :
+        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.IImplementation
+    {
+        partial void OnruttrabajadorChanged()
+        {
+            this.___OnPropertyChanged("ruttrabajador");
+        }
+        
+        partial void OnformulaChanged()
+        {
+            this.___OnPropertyChanged("formula");
+        }
+        
+        partial void OnvalorChanged()
+        {
+            this.___OnPropertyChanged("valor");
+        }
+        
+        partial void OnvalorbaseChanged()
+        {
+            this.___OnPropertyChanged("valorbase");
+        }
+        
+    }
+    #endregion
+    
     #region ContratoItem1
     [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Fin700v60Data.Implementation")]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -3470,6 +3500,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ReporteHorasExtrasItem))
+            {
+                return new global::LightSwitchApplication.Implementation.ReporteHorasExtrasItem();
+            }
             return null;
         }
     }
@@ -3672,6 +3706,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem);
+            }
+            if (typeof(global::LightSwitchApplication.ReporteHorasExtrasItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.ReporteHorasExtrasItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {

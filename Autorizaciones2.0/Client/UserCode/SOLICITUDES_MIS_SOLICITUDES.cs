@@ -454,21 +454,15 @@ namespace LightSwitchApplication
         {
             try
             {
-                if (this.SOLICITUDES.SelectedItem == null || this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true || this.SOLICITUDES.SelectedItem.Caducada == true || this.SOLICITUDES.SelectedItem.Completada == true)
-                {
-                    result = false;
-                }
-                else { result = true; }
-            }
-            catch { }
-
-            try
-            {
                 if (this.SOLICITUDES.SelectedItem.HorasExtras == true && this.SOLICITUDES.SelectedItem.VB_Empleado == false)
                 {
                     result = true;
                 }
-                else { result = false; }
+
+                if (this.SOLICITUDES.SelectedItem.HorasExtras != true || this.SOLICITUDES.SelectedItem == null || this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true || this.SOLICITUDES.SelectedItem.Caducada == true || this.SOLICITUDES.SelectedItem.Completada == true)
+                {
+                    result = false;
+                }
             }
             catch { }
         }
@@ -511,35 +505,42 @@ namespace LightSwitchApplication
 
             //this.RutUsuarioAD = operation.RutUsuario;
 
-            if (this.Application.User.HasPermission(Permissions.Soy_Salome) == true)
+            if (this.Application.User.HasPermission(Permissions.Jair) == true)
+            {
+                this.RutUsuarioAD = "19566061-1";//Jair
+            }else
+
+            if (this.Application.User.HasPermission(Permissions.Salome) == true)
             {
                 this.RutUsuarioAD = "15413075-6";//salome
-            }else
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Moises) == true)
-            {
-                this.RutUsuarioAD = "9220822-2";//moises
-            }else
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Valeria) == true)
-            {
-                this.RutUsuarioAD = "17681681-3";//valeria
-            }else
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Gustavo) == true)
-            {
-                this.RutUsuarioAD = "17511042-9";//gustavo
             }
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Cesar) == true)
-            {
-                this.RutUsuarioAD = "17229504-5";//cesar
-            }
-
             else
-            {
-                this.RutUsuarioAD = operation.RutUsuario;
-            }
+
+                if (this.Application.User.HasPermission(Permissions.Moises) == true)
+                {
+                    this.RutUsuarioAD = "9220822-2";//moises
+                }
+                else
+
+                    if (this.Application.User.HasPermission(Permissions.Valeria) == true)
+                    {
+                        this.RutUsuarioAD = "17681681-3";//valeria
+                    }
+                    else
+
+                        if (this.Application.User.HasPermission(Permissions.Gustavo) == true)
+                        {
+                            this.RutUsuarioAD = "17511042-9";//gustavo
+                        }
+                        else
+
+                            if (this.Application.User.HasPermission(Permissions.Cesar) == true)
+                            {
+                                this.RutUsuarioAD = "17229504-5";//cesar
+                            }else
+                                {
+                                    this.RutUsuarioAD = operation.RutUsuario;
+                                }
         }
         /*
         // Traer email usando un rut

@@ -136,6 +136,15 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> HorasExtrasRebajadas()
+        {
+            global::System.Linq.IQueryable<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::Autorizaciones_AdminsData.Implementation.SOLICITUDESItem>("SOLICITUDES"),
+                (s) => ((s.HorasExtras.HasValue && (s.HorasExtras == true)) && (s.Rebajada.HasValue && (s.Rebajada == true))));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -260,6 +269,10 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem))
             {
                 return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem();
+            }
+            if (type == typeof(global::Autorizaciones_AdminsData.Implementation.ReporteHorasExtrasItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.ReporteHorasExtrasItem();
             }
     
             return base.CreateObject(type);
@@ -395,6 +408,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem))
             {
                 return new global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.ReporteHorasExtrasItem))
+            {
+                return new global::Autorizaciones_AdminsData.Implementation.ReporteHorasExtrasItem();
             }
             return null;
         }
@@ -676,6 +693,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem) == definitionType)
             {
                 return typeof(global::Autorizaciones_AdminsData.Implementation.HistorialPPRolPrivadoVacacionesProporcionalesItem);
+            }
+            if (typeof(global::LightSwitchApplication.ReporteHorasExtrasItem) == definitionType)
+            {
+                return typeof(global::Autorizaciones_AdminsData.Implementation.ReporteHorasExtrasItem);
             }
             if (typeof(global::LightSwitchApplication.ContratoItem1) == definitionType)
             {
@@ -2370,6 +2391,39 @@ namespace Autorizaciones_AdminsData.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class HistorialPPRolPrivadoVacacionesProporcionalesItem :
         global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class ReporteHorasExtrasItem :
+        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

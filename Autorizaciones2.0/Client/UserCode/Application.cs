@@ -69,7 +69,7 @@ namespace LightSwitchApplication
         partial void SOLICITUDES_HISTORICO_RRHH_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            //result = this.User.HasPermission(Permissions.AdminRRHH);
+            result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
         partial void PROCESOS_PERIODICOS_RRHH_CanRun(ref bool result)
@@ -202,7 +202,17 @@ namespace LightSwitchApplication
             result = this.User.HasPermission(Permissions.AdminRolPrivado);
         }
 
-        
+        partial void SOLICITUDES_REBAJAR_ROLPRIVADO_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
+        }
+
+        partial void SOLICITUDES_HORASEXTRAS_REPORTEFIN700_CanRun(ref bool result)
+        {
+            // Establece el resultado en el valor del campo deseado
+            result = this.User.HasPermission(Permissions.AdminRRHH);
+        }
         
     }
 }

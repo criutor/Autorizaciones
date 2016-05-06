@@ -231,6 +231,8 @@ namespace LightSwitchApplication
 
                 this.SOLICITUD.Inicio = DateTime.Today.AddDays(1);
                 this.SOLICITUD.Termino = DateTime.Today.AddDays(1);
+
+                this.ConsultarSaldo_Execute();
             }
             else if (TIPOSOLICITUD == 3)
             {
@@ -243,8 +245,6 @@ namespace LightSwitchApplication
                 this.SOLICITUD.OtroPermiso = true;
                 this.SOLICITUD.Titulo = "Permiso";   
             }
-
-            
 
             if (TIPOSOLICITUD == 3)//Solicitudes de horas extras no tienen fecha de término
             {
@@ -292,7 +292,7 @@ namespace LightSwitchApplication
         {
             if (this.SOLICITUD.HorasExtras == true)
             {
-                this.ShowMessageBox("Para hacer seguimiento de esta solicitud diríjase al menú 'Reportes' y seleccione la pantalla 'HISTÓRICO'.", "SOLICITUD INGRESADA CON EXITO", MessageBoxOption.Ok);
+                this.ShowMessageBox("Para hacer seguimiento de esta solicitud diríjase al menú 'Reportes' y seleccione la pantalla 'HISTÓRICO'.", "SOLICITUD INGRESADA CON ÉXITO", MessageBoxOption.Ok);
             }
             
             this.Close(true);
@@ -328,17 +328,14 @@ namespace LightSwitchApplication
         {
             if (this.PersonaPorRutAD.First().EsRolPrivado == true)
             {
-                //***this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones;
-
-                double progresivas = 0;
-
                 if (this.PersonaPorRutAD.First().VacacionesProgresivas != null)
                 {
-                    progresivas = this.PersonaPorRutAD.First().VacacionesProgresivas.Value;
+                    this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones2 + this.PersonaPorRutAD.First().VacacionesProgresivas;
                 }
-                
-                this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones2 + progresivas;
-                //this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().VacacionesSaldo;
+                else
+                {
+                    this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoVacaciones2;
+                }
             }
             else
             {
@@ -430,7 +427,7 @@ namespace LightSwitchApplication
                 
                 //GUARDAR LOS REGISTROS DE FERIADOS EN UN ARREGLO
 
-                DateTime[] FERIADOS = new DateTime[50];//DateTime[] FERIADOS = new DateTime[] { };
+                DateTime[] FERIADOS = new DateTime[100];//DateTime[] FERIADOS = new DateTime[] { };
                 int dia; int mes; int año; int i = 0;
 
                 foreach (FeriadosItem feriado in this.Feriados)
@@ -775,44 +772,46 @@ namespace LightSwitchApplication
             //this.RutUsuarioAD = operation.RutUsuario;
 
 
-            if (this.Application.User.HasPermission(Permissions.Soy_Salome) == true)
+            if (this.Application.User.HasPermission(Permissions.Salome) == true)
             {
                 this.RutUsuarioAD = "15413075-6";//salome
-            }else
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Moises) == true)
-            {
-                this.RutUsuarioAD = "9220822-2";//moises
-            }else
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Valeria) == true)
-            {
-                this.RutUsuarioAD = "17681681-3";//valeria
-            }else
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Gustavo) == true)
-            {
-                this.RutUsuarioAD = "17511042-9";//gustavo
             }
-
-            if (this.Application.User.HasPermission(Permissions.Soy_Cesar) == true)
-            {
-                this.RutUsuarioAD = "17229504-5";//cesar
-            }
-
             else
-            {
-                this.RutUsuarioAD = operation.RutUsuario;
-            }
+
+                if (this.Application.User.HasPermission(Permissions.Moises) == true)
+                {
+                    this.RutUsuarioAD = "9220822-2";//moises
+                }
+                else
+
+                    if (this.Application.User.HasPermission(Permissions.Valeria) == true)
+                    {
+                        this.RutUsuarioAD = "17681681-3";//valeria
+                    }
+                    else
+
+                        if (this.Application.User.HasPermission(Permissions.Gustavo) == true)
+                        {
+                            this.RutUsuarioAD = "17511042-9";//gustavo
+                        }
+                        else
+
+                            if (this.Application.User.HasPermission(Permissions.Cesar) == true)
+                            {
+                                this.RutUsuarioAD = "17229504-5";//cesar
+                            }
+                            else
+
+                                if (this.Application.User.HasPermission(Permissions.Jair) == true)
+                                {
+                                    this.RutUsuarioAD = "19566061-1";//Jair
+                                }
+
+                            else
+                            {
+                                this.RutUsuarioAD = operation.RutUsuario;
+                            }
         }
-
-        partial void PersonalBajoJefeDeArea_Validate(ScreenValidationResultsBuilder results)
-        {
-            // results.AddPropertyError("<Mensaje de error>");
-
-        }
-
-        
-       
+      
     }
 }

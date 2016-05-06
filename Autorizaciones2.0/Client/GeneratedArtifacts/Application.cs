@@ -546,6 +546,21 @@ namespace LightSwitchApplication
             ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowCARGOS_ROL_PRIVADO_NUEVO);
         }
         
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_HORASEXTRAS_REPORTEFIN700_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SOLICITUDES_HORASEXTRAS_REPORTEFIN700_Run(ref bool handled);
+    
+        /// <summary>
+        /// Abre la pantalla ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700. Si la pantalla ya está abierta, se activa y se muestra.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700);
+        }
+        
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -673,6 +688,8 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.CreateInstance();
                     case "CARGOS_ROL_PRIVADO_NUEVO":
                         return global::LightSwitchApplication.CARGOS_ROL_PRIVADO_NUEVO.CreateInstance();
+                    case "SOLICITUDES_HORASEXTRAS_REPORTEFIN700":
+                        return global::LightSwitchApplication.SOLICITUDES_HORASEXTRAS_REPORTEFIN700.CreateInstance();
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -952,6 +969,15 @@ namespace LightSwitchApplication
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
                                base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowCARGOS_ROL_PRIVADO_NUEVO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700);
                     }
                 }
 
@@ -1267,6 +1293,15 @@ namespace LightSwitchApplication
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
                                base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowCARGOS_ROL_PRIVADO_NUEVO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700);
                     }
                 }
 
@@ -1690,6 +1725,20 @@ namespace LightSwitchApplication
                 private static global::Microsoft.LightSwitch.IExecutable _ShowCARGOS_ROL_PRIVADO_NUEVO_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
                     return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowCARGOS_ROL_PRIVADO_NUEVO.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700 = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_CreateExecutableObject);
+                private static void _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700Command, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700.CreateInvocation(new object[0]);
                 }
 
             }
@@ -2584,6 +2633,32 @@ namespace LightSwitchApplication
                     }
                 }
  
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700 = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_InvokeMethod);
+                private static void _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700Method, sf);
+                }
+                private static global::System.Exception _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.SOLICITUDES_HORASEXTRAS_REPORTEFIN700_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.SOLICITUDES_HORASEXTRAS_REPORTEFIN700_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication:SOLICITUDES_HORASEXTRAS_REPORTEFIN700", () => global::LightSwitchApplication.SOLICITUDES_HORASEXTRAS_REPORTEFIN700.CreateInstance(), args);
+                    }
+                }
+ 
             }
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOS_RRHHMethod;
@@ -2654,6 +2729,8 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowCARGOS_ROL_PRIVADO_NUEVOMethod;
 
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700Method;
+
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_EMPLEADOS_RRHHCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowADMINISTRAR_DIVISIONESCommand;
@@ -2711,6 +2788,8 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_REBAJAR_ROLPRIVADOCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowCARGOS_ROL_PRIVADO_NUEVOCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowSOLICITUDES_HORASEXTRAS_REPORTEFIN700Command;
 
         }
     }

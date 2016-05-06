@@ -44,7 +44,15 @@ namespace LightSwitchApplication
 
             if (DateTime.Today > this.SOLICITUDES.SelectedItem.Termino.Value)
             {
-                string Mensaje = "";
+                
+            }
+            else
+            {
+                this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+
+            #region dentro del if
+            string Mensaje = "";
 
                 if (this.SOLICITUDES.SelectedItem.Administrativo == true)
                 {
@@ -55,7 +63,7 @@ namespace LightSwitchApplication
                     {
                         Mensaje = "Las vacaciones solicitadas por el empleado serán descontadas de su saldo. ¿Desea continuar?";
                     }
-                                           
+
 
                 result = this.ShowMessageBox(Mensaje, "ADVERTENCIA", MessageBoxOption.YesNo);
 
@@ -66,6 +74,11 @@ namespace LightSwitchApplication
                     {
                         this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.SOLICITUDES.SelectedItem.NumeroDiasTomados;
                     }
+                    else
+                        if (this.SOLICITUDES.SelectedItem.Vacaciones == true)
+                        {
+                            this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.SOLICITUDES.SelectedItem.NumeroDiasTomados;
+                        }
 
                     this.SOLICITUDES.SelectedItem.Rebajada = true;
                     this.SOLICITUDES.SelectedItem.Completada = false;
@@ -80,11 +93,7 @@ namespace LightSwitchApplication
                     this.Save();
                     this.Refresh();
                 }
-            }
-            else
-            {
-                this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-            }
+            #endregion
         }
 
         partial void RebajarSolicitud_CanExecute(ref bool result)

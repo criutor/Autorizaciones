@@ -18,10 +18,10 @@
     <SubsystemPackage>DiagnosticsLoader</SubsystemPackage>
     <SubsystemPackage>RuntimeUserCodeLoader</SubsystemPackage>
   <SubsystemPackage>RuntimeEditLoader</SubsystemPackage><SubsystemPackage>AppBridgeLoader</SubsystemPackage></SubsystemPackages>
-  <UserCodeAssemblies><UserCodeAssembly>Application.Common, Version=1.0.70.0, Culture=neutral, PublicKeyToken=null</UserCodeAssembly><UserCodeAssembly>AUTORIZACIONES_ADMINS.Client, Version=1.0.70.0, Culture=neutral, PublicKeyToken=null</UserCodeAssembly></UserCodeAssemblies>
+  <UserCodeAssemblies><UserCodeAssembly>Application.Common, Version=1.0.88.0, Culture=neutral, PublicKeyToken=null</UserCodeAssembly><UserCodeAssembly>AUTORIZACIONES_ADMINS.Client, Version=1.0.88.0, Culture=neutral, PublicKeyToken=null</UserCodeAssembly></UserCodeAssemblies>
   <ExtensionAssemblies>
     <ExtensionAssembly>Microsoft.LightSwitch.SdkProxy, Version=10.0.11.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
     <ExtensionAssembly>Microsoft.LightSwitch.Cosmopolitan.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
     <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35</ExtensionAssembly>
   <ExtensionAssembly>Microsoft.LightSwitch.Extensions.Design.Client, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</ExtensionAssembly></ExtensionAssemblies>
-<ApplicationCulture>es</ApplicationCulture><ManifestTimeStamp>131064526049616981</ManifestTimeStamp><ApplicationName>AUTORIZACIONES_ADMINS</ApplicationName><Version>1.0.72.0</Version><RootProjectGuid>7c1bb8e4-500d-401e-9676-c104c8afee3b</RootProjectGuid></Configuration>
+<ApplicationCulture>es</ApplicationCulture><ManifestTimeStamp>131070499957697810</ManifestTimeStamp><ApplicationName>AUTORIZACIONES_ADMINS</ApplicationName><Version>1.0.88.0</Version><RootProjectGuid>7c1bb8e4-500d-401e-9676-c104c8afee3b</RootProjectGuid></Configuration>

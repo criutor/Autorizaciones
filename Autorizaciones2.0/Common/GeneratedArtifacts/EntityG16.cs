@@ -17,6 +17,467 @@ namespace LightSwitchApplication
     /// No hay ninguna descripción modelada
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    public sealed partial class ReporteHorasExtrasItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass>
+    {
+        #region Constructors
+    
+        /// <summary>
+        /// Inicializa una nueva instancia de la entidad ReporteHorasExtrasItem.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ReporteHorasExtrasItem()
+            : this(null)
+        {
+        }
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public ReporteHorasExtrasItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ReporteHorasExtrasItem> entitySet)
+            : base(entitySet)
+        {
+            global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.Initialize(this);
+        }
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtrasItem_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtrasItem_AllowSaveWithErrors(ref bool result);
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Obtiene el objeto Application para esta aplicación. El objeto Application proporciona acceso a pantallas activas, métodos para abrir pantallas y acceso al usuario actual.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Obtiene el área de trabajo de datos contenedora. Dicha área proporciona acceso a todos los orígenes de datos de la aplicación.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.EntitySet.Details.DataService.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Public Properties
+    
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ruttrabajador
+        {
+            get
+            {
+                return global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.ruttrabajador);
+            }
+            set
+            {
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.ruttrabajador, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ruttrabajador_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ruttrabajador_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ruttrabajador_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int formula
+        {
+            get
+            {
+                return global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.formula);
+            }
+            set
+            {
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.formula, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void formula_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void formula_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void formula_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<int> valor
+        {
+            get
+            {
+                return global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.valor);
+            }
+            set
+            {
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.valor, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void valor_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void valor_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void valor_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public double valorbase
+        {
+            get
+            {
+                return global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.GetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.valorbase);
+            }
+            set
+            {
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.SetValue(this, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.valorbase, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void valorbase_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void valorbase_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void valorbase_Changed();
+
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
+                global::LightSwitchApplication.ReporteHorasExtrasItem,
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass,
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass>>
+        {
+    
+            static DetailsClass()
+            {
+                var initializeEntry = global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.ruttrabajador;
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass>.Entry
+                __ReporteHorasExtrasItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.__ReporteHorasExtrasItem_CreateNew,
+                    global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.__ReporteHorasExtrasItem_Created,
+                    global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.__ReporteHorasExtrasItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.ReporteHorasExtrasItem __ReporteHorasExtrasItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ReporteHorasExtrasItem> es)
+            {
+                return new global::LightSwitchApplication.ReporteHorasExtrasItem(es);
+            }
+            private static void __ReporteHorasExtrasItem_Created(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                e.ReporteHorasExtrasItem_Created();
+            }
+            private static bool __ReporteHorasExtrasItem_AllowSaveWithErrors(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                bool result = false;
+                e.ReporteHorasExtrasItem_AllowSaveWithErrors(ref result);
+                return result;
+            }
+    
+            public DetailsClass() : base()
+            {
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass> Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass> Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+    
+            public new global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass>
+            {
+    
+                public PropertySet() : base()
+                {
+                }
+    
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, string> ruttrabajador
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.ruttrabajador) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, int> formula
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.formula) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, int>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::System.Nullable<int>> valor
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.valor) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::System.Nullable<int>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, double> valorbase
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties.valorbase) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, double>;
+                    }
+                }
+                
+            }
+    
+            #pragma warning disable 109
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
+            {
+                new string ruttrabajador { get; set; }
+                new int formula { get; set; }
+                new global::System.Nullable<int> valor { get; set; }
+                new double valorbase { get; set; }
+            }
+            #pragma warning restore 109
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal class PropertySetProperties
+            {
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, string>.Entry
+                    ruttrabajador = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, string>.Entry(
+                        "ruttrabajador",
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._ruttrabajador_Stub,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._ruttrabajador_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._ruttrabajador_Validate,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._ruttrabajador_GetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._ruttrabajador_SetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._ruttrabajador_OnValueChanged);
+                private static void _ruttrabajador_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ruttrabajador, sf);
+                }
+                private static bool _ruttrabajador_ComputeIsReadOnly(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    bool result = false;
+                    e.ruttrabajador_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ruttrabajador_Validate(global::LightSwitchApplication.ReporteHorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ruttrabajador_Validate(r);
+                }
+                private static string _ruttrabajador_GetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ruttrabajador;
+                }
+                private static void _ruttrabajador_SetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ruttrabajador = v;
+                }
+                private static void _ruttrabajador_OnValueChanged(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    e.ruttrabajador_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, int>.Entry
+                    formula = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, int>.Entry(
+                        "formula",
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._formula_Stub,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._formula_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._formula_Validate,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._formula_GetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._formula_SetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._formula_OnValueChanged);
+                private static void _formula_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._formula, sf);
+                }
+                private static bool _formula_ComputeIsReadOnly(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    bool result = false;
+                    e.formula_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _formula_Validate(global::LightSwitchApplication.ReporteHorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.formula_Validate(r);
+                }
+                private static int _formula_GetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.formula;
+                }
+                private static void _formula_SetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, int v)
+                {
+                    d.ImplementationEntity.formula = v;
+                }
+                private static void _formula_OnValueChanged(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    e.formula_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::System.Nullable<int>>.Entry
+                    valor = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::System.Nullable<int>>.Entry(
+                        "valor",
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valor_Stub,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valor_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valor_Validate,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valor_GetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valor_SetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valor_OnValueChanged);
+                private static void _valor_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._valor, sf);
+                }
+                private static bool _valor_ComputeIsReadOnly(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    bool result = false;
+                    e.valor_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _valor_Validate(global::LightSwitchApplication.ReporteHorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.valor_Validate(r);
+                }
+                private static global::System.Nullable<int> _valor_GetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.valor;
+                }
+                private static void _valor_SetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, global::System.Nullable<int> v)
+                {
+                    d.ImplementationEntity.valor = v;
+                }
+                private static void _valor_OnValueChanged(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    e.valor_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, double>.Entry
+                    valorbase = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, double>.Entry(
+                        "valorbase",
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valorbase_Stub,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valorbase_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valorbase_Validate,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valorbase_GetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valorbase_SetImplementationValue,
+                        global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass.PropertySetProperties._valorbase_OnValueChanged);
+                private static void _valorbase_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, double>.Data> c, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._valorbase, sf);
+                }
+                private static bool _valorbase_ComputeIsReadOnly(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    bool result = false;
+                    e.valorbase_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _valorbase_Validate(global::LightSwitchApplication.ReporteHorasExtrasItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.valorbase_Validate(r);
+                }
+                private static double _valorbase_GetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.valorbase;
+                }
+                private static void _valorbase_SetImplementationValue(global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass d, double v)
+                {
+                    d.ImplementationEntity.valorbase = v;
+                }
+                private static void _valorbase_OnValueChanged(global::LightSwitchApplication.ReporteHorasExtrasItem e)
+                {
+                    e.valorbase_Changed();
+                }
+    
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, string>.Data _ruttrabajador;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, int>.Data _formula;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, global::System.Nullable<int>>.Data _valor;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ReporteHorasExtrasItem, global::LightSwitchApplication.ReporteHorasExtrasItem.DetailsClass, double>.Data _valorbase;
+            
+        }
+    
+        #endregion
+    }
+    
+    /// <summary>
+    /// No hay ninguna descripción modelada
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
     public sealed partial class ContratoItem1 : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.ContratoItem1, global::LightSwitchApplication.ContratoItem1.DetailsClass>
     {
         #region Constructors

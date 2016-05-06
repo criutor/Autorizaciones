@@ -60,35 +60,49 @@ namespace LightSwitchApplication
 
                 if (DateTime.Today > this.SOLICITUDES.SelectedItem.Inicio.Value)
                 {
-                    this.OpenModalWindow("Group");
+                    
                 }
                 else
                 {
                     this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de realización", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
                 }
+
+                #region dentro del primer if
+                this.OpenModalWindow("Group");
+                #endregion
             }
             else
             {
                 if (DateTime.Today > this.SOLICITUDES.SelectedItem.Termino.Value)
                 {
-                    string Mensaje = "";
+                    
+                }
+                else
+                {
+                    this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                }
 
-                    if (this.SOLICITUDES.SelectedItem.Administrativo == true)
+                #region dentro del segundo if
+                string Mensaje = "";
+                
+
+                if (this.SOLICITUDES.SelectedItem.Administrativo == true)
                     {
                         Mensaje = "Los días administrativos solicitados por el empleado serán descontados de su saldo. ¿Desea continuar?";
                     }
                     else
-                    if (this.SOLICITUDES.SelectedItem.Vacaciones == true)
-                    {
-                        Mensaje = "Las vacaciones solicitadas por el empleado serán descontadas de su saldo. ¿Desea continuar?";
-                    }
-                    else
-                    if (this.SOLICITUDES.SelectedItem.OtroPermiso == true)
-                    {
-                        result = this.ShowMessageBox("Esta acción indica que RR.HH ha recibido esta solicitud y gestionará su recuperación, descuento o compensación. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
-                    }
+                        if (this.SOLICITUDES.SelectedItem.Vacaciones == true)
+                        {
+                            //Mensaje = "Las vacaciones solicitadas por el empleado serán descontadas de su saldo. ¿Desea continuar?";
+                            Mensaje = "Esta acción indica que RR.HH ha recibido esta solicitud y gestionará su respectivo descuento. ¿Desea continuar?";
+                        }
+                        else
+                            if (this.SOLICITUDES.SelectedItem.OtroPermiso == true)
+                            {
+                                result = this.ShowMessageBox("Esta acción indica que RR.HH ha recibido esta solicitud y gestionará su recuperación, descuento o compensación. ¿Desea continuar?");
+                            }
 
-                    result = this.ShowMessageBox( Mensaje , "ADVERTENCIA", MessageBoxOption.YesNo);
+                    result = this.ShowMessageBox(Mensaje, "ADVERTENCIA", MessageBoxOption.YesNo);
 
 
                     if (result == System.Windows.MessageBoxResult.Yes)
@@ -100,8 +114,6 @@ namespace LightSwitchApplication
 
                         this.SOLICITUDES.SelectedItem.Rebajada = true;
                         this.SOLICITUDES.SelectedItem.Completada = false;
-
-                        //this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
                         this.SOLICITUDES.SelectedItem.Estado = "Rebajada";
 
                         this.NUEVOESTADO = new ESTADOSItem();
@@ -113,11 +125,7 @@ namespace LightSwitchApplication
                         this.Save();
                         this.Refresh();
                     }
-                }
-                else
-                {
-                    this.ShowMessageBox("Para rebajar una solicitud debes esperar hasta después de la fecha de término", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-                }
+                #endregion
             }
         }
 
@@ -150,10 +158,11 @@ namespace LightSwitchApplication
 
             if (result == System.Windows.MessageBoxResult.Yes)
             {
+                this.CloseModalWindow("Group");
+
                 this.SOLICITUDES.SelectedItem.Rebajada = true;
                 this.SOLICITUDES.SelectedItem.Completada = false;
 
-                //this.DiasAdministrativosAprobados.SelectedItem.Estado = "Rebajada por RR.HH";
                 this.SOLICITUDES.SelectedItem.Estado = "Rebajada";
 
                 this.NUEVOESTADO = new ESTADOSItem();
@@ -163,7 +172,7 @@ namespace LightSwitchApplication
                 this.NUEVOESTADO.CreadoAt = DateTime.Now;
 
                 this.Save();
-                this.CloseModalWindow("Group");
+                
                 this.Refresh();
             }
         }
@@ -176,5 +185,7 @@ namespace LightSwitchApplication
             OTROPERMISO = true;
             HORASEXTRAS = true;
         }
+
+
     }
 }

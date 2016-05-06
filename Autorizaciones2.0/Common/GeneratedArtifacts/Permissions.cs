@@ -29,25 +29,29 @@ namespace LightSwitchApplication
         /// </summary>
         public const string AdminRRHH = "LightSwitchApplication:AdminRRHH";
         /// <summary>
-        /// Soy_Gustavo
+        /// Gustavo
         /// </summary>
-        public const string Soy_Gustavo = "LightSwitchApplication:Soy_Gustavo";
+        public const string Gustavo = "LightSwitchApplication:Gustavo";
         /// <summary>
-        /// Soy_Salome
+        /// Salome
         /// </summary>
-        public const string Soy_Salome = "LightSwitchApplication:Soy_Salome";
+        public const string Salome = "LightSwitchApplication:Salome";
         /// <summary>
-        /// Soy_Moises
+        /// Moises
         /// </summary>
-        public const string Soy_Moises = "LightSwitchApplication:Soy_Moises";
+        public const string Moises = "LightSwitchApplication:Moises";
         /// <summary>
-        /// Soy_Valeria
+        /// Valeria
         /// </summary>
-        public const string Soy_Valeria = "LightSwitchApplication:Soy_Valeria";
+        public const string Valeria = "LightSwitchApplication:Valeria";
         /// <summary>
-        /// Soy_Cesar
+        /// Cesar
         /// </summary>
-        public const string Soy_Cesar = "LightSwitchApplication:Soy_Cesar";
+        public const string Cesar = "LightSwitchApplication:Cesar";
+        /// <summary>
+        /// Jair
+        /// </summary>
+        public const string Jair = "LightSwitchApplication:Jair";
 
         /// <summary>
         /// Obtiene todos los permisos definidos para la aplicación. esto incluye los permisos del sistema y definidos por el usuario.

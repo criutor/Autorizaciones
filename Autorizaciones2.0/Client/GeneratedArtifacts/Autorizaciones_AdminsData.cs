@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 29/04/2016 22:16:08
+// Fecha de generación: 06/05/2016 16:30:05
 namespace LightSwitchApplication.Implementation
 {
     
@@ -569,6 +569,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<HistorialPPRolPrivadoVacacionesProporcionalesItem> _HistorialPPRolPrivadoVacacionesProporcionales;
         /// <summary>
+        /// No hay comentarios para ReporteHorasExtras en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<ReporteHorasExtrasItem> ReporteHorasExtras
+        {
+            get
+            {
+                if ((this._ReporteHorasExtras == null))
+                {
+                    this._ReporteHorasExtras = base.CreateQuery<ReporteHorasExtrasItem>("ReporteHorasExtras");
+                }
+                return this._ReporteHorasExtras;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<ReporteHorasExtrasItem> _ReporteHorasExtras;
+        /// <summary>
         /// No hay comentarios para Persona en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -807,6 +824,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToHistorialPPRolPrivadoVacacionesProporcionales(HistorialPPRolPrivadoVacacionesProporcionalesItem historialPPRolPrivadoVacacionesProporcionalesItem)
         {
             base.AddObject("HistorialPPRolPrivadoVacacionesProporcionales", historialPPRolPrivadoVacacionesProporcionalesItem);
+        }
+        /// <summary>
+        /// No hay comentarios para ReporteHorasExtras en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToReporteHorasExtras(ReporteHorasExtrasItem reporteHorasExtrasItem)
+        {
+            base.AddObject("ReporteHorasExtras", reporteHorasExtrasItem);
         }
     }
     /// <summary>
@@ -1281,32 +1306,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnRut_Persona_ConCerosChanging(string value);
         partial void OnRut_Persona_ConCerosChanged();
         /// <summary>
-        /// No hay comentarios para la propiedad SaldoVacaciones en el esquema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<double> SaldoVacaciones
-        {
-            get
-            {
-                return this._SaldoVacaciones;
-            }
-            set
-            {
-                this.OnSaldoVacacionesChanging(value);
-                if (object.Equals(this.SaldoVacaciones, value))
-                {
-                    return;
-                }
-                this._SaldoVacaciones = value;
-                this.OnSaldoVacacionesChanged();
-                this.OnPropertyChanged("SaldoVacaciones");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<double> _SaldoVacaciones;
-        partial void OnSaldoVacacionesChanging(global::System.Nullable<double> value);
-        partial void OnSaldoVacacionesChanged();
-        /// <summary>
         /// No hay comentarios para la propiedad SaldoVacaciones2 en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -1410,6 +1409,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<double> _VacacionesProgresivas;
         partial void OnVacacionesProgresivasChanging(global::System.Nullable<double> value);
         partial void OnVacacionesProgresivasChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad VacacionesPrimerMesDevengado en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> VacacionesPrimerMesDevengado
+        {
+            get
+            {
+                return this._VacacionesPrimerMesDevengado;
+            }
+            set
+            {
+                this.OnVacacionesPrimerMesDevengadoChanging(value);
+                if (object.Equals(this.VacacionesPrimerMesDevengado, value))
+                {
+                    return;
+                }
+                this._VacacionesPrimerMesDevengado = value;
+                this.OnVacacionesPrimerMesDevengadoChanged();
+                this.OnPropertyChanged("VacacionesPrimerMesDevengado");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _VacacionesPrimerMesDevengado;
+        partial void OnVacacionesPrimerMesDevengadoChanging(global::System.Nullable<bool> value);
+        partial void OnVacacionesPrimerMesDevengadoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad Convenio_fk en el esquema.
         /// </summary>
@@ -7694,12 +7719,18 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="ID">Valor inicial de Id.</param>
         /// <param name="nombre">Valor inicial de Nombre.</param>
+        /// <param name="esJefeDeArea">Valor inicial de EsJefeDeArea.</param>
+        /// <param name="esSubgerente">Valor inicial de EsSubgerente.</param>
+        /// <param name="esGerente">Valor inicial de EsGerente.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static CargoRolPrivadoItem CreateCargoRolPrivadoItem(int ID, string nombre)
+        public static CargoRolPrivadoItem CreateCargoRolPrivadoItem(int ID, string nombre, bool esJefeDeArea, bool esSubgerente, bool esGerente)
         {
             CargoRolPrivadoItem cargoRolPrivadoItem = new CargoRolPrivadoItem();
             cargoRolPrivadoItem.Id = ID;
             cargoRolPrivadoItem.Nombre = nombre;
+            cargoRolPrivadoItem.EsJefeDeArea = esJefeDeArea;
+            cargoRolPrivadoItem.EsSubgerente = esSubgerente;
+            cargoRolPrivadoItem.EsGerente = esGerente;
             return cargoRolPrivadoItem;
         }
         /// <summary>
@@ -7836,7 +7867,7 @@ namespace LightSwitchApplication.Implementation
         /// No hay comentarios para la propiedad EsJefeDeArea en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> EsJefeDeArea
+        public bool EsJefeDeArea
         {
             get
             {
@@ -7855,14 +7886,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _EsJefeDeArea;
-        partial void OnEsJefeDeAreaChanging(global::System.Nullable<bool> value);
+        private bool _EsJefeDeArea;
+        partial void OnEsJefeDeAreaChanging(bool value);
         partial void OnEsJefeDeAreaChanged();
         /// <summary>
         /// No hay comentarios para la propiedad EsSubgerente en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> EsSubgerente
+        public bool EsSubgerente
         {
             get
             {
@@ -7881,14 +7912,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _EsSubgerente;
-        partial void OnEsSubgerenteChanging(global::System.Nullable<bool> value);
+        private bool _EsSubgerente;
+        partial void OnEsSubgerenteChanging(bool value);
         partial void OnEsSubgerenteChanged();
         /// <summary>
         /// No hay comentarios para la propiedad EsGerente en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> EsGerente
+        public bool EsGerente
         {
             get
             {
@@ -7907,8 +7938,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _EsGerente;
-        partial void OnEsGerenteChanging(global::System.Nullable<bool> value);
+        private bool _EsGerente;
+        partial void OnEsGerenteChanging(bool value);
         partial void OnEsGerenteChanged();
         /// <summary>
         /// No hay comentarios para Persona en el esquema.
@@ -8695,6 +8726,146 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<global::System.DateTime> _FechaEjecución;
         partial void OnFechaEjecuciónChanging(global::System.Nullable<global::System.DateTime> value);
         partial void OnFechaEjecuciónChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// No hay comentarios para LightSwitchApplication.ReporteHorasExtrasItem en el esquema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ruttrabajador
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("ReporteHorasExtras")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ruttrabajador")]
+    public partial class ReporteHorasExtrasItem : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Crear un nuevo objeto ReporteHorasExtrasItem.
+        /// </summary>
+        /// <param name="ruttrabajador">Valor inicial de ruttrabajador.</param>
+        /// <param name="formula">Valor inicial de formula.</param>
+        /// <param name="valorbase">Valor inicial de valorbase.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static ReporteHorasExtrasItem CreateReporteHorasExtrasItem(string ruttrabajador, int formula, double valorbase)
+        {
+            ReporteHorasExtrasItem reporteHorasExtrasItem = new ReporteHorasExtrasItem();
+            reporteHorasExtrasItem.ruttrabajador = ruttrabajador;
+            reporteHorasExtrasItem.formula = formula;
+            reporteHorasExtrasItem.valorbase = valorbase;
+            return reporteHorasExtrasItem;
+        }
+        /// <summary>
+        /// No hay comentarios para la propiedad ruttrabajador en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ruttrabajador
+        {
+            get
+            {
+                return this._ruttrabajador;
+            }
+            set
+            {
+                this.OnruttrabajadorChanging(value);
+                if (object.Equals(this.ruttrabajador, value))
+                {
+                    return;
+                }
+                this._ruttrabajador = value;
+                this.OnruttrabajadorChanged();
+                this.OnPropertyChanged("ruttrabajador");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ruttrabajador;
+        partial void OnruttrabajadorChanging(string value);
+        partial void OnruttrabajadorChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad formula en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int formula
+        {
+            get
+            {
+                return this._formula;
+            }
+            set
+            {
+                this.OnformulaChanging(value);
+                if (object.Equals(this.formula, value))
+                {
+                    return;
+                }
+                this._formula = value;
+                this.OnformulaChanged();
+                this.OnPropertyChanged("formula");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _formula;
+        partial void OnformulaChanging(int value);
+        partial void OnformulaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad valor en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> valor
+        {
+            get
+            {
+                return this._valor;
+            }
+            set
+            {
+                this.OnvalorChanging(value);
+                if (object.Equals(this.valor, value))
+                {
+                    return;
+                }
+                this._valor = value;
+                this.OnvalorChanged();
+                this.OnPropertyChanged("valor");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _valor;
+        partial void OnvalorChanging(global::System.Nullable<int> value);
+        partial void OnvalorChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad valorbase en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public double valorbase
+        {
+            get
+            {
+                return this._valorbase;
+            }
+            set
+            {
+                this.OnvalorbaseChanging(value);
+                if (object.Equals(this.valorbase, value))
+                {
+                    return;
+                }
+                this._valorbase = value;
+                this.OnvalorbaseChanged();
+                this.OnPropertyChanged("valorbase");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private double _valorbase;
+        partial void OnvalorbaseChanging(double value);
+        partial void OnvalorbaseChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

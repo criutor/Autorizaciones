@@ -16,6 +16,7 @@ namespace LightSwitchApplication.UserCode
         int SMTPPort = 25;
 
         //public void Mail(String sendFrom, String sendTo, String subject, String body)
+        
         public void Mail(String sendTo, String subject, String body)
         {
             //MailAddress fromAddress = new MailAddress(sendFrom);
@@ -35,19 +36,6 @@ namespace LightSwitchApplication.UserCode
             // smtp.UseDefaultCredentials = false;
             smtp.Credentials = new NetworkCredential(SMTPUserId, SMTPPassword);
             smtp.Send(mail);
-
-            if (sendTo == "moises.arevalo@planvital.cl")
-            {
-                MailAddress toAddressCopia = new MailAddress(sendTo);
-                smtp.Send(mail);
-            }
-
-            if (sendTo == "salome.escobar@planvital.cl")
-            {
-                MailAddress toAddressCopia = new MailAddress(sendTo);
-                smtp.Send(mail);
-            }
-
         }
     }
 }

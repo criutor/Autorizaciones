@@ -300,7 +300,47 @@ namespace LightSwitchApplication
 
             dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
-            this.RutUsuarioAD = operation.RutUsuario;
+            //this.RutUsuarioAD = operation.RutUsuario;
+
+            if (this.Application.User.HasPermission(Permissions.Salome) == true)
+            {
+                this.RutUsuarioAD = "15413075-6";//salome
+            }
+            else
+
+                if (this.Application.User.HasPermission(Permissions.Moises) == true)
+                {
+                    this.RutUsuarioAD = "9220822-2";//moises
+                }
+                else
+
+                    if (this.Application.User.HasPermission(Permissions.Valeria) == true)
+                    {
+                        this.RutUsuarioAD = "17681681-3";//valeria
+                    }
+                    else
+
+                        if (this.Application.User.HasPermission(Permissions.Gustavo) == true)
+                        {
+                            this.RutUsuarioAD = "17511042-9";//gustavo
+                        }
+                        else
+
+                            if (this.Application.User.HasPermission(Permissions.Cesar) == true)
+                            {
+                                this.RutUsuarioAD = "17229504-5";//cesar
+                            }
+                            else
+
+                                if (this.Application.User.HasPermission(Permissions.Jair) == true)
+                                {
+                                    this.RutUsuarioAD = "19566061-1";//Jair
+                                }
+
+                            else
+                            {
+                                this.RutUsuarioAD = operation.RutUsuario;
+                            }
         }
 
     }

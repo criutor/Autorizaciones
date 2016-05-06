@@ -21,11 +21,11 @@
     <Property Name="Email" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="AreaDeTrabajo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Rut_Persona_ConCeros" Type="Edm.String" MaxLength="12" ConcurrencyMode="Fixed" />
-    <Property Name="SaldoVacaciones" Type="Edm.Double" />
     <Property Name="SaldoVacaciones2" Type="Edm.Double" />
     <Property Name="IDGerencia" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="IDSubgerencia" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="VacacionesProgresivas" Type="Edm.Double" />
+    <Property Name="VacacionesPrimerMesDevengado" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Convenio_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="Area_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="CargoRolPrivado_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
@@ -344,9 +344,9 @@
     <Property Name="IDArea" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="IDSubgerencia" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="IDGerencia" Type="Edm.Int32" ConcurrencyMode="Fixed" />
-    <Property Name="EsJefeDeArea" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="EsSubgerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="EsGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="EsJefeDeArea" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="EsSubgerente" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="EsGerente" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Persona" Relationship="LightSwitchApplication.FK_Persona_CargoRolPrivado" ToRole="Persona" FromRole="CargoRolPrivado" />
   </EntityType>
   <EntityType Name="ConsultarRutUsuarioADItem">
@@ -400,6 +400,15 @@
     <Property Name="id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="EjecutadoPor" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="FechaEjecución" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+  </EntityType>
+  <EntityType Name="ReporteHorasExtrasItem">
+    <Key>
+      <PropertyRef Name="ruttrabajador" />
+    </Key>
+    <Property Name="ruttrabajador" Type="Edm.String" Nullable="false" MaxLength="50" />
+    <Property Name="formula" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="valor" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="valorbase" Type="Edm.Double" Nullable="false" />
   </EntityType>
   <Association Name="FK_Division_Area_Division_Gerencia">
     <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="0..1" />
@@ -724,6 +733,7 @@
     <EntitySet Name="HistorialPPRRHHResetearSaldoDiasAdmins" EntityType="LightSwitchApplication.HistorialPPRRHHResetearSaldoDiasAdminsItem" />
     <EntitySet Name="HistorialPPRolPrivadoResetearSaldoDiasAdmins" EntityType="LightSwitchApplication.HistorialPPRolPrivadoResetearSaldoDiasAdminsItem" />
     <EntitySet Name="HistorialPPRolPrivadoVacacionesProporcionales" EntityType="LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem" />
+    <EntitySet Name="ReporteHorasExtras" EntityType="LightSwitchApplication.ReporteHorasExtrasItem" />
     <AssociationSet Name="FK_Division_Area_Division_Gerencia" Association="LightSwitchApplication.FK_Division_Area_Division_Gerencia">
       <End Role="Division_Gerencia" EntitySet="Division_Gerencia" />
       <End Role="Division_Area" EntitySet="Division_Area" />

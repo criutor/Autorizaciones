@@ -192,6 +192,7 @@
     <Compile Include="UserCode\PROCESOS_PERIODICOS_RRHH.cs" />
     <Compile Include="UserCode\SOLICITUDES_HISTORICO_ROLPRIVADO.cs" />
     <Compile Include="UserCode\SOLICITUDES_HISTORICO_RRHH.cs" />
+    <Compile Include="UserCode\SOLICITUDES_HORASEXTRAS_REPORTEFIN700.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP.cs" />
     <Compile Include="UserCode\SOLICITUDES_DETALLES.cs" />
     <Compile Include="UserCode\SOLICITUDES_A_CARGO.cs" />
@@ -270,6 +271,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\EliminarPersona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\microsoft-excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\excel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\diagram-pro-1-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\microsoft-excel-128.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />

@@ -131,3 +131,4 @@ C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\B
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\Bin\zh-Hant\Microsoft.LightSwitch.resources.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\obj\Release\Application.Common.dll
 C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\obj\Release\Application.Common.pdb
+C:\Users\cesar.riutor\Documents\GitHub\Autorizaciones\Autorizaciones2.0\Common\obj\Release\Common.csprojResolveAssemblyReference.cache

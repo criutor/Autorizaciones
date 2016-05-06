@@ -1140,6 +1140,42 @@ namespace LightSwitchApplication
         partial void HistorialPPRolPrivadoVacacionesProporcionales_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.HistorialPPRolPrivadoVacacionesProporcionalesItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Inserting(global::LightSwitchApplication.ReporteHorasExtrasItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Inserted(global::LightSwitchApplication.ReporteHorasExtrasItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Updating(global::LightSwitchApplication.ReporteHorasExtrasItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Updated(global::LightSwitchApplication.ReporteHorasExtrasItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Deleting(global::LightSwitchApplication.ReporteHorasExtrasItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Deleted(global::LightSwitchApplication.ReporteHorasExtrasItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Validate(global::LightSwitchApplication.ReporteHorasExtrasItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ReporteHorasExtras_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ReporteHorasExtrasItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1315,6 +1351,21 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void PermisosAprobados_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HorasExtrasRebajadas_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void HorasExtrasRebajadas_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HorasExtrasRebajadas_PreprocessQuery(ref global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void HorasExtrasRebajadas_Executed(global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void HorasExtrasRebajadas_ExecuteFailed(global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -3590,6 +3641,81 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ReporteHorasExtrasItem>
+                __ReporteHorasExtrasEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.ReporteHorasExtrasItem>(
+                    "ReporteHorasExtras",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_CanInsert,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_CanUpdate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_CanDelete,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_CanRead,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Inserting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Inserted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Updating,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Updated,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Deleting,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Deleted,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Validate,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__ReporteHorasExtras_Filter);
+            private static bool __ReporteHorasExtras_CanInsert(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ReporteHorasExtras_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ReporteHorasExtras_CanUpdate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ReporteHorasExtras_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ReporteHorasExtras_CanDelete(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ReporteHorasExtras_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ReporteHorasExtras_CanRead(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                bool result = true;
+                d.ReporteHorasExtras_CanRead(ref result);
+                return result;
+            }
+            private static void __ReporteHorasExtras_Inserting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                d.ReporteHorasExtras_Inserting(e);
+            }
+            private static void __ReporteHorasExtras_Inserted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                d.ReporteHorasExtras_Inserted(e);
+            }
+            private static void __ReporteHorasExtras_Updating(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                d.ReporteHorasExtras_Updating(e);
+            }
+            private static void __ReporteHorasExtras_Updated(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                d.ReporteHorasExtras_Updated(e);
+            }
+            private static void __ReporteHorasExtras_Deleting(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                d.ReporteHorasExtras_Deleting(e);
+            }
+            private static void __ReporteHorasExtras_Deleted(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e)
+            {
+                d.ReporteHorasExtras_Deleted(e);
+            }
+            private static void __ReporteHorasExtras_Validate(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, global::LightSwitchApplication.ReporteHorasExtrasItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ReporteHorasExtras_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ReporteHorasExtrasItem, bool>> __ReporteHorasExtras_Filter(global::LightSwitchApplication.Autorizaciones_AdminsDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ReporteHorasExtrasItem, bool>> filter = null;
+                d.ReporteHorasExtras_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService>
                 __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService>(
                     "SaveChanges",
@@ -3975,6 +4101,39 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[0];
                 d.PermisosAprobados_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>
+                __HorasExtrasRebajadasEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.Autorizaciones_AdminsDataService, global::LightSwitchApplication.SOLICITUDESItem>(
+                    "HorasExtrasRebajadas",
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasRebajadas_CanExecute,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasRebajadas_Executing,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasRebajadas_Executed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasRebajadas_Failed,
+                    global::LightSwitchApplication.Autorizaciones_AdminsDataService.DetailsClass.__HorasExtrasRebajadas_PreprocessQuery);
+            private static bool __HorasExtrasRebajadas_CanExecute(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, bool r)
+            {
+                d.HorasExtrasRebajadas_CanExecute(ref r);
+                return r;
+            }
+            private static void __HorasExtrasRebajadas_Executing(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.HorasExtrasRebajadas_Executing();
+            }
+            private static void __HorasExtrasRebajadas_Executed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                d.HorasExtrasRebajadas_Executed((global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SOLICITUDESItem>)args[0]);
+            }
+            private static void __HorasExtrasRebajadas_Failed(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args, global::System.Exception ex)
+            {
+                d.HorasExtrasRebajadas_ExecuteFailed(ex);
+            }
+            private static global::System.Linq.IQueryable __HorasExtrasRebajadas_PreprocessQuery(global::LightSwitchApplication.Autorizaciones_AdminsDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.SOLICITUDESItem>)args[0];
+                d.HorasExtrasRebajadas_PreprocessQuery(ref query);
                 return query;
             }
     
