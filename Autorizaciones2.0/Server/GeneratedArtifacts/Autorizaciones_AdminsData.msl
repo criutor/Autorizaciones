@@ -68,6 +68,7 @@
           <ScalarProperty Name="Gerencia_fk" ColumnName="Gerencia_fk" />
           <ScalarProperty Name="SubGerencia_fk" ColumnName="SubGerencia_fk" />
           <ScalarProperty Name="JefeDeArea" ColumnName="JefeDeArea" />
+          <ScalarProperty Name="Detalles" ColumnName="Detalles" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -274,10 +275,24 @@
     <EntitySetMapping Name="SOLICITUDES">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.SOLICITUDESItem)">
         <MappingFragment StoreEntitySet="SOLICITUDES">
-          <ScalarProperty Name="Id_Solicitud" ColumnName="Id_Solicitud" />
+          <ScalarProperty Name="RutEmpleado" ColumnName="RutEmpleado" />
+          <ScalarProperty Name="NombreEmpleado" ColumnName="NombreEmpleado" />
+          <ScalarProperty Name="AreaDeTrabajo" ColumnName="Departamento" />
           <ScalarProperty Name="Gerencia" ColumnName="Gerencia" />
-          <ScalarProperty Name="Departamento" ColumnName="Departamento" />
-          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="TipoDeSolicitud" ColumnName="Titulo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
+          <ScalarProperty Name="SaldoDias" ColumnName="SaldoDias" />
+          <ScalarProperty Name="DiasSolicitados" ColumnName="NumeroDiasTomados" />
+          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
+          <ScalarProperty Name="Termino" ColumnName="Termino" />
+          <ScalarProperty Name="Taxi" ColumnName="Taxi2" />
+          <ScalarProperty Name="Colacion" ColumnName="Colacion2" />
+          <ScalarProperty Name="ConDescuento" ColumnName="ConDescuento2" />
+          <ScalarProperty Name="Prestamo" ColumnName="Prestamo" />
+          <ScalarProperty Name="HorasAutorizadas" ColumnName="HorasAutorizadas" />
+          <ScalarProperty Name="HorasTrabajadas" ColumnName="HorasTrabajadas" />
+          <ScalarProperty Name="Id_Solicitud" ColumnName="Id_Solicitud" />
           <ScalarProperty Name="VB_Gerente" ColumnName="VB_Gerente" />
           <ScalarProperty Name="VB_SubGerente" ColumnName="VB_SubGerente" />
           <ScalarProperty Name="VB_JefeDirecto" ColumnName="VB_JefeDirecto" />
@@ -288,30 +303,18 @@
           <ScalarProperty Name="OtroPermiso" ColumnName="OtroPermiso" />
           <ScalarProperty Name="Completada" ColumnName="Completada" />
           <ScalarProperty Name="Rechazada" ColumnName="Rechazada" />
-          <ScalarProperty Name="SaldoDias" ColumnName="SaldoDias" />
-          <ScalarProperty Name="NumeroDiasTomados" ColumnName="NumeroDiasTomados" />
-          <ScalarProperty Name="HorasAutorizadas" ColumnName="HorasAutorizadas" />
-          <ScalarProperty Name="HorasTrabajadas" ColumnName="HorasTrabajadas" />
-          <ScalarProperty Name="Prestamo" ColumnName="Prestamo" />
           <ScalarProperty Name="RutPersona_fk" ColumnName="RutPersona_fk" />
-          <ScalarProperty Name="Inicio" ColumnName="Inicio" />
-          <ScalarProperty Name="Termino" ColumnName="Termino" />
-          <ScalarProperty Name="Colacion" ColumnName="Colacion" />
-          <ScalarProperty Name="Taxi" ColumnName="Taxi" />
-          <ScalarProperty Name="ConDescuento" ColumnName="ConDescuento" />
+          <ScalarProperty Name="ColacionBoolean" ColumnName="Colacion" />
+          <ScalarProperty Name="TaxiBoolean" ColumnName="Taxi" />
+          <ScalarProperty Name="ConDescuentoBoolean" ColumnName="ConDescuento" />
           <ScalarProperty Name="Cancelada" ColumnName="Cancelada" />
-          <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="AdministrativoDesde" ColumnName="AdministrativoDesde" />
           <ScalarProperty Name="AdministrativoHasta" ColumnName="AdministrativoHasta" />
-          <ScalarProperty Name="FechaSolicitud" ColumnName="FechaSolicitud" />
           <ScalarProperty Name="Caducada" ColumnName="Caducada" />
           <ScalarProperty Name="Rebajada" ColumnName="Rebajada" />
           <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
           <ScalarProperty Name="EmailProximoDestinatario" ColumnName="EmailProximoDestinatario" />
           <ScalarProperty Name="VB_GerenteGeneral" ColumnName="VB_GerenteGeneral" />
-          <ScalarProperty Name="ConDescuento2" ColumnName="ConDescuento2" />
-          <ScalarProperty Name="Colacion2" ColumnName="Colacion2" />
-          <ScalarProperty Name="Taxi2" ColumnName="Taxi2" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

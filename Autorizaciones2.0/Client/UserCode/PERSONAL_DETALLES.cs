@@ -112,14 +112,16 @@ namespace LightSwitchApplication
                 //Si el nuevo cargo no incluye ser gerente o si se borra el cargo de rol privado
                 if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsGerente != true) 
                 {
+                    this.Persona.Es_Gerente = false;
+                    this.Persona.Es_GerenteGeneral = false;
+                    this.Persona.Cargo = null;
+                    this.Persona.IDGerencia = null;
+                    this.Persona.AreaDeTrabajo = null;
+                    this.Persona.Division_AreaItem = null;
+
                     //si era gerente se elimina el cargo de gerente
                     if (this.Persona.Es_Gerente == true && this.Persona.Superior_Gerente.Count() != 0)
                     {
-                        this.Persona.Es_Gerente = false;
-                        this.Persona.Es_GerenteGeneral = false;
-                        this.Persona.Cargo = null;
-                        this.Persona.IDGerencia = null;
-                        this.Persona.AreaDeTrabajo = null;
                         this.Persona.Superior_Gerente.First().Division_GerenciaItem.Gerente = null;
                         this.Persona.Superior_Gerente.First().Delete();
                     }
@@ -157,15 +159,17 @@ namespace LightSwitchApplication
                 //Si el nuevo cargo no incluye ser subgerente
                 if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsSubgerente != true)
                 {
+                    this.Persona.Es_SubGerente = false;
+                    this.Persona.Cargo = null;
+                    this.Persona.IDGerencia_para_subgerentes = null;
+                    this.Persona.AreaDeTrabajo = null;
+                    this.Persona.Division_AreaItem = null;
+                    this.Persona.IDSubgerencia = null;
+
                     //si era subgerente se elimina el cargo de subgerente
                     if (this.Persona.Es_SubGerente == true && this.Persona.Superior_SubGerente.Count() != 0)
                     {
-                        this.Persona.Es_SubGerente = false;
-                        this.Persona.Cargo = null;
-                        this.Persona.IDGerencia_para_subgerentes = null;
-                        this.Persona.AreaDeTrabajo = null;
                         this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
-                        this.Persona.IDSubgerencia = null;
                         this.Persona.Superior_SubGerente.First().Delete();
                     }
                 }
@@ -205,12 +209,14 @@ namespace LightSwitchApplication
                 //Si el nuevo cargo no incluye ser jefe de área
                 if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsJefeDeArea != true)
                 {
+                    this.Persona.Es_JefeDirecto = false;
+                    this.Persona.Cargo = null;
+                    this.Persona.AreaDeTrabajo = null;
+                    this.Persona.Division_AreaItem = null;
+
                     //si era jefe de area se elimina el cargo de jefe de area
                     if (this.Persona.Es_JefeDirecto == true && this.Persona.Superior_JefeDirecto.Count() != 0)
                     {
-                        this.Persona.Es_JefeDirecto = false;
-                        this.Persona.Cargo = null;
-                        this.Persona.AreaDeTrabajo = null;
                         this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
                         this.Persona.Superior_JefeDirecto.First().Delete();
                     }

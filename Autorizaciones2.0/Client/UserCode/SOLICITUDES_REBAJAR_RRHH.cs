@@ -7,6 +7,8 @@ using Microsoft.LightSwitch;
 using Microsoft.LightSwitch.Framework.Client;
 using Microsoft.LightSwitch.Presentation;
 using Microsoft.LightSwitch.Presentation.Extensions;
+using System.Windows.Controls;
+using System.Text;
 namespace LightSwitchApplication
 {
     public partial class SOLICITUDES_REBAJAR_RRHH
@@ -109,7 +111,7 @@ namespace LightSwitchApplication
                     {
                         if (this.SOLICITUDES.SelectedItem.Administrativo == true)
                         {
-                            this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.SOLICITUDES.SelectedItem.NumeroDiasTomados;
+                            this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.SOLICITUDES.SelectedItem.DiasSolicitados;
                         }
 
                         this.SOLICITUDES.SelectedItem.Rebajada = true;
@@ -185,6 +187,8 @@ namespace LightSwitchApplication
             OTROPERMISO = true;
             HORASEXTRAS = true;
         }
+
+ 
 
 
     }

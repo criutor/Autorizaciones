@@ -72,12 +72,12 @@ namespace LightSwitchApplication
                 {
                     if (this.SOLICITUDES.SelectedItem.Administrativo == true)
                     {
-                        this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.SOLICITUDES.SelectedItem.NumeroDiasTomados;
+                        this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.SOLICITUDES.SelectedItem.DiasSolicitados;
                     }
                     else
                         if (this.SOLICITUDES.SelectedItem.Vacaciones == true)
                         {
-                            this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.SOLICITUDES.SelectedItem.NumeroDiasTomados;
+                            this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.SOLICITUDES.SelectedItem.DiasSolicitados;
                         }
 
                     this.SOLICITUDES.SelectedItem.Rebajada = true;

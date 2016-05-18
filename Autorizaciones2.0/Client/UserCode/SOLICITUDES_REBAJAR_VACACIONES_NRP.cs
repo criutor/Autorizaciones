@@ -65,7 +65,7 @@ namespace LightSwitchApplication
                 if (this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.EsRolPrivado == true)
                 {
                     //***this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
-                    this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
+                    this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.Vacaciones_Aprobadas.SelectedItem.DiasSolicitados.Value;
                     //this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo = this.Vacaciones_Aprobadas.SelectedItem.PersonaItem1.VacacionesSaldo - this.Vacaciones_Aprobadas.SelectedItem.NumeroDiasTomados.Value;
 
                 }

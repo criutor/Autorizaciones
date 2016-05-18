@@ -184,6 +184,7 @@
     <Property Name="Id_Area" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="JefeDeArea" Type="nvarchar" MaxLength="100" />
+    <Property Name="Detalles" Type="nvarchar" MaxLength="50" />
     <Property Name="Gerencia_fk" Type="int" />
     <Property Name="SubGerencia_fk" Type="int" />
   </EntityType>
@@ -374,10 +375,24 @@
     <Key>
       <PropertyRef Name="Id_Solicitud" />
     </Key>
-    <Property Name="Id_Solicitud" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Gerencia" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RutEmpleado" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreEmpleado" Type="nvarchar" MaxLength="50" />
     <Property Name="Departamento" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Gerencia" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Titulo" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="SaldoDias" Type="float" />
+    <Property Name="NumeroDiasTomados" Type="float" />
+    <Property Name="Inicio" Type="datetime" />
+    <Property Name="Termino" Type="datetime" />
+    <Property Name="Taxi2" Type="nchar" MaxLength="10" />
+    <Property Name="Colacion2" Type="nchar" MaxLength="10" />
+    <Property Name="ConDescuento2" Type="nchar" MaxLength="10" />
+    <Property Name="Prestamo" Type="int" />
+    <Property Name="HorasAutorizadas" Type="float" />
+    <Property Name="HorasTrabajadas" Type="float" />
+    <Property Name="Id_Solicitud" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="VB_Gerente" Type="bit" />
     <Property Name="VB_SubGerente" Type="bit" />
     <Property Name="VB_JefeDirecto" Type="bit" />
@@ -388,29 +403,17 @@
     <Property Name="OtroPermiso" Type="bit" />
     <Property Name="Completada" Type="bit" />
     <Property Name="Rechazada" Type="bit" />
-    <Property Name="SaldoDias" Type="float" />
-    <Property Name="NumeroDiasTomados" Type="float" />
-    <Property Name="HorasAutorizadas" Type="float" />
-    <Property Name="HorasTrabajadas" Type="float" />
-    <Property Name="Prestamo" Type="int" />
-    <Property Name="Inicio" Type="datetime" />
-    <Property Name="Termino" Type="datetime" />
     <Property Name="Colacion" Type="bit" />
     <Property Name="Taxi" Type="bit" />
     <Property Name="ConDescuento" Type="bit" />
     <Property Name="Cancelada" Type="bit" />
-    <Property Name="Estado" Type="nvarchar" MaxLength="50" />
     <Property Name="AdministrativoDesde" Type="nvarchar" MaxLength="50" />
     <Property Name="AdministrativoHasta" Type="nvarchar" MaxLength="50" />
-    <Property Name="FechaSolicitud" Type="datetime" />
     <Property Name="Caducada" Type="bit" />
     <Property Name="Rebajada" Type="bit" />
     <Property Name="CodigoEstado" Type="int" />
     <Property Name="EmailProximoDestinatario" Type="nvarchar" MaxLength="50" />
     <Property Name="VB_GerenteGeneral" Type="bit" />
-    <Property Name="ConDescuento2" Type="nchar" MaxLength="10" />
-    <Property Name="Colacion2" Type="nchar" MaxLength="10" />
-    <Property Name="Taxi2" Type="nchar" MaxLength="10" />
     <Property Name="RutPersona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">
@@ -500,9 +503,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Division_Area_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="0..1" />
     <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">
@@ -662,9 +663,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Division_Gerencia">
-    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_Gerencia" Type="Autorizaciones_AdminsDataStore.Division_GerenciaItem" Multiplicity="1" />
     <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Gerencia">
@@ -688,9 +687,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Division_Area">
-    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_Area" Type="Autorizaciones_AdminsDataStore.Division_AreaItem" Multiplicity="1" />
     <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Area">
@@ -714,9 +711,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_SubGerencia" Type="Autorizaciones_AdminsDataStore.Division_SubGerenciaItem" Multiplicity="1" />
     <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">

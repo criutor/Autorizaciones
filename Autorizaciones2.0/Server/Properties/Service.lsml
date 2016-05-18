@@ -1090,6 +1090,12 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Division_AreaItem/Properties[JefeDeArea]"
           Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Detalles"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Division_AreaItem/Properties[Detalles]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           Name="Gerencia_fk"
           Nullable="True"
@@ -1932,13 +1938,13 @@
           MaxLength="50"
           Name="Departamento"
           Nullable="False"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Departamento]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[AreaDeTrabajo]"
           Type="nvarchar" />
         <SsdlProperty
           MaxLength="20"
           Name="Titulo"
           Nullable="False"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Titulo]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[TipoDeSolicitud]"
           Type="nvarchar" />
         <SsdlProperty
           Name="VB_Gerente"
@@ -1998,7 +2004,7 @@
         <SsdlProperty
           Name="NumeroDiasTomados"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[NumeroDiasTomados]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[DiasSolicitados]"
           Type="float" />
         <SsdlProperty
           Name="HorasAutorizadas"
@@ -2028,17 +2034,17 @@
         <SsdlProperty
           Name="Colacion"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Colacion]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ColacionBoolean]"
           Type="bit" />
         <SsdlProperty
           Name="Taxi"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Taxi]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[TaxiBoolean]"
           Type="bit" />
         <SsdlProperty
           Name="ConDescuento"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuento]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuentoBoolean]"
           Type="bit" />
         <SsdlProperty
           Name="Cancelada"
@@ -2098,20 +2104,32 @@
           MaxLength="10"
           Name="ConDescuento2"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuento2]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ConDescuento]"
           Type="nchar" />
         <SsdlProperty
           MaxLength="10"
           Name="Colacion2"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Colacion2]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Colacion]"
           Type="nchar" />
         <SsdlProperty
           MaxLength="10"
           Name="Taxi2"
           Nullable="True"
-          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Taxi2]"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[Taxi]"
           Type="nchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="NombreEmpleado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[NombreEmpleado]"
+          Type="nvarchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="RutEmpleado"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[RutEmpleado]"
+          Type="nvarchar" />
         <SsdlForeignKeyProperty
           MaxLength="12"
           Name="RutPersona_fk"

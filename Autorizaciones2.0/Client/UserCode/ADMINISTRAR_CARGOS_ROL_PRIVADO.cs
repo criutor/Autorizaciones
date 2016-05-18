@@ -75,5 +75,61 @@ namespace LightSwitchApplication
             this.FindControl("EsSubgerente").IsEnabled = false;
             this.FindControl("EsGerente").IsEnabled = false;
         }
+
+        partial void EliminarCargo_Execute()
+        {
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Sí elimina este cargo, los empleados asociados quedarán sin cargo asignado. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+            this.CargoRolPrivado.SelectedItem.Persona.First().Division_AreaItem = null;
+            this.CargoRolPrivado.SelectedItem.Persona.First().AreaDeTrabajo = null;
+            this.CargoRolPrivado.SelectedItem.Persona.First().Cargo = null;
+            this.CargoRolPrivado.SelectedItem.Persona.First().Es_GerenteGeneral = false;
+            this.CargoRolPrivado.SelectedItem.Persona.First().Es_Gerente = false;
+            this.CargoRolPrivado.SelectedItem.Persona.First().Es_SubGerente = false;
+            this.CargoRolPrivado.SelectedItem.Persona.First().Es_JefeDirecto = false;
+
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
+                if (this.CargoRolPrivado.SelectedItem.EsGerente == true)
+                {
+                    if (this.CargoRolPrivado.SelectedItem.Persona.First().Superior_Gerente.Count() > 0)
+                    {
+                        this.CargoRolPrivado.SelectedItem.Persona.First().Superior_Gerente.First().Delete();
+                    }
+                }
+                else
+                    if (this.CargoRolPrivado.SelectedItem.EsSubgerente == true)
+                    {
+                        if (this.CargoRolPrivado.SelectedItem.Persona.First().Superior_SubGerente.Count() > 0)
+                        {
+                            this.CargoRolPrivado.SelectedItem.Persona.First().Superior_SubGerente.First().Delete();
+                        }
+                    }
+                    else
+                        if (this.CargoRolPrivado.SelectedItem.EsJefeDeArea == true)
+                        {
+                            if (this.CargoRolPrivado.SelectedItem.Persona.First().Superior_JefeDirecto.Count() > 0)
+                            {
+                                this.CargoRolPrivado.SelectedItem.Persona.First().Superior_JefeDirecto.First().Delete();
+                            }
+                        }
+                        else
+                            {
+                                try
+                                {
+                                    foreach (PersonaItem persona in this.CargoRolPrivado.SelectedItem.Persona)
+                                    {
+                                        persona.Division_AreaItem = null;
+                                        persona.AreaDeTrabajo = null;
+                                        persona.Cargo = null;
+                                    }
+                                }
+                                catch { }
+                            }
+
+                this.CargoRolPrivado.SelectedItem.Delete();
+                this.Save();
+            }
+        }
     }
 }

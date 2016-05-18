@@ -27,7 +27,7 @@ namespace LightSwitchApplication
             if (result == System.Windows.MessageBoxResult.Yes)
             {
 
-                this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.DiasAdministrativosAprobados.SelectedItem.NumeroDiasTomados;
+                this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins = this.DiasAdministrativosAprobados.SelectedItem.PersonaItem1.SaldoDiasAdmins - this.DiasAdministrativosAprobados.SelectedItem.DiasSolicitados;
 
                 this.DiasAdministrativosAprobados.SelectedItem.Rebajada = true;
                 this.DiasAdministrativosAprobados.SelectedItem.Completada = false;

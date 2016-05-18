@@ -183,10 +183,5 @@ namespace LightSwitchApplication
                 return "";
             }
         }
-
-        partial void Exportar_a_excel_Execute()
-        {
-            
-        }
     }
 }

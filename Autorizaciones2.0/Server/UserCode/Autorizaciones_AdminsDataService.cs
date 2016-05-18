@@ -117,7 +117,7 @@ namespace LightSwitchApplication
             //Si la solicitud 
             if (entity.PersonaItem1.Es_GerenteGeneral == true)
             {
-                mensaje = "Estimado(a) Administrador(a) Rol Privado:\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                mensaje = "Estimado(a) Administrador(a) Rol Privado:\n" + "Una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
                 asunto = "Solicitud aprobada por todos los superiores correspondientes";
                 
                 DataWorkspace dataWorkspace = new DataWorkspace();
@@ -133,7 +133,7 @@ namespace LightSwitchApplication
             if (entity.HorasExtras == true && entity.VB_Empleado == false )
             {
                 asunto = "Tiene una solicitud en espera de su aceptación";
-                mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " en espera de su aceptación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " en espera de su aceptación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                 correo.Mail(destinatario, asunto, mensaje);
             }
             //todas las otras solicitudes
@@ -141,19 +141,19 @@ namespace LightSwitchApplication
             {
                 if (entity.VB_GerenteGeneral == false)
                 {
-                    mensaje = "Estimado Gerente General:\n" + "Tiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                    mensaje = "Estimado Gerente General:\n" + "Tiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                     correo.Mail(destinatario, asunto, mensaje);
                 }
 
                 if (entity.VB_JefeDirecto == false)
                 {
-                    mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                    mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                     correo.Mail(destinatario, asunto, mensaje);
                 }
                 else
                     if (entity.VB_SubGerente == false)
                     {
-                        mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                        mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                         correo.Mail(destinatario, asunto, mensaje);
                     }
                     else
@@ -164,19 +164,19 @@ namespace LightSwitchApplication
 
                                 if(entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
                                 {
-                                    mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                                     correo.Mail(destinatario, asunto, mensaje);
                                 }
                                 else
                                 {
-                                    mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                                     correo.Mail(destinatario, asunto, mensaje);
                                 }
                             }else
                             {
                                 if (entity.PersonaItem1.Es_SubGerente == true)
                                 {
-                                    mensaje = "Estimado(a) " + entity.PersonaItem1.Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    mensaje = "Estimado(a) " + entity.PersonaItem1.Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ":\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                                     correo.Mail(destinatario, asunto, mensaje); 
                                 }
                             }
@@ -197,26 +197,26 @@ namespace LightSwitchApplication
                 if (entity.Rechazada == true)
                 {
                     asunto = "Su solicitud ha sido rechazada";
-                    string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ".\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                    string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ".\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                     correo.Mail(destinatario, asunto, mensaje);
                 }
                 else
                     if (entity.Rebajada == true)
                     {
                         asunto = "Su solicitud ha sido rebajada";
-                        string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ".\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                        string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " ha sido " + entity.Estado + ".\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                         correo.Mail(destinatario, asunto, mensaje);
                     }
                     else
                         if (entity.Completada == true)
                         {
                             asunto = "Su solicitud ha sido aprobada por sus superiores";
-                            string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                            string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
                             correo.Mail(destinatario, asunto, mensaje);
 
                             if (entity.PersonaItem1.EsRolPrivado == true)
                             {
-                                mensaje = "Estimado(a) Administrador(a) Rol Privado:\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                mensaje = "Estimado(a) Administrador(a) Rol Privado:\n" + "Una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
                                 asunto = "Solicitud aprobada por todos los superiores correspondientes";
 
                                 DataWorkspace dataWorkspace = new DataWorkspace();
@@ -229,7 +229,7 @@ namespace LightSwitchApplication
                             }
                             else
                             {
-                                mensaje = "Estimado(a) Administrador(a) RR.HH:\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                mensaje = "Estimado(a) Administrador(a) RR.HH:\n" + "Una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
                                 asunto = "Solicitud aprobada por todos los superiores correspondientes";
                                 
                                 DataWorkspace dataWorkspace = new DataWorkspace();
@@ -244,17 +244,17 @@ namespace LightSwitchApplication
                             
                                 if (entity.HorasExtras == true)
                                 {
-                                    if (entity.Colacion == true && entity.Taxi == true)
+                                    if (entity.ColacionBoolean == true && entity.TaxiBoolean == true)
                                     {
-                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y tanto TAXI como COLACIÓN han sido requeridos.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y tanto TAXI como COLACIÓN han sido requeridos.\n\nEmail generado automáticamente. No responder a esta casilla..";
                                     }
-                                    else if (entity.Colacion == true)
+                                    else if (entity.ColacionBoolean == true)
                                     {
-                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido COLACIÓN.\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido COLACIÓN.\n\nEmail generado automáticamente. No responder a esta casilla..";
                                     }
-                                    else if (entity.Taxi == true)
+                                    else if (entity.TaxiBoolean == true)
                                     {
-                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido TAXI .\n\nEmail generado automáticamente. No responder a esta casilla..";
+                                        mensaje = "Estimado(a):\n" + "Una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " ha completado todas las aprobaciones necesarias.\nLa fecha de realización es para el " + entity.Inicio.Value + " y se ha requerido TAXI .\n\nEmail generado automáticamente. No responder a esta casilla..";
                                     }
 
                                     asunto = "Solicitud aprobada por todos los superiores correspondientes";
@@ -274,14 +274,14 @@ namespace LightSwitchApplication
                             if (entity.VB_JefeDirecto == false)
                             {
                                 asunto = "Tiene una solicitud en espera de su aprobación";
-                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como jefe(a) de área.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                                 correo.Mail(destinatario, asunto, mensaje);
                             }
                             else
                                 if (entity.VB_SubGerente == false)
                                 {
                                     asunto = "Tiene una solicitud en espera de su aprobación";
-                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                    string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como subgerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                                     correo.Mail(destinatario, asunto, mensaje);
                                 }
                                 else
@@ -290,19 +290,23 @@ namespace LightSwitchApplication
                                         asunto = "Tiene una solicitud en espera de su aprobación";
                                         if (entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem != null)
                                         {
-                                            string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
+                                            string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla.";
                                             correo.Mail(destinatario, asunto, mensaje);
                                         }
                                         else
                                         {
-                                            string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.Titulo + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla."; 
+                                            string mensaje = "Estimado(a) " + entity.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.NombreAD + ".\nTiene una solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " a nombre de " + entity.PersonaItem1.NombreAD + " en espera de su aprobación como gerente.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla."; 
                                             correo.Mail(destinatario, asunto, mensaje);
                                         }
                                     }
                         }
                 //entity.EmailProximoDestinatario = null;
-            }
-            
+            }else
+
+                if (entity.Cancelada == true)
+                {
+
+                }
         }
         
 

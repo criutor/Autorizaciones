@@ -18,7 +18,7 @@ namespace LightSwitchApplication
 {
     public partial class SOLICITUDES_NUEVA
     {
-        partial void SOLICITUDES_NUEVA_InitializeDataWorkspace(global::System.Collections.Generic.List<global::Microsoft.LightSwitch.IDataService> saveChangesTo)
+        partial void SOLICITUDES_NUEVA_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
             // Guarda el rut del usuario AD en this.RUTUSUARIO
             this.ConsultarRutUsuarioAD_Execute();
@@ -42,12 +42,17 @@ namespace LightSwitchApplication
         
             //Si la solicitude es de horas extras, la persona es null hasta que se escoja una de la lista
             if (TIPOSOLICITUD == 3) { this.SOLICITUD.PersonaItem1 = null; }
-                else{this.SOLICITUD.PersonaItem1 = this.PersonaPorRutAD.First();}
+                else
+            {
+                this.SOLICITUD.PersonaItem1 = this.PersonaPorRutAD.First();
+                this.SOLICITUD.RutEmpleado = this.PersonaPorRutAD.First().Rut_Persona;
+                this.SOLICITUD.NombreEmpleado = this.PersonaPorRutAD.First().NombreAD;
+            }
 
             //Configura quien será el primero en aprobar la solicitud
             if (this.PersonaPorRutAD.First().Es_GerenteGeneral == true)
             {
-                this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                this.SOLICITUD.AreaDeTrabajo = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                 this.SOLICITUD.Completada = true;
             }
@@ -63,7 +68,7 @@ namespace LightSwitchApplication
                 else
                 {
 
-                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
+                    this.SOLICITUD.AreaDeTrabajo = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                     this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Nombre;
                     this.SOLICITUD.VB_Gerente = true;
                     this.SOLICITUD.VB_GerenteGeneral = false;
@@ -76,7 +81,7 @@ namespace LightSwitchApplication
             else 
                 if (this.PersonaPorRutAD.First().Es_SubGerente == true)//Si el solicitante es subgerente
                 {   
-                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
+                    this.SOLICITUD.AreaDeTrabajo = this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Nombre;
                     this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Superior_SubGerenteQuery.First().Division_SubGerenciaItem.Division_GerenciaItem.Nombre;
                     this.SOLICITUD.VB_SubGerente = true;
 
@@ -97,7 +102,7 @@ namespace LightSwitchApplication
                     if (this.PersonaPorRutAD.First().Es_JefeDirecto == true)//Si el solicitante es Jefe de área
                     {   
                         this.IDAREA = this.PersonaPorRutAD.First().Superior_JefeDirecto.First().Division_AreaItem.Id_Area;
-                        this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
+                        this.SOLICITUD.AreaDeTrabajo = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
                         this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
                         this.SOLICITUD.VB_JefeDirecto = true;
 
@@ -143,7 +148,7 @@ namespace LightSwitchApplication
                 else// Para los empleados que no tienen ningun cargo de supervisión
                 {
                     int contarSuperiores = 0;
-                    this.SOLICITUD.Departamento = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
+                    this.SOLICITUD.AreaDeTrabajo = this.PersonaPorRutAD.First().Division_AreaItem.Nombre;
                     this.SOLICITUD.Gerencia = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Nombre;
 
                     //Contar superiores
@@ -221,13 +226,13 @@ namespace LightSwitchApplication
             if (TIPOSOLICITUD == 1)
             {
                 this.SOLICITUD.Administrativo = true;
-                this.SOLICITUD.Titulo = "Día administrativo";
+                this.SOLICITUD.TipoDeSolicitud = "Día administrativo";
                 this.SOLICITUD.SaldoDias = this.PersonaPorRutAD.First().SaldoDiasAdmins.Value;
             }
             else if (TIPOSOLICITUD == 2)
             {
                 this.SOLICITUD.Vacaciones = true;
-                this.SOLICITUD.Titulo = "Vacaciones";
+                this.SOLICITUD.TipoDeSolicitud = "Vacaciones";
 
                 this.SOLICITUD.Inicio = DateTime.Today.AddDays(1);
                 this.SOLICITUD.Termino = DateTime.Today.AddDays(1);
@@ -237,13 +242,13 @@ namespace LightSwitchApplication
             else if (TIPOSOLICITUD == 3)
             {
                 this.SOLICITUD.HorasExtras = true;
-                this.SOLICITUD.Titulo = "Horas Extras";
+                this.SOLICITUD.TipoDeSolicitud = "Horas Extras";
                 //this.SOLICITUD.VB_Empleado = false;
             }
             else if (TIPOSOLICITUD == 4)
             {
                 this.SOLICITUD.OtroPermiso = true;
-                this.SOLICITUD.Titulo = "Permiso";   
+                this.SOLICITUD.TipoDeSolicitud = "Permiso";   
             }
 
             if (TIPOSOLICITUD == 3)//Solicitudes de horas extras no tienen fecha de término
@@ -469,7 +474,7 @@ namespace LightSwitchApplication
                 if(this.SOLICITUD.Inicio > this.SOLICITUD.Termino){
                     results.AddPropertyError("Día de Término debe ser después o igual al día de Inicio ");
                 }else{ 
-                    this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                    this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
                 }
 
                 if (this.SOLICITUD.Inicio <= DateTime.Today)
@@ -477,7 +482,7 @@ namespace LightSwitchApplication
                     results.AddPropertyError("Día de Inicio debe ser después hoy");
                 }
 
-                if (this.SOLICITUD.NumeroDiasTomados > this.SOLICITUD.SaldoDias)
+                if (this.SOLICITUD.DiasSolicitados > this.SOLICITUD.SaldoDias)
                 {
                     results.AddPropertyError("El número de días a solicitar debe ser menor o igual a tu SALDO DE DÍAS");
                 }
@@ -486,27 +491,27 @@ namespace LightSwitchApplication
 
             if (TIPOSOLICITUD == 3)// si la solicitud es del tipo horas extras
             {
-                if (this.SOLICITUD.Taxi == true)
+                if (this.SOLICITUD.TaxiBoolean == true)
                 {
-                    this.SOLICITUD.Taxi2 = "Sí";
+                    this.SOLICITUD.Taxi = "Sí";
                 }
                 else
                 {
-                    this.SOLICITUD.Taxi2 = "No";
+                    this.SOLICITUD.Taxi = "No";
                 }
 
-                if (this.SOLICITUD.Colacion == true)
+                if (this.SOLICITUD.ColacionBoolean == true)
                 {
-                    this.SOLICITUD.Colacion2 = "Sí";
+                    this.SOLICITUD.Colacion = "Sí";
                 }
                 else
                 {
-                    this.SOLICITUD.Colacion2 = "No";
+                    this.SOLICITUD.Colacion = "No";
                 }
 
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
-                this.SOLICITUD.Colacion = this.COLACION;
-                this.SOLICITUD.Taxi = this.TAXI;
+                this.SOLICITUD.ColacionBoolean = this.COLACION;
+                this.SOLICITUD.TaxiBoolean = this.TAXI;
 
                 if (this.SOLICITUD.HorasAutorizadas > 2)
                 {
@@ -538,13 +543,13 @@ namespace LightSwitchApplication
 
             if (TIPOSOLICITUD == 4)// si la solicitud es del tipo otro permiso
             {
-                if (this.SOLICITUD.ConDescuento == true)
+                if (this.SOLICITUD.ConDescuentoBoolean == true)
                 {
-                    this.SOLICITUD.ConDescuento2 = "Sí";
+                    this.SOLICITUD.ConDescuento = "Sí";
                 }
                 else
                 {
-                    this.SOLICITUD.ConDescuento2 = "No";
+                    this.SOLICITUD.ConDescuento = "No";
                 }
 
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
@@ -606,7 +611,7 @@ namespace LightSwitchApplication
 
                 }else
                     {
-                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                        this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
                     }
             }
 
@@ -630,7 +635,7 @@ namespace LightSwitchApplication
 
                 this.NUEVOESTADO.Observaciones = this.OBSERVACIONES;
 
-                this.SOLICITUD.ConDescuento = this.CONDESCUENTO;
+                this.SOLICITUD.ConDescuentoBoolean = this.CONDESCUENTO;
 
                 //Validar que las fechas de inicio y terminio no sean feriados ni fin de semanas
                 foreach (DateTime feriado in FERIADOS)
@@ -669,24 +674,24 @@ namespace LightSwitchApplication
                 {
                     if (this.AdministrativoDesde == "La tarde (Medio día)" && this.AdministrativoHasta == "La mañana (Medio día)")
                     {
-                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 1;
+                        this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 1;
                     }
                     else if (this.AdministrativoDesde == "La mañana (Todo el día)" && this.AdministrativoHasta == "La tarde (Todo el día)")//ok
                     {
-                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                        this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
                     }
                     else
                     {
-                        this.SOLICITUD.NumeroDiasTomados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 0.5;
+                        this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 0.5;
                     }
                 }
 
-                if (this.SOLICITUD.NumeroDiasTomados > this.SOLICITUD.SaldoDias)
+                if (this.SOLICITUD.DiasSolicitados > this.SOLICITUD.SaldoDias)
                 {
                     results.AddPropertyError("El número de días a solicitar debe ser menor o igual a tu saldo de días ");
                 }
 
-                if (this.SOLICITUD.NumeroDiasTomados <= 0)
+                if (this.SOLICITUD.DiasSolicitados <= 0)
                 {
                     results.AddPropertyError("El número de días a solicitar debe ser mayor a 0");
                 }
@@ -758,6 +763,8 @@ namespace LightSwitchApplication
         partial void SeleccionarPersonal_Execute()
         {
             this.SOLICITUD.PersonaItem1 = this.PersonalBajoJefeDeArea.SelectedItem;
+            this.SOLICITUD.RutEmpleado = this.PersonalBajoJefeDeArea.SelectedItem.Rut_Persona;
+            this.SOLICITUD.NombreEmpleado = this.PersonalBajoJefeDeArea.SelectedItem.NombreAD;
             this.SOLICITUD.EmailProximoDestinatario = this.PersonalBajoJefeDeArea.SelectedItem.Email;
             this.CloseModalWindow("PersonalArea");
         }

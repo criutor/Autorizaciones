@@ -24,7 +24,6 @@ namespace LightSwitchApplication
                 this.ShowMessageBox("Esta gerencia ya tiene un gerente asignado");
                 
                 }
-            
         }
 
         partial void SeleccionarSubGerente_Execute()
@@ -184,6 +183,7 @@ namespace LightSwitchApplication
             else{
 
             Division_AreaItem NuevaArea = new Division_AreaItem();
+            NuevaArea.Detalles = "DETALLES";
             NuevaArea.Nombre = NombreDivision.ToUpper();
             NuevaArea.Division_GerenciaItem = Division_Gerencia.SelectedItem;
             
@@ -260,98 +260,101 @@ namespace LightSwitchApplication
         partial void Division_GerenciaDeleteSelected_Execute()
         {
             // Escriba el código aquí.
+            try
+            {
+                this.IDGerenciaSelected = this.Division_Gerencia.SelectedItem.Id_Gerencia;
+            }
+            catch { }
+
             if (this.Division_Gerencia.SelectedItem.Nombre == "GERENCIA GENERAL")
             {
-                this.ShowMessageBox("GERENCIA GENERAL no puede ser eliminada");
+                this.ShowMessageBox("GERENCIA GENERAL no puede ser eliminada", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+            else if (this.Division_Gerencia.SelectedItem.Division_Area.Count() > 0 || this.Division_Gerencia.SelectedItem.Division_SubGerencia.Count() > 0)
+            {
+                this.ShowMessageBox("Primero debe eliminar las áreas y subgerencias asociadas","ACCIÓN DENEGADA",MessageBoxOption.Ok);
+            }
+            else if (this.CargoRolPrivado.Count() > 0)
+            {
+                this.ShowMessageBox("Primero debe eliminar los cargos para rol privado asociados a esta gerencia.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
             }
             else
             {
-                    if(this.Division_Gerencia.SelectedItem.Superior_Gerente.Count() > 0)
-                    {
-                        this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Es_Gerente = false;
-                        this.Division_Gerencia.SelectedItem.Superior_Gerente.First().PersonaItem1.Cargo = null;
-                    }
-
                     this.Division_Gerencia.SelectedItem.Delete();
-                    /*
-                    try
-                    {
-                        this.Save();
-                    }
-                    catch (Exception e) { throw new ValidationException("Es necesario eliminar las subgerencias y áreas asociadas a esta gerencia antes de su eliminación", e); }
-                    */
-                    this.ShowMessageBox("Es necesario eliminar las subgerencias y áreas asociadas a esta gerencia antes de su eliminación");
-                    try
-                    {
-                        this.Division_Gerencia.SelectedItem.Gerente = null; 
-                        
-                        this.Save();
-                    }
-                    catch{ }
-
+                    this.Save();
                     this.Refresh();                
             }
+
+            this.IDGerenciaSelected = null;
         }
-
-
 
         partial void Division_SubGerenciaDeleteSelected_Execute()
         {
-            // Escriba el código aquí.
-            System.Windows.MessageBoxResult result = this.ShowMessageBox("Sí elimina esta subgerencia, se eliminarán todas las áreas asociadas. Los empleados asociados a esta subgerencia, quedaran sin área asignada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
-
-            if (result == System.Windows.MessageBoxResult.Yes)
+            try
             {
-                try
-                {
-                    foreach (Division_AreaItem area in this.Division_SubGerencia.SelectedItem.Division_Area)
-                    {
-                        foreach (PersonaItem persona in area.Persona)
-                        {
-                            persona.AreaDeTrabajo = null;
-                            persona.Es_JefeDirecto = false;
-                            persona.Division_AreaItem = null;
-                        }
-                    }
-                }
-                catch { }
+                this.IDSubGerenciaSelected = this.Division_SubGerencia.SelectedItem.Id_SubGerencia;
+            }
+            catch { }
 
-                if (this.Division_SubGerencia.SelectedItem.Superior_SubGerente.Count() > 0)
-                {
-                    this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().PersonaItem1.Es_SubGerente = false;
-                    this.Division_SubGerencia.SelectedItem.Superior_SubGerente.First().PersonaItem1.Cargo = null;
-                }
-                
+            if (this.Division_SubGerencia.SelectedItem.Division_Area.Count() > 0 )
+            {
+                this.ShowMessageBox("Primero debe eliminar las áreas asociadas", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+            else if (this.CargoRolPrivado.Count() > 0)
+            {
+                this.ShowMessageBox("Primero debe eliminar los cargos para rol privado asociados a esta subgerencia.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+            else
+            {
                 this.Division_SubGerencia.SelectedItem.Delete();
                 this.Save();
                 this.Refresh();
             }
+
+            this.IDSubGerenciaSelected = null;
         }
 
 
 
         partial void Division_AreaDeleteSelected_Execute()
         {
-            // Escriba el código aquí.
-            System.Windows.MessageBoxResult result = this.ShowMessageBox("Sí elimina esta área, todos los empleados asociados quedarán sin área asignada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
-
-            if (result == System.Windows.MessageBoxResult.Yes)
+            try
             {
-                try
-                {
-                    foreach (PersonaItem persona in this.Division_Area.SelectedItem.Persona)
-                    {
-                        persona.AreaDeTrabajo = null;
-                        persona.Es_JefeDirecto = false;
-                        persona.Division_AreaItem = null;
-                    }
-                }
-                catch { }
-
-                this.Division_Area.SelectedItem.Delete();
-                this.Save();
-                this.Refresh();
+                this.IDAreaSelected = this.Division_Area.SelectedItem.Id_Area;
             }
+            catch { }
+
+            if (this.CargoRolPrivado.Count() > 0)
+            {
+                this.ShowMessageBox("Primero debe eliminar los cargos para rol privado asociados a esta área.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+            }
+            else
+            {
+                System.Windows.MessageBoxResult result = this.ShowMessageBox("Sí elimina esta área, todos los empleados asociados quedarán sin área asignada. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+
+                if (result == System.Windows.MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        foreach (PersonaItem persona in this.Division_Area.SelectedItem.Persona)
+                        {
+                            persona.AreaDeTrabajo = null;
+                            persona.Es_JefeDirecto = false;
+                        }
+                    }
+                    catch { }
+
+                    if(this.Division_Area.SelectedItem.Superior_JefeDirecto.Count() > 0)
+                    {
+                        this.Division_Area.SelectedItem.Superior_JefeDirecto.First().Delete();
+                    }
+
+                    this.Division_Area.SelectedItem.Delete();
+                    this.Save();
+                    this.Refresh();
+                }
+            }
+            this.IDAreaSelected = null;
         }
 
         partial void Division_AreaDeleteSelected_CanExecute(ref bool result)
@@ -394,8 +397,5 @@ namespace LightSwitchApplication
             }
         }
 
-
-
-       
     }
 }

@@ -71,6 +71,7 @@
     <Property Name="Id_Area" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="JefeDeArea" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="Detalles" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Gerencia_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="SubGerencia_fk" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Division_GerenciaItem" Relationship="LightSwitchApplication.FK_Division_Area_Division_Gerencia" ToRole="Division_Gerencia" FromRole="Division_Area" />
@@ -294,10 +295,24 @@
     <Key>
       <PropertyRef Name="Id_Solicitud" />
     </Key>
-    <Property Name="Id_Solicitud" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RutEmpleado" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="NombreEmpleado" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="AreaDeTrabajo" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Gerencia" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="Departamento" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="Titulo" Type="Edm.String" Nullable="false" MaxLength="20" ConcurrencyMode="Fixed" />
+    <Property Name="TipoDeSolicitud" Type="Edm.String" Nullable="false" MaxLength="20" ConcurrencyMode="Fixed" />
+    <Property Name="Estado" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="FechaSolicitud" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="SaldoDias" Type="Edm.Double" />
+    <Property Name="DiasSolicitados" Type="Edm.Double" />
+    <Property Name="Inicio" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Termino" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Taxi" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Colacion" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="ConDescuento" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="Prestamo" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="HorasAutorizadas" Type="Edm.Double" />
+    <Property Name="HorasTrabajadas" Type="Edm.Double" />
+    <Property Name="Id_Solicitud" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="VB_Gerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="VB_SubGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="VB_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
@@ -308,29 +323,17 @@
     <Property Name="OtroPermiso" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Completada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Rechazada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="SaldoDias" Type="Edm.Double" />
-    <Property Name="NumeroDiasTomados" Type="Edm.Double" />
-    <Property Name="HorasAutorizadas" Type="Edm.Double" />
-    <Property Name="HorasTrabajadas" Type="Edm.Double" />
-    <Property Name="Prestamo" Type="Edm.Int32" ConcurrencyMode="Fixed" />
-    <Property Name="Inicio" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="Termino" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
-    <Property Name="Colacion" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="Taxi" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="ConDescuento" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="ColacionBoolean" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="TaxiBoolean" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="ConDescuentoBoolean" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Cancelada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="Estado" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="AdministrativoDesde" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="AdministrativoHasta" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="FechaSolicitud" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="Caducada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Rebajada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="CodigoEstado" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="EmailProximoDestinatario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="VB_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="ConDescuento2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
-    <Property Name="Colacion2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
-    <Property Name="Taxi2" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />
@@ -423,9 +426,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Division_Area_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="0..1" />
     <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">
@@ -585,9 +586,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Division_Gerencia">
-    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_Gerencia" Type="LightSwitchApplication.Division_GerenciaItem" Multiplicity="1" />
     <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Gerencia">
@@ -611,9 +610,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Division_Area">
-    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_Area" Type="LightSwitchApplication.Division_AreaItem" Multiplicity="1" />
     <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_Area">
@@ -637,9 +634,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Division_SubGerencia">
-    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Division_SubGerencia" Type="LightSwitchApplication.Division_SubGerenciaItem" Multiplicity="1" />
     <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Division_SubGerencia">

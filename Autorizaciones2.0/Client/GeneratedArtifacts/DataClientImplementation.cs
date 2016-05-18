@@ -488,6 +488,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("JefeDeArea");
         }
         
+        partial void OnDetallesChanged()
+        {
+            this.___OnPropertyChanged("Detalles");
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Division_AreaItem.DetailsClass.IImplementation.Division_GerenciaItem
         {
             get
@@ -2146,9 +2151,19 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("PersonaItem1");
         }
         
-        partial void OnId_SolicitudChanged()
+        partial void OnRutEmpleadoChanged()
         {
-            this.___OnPropertyChanged("Id_Solicitud");
+            this.___OnPropertyChanged("RutEmpleado");
+        }
+        
+        partial void OnNombreEmpleadoChanged()
+        {
+            this.___OnPropertyChanged("NombreEmpleado");
+        }
+        
+        partial void OnAreaDeTrabajoChanged()
+        {
+            this.___OnPropertyChanged("AreaDeTrabajo");
         }
         
         partial void OnGerenciaChanged()
@@ -2156,14 +2171,74 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Gerencia");
         }
         
-        partial void OnDepartamentoChanged()
+        partial void OnTipoDeSolicitudChanged()
         {
-            this.___OnPropertyChanged("Departamento");
+            this.___OnPropertyChanged("TipoDeSolicitud");
         }
         
-        partial void OnTituloChanged()
+        partial void OnEstadoChanged()
         {
-            this.___OnPropertyChanged("Titulo");
+            this.___OnPropertyChanged("Estado");
+        }
+        
+        partial void OnFechaSolicitudChanged()
+        {
+            this.___OnPropertyChanged("FechaSolicitud");
+        }
+        
+        partial void OnSaldoDiasChanged()
+        {
+            this.___OnPropertyChanged("SaldoDias");
+        }
+        
+        partial void OnDiasSolicitadosChanged()
+        {
+            this.___OnPropertyChanged("DiasSolicitados");
+        }
+        
+        partial void OnInicioChanged()
+        {
+            this.___OnPropertyChanged("Inicio");
+        }
+        
+        partial void OnTerminoChanged()
+        {
+            this.___OnPropertyChanged("Termino");
+        }
+        
+        partial void OnTaxiChanged()
+        {
+            this.___OnPropertyChanged("Taxi");
+        }
+        
+        partial void OnColacionChanged()
+        {
+            this.___OnPropertyChanged("Colacion");
+        }
+        
+        partial void OnConDescuentoChanged()
+        {
+            this.___OnPropertyChanged("ConDescuento");
+        }
+        
+        partial void OnPrestamoChanged()
+        {
+            this.___OnPropertyChanged("Prestamo");
+        }
+        
+        partial void OnHorasAutorizadasChanged()
+        {
+            this.___OnPropertyChanged("HorasAutorizadas");
+        }
+        
+        partial void OnHorasTrabajadasChanged()
+        {
+            this.___OnPropertyChanged("HorasTrabajadas");
+        }
+        
+        partial void OnId_SolicitudChanged()
+        {
+            this.___OnPropertyChanged("Id_Solicitud");
         }
         
         partial void OnVB_GerenteChanged()
@@ -2216,64 +2291,24 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Rechazada");
         }
         
-        partial void OnSaldoDiasChanged()
+        partial void OnColacionBooleanChanged()
         {
-            this.___OnPropertyChanged("SaldoDias");
+            this.___OnPropertyChanged("ColacionBoolean");
         }
         
-        partial void OnNumeroDiasTomadosChanged()
+        partial void OnTaxiBooleanChanged()
         {
-            this.___OnPropertyChanged("NumeroDiasTomados");
+            this.___OnPropertyChanged("TaxiBoolean");
         }
         
-        partial void OnHorasAutorizadasChanged()
+        partial void OnConDescuentoBooleanChanged()
         {
-            this.___OnPropertyChanged("HorasAutorizadas");
-        }
-        
-        partial void OnHorasTrabajadasChanged()
-        {
-            this.___OnPropertyChanged("HorasTrabajadas");
-        }
-        
-        partial void OnPrestamoChanged()
-        {
-            this.___OnPropertyChanged("Prestamo");
-        }
-        
-        partial void OnInicioChanged()
-        {
-            this.___OnPropertyChanged("Inicio");
-        }
-        
-        partial void OnTerminoChanged()
-        {
-            this.___OnPropertyChanged("Termino");
-        }
-        
-        partial void OnColacionChanged()
-        {
-            this.___OnPropertyChanged("Colacion");
-        }
-        
-        partial void OnTaxiChanged()
-        {
-            this.___OnPropertyChanged("Taxi");
-        }
-        
-        partial void OnConDescuentoChanged()
-        {
-            this.___OnPropertyChanged("ConDescuento");
+            this.___OnPropertyChanged("ConDescuentoBoolean");
         }
         
         partial void OnCanceladaChanged()
         {
             this.___OnPropertyChanged("Cancelada");
-        }
-        
-        partial void OnEstadoChanged()
-        {
-            this.___OnPropertyChanged("Estado");
         }
         
         partial void OnAdministrativoDesdeChanged()
@@ -2284,11 +2319,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnAdministrativoHastaChanged()
         {
             this.___OnPropertyChanged("AdministrativoHasta");
-        }
-        
-        partial void OnFechaSolicitudChanged()
-        {
-            this.___OnPropertyChanged("FechaSolicitud");
         }
         
         partial void OnCaducadaChanged()
@@ -2314,21 +2344,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnVB_GerenteGeneralChanged()
         {
             this.___OnPropertyChanged("VB_GerenteGeneral");
-        }
-        
-        partial void OnConDescuento2Changed()
-        {
-            this.___OnPropertyChanged("ConDescuento2");
-        }
-        
-        partial void OnColacion2Changed()
-        {
-            this.___OnPropertyChanged("Colacion2");
-        }
-        
-        partial void OnTaxi2Changed()
-        {
-            this.___OnPropertyChanged("Taxi2");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS

@@ -90,21 +90,18 @@ namespace LightSwitchApplication
             try
             {
                 this.CargoRolPrivadoItemProperty.Nombre = this.CargoRolPrivadoItemProperty.Nombre.ToUpper();
-                this.CargoRolPrivadoItemProperty.EsGerente = this.Es_Gerente;
-                this.CargoRolPrivadoItemProperty.EsJefeDeArea = this.Es_JefeDeÁrea;
-                this.CargoRolPrivadoItemProperty.EsSubgerente = this.Es_Subgerente;
 
-                if (this.Es_Gerente == true)
+                if (this.CargoRolPrivadoItemProperty.EsGerente == true)
                 {
                     this.CargoRolPrivadoItemProperty.IDGerencia = this.Gerencia.Id_Gerencia;
                 }
 
-                if (this.Es_Subgerente == true)
+                if (this.CargoRolPrivadoItemProperty.EsSubgerente == true)
                 {
                     this.CargoRolPrivadoItemProperty.IDSubgerencia = this.Subgerencia.Id_SubGerencia;
                 }
 
-                if (this.Es_JefeDeÁrea == true || (this.Es_JefeDeÁrea == false && this.Es_Subgerente == false && this.Es_Gerente == false))
+                if (this.CargoRolPrivadoItemProperty.EsJefeDeArea == true || (this.CargoRolPrivadoItemProperty.EsJefeDeArea == false && this.CargoRolPrivadoItemProperty.EsSubgerente == false && CargoRolPrivadoItemProperty.EsGerente == false))
                 {
                     this.CargoRolPrivadoItemProperty.IDArea = this.Área.Id_Area;
                 }
@@ -208,6 +205,8 @@ namespace LightSwitchApplication
             }
             catch { }
         }
+
+
 
     }
 }

@@ -3065,7 +3065,7 @@
                     NodeType="And">
                     <BinaryExpression.Left>
                       <BinaryExpression
-                        NodeType="Equal">
+                        NodeType="GreaterThanOrEqual">
                         <BinaryExpression.Left>
                           <ChainExpression>
                             <MemberExpression
@@ -6997,6 +6997,14 @@
             Value="100" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Detalles"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -7983,7 +7991,7 @@
       Name="Division_SubGerencia">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8173,7 +8181,7 @@
       Name="Division_Gerencia">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8205,7 +8213,7 @@
       Name="Division_Area">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8237,7 +8245,7 @@
       Name="Division_SubGerencia">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Cascade" />
+          Action="Unset" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8446,7 +8454,7 @@
       <DisplayName
         Value="SOLICITUDES" />
       <SummaryProperty
-        Property="SOLICITUDESItem/Properties[Titulo]" />
+        Property="SOLICITUDESItem/Properties[TipoDeSolicitud]" />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -8457,16 +8465,31 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <KeyProperty
-        IsReadOnly="True"
-        Name="Id_Solicitud"
-        PropertyType=":Int32">
-        <KeyProperty.Attributes>
-          <Hidden />
+      <EntityProperty
+        Name="RutEmpleado"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="NombreEmpleado"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="AreaDeTrabajo"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
           <Required />
-          <NotSearchable />
-        </KeyProperty.Attributes>
-      </KeyProperty>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="Gerencia"
         PropertyType=":String">
@@ -8477,16 +8500,7 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Departamento"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-          <MaxLength
-            Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Titulo"
+        Name="TipoDeSolicitud"
         PropertyType=":String">
         <EntityProperty.Attributes>
           <Required />
@@ -8494,6 +8508,119 @@
             Value="20" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Estado"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FechaSolicitud"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="SaldoDias"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="DiasSolicitados"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Inicio"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Termino"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Kind="Unspecified"
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Taxi"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Colacion"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ConDescuento"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            IsFixedLength="True"
+            Value="10" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Prestamo"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasAutorizadas"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="HorasTrabajadas"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        IsReadOnly="True"
+        Name="Id_Solicitud"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
       <EntityProperty
         Name="VB_Gerente"
         PropertyType=":Boolean?">
@@ -8564,41 +8691,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="SaldoDias"
-        PropertyType=":Double?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="NumeroDiasTomados"
-        PropertyType=":Double?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="HorasAutorizadas"
-        PropertyType=":Double?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="HorasTrabajadas"
-        PropertyType=":Double?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Prestamo"
-        PropertyType=":Int32?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <NavigationProperty
         Association="FK_ESTADOS_SOLICITUDES"
         FromEnd="SOLICITUDES"
@@ -8610,43 +8702,21 @@
         Name="PersonaItem1"
         ToEnd="Persona" />
       <EntityProperty
-        Name="Inicio"
-        PropertyType=":DateTime?">
-        <EntityProperty.Attributes>
-          <DateTimeConstraint
-            Kind="Unspecified"
-            Precision="3"
-            PreserveSeconds="True" />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Termino"
-        PropertyType=":DateTime?">
-        <EntityProperty.Attributes>
-          <DateTimeConstraint
-            Kind="Unspecified"
-            Precision="3"
-            PreserveSeconds="True" />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Colacion"
+        Name="ColacionBoolean"
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Taxi"
+        Name="TaxiBoolean"
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="ConDescuento"
+        Name="ConDescuentoBoolean"
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
@@ -8657,14 +8727,6 @@
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Estado"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -8681,17 +8743,6 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="FechaSolicitud"
-        PropertyType=":DateTime?">
-        <EntityProperty.Attributes>
-          <DateTimeConstraint
-            Kind="Unspecified"
-            Precision="3"
-            PreserveSeconds="True" />
-          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -8728,33 +8779,6 @@
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ConDescuento2"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            IsFixedLength="True"
-            Value="10" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Colacion2"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            IsFixedLength="True"
-            Value="10" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Taxi2"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            IsFixedLength="True"
-            Value="10" />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>

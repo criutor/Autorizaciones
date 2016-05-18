@@ -151,6 +151,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Detalles
+        {
+            get
+            {
+                return global::LightSwitchApplication.Division_AreaItem.DetailsClass.GetValue(this, global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties.Detalles);
+            }
+            set
+            {
+                global::LightSwitchApplication.Division_AreaItem.DetailsClass.SetValue(this, global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties.Detalles, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Detalles_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Detalles_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Detalles_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.Division_GerenciaItem Division_GerenciaItem
         {
             get
@@ -346,6 +370,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string> Detalles
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties.Detalles) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem> Division_GerenciaItem
                 {
                     get
@@ -387,6 +419,7 @@ namespace LightSwitchApplication
                 new int Id_Area { get; }
                 new string Nombre { get; set; }
                 new string JefeDeArea { get; set; }
+                new string Detalles { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_GerenciaItem { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Division_SubGerenciaItem { get; set; }
                 new global::System.Collections.IEnumerable Persona { get; }
@@ -505,6 +538,43 @@ namespace LightSwitchApplication
                 private static void _JefeDeArea_OnValueChanged(global::LightSwitchApplication.Division_AreaItem e)
                 {
                     e.JefeDeArea_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string>.Entry
+                    Detalles = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string>.Entry(
+                        "Detalles",
+                        global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties._Detalles_Stub,
+                        global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties._Detalles_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties._Detalles_Validate,
+                        global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties._Detalles_GetImplementationValue,
+                        global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties._Detalles_SetImplementationValue,
+                        global::LightSwitchApplication.Division_AreaItem.DetailsClass.PropertySetProperties._Detalles_OnValueChanged);
+                private static void _Detalles_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Division_AreaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.Division_AreaItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Detalles, sf);
+                }
+                private static bool _Detalles_ComputeIsReadOnly(global::LightSwitchApplication.Division_AreaItem e)
+                {
+                    bool result = false;
+                    e.Detalles_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Detalles_Validate(global::LightSwitchApplication.Division_AreaItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Detalles_Validate(r);
+                }
+                private static string _Detalles_GetImplementationValue(global::LightSwitchApplication.Division_AreaItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Detalles;
+                }
+                private static void _Detalles_SetImplementationValue(global::LightSwitchApplication.Division_AreaItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Detalles = v;
+                }
+                private static void _Detalles_OnValueChanged(global::LightSwitchApplication.Division_AreaItem e)
+                {
+                    e.Detalles_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -651,6 +721,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string>.Data _JefeDeArea;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, string>.Data _Detalles;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Division_AreaItem, global::LightSwitchApplication.Division_AreaItem.DetailsClass, global::LightSwitchApplication.Division_GerenciaItem>.Data _Division_GerenciaItem;
