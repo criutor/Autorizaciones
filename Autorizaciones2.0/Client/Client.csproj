@@ -204,7 +204,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UserCode\SOLICITUDES_MIS_SOLICITUDES.cs" />
-    <Compile Include="UserCode\SOLICITUDES_APROBACIÓN.cs" />
+    <Compile Include="UserCode\SOLICITUDES_APROBACION.cs" />
     <Compile Include="UserCode\SOLICITUDES_NUEVA.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_ADMINISTRATIVOS_RP.cs" />
     <Compile Include="UserCode\SOLICITUDES_REBAJAR_HORASEXTRAS_NRP.cs" />

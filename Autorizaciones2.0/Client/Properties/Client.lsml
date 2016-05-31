@@ -54,10 +54,10 @@
         </ApplicationMethod.Attributes>
       </ApplicationMethod>
       <ApplicationMethod
-        Name="ShowSOLICITUDES_APROBACIÓN">
+        Name="ShowSOLICITUDES_APROBACION">
         <ApplicationMethod.Attributes>
           <ShowScreenMethod
-            TargetScreen="SOLICITUDES_APROBACIÓN" />
+            TargetScreen="SOLICITUDES_APROBACION" />
         </ApplicationMethod.Attributes>
       </ApplicationMethod>
       <ApplicationMethod
@@ -301,8 +301,8 @@
             Value="Aprobación" />
         </ApplicationNavigationGroup.Attributes>
         <ApplicationNavigationLink
-          Command="!module/Commands[ScreenCommandShowSOLICITUDES_APROBACIÓN]"
-          Name="SOLICITUDES_APROBACIÓN" />
+          Command="!module/Commands[ScreenCommandShowSOLICITUDES_APROBACION]"
+          Name="SOLICITUDES_APROBACION" />
       </ApplicationNavigationGroup>
       <ApplicationNavigationGroup
         Name="group1">
@@ -397,8 +397,8 @@
       Name="ScreenCommandShowPERSONAL_CREAR_ROL_PRIVADO"
       Target="!module/Methods[ShowPERSONAL_CREAR_ROL_PRIVADO]" />
     <ApplicationCommand
-      Name="ScreenCommandShowSOLICITUDES_APROBACIÓN"
-      Target="!module/Methods[ShowSOLICITUDES_APROBACIÓN]" />
+      Name="ScreenCommandShowSOLICITUDES_APROBACION"
+      Target="!module/Methods[ShowSOLICITUDES_APROBACION]" />
     <ApplicationCommand
       Name="ScreenCommandShowSOLICITUDES_MIS_SOLICITUDES"
       Target="!module/Methods[ShowSOLICITUDES_MIS_SOLICITUDES]" />
@@ -3919,32 +3919,6 @@
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
-      <ScreenCollectionProperty
-        Name="PersonasContratadas"
-        PageSize="45"
-        PropertyType="LightSwitchCommonModule:CollectionView$CtoT_PersonaItem">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="PersonasContratadasQuery"
-            ReturnType="LightSwitchCommonModule:CtoT_PersonaItem*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <MemberExpression
-                  Member="LightSwitchCommonModule:Fin700v60Data/Members[PersonasContratadas]" />
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="PERSONAL_CREAR_DESDE_FIN700/Properties[PersonasContratadas]/Query" />
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
       <ScreenProperty
         Name="IDPERSONA"
         PropertyType=":String">
@@ -4020,6 +3994,32 @@
       <ScreenProperty
         Name="Email"
         PropertyType=":String?" />
+      <ScreenCollectionProperty
+        Name="PersonasContratadas"
+        PageSize="45"
+        PropertyType="LightSwitchCommonModule:CollectionView$TrabajadorItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="PersonasContratadasQuery"
+            ReturnType="LightSwitchCommonModule:TrabajadorItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="LightSwitchCommonModule:Fin700v60Data/Members[Trabajador]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="PERSONAL_CREAR_DESDE_FIN700/Properties[PersonasContratadas]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -4080,7 +4080,7 @@
           Name="ScreenLayout"
           View="Microsoft.LightSwitch:ColumnsLayout">
           <ContentItem
-            DataType="LightSwitchCommonModule:CollectionView$CtoT_PersonaItem"
+            DataType="LightSwitchCommonModule:CollectionView$TrabajadorItem"
             Kind="Collection"
             Name="PersonasContratadas">
             <ContentItem.DataSource>
@@ -4091,8 +4091,20 @@
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:DataGrid/Properties[ShowVirtualRow]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":Boolean"
+                      Value="False" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
             <ContentItem
-              DataType="LightSwitchCommonModule:CtoT_PersonaItem"
+              DataType="LightSwitchCommonModule:TrabajadorItem"
               Kind="Details"
               Name="PersonasContratadasTemplate">
               <ContentItem.DataSource>
@@ -4100,16 +4112,27 @@
                   <ChainExpression />
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch:RootControl/Properties[BrowseOnly]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        ResultType=":Boolean"
+                        Value="True" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="Rut_Persona"
-                View=":Label">
+                Name="RutTrabajador">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Rut_Persona]" />
+                        Member="LightSwitchCommonModule:TrabajadorItem/Properties[RutTrabajador]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -4117,13 +4140,12 @@
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="AP_Paterno"
-                View=":Label">
+                Name="Nombres">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="LightSwitchCommonModule:CtoT_PersonaItem/Properties[AP_Paterno]" />
+                        Member="LightSwitchCommonModule:TrabajadorItem/Properties[Nombres]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -4131,13 +4153,12 @@
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="AP_Materno"
-                View=":Label">
+                Name="ApellidoPaterno">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="LightSwitchCommonModule:CtoT_PersonaItem/Properties[AP_Materno]" />
+                        Member="LightSwitchCommonModule:TrabajadorItem/Properties[ApellidoPaterno]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -4145,26 +4166,12 @@
               <ContentItem
                 DataType=":String"
                 Kind="Value"
-                Name="Nombres"
-                View=":Label">
+                Name="ApellidoMaterno">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Nombres]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                DataType=":String"
-                Kind="Value"
-                Name="Estado_Persona">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Estado_Persona]" />
+                        Member="LightSwitchCommonModule:TrabajadorItem/Properties[ApellidoMaterno]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -4172,12 +4179,12 @@
               <ContentItem
                 DataType=":DateTime"
                 Kind="Value"
-                Name="Fec_Estado">
+                Name="FechaNacimiento">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="LightSwitchCommonModule:CtoT_PersonaItem/Properties[Fec_Estado]" />
+                        Member="LightSwitchCommonModule:TrabajadorItem/Properties[FechaNacimiento]" />
                     </ChainExpression>
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
@@ -4189,7 +4196,7 @@
     </Screen.RootContentItem>
   </Screen>
   <Screen
-    Name="SOLICITUDES_APROBACIÓN">
+    Name="SOLICITUDES_APROBACION">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
@@ -4278,68 +4285,68 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="SOLICITUDES_APROBACIÓN/Properties[SolicitudesAbiertasACargo]/Query">
+              Target="SOLICITUDES_APROBACION/Properties[SolicitudesAbiertasACargo]/Query">
               <ArgumentExpression
                 Parameter="Id_Gerencia">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[Id_Gerencia]" />
+                    Member="SOLICITUDES_APROBACION/Properties[Id_Gerencia]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="Id_SubGerencia">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[Id_SubGerencia]" />
+                    Member="SOLICITUDES_APROBACION/Properties[Id_SubGerencia]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="Id_Area">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[Id_Area]" />
+                    Member="SOLICITUDES_APROBACION/Properties[Id_Area]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="Rut_Persona">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[RutUsuarioAD]" />
+                    Member="SOLICITUDES_APROBACION/Properties[RutUsuarioAD]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="VB_Empleado">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[VB_Empleado]" />
+                    Member="SOLICITUDES_APROBACION/Properties[VB_Empleado]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="VB_Gerente">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[VB_Gerente]" />
+                    Member="SOLICITUDES_APROBACION/Properties[VB_Gerente]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="VB_JefeDirecto">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[VB_JefeDirecto]" />
+                    Member="SOLICITUDES_APROBACION/Properties[VB_JefeDirecto]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="VB_SubGerente">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[VB_SubGerente]" />
+                    Member="SOLICITUDES_APROBACION/Properties[VB_SubGerente]" />
                 </ChainExpression>
               </ArgumentExpression>
               <ArgumentExpression
                 Parameter="Es_Gerente">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[Es_Gerente]" />
+                    Member="SOLICITUDES_APROBACION/Properties[Es_Gerente]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -4368,12 +4375,12 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="SOLICITUDES_APROBACIÓN/Properties[PersonaPorRutAD]/Query">
+              Target="SOLICITUDES_APROBACION/Properties[PersonaPorRutAD]/Query">
               <ArgumentExpression
                 Parameter="Rut_Persona">
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[RutUsuarioAD]" />
+                    Member="SOLICITUDES_APROBACION/Properties[RutUsuarioAD]" />
                 </ChainExpression>
               </ArgumentExpression>
             </CallExpression>
@@ -4453,7 +4460,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="SOLICITUDES_APROBACIÓN/Methods[AprobarSolicitud]" />
+                    Target="SOLICITUDES_APROBACION/Methods[AprobarSolicitud]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -4477,7 +4484,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="SOLICITUDES_APROBACIÓN/Methods[Refresh]" />
+                    Target="SOLICITUDES_APROBACION/Methods[Refresh]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -4489,7 +4496,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <CallExpression
-                    Target="SOLICITUDES_APROBACIÓN/Methods[RechazarSolicitud]" />
+                    Target="SOLICITUDES_APROBACION/Methods[RechazarSolicitud]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -4556,7 +4563,7 @@
               <ScreenExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="SOLICITUDES_APROBACIÓN/Properties[SolicitudesAbiertasACargo]" />
+                    Member="SOLICITUDES_APROBACION/Properties[SolicitudesAbiertasACargo]" />
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
@@ -4829,7 +4836,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="SOLICITUDES_APROBACIÓN/Methods[EnviarRespuestaAprobar]" />
+                          Target="SOLICITUDES_APROBACION/Methods[EnviarRespuestaAprobar]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -4845,7 +4852,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="SOLICITUDES_APROBACIÓN/Methods[CerrarModalWindowAprobarSolicitud]" />
+                          Target="SOLICITUDES_APROBACION/Methods[CerrarModalWindowAprobarSolicitud]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -4855,7 +4862,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="SOLICITUDES_APROBACIÓN/Properties[NuevoComentarioAprobar]" />
+                      Member="SOLICITUDES_APROBACION/Properties[NuevoComentarioAprobar]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -4924,7 +4931,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="SOLICITUDES_APROBACIÓN/Methods[EnviarRespuestaRechazar]" />
+                          Target="SOLICITUDES_APROBACION/Methods[EnviarRespuestaRechazar]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -4940,7 +4947,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="SOLICITUDES_APROBACIÓN/Methods[CerrarModalWindowRechazarSolicitud]" />
+                          Target="SOLICITUDES_APROBACION/Methods[CerrarModalWindowRechazarSolicitud]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -4950,7 +4957,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="SOLICITUDES_APROBACIÓN/Properties[NuevoComentarioRechazar]" />
+                      Member="SOLICITUDES_APROBACION/Properties[NuevoComentarioRechazar]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -15855,7 +15862,7 @@
                     </ContentItem.DataSource>
                   </ContentItem>
                   <ContentItem
-                    DataType=":Boolean"
+                    DataType=":Boolean?"
                     IsHidden="True"
                     Kind="Value"
                     Name="Persona_Es_JefeDirecto">

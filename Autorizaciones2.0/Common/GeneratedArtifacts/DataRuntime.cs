@@ -3826,6 +3826,19 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Obtiene el conjunto de entidades Trabajador. El conjunto de entidades proporciona miembros para obtener acceso a las entidades de un tipo específico.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TrabajadorItem> Trabajador
+        {
+            get
+            {
+                return global::LightSwitchApplication.Fin700v60Data.DetailsClass.GetValue(this, global::LightSwitchApplication.Fin700v60Data.DetailsClass.PropertySetProperties.Trabajador);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -3983,6 +3996,28 @@ namespace LightSwitchApplication
             return this.Details.Methods.ContratoPorRut.CreateInvocation(RutTrabajador).Execute();
         }
         
+        /// <summary>
+        /// Devuelve la entidad cuya identidad especifican el o los parámetros.
+        /// </summary>
+        /// <param name="RutTrabajador">
+        /// Valor de la propiedad clave 'RutTrabajador' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.TrabajadorItem Trabajador_Single(string RutTrabajador)
+        {
+            return this.Details.Methods.Trabajador_Single.CreateInvocation(RutTrabajador).Execute();
+        }
+        
+        /// <summary>
+        /// Devuelve la entidad cuya identidad se especifica en el o los parámetros, o NULL si la entidad no existe.
+        /// </summary>
+        /// <param name="RutTrabajador">
+        /// Valor de la propiedad clave 'RutTrabajador' de la entidad que se va a recuperar.
+        /// </param>
+        public global::LightSwitchApplication.TrabajadorItem Trabajador_SingleOrDefault(string RutTrabajador)
+        {
+            return this.Details.Methods.Trabajador_SingleOrDefault.CreateInvocation(RutTrabajador).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -4127,6 +4162,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem> Trabajador_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties.Trabajador_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem> Trabajador_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties.Trabajador_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -4177,6 +4228,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Fin700v60Data.DetailsClass.PropertySetProperties.Par_CtoT_Estado) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.Par_CtoT_EstadoItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem> Trabajador
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Fin700v60Data.DetailsClass.PropertySetProperties.Trabajador) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>;
                     }
                 }
                 
@@ -4308,6 +4367,26 @@ namespace LightSwitchApplication
                     c(d, ref d._ContratoPorRut, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Entry
+                    Trabajador_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Entry(
+                        "Trabajador_Single",
+                        global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties._Trabajador_Single_Stub);
+                private static void _Trabajador_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Data> c, global::LightSwitchApplication.Fin700v60Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Trabajador_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Entry
+                    Trabajador_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Entry(
+                        "Trabajador_SingleOrDefault",
+                        global::LightSwitchApplication.Fin700v60Data.DetailsClass.MethodSetProperties._Trabajador_SingleOrDefault_Stub);
+                private static void _Trabajador_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Data> c, global::LightSwitchApplication.Fin700v60Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Trabajador_SingleOrDefault, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -4366,6 +4445,16 @@ namespace LightSwitchApplication
                     c(d, ref d._Par_CtoT_Estado, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Entry
+                    Trabajador = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Entry(
+                        "Trabajador",
+                        global::LightSwitchApplication.Fin700v60Data.DetailsClass.PropertySetProperties._Trabajador_Stub);
+                private static void _Trabajador_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Data> c, global::LightSwitchApplication.Fin700v60Data.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Trabajador, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -4382,6 +4471,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.Par_CtoT_EstadoItem>.Data _Par_CtoT_Estado;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Data _Trabajador;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>.Data _Contrato_Single;
@@ -4418,6 +4510,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.ContratoItem1>.Data _ContratoPorRut;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Data _Trabajador_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.Fin700v60Data, global::LightSwitchApplication.Fin700v60Data.DetailsClass, global::LightSwitchApplication.TrabajadorItem>.Data _Trabajador_SingleOrDefault;
             
         }
     

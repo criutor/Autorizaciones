@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 13/05/2016 12:30:22
+// Fecha de generación: 31/05/2016 18:43:24
 namespace LightSwitchApplication.Implementation
 {
     
@@ -851,16 +851,14 @@ namespace LightSwitchApplication.Implementation
         /// <param name="aP_Paterno">Valor inicial de AP_Paterno.</param>
         /// <param name="aP_Materno">Valor inicial de AP_Materno.</param>
         /// <param name="nombres">Valor inicial de Nombres.</param>
-        /// <param name="es_JefeDirecto">Valor inicial de Es_JefeDirecto.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static PersonaItem CreatePersonaItem(string rut_Persona, string aP_Paterno, string aP_Materno, string nombres, bool es_JefeDirecto)
+        public static PersonaItem CreatePersonaItem(string rut_Persona, string aP_Paterno, string aP_Materno, string nombres)
         {
             PersonaItem personaItem = new PersonaItem();
             personaItem.Rut_Persona = rut_Persona;
             personaItem.AP_Paterno = aP_Paterno;
             personaItem.AP_Materno = aP_Materno;
             personaItem.Nombres = nombres;
-            personaItem.Es_JefeDirecto = es_JefeDirecto;
             return personaItem;
         }
         /// <summary>
@@ -1023,7 +1021,7 @@ namespace LightSwitchApplication.Implementation
         /// No hay comentarios para la propiedad Es_JefeDirecto en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public bool Es_JefeDirecto
+        public global::System.Nullable<bool> Es_JefeDirecto
         {
             get
             {
@@ -1042,8 +1040,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private bool _Es_JefeDirecto;
-        partial void OnEs_JefeDirectoChanging(bool value);
+        private global::System.Nullable<bool> _Es_JefeDirecto;
+        partial void OnEs_JefeDirectoChanging(global::System.Nullable<bool> value);
         partial void OnEs_JefeDirectoChanged();
         /// <summary>
         /// No hay comentarios para la propiedad NombreAD en el esquema.

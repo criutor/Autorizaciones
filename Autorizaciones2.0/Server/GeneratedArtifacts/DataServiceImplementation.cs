@@ -486,6 +486,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::Fin700v60Data.Implementation.Par_CtoT_EstadoItem();
             }
+            if (type == typeof(global::Fin700v60Data.Implementation.TrabajadorItem))
+            {
+                return new global::Fin700v60Data.Implementation.TrabajadorItem();
+            }
     
             return base.CreateObject(type);
         }
@@ -520,6 +524,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.Par_CtoT_EstadoItem))
             {
                 return new global::Fin700v60Data.Implementation.Par_CtoT_EstadoItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.TrabajadorItem))
+            {
+                return new global::Fin700v60Data.Implementation.TrabajadorItem();
             }
             return null;
         }
@@ -717,6 +725,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.Par_CtoT_EstadoItem) == definitionType)
             {
                 return typeof(global::Fin700v60Data.Implementation.Par_CtoT_EstadoItem);
+            }
+            if (typeof(global::LightSwitchApplication.TrabajadorItem) == definitionType)
+            {
+                return typeof(global::Fin700v60Data.Implementation.TrabajadorItem);
             }
             return null;
         }
@@ -2594,6 +2606,39 @@ namespace Fin700v60Data.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class Par_CtoT_EstadoItem :
         global::LightSwitchApplication.Par_CtoT_EstadoItem.DetailsClass.IImplementation
+    {
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class TrabajadorItem :
+        global::LightSwitchApplication.TrabajadorItem.DetailsClass.IImplementation
     {
     
         #region IEntityImplementation Members

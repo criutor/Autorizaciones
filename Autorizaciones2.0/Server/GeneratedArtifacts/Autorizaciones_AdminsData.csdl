@@ -10,7 +10,7 @@
     <Property Name="Nombres" Type="Edm.String" Nullable="false" MaxLength="30" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Es_Gerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Es_SubGerente" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="Es_JefeDirecto" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Es_JefeDirecto" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="NombreAD" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="IDGerencia_para_subgerentes" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="SaldoDiasAdmins" Type="Edm.Double" />

@@ -3425,15 +3425,13 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <param name="aP_Paterno">Valor inicial de la propiedad AP_Paterno.</param>
         /// <param name="aP_Materno">Valor inicial de la propiedad AP_Materno.</param>
         /// <param name="nombres">Valor inicial de la propiedad Nombres.</param>
-        /// <param name="es_JefeDirecto">Valor inicial de la propiedad Es_JefeDirecto.</param>
-        public static PersonaItem CreatePersonaItem(global::System.String rut_Persona, global::System.String aP_Paterno, global::System.String aP_Materno, global::System.String nombres, global::System.Boolean es_JefeDirecto)
+        public static PersonaItem CreatePersonaItem(global::System.String rut_Persona, global::System.String aP_Paterno, global::System.String aP_Materno, global::System.String nombres)
         {
             PersonaItem personaItem = new PersonaItem();
             personaItem.Rut_Persona = rut_Persona;
             personaItem.AP_Paterno = aP_Paterno;
             personaItem.AP_Materno = aP_Materno;
             personaItem.Nombres = nombres;
-            personaItem.Es_JefeDirecto = es_JefeDirecto;
             return personaItem;
         }
 
@@ -3591,9 +3589,9 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Boolean Es_JefeDirecto
+        public Nullable<global::System.Boolean> Es_JefeDirecto
         {
             get
             {
@@ -3608,8 +3606,8 @@ namespace Autorizaciones_AdminsData.Implementation
                 OnEs_JefeDirectoChanged();
             }
         }
-        private global::System.Boolean _Es_JefeDirecto;
-        partial void OnEs_JefeDirectoChanging(global::System.Boolean value);
+        private Nullable<global::System.Boolean> _Es_JefeDirecto;
+        partial void OnEs_JefeDirectoChanging(Nullable<global::System.Boolean> value);
         partial void OnEs_JefeDirectoChanged();
     
         /// <summary>

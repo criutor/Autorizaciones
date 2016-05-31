@@ -24,7 +24,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="SafeConnectionString"
-        Value="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700" />
+        Value="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700;Password=plv_consultaf700" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
         Value="98427555-f2a5-484f-ba3a-0d82161b2343" />
@@ -778,6 +778,150 @@
           Type="char" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Trabajador">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Trabajador" />
+        <SsdlProperty
+          MaxLength="12"
+          Name="RutTrabajador"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[RutTrabajador]"
+          Type="char" />
+        <SsdlProperty
+          Name="Identificacion1"
+          Nullable="False"
+          Precision="12"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Identificacion1]"
+          Type="numeric" />
+        <SsdlProperty
+          Name="Identificacion2"
+          Nullable="False"
+          Precision="12"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Identificacion2]"
+          Type="numeric" />
+        <SsdlProperty
+          Name="Identificacion3"
+          Nullable="False"
+          Precision="12"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Identificacion3]"
+          Type="numeric" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Nombres"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Nombres]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="ApellidoPaterno"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[ApellidoPaterno]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="ApellidoMaterno"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[ApellidoMaterno]"
+          Type="char" />
+        <SsdlProperty
+          Name="EstadoCivil"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[EstadoCivil]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Sexo"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Sexo]"
+          Type="tinyint" />
+        <SsdlProperty
+          Name="FechaNacimiento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[FechaNacimiento]"
+          Type="datetime" />
+        <SsdlProperty
+          Name="LugarNacimiento"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[LugarNacimiento]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Nacionalidad"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Nacionalidad]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Telefono"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Telefono]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="Fax"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Fax]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="60"
+          Name="EMail"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[EMail]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="90"
+          Name="Direccion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Direccion]"
+          Type="char" />
+        <SsdlProperty
+          Name="Comuna"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Comuna]"
+          Type="int" />
+        <SsdlProperty
+          Name="Profesion"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Profesion]"
+          Type="smallint" />
+        <SsdlProperty
+          Name="Banco"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[Banco]"
+          Type="smallint" />
+        <SsdlProperty
+          MaxLength="15"
+          Name="CuentaBanco"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[CuentaBanco]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="NombreCorto"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[NombreCorto]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="10"
+          Name="NumeroTarjeta"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[NumeroTarjeta]"
+          Type="char" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="fld_UserCode"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[fld_UserCode]"
+          Type="varchar" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="UsuarioSicas"
+          Nullable="False"
+          Property="LightSwitchCommonModule:TrabajadorItem/Properties[UsuarioSicas]"
+          Type="varchar" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
   </DataService>
   <DataService
     DataProvider="EntityFrameworkDataProvider"
@@ -1349,7 +1493,7 @@
           Type="bit" />
         <SsdlProperty
           Name="Es_JefeDirecto"
-          Nullable="False"
+          Nullable="True"
           Property="LightSwitchCommonModule:PersonaItem/Properties[Es_JefeDirecto]"
           Type="bit" />
         <SsdlProperty

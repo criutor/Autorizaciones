@@ -160,11 +160,41 @@
     <Property Name="Id_Usuario_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Id_Funcion_Ult_Modif_Reg" Type="Edm.String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
   </EntityType>
+  <EntityType Name="TrabajadorItem">
+    <Key>
+      <PropertyRef Name="RutTrabajador" />
+    </Key>
+    <Property Name="RutTrabajador" Type="Edm.String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="Identificacion1" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="0" ConcurrencyMode="Fixed" />
+    <Property Name="Identificacion2" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="0" ConcurrencyMode="Fixed" />
+    <Property Name="Identificacion3" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="0" ConcurrencyMode="Fixed" />
+    <Property Name="Nombres" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ApellidoPaterno" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ApellidoMaterno" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="EstadoCivil" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Sexo" Type="Edm.Byte" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="FechaNacimiento" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="LugarNacimiento" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Nacionalidad" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Telefono" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Fax" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="EMail" Type="Edm.String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Direccion" Type="Edm.String" Nullable="false" MaxLength="90" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Comuna" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Profesion" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Banco" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CuentaBanco" Type="Edm.String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="NombreCorto" Type="Edm.String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="NumeroTarjeta" Type="Edm.String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="fld_UserCode" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="UsuarioSicas" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+  </EntityType>
   <EntityContainer Name="Fin700v60DataObjectContext" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Contrato" EntityType="LightSwitchApplication.ContratoItem1" />
     <EntitySet Name="CtoT_Cargo" EntityType="LightSwitchApplication.CtoT_CargoItem" />
     <EntitySet Name="CtoT_Persona" EntityType="LightSwitchApplication.CtoT_PersonaItem" />
     <EntitySet Name="dtproperties" EntityType="LightSwitchApplication.dtpropertiesItem" />
     <EntitySet Name="Par_CtoT_Estado" EntityType="LightSwitchApplication.Par_CtoT_EstadoItem" />
+    <EntitySet Name="Trabajador" EntityType="LightSwitchApplication.TrabajadorItem" />
   </EntityContainer>
 </Schema>

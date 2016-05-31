@@ -96,7 +96,7 @@ namespace LightSwitchApplication
             result = this.User.HasPermission(Permissions.AdminRRHH);
         }
 
-        partial void SOLICITUDES_APROBACIÓN_CanRun(ref bool result)
+        partial void SOLICITUDES_APROBACION_CanRun(ref bool result)
         {
             //Puede entrar a esta pantalla solo si tiene un cargo de superior
 

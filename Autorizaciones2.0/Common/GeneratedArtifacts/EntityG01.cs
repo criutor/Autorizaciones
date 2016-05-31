@@ -227,7 +227,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public bool Es_JefeDirecto
+        public global::System.Nullable<bool> Es_JefeDirecto
         {
             get
             {
@@ -900,11 +900,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, bool> Es_JefeDirecto
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>> Es_JefeDirecto
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Es_JefeDirecto) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, bool>;
+                        return base.GetItem(global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties.Es_JefeDirecto) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>;
                     }
                 }
                 
@@ -1096,7 +1096,7 @@ namespace LightSwitchApplication
                 new string Nombres { get; set; }
                 new global::System.Nullable<bool> Es_Gerente { get; set; }
                 new global::System.Nullable<bool> Es_SubGerente { get; set; }
-                new bool Es_JefeDirecto { get; set; }
+                new global::System.Nullable<bool> Es_JefeDirecto { get; set; }
                 new string NombreAD { get; set; }
                 new global::System.Nullable<int> IDGerencia_para_subgerentes { get; set; }
                 new global::System.Nullable<double> SaldoDiasAdmins { get; set; }
@@ -1351,8 +1351,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, bool>.Entry
-                    Es_JefeDirecto = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, bool>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>.Entry
+                    Es_JefeDirecto = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>.Entry(
                         "Es_JefeDirecto",
                         global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Es_JefeDirecto_Stub,
                         global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Es_JefeDirecto_ComputeIsReadOnly,
@@ -1360,7 +1360,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Es_JefeDirecto_GetImplementationValue,
                         global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Es_JefeDirecto_SetImplementationValue,
                         global::LightSwitchApplication.PersonaItem.DetailsClass.PropertySetProperties._Es_JefeDirecto_OnValueChanged);
-                private static void _Es_JefeDirecto_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
+                private static void _Es_JefeDirecto_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PersonaItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.PersonaItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Es_JefeDirecto, sf);
                 }
@@ -1374,11 +1374,11 @@ namespace LightSwitchApplication
                 {
                     e.Es_JefeDirecto_Validate(r);
                 }
-                private static bool _Es_JefeDirecto_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
+                private static global::System.Nullable<bool> _Es_JefeDirecto_GetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Es_JefeDirecto;
                 }
-                private static void _Es_JefeDirecto_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, bool v)
+                private static void _Es_JefeDirecto_SetImplementationValue(global::LightSwitchApplication.PersonaItem.DetailsClass d, global::System.Nullable<bool> v)
                 {
                     d.ImplementationEntity.Es_JefeDirecto = v;
                 }
@@ -2184,7 +2184,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>.Data _Es_SubGerente;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, bool>.Data _Es_JefeDirecto;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, global::System.Nullable<bool>>.Data _Es_JefeDirecto;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PersonaItem, global::LightSwitchApplication.PersonaItem.DetailsClass, string>.Data _NombreAD;

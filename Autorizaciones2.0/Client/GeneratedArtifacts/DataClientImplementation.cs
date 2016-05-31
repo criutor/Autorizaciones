@@ -3388,6 +3388,136 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region TrabajadorItem
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Fin700v60Data.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class TrabajadorItem :
+        global::LightSwitchApplication.TrabajadorItem.DetailsClass.IImplementation
+    {
+        partial void OnRutTrabajadorChanged()
+        {
+            this.___OnPropertyChanged("RutTrabajador");
+        }
+        
+        partial void OnIdentificacion1Changed()
+        {
+            this.___OnPropertyChanged("Identificacion1");
+        }
+        
+        partial void OnIdentificacion2Changed()
+        {
+            this.___OnPropertyChanged("Identificacion2");
+        }
+        
+        partial void OnIdentificacion3Changed()
+        {
+            this.___OnPropertyChanged("Identificacion3");
+        }
+        
+        partial void OnNombresChanged()
+        {
+            this.___OnPropertyChanged("Nombres");
+        }
+        
+        partial void OnApellidoPaternoChanged()
+        {
+            this.___OnPropertyChanged("ApellidoPaterno");
+        }
+        
+        partial void OnApellidoMaternoChanged()
+        {
+            this.___OnPropertyChanged("ApellidoMaterno");
+        }
+        
+        partial void OnEstadoCivilChanged()
+        {
+            this.___OnPropertyChanged("EstadoCivil");
+        }
+        
+        partial void OnSexoChanged()
+        {
+            this.___OnPropertyChanged("Sexo");
+        }
+        
+        partial void OnFechaNacimientoChanged()
+        {
+            this.___OnPropertyChanged("FechaNacimiento");
+        }
+        
+        partial void OnLugarNacimientoChanged()
+        {
+            this.___OnPropertyChanged("LugarNacimiento");
+        }
+        
+        partial void OnNacionalidadChanged()
+        {
+            this.___OnPropertyChanged("Nacionalidad");
+        }
+        
+        partial void OnTelefonoChanged()
+        {
+            this.___OnPropertyChanged("Telefono");
+        }
+        
+        partial void OnFaxChanged()
+        {
+            this.___OnPropertyChanged("Fax");
+        }
+        
+        partial void OnEMailChanged()
+        {
+            this.___OnPropertyChanged("EMail");
+        }
+        
+        partial void OnDireccionChanged()
+        {
+            this.___OnPropertyChanged("Direccion");
+        }
+        
+        partial void OnComunaChanged()
+        {
+            this.___OnPropertyChanged("Comuna");
+        }
+        
+        partial void OnProfesionChanged()
+        {
+            this.___OnPropertyChanged("Profesion");
+        }
+        
+        partial void OnBancoChanged()
+        {
+            this.___OnPropertyChanged("Banco");
+        }
+        
+        partial void OnCuentaBancoChanged()
+        {
+            this.___OnPropertyChanged("CuentaBanco");
+        }
+        
+        partial void OnNombreCortoChanged()
+        {
+            this.___OnPropertyChanged("NombreCorto");
+        }
+        
+        partial void OnNumeroTarjetaChanged()
+        {
+            this.___OnPropertyChanged("NumeroTarjeta");
+        }
+        
+        partial void Onfld_UserCodeChanged()
+        {
+            this.___OnPropertyChanged("fld_UserCode");
+        }
+        
+        partial void OnUsuarioSicasChanged()
+        {
+            this.___OnPropertyChanged("UsuarioSicas");
+        }
+        
+    }
+    #endregion
+    
     #region Autorizaciones_AdminsDataObjectContext
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3550,6 +3680,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.Par_CtoT_EstadoItem))
             {
                 return new global::LightSwitchApplication.Implementation.Par_CtoT_EstadoItem();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.TrabajadorItem))
+            {
+                return new global::LightSwitchApplication.Implementation.TrabajadorItem();
             }
             return null;
         }
@@ -3745,6 +3879,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.Par_CtoT_EstadoItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.Par_CtoT_EstadoItem);
+            }
+            if (typeof(global::LightSwitchApplication.TrabajadorItem) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.TrabajadorItem);
             }
             return null;
         }

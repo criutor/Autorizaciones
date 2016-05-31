@@ -4389,6 +4389,42 @@ namespace LightSwitchApplication
         partial void Par_CtoT_Estado_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Par_CtoT_EstadoItem, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Inserting(global::LightSwitchApplication.TrabajadorItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Inserted(global::LightSwitchApplication.TrabajadorItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Updating(global::LightSwitchApplication.TrabajadorItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Updated(global::LightSwitchApplication.TrabajadorItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Deleting(global::LightSwitchApplication.TrabajadorItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Deleted(global::LightSwitchApplication.TrabajadorItem entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Validate(global::LightSwitchApplication.TrabajadorItem entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Trabajador_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TrabajadorItem, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4825,6 +4861,81 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Par_CtoT_EstadoItem, bool>> filter = null;
                 d.Par_CtoT_Estado_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Fin700v60DataService, global::LightSwitchApplication.TrabajadorItem>
+                __TrabajadorEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.Fin700v60DataService, global::LightSwitchApplication.TrabajadorItem>(
+                    "Trabajador",
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_CanInsert,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_CanUpdate,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_CanDelete,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_CanRead,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Inserting,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Inserted,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Updating,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Updated,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Deleting,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Deleted,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Validate,
+                    global::LightSwitchApplication.Fin700v60DataService.DetailsClass.__Trabajador_Filter);
+            private static bool __Trabajador_CanInsert(global::LightSwitchApplication.Fin700v60DataService d)
+            {
+                bool result = true;
+                d.Trabajador_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Trabajador_CanUpdate(global::LightSwitchApplication.Fin700v60DataService d)
+            {
+                bool result = true;
+                d.Trabajador_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Trabajador_CanDelete(global::LightSwitchApplication.Fin700v60DataService d)
+            {
+                bool result = true;
+                d.Trabajador_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Trabajador_CanRead(global::LightSwitchApplication.Fin700v60DataService d)
+            {
+                bool result = true;
+                d.Trabajador_CanRead(ref result);
+                return result;
+            }
+            private static void __Trabajador_Inserting(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e)
+            {
+                d.Trabajador_Inserting(e);
+            }
+            private static void __Trabajador_Inserted(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e)
+            {
+                d.Trabajador_Inserted(e);
+            }
+            private static void __Trabajador_Updating(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e)
+            {
+                d.Trabajador_Updating(e);
+            }
+            private static void __Trabajador_Updated(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e)
+            {
+                d.Trabajador_Updated(e);
+            }
+            private static void __Trabajador_Deleting(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e)
+            {
+                d.Trabajador_Deleting(e);
+            }
+            private static void __Trabajador_Deleted(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e)
+            {
+                d.Trabajador_Deleted(e);
+            }
+            private static void __Trabajador_Validate(global::LightSwitchApplication.Fin700v60DataService d, global::LightSwitchApplication.TrabajadorItem e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Trabajador_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TrabajadorItem, bool>> __Trabajador_Filter(global::LightSwitchApplication.Fin700v60DataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TrabajadorItem, bool>> filter = null;
+                d.Trabajador_Filter(ref filter);
                 return filter;
             }
             

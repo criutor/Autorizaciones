@@ -141,6 +141,22 @@ namespace Fin700v60Data.Implementation
             }
         }
         private ObjectSet<Par_CtoT_EstadoItem> _Par_CtoT_Estado;
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        public ObjectSet<TrabajadorItem> Trabajador
+        {
+            get
+            {
+                if ((_Trabajador == null))
+                {
+                    _Trabajador = base.CreateObjectSet<TrabajadorItem>("Trabajador");
+                }
+                return _Trabajador;
+            }
+        }
+        private ObjectSet<TrabajadorItem> _Trabajador;
 
         #endregion
 
@@ -184,6 +200,14 @@ namespace Fin700v60Data.Implementation
         public void AddToPar_CtoT_Estado(Par_CtoT_EstadoItem par_CtoT_EstadoItem)
         {
             base.AddObject("Par_CtoT_Estado", par_CtoT_EstadoItem);
+        }
+    
+        /// <summary>
+        /// Método desusado para agregar un nuevo objeto al EntitySet Trabajador. Considere la posibilidad de usar el método .Add de la propiedad ObjectSet&lt;T&gt; asociada.
+        /// </summary>
+        public void AddToTrabajador(TrabajadorItem trabajadorItem)
+        {
+            base.AddObject("Trabajador", trabajadorItem);
         }
 
         #endregion
@@ -3751,6 +3775,661 @@ namespace Fin700v60Data.Implementation
         private global::System.String _Id_Funcion_Ult_Modif_Reg;
         partial void OnId_Funcion_Ult_Modif_RegChanging(global::System.String value);
         partial void OnId_Funcion_Ult_Modif_RegChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No hay documentación de metadatos disponible.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="TrabajadorItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class TrabajadorItem : EntityObject
+    {
+        #region Método de generador
+    
+        /// <summary>
+        /// Crear un nuevo objeto TrabajadorItem.
+        /// </summary>
+        /// <param name="rutTrabajador">Valor inicial de la propiedad RutTrabajador.</param>
+        /// <param name="identificacion1">Valor inicial de la propiedad Identificacion1.</param>
+        /// <param name="identificacion2">Valor inicial de la propiedad Identificacion2.</param>
+        /// <param name="identificacion3">Valor inicial de la propiedad Identificacion3.</param>
+        /// <param name="nombres">Valor inicial de la propiedad Nombres.</param>
+        /// <param name="apellidoPaterno">Valor inicial de la propiedad ApellidoPaterno.</param>
+        /// <param name="apellidoMaterno">Valor inicial de la propiedad ApellidoMaterno.</param>
+        /// <param name="estadoCivil">Valor inicial de la propiedad EstadoCivil.</param>
+        /// <param name="sexo">Valor inicial de la propiedad Sexo.</param>
+        /// <param name="fechaNacimiento">Valor inicial de la propiedad FechaNacimiento.</param>
+        /// <param name="lugarNacimiento">Valor inicial de la propiedad LugarNacimiento.</param>
+        /// <param name="nacionalidad">Valor inicial de la propiedad Nacionalidad.</param>
+        /// <param name="telefono">Valor inicial de la propiedad Telefono.</param>
+        /// <param name="fax">Valor inicial de la propiedad Fax.</param>
+        /// <param name="eMail">Valor inicial de la propiedad EMail.</param>
+        /// <param name="direccion">Valor inicial de la propiedad Direccion.</param>
+        /// <param name="comuna">Valor inicial de la propiedad Comuna.</param>
+        /// <param name="profesion">Valor inicial de la propiedad Profesion.</param>
+        /// <param name="banco">Valor inicial de la propiedad Banco.</param>
+        /// <param name="cuentaBanco">Valor inicial de la propiedad CuentaBanco.</param>
+        /// <param name="nombreCorto">Valor inicial de la propiedad NombreCorto.</param>
+        /// <param name="numeroTarjeta">Valor inicial de la propiedad NumeroTarjeta.</param>
+        /// <param name="fld_UserCode">Valor inicial de la propiedad fld_UserCode.</param>
+        /// <param name="usuarioSicas">Valor inicial de la propiedad UsuarioSicas.</param>
+        public static TrabajadorItem CreateTrabajadorItem(global::System.String rutTrabajador, global::System.Decimal identificacion1, global::System.Decimal identificacion2, global::System.Decimal identificacion3, global::System.String nombres, global::System.String apellidoPaterno, global::System.String apellidoMaterno, global::System.Int16 estadoCivil, global::System.Byte sexo, global::System.DateTime fechaNacimiento, global::System.Int16 lugarNacimiento, global::System.Int16 nacionalidad, global::System.String telefono, global::System.String fax, global::System.String eMail, global::System.String direccion, global::System.Int32 comuna, global::System.Int16 profesion, global::System.Int16 banco, global::System.String cuentaBanco, global::System.String nombreCorto, global::System.String numeroTarjeta, global::System.String fld_UserCode, global::System.String usuarioSicas)
+        {
+            TrabajadorItem trabajadorItem = new TrabajadorItem();
+            trabajadorItem.RutTrabajador = rutTrabajador;
+            trabajadorItem.Identificacion1 = identificacion1;
+            trabajadorItem.Identificacion2 = identificacion2;
+            trabajadorItem.Identificacion3 = identificacion3;
+            trabajadorItem.Nombres = nombres;
+            trabajadorItem.ApellidoPaterno = apellidoPaterno;
+            trabajadorItem.ApellidoMaterno = apellidoMaterno;
+            trabajadorItem.EstadoCivil = estadoCivil;
+            trabajadorItem.Sexo = sexo;
+            trabajadorItem.FechaNacimiento = fechaNacimiento;
+            trabajadorItem.LugarNacimiento = lugarNacimiento;
+            trabajadorItem.Nacionalidad = nacionalidad;
+            trabajadorItem.Telefono = telefono;
+            trabajadorItem.Fax = fax;
+            trabajadorItem.EMail = eMail;
+            trabajadorItem.Direccion = direccion;
+            trabajadorItem.Comuna = comuna;
+            trabajadorItem.Profesion = profesion;
+            trabajadorItem.Banco = banco;
+            trabajadorItem.CuentaBanco = cuentaBanco;
+            trabajadorItem.NombreCorto = nombreCorto;
+            trabajadorItem.NumeroTarjeta = numeroTarjeta;
+            trabajadorItem.fld_UserCode = fld_UserCode;
+            trabajadorItem.UsuarioSicas = usuarioSicas;
+            return trabajadorItem;
+        }
+
+        #endregion
+
+        #region Propiedades primitivas
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String RutTrabajador
+        {
+            get
+            {
+                return _RutTrabajador;
+            }
+            set
+            {
+                if (_RutTrabajador != value)
+                {
+                    OnRutTrabajadorChanging(value);
+                    ReportPropertyChanging("RutTrabajador");
+                    _RutTrabajador = value;
+                    ReportPropertyChanged("RutTrabajador");
+                    OnRutTrabajadorChanged();
+                }
+            }
+        }
+        private global::System.String _RutTrabajador;
+        partial void OnRutTrabajadorChanging(global::System.String value);
+        partial void OnRutTrabajadorChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Identificacion1
+        {
+            get
+            {
+                return _Identificacion1;
+            }
+            set
+            {
+                OnIdentificacion1Changing(value);
+                ReportPropertyChanging("Identificacion1");
+                _Identificacion1 = value;
+                ReportPropertyChanged("Identificacion1");
+                OnIdentificacion1Changed();
+            }
+        }
+        private global::System.Decimal _Identificacion1;
+        partial void OnIdentificacion1Changing(global::System.Decimal value);
+        partial void OnIdentificacion1Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Identificacion2
+        {
+            get
+            {
+                return _Identificacion2;
+            }
+            set
+            {
+                OnIdentificacion2Changing(value);
+                ReportPropertyChanging("Identificacion2");
+                _Identificacion2 = value;
+                ReportPropertyChanged("Identificacion2");
+                OnIdentificacion2Changed();
+            }
+        }
+        private global::System.Decimal _Identificacion2;
+        partial void OnIdentificacion2Changing(global::System.Decimal value);
+        partial void OnIdentificacion2Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal Identificacion3
+        {
+            get
+            {
+                return _Identificacion3;
+            }
+            set
+            {
+                OnIdentificacion3Changing(value);
+                ReportPropertyChanging("Identificacion3");
+                _Identificacion3 = value;
+                ReportPropertyChanged("Identificacion3");
+                OnIdentificacion3Changed();
+            }
+        }
+        private global::System.Decimal _Identificacion3;
+        partial void OnIdentificacion3Changing(global::System.Decimal value);
+        partial void OnIdentificacion3Changed();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Nombres
+        {
+            get
+            {
+                return _Nombres;
+            }
+            set
+            {
+                OnNombresChanging(value);
+                ReportPropertyChanging("Nombres");
+                _Nombres = value;
+                ReportPropertyChanged("Nombres");
+                OnNombresChanged();
+            }
+        }
+        private global::System.String _Nombres;
+        partial void OnNombresChanging(global::System.String value);
+        partial void OnNombresChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ApellidoPaterno
+        {
+            get
+            {
+                return _ApellidoPaterno;
+            }
+            set
+            {
+                OnApellidoPaternoChanging(value);
+                ReportPropertyChanging("ApellidoPaterno");
+                _ApellidoPaterno = value;
+                ReportPropertyChanged("ApellidoPaterno");
+                OnApellidoPaternoChanged();
+            }
+        }
+        private global::System.String _ApellidoPaterno;
+        partial void OnApellidoPaternoChanging(global::System.String value);
+        partial void OnApellidoPaternoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ApellidoMaterno
+        {
+            get
+            {
+                return _ApellidoMaterno;
+            }
+            set
+            {
+                OnApellidoMaternoChanging(value);
+                ReportPropertyChanging("ApellidoMaterno");
+                _ApellidoMaterno = value;
+                ReportPropertyChanged("ApellidoMaterno");
+                OnApellidoMaternoChanged();
+            }
+        }
+        private global::System.String _ApellidoMaterno;
+        partial void OnApellidoMaternoChanging(global::System.String value);
+        partial void OnApellidoMaternoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int16 EstadoCivil
+        {
+            get
+            {
+                return _EstadoCivil;
+            }
+            set
+            {
+                OnEstadoCivilChanging(value);
+                ReportPropertyChanging("EstadoCivil");
+                _EstadoCivil = value;
+                ReportPropertyChanged("EstadoCivil");
+                OnEstadoCivilChanged();
+            }
+        }
+        private global::System.Int16 _EstadoCivil;
+        partial void OnEstadoCivilChanging(global::System.Int16 value);
+        partial void OnEstadoCivilChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Byte Sexo
+        {
+            get
+            {
+                return _Sexo;
+            }
+            set
+            {
+                OnSexoChanging(value);
+                ReportPropertyChanging("Sexo");
+                _Sexo = value;
+                ReportPropertyChanged("Sexo");
+                OnSexoChanged();
+            }
+        }
+        private global::System.Byte _Sexo;
+        partial void OnSexoChanging(global::System.Byte value);
+        partial void OnSexoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime FechaNacimiento
+        {
+            get
+            {
+                return _FechaNacimiento;
+            }
+            set
+            {
+                OnFechaNacimientoChanging(value);
+                ReportPropertyChanging("FechaNacimiento");
+                _FechaNacimiento = value;
+                ReportPropertyChanged("FechaNacimiento");
+                OnFechaNacimientoChanged();
+            }
+        }
+        private global::System.DateTime _FechaNacimiento;
+        partial void OnFechaNacimientoChanging(global::System.DateTime value);
+        partial void OnFechaNacimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int16 LugarNacimiento
+        {
+            get
+            {
+                return _LugarNacimiento;
+            }
+            set
+            {
+                OnLugarNacimientoChanging(value);
+                ReportPropertyChanging("LugarNacimiento");
+                _LugarNacimiento = value;
+                ReportPropertyChanged("LugarNacimiento");
+                OnLugarNacimientoChanged();
+            }
+        }
+        private global::System.Int16 _LugarNacimiento;
+        partial void OnLugarNacimientoChanging(global::System.Int16 value);
+        partial void OnLugarNacimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int16 Nacionalidad
+        {
+            get
+            {
+                return _Nacionalidad;
+            }
+            set
+            {
+                OnNacionalidadChanging(value);
+                ReportPropertyChanging("Nacionalidad");
+                _Nacionalidad = value;
+                ReportPropertyChanged("Nacionalidad");
+                OnNacionalidadChanged();
+            }
+        }
+        private global::System.Int16 _Nacionalidad;
+        partial void OnNacionalidadChanging(global::System.Int16 value);
+        partial void OnNacionalidadChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Telefono
+        {
+            get
+            {
+                return _Telefono;
+            }
+            set
+            {
+                OnTelefonoChanging(value);
+                ReportPropertyChanging("Telefono");
+                _Telefono = value;
+                ReportPropertyChanged("Telefono");
+                OnTelefonoChanged();
+            }
+        }
+        private global::System.String _Telefono;
+        partial void OnTelefonoChanging(global::System.String value);
+        partial void OnTelefonoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Fax
+        {
+            get
+            {
+                return _Fax;
+            }
+            set
+            {
+                OnFaxChanging(value);
+                ReportPropertyChanging("Fax");
+                _Fax = value;
+                ReportPropertyChanged("Fax");
+                OnFaxChanged();
+            }
+        }
+        private global::System.String _Fax;
+        partial void OnFaxChanging(global::System.String value);
+        partial void OnFaxChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String EMail
+        {
+            get
+            {
+                return _EMail;
+            }
+            set
+            {
+                OnEMailChanging(value);
+                ReportPropertyChanging("EMail");
+                _EMail = value;
+                ReportPropertyChanged("EMail");
+                OnEMailChanged();
+            }
+        }
+        private global::System.String _EMail;
+        partial void OnEMailChanging(global::System.String value);
+        partial void OnEMailChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Direccion
+        {
+            get
+            {
+                return _Direccion;
+            }
+            set
+            {
+                OnDireccionChanging(value);
+                ReportPropertyChanging("Direccion");
+                _Direccion = value;
+                ReportPropertyChanged("Direccion");
+                OnDireccionChanged();
+            }
+        }
+        private global::System.String _Direccion;
+        partial void OnDireccionChanging(global::System.String value);
+        partial void OnDireccionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Comuna
+        {
+            get
+            {
+                return _Comuna;
+            }
+            set
+            {
+                OnComunaChanging(value);
+                ReportPropertyChanging("Comuna");
+                _Comuna = value;
+                ReportPropertyChanged("Comuna");
+                OnComunaChanged();
+            }
+        }
+        private global::System.Int32 _Comuna;
+        partial void OnComunaChanging(global::System.Int32 value);
+        partial void OnComunaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int16 Profesion
+        {
+            get
+            {
+                return _Profesion;
+            }
+            set
+            {
+                OnProfesionChanging(value);
+                ReportPropertyChanging("Profesion");
+                _Profesion = value;
+                ReportPropertyChanged("Profesion");
+                OnProfesionChanged();
+            }
+        }
+        private global::System.Int16 _Profesion;
+        partial void OnProfesionChanging(global::System.Int16 value);
+        partial void OnProfesionChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int16 Banco
+        {
+            get
+            {
+                return _Banco;
+            }
+            set
+            {
+                OnBancoChanging(value);
+                ReportPropertyChanging("Banco");
+                _Banco = value;
+                ReportPropertyChanged("Banco");
+                OnBancoChanged();
+            }
+        }
+        private global::System.Int16 _Banco;
+        partial void OnBancoChanging(global::System.Int16 value);
+        partial void OnBancoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CuentaBanco
+        {
+            get
+            {
+                return _CuentaBanco;
+            }
+            set
+            {
+                OnCuentaBancoChanging(value);
+                ReportPropertyChanging("CuentaBanco");
+                _CuentaBanco = value;
+                ReportPropertyChanged("CuentaBanco");
+                OnCuentaBancoChanged();
+            }
+        }
+        private global::System.String _CuentaBanco;
+        partial void OnCuentaBancoChanging(global::System.String value);
+        partial void OnCuentaBancoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String NombreCorto
+        {
+            get
+            {
+                return _NombreCorto;
+            }
+            set
+            {
+                OnNombreCortoChanging(value);
+                ReportPropertyChanging("NombreCorto");
+                _NombreCorto = value;
+                ReportPropertyChanged("NombreCorto");
+                OnNombreCortoChanged();
+            }
+        }
+        private global::System.String _NombreCorto;
+        partial void OnNombreCortoChanging(global::System.String value);
+        partial void OnNombreCortoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String NumeroTarjeta
+        {
+            get
+            {
+                return _NumeroTarjeta;
+            }
+            set
+            {
+                OnNumeroTarjetaChanging(value);
+                ReportPropertyChanging("NumeroTarjeta");
+                _NumeroTarjeta = value;
+                ReportPropertyChanged("NumeroTarjeta");
+                OnNumeroTarjetaChanged();
+            }
+        }
+        private global::System.String _NumeroTarjeta;
+        partial void OnNumeroTarjetaChanging(global::System.String value);
+        partial void OnNumeroTarjetaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String fld_UserCode
+        {
+            get
+            {
+                return _fld_UserCode;
+            }
+            set
+            {
+                Onfld_UserCodeChanging(value);
+                ReportPropertyChanging("fld_UserCode");
+                _fld_UserCode = value;
+                ReportPropertyChanged("fld_UserCode");
+                Onfld_UserCodeChanged();
+            }
+        }
+        private global::System.String _fld_UserCode;
+        partial void Onfld_UserCodeChanging(global::System.String value);
+        partial void Onfld_UserCodeChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String UsuarioSicas
+        {
+            get
+            {
+                return _UsuarioSicas;
+            }
+            set
+            {
+                OnUsuarioSicasChanging(value);
+                ReportPropertyChanging("UsuarioSicas");
+                _UsuarioSicas = value;
+                ReportPropertyChanged("UsuarioSicas");
+                OnUsuarioSicasChanged();
+            }
+        }
+        private global::System.String _UsuarioSicas;
+        partial void OnUsuarioSicasChanging(global::System.String value);
+        partial void OnUsuarioSicasChanged();
 
         #endregion
 

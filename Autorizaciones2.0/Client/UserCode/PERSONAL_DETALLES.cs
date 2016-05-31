@@ -33,7 +33,7 @@ namespace LightSwitchApplication
 
             if (this.Persona.EsRolPrivado != true)
             {
-                this.ES_JEFE_DE_AREA = this.Persona.Es_JefeDirecto;
+                this.ES_JEFE_DE_AREA = this.Persona.Es_JefeDirecto.Value;
             }
         }
 

@@ -131,7 +131,7 @@
     <Property Name="Nombres" Type="varchar" Nullable="false" MaxLength="30" />
     <Property Name="Es_Gerente" Type="bit" />
     <Property Name="Es_SubGerente" Type="bit" />
-    <Property Name="Es_JefeDirecto" Type="bit" Nullable="false" />
+    <Property Name="Es_JefeDirecto" Type="bit" />
     <Property Name="NombreAD" Type="nvarchar" MaxLength="50" />
     <Property Name="IDGerencia_para_subgerentes" Type="int" />
     <Property Name="SaldoDiasAdmins" Type="float" />

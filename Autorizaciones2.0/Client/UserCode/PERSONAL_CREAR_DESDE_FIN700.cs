@@ -56,7 +56,7 @@ namespace LightSwitchApplication
         {
             
                        
-            IDPERSONA = this.PersonasContratadas.SelectedItem.Rut_Persona;
+            IDPERSONA = this.PersonasContratadas.SelectedItem.RutTrabajador;
             
             if (this.Persona.Count() == 0)//Si la persona no existe en la bd de la aplicacion....
             {
@@ -69,13 +69,13 @@ namespace LightSwitchApplication
 
 
 
-                personaNueva.Rut_Persona = removerCeros(this.PersonasContratadas.SelectedItem.Rut_Persona).ToString();//
+                personaNueva.Rut_Persona = removerCeros(this.PersonasContratadas.SelectedItem.RutTrabajador).ToString();//
 
-                personaNueva.Rut_Persona_ConCeros = this.PersonasContratadas.SelectedItem.Rut_Persona;//
+                personaNueva.Rut_Persona_ConCeros = this.PersonasContratadas.SelectedItem.RutTrabajador;//
 
                 RUTSINCEROS = personaNueva.Rut_Persona;
 
-                RutTrabajadorParaContratos = this.PersonasContratadas.SelectedItem.Rut_Persona;//
+                RutTrabajadorParaContratos = this.PersonasContratadas.SelectedItem.RutTrabajador;//
 
                 this.ConsultarEmailUsuarioAD_Execute();
 
@@ -84,8 +84,8 @@ namespace LightSwitchApplication
                 
 
                 personaNueva.Nombres = this.PersonasContratadas.SelectedItem.Nombres;
-                personaNueva.AP_Paterno = this.PersonasContratadas.SelectedItem.AP_Paterno;
-                personaNueva.AP_Materno = this.PersonasContratadas.SelectedItem.AP_Materno;
+                personaNueva.AP_Paterno = this.PersonasContratadas.SelectedItem.ApellidoPaterno;
+                personaNueva.AP_Materno = this.PersonasContratadas.SelectedItem.ApellidoMaterno;
                 
                 //personaNueva.Division_AreaItem = this.Division_AreaItem;
                 personaNueva.Division_AreaItem = null;

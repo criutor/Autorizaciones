@@ -6,6 +6,7 @@
     <EntitySet Name="CtoT_Persona" EntityType="Fin700v60DataStore.CtoT_PersonaItem" store:Type="Tables" Schema="dbo" Table="CtoT_Persona" />
     <EntitySet Name="dtproperties" EntityType="Fin700v60DataStore.dtpropertiesItem" store:Type="Tables" Schema="dbo" Table="dtproperties" />
     <EntitySet Name="Par_CtoT_Estado" EntityType="Fin700v60DataStore.Par_CtoT_EstadoItem" store:Type="Tables" Schema="dbo" Table="Par_CtoT_Estado" />
+    <EntitySet Name="Trabajador" EntityType="Fin700v60DataStore.TrabajadorItem" store:Type="Tables" Schema="dbo" Table="Trabajador" />
   </EntityContainer>
   <EntityType Name="ContratoItem1">
     <Key>
@@ -166,5 +167,34 @@
     <Property Name="Fec_Ult_Modif_Reg" Type="datetime" Nullable="false" />
     <Property Name="Id_Usuario_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="20" />
     <Property Name="Id_Funcion_Ult_Modif_Reg" Type="char" Nullable="false" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="TrabajadorItem">
+    <Key>
+      <PropertyRef Name="RutTrabajador" />
+    </Key>
+    <Property Name="RutTrabajador" Type="char" Nullable="false" MaxLength="12" />
+    <Property Name="Identificacion1" Type="numeric" Nullable="false" Precision="12" />
+    <Property Name="Identificacion2" Type="numeric" Nullable="false" Precision="12" />
+    <Property Name="Identificacion3" Type="numeric" Nullable="false" Precision="12" />
+    <Property Name="Nombres" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="ApellidoPaterno" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="ApellidoMaterno" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="EstadoCivil" Type="smallint" Nullable="false" />
+    <Property Name="Sexo" Type="tinyint" Nullable="false" />
+    <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="LugarNacimiento" Type="smallint" Nullable="false" />
+    <Property Name="Nacionalidad" Type="smallint" Nullable="false" />
+    <Property Name="Telefono" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="Fax" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="EMail" Type="char" Nullable="false" MaxLength="60" />
+    <Property Name="Direccion" Type="char" Nullable="false" MaxLength="90" />
+    <Property Name="Comuna" Type="int" Nullable="false" />
+    <Property Name="Profesion" Type="smallint" Nullable="false" />
+    <Property Name="Banco" Type="smallint" Nullable="false" />
+    <Property Name="CuentaBanco" Type="char" Nullable="false" MaxLength="15" />
+    <Property Name="NombreCorto" Type="char" Nullable="false" MaxLength="20" />
+    <Property Name="NumeroTarjeta" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="fld_UserCode" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UsuarioSicas" Type="varchar" Nullable="false" MaxLength="50" />
   </EntityType>
 </Schema>

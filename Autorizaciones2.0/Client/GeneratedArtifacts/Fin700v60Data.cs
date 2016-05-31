@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 13/05/2016 12:30:22
+// Fecha de generación: 31/05/2016 18:43:24
 namespace LightSwitchApplication.Implementation
 {
     
@@ -144,6 +144,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Par_CtoT_EstadoItem> _Par_CtoT_Estado;
         /// <summary>
+        /// No hay comentarios para Trabajador en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<TrabajadorItem> Trabajador
+        {
+            get
+            {
+                if ((this._Trabajador == null))
+                {
+                    this._Trabajador = base.CreateQuery<TrabajadorItem>("Trabajador");
+                }
+                return this._Trabajador;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<TrabajadorItem> _Trabajador;
+        /// <summary>
         /// No hay comentarios para Contrato en el esquema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -182,6 +199,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToPar_CtoT_Estado(Par_CtoT_EstadoItem par_CtoT_EstadoItem)
         {
             base.AddObject("Par_CtoT_Estado", par_CtoT_EstadoItem);
+        }
+        /// <summary>
+        /// No hay comentarios para Trabajador en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToTrabajador(TrabajadorItem trabajadorItem)
+        {
+            base.AddObject("Trabajador", trabajadorItem);
         }
     }
     /// <summary>
@@ -4091,6 +4116,732 @@ namespace LightSwitchApplication.Implementation
         private string _Id_Funcion_Ult_Modif_Reg;
         partial void OnId_Funcion_Ult_Modif_RegChanging(string value);
         partial void OnId_Funcion_Ult_Modif_RegChanged();
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// No hay comentarios para LightSwitchApplication.TrabajadorItem en el esquema.
+    /// </summary>
+    /// <KeyProperties>
+    /// RutTrabajador
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Trabajador")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("RutTrabajador")]
+    public partial class TrabajadorItem : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Crear un nuevo objeto TrabajadorItem.
+        /// </summary>
+        /// <param name="rutTrabajador">Valor inicial de RutTrabajador.</param>
+        /// <param name="identificacion1">Valor inicial de Identificacion1.</param>
+        /// <param name="identificacion2">Valor inicial de Identificacion2.</param>
+        /// <param name="identificacion3">Valor inicial de Identificacion3.</param>
+        /// <param name="nombres">Valor inicial de Nombres.</param>
+        /// <param name="apellidoPaterno">Valor inicial de ApellidoPaterno.</param>
+        /// <param name="apellidoMaterno">Valor inicial de ApellidoMaterno.</param>
+        /// <param name="estadoCivil">Valor inicial de EstadoCivil.</param>
+        /// <param name="sexo">Valor inicial de Sexo.</param>
+        /// <param name="fechaNacimiento">Valor inicial de FechaNacimiento.</param>
+        /// <param name="lugarNacimiento">Valor inicial de LugarNacimiento.</param>
+        /// <param name="nacionalidad">Valor inicial de Nacionalidad.</param>
+        /// <param name="telefono">Valor inicial de Telefono.</param>
+        /// <param name="fax">Valor inicial de Fax.</param>
+        /// <param name="eMail">Valor inicial de EMail.</param>
+        /// <param name="direccion">Valor inicial de Direccion.</param>
+        /// <param name="comuna">Valor inicial de Comuna.</param>
+        /// <param name="profesion">Valor inicial de Profesion.</param>
+        /// <param name="banco">Valor inicial de Banco.</param>
+        /// <param name="cuentaBanco">Valor inicial de CuentaBanco.</param>
+        /// <param name="nombreCorto">Valor inicial de NombreCorto.</param>
+        /// <param name="numeroTarjeta">Valor inicial de NumeroTarjeta.</param>
+        /// <param name="fld_UserCode">Valor inicial de fld_UserCode.</param>
+        /// <param name="usuarioSicas">Valor inicial de UsuarioSicas.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static TrabajadorItem CreateTrabajadorItem(
+                    string rutTrabajador, 
+                    decimal identificacion1, 
+                    decimal identificacion2, 
+                    decimal identificacion3, 
+                    string nombres, 
+                    string apellidoPaterno, 
+                    string apellidoMaterno, 
+                    short estadoCivil, 
+                    byte sexo, 
+                    global::System.DateTime fechaNacimiento, 
+                    short lugarNacimiento, 
+                    short nacionalidad, 
+                    string telefono, 
+                    string fax, 
+                    string eMail, 
+                    string direccion, 
+                    int comuna, 
+                    short profesion, 
+                    short banco, 
+                    string cuentaBanco, 
+                    string nombreCorto, 
+                    string numeroTarjeta, 
+                    string fld_UserCode, 
+                    string usuarioSicas)
+        {
+            TrabajadorItem trabajadorItem = new TrabajadorItem();
+            trabajadorItem.RutTrabajador = rutTrabajador;
+            trabajadorItem.Identificacion1 = identificacion1;
+            trabajadorItem.Identificacion2 = identificacion2;
+            trabajadorItem.Identificacion3 = identificacion3;
+            trabajadorItem.Nombres = nombres;
+            trabajadorItem.ApellidoPaterno = apellidoPaterno;
+            trabajadorItem.ApellidoMaterno = apellidoMaterno;
+            trabajadorItem.EstadoCivil = estadoCivil;
+            trabajadorItem.Sexo = sexo;
+            trabajadorItem.FechaNacimiento = fechaNacimiento;
+            trabajadorItem.LugarNacimiento = lugarNacimiento;
+            trabajadorItem.Nacionalidad = nacionalidad;
+            trabajadorItem.Telefono = telefono;
+            trabajadorItem.Fax = fax;
+            trabajadorItem.EMail = eMail;
+            trabajadorItem.Direccion = direccion;
+            trabajadorItem.Comuna = comuna;
+            trabajadorItem.Profesion = profesion;
+            trabajadorItem.Banco = banco;
+            trabajadorItem.CuentaBanco = cuentaBanco;
+            trabajadorItem.NombreCorto = nombreCorto;
+            trabajadorItem.NumeroTarjeta = numeroTarjeta;
+            trabajadorItem.fld_UserCode = fld_UserCode;
+            trabajadorItem.UsuarioSicas = usuarioSicas;
+            return trabajadorItem;
+        }
+        /// <summary>
+        /// No hay comentarios para la propiedad RutTrabajador en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string RutTrabajador
+        {
+            get
+            {
+                return this._RutTrabajador;
+            }
+            set
+            {
+                this.OnRutTrabajadorChanging(value);
+                if (object.Equals(this.RutTrabajador, value))
+                {
+                    return;
+                }
+                this._RutTrabajador = value;
+                this.OnRutTrabajadorChanged();
+                this.OnPropertyChanged("RutTrabajador");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _RutTrabajador;
+        partial void OnRutTrabajadorChanging(string value);
+        partial void OnRutTrabajadorChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Identificacion1 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public decimal Identificacion1
+        {
+            get
+            {
+                return this._Identificacion1;
+            }
+            set
+            {
+                this.OnIdentificacion1Changing(value);
+                if (object.Equals(this.Identificacion1, value))
+                {
+                    return;
+                }
+                this._Identificacion1 = value;
+                this.OnIdentificacion1Changed();
+                this.OnPropertyChanged("Identificacion1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private decimal _Identificacion1;
+        partial void OnIdentificacion1Changing(decimal value);
+        partial void OnIdentificacion1Changed();
+        /// <summary>
+        /// No hay comentarios para la propiedad Identificacion2 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public decimal Identificacion2
+        {
+            get
+            {
+                return this._Identificacion2;
+            }
+            set
+            {
+                this.OnIdentificacion2Changing(value);
+                if (object.Equals(this.Identificacion2, value))
+                {
+                    return;
+                }
+                this._Identificacion2 = value;
+                this.OnIdentificacion2Changed();
+                this.OnPropertyChanged("Identificacion2");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private decimal _Identificacion2;
+        partial void OnIdentificacion2Changing(decimal value);
+        partial void OnIdentificacion2Changed();
+        /// <summary>
+        /// No hay comentarios para la propiedad Identificacion3 en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public decimal Identificacion3
+        {
+            get
+            {
+                return this._Identificacion3;
+            }
+            set
+            {
+                this.OnIdentificacion3Changing(value);
+                if (object.Equals(this.Identificacion3, value))
+                {
+                    return;
+                }
+                this._Identificacion3 = value;
+                this.OnIdentificacion3Changed();
+                this.OnPropertyChanged("Identificacion3");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private decimal _Identificacion3;
+        partial void OnIdentificacion3Changing(decimal value);
+        partial void OnIdentificacion3Changed();
+        /// <summary>
+        /// No hay comentarios para la propiedad Nombres en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Nombres
+        {
+            get
+            {
+                return this._Nombres;
+            }
+            set
+            {
+                this.OnNombresChanging(value);
+                if (object.Equals(this.Nombres, value))
+                {
+                    return;
+                }
+                this._Nombres = value;
+                this.OnNombresChanged();
+                this.OnPropertyChanged("Nombres");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Nombres;
+        partial void OnNombresChanging(string value);
+        partial void OnNombresChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad ApellidoPaterno en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ApellidoPaterno
+        {
+            get
+            {
+                return this._ApellidoPaterno;
+            }
+            set
+            {
+                this.OnApellidoPaternoChanging(value);
+                if (object.Equals(this.ApellidoPaterno, value))
+                {
+                    return;
+                }
+                this._ApellidoPaterno = value;
+                this.OnApellidoPaternoChanged();
+                this.OnPropertyChanged("ApellidoPaterno");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ApellidoPaterno;
+        partial void OnApellidoPaternoChanging(string value);
+        partial void OnApellidoPaternoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad ApellidoMaterno en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ApellidoMaterno
+        {
+            get
+            {
+                return this._ApellidoMaterno;
+            }
+            set
+            {
+                this.OnApellidoMaternoChanging(value);
+                if (object.Equals(this.ApellidoMaterno, value))
+                {
+                    return;
+                }
+                this._ApellidoMaterno = value;
+                this.OnApellidoMaternoChanged();
+                this.OnPropertyChanged("ApellidoMaterno");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ApellidoMaterno;
+        partial void OnApellidoMaternoChanging(string value);
+        partial void OnApellidoMaternoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad EstadoCivil en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public short EstadoCivil
+        {
+            get
+            {
+                return this._EstadoCivil;
+            }
+            set
+            {
+                this.OnEstadoCivilChanging(value);
+                if (object.Equals(this.EstadoCivil, value))
+                {
+                    return;
+                }
+                this._EstadoCivil = value;
+                this.OnEstadoCivilChanged();
+                this.OnPropertyChanged("EstadoCivil");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private short _EstadoCivil;
+        partial void OnEstadoCivilChanging(short value);
+        partial void OnEstadoCivilChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Sexo en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public byte Sexo
+        {
+            get
+            {
+                return this._Sexo;
+            }
+            set
+            {
+                this.OnSexoChanging(value);
+                if (object.Equals(this.Sexo, value))
+                {
+                    return;
+                }
+                this._Sexo = value;
+                this.OnSexoChanged();
+                this.OnPropertyChanged("Sexo");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private byte _Sexo;
+        partial void OnSexoChanging(byte value);
+        partial void OnSexoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad FechaNacimiento en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.DateTime FechaNacimiento
+        {
+            get
+            {
+                return this._FechaNacimiento;
+            }
+            set
+            {
+                this.OnFechaNacimientoChanging(value);
+                if (object.Equals(this.FechaNacimiento, value))
+                {
+                    return;
+                }
+                this._FechaNacimiento = value;
+                this.OnFechaNacimientoChanged();
+                this.OnPropertyChanged("FechaNacimiento");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.DateTime _FechaNacimiento;
+        partial void OnFechaNacimientoChanging(global::System.DateTime value);
+        partial void OnFechaNacimientoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad LugarNacimiento en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public short LugarNacimiento
+        {
+            get
+            {
+                return this._LugarNacimiento;
+            }
+            set
+            {
+                this.OnLugarNacimientoChanging(value);
+                if (object.Equals(this.LugarNacimiento, value))
+                {
+                    return;
+                }
+                this._LugarNacimiento = value;
+                this.OnLugarNacimientoChanged();
+                this.OnPropertyChanged("LugarNacimiento");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private short _LugarNacimiento;
+        partial void OnLugarNacimientoChanging(short value);
+        partial void OnLugarNacimientoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Nacionalidad en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public short Nacionalidad
+        {
+            get
+            {
+                return this._Nacionalidad;
+            }
+            set
+            {
+                this.OnNacionalidadChanging(value);
+                if (object.Equals(this.Nacionalidad, value))
+                {
+                    return;
+                }
+                this._Nacionalidad = value;
+                this.OnNacionalidadChanged();
+                this.OnPropertyChanged("Nacionalidad");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private short _Nacionalidad;
+        partial void OnNacionalidadChanging(short value);
+        partial void OnNacionalidadChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Telefono en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Telefono
+        {
+            get
+            {
+                return this._Telefono;
+            }
+            set
+            {
+                this.OnTelefonoChanging(value);
+                if (object.Equals(this.Telefono, value))
+                {
+                    return;
+                }
+                this._Telefono = value;
+                this.OnTelefonoChanged();
+                this.OnPropertyChanged("Telefono");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Telefono;
+        partial void OnTelefonoChanging(string value);
+        partial void OnTelefonoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Fax en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Fax
+        {
+            get
+            {
+                return this._Fax;
+            }
+            set
+            {
+                this.OnFaxChanging(value);
+                if (object.Equals(this.Fax, value))
+                {
+                    return;
+                }
+                this._Fax = value;
+                this.OnFaxChanged();
+                this.OnPropertyChanged("Fax");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Fax;
+        partial void OnFaxChanging(string value);
+        partial void OnFaxChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad EMail en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string EMail
+        {
+            get
+            {
+                return this._EMail;
+            }
+            set
+            {
+                this.OnEMailChanging(value);
+                if (object.Equals(this.EMail, value))
+                {
+                    return;
+                }
+                this._EMail = value;
+                this.OnEMailChanged();
+                this.OnPropertyChanged("EMail");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _EMail;
+        partial void OnEMailChanging(string value);
+        partial void OnEMailChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Direccion en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Direccion
+        {
+            get
+            {
+                return this._Direccion;
+            }
+            set
+            {
+                this.OnDireccionChanging(value);
+                if (object.Equals(this.Direccion, value))
+                {
+                    return;
+                }
+                this._Direccion = value;
+                this.OnDireccionChanged();
+                this.OnPropertyChanged("Direccion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Direccion;
+        partial void OnDireccionChanging(string value);
+        partial void OnDireccionChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Comuna en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int Comuna
+        {
+            get
+            {
+                return this._Comuna;
+            }
+            set
+            {
+                this.OnComunaChanging(value);
+                if (object.Equals(this.Comuna, value))
+                {
+                    return;
+                }
+                this._Comuna = value;
+                this.OnComunaChanged();
+                this.OnPropertyChanged("Comuna");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _Comuna;
+        partial void OnComunaChanging(int value);
+        partial void OnComunaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Profesion en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public short Profesion
+        {
+            get
+            {
+                return this._Profesion;
+            }
+            set
+            {
+                this.OnProfesionChanging(value);
+                if (object.Equals(this.Profesion, value))
+                {
+                    return;
+                }
+                this._Profesion = value;
+                this.OnProfesionChanged();
+                this.OnPropertyChanged("Profesion");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private short _Profesion;
+        partial void OnProfesionChanging(short value);
+        partial void OnProfesionChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad Banco en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public short Banco
+        {
+            get
+            {
+                return this._Banco;
+            }
+            set
+            {
+                this.OnBancoChanging(value);
+                if (object.Equals(this.Banco, value))
+                {
+                    return;
+                }
+                this._Banco = value;
+                this.OnBancoChanged();
+                this.OnPropertyChanged("Banco");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private short _Banco;
+        partial void OnBancoChanging(short value);
+        partial void OnBancoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad CuentaBanco en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string CuentaBanco
+        {
+            get
+            {
+                return this._CuentaBanco;
+            }
+            set
+            {
+                this.OnCuentaBancoChanging(value);
+                if (object.Equals(this.CuentaBanco, value))
+                {
+                    return;
+                }
+                this._CuentaBanco = value;
+                this.OnCuentaBancoChanged();
+                this.OnPropertyChanged("CuentaBanco");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _CuentaBanco;
+        partial void OnCuentaBancoChanging(string value);
+        partial void OnCuentaBancoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad NombreCorto en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string NombreCorto
+        {
+            get
+            {
+                return this._NombreCorto;
+            }
+            set
+            {
+                this.OnNombreCortoChanging(value);
+                if (object.Equals(this.NombreCorto, value))
+                {
+                    return;
+                }
+                this._NombreCorto = value;
+                this.OnNombreCortoChanged();
+                this.OnPropertyChanged("NombreCorto");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _NombreCorto;
+        partial void OnNombreCortoChanging(string value);
+        partial void OnNombreCortoChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad NumeroTarjeta en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string NumeroTarjeta
+        {
+            get
+            {
+                return this._NumeroTarjeta;
+            }
+            set
+            {
+                this.OnNumeroTarjetaChanging(value);
+                if (object.Equals(this.NumeroTarjeta, value))
+                {
+                    return;
+                }
+                this._NumeroTarjeta = value;
+                this.OnNumeroTarjetaChanged();
+                this.OnPropertyChanged("NumeroTarjeta");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _NumeroTarjeta;
+        partial void OnNumeroTarjetaChanging(string value);
+        partial void OnNumeroTarjetaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad fld_UserCode en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string fld_UserCode
+        {
+            get
+            {
+                return this._fld_UserCode;
+            }
+            set
+            {
+                this.Onfld_UserCodeChanging(value);
+                if (object.Equals(this.fld_UserCode, value))
+                {
+                    return;
+                }
+                this._fld_UserCode = value;
+                this.Onfld_UserCodeChanged();
+                this.OnPropertyChanged("fld_UserCode");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _fld_UserCode;
+        partial void Onfld_UserCodeChanging(string value);
+        partial void Onfld_UserCodeChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad UsuarioSicas en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string UsuarioSicas
+        {
+            get
+            {
+                return this._UsuarioSicas;
+            }
+            set
+            {
+                this.OnUsuarioSicasChanging(value);
+                if (object.Equals(this.UsuarioSicas, value))
+                {
+                    return;
+                }
+                this._UsuarioSicas = value;
+                this.OnUsuarioSicasChanged();
+                this.OnPropertyChanged("UsuarioSicas");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _UsuarioSicas;
+        partial void OnUsuarioSicasChanging(string value);
+        partial void OnUsuarioSicasChanged();
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
