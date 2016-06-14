@@ -2462,6 +2462,30 @@ namespace Autorizaciones_AdminsData.Implementation
         private global::System.String _Gerente;
         partial void OnGerenteChanging(global::System.String value);
         partial void OnGerenteChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> EsGerenciaGeneral
+        {
+            get
+            {
+                return _EsGerenciaGeneral;
+            }
+            set
+            {
+                OnEsGerenciaGeneralChanging(value);
+                ReportPropertyChanging("EsGerenciaGeneral");
+                _EsGerenciaGeneral = value;
+                ReportPropertyChanged("EsGerenciaGeneral");
+                OnEsGerenciaGeneralChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _EsGerenciaGeneral;
+        partial void OnEsGerenciaGeneralChanging(Nullable<global::System.Boolean> value);
+        partial void OnEsGerenciaGeneralChanged();
 
         #endregion
 

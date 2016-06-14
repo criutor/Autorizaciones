@@ -362,5 +362,149 @@ namespace LightSwitchApplication
                                 this.RutUsuarioAD = operation.RutUsuario;
                             }
         }
+
+        partial void AprobarTodas_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.SolicitudesAbiertasACargo.Count() == 0) { result = false; }
+        }
+
+        partial void AprobarTodas_Execute()
+        {
+
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("¿Desea aprobar todas las solicitudes?", "APROBAR TODAS LAS SOLICITUDES", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
+
+                int contador = this.SolicitudesAbiertasACargo.Count();
+                this.SWICHCerrarAprobarSolicitudMW = true;
+
+
+                while (contador != 0)
+                {
+                    this.NUEVOESTADO = new ESTADOSItem();
+                    this.NUEVOESTADO.SOLICITUDESItem = this.SolicitudesAbiertasACargo.ElementAt(contador - 1);
+                    this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO APROBADA POR:";
+                    this.NUEVOESTADO.MensajeBy = this.PersonaPorRutAD.First().NombreAD;
+                    this.NUEVOESTADO.CreadoAt = DateTime.Now;
+                    this.NUEVOESTADO.Observaciones = this.NuevoComentarioAprobar;
+
+                    if (this.PersonaPorRutAD.First().Es_GerenteGeneral == true)
+                    {
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_GerenteGeneral = true;
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Completada = true;
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "Aprobada";
+
+                    }
+                    else if (this.PersonaPorRutAD.First().Es_Gerente == true)
+                    {
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_Gerente = true;
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Completada = true;
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "Aprobada";
+                    }
+                    else if (this.PersonaPorRutAD.First().Es_SubGerente == true)
+                    {
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "En aprobación";
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_SubGerente = true;
+
+                        if (this.SolicitudesAbiertasACargo.ElementAt(contador - 1).HorasExtras == true) //Solicitudes de horas extras ya estan aprobadas por el jefe de área.
+                        {
+                            if (this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_Gerente = false; // Si hay gerente
+
+                                //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                            }
+                            else
+                            {
+                                // si no hay gerente
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Completada = true;
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "Aprobada";
+                            }
+                        }
+                        else //Solicitudes que no son horas extras
+                        {
+                            if (this.SolicitudesAbiertasACargo.ElementAt(contador - 1).PersonaItem1.Es_JefeDirecto != true)//Si quien realiza la solicitud no es jefe de área....
+                            {
+                                if (this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_JefeDirecto == true)
+                                {
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Completada = true;//Si ya fue aprobada por el jda, entonces está completada la aprobación
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "Aprobada";
+                                }
+                                else if (this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_JefeDirecto == null)//Si no tiene jda...
+                                {
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_Gerente = false;//Si hay gerente ***
+
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                }
+                            }
+                            else if (this.SolicitudesAbiertasACargo.ElementAt(contador - 1).PersonaItem1.Es_JefeDirecto == true)
+                            {
+                                if (this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() == 0)
+                                {
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Completada = true;
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "Aprobada";
+                                }
+                                else
+                                {
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_Gerente = false; //Si hay gerente
+
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).EmailProximoDestinatario = this.PersonaPorRutAD.First().Superior_SubGerente.First().Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                }
+                            }
+                        }
+                    }
+                    else if (this.PersonaPorRutAD.First().Es_JefeDirecto == true)
+                    {
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_JefeDirecto = true;
+                        this.SolicitudesAbiertasACargo.ElementAt(contador - 1).Estado = "En aprobación";
+
+                        if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem != null)
+                        {
+                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.Count() != 0)
+                            {
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_SubGerente = false; // Si hay subgerente ***
+
+                                //ENVIAR EMAIL AL SUBGERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1.Email;
+                            }
+                            else
+                            {
+                                if (this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                                {
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_Gerente = false; // Si hay gerente ***
+
+                                    //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                    this.SolicitudesAbiertasACargo.ElementAt(contador - 1).EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.Count() != 0)
+                            {
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).VB_Gerente = false; // Si hay gerente ***
+
+                                //ENVIAR EMAIL AL GERENTE-> TIENE UNA SOLICITUD EN ESPERA DE SU APROBACIÓN
+                                this.SolicitudesAbiertasACargo.ElementAt(contador - 1).EmailProximoDestinatario = this.PersonaPorRutAD.First().Division_AreaItem.Division_GerenciaItem.Superior_Gerente.First().PersonaItem1.Email;
+                            }
+                        }
+
+                    }
+
+
+                    contador = contador - 1;
+                }
+
+                this.Save();
+                this.Refresh();
+
+                this.SWICHCerrarAprobarSolicitudMW = false;
+            }
+        }
     }
 }

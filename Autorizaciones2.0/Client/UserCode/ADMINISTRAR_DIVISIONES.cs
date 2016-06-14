@@ -397,5 +397,20 @@ namespace LightSwitchApplication
             }
         }
 
+        
+        partial void Division_Gerencia_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                if (this.GerenciaGeneral.First().Nombre != "GERENCIA GENERAL")
+                {
+                    results.AddPropertyError("No se puede cambiar el nombre de la 'GERENCIA GENERAL'");
+
+                }
+            }
+            catch { }
+        }
+
     }
 }

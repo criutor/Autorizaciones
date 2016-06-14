@@ -5,6 +5,6 @@
   <setParameter name="DatabaseUserName" value="" />
   <setParameter name="DatabaseUserPassword" value="" />
   <setParameter name="Fin700v60Data" value="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700;Password=plv_consultaf700" />
-  <setParameter name="Autorizaciones_AdminsData" value="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" />
+  <setParameter name="Autorizaciones_AdminsData" value="Data Source=172.17.40.121;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" />
   <setParameter name="AUTORIZACIONES_ADMINS_IisWebApplication" value="Default Web Site/AutorizacionesAdministrativas" />
 </parameters>

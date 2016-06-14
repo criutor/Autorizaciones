@@ -10,10 +10,10 @@
   <parameter name="Fin700v60Data" description="Configurar ConnectionString" defaultValue="Data Source=10.11.154.20;Initial Catalog=Fin700v60;User ID=plv_consultaf700;Password=plv_consultaf700" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="web.config" match="configuration/connectionStrings/add[@name='Fin700v60Data']/@connectionString" />
   </parameter>
-  <parameter name="Autorizaciones_AdminsData" description="Configurar ConnectionString" defaultValue="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" tags="SqlConnectionString">
+  <parameter name="Autorizaciones_AdminsData" description="Configurar ConnectionString" defaultValue="Data Source=172.17.40.121;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="web.config" match="configuration/connectionStrings/add[@name='Autorizaciones_AdminsData']/@connectionString" />
   </parameter>
   <parameter name="AUTORIZACIONES_ADMINS_IisWebApplication" description="Ubicación de contenido de aplicación web IIS" defaultValue="Default Web Site/AutorizacionesAdministrativas" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\cesar\.riutor\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\$" />
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Carlos\\Documents\\GitHub\\Autorizaciones\\Autorizaciones2\.0\\Bin\\Release\\app\.publish\\$" />
   </parameter>
 </parameters>

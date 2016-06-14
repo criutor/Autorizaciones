@@ -22,7 +22,8 @@ namespace LightSwitchApplication.UserCode
             //MailAddress fromAddress = new MailAddress(sendFrom);
             MailAddress fromAddress = new MailAddress("autorizaciones.administrativas@planvital.cl");
             
-            MailAddress toAddress = new MailAddress("cesar.riutor@planvital.cl");
+            //MailAddress toAddress = new MailAddress("cesar.riutor@planvital.cl");
+            MailAddress toAddress = new MailAddress(sendTo);
             MailMessage mail = new MailMessage();
 
             mail.From = fromAddress;

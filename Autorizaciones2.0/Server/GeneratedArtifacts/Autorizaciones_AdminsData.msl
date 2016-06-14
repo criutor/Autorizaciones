@@ -78,6 +78,7 @@
           <ScalarProperty Name="Id_Gerencia" ColumnName="Id_Gerencia" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
           <ScalarProperty Name="Gerente" ColumnName="Gerente" />
+          <ScalarProperty Name="EsGerenciaGeneral" ColumnName="EsGerenciaGeneral" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

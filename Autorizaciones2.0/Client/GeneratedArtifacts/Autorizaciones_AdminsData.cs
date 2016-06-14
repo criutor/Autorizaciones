@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 31/05/2016 18:43:24
+// Fecha de generación: 08/06/2016 18:48:04
 namespace LightSwitchApplication.Implementation
 {
     
@@ -2552,6 +2552,32 @@ namespace LightSwitchApplication.Implementation
         private string _Gerente;
         partial void OnGerenteChanging(string value);
         partial void OnGerenteChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad EsGerenciaGeneral en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> EsGerenciaGeneral
+        {
+            get
+            {
+                return this._EsGerenciaGeneral;
+            }
+            set
+            {
+                this.OnEsGerenciaGeneralChanging(value);
+                if (object.Equals(this.EsGerenciaGeneral, value))
+                {
+                    return;
+                }
+                this._EsGerenciaGeneral = value;
+                this.OnEsGerenciaGeneralChanged();
+                this.OnPropertyChanged("EsGerenciaGeneral");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _EsGerenciaGeneral;
+        partial void OnEsGerenciaGeneralChanging(global::System.Nullable<bool> value);
+        partial void OnEsGerenciaGeneralChanged();
         /// <summary>
         /// No hay comentarios para Division_Area en el esquema.
         /// </summary>

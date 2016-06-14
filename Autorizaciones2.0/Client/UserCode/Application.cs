@@ -100,21 +100,25 @@ namespace LightSwitchApplication
         {
             //Puede entrar a esta pantalla solo si tiene un cargo de superior
 
-            //Consultar el rut del user.
-            DataWorkspace dataWorkspace = new DataWorkspace();
+            ///*// ESTO ES PARA DEPLOY
+                //Consultar el rut del user.
+                DataWorkspace dataWorkspace = new DataWorkspace();
             
-            ConsultarRutUsuarioADItem operation =
-                dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
+                ConsultarRutUsuarioADItem operation =
+                    dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
 
-            operation.NombreUsuario = User.FullName;
+                operation.NombreUsuario = User.FullName;
 
-            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
+                dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
             
-            //Consultar el rol del user
+                //Consultar el rol del user
+            //*/
 
             DataWorkspace dataWorkspace2 = new DataWorkspace();
 
-            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();        
+            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();// ESTO ES PARA DEPLOY
+
+            //var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut("17229504-5").Execute();//ESTA ES PARA PRUEBAS INTERNAS
             //var Persona = (from o in dataWorkspace2.Autorizaciones_AdminsData.Persona where o.Rut_Persona == operation.RutUsuario select o);
             
             if (Persona.First().Es_Gerente != true && Persona.First().Es_SubGerente != true && Persona.First().Es_JefeDirecto != true)
@@ -129,21 +133,25 @@ namespace LightSwitchApplication
             // Establece el resultado en el valor del campo deseado
             //Puede entrar a esta pantalla solo si tiene un cargo de superior
 
-            //Consultar el rut del user.
-            DataWorkspace dataWorkspace = new DataWorkspace();
+            ///*// ESTO ES PARA DEPLOY
+                //Consultar el rut del user.
+                DataWorkspace dataWorkspace = new DataWorkspace();
 
-            ConsultarRutUsuarioADItem operation =
-                dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
+                ConsultarRutUsuarioADItem operation =
+                    dataWorkspace.Autorizaciones_AdminsData.ConsultarRutUsuarioAD.AddNew();
 
-            operation.NombreUsuario = User.FullName;
+                operation.NombreUsuario = User.FullName;
 
-            dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
+                dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
 
-            //Consultar el rol del user
+                //Consultar el rol del user
+            //*/
 
             DataWorkspace dataWorkspace2 = new DataWorkspace();
-
-            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();
+            
+            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();// ESTO ES PARA DEPLOY
+            
+            //var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut("17229504-5").Execute();//ESTA ES PARA PRUEBAS INTERNAS
             //var Persona = (from o in dataWorkspace2.Autorizaciones_AdminsData.Persona where o.Rut_Persona == operation.RutUsuario select o);
             
             if (Persona.First().Es_Gerente != true && Persona.First().Es_SubGerente != true && Persona.First().Es_JefeDirecto != true)

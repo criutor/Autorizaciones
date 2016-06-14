@@ -110,10 +110,9 @@ namespace LightSwitchApplication
             if (this.Persona.EsRolPrivado == true)
             {
                 //Si el nuevo cargo no incluye ser gerente o si se borra el cargo de rol privado
-                if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsGerente != true) 
+                if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsGerente != true)
                 {
-                    this.Persona.Es_Gerente = false;
-                    this.Persona.Es_GerenteGeneral = false;
+
                     this.Persona.Cargo = null;
                     this.Persona.IDGerencia = null;
                     this.Persona.AreaDeTrabajo = null;
@@ -125,9 +124,53 @@ namespace LightSwitchApplication
                         this.Persona.Superior_Gerente.First().Division_GerenciaItem.Gerente = null;
                         this.Persona.Superior_Gerente.First().Delete();
                     }
+
+                    this.Persona.Es_Gerente = false;
+                    this.Persona.Es_GerenteGeneral = false;
                 }
+
+
+                //Si el nuevo cargo no incluye ser subgerente
+                if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsSubgerente != true)
+                {
+
+                    this.Persona.Cargo = null;
+                    this.Persona.IDGerencia_para_subgerentes = null;
+                    this.Persona.AreaDeTrabajo = null;
+                    this.Persona.Division_AreaItem = null;
+                    this.Persona.IDSubgerencia = null;
+
+                    //si era subgerente se elimina el cargo de subgerente
+                    if (this.Persona.Es_SubGerente == true && this.Persona.Superior_SubGerente.Count() != 0)
+                    {
+                        this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
+                        this.Persona.Superior_SubGerente.First().Delete();
+                    }
+
+                    this.Persona.Es_SubGerente = false;
+                }
+
+
+                //Si el nuevo cargo no incluye ser jefe de área
+                if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsJefeDeArea != true)
+                {
+
+                    this.Persona.Cargo = null;
+                    this.Persona.AreaDeTrabajo = null;
+                    this.Persona.Division_AreaItem = null;
+
+                    //si era jefe de area se elimina el cargo de jefe de area
+                    if (this.Persona.Es_JefeDirecto == true && this.Persona.Superior_JefeDirecto.Count() != 0)
+                    {
+                        this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
+                        this.Persona.Superior_JefeDirecto.First().Delete();
+                    }
+
+                    this.Persona.Es_JefeDirecto = false;
+                }
+
                 //Si el nuevo cargo incluye ser gerente
-                else if (this.Persona.CargoRolPrivadoItem.EsGerente == true)
+                if (this.Persona.CargoRolPrivadoItem != null && this.Persona.CargoRolPrivadoItem.EsGerente == true)
                 {
                     //si era gerente se actualiza el cargo de gerente
                     if (this.Persona.Es_Gerente == true && this.Persona.Superior_Gerente.Count() != 0)
@@ -155,98 +198,68 @@ namespace LightSwitchApplication
                         if (this.Division_GerenciaItem.Nombre == "GERENCIA GENERAL") { this.Persona.Es_GerenteGeneral = true; }
                     }
                 }
+                else
 
-                //Si el nuevo cargo no incluye ser subgerente
-                if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsSubgerente != true)
-                {
-                    this.Persona.Es_SubGerente = false;
-                    this.Persona.Cargo = null;
-                    this.Persona.IDGerencia_para_subgerentes = null;
-                    this.Persona.AreaDeTrabajo = null;
-                    this.Persona.Division_AreaItem = null;
-                    this.Persona.IDSubgerencia = null;
+                    //Si el nuevo cargo incluye ser subgerente
+                    if (this.Persona.CargoRolPrivadoItem != null && this.Persona.CargoRolPrivadoItem.EsSubgerente == true)
+                    {
+                        //si era subgerente se actualiza el cargo de subgerente
+                        if (this.Persona.Es_SubGerente == true && this.Persona.Superior_SubGerente.Count() != 0)
+                        {
+                            this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
+                            this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem = this.Division_SubGerenciaItem;
+                            this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = this.Persona.NombreAD;
+                            this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
+                            this.Persona.IDSubgerencia = this.Division_SubGerenciaItem.Id_SubGerencia;
+                        }
+                        //Si no era subgerente crea un nuevo cargo de subgerente
+                        else //if (this.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1 != this.Persona)
+                        {
+                            this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
 
-                    //si era subgerente se elimina el cargo de subgerente
-                    if (this.Persona.Es_SubGerente == true && this.Persona.Superior_SubGerente.Count() != 0)
-                    {
-                        this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
-                        this.Persona.Superior_SubGerente.First().Delete();
+                            Superior_SubGerenteItem Subgerente = new Superior_SubGerenteItem();
+                            Subgerente.PersonaItem1 = this.Persona;
+                            Subgerente.Division_SubGerenciaItem = this.Division_SubGerenciaItem;
+                            this.Persona.Es_SubGerente = true;
+                            this.Persona.EsRolPrivado = true;
+                            this.Persona.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
+                            //IDGerencia_para_subgerentes es utilizado en el Query de Solicitud_Header en la pantalla "Master_SolicitudesPendientes",...
+                            //...ya que los subgerentes no pertenecen a ninguna area, si no se guardara el id de la subgerencia, ...
+                            //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
+                            this.Persona.Division_AreaItem = null;
+                            this.Persona.AreaDeTrabajo = this.Division_SubGerenciaItem.Nombre;
+                            this.Division_SubGerenciaItem.SubGerente = this.Persona.NombreAD;
+                            this.Persona.IDSubgerencia = this.Division_SubGerenciaItem.Id_SubGerencia;
+                        }
                     }
-                }
-                //Si el nuevo cargo incluye ser subgerente
-                else if (this.Persona.CargoRolPrivadoItem.EsSubgerente == true)
-                {
-                    //si era subgerente se actualiza el cargo de subgerente
-                    if (this.Persona.Es_SubGerente == true && this.Persona.Superior_SubGerente.Count() != 0)
-                    {
-                        this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
-                        this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem = this.Division_SubGerenciaItem;
-                        this.Persona.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = this.Persona.NombreAD;
-                        this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
-                        this.Persona.IDSubgerencia = this.Division_SubGerenciaItem.Id_SubGerencia;
-                    }
-                    //Si no era subgerente crea un nuevo cargo de subgerente
-                    else //if (this.Division_SubGerenciaItem.Superior_SubGerente.First().PersonaItem1 != this.Persona)
-                    {
-                        this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
+                    else
 
-                        Superior_SubGerenteItem Subgerente = new Superior_SubGerenteItem();
-                        Subgerente.PersonaItem1 = this.Persona;
-                        Subgerente.Division_SubGerenciaItem = this.Division_SubGerenciaItem;
-                        this.Persona.Es_SubGerente = true;
-                        this.Persona.EsRolPrivado = true;
-                        this.Persona.IDGerencia_para_subgerentes = this.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia;
-                        //IDGerencia_para_subgerentes es utilizado en el Query de Solicitud_Header en la pantalla "Master_SolicitudesPendientes",...
-                        //...ya que los subgerentes no pertenecen a ninguna area, si no se guardara el id de la subgerencia, ...
-                        //...los gerentes verian las solicitudes de todos los subgerentes y no solo los que les corresponden.
-                        this.Persona.Division_AreaItem = null;
-                        this.Persona.AreaDeTrabajo = this.Division_SubGerenciaItem.Nombre;
-                        this.Division_SubGerenciaItem.SubGerente = this.Persona.NombreAD;
-                        this.Persona.IDSubgerencia = this.Division_SubGerenciaItem.Id_SubGerencia;
-                    }
-                }
+                        //Si el nuevo cargo incluye ser jefe de area
+                        if (this.Persona.CargoRolPrivadoItem != null && this.Persona.CargoRolPrivadoItem.EsJefeDeArea == true)
+                        {
+                            //si era jefe de area se actualiza el cargo de jefe de area
+                            if (this.Persona.Es_JefeDirecto == true && this.Persona.Superior_JefeDirecto.Count() != 0)
+                            {
+                                this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
+                                this.Persona.Superior_JefeDirecto.First().Division_AreaItem = this.Division_AreaItem;
+                                this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = this.Persona.NombreAD;
+                                this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
+                            }
+                            //Si no era jefe de area, crea un nuevo cargo de jefe de area
+                            else //if (this.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1 != this.Persona)
+                            {
+                                this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
 
-                //Si el nuevo cargo no incluye ser jefe de área
-                if (this.Persona.CargoRolPrivadoItem == null || this.Persona.CargoRolPrivadoItem.EsJefeDeArea != true)
-                {
-                    this.Persona.Es_JefeDirecto = false;
-                    this.Persona.Cargo = null;
-                    this.Persona.AreaDeTrabajo = null;
-                    this.Persona.Division_AreaItem = null;
-
-                    //si era jefe de area se elimina el cargo de jefe de area
-                    if (this.Persona.Es_JefeDirecto == true && this.Persona.Superior_JefeDirecto.Count() != 0)
-                    {
-                        this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
-                        this.Persona.Superior_JefeDirecto.First().Delete();
-                    }
-                }
-                //Si el nuevo cargo incluye ser jefe de area
-                else if (this.Persona.CargoRolPrivadoItem.EsJefeDeArea == true)
-                {
-                    //si era jefe de area se actualiza el cargo de jefe de area
-                    if (this.Persona.Es_JefeDirecto == true && this.Persona.Superior_JefeDirecto.Count() != 0)
-                    {
-                        this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
-                        this.Persona.Superior_JefeDirecto.First().Division_AreaItem = this.Division_AreaItem;
-                        this.Persona.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = this.Persona.NombreAD;
-                        this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
-                    }
-                    //Si no era jefe de area, crea un nuevo cargo de jefe de area
-                    else //if (this.Division_AreaItem.Superior_JefeDirecto.First().PersonaItem1 != this.Persona)
-                    {
-                        this.Persona.Cargo = this.Persona.CargoRolPrivadoItem.Nombre;
-
-                        Superior_JefeDirectoItem JefeDeArea = new Superior_JefeDirectoItem();
-                        JefeDeArea.PersonaItem1 = this.Persona;
-                        JefeDeArea.Division_AreaItem = this.Division_AreaItem;
-                        this.Persona.Es_JefeDirecto = true;
-                        this.Persona.EsRolPrivado = true;
-                        this.Persona.Division_AreaItem = this.Division_AreaItem;
-                        this.Persona.AreaDeTrabajo = this.Division_AreaItem.Nombre;
-                        this.Division_AreaItem.JefeDeArea = this.Persona.NombreAD;
-                    }
-                }
+                                Superior_JefeDirectoItem JefeDeArea = new Superior_JefeDirectoItem();
+                                JefeDeArea.PersonaItem1 = this.Persona;
+                                JefeDeArea.Division_AreaItem = this.Division_AreaItem;
+                                this.Persona.Es_JefeDirecto = true;
+                                this.Persona.EsRolPrivado = true;
+                                this.Persona.Division_AreaItem = this.Division_AreaItem;
+                                this.Persona.AreaDeTrabajo = this.Division_AreaItem.Nombre;
+                                this.Division_AreaItem.JefeDeArea = this.Persona.NombreAD;
+                            }
+                        }
 
                 //Si el nuevo cargo no incluye ser jefe de área ni subgerente ni gerente.
                 if (this.Persona.CargoRolPrivadoItem != null && this.Persona.CargoRolPrivadoItem.EsJefeDeArea != true && this.Persona.CargoRolPrivadoItem.EsSubgerente != true && this.Persona.CargoRolPrivadoItem.EsGerente != true)
@@ -452,5 +465,7 @@ namespace LightSwitchApplication
             }
             catch { }
         }
+
+
     }
 }

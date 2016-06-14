@@ -158,24 +158,32 @@ namespace LightSwitchApplication
 
             result = this.ShowMessageBox("Esta acción indica que RR.HH ha recibido esta solicitud y gestionará el respectivo pago de las horas extras. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
 
-            if (result == System.Windows.MessageBoxResult.Yes)
+            if (result == System.Windows.MessageBoxResult.Yes  )
             {
-                this.CloseModalWindow("Group");
+                if (this.SOLICITUDES.SelectedItem.HorasTrabajadas != null && this.SOLICITUDES.SelectedItem.HorasTrabajadas != 0)
+                {
+                    this.CloseModalWindow("Group");
 
-                this.SOLICITUDES.SelectedItem.Rebajada = true;
-                this.SOLICITUDES.SelectedItem.Completada = false;
+                    this.SOLICITUDES.SelectedItem.Rebajada = true;
+                    this.SOLICITUDES.SelectedItem.Completada = false;
 
-                this.SOLICITUDES.SelectedItem.Estado = "Rebajada";
+                    this.SOLICITUDES.SelectedItem.Estado = "Rebajada";
 
-                this.NUEVOESTADO = new ESTADOSItem();
-                this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.SelectedItem;
-                this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
-                this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
-                this.NUEVOESTADO.CreadoAt = DateTime.Now;
+                    this.NUEVOESTADO = new ESTADOSItem();
+                    this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.SelectedItem;
+                    this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                    this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                    this.NUEVOESTADO.CreadoAt = DateTime.Now;
 
-                this.Save();
-                
-                this.Refresh();
+                    this.Save();
+
+                    this.Refresh();
+                }
+                else {
+
+                    this.ShowMessageBox("Las horas trabajadas no pueden ser igual a '0'", "HORAS TRABAJADAS", MessageBoxOption.Ok);
+
+                }
             }
         }
 
@@ -186,6 +194,75 @@ namespace LightSwitchApplication
             VACACIONES = true;
             OTROPERMISO = true;
             HORASEXTRAS = true;
+        }
+
+        partial void RebajarTodas_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.SOLICITUDES.Count() == 0) { result = false; }
+        }
+
+        partial void RebajarTodas_Execute()
+        {
+            // Escriba el código aquí.
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Esta acción indica que RR.HH ha recibido estas solicitud y gestionará su respectivo descuento. ¿Desea rebajar todas las solicitudes (Menos Horas extras) ?", "REBAJAR TODAS LAS SOLICITUDES", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
+                /*
+                int contador = this.SOLICITUDES.Count();
+
+                while (contador != 0)
+                {
+                    while (this.SOLICITUDES.ElementAt(contador - 1).HorasExtras == true)
+                    {
+                        contador = contador - 1;
+                    }
+
+                    if (this.SOLICITUDES.ElementAt(contador - 1).Administrativo == true)
+                    {
+                        this.SOLICITUDES.ElementAt(contador - 1).PersonaItem1.SaldoDiasAdmins = this.SOLICITUDES.ElementAt(contador - 1).PersonaItem1.SaldoDiasAdmins - this.SOLICITUDES.ElementAt(contador - 1).DiasSolicitados;
+                    }
+
+                    this.SOLICITUDES.ElementAt(contador - 1).Rebajada = true;
+                    this.SOLICITUDES.ElementAt(contador - 1).Completada = false;
+                    this.SOLICITUDES.ElementAt(contador - 1).Estado = "Rebajada";
+
+                    this.NUEVOESTADO = new ESTADOSItem();
+                    this.NUEVOESTADO.SOLICITUDESItem = this.SOLICITUDES.ElementAt(contador - 1);
+                    this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                    this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                    this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                    contador = contador - 1;
+                }
+                */
+
+                foreach (SOLICITUDESItem solicitud in this.SOLICITUDES)
+                {
+                    if (solicitud.HorasExtras != true)
+                    {
+
+                        if (solicitud.Administrativo == true)
+                        {
+                            solicitud.PersonaItem1.SaldoDiasAdmins = solicitud.PersonaItem1.SaldoDiasAdmins - solicitud.DiasSolicitados;
+                        }
+
+                        solicitud.Rebajada = true;
+                        solicitud.Completada = false;
+                        solicitud.Estado = "Rebajada";
+
+                        this.NUEVOESTADO = new ESTADOSItem();
+                        this.NUEVOESTADO.SOLICITUDESItem = solicitud;
+                        this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                        this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                        this.NUEVOESTADO.CreadoAt = DateTime.Now;
+                    }
+                }
+
+                this.Save();
+                this.Refresh();
+            }
         }
 
  

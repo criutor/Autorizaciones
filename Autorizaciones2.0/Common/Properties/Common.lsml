@@ -7167,6 +7167,13 @@
             Value="100" />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="EsGerenciaGeneral"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType

@@ -287,6 +287,9 @@
   <ItemGroup>
     <Resource Include="Resources\microsoft-excel-128.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\AprobarTodas.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.Build.Tasks.targets" />
   <Target Name="BeforeBuild">

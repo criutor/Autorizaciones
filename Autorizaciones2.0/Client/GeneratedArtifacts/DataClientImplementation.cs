@@ -634,6 +634,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Gerente");
         }
         
+        partial void OnEsGerenciaGeneralChanged()
+        {
+            this.___OnPropertyChanged("EsGerenciaGeneral");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.Division_GerenciaItem.DetailsClass.IImplementation.Division_Area
         {
             get

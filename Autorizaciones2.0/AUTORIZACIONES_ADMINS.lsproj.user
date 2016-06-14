@@ -3,14 +3,16 @@
   <PropertyGroup>
     <EnableENC>False</EnableENC>
     <ProjectView>ProjectFiles</ProjectView>
-    <ServerPort>49809</ServerPort>
+    <ServerPort>50131</ServerPort>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>635998163657117985</SchemaManagementLastModelWriteTime>
-    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:AdminRolPrivado,LightSwitchApplication:AdminRRHH</GrantedPermissions>
+    <SchemaManagementLastModelWriteTime>636009907521906716</SchemaManagementLastModelWriteTime>
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:AdminRolPrivado,LightSwitchApplication:AdminRRHH,LightSwitchApplication:Cesar</GrantedPermissions>
     <Name>AUTORIZACIONES_ADMINS.user</Name>
-    <EncryptedPublishConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5ekE5k6ftU+FHxYmTv1B6gAAAAACAAAAAAADZgAAwAAAABAAAACK3URMivCB9cOdXOWz0wDQAAAAAASAAACgAAAAEAAAAEJMOB8xivtmkh7S6G8TDFG4AAAAC3e8qBzkoF1smZmuOvBypKOjqur9DjpK2Tt0NbQ/2BP7dOEItmwj1RQh1dDDxJ5Y6ZS7j4qVSvDrKeaYww3sKEHKr7OWOmff3+hUQ4ALHySbivxQ5Xn2CoL+8eHrx5MyJqemiI3V1ixQ6n8CrACk2HvmT+Kxm+7TTQTdMVoAa7GXX9riqwBF2RdBNCvLtzt1VOJ1RRnJWvUtUTX01otec2DYIHjza44Rw4hze7Ba2FavrP+j/uOm3RQAAACVWVQ3+W3IVy/X6WCZ35wYjO1qxg==</EncryptedPublishConnectionString>
+    <EncryptedPublishConnectionString>
+    </EncryptedPublishConnectionString>
     <EncryptedPublishSchemaConnectionString />
-    <EncryptedClientConnectionString>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA5ekE5k6ftU+FHxYmTv1B6gAAAAACAAAAAAADZgAAwAAAABAAAACGQppJBZeCiMvuIVjh5TxfAAAAAASAAACgAAAAEAAAAPOHws5Cui8Wghgfva2RWHa4AAAAPRJtwSWxBAJLQ8TAyIHzZT/gIa/CCTJq/IpSO/CiKO2snGPxSYddvN71+DeAb2PONNhxkW9j1pfT7m6UxywDMmXL7C4VofUO3hacFnivpZI/V5Kvf+iNy6yzO48tjXFyu9zdGqPNiRlbqrfKwtARqIS/2wLutewoCB6RJB8kcln52v4IJOddrWMWAlH+JMo9J1jC6gw5VIr0CNZJrrODzK4IYpMO9ruOAFNLpRFOCoaVkJIG/Nxe2xQAAABGxJYlrpxVP6fbZgK6L0gFXka59g==</EncryptedClientConnectionString>
+    <EncryptedClientConnectionString>
+    </EncryptedClientConnectionString>
     <EncryptedAdministratorPassword />
     <PublishUserName />
     <EncryptedPublishUserPassword />

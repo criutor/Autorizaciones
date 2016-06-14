@@ -47,6 +47,11 @@ namespace LightSwitchApplication
                         Save();
                     }
                 }
+
+            if(this.ReporteHorasExtras.Count() == 0)
+            {
+                this.ShowMessageBox("No hay solicitudes de horas extras para estas fechas.", "NO HAY SOLICITUDES", MessageBoxOption.Ok);
+            }
         }
 
         partial void LimpiarPantalla_Execute()

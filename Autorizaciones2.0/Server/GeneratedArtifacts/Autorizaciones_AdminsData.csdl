@@ -86,6 +86,7 @@
     <Property Name="Id_Gerencia" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nombre" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="Gerente" Type="Edm.String" MaxLength="100" ConcurrencyMode="Fixed" />
+    <Property Name="EsGerenciaGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Division_Area" Relationship="LightSwitchApplication.FK_Division_Area_Division_Gerencia" ToRole="Division_Area" FromRole="Division_Gerencia" />
     <NavigationProperty Name="Division_SubGerencia" Relationship="LightSwitchApplication.FK_Division_SubGerencia_Division_Gerencia" ToRole="Division_SubGerencia" FromRole="Division_Gerencia" />
     <NavigationProperty Name="Superior_Gerente" Relationship="LightSwitchApplication.FK_Superior_Gerente_Division_Gerencia" ToRole="Superior_Gerente" FromRole="Division_Gerencia" />

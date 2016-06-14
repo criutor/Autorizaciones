@@ -1399,6 +1399,47 @@
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="GerenciaGeneral"
+        PageSize="45"
+        PropertyType="LightSwitchCommonModule:CollectionView$Division_GerenciaItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="GerenciaGeneralQuery"
+            ReturnType="LightSwitchCommonModule:Division_GerenciaItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree>
+                <BinaryExpression
+                  NodeType="Equal">
+                  <BinaryExpression.Left>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="LightSwitchCommonModule:Division_GerenciaItem/Properties[EsGerenciaGeneral]" />
+                    </ChainExpression>
+                  </BinaryExpression.Left>
+                  <BinaryExpression.Right>
+                    <ConstantExpression
+                      ResultType=":Boolean?"
+                      Value="True" />
+                  </BinaryExpression.Right>
+                </BinaryExpression>
+              </QueryFilterExpressionTree>
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="LightSwitchCommonModule:Autorizaciones_AdminsData/Members[Division_Gerencia]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ADMINISTRAR_DIVISIONES/Properties[GerenciaGeneral]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -3052,6 +3093,34 @@
               </ControlPropertySource>
             </ContentItem.PropertySources>
           </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="CerrarPantalla">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Cerrar sin guardar" />
+            </ContentItem.Attributes>
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="PERSONAL_CREAR_ROL_PRIVADO/Methods[CerrarPantalla]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\closewindow.png" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
         </ContentItem.CommandItems>
         <ContentItem
           Kind="Group"
@@ -3829,7 +3898,7 @@
       <SaveChangesTo
         EntityContainer="LightSwitchCommonModule:Autorizaciones_AdminsData" />
       <DisplayName
-        Value="Buscar empleado" />
+        Value="Seleccionar empleado en Fin700" />
     </Screen.Attributes>
     <Screen.Methods>
       <ScreenMethod
@@ -4083,6 +4152,10 @@
             DataType="LightSwitchCommonModule:CollectionView$TrabajadorItem"
             Kind="Collection"
             Name="PersonasContratadas">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Empleados en FIN 700" />
+            </ContentItem.Attributes>
             <ContentItem.DataSource>
               <ScreenExpressionTree>
                 <ChainExpression>
@@ -4252,6 +4325,8 @@
         Name="CerrarModalWindowRechazarSolicitud" />
       <ScreenMethod
         Name="ConsultarRutUsuarioAD" />
+      <ScreenMethod
+        Name="AprobarTodas" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -4447,6 +4522,9 @@
       <ScreenProperty
         Name="Es_Gerente"
         PropertyType=":Boolean?" />
+      <ScreenProperty
+        Name="SWICHCerrarAprobarSolicitudMW"
+        PropertyType=":Boolean?" />
     </Screen.Properties>
     <Screen.RootContentItem>
       <ContentItem
@@ -4472,6 +4550,30 @@
                     <ConstantExpression
                       ResultType=":String"
                       Value="Microsoft.LightSwitch.UserImageResources::Resources\Solicitar2.png" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="AprobarTodas">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SOLICITUDES_APROBACION/Methods[AprobarTodas]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\AprobarTodas.png" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ControlPropertySource>
@@ -15398,7 +15500,7 @@
                   DataType=":String?"
                   Kind="Value"
                   Name="PersonaItem_Cargo"
-                  View=":Label">
+                  View=":TextBox">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="CARGO" />
@@ -26266,6 +26368,8 @@
         Name="Exportar" />
       <ScreenMethod
         Name="tituloExportar" />
+      <ScreenMethod
+        Name="RebajarTodas" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -26593,6 +26697,30 @@
                     <ConstantExpression
                       ResultType=":String"
                       Value="Microsoft.LightSwitch.UserImageResources::Resources\RebajarSolicitud.png" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="RebajarTodas">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SOLICITUDES_REBAJAR_RRHH/Methods[RebajarTodas]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\AprobarTodas.png" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ControlPropertySource>
@@ -27043,7 +27171,7 @@
                 Name="Guardar">
                 <ContentItem.Attributes>
                   <DisplayName
-                    Value="Guardar" />
+                    Value="Rebajar" />
                 </ContentItem.Attributes>
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>

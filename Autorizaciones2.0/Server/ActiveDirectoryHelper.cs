@@ -69,7 +69,7 @@ namespace ActiveDirectoryLookup
             {
                 DirectoryEntry ent = new DirectoryEntry(domain);
                 DirectorySearcher searcher = new DirectorySearcher(ent);
-                searcher.Filter = String.Format("CN={0}", user);
+                searcher.Filter = String.Format("displayname={0}", user);
                 SearchResult result = CreateSearcherFindOne(searcher);
                 return UserProperties(result, properties);
 

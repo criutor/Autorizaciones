@@ -939,10 +939,10 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="SafeConnectionString"
-        Value="Data Source=pli-sql-t01;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" />
+        Value="Data Source=172.17.40.121;Initial Catalog=Autorizaciones_Admins;User ID=sa" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="24703df0-a85f-40b7-8757-ef57da42ebc1" />
+        Value="79142de2-0822-410c-896f-a5a6e9eadd34" />
       <ConnectionProperty
         Name="ProviderManifestToken"
         Value="2008" />
@@ -1276,6 +1276,11 @@
           Nullable="True"
           Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[Gerente]"
           Type="nvarchar" />
+        <SsdlProperty
+          Name="EsGerenciaGeneral"
+          Nullable="True"
+          Property="LightSwitchCommonModule:Division_GerenciaItem/Properties[EsGerenciaGeneral]"
+          Type="bit" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
