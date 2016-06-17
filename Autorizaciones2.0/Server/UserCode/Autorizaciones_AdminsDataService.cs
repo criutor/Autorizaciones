@@ -212,7 +212,7 @@ namespace LightSwitchApplication
                         {
                             asunto = "Su solicitud ha sido aprobada por sus superiores";
                             string mensaje = "Estimado(a) " + entity.PersonaItem1.NombreAD + ".\n" + "Su solicitud del tipo " + entity.TipoDeSolicitud + " con fecha de solicitud " + entity.FechaSolicitud + " ha completado todas las aprobaciones necesarias.\nPor favor diríjase a http://172.17.40.45/AutorizacionesAdministrativas/ e ingrese utilizando su usuario y clave de Windows a través de Internet explorer para más detalles.\n\nEmail generado automáticamente. No responder a esta casilla..";
-                            correo.Mail(destinatario, asunto, mensaje);
+                            correo.Mail(entity.PersonaItem1.Email, asunto, mensaje);
 
                             if (entity.PersonaItem1.EsRolPrivado == true)
                             {

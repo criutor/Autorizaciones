@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 08/06/2016 18:48:04
+// Fecha de generación: 17/06/2016 10:49:44
 namespace LightSwitchApplication.Implementation
 {
     

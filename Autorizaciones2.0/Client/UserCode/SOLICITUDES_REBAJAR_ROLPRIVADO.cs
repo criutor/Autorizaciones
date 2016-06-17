@@ -131,5 +131,51 @@ namespace LightSwitchApplication
             VACACIONES = true;
 
         }
+
+        partial void RebajarTodas_Execute()
+        {
+            // Escriba el código aquí.
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("Esta acción indica que el administrador(a) del rol privado ha recibido estas solicitudes y gestionará su respectivo descuento. Las solicitudes en las cuales la fecha de término es menor a la fecha actual no serán rebajadas. ¿Desea rebajar todas las solicitudes ?", "REBAJAR TODAS LAS SOLICITUDES", MessageBoxOption.YesNo);
+
+            if (result == System.Windows.MessageBoxResult.Yes)
+            {
+                foreach (SOLICITUDESItem solicitud in this.SOLICITUDES)
+                {
+                    if (solicitud.Administrativo == true)
+                    {
+                        solicitud.PersonaItem1.SaldoDiasAdmins = solicitud.PersonaItem1.SaldoDiasAdmins - solicitud.DiasSolicitados;
+                    }
+                    else if (solicitud.Vacaciones == true)
+                    {
+                        solicitud.PersonaItem1.SaldoVacaciones2 = this.SOLICITUDES.SelectedItem.PersonaItem1.SaldoVacaciones2 - this.SOLICITUDES.SelectedItem.DiasSolicitados;
+                    }
+
+                        solicitud.Rebajada = true;
+                        solicitud.Completada = false;
+                        solicitud.Estado = "Rebajada";
+
+                        this.NUEVOESTADO = new ESTADOSItem();
+                        this.NUEVOESTADO.SOLICITUDESItem = solicitud;
+                        this.NUEVOESTADO.TituloObservacion = "LA SOLICITUD HA SIDO REBAJADA POR:";
+                        this.NUEVOESTADO.MensajeBy = this.Application.User.FullName.ToUpper();
+                        this.NUEVOESTADO.CreadoAt = DateTime.Now;
+
+                        if (DateTime.Now > solicitud.Termino.Value)
+                        {
+                            //incluir todo lo que está dentro del "foreach"
+                        }
+                }
+
+                this.Save();
+                this.Refresh();
+            }
+        }
+
+        partial void RebajarTodas_CanExecute(ref bool result)
+        {
+            // Escriba el código aquí.
+            if (this.SOLICITUDES.Count() == 0) { result = false; }
+
+        }
     }
 }

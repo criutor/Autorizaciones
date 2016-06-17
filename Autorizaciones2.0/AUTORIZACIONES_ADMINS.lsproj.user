@@ -6,7 +6,7 @@
     <ServerPort>50131</ServerPort>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
     <SchemaManagementLastModelWriteTime>636009907521906716</SchemaManagementLastModelWriteTime>
-    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:AdminRolPrivado,LightSwitchApplication:AdminRRHH,LightSwitchApplication:Cesar</GrantedPermissions>
+    <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:AdminRolPrivado,LightSwitchApplication:AdminRRHH,LightSwitchApplication:Gustavo</GrantedPermissions>
     <Name>AUTORIZACIONES_ADMINS.user</Name>
     <EncryptedPublishConnectionString>
     </EncryptedPublishConnectionString>

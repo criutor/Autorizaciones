@@ -65,7 +65,7 @@ namespace LightSwitchApplication
 
         partial void GenerarVacacionesProporcionales_Execute()
         {
-            System.Windows.MessageBoxResult result = this.ShowMessageBox("El saldo de vacaciones todos los empleados que son rol privado aumentará en '1,25'. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("El saldo de vacaciones de todos los empleados que son rol privado aumentará en '1,25'. Si es el primer mes del empleado en la empresa, entonces aumentará en proporción a la cantidad de días. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
 
             if (result == System.Windows.MessageBoxResult.Yes)
             {

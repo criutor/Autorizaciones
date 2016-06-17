@@ -29,7 +29,7 @@ namespace LightSwitchApplication
                     {
                         this.Persona.SelectedItem.Superior_Gerente.First().Division_GerenciaItem.Gerente = null;
 
-                        this.Persona.SelectedItem.Superior_Gerente.First().Delete();
+                        //this.Persona.SelectedItem.Superior_Gerente.First().Delete();
 
                         this.Persona.SelectedItem.Delete();
 
@@ -45,7 +45,7 @@ namespace LightSwitchApplication
                         {
                             this.Persona.SelectedItem.Superior_SubGerente.First().Division_SubGerenciaItem.SubGerente = null;
 
-                            this.Persona.SelectedItem.Superior_SubGerente.First().Delete();
+                            //this.Persona.SelectedItem.Superior_SubGerente.First().Delete();
 
                             this.Persona.SelectedItem.Delete();
 
@@ -61,7 +61,7 @@ namespace LightSwitchApplication
                             {
                                 this.Persona.SelectedItem.Superior_JefeDirecto.First().Division_AreaItem.JefeDeArea = null;
 
-                                this.Persona.SelectedItem.Superior_JefeDirecto.First().Delete();
+                                //this.Persona.SelectedItem.Superior_JefeDirecto.First().Delete();
 
                                 this.Persona.SelectedItem.Delete();                                
 

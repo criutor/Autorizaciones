@@ -262,6 +262,8 @@ namespace LightSwitchApplication
             // Escriba el código aquí.
             try
             {
+                this.IDAreaSelected = null;
+                this.IDSubGerenciaSelected = null;
                 this.IDGerenciaSelected = this.Division_Gerencia.SelectedItem.Id_Gerencia;
             }
             catch { }
@@ -290,28 +292,33 @@ namespace LightSwitchApplication
 
         partial void Division_SubGerenciaDeleteSelected_Execute()
         {
-            try
-            {
-                this.IDSubGerenciaSelected = this.Division_SubGerencia.SelectedItem.Id_SubGerencia;
-            }
-            catch { }
+            
+                try
+                {
+                    this.IDAreaSelected = null;
+                    this.IDGerenciaSelected = null;
+                    this.IDSubGerenciaSelected = this.Division_SubGerencia.SelectedItem.Id_SubGerencia;
+                }
+                catch { }
 
-            if (this.Division_SubGerencia.SelectedItem.Division_Area.Count() > 0 )
-            {
-                this.ShowMessageBox("Primero debe eliminar las áreas asociadas", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-            }
-            else if (this.CargoRolPrivado.Count() > 0)
-            {
-                this.ShowMessageBox("Primero debe eliminar los cargos para rol privado asociados a esta subgerencia.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
-            }
-            else
-            {
-                this.Division_SubGerencia.SelectedItem.Delete();
-                this.Save();
-                this.Refresh();
-            }
+                if (this.Division_SubGerencia.SelectedItem.Division_Area.Count() > 0)
+                {
+                    this.ShowMessageBox("Primero debe eliminar las áreas asociadas", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                }
+                else if (this.CargoRolPrivado.Count() > 0)
+                {
+                    this.ShowMessageBox("Primero debe eliminar los cargos para rol privado asociados a esta subgerencia.", "ACCIÓN DENEGADA", MessageBoxOption.Ok);
+                }
+                else
+                {
+                    this.Division_SubGerencia.SelectedItem.Delete();
+                    this.Save();
+                    this.Refresh();
+                }
 
-            this.IDSubGerenciaSelected = null;
+                this.IDSubGerenciaSelected = null;
+
+            
         }
 
 
@@ -320,6 +327,8 @@ namespace LightSwitchApplication
         {
             try
             {
+                this.IDGerenciaSelected = null;
+                this.IDSubGerenciaSelected = null;
                 this.IDAreaSelected = this.Division_Area.SelectedItem.Id_Area;
             }
             catch { }

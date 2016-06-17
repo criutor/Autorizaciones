@@ -382,9 +382,6 @@
         <ApplicationNavigationLink
           Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]"
           Name="link2" />
-        <ApplicationNavigationLink
-          Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]"
-          Name="link7" />
       </ApplicationNavigationGroup>
     </Application.NavigationItems>
     <ApplicationCommand
@@ -656,6 +653,30 @@
               </ControlPropertySource>
             </ContentItem.PropertySources>
           </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="Save">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="ADMINISTRAR_EMPLEADOS_RRHH/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\guardar.png" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
         </ContentItem.CommandItems>
         <ContentItem
           Kind="Group"
@@ -700,7 +721,7 @@
               View=":DataGrid">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="BD EMPLEADOS" />
+                  Value="EMPLEADOS ROL GENERAL" />
               </ContentItem.Attributes>
               <ContentItem.CommandItems>
                 <ContentItem
@@ -849,33 +870,6 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  DataType=":String?"
-                  Kind="Value"
-                  Name="Cargo"
-                  View=":Label">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:PersonaItem/Properties[Cargo]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  DataType=":String?"
-                  Kind="Value"
-                  Name="AreaDeTrabajo">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="LightSwitchCommonModule:PersonaItem/Properties[AreaDeTrabajo]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   DataType=":DateTime?"
                   Kind="Value"
                   Name="FechaVigencia"
@@ -904,6 +898,33 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
+                  DataType=":String?"
+                  Kind="Value"
+                  Name="AreaDeTrabajo">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[AreaDeTrabajo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType=":String?"
+                  Kind="Value"
+                  Name="Cargo"
+                  View=":Label">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[Cargo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   DataType="Microsoft.LightSwitch.Extensions:EmailAddress?"
                   Kind="Value"
                   Name="Email">
@@ -915,6 +936,34 @@
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType="LightSwitchCommonModule:ConvenioColectivoItem"
+                  Kind="Details"
+                  Name="ConvenioColectivoItem"
+                  View=":DetailsAutoCompleteBox">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Convenio Colectivo" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="LightSwitchCommonModule:PersonaItem/Properties[ConvenioColectivoItem]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    DataType="LightSwitchCommonModule:ConvenioColectivoItem"
+                    Kind="Details"
+                    Name="ConvenioColectivoItemTemplate">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
                 </ContentItem>
                 <ContentItem
                   DataType=":Double?"
@@ -4098,6 +4147,10 @@
           <ContentItem
             Kind="Command"
             Name="CrearTrabajador">
+            <ContentItem.Attributes>
+              <DisplayName
+                Value="Crear Empleado" />
+            </ContentItem.Attributes>
             <ContentItem.DataSource>
               <ScreenExpressionTree>
                 <ChainExpression>
@@ -14374,6 +14427,18 @@
                 </ChainExpression>
               </ScreenExpressionTree>
             </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\eliminar cargo.png" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
           </ContentItem>
         </ContentItem.CommandItems>
         <ContentItem
@@ -21809,7 +21874,7 @@
                   DataType="LightSwitchCommonModule:ConvenioColectivoItem"
                   Kind="Details"
                   Name="ConvenioColectivoItem"
-                  View=":Summary">
+                  View=":DetailsAutoCompleteBox">
                   <ContentItem.Attributes>
                     <DisplayName
                       Value="Convenio Colectivo " />
@@ -21825,12 +21890,23 @@
                   <ContentItem
                     DataType="LightSwitchCommonModule:ConvenioColectivoItem"
                     Kind="Details"
-                    Name="RowTemplate1">
+                    Name="ConvenioColectivoItemTemplate"
+                    View=":Summary">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression />
                       </ScreenExpressionTree>
                     </ContentItem.DataSource>
+                    <ContentItem
+                      DataType="LightSwitchCommonModule:ConvenioColectivoItem"
+                      Kind="Details"
+                      Name="RowTemplate1">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
                   </ContentItem>
                 </ContentItem>
                 <ContentItem
@@ -27334,6 +27410,8 @@
         Name="RebajarSolicitud" />
       <ScreenMethod
         Name="AnularSolicitud" />
+      <ScreenMethod
+        Name="RebajarTodas" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -27582,6 +27660,30 @@
                     <ConstantExpression
                       ResultType=":String"
                       Value="Microsoft.LightSwitch.UserImageResources::Resources\RebajarSolicitud.png" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Kind="Command"
+            Name="RebajarTodas">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="SOLICITUDES_REBAJAR_ROLPRIVADO/Methods[RebajarTodas]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch:RootControl/Properties[Image]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      ResultType=":String"
+                      Value="Microsoft.LightSwitch.UserImageResources::Resources\AprobarTodas.png" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ControlPropertySource>

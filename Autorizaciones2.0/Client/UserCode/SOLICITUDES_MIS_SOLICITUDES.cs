@@ -165,7 +165,14 @@ namespace LightSwitchApplication
                 {
                     if (this.PersonaPorRut.First().EsRolPrivado == true)
                     {
-                        this.CloseModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+                        if (this.PersonaPorRut.First().Es_JefeDirecto == true)
+                        {
+                            this.CloseModalWindow("SeleccioneTipoDeSolicitud");
+                        }
+                        else
+                        {
+                            this.CloseModalWindow("SeleccioneTipoDeSolicitudRolPrivado");
+                        }
                     }
                     else if (this.PersonaPorRut.First().Es_JefeDirecto == true)
                     {
@@ -471,7 +478,7 @@ namespace LightSwitchApplication
                     result = false;
                 }
 
-                if (this.SOLICITUDES.SelectedItem.HorasExtras != true || this.SOLICITUDES.SelectedItem == null || this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true || this.SOLICITUDES.SelectedItem.Caducada == true || this.SOLICITUDES.SelectedItem.Completada == true)
+                if (this.SOLICITUDES.SelectedItem.HorasExtras != true || this.SOLICITUDES.SelectedItem == null || this.SOLICITUDES.SelectedItem.Rechazada == true || this.SOLICITUDES.SelectedItem.Cancelada == true || this.SOLICITUDES.SelectedItem.Rebajada == true || this.SOLICITUDES.SelectedItem.Caducada == true || this.SOLICITUDES.SelectedItem.Completada == true || this.SOLICITUDES.SelectedItem.VB_Empleado == true)
                 {
                     result = false;
                 }

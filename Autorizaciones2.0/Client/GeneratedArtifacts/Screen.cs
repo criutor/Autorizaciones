@@ -269,9 +269,11 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.IDataServiceQueryable PersonaQuery()
             {
-                return global::Microsoft.LightSwitch.DataServiceQueryable.Where(
-                    this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
-                    (p) => ((p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)) == false));
+                return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
+                    global::Microsoft.LightSwitch.DataServiceQueryable.Where(
+                        this.Screen.DataWorkspace.Autorizaciones_AdminsData.Persona,
+                        (p) => ((p.EsRolPrivado.HasValue && (p.EsRolPrivado == true)) == false)),
+                    "ConvenioColectivoItem");
             }
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -32693,6 +32695,18 @@ namespace LightSwitchApplication
         partial void AnularSolicitud_CanExecute(ref bool result);
         partial void AnularSolicitud_Execute();
 
+        /// <summary>
+        /// Llama al método de pantalla RebajarTodas.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void RebajarTodas()
+        {
+            this.Details.Methods.RebajarTodas.CreateInvocation().Execute();
+        }
+        partial void RebajarTodas_CanExecute(ref bool result);
+        partial void RebajarTodas_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -32810,10 +32824,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data _AnularSolicitudCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data _RebajarTodasCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data _RebajarSolicitudMethod;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data _AnularSolicitudMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data _RebajarTodasMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
@@ -32879,6 +32899,14 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass> RebajarTodas
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.CommandSetProperties.RebajarTodas);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -32901,6 +32929,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.MethodSetProperties.AnularSolicitud);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass> RebajarTodas
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.MethodSetProperties.RebajarTodas);
                     }
                 }
 
@@ -33042,6 +33078,20 @@ namespace LightSwitchApplication
                     return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass)d).Methods.AnularSolicitud.CreateInvocation();
                 }
 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Entry
+                    RebajarTodas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Entry(
+                        "RebajarTodas",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.CommandSetProperties._RebajarTodas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.CommandSetProperties._RebajarTodas_CreateExecutableObject);
+                private static void _RebajarTodas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RebajarTodasCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _RebajarTodas_CreateExecutableObject(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass)d).Methods.RebajarTodas.CreateInvocation();
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -33090,6 +33140,27 @@ namespace LightSwitchApplication
                 private static void _AnularSolicitud_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.AnularSolicitud_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Entry
+                    RebajarTodas = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Entry(
+                        "RebajarTodas",
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.MethodSetProperties._RebajarTodas_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.MethodSetProperties._RebajarTodas_CanInvoke,
+                        global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass.MethodSetProperties._RebajarTodas_InvokeMethod);
+                private static void _RebajarTodas_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass>.Data> c, global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RebajarTodasMethod, sf);
+                }
+                private static global::System.Exception _RebajarTodas_CanInvoke(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.RebajarTodas_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _RebajarTodas_InvokeMethod(global::LightSwitchApplication.SOLICITUDES_REBAJAR_ROLPRIVADO.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.RebajarTodas_Execute();
                 }
 
             }
