@@ -38,11 +38,12 @@ namespace LightSwitchApplication
 
                     //IDGERENCIA = PersonaPorNombreAD.First().Superior_GerenteQuery.First().Division_GerenciaItem.Id_Gerencia;
                     VBGERENTEGENERAL = true;
+                    ES_GERENTE = true;
                     SWITCHRUTGERENTE = null;//Traer a todos los gerentes(es opcional en la query)
 
                 }else
 
-                if (PersonaPorRutAD.First().Es_Gerente == true)
+                    if (PersonaPorRutAD.First().Es_Gerente == true && PersonaPorRutAD.First().Es_GerenteGeneral != true)
                 {
                     /*
                      * si solicitud es tipo horas extras
@@ -249,19 +250,7 @@ namespace LightSwitchApplication
             catch { }
         }
         */
-        partial void SeleccionarEmpleado_Execute()
-        {
-            // Escriba el código aquí.
-
-            try
-            {
-                this.EmpleadoFiltroSolicitudes = this.Persona.SelectedItem.Rut_Persona;
-                this.NombreEmpleadoSeleccionado = this.Persona.SelectedItem.NombreAD;
-            }
-            catch { }
-
-            this.CloseModalWindow("Empleados");
-        }
+       
 
         partial void LimpiarFechas_Execute()
         {
@@ -275,7 +264,6 @@ namespace LightSwitchApplication
         {
             // Escriba el código aquí.
             this.EmpleadoFiltroSolicitudes = null;
-            this.NombreEmpleadoSeleccionado = null;
 
             /*
             this.FechaSolicitudDesde = null;
@@ -341,6 +329,23 @@ namespace LightSwitchApplication
                             {
                                 this.RutUsuarioAD = operation.RutUsuario;
                             }
+        }
+
+        partial void EMPLEADO_Validate(ScreenValidationResultsBuilder results)
+        {
+            // results.AddPropertyError("<Mensaje de error>");
+            try
+            {
+                if (this.EMPLEADO == null)
+                {
+                    EmpleadoFiltroSolicitudes = null;
+                }
+                else
+                {
+                    EmpleadoFiltroSolicitudes = this.EMPLEADO.Rut_Persona;
+                }
+            }
+            catch { }
         }
 
     }

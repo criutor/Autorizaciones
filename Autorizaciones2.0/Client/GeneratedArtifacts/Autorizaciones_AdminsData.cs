@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Nombre de archivo original:
-// Fecha de generación: 17/06/2016 10:49:44
+// Fecha de generación: 17/06/2016 13:45:15
 namespace LightSwitchApplication.Implementation
 {
     
@@ -7703,6 +7703,58 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<bool> _VB_GerenteGeneral;
         partial void OnVB_GerenteGeneralChanging(global::System.Nullable<bool> value);
         partial void OnVB_GerenteGeneralChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad FueCompletada en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<bool> FueCompletada
+        {
+            get
+            {
+                return this._FueCompletada;
+            }
+            set
+            {
+                this.OnFueCompletadaChanging(value);
+                if (object.Equals(this.FueCompletada, value))
+                {
+                    return;
+                }
+                this._FueCompletada = value;
+                this.OnFueCompletadaChanged();
+                this.OnPropertyChanged("FueCompletada");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<bool> _FueCompletada;
+        partial void OnFueCompletadaChanging(global::System.Nullable<bool> value);
+        partial void OnFueCompletadaChanged();
+        /// <summary>
+        /// No hay comentarios para la propiedad ddhhmmOTROPERMISO en el esquema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string ddhhmmOTROPERMISO
+        {
+            get
+            {
+                return this._ddhhmmOTROPERMISO;
+            }
+            set
+            {
+                this.OnddhhmmOTROPERMISOChanging(value);
+                if (object.Equals(this.ddhhmmOTROPERMISO, value))
+                {
+                    return;
+                }
+                this._ddhhmmOTROPERMISO = value;
+                this.OnddhhmmOTROPERMISOChanged();
+                this.OnPropertyChanged("ddhhmmOTROPERMISO");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _ddhhmmOTROPERMISO;
+        partial void OnddhhmmOTROPERMISOChanging(string value);
+        partial void OnddhhmmOTROPERMISOChanged();
         /// <summary>
         /// No hay comentarios para la propiedad RutPersona_fk en el esquema.
         /// </summary>

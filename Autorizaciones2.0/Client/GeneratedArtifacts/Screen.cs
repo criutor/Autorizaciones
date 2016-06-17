@@ -11298,8 +11298,6 @@ namespace LightSwitchApplication
 
         partial void EmpleadoFiltroSolicitudes_Changed();
 
-        partial void NombreEmpleadoSeleccionado_Changed();
-
         partial void Cancelada_Changed();
 
         partial void VBJEFEAREA_Changed();
@@ -11317,6 +11315,10 @@ namespace LightSwitchApplication
         partial void SWITCHRUTGERENTE_Changed();
 
         partial void RutUsuarioAD_Changed();
+
+        partial void EMPLEADO_Changed();
+
+        partial void ES_GERENTE_Changed();
 
         /// <summary>
         /// Obtiene la colección visual Persona. La colección contiene todos los registros que se muestran actualmente en el control de cuadrícula o lista respectivo.
@@ -11589,22 +11591,6 @@ namespace LightSwitchApplication
  
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string NombreEmpleadoSeleccionado
-        {
-            get 
-            {
-                return global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
-            }
-            set
-            {
-                global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado, value);
-            }
-        }
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void NombreEmpleadoSeleccionado_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
- 
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Nullable<bool> Cancelada
         {
             get 
@@ -11746,6 +11732,38 @@ namespace LightSwitchApplication
         }
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RutUsuarioAD_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.PersonaItem EMPLEADO
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.EMPLEADO);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.EMPLEADO, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void EMPLEADO_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
+ 
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> ES_GERENTE
+        {
+            get 
+            {
+                return global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.ES_GERENTE);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.ES_GERENTE, value);
+            }
+        }
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ES_GERENTE_Validate(global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder results);
  
         /// <summary>
         /// Llama al método de pantalla MasDetalles.
@@ -11932,13 +11950,13 @@ namespace LightSwitchApplication
                 return this.Screen.DataWorkspace.Autorizaciones_AdminsData.PersonaPorRut(Rut_Persona);
             }
 
-            private global::Microsoft.LightSwitch.IDataServiceQueryable SOLICITUDESQuery(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Cancelada, global::System.Nullable<bool> Rebajada, global::System.Nullable<bool> Caducada, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, string Rut_Persona, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_GerenteGeneral, global::System.Nullable<int> Id_Area, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Gerencia, string RutUsuario)
+            private global::Microsoft.LightSwitch.IDataServiceQueryable SOLICITUDESQuery(global::System.Nullable<global::System.DateTime> FechaSolicitudDesde, global::System.Nullable<global::System.DateTime> FechaSolicitudHasta, global::System.Nullable<bool> Completada, global::System.Nullable<bool> Rechazada, global::System.Nullable<bool> Cancelada, global::System.Nullable<bool> Rebajada, global::System.Nullable<bool> Caducada, global::System.Nullable<bool> Administrativo, global::System.Nullable<bool> HorasExtras, global::System.Nullable<bool> OtroPermiso, global::System.Nullable<bool> Vacaciones, string Rut_Persona, global::System.Nullable<bool> VB_JefeDirecto, global::System.Nullable<bool> VB_SubGerente, global::System.Nullable<bool> VB_Gerente, global::System.Nullable<bool> VB_GerenteGeneral, global::System.Nullable<int> Id_Area, global::System.Nullable<int> Id_SubGerencia, global::System.Nullable<int> Id_Gerencia, string RutUsuario, global::System.Nullable<bool> Es_Gerente)
             {
                 return global::Microsoft.LightSwitch.DataServiceQueryable.Include(
                     global::Microsoft.LightSwitch.DataServiceQueryable.OrderByDescending(
                         global::Microsoft.LightSwitch.DataServiceQueryable.Where(
                             this.Screen.DataWorkspace.Autorizaciones_AdminsData.SolicitudesConFiltro(FechaSolicitudDesde, FechaSolicitudHasta, Completada, Rechazada, Cancelada, Rebajada, Caducada, Administrativo, HorasExtras, OtroPermiso, Vacaciones),
-                            (s) => (((((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)) && ((((s.VB_JefeDirecto.HasValue && (VB_JefeDirecto.HasValue && (s.VB_JefeDirecto == VB_JefeDirecto))) || (s.VB_SubGerente.HasValue && (VB_SubGerente.HasValue && (s.VB_SubGerente == VB_SubGerente)))) || (s.VB_Gerente.HasValue && (VB_Gerente.HasValue && (s.VB_Gerente == VB_Gerente)))) || (s.VB_GerenteGeneral.HasValue && (VB_GerenteGeneral.HasValue && (s.VB_GerenteGeneral == VB_GerenteGeneral))))) && (((((Id_Area.HasValue && (s.PersonaItem1.Division_AreaItem.Id_Area == Id_Area)) || (Id_SubGerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (s.PersonaItem1.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (s.PersonaItem1.IDGerencia_para_subgerentes == Id_Gerencia))))) && ((s.PersonaItem1.Rut_Persona.CompareTo(RutUsuario) == 0) == false))),
+                            (s) => (((((Rut_Persona == null) || (s.PersonaItem1.Rut_Persona.CompareTo(Rut_Persona) == 0)) && ((((s.VB_JefeDirecto.HasValue && (VB_JefeDirecto.HasValue && (s.VB_JefeDirecto == VB_JefeDirecto))) || (s.VB_SubGerente.HasValue && (VB_SubGerente.HasValue && (s.VB_SubGerente == VB_SubGerente)))) || (s.VB_Gerente.HasValue && (VB_Gerente.HasValue && (s.VB_Gerente == VB_Gerente)))) || (s.VB_GerenteGeneral.HasValue && (VB_GerenteGeneral.HasValue && (s.VB_GerenteGeneral == VB_GerenteGeneral))))) && ((((((Id_Area.HasValue && (s.PersonaItem1.Division_AreaItem.Id_Area == Id_Area)) || (Id_SubGerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Id_SubGerencia == Id_SubGerencia))) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_SubGerenciaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (Id_Gerencia.HasValue && (s.PersonaItem1.Division_AreaItem.Division_GerenciaItem.Id_Gerencia == Id_Gerencia))) || (s.PersonaItem1.IDGerencia_para_subgerentes.HasValue && (Id_Gerencia.HasValue && (s.PersonaItem1.IDGerencia_para_subgerentes == Id_Gerencia)))) || (s.PersonaItem1.Es_Gerente.HasValue && (Es_Gerente.HasValue && (s.PersonaItem1.Es_Gerente == Es_Gerente))))) && ((s.PersonaItem1.Rut_Persona.CompareTo(RutUsuario) == 0) == false))),
                         (s) => s.FechaSolicitud),
                     "PersonaItem1");
             }
@@ -11995,9 +12013,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>.Data _EmpleadoFiltroSolicitudes;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>.Data _NombreEmpleadoSeleccionado;
-
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Data _Cancelada;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -12023,6 +12038,12 @@ namespace LightSwitchApplication
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>.Data _RutUsuarioAD;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data _EMPLEADO;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Data _ES_GERENTE;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass>.Data _MasDetallesCommand;
@@ -12209,14 +12230,6 @@ namespace LightSwitchApplication
                     }
                 }
 
-                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string> NombreEmpleadoSeleccionado
-                {
-                    get
-                    {
-                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.NombreEmpleadoSeleccionado);
-                    }
-                }
-
                 public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>> Cancelada
                 {
                     get
@@ -12286,6 +12299,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.RutUsuarioAD);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::LightSwitchApplication.PersonaItem> EMPLEADO
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::LightSwitchApplication.PersonaItem>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.EMPLEADO);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>> ES_GERENTE
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>)base.GetItem(global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties.ES_GERENTE);
                     }
                 }
 
@@ -12514,7 +12543,7 @@ namespace LightSwitchApplication
                 }
                 private static global::Microsoft.LightSwitch.IDataServiceQueryable _SOLICITUDES_CreateQuery(global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass d, object[] args)
                 {
-                    return d.SOLICITUDESQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Nullable<bool>)args[2], (global::System.Nullable<bool>)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10], (string)args[11], (global::System.Nullable<bool>)args[12], (global::System.Nullable<bool>)args[13], (global::System.Nullable<bool>)args[14], (global::System.Nullable<bool>)args[15], (global::System.Nullable<int>)args[16], (global::System.Nullable<int>)args[17], (global::System.Nullable<int>)args[18], (string)args[19]);
+                    return d.SOLICITUDESQuery((global::System.Nullable<global::System.DateTime>)args[0], (global::System.Nullable<global::System.DateTime>)args[1], (global::System.Nullable<bool>)args[2], (global::System.Nullable<bool>)args[3], (global::System.Nullable<bool>)args[4], (global::System.Nullable<bool>)args[5], (global::System.Nullable<bool>)args[6], (global::System.Nullable<bool>)args[7], (global::System.Nullable<bool>)args[8], (global::System.Nullable<bool>)args[9], (global::System.Nullable<bool>)args[10], (string)args[11], (global::System.Nullable<bool>)args[12], (global::System.Nullable<bool>)args[13], (global::System.Nullable<bool>)args[14], (global::System.Nullable<bool>)args[15], (global::System.Nullable<int>)args[16], (global::System.Nullable<int>)args[17], (global::System.Nullable<int>)args[18], (string)args[19], (global::System.Nullable<bool>)args[20]);
                 }
                 private static void _SOLICITUDES_SelectionChanged(global::LightSwitchApplication.SOLICITUDES_A_CARGO s)
                 {
@@ -12809,26 +12838,6 @@ namespace LightSwitchApplication
                     s.EmpleadoFiltroSolicitudes_Changed();
                 }
 
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>.Entry
-                    NombreEmpleadoSeleccionado = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>.Entry(
-                        "NombreEmpleadoSeleccionado",
-                        false,
-                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Stub,
-                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_Validate,
-                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._NombreEmpleadoSeleccionado_OnValueChanged);
-                private static void _NombreEmpleadoSeleccionado_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass d, object sf)
-                {
-                    c(d, ref d._NombreEmpleadoSeleccionado, sf);
-                }
-                private static void _NombreEmpleadoSeleccionado_Validate(global::LightSwitchApplication.SOLICITUDES_A_CARGO s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
-                {
-                    s.NombreEmpleadoSeleccionado_Validate(r);
-                }
-                private static void _NombreEmpleadoSeleccionado_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_A_CARGO s)
-                {
-                    s.NombreEmpleadoSeleccionado_Changed();
-                }
-
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Entry
                     Cancelada = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Entry(
                         "Cancelada",
@@ -13007,6 +13016,46 @@ namespace LightSwitchApplication
                 private static void _RutUsuarioAD_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_A_CARGO s)
                 {
                     s.RutUsuarioAD_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry
+                    EMPLEADO = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Entry(
+                        "EMPLEADO",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._EMPLEADO_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._EMPLEADO_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._EMPLEADO_OnValueChanged);
+                private static void _EMPLEADO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::LightSwitchApplication.PersonaItem>.Data> c, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._EMPLEADO, sf);
+                }
+                private static void _EMPLEADO_Validate(global::LightSwitchApplication.SOLICITUDES_A_CARGO s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.EMPLEADO_Validate(r);
+                }
+                private static void _EMPLEADO_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_A_CARGO s)
+                {
+                    s.EMPLEADO_Changed();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Entry
+                    ES_GERENTE = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "ES_GERENTE",
+                        false,
+                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._ES_GERENTE_Stub,
+                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._ES_GERENTE_Validate,
+                        global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass.PropertySetProperties._ES_GERENTE_OnValueChanged);
+                private static void _ES_GERENTE_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenLocalProperty<global::LightSwitchApplication.SOLICITUDES_A_CARGO, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.SOLICITUDES_A_CARGO.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ES_GERENTE, sf);
+                }
+                private static void _ES_GERENTE_Validate(global::LightSwitchApplication.SOLICITUDES_A_CARGO s, global::Microsoft.LightSwitch.Framework.Client.ScreenValidationResultsBuilder r)
+                {
+                    s.ES_GERENTE_Validate(r);
+                }
+                private static void _ES_GERENTE_OnValueChanged(global::LightSwitchApplication.SOLICITUDES_A_CARGO s)
+                {
+                    s.ES_GERENTE_Changed();
                 }
 
             }

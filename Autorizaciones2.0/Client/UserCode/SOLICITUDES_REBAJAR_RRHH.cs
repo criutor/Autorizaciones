@@ -101,7 +101,7 @@ namespace LightSwitchApplication
                         else
                             if (this.SOLICITUDES.SelectedItem.OtroPermiso == true)
                             {
-                                result = this.ShowMessageBox("Esta acción indica que RR.HH ha recibido esta solicitud y gestionará su recuperación, descuento o compensación. ¿Desea continuar?");
+                                Mensaje = "Esta acción indica que RR.HH ha recibido esta solicitud y gestionará su recuperación, descuento o compensación. ¿Desea continuar?";
                             }
 
                     result = this.ShowMessageBox(Mensaje, "ADVERTENCIA", MessageBoxOption.YesNo);

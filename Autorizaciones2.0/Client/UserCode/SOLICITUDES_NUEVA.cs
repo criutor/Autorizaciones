@@ -408,6 +408,20 @@ namespace LightSwitchApplication
             return businessDays;
         }
 
+        public static double ConvertHoursToTotalDays(double hours)
+        {
+            TimeSpan result = TimeSpan.FromHours(hours);
+
+            return result.TotalDays;
+        }
+
+        public static double ConvertMinutesToTotalDays(double minutes)
+        {
+            TimeSpan result = TimeSpan.FromMinutes(minutes);
+
+            return result.TotalDays;
+        }
+
         partial void SOLICITUD_Validate(ScreenValidationResultsBuilder results)
         {
             if (InvocarSaldoVacaciones == true) 
@@ -611,7 +625,11 @@ namespace LightSwitchApplication
 
                 }else
                     {
-                        this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+                        //this.SOLICITUD.DiasSolicitados = BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS);
+
+                        this.SOLICITUD.DiasSolicitados = Math.Round((BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 1) + (ConvertHoursToTotalDays(this.SOLICITUD.Termino.Value.Hour - this.SOLICITUD.Inicio.Value.Hour)) + (ConvertMinutesToTotalDays(this.SOLICITUD.Termino.Value.Minute - this.SOLICITUD.Inicio.Value.Minute)), 2);
+
+                        this.SOLICITUD.ddhhmmOTROPERMISO = "(" + (BusinessDaysUntil(this.SOLICITUD.Inicio.Value, this.SOLICITUD.Termino.Value, FERIADOS) - 1).ToString() + " Días, " + (this.SOLICITUD.Termino.Value.Hour - this.SOLICITUD.Inicio.Value.Hour).ToString() + " Horas, " + (this.SOLICITUD.Termino.Value.Minute - this.SOLICITUD.Inicio.Value.Minute).ToString() + " Minutos )";
                     }
             }
 

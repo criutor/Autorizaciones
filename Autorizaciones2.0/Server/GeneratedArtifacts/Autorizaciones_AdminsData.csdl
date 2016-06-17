@@ -335,6 +335,8 @@
     <Property Name="CodigoEstado" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="EmailProximoDestinatario" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="VB_GerenteGeneral" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="FueCompletada" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="ddhhmmOTROPERMISO" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="RutPersona_fk" Type="Edm.String" Nullable="false" MaxLength="12" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ESTADOS" Relationship="LightSwitchApplication.FK_ESTADOS_SOLICITUDES" ToRole="ESTADOS" FromRole="SOLICITUDES" />
     <NavigationProperty Name="PersonaItem1" Relationship="LightSwitchApplication.FK_SOLICITUDES_Persona" ToRole="Persona" FromRole="SOLICITUDES" />
@@ -599,7 +601,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_Gerente" Type="LightSwitchApplication.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -623,7 +627,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_JefeDirecto" Type="LightSwitchApplication.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -647,7 +653,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Persona">
-    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="LightSwitchApplication.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_SubGerente" Type="LightSwitchApplication.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">

@@ -2351,6 +2351,16 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("VB_GerenteGeneral");
         }
         
+        partial void OnFueCompletadaChanged()
+        {
+            this.___OnPropertyChanged("FueCompletada");
+        }
+        
+        partial void OnddhhmmOTROPERMISOChanged()
+        {
+            this.___OnPropertyChanged("ddhhmmOTROPERMISO");
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.IImplementation.ESTADOS
         {
             get

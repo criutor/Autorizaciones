@@ -1015,6 +1015,54 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<bool> FueCompletada
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.FueCompletada);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.FueCompletada, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FueCompletada_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FueCompletada_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FueCompletada_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ddhhmmOTROPERMISO
+        {
+            get
+            {
+                return global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.GetValue(this, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.ddhhmmOTROPERMISO);
+            }
+            set
+            {
+                global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.SetValue(this, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.ddhhmmOTROPERMISO, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ddhhmmOTROPERMISO_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ddhhmmOTROPERMISO_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ddhhmmOTROPERMISO_Changed();
+
+        /// <summary>
+        /// No hay ninguna descripción modelada
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.ESTADOSItem> ESTADOS
         {
             get
@@ -1451,6 +1499,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>> FueCompletada
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.FueCompletada) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string> ddhhmmOTROPERMISO
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties.ddhhmmOTROPERMISO) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem> ESTADOS
                 {
                     get
@@ -1512,6 +1576,8 @@ namespace LightSwitchApplication
                 new global::System.Nullable<int> CodigoEstado { get; set; }
                 new string EmailProximoDestinatario { get; set; }
                 new global::System.Nullable<bool> VB_GerenteGeneral { get; set; }
+                new global::System.Nullable<bool> FueCompletada { get; set; }
+                new string ddhhmmOTROPERMISO { get; set; }
                 new global::System.Collections.IEnumerable ESTADOS { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation PersonaItem1 { get; set; }
             }
@@ -2963,6 +3029,80 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>>.Entry
+                    FueCompletada = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                        "FueCompletada",
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._FueCompletada_Stub,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._FueCompletada_ComputeIsReadOnly,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._FueCompletada_Validate,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._FueCompletada_GetImplementationValue,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._FueCompletada_SetImplementationValue,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._FueCompletada_OnValueChanged);
+                private static void _FueCompletada_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FueCompletada, sf);
+                }
+                private static bool _FueCompletada_ComputeIsReadOnly(global::LightSwitchApplication.SOLICITUDESItem e)
+                {
+                    bool result = false;
+                    e.FueCompletada_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _FueCompletada_Validate(global::LightSwitchApplication.SOLICITUDESItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.FueCompletada_Validate(r);
+                }
+                private static global::System.Nullable<bool> _FueCompletada_GetImplementationValue(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.FueCompletada;
+                }
+                private static void _FueCompletada_SetImplementationValue(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d, global::System.Nullable<bool> v)
+                {
+                    d.ImplementationEntity.FueCompletada = v;
+                }
+                private static void _FueCompletada_OnValueChanged(global::LightSwitchApplication.SOLICITUDESItem e)
+                {
+                    e.FueCompletada_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Entry
+                    ddhhmmOTROPERMISO = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Entry(
+                        "ddhhmmOTROPERMISO",
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._ddhhmmOTROPERMISO_Stub,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._ddhhmmOTROPERMISO_ComputeIsReadOnly,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._ddhhmmOTROPERMISO_Validate,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._ddhhmmOTROPERMISO_GetImplementationValue,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._ddhhmmOTROPERMISO_SetImplementationValue,
+                        global::LightSwitchApplication.SOLICITUDESItem.DetailsClass.PropertySetProperties._ddhhmmOTROPERMISO_OnValueChanged);
+                private static void _ddhhmmOTROPERMISO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ddhhmmOTROPERMISO, sf);
+                }
+                private static bool _ddhhmmOTROPERMISO_ComputeIsReadOnly(global::LightSwitchApplication.SOLICITUDESItem e)
+                {
+                    bool result = false;
+                    e.ddhhmmOTROPERMISO_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ddhhmmOTROPERMISO_Validate(global::LightSwitchApplication.SOLICITUDESItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ddhhmmOTROPERMISO_Validate(r);
+                }
+                private static string _ddhhmmOTROPERMISO_GetImplementationValue(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ddhhmmOTROPERMISO;
+                }
+                private static void _ddhhmmOTROPERMISO_SetImplementationValue(global::LightSwitchApplication.SOLICITUDESItem.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ddhhmmOTROPERMISO = v;
+                }
+                private static void _ddhhmmOTROPERMISO_OnValueChanged(global::LightSwitchApplication.SOLICITUDESItem e)
+                {
+                    e.ddhhmmOTROPERMISO_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry
                     ESTADOS = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Entry(
                         "ESTADOS",
@@ -3147,6 +3287,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>>.Data _VB_GerenteGeneral;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::System.Nullable<bool>>.Data _FueCompletada;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, string>.Data _ddhhmmOTROPERMISO;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SOLICITUDESItem, global::LightSwitchApplication.SOLICITUDESItem.DetailsClass, global::LightSwitchApplication.ESTADOSItem>.Data _ESTADOS;

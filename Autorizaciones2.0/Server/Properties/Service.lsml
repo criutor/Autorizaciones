@@ -939,7 +939,7 @@
         Value="System.Data.SqlClient" />
       <ConnectionProperty
         Name="SafeConnectionString"
-        Value="Data Source=172.17.40.121;Initial Catalog=Autorizaciones_Admins;User ID=sa" />
+        Value="Data Source=172.17.40.121;Initial Catalog=Autorizaciones_Admins;User ID=sa;Password=planvital" />
       <ConnectionProperty
         Name="ConnectionStringGuid"
         Value="79142de2-0822-410c-896f-a5a6e9eadd34" />
@@ -2278,6 +2278,17 @@
           Name="RutEmpleado"
           Nullable="True"
           Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[RutEmpleado]"
+          Type="nvarchar" />
+        <SsdlProperty
+          Name="FueCompletada"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[FueCompletada]"
+          Type="bit" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ddhhmmOTROPERMISO"
+          Nullable="True"
+          Property="LightSwitchCommonModule:SOLICITUDESItem/Properties[ddhhmmOTROPERMISO]"
           Type="nvarchar" />
         <SsdlForeignKeyProperty
           MaxLength="12"

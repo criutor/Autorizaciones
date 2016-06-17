@@ -7886,6 +7886,54 @@ namespace Autorizaciones_AdminsData.Implementation
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Boolean> FueCompletada
+        {
+            get
+            {
+                return _FueCompletada;
+            }
+            set
+            {
+                OnFueCompletadaChanging(value);
+                ReportPropertyChanging("FueCompletada");
+                _FueCompletada = value;
+                ReportPropertyChanged("FueCompletada");
+                OnFueCompletadaChanged();
+            }
+        }
+        private Nullable<global::System.Boolean> _FueCompletada;
+        partial void OnFueCompletadaChanging(Nullable<global::System.Boolean> value);
+        partial void OnFueCompletadaChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ddhhmmOTROPERMISO
+        {
+            get
+            {
+                return _ddhhmmOTROPERMISO;
+            }
+            set
+            {
+                OnddhhmmOTROPERMISOChanging(value);
+                ReportPropertyChanging("ddhhmmOTROPERMISO");
+                _ddhhmmOTROPERMISO = value;
+                ReportPropertyChanged("ddhhmmOTROPERMISO");
+                OnddhhmmOTROPERMISOChanged();
+            }
+        }
+        private global::System.String _ddhhmmOTROPERMISO;
+        partial void OnddhhmmOTROPERMISOChanging(global::System.String value);
+        partial void OnddhhmmOTROPERMISOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String RutPersona_fk

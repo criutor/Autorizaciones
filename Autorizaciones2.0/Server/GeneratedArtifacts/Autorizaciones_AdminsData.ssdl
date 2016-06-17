@@ -415,6 +415,8 @@
     <Property Name="CodigoEstado" Type="int" />
     <Property Name="EmailProximoDestinatario" Type="nvarchar" MaxLength="50" />
     <Property Name="VB_GerenteGeneral" Type="bit" />
+    <Property Name="FueCompletada" Type="bit" />
+    <Property Name="ddhhmmOTROPERMISO" Type="nvarchar" MaxLength="50" />
     <Property Name="RutPersona_fk" Type="nvarchar" Nullable="false" MaxLength="12" />
   </EntityType>
   <EntityType Name="CargoRolPrivadoItem">
@@ -676,7 +678,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_Gerente_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_Gerente" Type="Autorizaciones_AdminsDataStore.Superior_GerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -700,7 +704,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_JefeDirecto_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_JefeDirecto" Type="Autorizaciones_AdminsDataStore.Superior_JefeDirectoItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">
@@ -724,7 +730,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Superior_SubGerente_Persona">
-    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1" />
+    <End Role="Persona" Type="Autorizaciones_AdminsDataStore.PersonaItem" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Superior_SubGerente" Type="Autorizaciones_AdminsDataStore.Superior_SubGerenteItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Persona">

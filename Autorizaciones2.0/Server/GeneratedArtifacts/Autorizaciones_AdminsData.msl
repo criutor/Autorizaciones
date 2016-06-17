@@ -316,6 +316,8 @@
           <ScalarProperty Name="CodigoEstado" ColumnName="CodigoEstado" />
           <ScalarProperty Name="EmailProximoDestinatario" ColumnName="EmailProximoDestinatario" />
           <ScalarProperty Name="VB_GerenteGeneral" ColumnName="VB_GerenteGeneral" />
+          <ScalarProperty Name="FueCompletada" ColumnName="FueCompletada" />
+          <ScalarProperty Name="ddhhmmOTROPERMISO" ColumnName="ddhhmmOTROPERMISO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

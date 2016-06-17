@@ -8311,7 +8311,7 @@
       Name="Persona">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8343,7 +8343,7 @@
       Name="Persona">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8375,7 +8375,7 @@
       Name="Persona">
       <AssociationEnd.Attributes>
         <DeleteRule
-          Action="Unset" />
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8893,6 +8893,21 @@
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
           <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="FueCompletada"
+        PropertyType=":Boolean?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ddhhmmOTROPERMISO"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
     </EntityType.Properties>
