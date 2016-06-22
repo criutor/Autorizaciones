@@ -6096,6 +6096,10 @@
                 <ContentItem
                   Kind="Command"
                   Name="SolicitarOtroPermiso">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Solicitar Permiso" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -6160,6 +6164,10 @@
                 <ContentItem
                   Kind="Command"
                   Name="SolicitarOtroPermiso1">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Solicitar Permiso" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -12126,16 +12134,6 @@
               Kind="Group"
               Name="HORASEXTRAS"
               View=":GroupBox">
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch:RootControl/Properties[HorizontalAlignment]">
-                  <ScreenExpressionTree>
-                    <ConstantExpression
-                      ResultType=":String"
-                      Value="Left" />
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
               <ContentItem
                 Kind="Group"
                 Name="Group1"
@@ -12540,148 +12538,188 @@
                   Value="SOLICITUD DE PERMISO" />
               </ContentItem.Attributes>
               <ContentItem
-                DataType=":DateTime?"
-                Kind="Value"
-                Name="SOLICITUDESItemProperty_Inicio4">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="INICIO" />
-                </ContentItem.Attributes>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
-                      <MemberExpression
-                        Member="Inicio" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+                Kind="Group"
+                Name="Group6">
+                <ContentItem
+                  DataType=":DateTime?"
+                  Kind="Value"
+                  Name="SOLICITUDESItemProperty_Inicio4">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="INICIO" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
+                        <MemberExpression
+                          Member="Inicio" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType=":DateTime?"
+                  Kind="Value"
+                  Name="SOLICITUDESItemProperty_Termino3">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="TÉRMINO" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
+                        <MemberExpression
+                          Member="Termino" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
               </ContentItem>
               <ContentItem
-                DataType=":DateTime?"
-                Kind="Value"
-                Name="SOLICITUDESItemProperty_Termino3">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="TÉRMINO" />
-                </ContentItem.Attributes>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
-                      <MemberExpression
-                        Member="Termino" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
+                Kind="Group"
+                Name="Group7">
+                <ContentItem
+                  DataType=":Double?"
+                  Kind="Value"
+                  Name="SOLICITUDESItemProperty_NumeroDiasTomados3"
+                  View=":Label">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="DÍAS SOLICITADOS" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
+                        <MemberExpression
+                          Member="DiasSolicitados" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property=":RootControl/Properties[HorizontalAlignment]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":String"
+                          Value="Left" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property=":RootControl/Properties[MinWidth]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":Double"
+                          Value="90" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property=":RootControl/Properties[MaxWidth]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":Double"
+                          Value="90" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  DataType=":String?"
+                  Kind="Value"
+                  Name="SOLICITUD_ddhhmmOTROPERMISO"
+                  View=":Label">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
+                        <MemberExpression
+                          Member="ddhhmmOTROPERMISO" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch:RootControl/Properties[AttachedLabelPosition]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            ResultType=":String"
+                            Value="Collapsed" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
               </ContentItem>
               <ContentItem
-                DataType=":Double?"
-                Kind="Value"
-                Name="SOLICITUDESItemProperty_NumeroDiasTomados3"
-                View=":Label">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="DÍAS SOLICITADOS" />
-                </ContentItem.Attributes>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="SOLICITUDES_NUEVA/Properties[SOLICITUD]" />
-                      <MemberExpression
-                        Member="DiasSolicitados" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch:RootControl/Properties[HorizontalAlignment]">
+                Kind="Group"
+                Name="Group8">
+                <ContentItem
+                  DataType=":Boolean"
+                  Kind="Value"
+                  Name="CONDESCUENTO">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="CON DESCUENTO?" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
                     <ScreenExpressionTree>
-                      <ConstantExpression
-                        ResultType=":String"
-                        Value="Left" />
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="SOLICITUDES_NUEVA/Properties[CONDESCUENTO]" />
+                      </ChainExpression>
                     </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch:RootControl/Properties[MinWidth]">
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  DataType=":String?"
+                  Kind="Value"
+                  Name="OBSERVACIONES3">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="JUSTIFICACIÓN (Obligatorio)" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
                     <ScreenExpressionTree>
-                      <ConstantExpression
-                        ResultType=":Double"
-                        Value="90" />
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="SOLICITUDES_NUEVA/Properties[OBSERVACIONES]" />
+                      </ChainExpression>
                     </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch:RootControl/Properties[MaxWidth]">
-                    <ScreenExpressionTree>
-                      <ConstantExpression
-                        ResultType=":Double"
-                        Value="90" />
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                DataType=":Boolean"
-                Kind="Value"
-                Name="CONDESCUENTO">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="CON DESCUENTO?" />
-                </ContentItem.Attributes>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="SOLICITUDES_NUEVA/Properties[CONDESCUENTO]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                DataType=":String?"
-                Kind="Value"
-                Name="OBSERVACIONES3">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="JUSTIFICACIÓN (Obligatorio)" />
-                </ContentItem.Attributes>
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="SOLICITUDES_NUEVA/Properties[OBSERVACIONES]" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch:RootControl/Properties[MinWidth]">
-                    <ScreenExpressionTree>
-                      <ConstantExpression
-                        ResultType=":Double"
-                        Value="650" />
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch:RootControl/Properties[MaxWidth]">
-                    <ScreenExpressionTree>
-                      <ConstantExpression
-                        ResultType=":Double"
-                        Value="650" />
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch:RootControl/Properties[HorizontalAlignment]">
-                    <ScreenExpressionTree>
-                      <ConstantExpression
-                        ResultType=":String"
-                        Value="Left" />
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
+                  </ContentItem.DataSource>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property=":RootControl/Properties[MinWidth]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":Double"
+                          Value="650" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property=":RootControl/Properties[MaxWidth]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":Double"
+                          Value="650" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property=":RootControl/Properties[HorizontalAlignment]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          ResultType=":String"
+                          Value="Left" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
               </ContentItem>
             </ContentItem>
           </ContentItem>
@@ -19577,7 +19615,7 @@
                           <ChainExpression>
                             <ConstantExpression
                               ResultType=":String"
-                              Value="ESTA ACCIÓN RESETEA EL SALDO DE DÍAS ADMINISTRATIVOS DE TODOS LOS EMPLEADOS QUE NO SON ROL PRIVADO AL VALOR 3." />
+                              Value="ESTA ACCIÓN RESETEA EL SALDO DE DÍAS ADMINISTRATIVOS DE TODOS LOS EMPLEADOS QUE ROL GENERAL AL VALOR 3." />
                           </ChainExpression>
                         </ScreenExpressionTree>
                       </ControlPropertySource>

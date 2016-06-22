@@ -501,12 +501,12 @@ namespace LightSwitchApplication
 
         partial void SolicitudAdministrativoEnEspera_Execute()
         {
-            this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por días administrativos en espera de aprobación", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
+            this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por días administrativos en espera de aprobación o rebaja", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
         }
 
         partial void SolicitudVacacionesEnEspera_Execute()
         {
-            this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por Vacaciones en espera de aprobación", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
+            this.ShowMessageBox("Lo sentimos, ya tienes una solicitud por Vacaciones en espera de aprobación o rebaja", "NO PUEDES TENER MÁS DE UNA SOLICITUD EN ESPERA!", MessageBoxOption.Ok);
         }
 
         //traer el rut usando el nombre

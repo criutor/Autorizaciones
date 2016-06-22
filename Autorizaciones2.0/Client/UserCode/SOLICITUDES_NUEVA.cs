@@ -555,7 +555,7 @@ namespace LightSwitchApplication
 
             }
 
-            if (TIPOSOLICITUD == 4)// si la solicitud es del tipo otro permiso
+            if (TIPOSOLICITUD == 4)// si la solicitud es del tipo permiso
             {
                 if (this.SOLICITUD.ConDescuentoBoolean == true)
                 {

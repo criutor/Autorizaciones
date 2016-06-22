@@ -14,7 +14,7 @@ namespace LightSwitchApplication
         partial void ResetearDíasAdministrativos_Execute()
         {
             // Escriba el código aquí.
-            System.Windows.MessageBoxResult result = this.ShowMessageBox("El saldo de días administrativos de todos los empleados que NO son rol privado será igual a '3'. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
+            System.Windows.MessageBoxResult result = this.ShowMessageBox("El saldo de días administrativos de todos los empleados que son rol general será igual a '3'. ¿Desea continuar?", "ADVERTENCIA", MessageBoxOption.YesNo);
 
             if (result == System.Windows.MessageBoxResult.Yes)
             {
