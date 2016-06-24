@@ -39,7 +39,7 @@ namespace LightSwitchApplication
         partial void ADMINISTRAR_CARGOS_ROL_PRIVADO_CanRun(ref bool result)
         {
             // Establece el resultado en el valor del campo deseado
-            result = this.User.HasPermission(Permissions.AdminRRHH);
+            result = this.User.HasPermission(Permissions.AdminRolPrivado);
         }
 
         partial void SOLICITUDES_REBAJAR_ADMINISTRATIVOS_NRP_CanRun(ref bool result)
@@ -98,10 +98,8 @@ namespace LightSwitchApplication
 
         partial void SOLICITUDES_APROBACION_CanRun(ref bool result)
         {
-            //Puede entrar a esta pantalla solo si tiene un cargo de superior
-
-            ///*// ESTO ES PARA DEPLOY
-                //Consultar el rut del user.
+            //Puede entrar a esta pantalla solo si tiene un cargo con rol aprobador
+              
                 DataWorkspace dataWorkspace = new DataWorkspace();
             
                 ConsultarRutUsuarioADItem operation =
@@ -111,12 +109,185 @@ namespace LightSwitchApplication
 
                 dataWorkspace.Autorizaciones_AdminsData.SaveChanges();
             
-                //Consultar el rol del user
-            //*/
-
             DataWorkspace dataWorkspace2 = new DataWorkspace();
 
-            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();// ESTO ES PARA DEPLOY
+            //var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();//Original
+
+            string RutUsuarioAD;
+
+            if (User.HasPermission(Permissions.SalomeEscobar) == true)
+            {
+                RutUsuarioAD = "15413075-6";//salome
+            }
+            else
+
+                if (User.HasPermission(Permissions.GustavoRubio) == true)
+                {
+                    RutUsuarioAD = "17511042-9";//gustavo
+                }
+                else
+
+                    if (User.HasPermission(Permissions.CesarRiutor) == true)
+                    {
+                        RutUsuarioAD = "17229504-5";//cesar
+                    }
+                    else
+
+                        if (User.HasPermission(Permissions.MauricioHernandez) == true)
+                        {
+                            RutUsuarioAD = "10686667-8";
+                        }
+                        else
+
+                            if (User.HasPermission(Permissions.JimenaAriza) == true)
+                            {
+                                RutUsuarioAD = "10848223-0";
+                            }
+                            else
+
+                                if (User.HasPermission(Permissions.MarceloMonsalve) == true)
+                                {
+                                    RutUsuarioAD = "12233917-3";
+                                }
+                                else
+
+                                    if (User.HasPermission(Permissions.PaulaCastro) == true)
+                                    {
+                                        RutUsuarioAD = "12833658-3";
+                                    }
+                                    else
+
+                                        if (User.HasPermission(Permissions.JanetGomez) == true)
+                                        {
+                                            RutUsuarioAD = "12855246-4";
+                                        }
+                                        else
+
+                                            if (User.HasPermission(Permissions.RodrigoLeiva) == true)
+                                            {
+                                                RutUsuarioAD = "13995715-6";
+                                            }
+                                            else
+
+                                                if (User.HasPermission(Permissions.JoseJoaquinPrat) == true)
+                                                {
+                                                    RutUsuarioAD = "14120256-1";
+                                                }
+                                                else
+
+                                                    if (User.HasPermission(Permissions.CarolinaBarrientos) == true)
+                                                    {
+                                                        RutUsuarioAD = "14335101-7";
+                                                    }
+                                                    else
+
+                                                        if (User.HasPermission(Permissions.IsraelSepulveda) == true)
+                                                        {
+                                                            RutUsuarioAD = "16114128-3";
+                                                        }
+                                                        else
+
+                                                            if (User.HasPermission(Permissions.RodrigoAstudillo) == true)
+                                                            {
+                                                                RutUsuarioAD = "16121554-6";
+                                                            }
+                                                            else
+
+                                                                if (User.HasPermission(Permissions.DanielaOportus) == true)
+                                                                {
+                                                                    RutUsuarioAD = "16191035-K";
+                                                                }
+                                                                else
+
+                                                                    if (User.HasPermission(Permissions.FlorMoraga) == true)
+                                                                    {
+                                                                        RutUsuarioAD = "16524487-7";
+                                                                    }
+                                                                    else
+
+                                                                        if (User.HasPermission(Permissions.MariaJoseVives) == true)
+                                                                        {
+                                                                            RutUsuarioAD = "16570769-9";
+                                                                        }
+                                                                        else
+
+                                                                            if (User.HasPermission(Permissions.VictoriaGallardo) == true)
+                                                                            {
+                                                                                RutUsuarioAD = "17002656-K";
+                                                                            }
+                                                                            else
+
+                                                                                if (User.HasPermission(Permissions.FrancescaTapia) == true)
+                                                                                {
+                                                                                    RutUsuarioAD = "18830554-7";
+                                                                                }
+                                                                                else
+
+                                                                                    if (User.HasPermission(Permissions.AldoPeirano) == true)
+                                                                                    {
+                                                                                        RutUsuarioAD = "6075713-5";
+                                                                                    }
+                                                                                    else
+
+                                                                                        if (User.HasPermission(Permissions.AmeliaReyes) == true)
+                                                                                        {
+                                                                                            RutUsuarioAD = "6509116-K";
+                                                                                        }
+                                                                                        else
+
+                                                                                            if (User.HasPermission(Permissions.JoseUrrutia) == true)
+                                                                                            {
+                                                                                                RutUsuarioAD = "8031707-7";
+                                                                                            }
+                                                                                            else
+
+                                                                                                if (User.HasPermission(Permissions.MarcelaEspinosa) == true)
+                                                                                                {
+                                                                                                    RutUsuarioAD = "8394703-9";
+                                                                                                }
+                                                                                                else
+
+                                                                                                    if (User.HasPermission(Permissions.MoisesArevalo) == true)
+                                                                                                    {
+                                                                                                        RutUsuarioAD = "9220822-2";//moises
+                                                                                                    }
+                                                                                                    else
+
+                                                                                                        if (User.HasPermission(Permissions.MauricioMontero) == true)
+                                                                                                        {
+                                                                                                            RutUsuarioAD = "9258364-3";
+                                                                                                        }
+                                                                                                        else
+
+                                                                                                            if (User.HasPermission(Permissions.PatriciaJofré) == true)
+                                                                                                            {
+                                                                                                                RutUsuarioAD = "9282059-9";
+                                                                                                            }
+                                                                                                            else
+
+                                                                                                                if (User.HasPermission(Permissions.XimenaEspinoza) == true)
+                                                                                                                {
+                                                                                                                    RutUsuarioAD = "9407437-1";
+                                                                                                                }
+                                                                                                                else
+
+                                                                                                                    if (User.HasPermission(Permissions.ElisaMuñoz) == true)
+                                                                                                                    {
+                                                                                                                        RutUsuarioAD = "9453159-4";
+                                                                                                                    }
+                                                                                                                    else
+
+                                                                                                                        if (User.HasPermission(Permissions.MonicaSepulveda) == true)
+                                                                                                                        {
+                                                                                                                            RutUsuarioAD = "9907954-1";
+                                                                                                                        }
+                                                                                                                        else
+                                                                                                                        {
+                                                                                                                            RutUsuarioAD = operation.RutUsuario;
+                                                                                                                        }
+
+            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(RutUsuarioAD).Execute();
+
 
             //var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut("17229504-5").Execute();//ESTA ES PARA PRUEBAS INTERNAS
             //var Persona = (from o in dataWorkspace2.Autorizaciones_AdminsData.Persona where o.Rut_Persona == operation.RutUsuario select o);
@@ -149,8 +320,183 @@ namespace LightSwitchApplication
 
             DataWorkspace dataWorkspace2 = new DataWorkspace();
             
-            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();// ESTO ES PARA DEPLOY
-            
+            //var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(operation.RutUsuario).Execute();// Original
+
+            string RutUsuarioAD;
+
+            if (User.HasPermission(Permissions.SalomeEscobar) == true)
+            {
+                RutUsuarioAD = "15413075-6";//salome
+            }
+            else
+
+                if (User.HasPermission(Permissions.GustavoRubio) == true)
+                {
+                    RutUsuarioAD = "17511042-9";//gustavo
+                }
+                else
+
+                    if (User.HasPermission(Permissions.CesarRiutor) == true)
+                    {
+                        RutUsuarioAD = "17229504-5";//cesar
+                    }
+                    else
+
+                        if (User.HasPermission(Permissions.MauricioHernandez) == true)
+                        {
+                            RutUsuarioAD = "10686667-8";
+                        }
+                        else
+
+                            if (User.HasPermission(Permissions.JimenaAriza) == true)
+                            {
+                                RutUsuarioAD = "10848223-0";
+                            }
+                            else
+
+                                if (User.HasPermission(Permissions.MarceloMonsalve) == true)
+                                {
+                                    RutUsuarioAD = "12233917-3";
+                                }
+                                else
+
+                                    if (User.HasPermission(Permissions.PaulaCastro) == true)
+                                    {
+                                        RutUsuarioAD = "12833658-3";
+                                    }
+                                    else
+
+                                        if (User.HasPermission(Permissions.JanetGomez) == true)
+                                        {
+                                            RutUsuarioAD = "12855246-4";
+                                        }
+                                        else
+
+                                            if (User.HasPermission(Permissions.RodrigoLeiva) == true)
+                                            {
+                                                RutUsuarioAD = "13995715-6";
+                                            }
+                                            else
+
+                                                if (User.HasPermission(Permissions.JoseJoaquinPrat) == true)
+                                                {
+                                                    RutUsuarioAD = "14120256-1";
+                                                }
+                                                else
+
+                                                    if (User.HasPermission(Permissions.CarolinaBarrientos) == true)
+                                                    {
+                                                        RutUsuarioAD = "14335101-7";
+                                                    }
+                                                    else
+
+                                                        if (User.HasPermission(Permissions.IsraelSepulveda) == true)
+                                                        {
+                                                            RutUsuarioAD = "16114128-3";
+                                                        }
+                                                        else
+
+                                                            if (User.HasPermission(Permissions.RodrigoAstudillo) == true)
+                                                            {
+                                                                RutUsuarioAD = "16121554-6";
+                                                            }
+                                                            else
+
+                                                                if (User.HasPermission(Permissions.DanielaOportus) == true)
+                                                                {
+                                                                    RutUsuarioAD = "16191035-K";
+                                                                }
+                                                                else
+
+                                                                    if (User.HasPermission(Permissions.FlorMoraga) == true)
+                                                                    {
+                                                                        RutUsuarioAD = "16524487-7";
+                                                                    }
+                                                                    else
+
+                                                                        if (User.HasPermission(Permissions.MariaJoseVives) == true)
+                                                                        {
+                                                                            RutUsuarioAD = "16570769-9";
+                                                                        }
+                                                                        else
+
+                                                                            if (User.HasPermission(Permissions.VictoriaGallardo) == true)
+                                                                            {
+                                                                                RutUsuarioAD = "17002656-K";
+                                                                            }
+                                                                            else
+
+                                                                                if (User.HasPermission(Permissions.FrancescaTapia) == true)
+                                                                                {
+                                                                                    RutUsuarioAD = "18830554-7";
+                                                                                }
+                                                                                else
+
+                                                                                    if (User.HasPermission(Permissions.AldoPeirano) == true)
+                                                                                    {
+                                                                                        RutUsuarioAD = "6075713-5";
+                                                                                    }
+                                                                                    else
+
+                                                                                        if (User.HasPermission(Permissions.AmeliaReyes) == true)
+                                                                                        {
+                                                                                            RutUsuarioAD = "6509116-K";
+                                                                                        }
+                                                                                        else
+
+                                                                                            if (User.HasPermission(Permissions.JoseUrrutia) == true)
+                                                                                            {
+                                                                                                RutUsuarioAD = "8031707-7";
+                                                                                            }
+                                                                                            else
+
+                                                                                                if (User.HasPermission(Permissions.MarcelaEspinosa) == true)
+                                                                                                {
+                                                                                                    RutUsuarioAD = "8394703-9";
+                                                                                                }
+                                                                                                else
+
+                                                                                                    if (User.HasPermission(Permissions.MoisesArevalo) == true)
+                                                                                                    {
+                                                                                                        RutUsuarioAD = "9220822-2";//moises
+                                                                                                    }
+                                                                                                    else
+
+                                                                                                        if (User.HasPermission(Permissions.MauricioMontero) == true)
+                                                                                                        {
+                                                                                                            RutUsuarioAD = "9258364-3";
+                                                                                                        }
+                                                                                                        else
+
+                                                                                                            if (User.HasPermission(Permissions.PatriciaJofré) == true)
+                                                                                                            {
+                                                                                                                RutUsuarioAD = "9282059-9";
+                                                                                                            }
+                                                                                                            else
+
+                                                                                                                if (User.HasPermission(Permissions.XimenaEspinoza) == true)
+                                                                                                                {
+                                                                                                                    RutUsuarioAD = "9407437-1";
+                                                                                                                }
+                                                                                                                else
+
+                                                                                                                    if (User.HasPermission(Permissions.ElisaMuñoz) == true)
+                                                                                                                    {
+                                                                                                                        RutUsuarioAD = "9453159-4";
+                                                                                                                    }
+                                                                                                                    else
+
+                                                                                                                        if (User.HasPermission(Permissions.MonicaSepulveda) == true)
+                                                                                                                        {
+                                                                                                                            RutUsuarioAD = "9907954-1";
+                                                                                                                        }
+                                                                                                                        else
+                                                                                                                        {
+                                                                                                                            RutUsuarioAD = operation.RutUsuario;
+                                                                                                                        }
+
+            var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut(RutUsuarioAD).Execute();
+
             //var Persona = dataWorkspace2.Autorizaciones_AdminsData.PersonaPorRut("17229504-5").Execute();//ESTA ES PARA PRUEBAS INTERNAS
             //var Persona = (from o in dataWorkspace2.Autorizaciones_AdminsData.Persona where o.Rut_Persona == operation.RutUsuario select o);
             

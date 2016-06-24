@@ -187,7 +187,7 @@ namespace LightSwitchApplication
                 try
                 {
 
-                    this.ShowMessageBox("Lo sentimos, el rut: " + RUTSINCEROS + " no coincide con ningún empleado de active directory, por favor contacta al administrador. ", "Error", MessageBoxOption.Ok);
+                    this.ShowMessageBox("Lo sentimos, el rut: " + RUTSINCEROS + " no coincide con ningún empleado de active directory, por favor contacte a Soporte técnico. ", "Error", MessageBoxOption.Ok);
                     this.Close(false);
                 }
                 catch { }

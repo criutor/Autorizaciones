@@ -5,7 +5,7 @@
     <ProjectView>ProjectFiles</ProjectView>
     <ServerPort>50131</ServerPort>
     <SchemaManagementSchemaBuildState>0</SchemaManagementSchemaBuildState>
-    <SchemaManagementLastModelWriteTime>636017567562698847</SchemaManagementLastModelWriteTime>
+    <SchemaManagementLastModelWriteTime>636023023254183018</SchemaManagementLastModelWriteTime>
     <GrantedPermissions>Microsoft.LightSwitch.Security:SecurityAdministration,LightSwitchApplication:AdminRolPrivado,LightSwitchApplication:AdminRRHH</GrantedPermissions>
     <Name>AUTORIZACIONES_ADMINS.user</Name>
     <EncryptedPublishConnectionString>

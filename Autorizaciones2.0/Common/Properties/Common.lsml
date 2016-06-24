@@ -9341,15 +9341,13 @@
     </EntityType.Properties>
   </EntityType>
   <Permission
-    Name="Gustavo" />
+    Name="GustavoRubio" />
   <Permission
-    Name="Salome" />
+    Name="SalomeEscobar" />
   <Permission
-    Name="Moises" />
+    Name="MoisesArevalo" />
   <Permission
-    Name="Valeria" />
-  <Permission
-    Name="Cesar" />
+    Name="CesarRiutor" />
   <EntityType
     Name="ReporteHorasExtrasItem">
     <EntityType.Methods>
@@ -9395,8 +9393,6 @@
       </EntityProperty>
     </EntityType.Properties>
   </EntityType>
-  <Permission
-    Name="Jair" />
   <EntityType
     Name="TrabajadorItem">
     <EntityType.Methods>
@@ -9651,4 +9647,52 @@
       </EntityProperty>
     </EntityType.Properties>
   </EntityType>
+  <Permission
+    Name="ElisaMuñoz" />
+  <Permission
+    Name="PaulaCastro" />
+  <Permission
+    Name="JimenaAriza" />
+  <Permission
+    Name="VictoriaGallardo" />
+  <Permission
+    Name="FrancescaTapia" />
+  <Permission
+    Name="CarolinaBarrientos" />
+  <Permission
+    Name="IsraelSepulveda" />
+  <Permission
+    Name="XimenaEspinoza" />
+  <Permission
+    Name="MauricioHernandez" />
+  <Permission
+    Name="PatriciaJofré" />
+  <Permission
+    Name="MauricioMontero" />
+  <Permission
+    Name="FlorMoraga" />
+  <Permission
+    Name="MariaJoseVives" />
+  <Permission
+    Name="MarceloMonsalve" />
+  <Permission
+    Name="RodrigoLeiva" />
+  <Permission
+    Name="MonicaSepulveda" />
+  <Permission
+    Name="JoseUrrutia" />
+  <Permission
+    Name="DanielaOportus" />
+  <Permission
+    Name="AldoPeirano" />
+  <Permission
+    Name="RodrigoAstudillo" />
+  <Permission
+    Name="AmeliaReyes" />
+  <Permission
+    Name="JanetGomez" />
+  <Permission
+    Name="MarcelaEspinosa" />
+  <Permission
+    Name="JoseJoaquinPrat" />
 </ModelFragment>

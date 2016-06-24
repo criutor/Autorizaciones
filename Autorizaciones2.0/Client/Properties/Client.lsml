@@ -382,6 +382,9 @@
         <ApplicationNavigationLink
           Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]"
           Name="link2" />
+        <ApplicationNavigationLink
+          Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]"
+          Name="link5" />
       </ApplicationNavigationGroup>
     </Application.NavigationItems>
     <ApplicationCommand

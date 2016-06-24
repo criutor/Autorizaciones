@@ -29,29 +29,117 @@ namespace LightSwitchApplication
         /// </summary>
         public const string AdminRRHH = "LightSwitchApplication:AdminRRHH";
         /// <summary>
-        /// Gustavo
+        /// GustavoRubio
         /// </summary>
-        public const string Gustavo = "LightSwitchApplication:Gustavo";
+        public const string GustavoRubio = "LightSwitchApplication:GustavoRubio";
         /// <summary>
-        /// Salome
+        /// SalomeEscobar
         /// </summary>
-        public const string Salome = "LightSwitchApplication:Salome";
+        public const string SalomeEscobar = "LightSwitchApplication:SalomeEscobar";
         /// <summary>
-        /// Moises
+        /// MoisesArevalo
         /// </summary>
-        public const string Moises = "LightSwitchApplication:Moises";
+        public const string MoisesArevalo = "LightSwitchApplication:MoisesArevalo";
         /// <summary>
-        /// Valeria
+        /// CesarRiutor
         /// </summary>
-        public const string Valeria = "LightSwitchApplication:Valeria";
+        public const string CesarRiutor = "LightSwitchApplication:CesarRiutor";
         /// <summary>
-        /// Cesar
+        /// ElisaMuñoz
         /// </summary>
-        public const string Cesar = "LightSwitchApplication:Cesar";
+        public const string ElisaMuñoz = "LightSwitchApplication:ElisaMuñoz";
         /// <summary>
-        /// Jair
+        /// PaulaCastro
         /// </summary>
-        public const string Jair = "LightSwitchApplication:Jair";
+        public const string PaulaCastro = "LightSwitchApplication:PaulaCastro";
+        /// <summary>
+        /// JimenaAriza
+        /// </summary>
+        public const string JimenaAriza = "LightSwitchApplication:JimenaAriza";
+        /// <summary>
+        /// VictoriaGallardo
+        /// </summary>
+        public const string VictoriaGallardo = "LightSwitchApplication:VictoriaGallardo";
+        /// <summary>
+        /// FrancescaTapia
+        /// </summary>
+        public const string FrancescaTapia = "LightSwitchApplication:FrancescaTapia";
+        /// <summary>
+        /// CarolinaBarrientos
+        /// </summary>
+        public const string CarolinaBarrientos = "LightSwitchApplication:CarolinaBarrientos";
+        /// <summary>
+        /// IsraelSepulveda
+        /// </summary>
+        public const string IsraelSepulveda = "LightSwitchApplication:IsraelSepulveda";
+        /// <summary>
+        /// XimenaEspinoza
+        /// </summary>
+        public const string XimenaEspinoza = "LightSwitchApplication:XimenaEspinoza";
+        /// <summary>
+        /// MauricioHernandez
+        /// </summary>
+        public const string MauricioHernandez = "LightSwitchApplication:MauricioHernandez";
+        /// <summary>
+        /// PatriciaJofré
+        /// </summary>
+        public const string PatriciaJofré = "LightSwitchApplication:PatriciaJofré";
+        /// <summary>
+        /// MauricioMontero
+        /// </summary>
+        public const string MauricioMontero = "LightSwitchApplication:MauricioMontero";
+        /// <summary>
+        /// FlorMoraga
+        /// </summary>
+        public const string FlorMoraga = "LightSwitchApplication:FlorMoraga";
+        /// <summary>
+        /// MariaJoseVives
+        /// </summary>
+        public const string MariaJoseVives = "LightSwitchApplication:MariaJoseVives";
+        /// <summary>
+        /// MarceloMonsalve
+        /// </summary>
+        public const string MarceloMonsalve = "LightSwitchApplication:MarceloMonsalve";
+        /// <summary>
+        /// RodrigoLeiva
+        /// </summary>
+        public const string RodrigoLeiva = "LightSwitchApplication:RodrigoLeiva";
+        /// <summary>
+        /// MonicaSepulveda
+        /// </summary>
+        public const string MonicaSepulveda = "LightSwitchApplication:MonicaSepulveda";
+        /// <summary>
+        /// JoseUrrutia
+        /// </summary>
+        public const string JoseUrrutia = "LightSwitchApplication:JoseUrrutia";
+        /// <summary>
+        /// DanielaOportus
+        /// </summary>
+        public const string DanielaOportus = "LightSwitchApplication:DanielaOportus";
+        /// <summary>
+        /// AldoPeirano
+        /// </summary>
+        public const string AldoPeirano = "LightSwitchApplication:AldoPeirano";
+        /// <summary>
+        /// RodrigoAstudillo
+        /// </summary>
+        public const string RodrigoAstudillo = "LightSwitchApplication:RodrigoAstudillo";
+        /// <summary>
+        /// AmeliaReyes
+        /// </summary>
+        public const string AmeliaReyes = "LightSwitchApplication:AmeliaReyes";
+        /// <summary>
+        /// JanetGomez
+        /// </summary>
+        public const string JanetGomez = "LightSwitchApplication:JanetGomez";
+        /// <summary>
+        /// MarcelaEspinosa
+        /// </summary>
+        public const string MarcelaEspinosa = "LightSwitchApplication:MarcelaEspinosa";
+        /// <summary>
+        /// JoseJoaquinPrat
+        /// </summary>
+        public const string JoseJoaquinPrat = "LightSwitchApplication:JoseJoaquinPrat";
 
         /// <summary>
         /// Obtiene todos los permisos definidos para la aplicación. esto incluye los permisos del sistema y definidos por el usuario.
